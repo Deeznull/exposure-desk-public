@@ -33,15 +33,20 @@ except the narrow permissions stated in sections 2 and 3.
    You may view the Software on GitHub, and you may fork this repository on
    GitHub, only to the extent that GitHub's Terms of Service require for public
    repositories. A fork carries this same licence and grants no right to use,
-   run or distribute the Software outside what this section allows.
+   run or distribute the Software beyond sections 2 and 3.
 
-3. Security research
+3. Security research and contributions
 
-   You may build and run a local copy of the Software solely to find and
-   privately report security vulnerabilities in the Software itself, as
-   described in SECURITY.md. This permission does not cover scanning,
-   accessing or testing any website, service or system other than your own
-   local copy of the Software, and it ends when the research ends.
+   You may build, run and modify a local copy of the Software solely to:
+   (a) find and privately report security vulnerabilities in the Software
+       itself, as described in SECURITY.md; or
+   (b) prepare, test and submit a contribution to this repository through a
+       GitHub pull request or issue, as described in CONTRIBUTING.md.
+   These permissions do not cover scanning, accessing or testing any website,
+   service or system other than your own local copy of the Software and the
+   local test fixtures that come with it. They do not allow you to publish or
+   distribute a modified version anywhere except as a pull request to this
+   repository, and they end when the research or contribution ends.
 
 4. Written permission
 
@@ -61,10 +66,31 @@ except the narrow permissions stated in sections 2 and 3.
 
 6. Contributions
 
-   The copyright holder does not accept outside code contributions. If you
-   send feedback, suggestions, issues or code, you grant the copyright holder
-   a perpetual, irrevocable, worldwide, royalty-free right to use, modify and
-   publish them in any way, without obligation to you.
+   Contributions are welcome through GitHub pull requests and issues, as
+   described in CONTRIBUTING.md. The copyright holder may accept, change or
+   reject any contribution without giving a reason. By submitting a
+   contribution (code, rules, documentation, test data, issues, feedback or
+   any other material), you:
+   (a) keep the copyright in your contribution, and grant the copyright
+       holder a perpetual, irrevocable, worldwide, non-exclusive,
+       royalty-free, transferable licence, with the right to sublicense, to
+       use, copy, modify, publish and distribute it and to license it under
+       any terms, including this licence, a future open-source licence or a
+       commercial licence;
+   (b) grant the copyright holder and every licensee of the Software a
+       perpetual, irrevocable, worldwide, royalty-free patent licence for any
+       patent claims you can license that your contribution necessarily
+       infringes, alone or combined with the Software;
+   (c) confirm that the contribution is your own original work or that you
+       otherwise have the right to submit it under these terms (including
+       your employer's permission where your employer has rights in it), and
+       that it contains no real secret, credential, personal data or
+       confidential information;
+   (d) accept that you receive no payment or other right in return, beyond
+       any credit the copyright holder chooses to give, and that you provide
+       the contribution as is, without warranty.
+   A contribution gives you no right to use the Software beyond what this
+   licence allows.
 
 7. Third-party components
 

@@ -1,8 +1,8 @@
 {
   "build": {
     "version": "2.9.1",
-    "id": "2.9.1+511b244fd475dce7",
-    "sourceDigest": "511b244fd475dce7b28a94a6016d017b8e22f0dbd339a9f57b66c79396b61a59"
+    "id": "2.9.1+177e5a07e6845026",
+    "sourceDigest": "177e5a07e68450269d82bba42196e41e258302919a14edc52002730c0e0d9468"
   },
   "inputs": [
     {
@@ -187,7 +187,7 @@
     },
     {
       "path": "scripts/release-files.mjs",
-      "sha256": "358568151f963f3dc18f51b176ed8226fb7514109587cc3ffd2d57a5b6b21c3e"
+      "sha256": "abcae49625cac77d397e5a8f3ddcb3f7da2009265e59a774f7eff30481af6859"
     },
     {
       "path": "scripts/release-preflight.mjs",
@@ -1079,7 +1079,7 @@
     },
     {
       "path": "test/release-metadata.test.ts",
-      "sha256": "ba64f9bb6c2eadbb7aa4b25f72ea0c31b2d2b629b8364452fadeac11e5f5cc3b"
+      "sha256": "44e1e98f449cd327d3943703ece555a062492e315c57de478083e46bd5de4d30"
     },
     {
       "path": "test/reliability.test.ts",
@@ -1225,7 +1225,7 @@
     },
     {
       "path": "dist/src/build-info.js",
-      "sha256": "45385317ff637e92648141b0fd2062843e2a0d80fdce5f06780e2eea4ee25ec2"
+      "sha256": "15deff7c154582317704a913d38a1f8fc7be034eb6f47b9d0278bcff54229bcd"
     },
     {
       "path": "dist/src/capabilities.js",
@@ -1937,7 +1937,7 @@
     },
     {
       "path": "dist/test/release-metadata.test.js",
-      "sha256": "b7d0820efe4ff93093c421f4dfb51b5bcfef447637ddc30da92e9255711cfb24"
+      "sha256": "3319e3d48ca5ab69a8e28e000c6ad92432de84dc15d3a9ddecdb466b3362bf7a"
     },
     {
       "path": "dist/test/reliability.test.js",

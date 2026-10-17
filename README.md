@@ -41,7 +41,7 @@ Keys end up in public places all the time: a Stripe secret in a JavaScript bundl
 
 ## Quick start
 
-> **Permission required.** This repository is published for viewing only. Running, building or copying Exposure Desk needs prior written permission from the author (see [LICENSE](LICENSE)). The steps below are for people who have it.
+> **Permission required.** This repository is published for viewing only. Running, building or copying Exposure Desk needs prior written permission from the author (see [LICENSE](LICENSE)). The steps below are for people who have it, and for contributors testing a change under [CONTRIBUTING.md](CONTRIBUTING.md).
 
 **From source** (Node.js 24):
 
@@ -93,9 +93,13 @@ Exposure Desk is for websites **you own or are explicitly authorized to assess**
 
 If you find a secret on someone else's site through an authorized program, report it to the owner. Do not use it. To report a vulnerability in Exposure Desk itself, see [SECURITY.md](SECURITY.md). What the program stores and sends is described in [PRIVACY.md](PRIVACY.md).
 
+## Contributing
+
+Contributions are welcome: bug fixes, new detection families, docs and tests. Read [CONTRIBUTING.md](CONTRIBUTING.md) first. Contributions are accepted under section 6 of the [LICENSE](LICENSE).
+
 ## Licence
 
-**All rights reserved.** Exposure Desk is proprietary, not open source. The code is public so it can be read. It may not be used, run, copied, modified, redistributed or used to train AI models without the author's prior written permission. The only exceptions are viewing and forking on GitHub as GitHub's Terms require, and running a local copy to report a vulnerability under [SECURITY.md](SECURITY.md). See [LICENSE](LICENSE). Outside code contributions are not accepted. The software comes **as is, without any warranty**.
+**All rights reserved.** Exposure Desk is proprietary, not open source. The code is public so it can be read. It may not be used, run, copied, modified, redistributed or used to train AI models without the author's prior written permission. The only exceptions are viewing and forking on GitHub as GitHub's Terms require, running a local copy to report a vulnerability under [SECURITY.md](SECURITY.md), and running a local copy to prepare a contribution under [CONTRIBUTING.md](CONTRIBUTING.md). See [LICENSE](LICENSE). The software comes **as is, without any warranty**.
 
 Third-party components keep their own licences. They are listed in [THIRD_PARTY.md](THIRD_PARTY.md) and [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
 
