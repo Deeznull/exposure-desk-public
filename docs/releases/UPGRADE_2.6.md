@@ -1,6 +1,6 @@
 # Exposure Desk 2.6 upgrade
 
-Version 2.6 (released as 2.6.0 after the release candidate 2.6.0-rc.1) replaces the many per-scan numbers with six ready scan options, adds a gentler traffic level, sizes every scan for the computer it runs on, never contacts government, military or law-enforcement websites, and fixes the browser-cookie and alias findings of an external review. Measured results are in [TEST_RESULTS.md](TEST_RESULTS.md); upgrade steps for saved settings are in [MIGRATION_2.6.md](MIGRATION_2.6.md); the change list is in [CHANGELOG_2.6.md](CHANGELOG_2.6.md). 2.6.0 also adds the detection-quality update described there and in the [user guide](USER_GUIDE.md#detection-quality-update-in-260); the ready options and their limits are the same as in 2.6.0-rc.1.
+Version 2.6 (released as 2.6.0 after the release candidate 2.6.0-rc.1) replaces the many per-scan numbers with six ready scan options, adds a gentler traffic level, sizes every scan for the computer it runs on, never contacts government, military or law-enforcement websites, and fixes the browser-cookie and alias findings of an external review. Measured results are in [TEST_RESULTS.md](../TEST_RESULTS.md); upgrade steps for saved settings are in [MIGRATION_2.6.md](MIGRATION_2.6.md); the change list is in [CHANGELOG_2.6.md](CHANGELOG_2.6.md). 2.6.0 also adds the detection-quality update described there and in the [user guide](../USER_GUIDE.md#detection-quality-update-in-260); the ready options and their limits are the same as in 2.6.0-rc.1.
 
 ## 1. Six ready options
 
@@ -101,4 +101,4 @@ Each ready option as shipped, on the same corpus served from 127.0.0.1 (extra me
 - A redirect to a protected host leaves that part of a run incomplete.
 - Retries and rescans of a ready-option run are labelled Custom. Seeds that are IP addresses or `localhost` show 0 discovered websites.
 - No TLS session resumption and no conditional requests. The protected-host list is reviewed only in code; the owner should review it.
-- Open items carried over are listed in [HANDOFF.md](HANDOFF.md).
+- Open items carried over are listed in [HANDOFF.md](../HANDOFF.md).

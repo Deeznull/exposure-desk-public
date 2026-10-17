@@ -3,7 +3,7 @@
 Exposure Desk runs on Linux x64 in two ways:
 
 - the **Linux x64 package**, a folder you unpack and start
-- the **container image**, built from the `Dockerfile` in this repository
+- the **container image**, built from [`docker/Dockerfile`](../docker/Dockerfile)
 
 Both follow the same rules as the Windows package:
 
@@ -78,7 +78,7 @@ The deny-only proxy refuses every one of them, so nothing is forwarded. When no 
 ## Container image
 
 ```sh
-docker build --tag exposure-desk .
+docker build --file docker/Dockerfile --tag exposure-desk .
 docker volume create exposure-data
 docker run --rm --read-only --tmpfs /tmp --cap-drop ALL --security-opt no-new-privileges \
   -v exposure-data:/data exposure-desk doctor --runtime

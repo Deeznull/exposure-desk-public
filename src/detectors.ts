@@ -98,7 +98,7 @@ export const rules: Rule[] = [
   // Adapted from Gitleaks (github.com/gitleaks/gitleaks, config/gitleaks.toml; commit b58d3f102cf3a2c84cb7f923d05c25c9b1aed84b, whose file is identical
   // to the vendored rules/gitleaks-v8.30.1.toml; MIT, rules/GITLEAKS-LICENSE) and Nosey Parker (crates/noseyparker/data/default/builtin/rules/;
   // commit 2e6e7f36ce36619852532bbe698d8cb7a26d2da7; Apache-2.0, rules/NOSEYPARKER-LICENSE and rules/NOSEYPARKER-NOTICE). The upstream rule IDs of
-  // each line are listed in THIRD_PARTY_NOTICES.md. Changes: JavaScript syntax, unbounded repeats bounded, trailing delimiters as lookaheads, fixed
+  // each line are listed in docs/THIRD_PARTY_NOTICES.md. Changes: JavaScript syntax, unbounded repeats bounded, trailing delimiters as lookaheads, fixed
   // prefixes case-sensitive, Mapbox keyword context replaced by the fixed token header, Doppler and New Relic variants merged per provider.
   {id:'linear-api-key',provider:'Linear',regex:/\blin_api_[A-Za-z0-9]{40}(?![A-Za-z0-9_-])/g,category:'private-credential',severity:'high'},
   {id:'planetscale-token',provider:'PlanetScale',regex:/\bpscale_(?:tkn|pw|oauth)_[A-Za-z0-9_=.-]{32,64}(?![A-Za-z0-9_=.-])/g,category:'private-credential',severity:'high',reason:'PlanetScale service token, database password or OAuth token format; a password connects to a database branch. Validity and scope are unverified.'},

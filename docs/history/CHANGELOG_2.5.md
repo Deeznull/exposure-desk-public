@@ -1,6 +1,6 @@
 # Changelog — 2.5.0-rc.1
 
-Compared with 2.4.0-rc.1 (build `2.4.0-rc.1+5d5acf0f7f18d7e6`). Details: [UPGRADE_2.5.md](UPGRADE_2.5.md). Upgrade notes: [MIGRATION_2.5.md](MIGRATION_2.5.md). Measurements: [TEST_RESULTS.md](../../TEST_RESULTS.md).
+Compared with 2.4.0-rc.1 (build `2.4.0-rc.1+5d5acf0f7f18d7e6`). Details: [UPGRADE_2.5.md](UPGRADE_2.5.md). Upgrade notes: [MIGRATION_2.5.md](MIGRATION_2.5.md). Measurements: [TEST_RESULTS.md](../TEST_RESULTS.md).
 
 ## Scope (section 1)
 - Registrable-domain scope is the default for the UI, presets, CLI and JSON; `exact-origin` and `host-subtree` modes; one scope policy for every channel; punycode/PSL matching with private suffixes; userinfo URLs blocked as credentials; trailing-dot and empty-label hosts normalized or refused.

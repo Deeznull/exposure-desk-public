@@ -12,7 +12,7 @@
 
 - Projects saved before 2.5 stored `sameRegistrableDomainDiscovery: false` as the old default. Because that value is ambiguous, they keep scanning **only their exact origins** and are marked `scopeReview: legacy-default-exact-origin`. Their cards show **Use domain scope for <domain>**. Adopting it requires the acknowledgement again and saving the project; until then, subdomains inside the domain are listed in the scan's scope summary but not scanned.
 - A project saved with `sameRegistrableDomainDiscovery: true` runs domain scope.
-- New projects, presets, CLI `--url` scans and JSON files without a scope key use domain scope. To keep exact-origin behavior explicitly, set `"domainScope": "exact-origin"` (see [exact-origin.config.example.json](../../exact-origin.config.example.json)) or keep an explicit `"sameRegistrableDomainDiscovery": false`; setting both keys to disagreeing values is an error.
+- New projects, presets, CLI `--url` scans and JSON files without a scope key use domain scope. To keep exact-origin behavior explicitly, set `"domainScope": "exact-origin"` (see [exact-origin.config.example.json](../../examples/exact-origin.config.example.json)) or keep an explicit `"sameRegistrableDomainDiscovery": false`; setting both keys to disagreeing values is an error.
 - The workspace schema is `exposure-workspace/3`. The boolean `sameRegistrableDomainDiscovery` is still written as a mirror so a downgrade to 2.4 keeps honouring the scope.
 
 ## History, runs and comparisons

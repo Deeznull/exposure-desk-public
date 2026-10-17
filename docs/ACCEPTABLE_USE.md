@@ -5,6 +5,7 @@ Exposure Desk looks at a website the way an anonymous visitor would and reports 
 ## 1. Own or authorized websites only
 
 - Scan only websites you own or that you are explicitly authorized to assess. Authorization should be in writing and cover the domains, the time window and the kind of testing.
+- **Bug bounty and vulnerability disclosure programs:** scan only assets the program lists as in scope, and follow its rules (excluded assets, rate limits, testing windows and whether automated scanning is allowed). A program that forbids automated scanning does not authorize Exposure Desk. Report findings only through the program, and never use, test or share a secret you find outside what the program allows.
 - You are responsible for having that authorization and for complying with the law that applies to you and to the website (for example computer-misuse and data-protection law) and with the website's own terms.
 - If in doubt, do not scan. Exposure Desk cannot check whether you are authorized; the scope you enter is your declaration that you are.
 
@@ -32,6 +33,6 @@ Findings are masked by default. A full-value export, a revealed value or the vau
 
 You are solely responsible for how you use Exposure Desk, for the scans you run and for how you handle what you find. The author does not monitor, control or approve individual scans and gives no legal advice; nothing in Exposure Desk or its documentation tells you that a particular scan is lawful.
 
-Exposure Desk may only be used with the author's prior written permission (see [LICENSE](LICENSE)). Using it in breach of these rules is outside any permission given: that permission ends automatically for you, and you must stop using the software and delete your copies. The software comes as is, without warranty, and the author is not liable for any use or misuse of it (see [LICENSE](LICENSE), sections 9 and 10).
+Exposure Desk may only be used with the author's prior written permission (see [LICENSE](../LICENSE)). Using it in breach of these rules is outside any permission given: that permission ends automatically for you, and you must stop using the software and delete your copies. The software comes as is, without warranty, and the author is not liable for any use or misuse of it (see [LICENSE](../LICENSE), sections 9 and 10).
 
 Report security problems in Exposure Desk itself as described in [SECURITY.md](SECURITY.md).

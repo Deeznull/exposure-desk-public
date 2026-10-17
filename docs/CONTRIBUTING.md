@@ -10,7 +10,7 @@ Thank you for helping. Bug fixes, new detection families, better remediation tex
 
 ## What the licence lets you do
 
-Exposure Desk is not open source (see [LICENSE](LICENSE)). Section 3 lets you build, run and modify a local copy **only to prepare, test and submit a contribution** to this repository. That covers running the test suite and the built-in fixtures on your own machine. It does not cover scanning real websites, publishing a modified version or using the code elsewhere.
+Exposure Desk is not open source (see [LICENSE](../LICENSE)). Section 3 lets you build, run and modify a local copy **only to prepare, test and submit a contribution** to this repository. That covers running the test suite and the built-in fixtures on your own machine. It does not cover scanning real websites, publishing a modified version or using the code elsewhere.
 
 By opening a pull request or issue you agree to section 6 of the licence. In short:
 

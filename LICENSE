@@ -39,9 +39,9 @@ except the narrow permissions stated in sections 2 and 3.
 
    You may build, run and modify a local copy of the Software solely to:
    (a) find and privately report security vulnerabilities in the Software
-       itself, as described in SECURITY.md; or
+       itself, as described in docs/SECURITY.md; or
    (b) prepare, test and submit a contribution to this repository through a
-       GitHub pull request or issue, as described in CONTRIBUTING.md.
+       GitHub pull request or issue, as described in docs/CONTRIBUTING.md.
    These permissions do not cover scanning, accessing or testing any website,
    service or system other than your own local copy of the Software and the
    local test fixtures that come with it. They do not allow you to publish or
@@ -53,7 +53,7 @@ except the narrow permissions stated in sections 2 and 3.
    Any other permission must be given in writing by the copyright holder for
    a named person or organization. Unless the writing says otherwise, it is
    personal, non-exclusive, non-transferable, revocable, and subject to
-   ACCEPTABLE_USE.md and to sections 6 to 10 of this licence. Requests can be
+   docs/ACCEPTABLE_USE.md and to sections 6 to 10 of this licence. Requests can be
    made through the copyright holder's GitHub profile.
 
 5. Breach
@@ -61,13 +61,13 @@ except the narrow permissions stated in sections 2 and 3.
    Any use of the Software outside sections 2 to 4 infringes the copyright
    holder's rights. Any permission given under sections 3 or 4 ends
    automatically, without notice, for anyone who breaks this licence or
-   ACCEPTABLE_USE.md, and that person must then stop using the Software and
+   docs/ACCEPTABLE_USE.md, and that person must then stop using the Software and
    delete all copies.
 
 6. Contributions
 
    Contributions are welcome through GitHub pull requests and issues, as
-   described in CONTRIBUTING.md. The copyright holder may accept, change or
+   described in docs/CONTRIBUTING.md. The copyright holder may accept, change or
    reject any contribution without giving a reason. By submitting a
    contribution (code, rules, documentation, test data, issues, feedback or
    any other material), you:
@@ -97,7 +97,7 @@ except the narrow permissions stated in sections 2 and 3.
    Third-party components used with Exposure Desk (the Node.js runtime,
    Chrome for Testing, Gitleaks, npm packages, vendored rule files and
    adapted regular expressions) remain under their own licences. They are
-   listed with versions and sources in THIRD_PARTY.md, and their licence and
+   listed with versions and sources in docs/THIRD_PARTY.md, and their licence and
    notice files are kept next to each component. Nothing in this licence
    limits the rights those licences grant for those components.
 

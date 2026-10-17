@@ -1,6 +1,6 @@
 # Actual verification — 2.9.1
 
-Build 2.9.1+94a512df50bb9d43. Windows x64 with the bundled Node 24.18.1, locked dependencies, Gitleaks 8.30.1 and Chrome for Testing 153.0.8010.12 / Playwright 1.63.0. Rules website/2.9.1; structural data checks exposure/1.0. Ready options, limits and traffic: [UPGRADE_2.6.md](UPGRADE_2.6.md); data upgrade: [MIGRATION_2.9.md](MIGRATION_2.9.md); changes: [CHANGELOG_2.9.md](CHANGELOG_2.9.md).
+Build 2.9.1+94a512df50bb9d43. Windows x64 with the bundled Node 24.18.1, locked dependencies, Gitleaks 8.30.1 and Chrome for Testing 153.0.8010.12 / Playwright 1.63.0. Rules website/2.9.1; structural data checks exposure/1.0. Ready options, limits and traffic: [UPGRADE_2.6.md](releases/UPGRADE_2.6.md); data upgrade: [MIGRATION_2.9.md](releases/MIGRATION_2.9.md); changes: [CHANGELOG_2.9.md](releases/CHANGELOG_2.9.md).
 
 | Final check | Actual result |
 | --- | --- |
@@ -207,7 +207,7 @@ Limitations: synthetic, nonfunctional values and local fixtures only (loopback s
 <!-- PREVIOUS_VERIFICATION -->
 # Actual verification — 2.9.0
 
-Build 2.9.0+b251a3ea63449d85. Windows x64 with the bundled Node 24.18.1, locked dependencies, Gitleaks 8.30.1 and Chrome for Testing 153.0.8010.12 / Playwright 1.63.0. Rules website/2.9.0; structural data checks exposure/1.0. Ready options, limits and traffic: [UPGRADE_2.6.md](UPGRADE_2.6.md); data upgrade: [MIGRATION_2.9.md](MIGRATION_2.9.md); changes: [CHANGELOG_2.9.md](CHANGELOG_2.9.md).
+Build 2.9.0+b251a3ea63449d85. Windows x64 with the bundled Node 24.18.1, locked dependencies, Gitleaks 8.30.1 and Chrome for Testing 153.0.8010.12 / Playwright 1.63.0. Rules website/2.9.0; structural data checks exposure/1.0. Ready options, limits and traffic: [UPGRADE_2.6.md](releases/UPGRADE_2.6.md); data upgrade: [MIGRATION_2.9.md](releases/MIGRATION_2.9.md); changes: [CHANGELOG_2.9.md](releases/CHANGELOG_2.9.md).
 
 | Final check | Actual result |
 | --- | --- |

@@ -1,6 +1,6 @@
 # Changelog — 2.6.0
 
-2.6.0 is the final 2.6 release. It contains everything in 2.6.0-rc.1 (listed below) plus the detection-quality update and the fixes made after it. Details: [UPGRADE_2.6.md](UPGRADE_2.6.md). Upgrade notes: [MIGRATION_2.6.md](MIGRATION_2.6.md). Measurements: [TEST_RESULTS.md](TEST_RESULTS.md). Later changes: [CHANGELOG_2.7.md](CHANGELOG_2.7.md). Like every earlier release, 2.6.0 was measured only with local loopback fixtures and synthetic, nonfunctional keys on one Windows x64 computer; no real website was scanned.
+2.6.0 is the final 2.6 release. It contains everything in 2.6.0-rc.1 (listed below) plus the detection-quality update and the fixes made after it. Details: [UPGRADE_2.6.md](UPGRADE_2.6.md). Upgrade notes: [MIGRATION_2.6.md](MIGRATION_2.6.md). Measurements: [TEST_RESULTS.md](../TEST_RESULTS.md). Later changes: [CHANGELOG_2.7.md](CHANGELOG_2.7.md). Like every earlier release, 2.6.0 was measured only with local loopback fixtures and synthetic, nonfunctional keys on one Windows x64 computer; no real website was scanned.
 
 ## 2.6.0
 
@@ -23,7 +23,7 @@ Compared with 2.6.0-rc.1 (build `2.6.0-rc.1+43dc0e2d6c36202f`). Rule version `we
 
 ### Delivery
 - The Windows x64 and Source packages include `LICENSE`, `PRIVACY.md`, `SECURITY.md`, `ACCEPTABLE_USE.md`, `THIRD_PARTY.md`, `DEMO.md` and `docs/screenshots/`.
-- `scripts/screenshots.mjs` (dashboard screenshots from synthetic local data on 127.0.0.1) and `scripts/demo.ts` (a synthetic demo project); see [DEMO.md](DEMO.md).
+- `scripts/screenshots.mjs` (dashboard screenshots from synthetic local data on 127.0.0.1) and `scripts/demo.ts` (a synthetic demo project); see [DEMO.md](../DEMO.md).
 - Release records use the full version from 2.6.0 on: `artifacts/SHA256SUMS-2.6.0.txt`, `artifacts/release-2.6.0-results.json`, `artifacts/final-parity-2.6.0.json` and `benchmarks/2.6.0/`. The records of 2.6.0-rc.1 and earlier keep their names (`SHA256SUMS-2.6.txt`, `benchmarks/2.6/`, …) and were not rewritten; `artifacts/ARCHIVE_INDEX.json` marks 2.6.0-rc.1 as superseded.
 - The ready-option matrix and the external synthetic corpus were measured for 2.6.0-rc.1 and are reported for 2.6.0 as carried over (labelled as such in TEST_RESULTS.md); every other suite was re-run on the 2.6.0 build.
 

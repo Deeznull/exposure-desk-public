@@ -1,6 +1,6 @@
 # Changelog — 2.7.0
 
-2.7.0 follows 2.6.0 (build `2.6.0+8b02299c3915954b`). It adds opt-in command-line options for target lists, JSON Lines output and stable finding IDs, moves large-text analysis into separate processes, and checks the host of every new website address. Upgrade notes: [MIGRATION_2.7.md](MIGRATION_2.7.md). JSON Lines format: [docs/JSONL.md](docs/JSONL.md). Measurements: [TEST_RESULTS.md](TEST_RESULTS.md). Earlier changes: [CHANGELOG_2.6.md](CHANGELOG_2.6.md). Like every earlier release, 2.7.0 was measured only with local loopback fixtures and synthetic, nonfunctional keys on one Windows x64 computer; no real website was scanned.
+2.7.0 follows 2.6.0 (build `2.6.0+8b02299c3915954b`). It adds opt-in command-line options for target lists, JSON Lines output and stable finding IDs, moves large-text analysis into separate processes, and checks the host of every new website address. Upgrade notes: [MIGRATION_2.7.md](MIGRATION_2.7.md). JSON Lines format: [docs/JSONL.md](../JSONL.md). Measurements: [TEST_RESULTS.md](../TEST_RESULTS.md). Earlier changes: [CHANGELOG_2.6.md](CHANGELOG_2.6.md). Like every earlier release, 2.7.0 was measured only with local loopback fixtures and synthetic, nonfunctional keys on one Windows x64 computer; no real website was scanned.
 
 Rule version `website/2.7.0` (2.6.0 used `website/2.6.1`); the detection rules and patterns are unchanged, and only where large texts are analysed changed (see Reliability). The priority version stays `priority/1`. The ready options and their limits, Low-impact traffic, the protected-host rule and the dashboard security model are unchanged. Every 2.6 command-line flag, configuration file and saved record keeps working; saved records of earlier versions load unchanged and are never rewritten.
 
@@ -12,7 +12,7 @@ Rule version `website/2.7.0` (2.6.0 used `website/2.6.1`); the detection rules a
 
 ## Command line
 
-Every 2.6 flag, configuration and saved record keeps working. Details in [docs/JSONL.md](docs/JSONL.md).
+Every 2.6 flag, configuration and saved record keeps working. Details in [docs/JSONL.md](../JSONL.md).
 
 - The CLI is split into `src/cli/**` (one module per command, flag and output-format registries); `dist/src/cli.js` stays the entry point.
 - `scan --targets FILE|-` reads hosts, URLs and httpx lines (plain or `-json`) from a file or standard input; comments, blank lines and a BOM are skipped, targets are normalized and deduplicated, and each rejected line is listed with its reason; the protected-host rule runs on every line before any request (no override).

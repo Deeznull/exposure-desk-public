@@ -69,8 +69,8 @@ test('configuration: new input naming an invalid host in any URL field is refuse
   for(const raw of [{urls:['https://shop{x}.example.com/','https://www.example.gov/']},{urls:['https://www.example.gov/','https://shop{x}.example.com/']},{urls:['https://owner.example.com/'],relatedOrigins:['https://cdn{x}.example.com','https://cdn.example.mil']}] as Partial<ScanConfig>[]){
     const host=raw.relatedOrigins?'cdn.example.mil':'www.example.gov';assert.throws(()=>makeNewConfig(raw),protectedRefusal(host));assert.throws(()=>makeConfig(raw),protectedRefusal(host));}
   // Shipped example configurations keep working.
-  const examples=(await readdir(root)).filter(f=>f.endsWith('.config.example.json'));assert.ok(examples.length>=3);
-  for(const f of examples){const j=JSON.parse(await readFile(path.join(root,f),'utf8')),list=Array.isArray(j.projects)?j.projects:Array.isArray(j)?j:[j];for(const p of list){assert.equal(invalidHost(p),undefined,f);assert.doesNotThrow(()=>makeNewConfig(p),f);}}
+  const examples=(await readdir(path.join(root,'examples'))).filter(f=>f.endsWith('.config.example.json'));assert.ok(examples.length>=3);
+  for(const f of examples){const j=JSON.parse(await readFile(path.join(root,'examples',f),'utf8')),list=Array.isArray(j.projects)?j.projects:Array.isArray(j)?j:[j];for(const p of list){assert.equal(invalidHost(p),undefined,f);assert.doesNotThrow(()=>makeNewConfig(p),f);}}
 });
 
 test('CLI: --url, --config entries, a --targets template, a checkpoint, dashboard --config and trigger input with an invalid host exit 2 with one line before any request',{timeout:120000},async()=>{

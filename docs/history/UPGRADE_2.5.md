@@ -1,6 +1,6 @@
 # Exposure Desk 2.5 upgrade
 
-Version 2.5.0-rc.1 fixes the problems demonstrated by the owner scan of 2.4.0-rc.1 (one seed, one manually approved subdomain, a blocked third subdomain, 45 "pending" resources with nothing queued, false `.json`/`.woff` pages, 48 unattributed deny-proxy events and zero findings) and makes findings useful for financial and critical-secret incidents. Measured results are in [TEST_RESULTS.md](../../TEST_RESULTS.md); upgrade steps for saved data are in [MIGRATION_2.5.md](MIGRATION_2.5.md); the change list is in [CHANGELOG_2.5.md](CHANGELOG_2.5.md).
+Version 2.5.0-rc.1 fixes the problems demonstrated by the owner scan of 2.4.0-rc.1 (one seed, one manually approved subdomain, a blocked third subdomain, 45 "pending" resources with nothing queued, false `.json`/`.woff` pages, 48 unattributed deny-proxy events and zero findings) and makes findings useful for financial and critical-secret incidents. Measured results are in [TEST_RESULTS.md](../TEST_RESULTS.md); upgrade steps for saved data are in [MIGRATION_2.5.md](MIGRATION_2.5.md); the change list is in [CHANGELOG_2.5.md](CHANGELOG_2.5.md).
 
 ## 1. Domain scope is the default
 
@@ -9,7 +9,7 @@ Version 2.5.0-rc.1 fixes the problems demonstrated by the owner scan of 2.4.0-rc
 - Matching uses punycode registrable domains from the bundled public suffix list (tldts 7.4.16, private suffixes included), never substrings: `example.com.evil.net`, `notexample.com`, other `github.io` tenants and look-alike IDNs are third parties. Scheme and port stay separate budgeted origins.
 - One scope policy covers links, scripts, CSS, manifests, source maps, runtime requests, workers, frames, redirects, WebSocket origins and approved browser routes. Domain scope grants eligibility only: every request still needs public DNS, socket pinning, private/metadata blocking (never inherited from domain scope), credential screening, method and destructive-path limits and redirect rechecks. Subdomains are discovered from links only; none are guessed. At most `maxAutoDiscoveredOrigins` (default 50) are admitted, each with the full per-origin limits; shared limits never grow.
 - Third-party origins are excluded, summarized once (count, references, first referring resource; 500 origins plus an overflow count) and never counted as websites.
-- Opt out with `"domainScope": "exact-origin"` (or the older `"sameRegistrableDomainDiscovery": false`), the radio button, or `cli.js scan --scope exact-origin`. See [exact-origin.config.example.json](../../exact-origin.config.example.json).
+- Opt out with `"domainScope": "exact-origin"` (or the older `"sameRegistrableDomainDiscovery": false`), the radio button, or `cli.js scan --scope exact-origin`. See [exact-origin.config.example.json](../../examples/exact-origin.config.example.json).
 - Projects saved before 2.5 keep running exact-origin and show a banner with **Use domain scope for <domain>**, which needs a fresh acknowledgement. Nothing is widened silently.
 
 ## 2. Runs and counts

@@ -100,7 +100,7 @@ for(const [id,provider,url]of [
  ['mail-url-password','Mail server','smtps://mailer:'+opaque(20)+'@smtp.example.com:465'],['broker-url-password','Message broker','amqps://svc:'+opaque(20)+'@broker.example.com/vhost'],
  ['ldap-url-password','LDAP','ldaps://reader:'+opaque(20)+'@ldap.example.com'],['redis-url-empty-user','Database','redis://:'+opaque(20)+'@cache.example.com:6379/0']
 ])cases.push({id,provider,value:url.startsWith('cloudinary:')?opaque(27):opaque(20),text:'const SERVICE_URL="'+url+'";'});
-// Gitleaks (MIT) and Nosey Parker (Apache-2.0) ports, see THIRD_PARTY_NOTICES.md. Values are synthetic and nonfunctional: fixed filler or
+// Gitleaks (MIT) and Nosey Parker (Apache-2.0) ports, see docs/THIRD_PARTY_NOTICES.md. Values are synthetic and nonfunctional: fixed filler or
 // hashes of fixture labels, never real tokens.
 const hexOf=(label:string,n:number)=>fx(label,Math.ceil(n/2)).toString('hex').slice(0,n),b64Of=(label:string,n:number)=>fx(label,n).toString('base64');
 export const portedCases:[string,string,string][]=[

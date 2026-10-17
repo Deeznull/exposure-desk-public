@@ -1,6 +1,6 @@
 # Exposure Desk user guide (2.9.1)
 
-Exposure Desk checks websites you own or are authorized to assess for secrets they expose to anonymous visitors. Everything runs on this computer: scans never send found keys to their providers (only the opt-in [live key check](#live-key-check-290) does, for one finding a person chooses), and findings, history and the optional vault stay in the local data folder. For an overview, the safety model and measured results, see [README.md](README.md).
+Exposure Desk checks websites you own or are authorized to assess (for example assets in a bug bounty program's scope) for secrets they expose to anonymous visitors. Everything runs on this computer: scans never send found keys to their providers (only the opt-in [live key check](#live-key-check-290) does, for one finding a person chooses), and findings, history and the optional vault stay in the local data folder. For an overview, the safety model and measured results, see [README.md](../README.md).
 
 ## Start here
 
@@ -94,8 +94,8 @@ Names are compared after normalization: letter case, Unicode or punycode spellin
    - On the scan page, **Restore …** undoes a switch until you reload the form.
    - History is never rewritten.
 6. **Advanced** keeps the saved project and project name, extra seeds, related and private origins, the robots policy, browser navigation URLs (at most 10), read-only POST endpoints, sensitive-field expectations, stale asset URLs (and **Revisit exact assets from this project's last three scans**, on by default for Deep audit), request privacy (announced language, browser time zone, static User-Agent) and **Upload scan specifications (JSON, for power users)**. It has no rate, concurrency, page, byte, duration or preset fields: the ready option sets those.
-   - A file with `coverage` and `traffic` and no numbers of its own loads as that option. The bundled examples `config.example.json`, `exact-origin.config.example.json` and `exhaustive.config.example.json` name ready options this way.
-   - A file with its own numbers (for example `maxPages` or `sizingMode`, as in `adaptive.config.example.json`) loads as custom settings and is checked against the ceilings above.
+   - A file with `coverage` and `traffic` and no numbers of its own loads as that option. The bundled examples `examples/config.example.json`, `examples/exact-origin.config.example.json` and `examples/exhaustive.config.example.json` name ready options this way.
+   - A file with its own numbers (for example `maxPages` or `sizingMode`, as in `examples/adaptive.config.example.json`) loads as custom settings and is checked against the ceilings above.
 7. **CLI:** `node dist/src/cli.js help` prints the same table.
    - A scan with no `--preset`, `--coverage`, `--traffic`, `--config` or checkpoint uses Standard + Normal (2.5 ran the legacy Thorough preset; `--preset thorough` keeps it).
    - The 2.5 flag `--sizing` keeps the 2.5 default.
@@ -104,7 +104,7 @@ Names are compared after normalization: letter case, Unicode or punycode spellin
 
 # Command line: target lists and JSON Lines (2.7.0)
 
-These options are for the command line only. The full reference, with an example, is in [README.md](docs/REFERENCE.md#target-lists-json-lines-and-finding-ids-270), and the event format is in [docs/JSONL.md](docs/JSONL.md).
+These options are for the command line only. The full reference, with an example, is in [README.md](REFERENCE.md#target-lists-json-lines-and-finding-ids-270), and the event format is in [docs/JSONL.md](JSONL.md).
 
 1. **A list of targets.** `node dist/src/cli.js scan --targets hosts.txt` reads one host name, URL or httpx-style line per line; `--targets -` reads the list from standard input. Blank lines and `#` comments are skipped. By default targets are scanned one after another, each with its own report; since 2.8, `--concurrency N` runs several at once and `--state FILE` lets an interrupted list resume (see [Mass scan and resume](#mass-scan-and-resume)).
 2. **Rejected lines.** Every line is checked against the [protected-host rule](#hard-rule-protected-hosts) before any request, with no override. A protected, invalid or duplicate line, or (with a program file) a line outside the program scope, is listed on standard error with its reason and the other lines continue. If no line is accepted, the command exits 2.
@@ -115,7 +115,7 @@ These options are for the command line only. The full reference, with an example
 
 # Bug bounty workflow (2.8.0)
 
-These features are for researchers who test the assets of a bug bounty or disclosure program from the command line. The [README quick start](docs/REFERENCE.md#bug-bounty-quick-start) shows one complete run; each part below says what to do and links to the full reference. In the commands, `exposure-desk` stands for `node dist/src/cli.js` (`runtime/bin/node dist/src/cli.js` in the Linux package, `runtime\node.exe dist\src\cli.js` in the Windows package).
+These features are for researchers who test the assets of a bug bounty or disclosure program from the command line. The [README quick start](REFERENCE.md#bug-bounty-quick-start) shows one complete run; each part below says what to do and links to the full reference. In the commands, `exposure-desk` stands for `node dist/src/cli.js` (`runtime/bin/node dist/src/cli.js` in the Linux package, `runtime\node.exe dist\src\cli.js` in the Windows package).
 
 The hard rules apply unchanged. No program file, flag or setting can scan a [protected host](#hard-rule-protected-hosts), widen your authorization, send a found key anywhere or hide the scan. Masked by default everywhere: `--full-secrets` unmasks values only in report files written to disk; the terminal, JSON Lines and recon lists always stay masked.
 
@@ -127,7 +127,7 @@ The hard rules apply unchanged. No program file, flag or setting can scan a [pro
 4. **Check it.** `exposure-desk program check DIR` validates the file and prints the effective scope, one rule per line. Every error is a refusal with exit 2, before any request.
 5. **Scan with it.** `scan --program DIR` applies the scope, the pace and the headers. Target lines outside the scope are rejected as `out-of-scope`; links and redirects outside it are never requested and are listed in the report as excluded. With a program file, every run needs `--authorized` or `"authorized": true` in the file. A folder without `program.json` keeps the 2.7 meaning: it only holds the finding-ID key.
 
-Full reference: [docs/PROGRAM.md](docs/PROGRAM.md).
+Full reference: [docs/PROGRAM.md](PROGRAM.md).
 
 ## Mass scan and resume
 
@@ -136,14 +136,14 @@ Full reference: [docs/PROGRAM.md](docs/PROGRAM.md).
 3. **Blocks.** A target that keeps answering with bot challenges, 403, 429 or 503 responses, or connection resets is stopped as blocked (incomplete, exit 2). Nothing is retried around a block, and nothing about the requests changes. In a mass run, once at least 3 targets have finished and at least a quarter of them were blocked, no further target is started.
 4. **The same exposure on several targets.** In a mass run, a finding already reported on an earlier target carries `duplicateOf` in JSON Lines, and the summary lists unique and shared findings. Each target's report still lists its own findings in full.
 
-Full reference: [docs/MASS_SCAN.md](docs/MASS_SCAN.md); the event fields are in [docs/JSONL.md](docs/JSONL.md).
+Full reference: [docs/MASS_SCAN.md](MASS_SCAN.md); the event fields are in [docs/JSONL.md](JSONL.md).
 
 ## Recon lists and source rebuild
 
 1. **Recon lists.** `scan --recon DIR` writes what each scan saw as plain-text lists (URLs, endpoints, hosts split by scope, parameters, scripts, source maps and GraphQL operations) plus `recon.json`. With `--targets`, each target gets a `DIR/<n>-<host>` folder and `DIR` holds the merged set. Recon makes no extra requests, and the lists never contain a found value, even with `--full-secrets`.
 2. **Source rebuild.** `scan --rebuild-sources DIR` rebuilds the website's own public source files from its published source maps into a new or empty, owner-only folder. These files are verbatim public code and may contain credentials: treat the folder like an unmasked report file and do not share it.
 
-Full reference: [docs/RECON.md](docs/RECON.md).
+Full reference: [docs/RECON.md](RECON.md).
 
 ## Submission Markdown
 
@@ -152,28 +152,28 @@ Full reference: [docs/RECON.md](docs/RECON.md).
 3. **Full values.** `--full-secrets` writes unmasked values only into files: a scan's report files, or `report submit` with `--out` or `--bundle` (and only when the input report is a full-secret export). It is refused when the Markdown would be printed.
 4. **In the dashboard.** On **Findings**, each finding has a **Copy submission Markdown** button. It copies a masked draft for that finding. If the browser does not allow clipboard access, the draft appears in a read-only box labelled "Submission Markdown (masked)": select it and copy it. The dashboard never writes unmasked submission files.
 
-Review every draft before you submit it, and follow the program's rules for proof and disclosure. Full reference: [docs/SUBMISSION.md](docs/SUBMISSION.md).
+Review every draft before you submit it, and follow the program's rules for proof and disclosure. Full reference: [docs/SUBMISSION.md](SUBMISSION.md).
 
 ## Recon downloads in the dashboard
 
-Runs that the dashboard stores keep their recon lists in the data folder (`recon/<run id>/`). On **Findings**, the **Local exports** panel then shows a **Recon lists** block with one download link per list for the selected run. The block is hidden when the run has no recon lists, for example a run saved by an earlier version. The lists are masked, and deleting the run in the app deletes them too. Command-line runs write their lists to `--recon DIR` instead. Details: [docs/RECON.md](docs/RECON.md#dashboard).
+Runs that the dashboard stores keep their recon lists in the data folder (`recon/<run id>/`). On **Findings**, the **Local exports** panel then shows a **Recon lists** block with one download link per list for the selected run. The block is hidden when the run has no recon lists, for example a run saved by an earlier version. The lists are masked, and deleting the run in the app deletes them too. Command-line runs write their lists to `--recon DIR` instead. Details: [docs/RECON.md](RECON.md#dashboard).
 
 ## Linux and Docker
 
 1. **Linux x64 package.** Check the archive with `sha256sum --check` and its `.sha256` file, unpack it with `tar -xzf`, and start the dashboard with `Start Exposure Desk.sh` in the unpacked folder. The package carries its own Node.js; the command line is `runtime/bin/node dist/src/cli.js`. Data goes to `$XDG_DATA_HOME/exposure-desk` (`~/.local/share/exposure-desk` by default); `EXPOSURE_DATA_DIR` chooses another folder and must be an absolute path.
-2. **Browser sandbox.** Chromium keeps its own sandbox, which needs unprivileged user namespaces. Some hosts block them (Ubuntu 23.10 and later, through AppArmor), and browser checks then report the browser launch as blocked. The two fixes are the host administrator's decision; [docs/LINUX.md](docs/LINUX.md#chromium-libraries-and-sandbox) describes them.
-3. **Container image.** Build it from a checkout of this repository with `docker build --tag exposure-desk .` and run it read-only, without capabilities and with a named volume for its data, as shown in [docs/LINUX.md](docs/LINUX.md#container-image). Any command can follow the image name; the working directory and all writable state are the `/data` volume. The image runs as a non-root user and turns Chromium's own sandbox off (`EXPOSURE_BROWSER_NO_SANDBOX=1`), because Docker's default seccomp profile blocks it; the container is then the isolation boundary.
-4. **Dashboard in a container.** The dashboard listens only on `127.0.0.1`, inside the container as well. On a Linux host, run the image with `--network host` and the `dashboard` command; publishing a port does not make it reachable. See [docs/LINUX.md](docs/LINUX.md#dashboard-in-a-container).
+2. **Browser sandbox.** Chromium keeps its own sandbox, which needs unprivileged user namespaces. Some hosts block them (Ubuntu 23.10 and later, through AppArmor), and browser checks then report the browser launch as blocked. The two fixes are the host administrator's decision; [docs/LINUX.md](LINUX.md#chromium-libraries-and-sandbox) describes them.
+3. **Container image.** Build it from a checkout of this repository with `docker build --tag exposure-desk .` and run it read-only, without capabilities and with a named volume for its data, as shown in [docs/LINUX.md](LINUX.md#container-image). Any command can follow the image name; the working directory and all writable state are the `/data` volume. The image runs as a non-root user and turns Chromium's own sandbox off (`EXPOSURE_BROWSER_NO_SANDBOX=1`), because Docker's default seccomp profile blocks it; the container is then the isolation boundary.
+4. **Dashboard in a container.** The dashboard listens only on `127.0.0.1`, inside the container as well. On a Linux host, run the image with `--network host` and the `dashboard` command; publishing a port does not make it reachable. See [docs/LINUX.md](LINUX.md#dashboard-in-a-container).
 
 ## Analysis time on slow machines
 
 A large script takes longer to analyse on a slow computer, such as a small VPS or a 2-vCPU CI runner. Exposure Desk measures the computer once per process and gives analysis more time to match: a fast computer gets a time factor of 1, a slower one a factor from 1 to 4. Only analysis time scales; memory budgets and the scan's duration limits never change. The factor and the resulting budgets appear in the dashboard's analysis summary and in the report (`analysis.timeFactor`).
 
-To set the factor yourself, for example on a CI runner whose speed varies, set the environment variable `EXPOSURE_ANALYSIS_TIME_FACTOR` (values from 1 to 8; anything that is not a positive number is ignored and noted in the scan). Details: [docs/LINUX.md](docs/LINUX.md#analysis-time-on-slow-machines).
+To set the factor yourself, for example on a CI runner whose speed varies, set the environment variable `EXPOSURE_ANALYSIS_TIME_FACTOR` (values from 1 to 8; anything that is not a positive number is ignored and noted in the scan). Details: [docs/LINUX.md](LINUX.md#analysis-time-on-slow-machines).
 
 # Live key check (2.9.0)
 
-Off by default. A program file that contains `"liveKeyChecks": { "enabled": true }` lets a person ask whether **one** found key still works: open the finding in **Advanced** and click **Check if live** (the confirmation names the host that will be contacted), or run `check-key FINDING-ID --program DIR --authorized`. Exposure Desk makes one read-only identity request to that key's own provider (GitHub, GitLab, OpenAI, Anthropic, Stripe, SendGrid or Slack) and records **live**, **revoked** or **unknown** next to the finding; a key of any other provider reads **unknown** without a request. The finding's `validity` stays `unverified`. **Check all** (`--all`) needs the separate `"checkAll": true` and runs one key at a time, paced per provider. No scan, mass scan or ready option ever checks a key, and only the key itself leaves the computer, in the one header its provider documents. Many programs forbid testing found credentials: turn this on only where the program permits it. Details: [docs/LIVE_KEY_CHECK.md](docs/LIVE_KEY_CHECK.md).
+Off by default. A program file that contains `"liveKeyChecks": { "enabled": true }` lets a person ask whether **one** found key still works: open the finding in **Advanced** and click **Check if live** (the confirmation names the host that will be contacted), or run `check-key FINDING-ID --program DIR --authorized`. Exposure Desk makes one read-only identity request to that key's own provider (GitHub, GitLab, OpenAI, Anthropic, Stripe, SendGrid or Slack) and records **live**, **revoked** or **unknown** next to the finding; a key of any other provider reads **unknown** without a request. The finding's `validity` stays `unverified`. **Check all** (`--all`) needs the separate `"checkAll": true` and runs one key at a time, paced per provider. No scan, mass scan or ready option ever checks a key, and only the key itself leaves the computer, in the one header its provider documents. Many programs forbid testing found credentials: turn this on only where the program permits it. Details: [docs/LIVE_KEY_CHECK.md](LIVE_KEY_CHECK.md).
 
 # Detection-quality update in 2.6.0
 
@@ -251,7 +251,7 @@ Information findings offer Copy endpoint and View source evidence. A public imag
 
 ## Exhaustive and origin coverage
 
-Since 2.6 the scan page has no preset selector. **Deep audit + Normal** is the closest ready option to the former Exhaustive preset; `exhaustive.config.example.json` loads as Deep audit + Normal. The legacy Exhaustive preset itself still runs from the CLI (`--preset exhaustive`), from a saved project that uses it (shown as **Legacy preset: Exhaustive**) or from an uploaded JSON specification. Review explicitly authorized roots/related origins, confirm authorization, then start the scan. Each origin receives bounded fair turns and up to 60 minutes from first dispatch; shared project budgets remain in force. At 90% optional traversal stops. Project duration may exceed 60 minutes. Coverage groups and request scheduling shows per-origin accounting, separate important/optional limitations, and exclusive resource states. No findings is limited to inspected supported coverage. See [MILESTONE1.md](docs/history/MILESTONE1.md) for exact limits, CLI commands, compatibility and cleanup semantics.
+Since 2.6 the scan page has no preset selector. **Deep audit + Normal** is the closest ready option to the former Exhaustive preset; `examples/exhaustive.config.example.json` loads as Deep audit + Normal. The legacy Exhaustive preset itself still runs from the CLI (`--preset exhaustive`), from a saved project that uses it (shown as **Legacy preset: Exhaustive**) or from an uploaded JSON specification. Review explicitly authorized roots/related origins, confirm authorization, then start the scan. Each origin receives bounded fair turns and up to 60 minutes from first dispatch; shared project budgets remain in force. At 90% optional traversal stops. Project duration may exceed 60 minutes. Coverage groups and request scheduling shows per-origin accounting, separate important/optional limitations, and exclusive resource states. No findings is limited to inspected supported coverage. See [MILESTONE1.md](history/MILESTONE1.md) for exact limits, CLI commands, compatibility and cleanup semantics.
 
 ## Automatic domain discovery and finding assessment
 

@@ -87,4 +87,4 @@ These hosts are the complete egress allowlist for the check: no request can be m
 
 The verdict is saved locally with the finding (result, time checked, provider, endpoint host, and a short status/reason code) and shown masked in the dashboard and reports. It never leaves your computer, and it never alters the finding's `validity`, which remains `unverified`.
 
-See also [PRIVACY.md](../PRIVACY.md), [ACCEPTABLE_USE.md](../ACCEPTABLE_USE.md) and [docs/PROGRAM.md](PROGRAM.md).
+See also [PRIVACY.md](PRIVACY.md), [ACCEPTABLE_USE.md](ACCEPTABLE_USE.md) and [docs/PROGRAM.md](PROGRAM.md).

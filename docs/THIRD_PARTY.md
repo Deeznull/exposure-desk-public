@@ -42,7 +42,7 @@ No code, regular expression or wordlist was copied from TruffleHog (AGPL-3.0), S
 
 ## Licence audit for 2.6.0 (2026-10-09)
 
-Exposure Desk's own code, documentation and rules written for it are proprietary ([LICENSE](LICENSE), all rights reserved). Everything below keeps its own licence. The audit read the `license` field and the licence files of every installed package and the notices shipped with the runtimes; it is a technical inventory, not legal advice.
+Exposure Desk's own code, documentation and rules written for it are proprietary ([LICENSE](../LICENSE), all rights reserved). Everything below keeps its own licence. The audit read the `license` field and the licence files of every installed package and the notices shipped with the runtimes; it is a technical inventory, not legal advice.
 
 | Component (shipped in) | Licences found | Copyleft? |
 | --- | --- | --- |

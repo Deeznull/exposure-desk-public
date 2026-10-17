@@ -1,6 +1,6 @@
 # Demo script (2–3 minutes)
 
-A short walkthrough for a recording or a live call. It uses only the synthetic demo shop that ships with Exposure Desk and runs on your own computer (`127.0.0.1`): no real website is contacted, and every secret-looking value is a non-functional test vector. The screenshots in the [README](README.md#screenshots) were taken from this exact setup.
+A short walkthrough for a recording or a live call. It uses only the synthetic demo shop that ships with Exposure Desk and runs on your own computer (`127.0.0.1`): no real website is contacted, and every secret-looking value is a non-functional test vector. The screenshots in the [README](../README.md#screenshots) were taken from this exact setup.
 
 ## Before you record (not part of the 2–3 minutes)
 
@@ -32,12 +32,12 @@ A short walkthrough for a recording or a live call. It uses only the synthetic d
 
 **2:20 – The hard rule (20 s).** Back on **New scan**, open **Advanced**, choose **New / unsaved website** and close Advanced. Enter `https://portal.agency-example.gov/` (a fictional address), tick the authorization box and click **Start scan**. "Government, military, intelligence and law-enforcement websites are refused before a single DNS lookup. There is no setting to turn that off."
 
-**2:40 – Close (15 s).** "Everything stays on this computer: no account, no cloud, no telemetry. Exposure Desk finds exposed secrets on your own websites before someone else does."
+**2:40 – Close (15 s).** "Everything stays on this computer: no account, no cloud, no telemetry. Exposure Desk finds exposed secrets on your own websites, or in bug bounty scope, before someone else does."
 
 Stop the demo with **Ctrl+C** in the terminal.
 
 ## Notes for the presenter
 
-- If a viewer asks about real websites: the measured results in the [README](docs/REFERENCE.md#measured-results) come from local fixtures and synthetic data. Test on a website you own before quoting numbers for real sites.
+- If a viewer asks about real websites: the measured results in the [README](REFERENCE.md#measured-results) come from local fixtures and synthetic data. Test on a website you own before quoting numbers for real sites.
 - The second saved project, **Synthetic fixture · all modes**, turns on every discovery mode with explicit numbers and takes longer; it is meant for testing, not for a short demo.
 - To refresh the screenshots after a change, run `scripts/screenshots.mjs` (see the comment at the top of the file).

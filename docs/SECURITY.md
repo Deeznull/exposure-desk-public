@@ -9,7 +9,7 @@ Exposure Desk handles secrets found on websites, so problems in the tool itself 
 - **What to include:** the Exposure Desk version and build id (the `version` and `id` fields of `BUILD_INFO.json` in the installation folder; the dashboard also shows the build on each scan), the operating system, exact steps to reproduce, and what you expected instead.
 - **Do not include real secrets.** If a report needs a secret-looking value, use a synthetic one or at most a short masked prefix. Never send a live credential, a full-value (sensitive) export or a vault file.
 - Please give us reasonable time to fix the issue before you disclose it publicly: 90 days from your report, or earlier once a fix is released.
-- **Good-faith research.** Section 3(a) of [LICENSE](LICENSE) lets you build and run a local copy of Exposure Desk only to find and privately report vulnerabilities in it. Research that stays within that permission and follows this policy is welcome, and we will not pursue legal action over it. This covers only Exposure Desk itself, not any website, service or system of anyone else.
+- **Good-faith research.** Section 3(a) of [LICENSE](../LICENSE) lets you build and run a local copy of Exposure Desk only to find and privately report vulnerabilities in it. Research that stays within that permission and follows this policy is welcome, and we will not pursue legal action over it. This covers only Exposure Desk itself, not any website, service or system of anyone else.
 
 We don't offer paid rewards for reports about Exposure Desk itself.
 
@@ -19,11 +19,11 @@ We don't offer paid rewards for reports about Exposure Desk itself.
 | --- | --- |
 | 2.9.1 | Yes: current release |
 | 2.9.0 | No: superseded by 2.9.1 (saved data loads unchanged) |
-| 2.8.0 | No: superseded by 2.9.0 (saved data loads unchanged; see [MIGRATION_2.9.md](MIGRATION_2.9.md)) |
-| 2.7.0 | No: superseded by 2.8.0 (saved data loads unchanged; see [MIGRATION_2.8.md](MIGRATION_2.8.md)) |
-| 2.6.0 | No: superseded by 2.7.0 (saved data loads unchanged; see [MIGRATION_2.7.md](MIGRATION_2.7.md)) |
+| 2.8.0 | No: superseded by 2.9.0 (saved data loads unchanged; see [MIGRATION_2.9.md](releases/MIGRATION_2.9.md)) |
+| 2.7.0 | No: superseded by 2.8.0 (saved data loads unchanged; see [MIGRATION_2.8.md](releases/MIGRATION_2.8.md)) |
+| 2.6.0 | No: superseded by 2.7.0 (saved data loads unchanged; see [MIGRATION_2.7.md](releases/MIGRATION_2.7.md)) |
 | 2.6.0-rc.1 | No: superseded by 2.6.0 |
-| 2.5.0-rc.1 and older | No: upgrade to 2.9.1 (saved data loads tolerantly; see [MIGRATION_2.6.md](MIGRATION_2.6.md), [MIGRATION_2.7.md](MIGRATION_2.7.md), [MIGRATION_2.8.md](MIGRATION_2.8.md) and [MIGRATION_2.9.md](MIGRATION_2.9.md)) |
+| 2.5.0-rc.1 and older | No: upgrade to 2.9.1 (saved data loads tolerantly; see [MIGRATION_2.6.md](releases/MIGRATION_2.6.md), [MIGRATION_2.7.md](releases/MIGRATION_2.7.md), [MIGRATION_2.8.md](releases/MIGRATION_2.8.md) and [MIGRATION_2.9.md](releases/MIGRATION_2.9.md)) |
 
 Security fixes are made on the newest release only.
 
@@ -44,4 +44,4 @@ Out of scope:
 - detection gaps (a secret format that is not found): these are welcome as ordinary feedback, see [DETECTOR_COVERAGE.md](DETECTOR_COVERAGE.md);
 - attacks that already require full control of the user's account or machine.
 
-The security model is described in [README.md](docs/REFERENCE.md#security-model). How data is stored and what leaves the computer is in [PRIVACY.md](PRIVACY.md); permitted use is in [ACCEPTABLE_USE.md](ACCEPTABLE_USE.md).
+The security model is described in [README.md](REFERENCE.md#security-model). How data is stored and what leaves the computer is in [PRIVACY.md](PRIVACY.md); permitted use is in [ACCEPTABLE_USE.md](ACCEPTABLE_USE.md).

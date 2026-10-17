@@ -152,7 +152,7 @@ jobs:
           mkdir -p "$stage"
           cp -- "$file" "$stage/exposure-desk-linux-x64.tar.gz"
           cp -- "$file.sha256" "$stage/exposure-desk-linux-x64.tar.gz.sha256"
-          notes="Draft for $RELEASE_TAG, not published. Linux x64 package: Exposure Desk $version Linux x64.tar.gz, sha256 $sum, built by workflow run $GITHUB_RUN_ID (attempt $GITHUB_RUN_ATTEMPT) from commit $GITHUB_SHA. Download with gh release download and check with scripts/linux-release-assets.mjs (see RELEASE_PACKAGE.md)."
+          notes="Draft for $RELEASE_TAG, not published. Linux x64 package: Exposure Desk $version Linux x64.tar.gz, sha256 $sum, built by workflow run $GITHUB_RUN_ID (attempt $GITHUB_RUN_ATTEMPT) from commit $GITHUB_SHA. Download with gh release download and check with scripts/linux-release-assets.mjs (see docs/RELEASE_PACKAGE.md)."
           if draft="$(gh release view "$RELEASE_TAG" --json isDraft --jq .isDraft 2>"$RUNNER_TEMP/release-view.err")"; then
             if [ "$draft" != "true" ]; then
               echo "::error::The release $RELEASE_TAG is already published; this workflow only changes draft releases."
@@ -194,6 +194,6 @@ jobs:
         with:
           persist-credentials: false
       - name: Build the image
-        run: docker build --pull --tag exposure-desk:ci .
+        run: docker build --pull --file docker/Dockerfile --tag exposure-desk:ci .
       - name: Container smoke test
         run: node scripts/docker-smoke.mjs exposure-desk:ci

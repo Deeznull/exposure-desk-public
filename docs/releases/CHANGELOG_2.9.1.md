@@ -1,6 +1,6 @@
 # Changelog — 2.9.1
 
-2.9.1 is a patch release that follows 2.9.0 (build `2.9.0+b251a3ea63449d85`). It follows webpack's cross-module constant exports in the semantic pass, gives the screening of requests in a mass run fair turns, makes `invalid-url` refusals informational, reports memory for mass runs at concurrency 1, and delivers the Linux package as an asset of a draft GitHub Release. Measurements: [TEST_RESULTS.md](TEST_RESULTS.md). Earlier changes: [CHANGELOG_2.9.md](CHANGELOG_2.9.md). Like every earlier release, 2.9.1 was measured only with local loopback fixtures and synthetic, nonfunctional keys. No real website and no real provider endpoint was contacted.
+2.9.1 is a patch release that follows 2.9.0 (build `2.9.0+b251a3ea63449d85`). It follows webpack's cross-module constant exports in the semantic pass, gives the screening of requests in a mass run fair turns, makes `invalid-url` refusals informational, reports memory for mass runs at concurrency 1, and delivers the Linux package as an asset of a draft GitHub Release. Measurements: [TEST_RESULTS.md](../TEST_RESULTS.md). Earlier changes: [CHANGELOG_2.9.md](CHANGELOG_2.9.md). Like every earlier release, 2.9.1 was measured only with local loopback fixtures and synthetic, nonfunctional keys. No real website and no real provider endpoint was contacted.
 
 Rule version `website/2.9.1` (2.9.0 used `website/2.9.0`), because the semantic pass can now find a key whose parts are split across webpack modules, so a scan of the same bundle can report a finding 2.9.0 did not. No format rule was added, removed or changed. The priority version stays `priority/1`. Unchanged:
 
@@ -28,7 +28,7 @@ No new option or file can loosen any of them. There is no MIGRATION_2.9.1.md bec
 
 ## Completeness
 
-- **`invalid-url` is informational.** A discovered URL whose host is not a valid website host is still refused before any DNS lookup, still listed with the reason `invalid-url` and still sent as the same JSON Lines event, but it no longer makes a scan incomplete or lowers its coverage assessment. `target-end.gaps` lists it as `{code, count, informational: true}`; readers that ignore entries with `informational` get the 2.9.0 meaning. A page the scan was already fetching that redirects to such a host stays a gap, like a redirect out of scope. Runs saved by 2.9.0 keep the state they were saved with. See [docs/JSONL.md](docs/JSONL.md) and [USER_GUIDE.md](USER_GUIDE.md).
+- **`invalid-url` is informational.** A discovered URL whose host is not a valid website host is still refused before any DNS lookup, still listed with the reason `invalid-url` and still sent as the same JSON Lines event, but it no longer makes a scan incomplete or lowers its coverage assessment. `target-end.gaps` lists it as `{code, count, informational: true}`; readers that ignore entries with `informational` get the 2.9.0 meaning. A page the scan was already fetching that redirects to such a host stays a gap, like a redirect out of scope. Runs saved by 2.9.0 keep the state they were saved with. See [docs/JSONL.md](../JSONL.md) and [USER_GUIDE.md](../USER_GUIDE.md).
 
 ## Fixes
 
@@ -36,7 +36,7 @@ No new option or file can loosen any of them. There is no MIGRATION_2.9.1.md bec
 
 ## Linux package
 
-- linux.yml no longer stores the Linux package as an Actions artifact by default (2.9.0's upload failed on the full artifact storage quota). A manual run with a release tag attaches the package and its `.sha256` to a **draft** GitHub Release of the private repository after `sha256sum --check` and the packaged smoke test pass. The workflow never publishes the release and never deletes releases, assets or artifacts. `scripts/linux-release-assets.mjs` checks a downloaded package against its `.sha256` and the version and gives both files back their package names. See [RELEASE_PACKAGE.md](RELEASE_PACKAGE.md) and [docs/LINUX.md](docs/LINUX.md).
+- linux.yml no longer stores the Linux package as an Actions artifact by default (2.9.0's upload failed on the full artifact storage quota). A manual run with a release tag attaches the package and its `.sha256` to a **draft** GitHub Release of the private repository after `sha256sum --check` and the packaged smoke test pass. The workflow never publishes the release and never deletes releases, assets or artifacts. `scripts/linux-release-assets.mjs` checks a downloaded package against its `.sha256` and the version and gives both files back their package names. See [RELEASE_PACKAGE.md](../RELEASE_PACKAGE.md) and [docs/LINUX.md](../LINUX.md).
 
 ## Development and tests
 
@@ -45,7 +45,7 @@ No new option or file can loosen any of them. There is no MIGRATION_2.9.1.md bec
 
 ## Release measurements
 
-Measured on build `2.9.1+94a512df50bb9d43` on one Windows x64 computer with loopback fixtures only; details are in [TEST_RESULTS.md](TEST_RESULTS.md) and `benchmarks/2.9.1/`. Every timing and memory figure below is from Windows; the Linux x64 runs on GitHub-hosted Ubuntu runners give pass/fail results only.
+Measured on build `2.9.1+94a512df50bb9d43` on one Windows x64 computer with loopback fixtures only; details are in [TEST_RESULTS.md](../TEST_RESULTS.md) and `benchmarks/2.9.1/`. Every timing and memory figure below is from Windows; the Linux x64 runs on GitHub-hosted Ubuntu runners give pass/fail results only.
 
 - Ready-option matrix: 167/167 checks passed over 57 scans, and every source-build row keeps the 2.9.0 recall. The 2.9.0 side was not reused from records; it was measured for this release on the extracted 2.9.0 Windows x64 release ZIP, run with the same six ready options.
 - External synthetic corpus (the external `detection-corpus/v2`: 20 sites, 27 private values, 402 negative controls; 12 runs, the six ready options in acquisition and discovery; not an acceptance target): precision 0.900 in every run; recall 1 in acquisition (27/27) and 0.889 in discovery (24/27); the same 3 negative-control alerts in every run and no other false positive.

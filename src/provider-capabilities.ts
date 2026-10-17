@@ -54,7 +54,7 @@ const CAPABILITIES:Record<string,Capability>={
   'Mail server':{group:'messaging',impacts:['data-access'],remediation:['Change the mail account password, review sent mail, forwarding rules and sending limits.']},
   'Message broker':{group:'data',impacts:['data-access'],remediation:['Change the broker password, restrict network access and review connections, queues and topic permissions.']},
   'LDAP':{group:'data',impacts:['data-access'],remediation:['Change the directory bind password, limit what the bind account can read and review directory access logs.']},
-  // Providers of the Gitleaks and Nosey Parker ports (THIRD_PARTY_NOTICES.md).
+  // Providers of the Gitleaks and Nosey Parker ports (docs/THIRD_PARTY_NOTICES.md).
   'Linear':{group:'data',impacts:['data-access'],remediation:['Revoke the Linear API key under Settings → Security & access and review the workspace audit log for issue and project changes.']},
   'PlanetScale':{group:'data',impacts:['data-access'],remediation:['Delete the PlanetScale service token, database password or OAuth token, create a narrowly scoped replacement and review the organization audit log and database connections.']},
   'Doppler':{group:'data',impacts:['data-access','account-takeover'],remediation:['Revoke the Doppler token, then rotate every secret the token could read, because they must be treated as exposed; review the Doppler activity log.']},

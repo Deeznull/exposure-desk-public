@@ -2,7 +2,7 @@ import {readFile,writeFile} from 'node:fs/promises';
 import {createHash} from 'node:crypto';
 import {Detector,RULE_VERSION,ENGINE_VERSION,rules} from '../src/detectors.js';
 import {providerCases,negativeCases} from '../test/provider-fixtures.js';
-const doc=await readFile('DETECTOR_COVERAGE.md','utf8'),d=new Detector();d.syntheticFixture=true;
+const doc=await readFile('docs/DETECTOR_COVERAGE.md','utf8'),d=new Detector();d.syntheticFixture=true;
 await d.init();const executed=new Map<string,Awaited<ReturnType<Detector['inspect']>>>();for(const fixture of providerCases)executed.set(fixture.id,await d.inspect(fixture.text));
 const associated:Record<string,string[]>={'Google Gemini / Vertex':['Google / Gemini','Google Cloud'],'Existing / other':['GitHub','Supabase','OpenRouter','Sentry','Database'],'AWS / GCP':['AWS','Google Cloud'],'AWS / GCP / service accounts':['AWS','Google Cloud'],'Signed URLs / webhooks':['AWS','Google Cloud','Azure','Slack','Discord','Zapier']};
 const families=doc.split(/\r?\n/).filter(l=>l.startsWith('| ')&&!l.startsWith('| Provider')&&!l.startsWith('| ---')).map(row=>{

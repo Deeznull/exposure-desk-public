@@ -1,6 +1,6 @@
 # Changelog — 2.9.0
 
-2.9.0 follows 2.8.0 (build `2.8.0+cc5fecf8cb75f1c7`). It adds an opt-in live key check for a single finding, 31 detection rules ported from Gitleaks and Nosey Parker, host validation for every discovered URL, and fixes to the page-leave guard, mass-scan memory and the analysis memory of unparseable bundles. Upgrade notes: [MIGRATION_2.9.md](MIGRATION_2.9.md). Measurements: [TEST_RESULTS.md](TEST_RESULTS.md). Earlier changes: [CHANGELOG_2.8.md](CHANGELOG_2.8.md). Like every earlier release, 2.9.0 was measured only with local loopback fixtures and synthetic, nonfunctional keys. The live key check was tested only against loopback mock providers. No real website and no real provider endpoint was contacted.
+2.9.0 follows 2.8.0 (build `2.8.0+cc5fecf8cb75f1c7`). It adds an opt-in live key check for a single finding, 31 detection rules ported from Gitleaks and Nosey Parker, host validation for every discovered URL, and fixes to the page-leave guard, mass-scan memory and the analysis memory of unparseable bundles. Upgrade notes: [MIGRATION_2.9.md](MIGRATION_2.9.md). Measurements: [TEST_RESULTS.md](../TEST_RESULTS.md). Earlier changes: [CHANGELOG_2.8.md](CHANGELOG_2.8.md). Like every earlier release, 2.9.0 was measured only with local loopback fixtures and synthetic, nonfunctional keys. The live key check was tested only against loopback mock providers. No real website and no real provider endpoint was contacted.
 
 Rule version `website/2.9.0` (2.8.0 used `website/2.8.0`), because of the new detection rules below. The priority version stays `priority/1`. Unchanged:
 
@@ -14,7 +14,7 @@ No new option or file can loosen any of them. Every 2.8 command-line flag, confi
 
 ## Live key check (opt-in, off by default)
 
-- A person can ask whether **one** found key still works. Exposure Desk makes one read-only identity request to that key's own provider and records **live**, **revoked** or **unknown** next to the finding. The finding's `validity` stays `unverified`. See [docs/LIVE_KEY_CHECK.md](docs/LIVE_KEY_CHECK.md).
+- A person can ask whether **one** found key still works. Exposure Desk makes one read-only identity request to that key's own provider and records **live**, **revoked** or **unknown** next to the finding. The finding's `validity` stays `unverified`. See [docs/LIVE_KEY_CHECK.md](../LIVE_KEY_CHECK.md).
 - It is off unless a program file sets `"liveKeyChecks": { "enabled": true }`. **Check all** is a separate permission (`"checkAll": true`). Without the block, nothing changes.
 - It is never automatic: no scan, mass scan or ready option ever checks a key. A check starts only from **Check if live** on a finding (after a confirmation that names the host) or from `check-key FINDING-ID --program DIR --authorized`.
 - Only the key leaves the computer, in the one header the provider documents. No URL, path, context or other finding is sent. Redirects are not followed.
@@ -25,7 +25,7 @@ No new option or file can loosen any of them. Every 2.8 command-line flag, confi
 
 ## Detection rules
 
-- 31 rules for 28 providers, ported from Gitleaks (MIT) and Nosey Parker (Apache-2.0). Only providers that had no rule of their own were added, so no existing finding changes its provider, rule or category. Upstream quantifiers were bounded. See [DETECTOR_COVERAGE.md](DETECTOR_COVERAGE.md) and [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md), which now ships in both packages.
+- 31 rules for 28 providers, ported from Gitleaks (MIT) and Nosey Parker (Apache-2.0). Only providers that had no rule of their own were added, so no existing finding changes its provider, rule or category. Upstream quantifiers were bounded. See [DETECTOR_COVERAGE.md](../DETECTOR_COVERAGE.md) and [THIRD_PARTY_NOTICES.md](../THIRD_PARTY_NOTICES.md), which now ships in both packages.
 - Left out: public browser keys (New Relic browser keys, Mapbox `pk`), rules that need context, rules for short or collision-prone prefixes, and entropy or generic rules.
 - An old-vs-new comparison over 529 inputs (the external corpus files and the frozen 2.5 corpus strings) found no difference in existing results. The benchmark finds 167 of 167 with no false positives.
 
@@ -63,7 +63,7 @@ No new option or file can loosen any of them. Every 2.8 command-line flag, confi
 ## Mass scan: shared-capacity waits
 
 - **Fair program-wide request turns (O2).** With a program file, the program-wide request limiter now hands out its turns in arrival order across targets, so a busy target can no longer keep taking turns ahead of targets still waiting for their first request. In the probe run, the longest wait any target had for its first request fell from 9528 ms to 2205 ms. Budgets, request counts and findings are the same.
-- **Where the shared wait goes (O3).** `target-end`, the mass `summary` and the origin snapshots gain `sharedWaitByCause`: `{analysisMs, parserMs, preflightMs, programSlotMs}`, the time spent waiting for the shared analysis budget, the parser, the preflight and the program-wide request slots. The four always add up exactly to `sharedWaitMs`, which is unchanged. See [docs/JSONL.md](docs/JSONL.md) and [docs/MASS_SCAN.md](docs/MASS_SCAN.md).
+- **Where the shared wait goes (O3).** `target-end`, the mass `summary` and the origin snapshots gain `sharedWaitByCause`: `{analysisMs, parserMs, preflightMs, programSlotMs}`, the time spent waiting for the shared analysis budget, the parser, the preflight and the program-wide request slots. The four always add up exactly to `sharedWaitMs`, which is unchanged. See [docs/JSONL.md](../JSONL.md) and [docs/MASS_SCAN.md](../MASS_SCAN.md).
 
 ## Fixes
 
@@ -77,7 +77,7 @@ No new option or file can loosen any of them. Every 2.8 command-line flag, confi
 
 ## Release measurements
 
-Measured on build `2.9.0+b251a3ea63449d85` on one Windows x64 computer with loopback fixtures only; details and the 2.8.0 comparison are in [TEST_RESULTS.md](TEST_RESULTS.md) and `benchmarks/2.9.0/`.
+Measured on build `2.9.0+b251a3ea63449d85` on one Windows x64 computer with loopback fixtures only; details and the 2.8.0 comparison are in [TEST_RESULTS.md](../TEST_RESULTS.md) and `benchmarks/2.9.0/`.
 
 - Ready-option matrix: 191/191 checks passed; the 2.8.0 side is reused from the 2.8.0 release records after a same-day spot check.
 - External synthetic corpus (20 sites; 12 runs: the six ready options from the site root and with every expected file seeded): every count and each site's findings, misses and false positives equal to 2.8.0.

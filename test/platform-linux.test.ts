@@ -63,19 +63,19 @@ test('Linux package and Windows package stay separate: the Windows packager has 
   assert.match(linux,/process\.platform!=='linux'/);assert.match(linux,/for\(const entry of releaseFiles\)/);
   // w3-docs (2.8): docs/LINUX.md and the other 2.8 guides joined the shared list, so the README and user guide links resolve in both packages.
   const {releaseFiles}=await import(pathToFileURL(path.join(root,'scripts','release-files.mjs')).href);
-  for(const doc of ['docs/LINUX.md','docs/PROGRAM.md','docs/MASS_SCAN.md','docs/RECON.md','docs/SUBMISSION.md','MIGRATION_2.8.md'])assert.ok(releaseFiles.includes(doc),'shared release list includes '+doc);
+  for(const doc of ['docs/LINUX.md','docs/PROGRAM.md','docs/MASS_SCAN.md','docs/RECON.md','docs/SUBMISSION.md','docs/releases/MIGRATION_2.8.md'])assert.ok(releaseFiles.includes(doc),'shared release list includes '+doc);
   assert.match(linux,/Build parity mismatch/);assert.match(linux,/Pinned detector integrity mismatch/);assert.match(linux,/verbatimSymlinks:true/);assert.match(linux,/A link leaves the package/);
   assert.ok(existsSync(path.join(root,'docs','LINUX.md')));
 });
 
 test('container image: pinned base, non-root user, data volume, loopback dashboard, no published port',()=>{
-  const docker=read('Dockerfile');
+  const docker=read('docker/Dockerfile');
   const bases=[...docker.matchAll(/^ARG NODE_IMAGE=(.+)$/gm)].map(m=>m[1]);assert.equal(bases.length,1);assert.match(bases[0],/^node:24\.18\.1-bookworm-slim@sha256:[0-9a-f]{64}$/);
   for(const from of docker.matchAll(/^FROM (\S+)/gm))assert.equal(from[1],'${NODE_IMAGE}','every stage uses the pinned base');
   assert.match(docker,/^USER exposure:exposure$/m);assert.match(docker,/--uid 10001/);assert.match(docker,/^VOLUME \["\/data"\]$/m);assert.match(docker,/EXPOSURE_DATA_DIR=\/data/);
   assert.match(docker,/^ENTRYPOINT \["\/usr\/bin\/tini", "--", "node", "\/app\/dist\/src\/cli\.js"\]$/m);assert.ok(!/^EXPOSE /m.test(docker),'no published port');
   assert.match(docker,/EXPOSURE_BROWSER_NO_SANDBOX=1/);assert.match(docker,/chmod -R a-w \/app/);assert.match(docker,/fetch-linux-distributions\.mjs/);
-  const ignore=read('.dockerignore').split('\n');for(const entry of ['.git','node_modules','dist','runtime','browser','.cache','artifacts','data'])assert.ok(ignore.includes(entry),'.dockerignore excludes '+entry);
+  const ignore=read('docker/Dockerfile.dockerignore').split('\n');for(const entry of ['.git','node_modules','dist','runtime','browser','.cache','artifacts','data'])assert.ok(ignore.includes(entry),'.dockerignore excludes '+entry);
   const dashboard=read('src/dashboard.ts');assert.match(dashboard,/listen\(port,'127\.0\.0\.1'/);
 });
 

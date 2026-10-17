@@ -6,7 +6,7 @@
 
 1. Stop every running Exposure Desk instance (Settings → Stop Exposure Desk, or close the launch window).
 2. Back up the whole data directory shown in Settings while the app is stopped: `%LOCALAPPDATA%\Exposure Desk` on Windows and `$XDG_DATA_HOME/exposure-desk` (`~/.local/share/exposure-desk`) on Linux by default. Keep `keys`, `scans`, `vault` and `workspace.json` together. Back up every `--program` folder too: its `.key` keeps finding IDs stable. Exposure Desk does not make this backup for you.
-3. Extract the 2.9.0 package into its own folder and start it as before: **Start Exposure Desk.cmd** on Windows, `Start Exposure Desk.sh` on Linux ([docs/LINUX.md](docs/LINUX.md)). It reuses the same data directory.
+3. Extract the 2.9.0 package into its own folder and start it as before: **Start Exposure Desk.cmd** on Windows, `Start Exposure Desk.sh` on Linux ([docs/LINUX.md](../LINUX.md)). It reuses the same data directory.
 
 ## What keeps working
 
@@ -24,11 +24,11 @@ A person can ask whether one found key still works. Nothing changes until a prog
 "liveKeyChecks": { "enabled": true }
 ```
 
-Then **Check if live** appears on a finding and `check-key FINDING-ID --program DIR --authorized` is accepted. `"checkAll": true` is a separate permission for **Check all** and `--all`. No scan, mass scan or ready option ever checks a key. Only the key leaves the computer, in the one header its provider documents, in one read-only identity request. The result (**live**, **revoked** or **unknown**) is stored with the finding, and the finding's `validity` stays `unverified`. Many programs forbid testing found credentials; turn this on only where the program permits it. See [docs/LIVE_KEY_CHECK.md](docs/LIVE_KEY_CHECK.md).
+Then **Check if live** appears on a finding and `check-key FINDING-ID --program DIR --authorized` is accepted. `"checkAll": true` is a separate permission for **Check all** and `--all`. No scan, mass scan or ready option ever checks a key. Only the key leaves the computer, in the one header its provider documents, in one read-only identity request. The result (**live**, **revoked** or **unknown**) is stored with the finding, and the finding's `validity` stays `unverified`. Many programs forbid testing found credentials; turn this on only where the program permits it. See [docs/LIVE_KEY_CHECK.md](../LIVE_KEY_CHECK.md).
 
 ## Behaviour changes you may notice
 
-- **New findings from 31 new rules.** Rule version `website/2.9.0` adds format rules for 28 providers that had no rule of their own. A rescan can report keys of these providers that 2.8 did not. No existing finding changes its provider, rule or category. See [DETECTOR_COVERAGE.md](DETECTOR_COVERAGE.md).
+- **New findings from 31 new rules.** Rule version `website/2.9.0` adds format rules for 28 providers that had no rule of their own. A rescan can report keys of these providers that 2.8 did not. No existing finding changes its provider, rule or category. See [DETECTOR_COVERAGE.md](../DETECTOR_COVERAGE.md).
 - **Discovered URLs with an invalid host are refused.** A link, script, source map, redirect target or browser subrequest whose host is not a valid website host is refused before any DNS lookup and recorded as `invalid-url`. Entered addresses were already checked this way.
 - **Two more protected hosts.** `politie.be` and `policia.pt`, with their subdomains, are refused like every other protected host. There is still no override.
 - **Popups are not loaded.** In a browser scan, a popup's in-scope page URL is added to the scan like a link; any other popup request is recorded as blocked with reason `browser-popup`.
@@ -38,7 +38,7 @@ Then **Check if live** appears on a finding and `check-key FINDING-ID --program 
 
 ## JSON Lines additions
 
-All additive; a reader that ignores unknown fields needs no change. See [docs/JSONL.md](docs/JSONL.md).
+All additive; a reader that ignores unknown fields needs no change. See [docs/JSONL.md](../JSONL.md).
 
 - `target-end.sharedWaitByCause` and `summary.sharedWaitByCause`: `{analysisMs, parserMs, preflightMs, programSlotMs}`, which always add up to `sharedWaitMs`. `sharedWaitMs` itself is unchanged.
 - `summary.memory` gains `parseCollections` and `parseCollectMs`.

@@ -4,7 +4,7 @@ import { Detector, rules } from '../src/detectors.js';
 import { capability } from '../src/provider-capabilities.js';
 import { portedCases } from './provider-fixtures.js';
 
-/** Rules ported from Gitleaks and Nosey Parker (THIRD_PARTY_NOTICES.md). All values are synthetic fixtures; nothing is contacted. */
+/** Rules ported from Gitleaks and Nosey Parker (docs/THIRD_PARTY_NOTICES.md). All values are synthetic fixtures; nothing is contacted. */
 const RULE:Record<string,string>={
   'planetscale-password':'planetscale-token','doppler-service':'doppler-token','doppler-personal':'doppler-token','grafana-service-account':'grafana-service-account-token',
   'grafana-cloud':'grafana-cloud-token','vault-service':'vault-token','vault-batch':'vault-token','terraform-cloud':'terraform-cloud-token','sourcegraph-legacy':'sourcegraph-token',

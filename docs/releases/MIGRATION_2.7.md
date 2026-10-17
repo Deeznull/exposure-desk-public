@@ -22,11 +22,11 @@
 - `scan --targets FILE` (or `--targets -` for standard input) scans a list of targets, one per line: host names, URLs or httpx-style lines. Targets run one after another in one process, each with its own report. `--targets` cannot be combined with `--url` or `--resume`; with `--targets`, `--config FILE` is used as a settings template whose `urls` are replaced by each target.
 - Every line is checked against the protected-host rule before any request, with no override. Rejected lines (protected, invalid or duplicate) are listed on standard error with their reason, and the other lines continue. No accepted line exits 2.
 - `--authorized` states that you own or are authorized to test every listed target. Without it, more than one accepted target exits 2 before any request.
-- `--jsonl` writes one JSON object per event to standard output and moves the readable lines to standard error. The events are described in [docs/JSONL.md](docs/JSONL.md).
+- `--jsonl` writes one JSON object per event to standard output and moves the readable lines to standard error. The events are described in [docs/JSONL.md](../JSONL.md).
 - `--silent` prints no plan or progress lines, only results.
 - `--program DIR` keeps a finding-ID key in `DIR/.key`, so a finding keeps the same ID across runs that use the same folder.
 
-The [command-line reference in the README](docs/REFERENCE.md#target-lists-json-lines-and-finding-ids-270) has an example.
+The [command-line reference in the README](../REFERENCE.md#target-lists-json-lines-and-finding-ids-270) has an example.
 
 ## Behaviour changes you may notice
 

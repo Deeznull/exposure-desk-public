@@ -1,17 +1,17 @@
 {
   "build": {
     "version": "2.9.1",
-    "id": "2.9.1+177e5a07e6845026",
-    "sourceDigest": "177e5a07e68450269d82bba42196e41e258302919a14edc52002730c0e0d9468"
+    "id": "2.9.1+6c2de10b3f971451",
+    "sourceDigest": "6c2de10b3f9714511b6308be9c7b0155a23647e3d3465500c6bab0164b8d94f6"
   },
   "inputs": [
     {
-      "path": "DETECTOR_COVERAGE.md",
-      "sha256": "8568d05638248d8d6c954b5e7361f309a3c145f7db627bba6d627a9d022c133b"
-    },
-    {
       "path": "coverage-registry.json",
       "sha256": "5771750d697355c0478c0233c7998485389a5dc9ed9f029cf2bf84a1bb32007b"
+    },
+    {
+      "path": "docs/DETECTOR_COVERAGE.md",
+      "sha256": "8568d05638248d8d6c954b5e7361f309a3c145f7db627bba6d627a9d022c133b"
     },
     {
       "path": "package-lock.json",
@@ -83,7 +83,7 @@
     },
     {
       "path": "scripts/build.mjs",
-      "sha256": "89f40ab7950ceb05934362a79d61788fb519bdffe812e3cd179273eca18063b3"
+      "sha256": "0f4a9fd72ef422ff792f5f507db3335bcb0e927e3ebc902a6f7463d004481dd8"
     },
     {
       "path": "scripts/cancel-stress.mjs",
@@ -95,11 +95,11 @@
     },
     {
       "path": "scripts/coverage-registry.ts",
-      "sha256": "71e30cc2ba9f39cf33ca60de6ab8ae75d140b8310d14353cf0f75e8006bb38ff"
+      "sha256": "cef8be3ec309a6dd740f4a9ee07954902aceaa56a6da01585470108792b38636"
     },
     {
       "path": "scripts/demo.ts",
-      "sha256": "c732a8a6ce73ebefdf958d6da168f427df9840c20b39e043ef27f399bddc9c5c"
+      "sha256": "398849116d6cacb0a7698f0aa77a59cb93b61e50e766095efb3e3fa3d4d5600c"
     },
     {
       "path": "scripts/docker-smoke.mjs",
@@ -135,7 +135,7 @@
     },
     {
       "path": "scripts/launch.mjs",
-      "sha256": "87bde1ff20531b4be5bfacdc8755015fb36b77610d1827af7c82237d3d92e113"
+      "sha256": "c1973a0de274ff5bfd5a17c061777dd41f510d0ad51e16bd94bd2fae76d9ebb3"
     },
     {
       "path": "scripts/linux-distributions.json",
@@ -187,7 +187,7 @@
     },
     {
       "path": "scripts/release-files.mjs",
-      "sha256": "abcae49625cac77d397e5a8f3ddcb3f7da2009265e59a774f7eff30481af6859"
+      "sha256": "e2b2772f6a5e5f0662201a936b79b20dba3ad93d39443c27b1c524b7c152edcc"
     },
     {
       "path": "scripts/release-preflight.mjs",
@@ -195,7 +195,7 @@
     },
     {
       "path": "scripts/release-summary.mjs",
-      "sha256": "1d658d448ba621a62c688e59792a63558ba2f89228b92f94c5f31e45daa48b43"
+      "sha256": "5c9f559fdffdf56ac45bc44bc9ae641f050de9a0946b51a76044d2fe9d23119f"
     },
     {
       "path": "scripts/repair-benchmark.mjs",
@@ -231,7 +231,7 @@
     },
     {
       "path": "scripts/upgrade-summary.mjs",
-      "sha256": "bb26ab287cec4f17bf4e882fc8aa519644ac7abeac9ccb7f4a5004f5be191839"
+      "sha256": "411d367c4db12b1567e8efb40e2003bc74845c62230366f0440d85b8d695f166"
     },
     {
       "path": "scripts/verify-repair.mjs",
@@ -399,7 +399,7 @@
     },
     {
       "path": "src/detectors.ts",
-      "sha256": "4ccf7d9a3af8a1d01962c5896f8fb538e4bccf9c55dc8236eca31cead410b016"
+      "sha256": "fa299f23cc72904ba176b1417551eeb6282466372aaf852877193e5215627f40"
     },
     {
       "path": "src/diagnostics.ts",
@@ -547,7 +547,7 @@
     },
     {
       "path": "src/provider-capabilities.ts",
-      "sha256": "2e9c9af0545368c82dc7cb492f60e51389d13d633b81aac96ce18ee17b866e8d"
+      "sha256": "3eb18241171f5beeb2c5e29aadb53691428c8c65c75678c20145e8064f55a3e1"
     },
     {
       "path": "src/provider-context.ts",
@@ -891,7 +891,7 @@
     },
     {
       "path": "test/host-validation.test.ts",
-      "sha256": "68d51bd3fb200f129912e6e7209522f23da4b59a07e3b8e9d12286f9288d39d4"
+      "sha256": "0884b05524b335a21be3a08a245b6fc9a2cbf502f589484072dcab1742a974a7"
     },
     {
       "path": "test/incidents.test.ts",
@@ -975,11 +975,11 @@
     },
     {
       "path": "test/platform-linux.test.ts",
-      "sha256": "c56bda5b2735a9970ad62a6a817013c74079b1319fcbf3391218bc76e15dd118"
+      "sha256": "0ee7f948926d10feb4e6e6af95a0f191898480211d662a12f7bc258c59034364"
     },
     {
       "path": "test/ported-rules.test.ts",
-      "sha256": "83ec68e1034d55efda918732425c629c3dbbfee29bc34b248fd3ddfc203eb5cc"
+      "sha256": "6cc1b59566283d4e1eaf3089068280539ca8d2a199d55d5768c2dd420253fa7d"
     },
     {
       "path": "test/privacy-browser.test.ts",
@@ -1007,7 +1007,7 @@
     },
     {
       "path": "test/profiles.test.ts",
-      "sha256": "8b0b993b72182584c021126d2a2a086e4920db6fc145ea6e409fb2fe401e92d3"
+      "sha256": "855296139474cc7d0d964c8e913889a6a1e739328087782e02aec3866b5dc777"
     },
     {
       "path": "test/program-file.test.ts",
@@ -1039,7 +1039,7 @@
     },
     {
       "path": "test/provider-fixtures.ts",
-      "sha256": "2ce1bc3f36c9ab9b6de4219e7664625440b320b4ac75e5a8c39b0dd212d4a4b1"
+      "sha256": "d77d7cda64ad1929a5db9c3aa7fbd2371c7e362cf6e8807da3f53c40515182cc"
     },
     {
       "path": "test/providers.test.ts",
@@ -1079,7 +1079,7 @@
     },
     {
       "path": "test/release-metadata.test.ts",
-      "sha256": "44e1e98f449cd327d3943703ece555a062492e315c57de478083e46bd5de4d30"
+      "sha256": "f94ca8d1f2ce8cf9fcb26e1cb117947e2a36ecdeb93c0d6ba328a77d4d94956a"
     },
     {
       "path": "test/reliability.test.ts",
@@ -1181,11 +1181,11 @@
     },
     {
       "path": "dist/scripts/coverage-registry.js",
-      "sha256": "8a5f39e45520dc9d3438296572f317bc065172f7ad8b7182e6438931bbe43384"
+      "sha256": "ffdb1b39fc8e56a1cd0b7ad54bbdc3bb7b2e3c6d09f9d1a7ca9977a42f578cff"
     },
     {
       "path": "dist/scripts/demo.js",
-      "sha256": "f39cb86f5697a6bed334da81882536b2a3d30fabc68fd5a31c3c82e467e16f35"
+      "sha256": "4783aa7dfb9c62ab04c401c6fa814ff6bd55c1b684f158174db937a150d3f1d0"
     },
     {
       "path": "dist/scripts/persistence-smoke.js",
@@ -1225,7 +1225,7 @@
     },
     {
       "path": "dist/src/build-info.js",
-      "sha256": "15deff7c154582317704a913d38a1f8fc7be034eb6f47b9d0278bcff54229bcd"
+      "sha256": "01063cba6af1e8801761b1bf665df3e22a3a2898ab02ae9f34eeca55c67d0779"
     },
     {
       "path": "dist/src/capabilities.js",
@@ -1361,7 +1361,7 @@
     },
     {
       "path": "dist/src/detectors.js",
-      "sha256": "9f9f8c24d213f1c82dba8689f96dbde88b02c11e0db89cc3e60d20bcf3f183fe"
+      "sha256": "4d2ec963e5e5459a305bf53601963fb53a8a69635a1fa2bb633ce0a6a44bc351"
     },
     {
       "path": "dist/src/diagnostics.js",
@@ -1509,7 +1509,7 @@
     },
     {
       "path": "dist/src/provider-capabilities.js",
-      "sha256": "aa897ac1777b70bfa3ae7cd5dfc0fc8096d937d200296c315b521ed765b9cb1b"
+      "sha256": "d90fecf55a9e4283ed51f548f6405b3f330986b8a4d91423e893e162f964158e"
     },
     {
       "path": "dist/src/provider-context.js",
@@ -1749,7 +1749,7 @@
     },
     {
       "path": "dist/test/host-validation.test.js",
-      "sha256": "75c94952b2cc9c74ca96c574ea9381bf2be4e0ddd80798a3cea134ad078b6738"
+      "sha256": "e52758d92971d702ee85d09596aee5af16a1a97936df14b3872cc6b6be770ab8"
     },
     {
       "path": "dist/test/incidents.test.js",
@@ -1833,11 +1833,11 @@
     },
     {
       "path": "dist/test/platform-linux.test.js",
-      "sha256": "d2883b2c344efe489c9df715311057dbfdebdfb50a5cd2c8a38bd74c7f219cec"
+      "sha256": "14868c9a7346d3510f763d8e1fe0532bce720bb17d529977179cf0ca32b2a608"
     },
     {
       "path": "dist/test/ported-rules.test.js",
-      "sha256": "072d8e5bba25417e2d3dfa840ff99c8b6f3d8ed796110bfd27cd6302e385f62b"
+      "sha256": "8191ec53e050f75885e5bd7c36b8d7179ef93ce1c1cf7e13733838b9041fec1a"
     },
     {
       "path": "dist/test/privacy-browser.test.js",
@@ -1865,7 +1865,7 @@
     },
     {
       "path": "dist/test/profiles.test.js",
-      "sha256": "2505a54ebbf1915eb4b855f7c7b90045e0fcf02ffe1d0c4ea1aa13548a586de4"
+      "sha256": "43fbb191e09a7ae6c63d4bf4cec3f905d16848e52d5d99eba54cd92259a076f8"
     },
     {
       "path": "dist/test/program-file.test.js",
@@ -1897,7 +1897,7 @@
     },
     {
       "path": "dist/test/provider-fixtures.js",
-      "sha256": "f0a673c59f1a4e80822ca11272db29c05b96e3f84aca51d354b2570f65210e4a"
+      "sha256": "6c3d9339039e2bc7957c61857bb3ea72a33858a6c9607de893315db2322d273b"
     },
     {
       "path": "dist/test/providers.test.js",
@@ -1937,7 +1937,7 @@
     },
     {
       "path": "dist/test/release-metadata.test.js",
-      "sha256": "3319e3d48ca5ab69a8e28e000c6ad92432de84dc15d3a9ddecdb466b3362bf7a"
+      "sha256": "94eceee381731c966d5da9108fc2aff916929e7798a5909204dd803b5a7b8df5"
     },
     {
       "path": "dist/test/reliability.test.js",

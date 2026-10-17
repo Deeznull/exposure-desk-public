@@ -1,6 +1,6 @@
 // Release summary, parameterized by package.json version. Default mode reads the final verification outputs in benchmarks/<version>/ (release candidates up to
 // 2.6.0-rc.1 used benchmarks/<major.minor>/) and writes
-// results.json plus the new top section of TEST_RESULTS.md (the previous top section is kept below the marker; older sections move to benchmarks/history/).
+// results.json plus the new top section of docs/TEST_RESULTS.md (the previous top section is kept below the marker; older sections move to benchmarks/history/).
 // Optional inputs in the same folder: evaluation.json (the frozen 2.5 corpus; 2.5 before/after, later releases as a legacy-settings regression),
 // matrix.json (scripts/profile-matrix.mjs, ready options on local fixtures), external-corpus/*.json (scripts/external-corpus.mjs, an additional labelled measurement)
 // machine-state.json (power source, CPU load and free memory sampled while each measurement ran, reported beside the timings), mass-scan.json
@@ -27,9 +27,9 @@ if(process.argv.includes('--after-package'))await afterPackage();else await summ
 
 async function summary(){
   const build=(await json('BUILD_INFO.json')).build,{RULE_VERSION}=await import(pathToFileURL(path.join(root,'dist/src/detectors.js')).href);
-  // Linked guides: this version's own when present, otherwise the newest at the root (2.7.0 keeps UPGRADE_2.6.md for the ready options); the changelog only when it exists.
-  const rootFiles=await readdir('.'),newest=kind=>existsSync(`${kind}_${short}.md`)?`${kind}_${short}.md`:rootFiles.filter(f=>new RegExp(`^${kind}_\\d+\\.\\d+\\.md$`).test(f)).sort((a,b)=>a.localeCompare(b,undefined,{numeric:true})).at(-1);
-  const guides={upgrade:newest('UPGRADE'),migration:newest('MIGRATION'),changelog:existsSync(`CHANGELOG_${short}.md`)?`CHANGELOG_${short}.md`:null},link=f=>`[${f}](${f})`;
+  // Linked guides (docs/releases, linked from docs/TEST_RESULTS.md): this version's own when present, otherwise the newest (2.7.0 keeps UPGRADE_2.6.md for the ready options); the changelog only when it exists.
+  const guideDir='docs/releases',rootFiles=await readdir(guideDir),newest=kind=>existsSync(`${guideDir}/${kind}_${short}.md`)?`${kind}_${short}.md`:rootFiles.filter(f=>new RegExp(`^${kind}_\\d+\\.\\d+\\.md$`).test(f)).sort((a,b)=>a.localeCompare(b,undefined,{numeric:true})).at(-1);
+  const guides={upgrade:newest('UPGRADE'),migration:newest('MIGRATION'),changelog:existsSync(`${guideDir}/CHANGELOG_${short}.md`)?`CHANGELOG_${short}.md`:null},link=f=>`[${f}](releases/${f})`;
   const unit=suite(await text(path.join(dir,'final-unit.log'))),browser=suite(await text(path.join(dir,'final-browser.log'))),stress=suite(await text(path.join(dir,'cancel-stress.log')));
   for(const [name,s]of Object.entries({unit,browser,stress}))if(!(s.tests>0)||s.fail||s.cancelled||s.skipped||s.todo||s.pass!==s.tests)throw new Error(`${name} suite is not fully green: ${JSON.stringify(s)}`);
   const cliLog=await text(path.join(dir,'cli-smoke.log')),cli={passed:(cliLog.match(/^CLI smoke .*: passed/gm)||[]).length,failed:/fail|AssertionError/i.test(cliLog)},persistence=lastJson(await text(path.join(dir,'persistence-smoke.log'))),bench=await json(path.join(dir,'final-benchmark.json')),pipeline=await json(path.join(dir,'final-pipeline.json'));
@@ -117,10 +117,10 @@ async function summary(){
   const massSection=mass?massTables(mass,dir):[];
   const lines=[...head,...machineSection,...profileSections,...massSection,...evalSection,...legacySection,
     `Limitations: synthetic, nonfunctional values and local fixtures only (loopback servers and a virtual network); every timing and memory figure is from one Windows x64 host${linuxCi?' (the Linux x64 suites, package and container are pass/fail results from GitHub-hosted Ubuntu runners, without timing claims)':''}; single-digit repetitions without statistical controls; ${existsSync('dist/src/analysis-process.js')?'Node peak RSS includes worker threads but excludes Chromium, Gitleaks and the analysis child processes (the ready-option table reports the analysis processes separately).':'Node peak RSS includes workers but excludes Chromium and Gitleaks children.'}${matrix?' Ready-option durations depend on the fixtures\' sizes and on this computer; the small-computer rows inject the computer description, they do not run on slower hardware.':''} These counts describe this corpus only and make no general accuracy claim. ${linuxCi?'macOS and ARM were not exercised; Linux x64 only on the CI runners named above.':'Linux, macOS and ARM were not exercised.'} No owner website or production response was contacted or used.`,''];
-  const current=await text('TEST_RESULTS.md'),[top,...rest]=current.split(MARKER);const previous=top.trim();
+  const current=await text('docs/TEST_RESULTS.md'),[top,...rest]=current.split(MARKER);const previous=top.trim();
   if(rest.length){await mkdir('benchmarks/history',{recursive:true});const older=rest.join(MARKER).trim(),title=(older.match(/^# Actual verification — (\S+)/m)||[])[1]||'previous';const file=`benchmarks/history/TEST_RESULTS_${title}.md`;if(!existsSync(file))await writeFile(file,older+'\n');}
   // Exact heading match: a final release must not replace its own release candidate's section (2.6.0 vs 2.6.0-rc.1).
-  const already=previous.split('\n')[0].trim()===`# Actual verification — ${version}`;await writeFile('TEST_RESULTS.md',lines.join('\n')+'\n'+MARKER+'\n'+(already?(rest[0]||'').trim():previous)+'\n');
+  const already=previous.split('\n')[0].trim()===`# Actual verification — ${version}`;await writeFile('docs/TEST_RESULTS.md',lines.join('\n')+'\n'+MARKER+'\n'+(already?(rest[0]||'').trim():previous)+'\n');
   console.log(JSON.stringify({version,build:build.id,unit,browser,stress,evaluationErrors:errors,matrixChecks:Object.fromEntries(Object.entries(checkGroups).map(([k,g])=>[k,`${g.passed}/${g.total}`])),externalCorpus:external.length}));
 }
 function pick(r){return {targets:r.targets,detected:r.detected,falsePositives:r.falsePositives,exposureTargets:r.exposureTargets,exposureMisses:r.exposureMisses,exposureFalsePositives:r.exposureFalsePositives,classificationErrors:r.classificationErrors,elapsedMs:r.elapsedMs,maxRssKiB:r.maxRssKiB,build:r.build?.id};}
