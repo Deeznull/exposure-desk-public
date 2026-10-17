@@ -1,0 +1,14 @@
+import { readFile } from 'node:fs/promises';
+import path from 'node:path';
+import { assertConfigNotProtected, assertNotProtected } from '../../protected-hosts.js';
+import { invalidHost, invalidHostMessage } from '../../config.js';
+import type { Args } from '../args.js';
+/** The label limit of `makeTrigger` (src/triggers.ts). */
+const TRIGGER_LABEL_MAX=80;
+// Deployment trigger: writes one request file into the operator-only data directory. It never opens history, keys or the vault and makes no network request.
+export async function trigger(args:Args){try{const {makeTrigger,writeTrigger}=await import('../../triggers.js'),{dataLocation,restrictDirectory}=await import('../../storage.js'),{Detector}=await import('../../detectors.js');const dir=path.resolve(args.option('data-dir')||dataLocation()),projectId=args.option('project')||'';
+    let workspace:any;try{workspace=JSON.parse(await readFile(path.join(dir,'workspace.json'),'utf8'));}catch{throw new Error('No saved workspace in '+dir);}const p=(workspace.projects||[]).find((x:any)=>x.id===projectId);if(!p)throw new Error('Unknown project id');assertConfigNotProtected(p.config);{const host=invalidHost(p.config);if(host!==undefined)throw new Error(invalidHostMessage(host));}if(!p.deploymentTrigger?.enabled)throw new Error('Enable deployment triggers for this project in the dashboard first');
+    // A label over makeTrigger's 80-character limit is refused there and never inspected, so this main-thread check stays small.
+    const label=args.option('label');if(label&&label.length<=TRIGGER_LABEL_MAX&&new Detector('disabled').inspectWindowed(label).some(c=>['private-credential','suspicious'].includes(c.category)))throw new Error('The label looks like it contains a credential');
+    let assets:string[]=[];const manifest=args.option('assets');if(manifest){const raw=JSON.parse(await readFile(manifest,'utf8')),list=Array.isArray(raw)?raw:Array.isArray(raw.assets)?raw.assets:Array.isArray(raw.files)?raw.files:[];const base=args.option('base')||p.config.urls[0];assets=list.slice(0,201).map((a:unknown)=>{if(typeof a!=='string')throw new Error('Asset entries must be strings');return new URL(a,base).href;});assertNotProtected(assets);{const host=invalidHost({urls:[base],staleAssetUrls:assets});if(host!==undefined)throw new Error(invalidHostMessage(host));}}
+    const t=makeTrigger({projectId,label,assets,delaySeconds:args.option('delay')?Number(args.option('delay')):0});await restrictDirectory(path.join(dir,'triggers'));await writeTrigger(path.join(dir,'triggers'),t);console.log(`Deployment trigger queued for ${p.config.name} (${assets.length} asset URLs). It runs when Exposure Desk is open; requests expire after 24 hours.`);}catch(e){console.error('Trigger not written: '+(e instanceof Error?e.message:'invalid input'));process.exitCode=2;}}

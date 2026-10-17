@@ -1,0 +1,789 @@
+{
+ "schema": "exposure-mass-measure/1",
+ "build": "2.8.0+cc5fecf8cb75f1c7",
+ "date": "2026-10-12T05:02:50.722Z",
+ "node": "v24.18.1",
+ "platform": "win32 x64",
+ "cpu": "8-core x86-64 laptop CPU",
+ "cores": 16,
+ "totalMemoryMb": 32029,
+ "fixture": {
+  "origins": 50,
+  "addressing": "127.0.0.1 to 127.0.0.50, one port",
+  "targets": 200,
+  "blockTargets": 200,
+  "blockedOrigins": "2 of every 5 origins answer every request with HTTP 429 or 403",
+  "keys": "synthetic, nonfunctional sk-proj- values: one per target page, one per origin shared by its targets",
+  "realHosts": 0
+ },
+ "settings": {
+  "coverage": "quick",
+  "traffic": "normal",
+  "state": "--state on every run (mass mode)",
+  "failOn": "never"
+ },
+ "runs": [
+  {
+   "name": "c1",
+   "targets": 200,
+   "coverage": "quick",
+   "traffic": "normal",
+   "concurrency": 1,
+   "program": false,
+   "block": false,
+   "exit": 0,
+   "signal": null,
+   "wallMs": 2272381,
+   "requests": 4400,
+   "requestsPerSecond": 1.9,
+   "targetsPerSecond": 0.09,
+   "peakConnectionsInFlight": 1,
+   "userAgents": 1,
+   "peakRssMb": 185,
+   "maxRssMb": 185,
+   "cpuMs": 115858,
+   "scans": 200,
+   "analysisBudgets": {
+    "distinct": 1,
+    "capacities": [
+     256
+    ],
+    "peak": 256,
+    "settingsMb": [
+     256
+    ]
+   },
+   "analysisChildren": {
+    "spawned": 1,
+    "live": 0,
+    "concurrentHeapMb": 256,
+    "concurrentPeakRssMb": 58,
+    "peakChildRssMb": 58,
+    "heapLimitsMb": [
+     256
+    ],
+    "outOfMemory": 0
+   },
+   "timeFactor": {
+    "factor": 1,
+    "source": "measured"
+   },
+   "egressViolations": [],
+   "final": true,
+   "budgetCheck": {
+    "oneSharedBudget": true,
+    "capacityMb": 256,
+    "peakMb": 256,
+    "peakWithinCapacity": true,
+    "concurrentChildHeapMb": 256,
+    "childHeapWithinCapacity": true,
+    "readyOptionCeiling": true
+   },
+   "targetStarts": 200,
+   "targetEnds": 200,
+   "targetStatuses": {
+    "completed": 200
+   },
+   "stopReasons": {
+    "quick-target-set-done": 200
+   },
+   "findingEvents": 400,
+   "duplicateEvents": 150,
+   "inlineKeysFound": 200,
+   "sharedKeysFound": 50,
+   "unexpectedFindings": 0,
+   "unexpectedSample": [],
+   "summary": {
+    "targets": 200,
+    "scanned": 200,
+    "notStarted": 0,
+    "skipped": 0,
+    "interrupted": false,
+    "exit": 0,
+    "concurrency": 1,
+    "statuses": {
+     "done": 200
+    },
+    "halted": null,
+    "uniqueFindings": 250,
+    "sharedFindings": 50,
+    "findings": 400,
+    "program": null,
+    "effectiveConcurrency": 1,
+    "sharedWaitMs": 0,
+    "memoryGate": null
+   }
+  },
+  {
+   "name": "c4",
+   "targets": 200,
+   "coverage": "quick",
+   "traffic": "normal",
+   "concurrency": 4,
+   "program": false,
+   "block": false,
+   "exit": 0,
+   "signal": null,
+   "wallMs": 617848,
+   "requests": 4400,
+   "requestsPerSecond": 7.1,
+   "targetsPerSecond": 0.32,
+   "peakConnectionsInFlight": 1,
+   "userAgents": 1,
+   "peakRssMb": 297,
+   "maxRssMb": 298,
+   "cpuMs": 90389,
+   "scans": 200,
+   "analysisBudgets": {
+    "distinct": 1,
+    "capacities": [
+     256
+    ],
+    "peak": 256,
+    "settingsMb": [
+     256
+    ]
+   },
+   "analysisChildren": {
+    "spawned": 1,
+    "live": 0,
+    "concurrentHeapMb": 256,
+    "concurrentPeakRssMb": 58,
+    "peakChildRssMb": 58,
+    "heapLimitsMb": [
+     256
+    ],
+    "outOfMemory": 0
+   },
+   "timeFactor": {
+    "factor": 1,
+    "source": "measured"
+   },
+   "egressViolations": [],
+   "final": true,
+   "budgetCheck": {
+    "oneSharedBudget": true,
+    "capacityMb": 256,
+    "peakMb": 256,
+    "peakWithinCapacity": true,
+    "concurrentChildHeapMb": 256,
+    "childHeapWithinCapacity": true,
+    "readyOptionCeiling": true
+   },
+   "targetStarts": 200,
+   "targetEnds": 200,
+   "targetStatuses": {
+    "completed": 200
+   },
+   "stopReasons": {
+    "quick-target-set-done": 200
+   },
+   "findingEvents": 400,
+   "duplicateEvents": 150,
+   "inlineKeysFound": 200,
+   "sharedKeysFound": 50,
+   "unexpectedFindings": 0,
+   "unexpectedSample": [],
+   "summary": {
+    "targets": 200,
+    "scanned": 200,
+    "notStarted": 0,
+    "skipped": 0,
+    "interrupted": false,
+    "exit": 0,
+    "concurrency": 4,
+    "statuses": {
+     "done": 200
+    },
+    "halted": null,
+    "uniqueFindings": 250,
+    "sharedFindings": 50,
+    "findings": 400,
+    "program": null,
+    "effectiveConcurrency": 4,
+    "sharedWaitMs": 33215,
+    "memoryGate": {
+     "ceilingMb": 512,
+     "marginMb": 64,
+     "startRssMb": 173,
+     "peakRssMb": 297,
+     "perTargetMb": 26.1,
+     "admissionWaits": 0
+    }
+   }
+  },
+  {
+   "name": "c16",
+   "targets": 200,
+   "coverage": "quick",
+   "traffic": "normal",
+   "concurrency": 16,
+   "program": false,
+   "block": false,
+   "exit": 0,
+   "signal": null,
+   "wallMs": 234091,
+   "requests": 4400,
+   "requestsPerSecond": 18.8,
+   "targetsPerSecond": 0.85,
+   "peakConnectionsInFlight": 1,
+   "userAgents": 1,
+   "peakRssMb": 363,
+   "maxRssMb": 364,
+   "cpuMs": 108140,
+   "scans": 200,
+   "analysisBudgets": {
+    "distinct": 1,
+    "capacities": [
+     256
+    ],
+    "peak": 256,
+    "settingsMb": [
+     256
+    ]
+   },
+   "analysisChildren": {
+    "spawned": 1,
+    "live": 0,
+    "concurrentHeapMb": 256,
+    "concurrentPeakRssMb": 59,
+    "peakChildRssMb": 59,
+    "heapLimitsMb": [
+     256
+    ],
+    "outOfMemory": 0
+   },
+   "timeFactor": {
+    "factor": 1,
+    "source": "measured"
+   },
+   "egressViolations": [],
+   "final": true,
+   "budgetCheck": {
+    "oneSharedBudget": true,
+    "capacityMb": 256,
+    "peakMb": 256,
+    "peakWithinCapacity": true,
+    "concurrentChildHeapMb": 256,
+    "childHeapWithinCapacity": true,
+    "readyOptionCeiling": true
+   },
+   "targetStarts": 200,
+   "targetEnds": 200,
+   "targetStatuses": {
+    "completed": 200
+   },
+   "stopReasons": {
+    "quick-target-set-done": 200
+   },
+   "findingEvents": 400,
+   "duplicateEvents": 150,
+   "inlineKeysFound": 200,
+   "sharedKeysFound": 50,
+   "unexpectedFindings": 0,
+   "unexpectedSample": [],
+   "summary": {
+    "targets": 200,
+    "scanned": 200,
+    "notStarted": 0,
+    "skipped": 0,
+    "interrupted": false,
+    "exit": 0,
+    "concurrency": 16,
+    "statuses": {
+     "done": 200
+    },
+    "halted": null,
+    "uniqueFindings": 250,
+    "sharedFindings": 50,
+    "findings": 400,
+    "program": null,
+    "effectiveConcurrency": 16,
+    "sharedWaitMs": 233474,
+    "memoryGate": {
+     "ceilingMb": 512,
+     "marginMb": 64,
+     "startRssMb": 173,
+     "peakRssMb": 362,
+     "perTargetMb": 8.7,
+     "admissionWaits": 0
+    }
+   }
+  },
+  {
+   "name": "program-c64",
+   "targets": 200,
+   "coverage": "quick",
+   "traffic": "normal",
+   "concurrency": 64,
+   "program": true,
+   "block": false,
+   "exit": 0,
+   "signal": null,
+   "wallMs": 205554,
+   "requests": 4400,
+   "requestsPerSecond": 21.4,
+   "targetsPerSecond": 0.97,
+   "peakConnectionsInFlight": 1,
+   "userAgents": 1,
+   "peakRssMb": 319,
+   "maxRssMb": 321,
+   "cpuMs": 110687,
+   "scans": 200,
+   "analysisBudgets": {
+    "distinct": 1,
+    "capacities": [
+     256
+    ],
+    "peak": 256,
+    "settingsMb": [
+     256
+    ]
+   },
+   "analysisChildren": {
+    "spawned": 1,
+    "live": 0,
+    "concurrentHeapMb": 256,
+    "concurrentPeakRssMb": 59,
+    "peakChildRssMb": 59,
+    "heapLimitsMb": [
+     256
+    ],
+    "outOfMemory": 0
+   },
+   "timeFactor": {
+    "factor": 1,
+    "source": "measured"
+   },
+   "egressViolations": [],
+   "final": true,
+   "budgetCheck": {
+    "oneSharedBudget": true,
+    "capacityMb": 256,
+    "peakMb": 256,
+    "peakWithinCapacity": true,
+    "concurrentChildHeapMb": 256,
+    "childHeapWithinCapacity": true,
+    "readyOptionCeiling": true
+   },
+   "targetStarts": 200,
+   "targetEnds": 200,
+   "targetStatuses": {
+    "completed": 200
+   },
+   "stopReasons": {
+    "quick-target-set-done": 200
+   },
+   "findingEvents": 400,
+   "duplicateEvents": 150,
+   "inlineKeysFound": 200,
+   "sharedKeysFound": 50,
+   "unexpectedFindings": 0,
+   "unexpectedSample": [],
+   "summary": {
+    "targets": 200,
+    "scanned": 200,
+    "notStarted": 0,
+    "skipped": 0,
+    "interrupted": false,
+    "exit": 0,
+    "concurrency": 64,
+    "statuses": {
+     "done": 200
+    },
+    "halted": null,
+    "uniqueFindings": 250,
+    "sharedFindings": 50,
+    "findings": 400,
+    "program": {
+     "requestsPerSecond": 50,
+     "concurrency": 64,
+     "active": 0,
+     "peakActive": 2,
+     "granted": 4400,
+     "waits": 3691,
+     "waitMs": 8906973,
+     "maxWaitMs": 23837
+    },
+    "effectiveConcurrency": 64,
+    "sharedWaitMs": 9124250,
+    "memoryGate": {
+     "ceilingMb": 512,
+     "marginMb": 64,
+     "startRssMb": 173,
+     "peakRssMb": 319,
+     "perTargetMb": 4.6,
+     "admissionWaits": 30
+    }
+   }
+  },
+  {
+   "name": "resume-reader",
+   "targets": 200,
+   "coverage": "quick",
+   "traffic": "normal",
+   "concurrency": 4,
+   "interrupt": "output reader closed",
+   "interruptAfterTargetEnds": 80,
+   "first": {
+    "exit": 2,
+    "signal": null,
+    "wallMs": 261460,
+    "interruptedAtMs": 261297,
+    "requests": 1760,
+    "targetEndsSeen": 80,
+    "stateReadable": true,
+    "stateDone": 80,
+    "stateStatuses": {
+     "done": 80,
+     "cancelled": 1,
+     "pending": 119
+    },
+    "peakRssMb": 287,
+    "analysisChildren": 1,
+    "orphanedAnalysisProcesses": 0
+   },
+   "second": {
+    "name": "resume-reader (resume)",
+    "targets": 200,
+    "coverage": "quick",
+    "traffic": "normal",
+    "concurrency": 4,
+    "exit": 0,
+    "signal": null,
+    "wallMs": 374830,
+    "requests": 2640,
+    "requestsPerSecond": 7,
+    "targetsPerSecond": 0.32,
+    "peakConnectionsInFlight": 1,
+    "userAgents": 1,
+    "peakRssMb": 304,
+    "maxRssMb": 305,
+    "cpuMs": 58640,
+    "scans": 120,
+    "analysisBudgets": {
+     "distinct": 1,
+     "capacities": [
+      256
+     ],
+     "peak": 256,
+     "settingsMb": [
+      256
+     ]
+    },
+    "analysisChildren": {
+     "spawned": 1,
+     "live": 0,
+     "concurrentHeapMb": 256,
+     "concurrentPeakRssMb": 58,
+     "peakChildRssMb": 58,
+     "heapLimitsMb": [
+      256
+     ],
+     "outOfMemory": 0
+    },
+    "timeFactor": {
+     "factor": 1,
+     "source": "measured"
+    },
+    "egressViolations": [],
+    "final": true,
+    "budgetCheck": {
+     "oneSharedBudget": true,
+     "capacityMb": 256,
+     "peakMb": 256,
+     "peakWithinCapacity": true,
+     "concurrentChildHeapMb": 256,
+     "childHeapWithinCapacity": true,
+     "readyOptionCeiling": true
+    },
+    "targetStarts": 120,
+    "targetEnds": 120,
+    "targetStatuses": {
+     "completed": 120
+    },
+    "stopReasons": {
+     "quick-target-set-done": 120
+    },
+    "findingEvents": 240,
+    "duplicateEvents": 70,
+    "inlineKeysFound": 120,
+    "sharedKeysFound": 50,
+    "unexpectedFindings": 0,
+    "unexpectedSample": [],
+    "summary": {
+     "targets": 200,
+     "scanned": 120,
+     "notStarted": 0,
+     "skipped": 80,
+     "interrupted": false,
+     "exit": 0,
+     "concurrency": 4,
+     "statuses": {
+      "done": 200
+     },
+     "halted": null,
+     "uniqueFindings": 170,
+     "sharedFindings": 50,
+     "findings": 240,
+     "program": null,
+     "effectiveConcurrency": 4,
+     "sharedWaitMs": 19905,
+     "memoryGate": {
+      "ceilingMb": 512,
+      "marginMb": 64,
+      "startRssMb": 174,
+      "peakRssMb": 304,
+      "perTargetMb": 27.5,
+      "admissionWaits": 0
+     }
+    }
+   },
+   "checks": {
+    "firstRunDone": true,
+    "skippedEqualsDone": true,
+    "doneTargetsStarted": 0,
+    "doneTargetPagesRequested": 0,
+    "accounted": true,
+    "inlineKeysFoundAcrossBoth": 200,
+    "noOrphans": true,
+    "firstPagesRequested": 80
+   }
+  },
+  {
+   "name": "resume-kill",
+   "targets": 200,
+   "coverage": "quick",
+   "traffic": "normal",
+   "concurrency": 4,
+   "interrupt": "forced process kill",
+   "interruptAfterTargetEnds": 80,
+   "first": {
+    "exit": null,
+    "signal": "SIGKILL",
+    "wallMs": 242301,
+    "interruptedAtMs": 242281,
+    "requests": 1760,
+    "targetEndsSeen": 80,
+    "stateReadable": true,
+    "stateDone": 78,
+    "stateStatuses": {
+     "done": 78,
+     "running": 4,
+     "pending": 118
+    },
+    "peakRssMb": 294,
+    "analysisChildren": 1,
+    "orphanedAnalysisProcesses": 0
+   },
+   "second": {
+    "name": "resume-kill (resume)",
+    "targets": 200,
+    "coverage": "quick",
+    "traffic": "normal",
+    "concurrency": 4,
+    "exit": 0,
+    "signal": null,
+    "wallMs": 373427,
+    "requests": 2684,
+    "requestsPerSecond": 7.2,
+    "targetsPerSecond": 0.33,
+    "peakConnectionsInFlight": 1,
+    "userAgents": 1,
+    "peakRssMb": 306,
+    "maxRssMb": 306,
+    "cpuMs": 44937,
+    "scans": 122,
+    "analysisBudgets": {
+     "distinct": 1,
+     "capacities": [
+      256
+     ],
+     "peak": 256,
+     "settingsMb": [
+      256
+     ]
+    },
+    "analysisChildren": {
+     "spawned": 1,
+     "live": 0,
+     "concurrentHeapMb": 256,
+     "concurrentPeakRssMb": 58,
+     "peakChildRssMb": 58,
+     "heapLimitsMb": [
+      256
+     ],
+     "outOfMemory": 0
+    },
+    "timeFactor": {
+     "factor": 1,
+     "source": "measured"
+    },
+    "egressViolations": [],
+    "final": true,
+    "budgetCheck": {
+     "oneSharedBudget": true,
+     "capacityMb": 256,
+     "peakMb": 256,
+     "peakWithinCapacity": true,
+     "concurrentChildHeapMb": 256,
+     "childHeapWithinCapacity": true,
+     "readyOptionCeiling": true
+    },
+    "targetStarts": 122,
+    "targetEnds": 122,
+    "targetStatuses": {
+     "completed": 122
+    },
+    "stopReasons": {
+     "quick-target-set-done": 122
+    },
+    "findingEvents": 244,
+    "duplicateEvents": 72,
+    "inlineKeysFound": 122,
+    "sharedKeysFound": 50,
+    "unexpectedFindings": 0,
+    "unexpectedSample": [],
+    "summary": {
+     "targets": 200,
+     "scanned": 122,
+     "notStarted": 0,
+     "skipped": 78,
+     "interrupted": false,
+     "exit": 0,
+     "concurrency": 4,
+     "statuses": {
+      "done": 200
+     },
+     "halted": null,
+     "uniqueFindings": 172,
+     "sharedFindings": 50,
+     "findings": 244,
+     "program": null,
+     "effectiveConcurrency": 4,
+     "sharedWaitMs": 19509,
+     "memoryGate": {
+      "ceilingMb": 512,
+      "marginMb": 64,
+      "startRssMb": 173,
+      "peakRssMb": 306,
+      "perTargetMb": 28.7,
+      "admissionWaits": 0
+     }
+    }
+   },
+   "checks": {
+    "firstRunDone": true,
+    "skippedEqualsDone": true,
+    "doneTargetsStarted": 0,
+    "doneTargetPagesRequested": 0,
+    "accounted": true,
+    "inlineKeysFoundAcrossBoth": 200,
+    "noOrphans": true,
+    "firstPagesRequested": 80
+   }
+  },
+  {
+   "name": "block-halt",
+   "targets": 200,
+   "coverage": "quick",
+   "traffic": "normal",
+   "concurrency": 16,
+   "program": false,
+   "block": true,
+   "exit": 2,
+   "signal": null,
+   "wallMs": 16494,
+   "requests": 260,
+   "requestsPerSecond": 15.8,
+   "targetsPerSecond": 1.09,
+   "peakConnectionsInFlight": 1,
+   "userAgents": 1,
+   "peakRssMb": 278,
+   "maxRssMb": 278,
+   "cpuMs": 7639,
+   "scans": 18,
+   "analysisBudgets": {
+    "distinct": 1,
+    "capacities": [
+     256
+    ],
+    "peak": 256,
+    "settingsMb": [
+     256
+    ]
+   },
+   "analysisChildren": {
+    "spawned": 1,
+    "live": 0,
+    "concurrentHeapMb": 256,
+    "concurrentPeakRssMb": 55,
+    "peakChildRssMb": 55,
+    "heapLimitsMb": [
+     256
+    ],
+    "outOfMemory": 0
+   },
+   "timeFactor": {
+    "factor": 1,
+    "source": "measured"
+   },
+   "egressViolations": [],
+   "final": true,
+   "budgetCheck": {
+    "oneSharedBudget": true,
+    "capacityMb": 256,
+    "peakMb": 256,
+    "peakWithinCapacity": true,
+    "concurrentChildHeapMb": 256,
+    "childHeapWithinCapacity": true,
+    "readyOptionCeiling": true
+   },
+   "targetStarts": 18,
+   "targetEnds": 18,
+   "targetStatuses": {
+    "incomplete": 8,
+    "completed": 10
+   },
+   "stopReasons": {
+    "blocked": 8,
+    "quick-target-set-done": 10
+   },
+   "findingEvents": 20,
+   "duplicateEvents": 0,
+   "inlineKeysFound": 10,
+   "sharedKeysFound": 10,
+   "unexpectedFindings": 0,
+   "unexpectedSample": [],
+   "summary": {
+    "targets": 200,
+    "scanned": 18,
+    "notStarted": 182,
+    "skipped": 0,
+    "interrupted": false,
+    "exit": 2,
+    "concurrency": 16,
+    "statuses": {
+     "blocked": 8,
+     "done": 10,
+     "pending": 182
+    },
+    "halted": "blocked",
+    "uniqueFindings": 20,
+    "sharedFindings": 0,
+    "findings": 20,
+    "program": null,
+    "effectiveConcurrency": 16,
+    "sharedWaitMs": 18364,
+    "memoryGate": {
+     "ceilingMb": 512,
+     "marginMb": 64,
+     "startRssMb": 172,
+     "peakRssMb": 278,
+     "perTargetMb": 6.6,
+     "admissionWaits": 0
+    }
+   }
+  }
+ ]
+}

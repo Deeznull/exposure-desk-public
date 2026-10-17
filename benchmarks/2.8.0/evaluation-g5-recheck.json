@@ -1,0 +1,1642 @@
+{
+  "schema": "exposure-next-evaluation/1",
+  "seed": "ExposureDesk/eval-2.5/20261008/1",
+  "corpusDigest": "41f8c2dd214da8bd7192d2d6a8863ed96e4d274b9c8d312edf97c7bc02e94479",
+  "frozenAt": "2026-10-08T04:15:23.216Z",
+  "freezeNote": "Frozen on 2026-10-08 after Chat 1 had implemented sections 1, 3, 4 and the attribution part of 5, and Chat 2 sections 2 and the rest of 5, but before any section 6 (findings, wallet and key detection, priority) change. Groups G1-G4, G6, G8 and G9 were therefore written with knowledge of the implemented behaviour; G5 and G7 detection fixtures precede the code they measure. Synthetic values only.",
+  "implementations": {
+    "baseline": "<local path>",
+    "new": "<local path>"
+  },
+  "repeat": 5,
+  "startedAt": "2026-10-12T10:29:31.938Z",
+  "elapsedMs": 95982,
+  "limitations": "Synthetic local fixtures on one Windows host; loopback servers and a virtual network only; Node maxRSS includes workers but not Chromium or Gitleaks children. No statistical or open-web accuracy claim.",
+  "summary": {
+    "G5": {
+      "baseline": {
+        "build": "2.7.0+3772c88c496661b5",
+        "runs": 5,
+        "errors": 0,
+        "wallMsMedian": 11636,
+        "wallMs": [
+          11627,
+          11636,
+          11851,
+          11656,
+          11635
+        ],
+        "maxRssKiB": 383892,
+        "metrics": {
+          "engineOff": {
+            "state": "incomplete",
+            "stopReason": "discovered-frontier-drained",
+            "tp": 0,
+            "targets": 1,
+            "fp": 1,
+            "otherPrivateOrSuspicious": 0,
+            "bundleAnalyzers": {
+              "directText": "inspected",
+              "offlineEngine": "unsupported",
+              "semantic": "failed"
+            },
+            "analyzerHistogram": {
+              "inspected": 12,
+              "unsupported": 8,
+              "failed": 1
+            },
+            "nonTerminal": 0,
+            "consistency": {
+              "statePendingFree": true,
+              "inventoryPending": 0,
+              "countsPending": 0,
+              "countsDeferred": 0,
+              "importantUninspected": 0,
+              "verdict": "limited"
+            },
+            "lateChunkRequested": true,
+            "chunkRequested": true,
+            "workerRequested": true,
+            "gapCodes": [
+              "bare-extension-literals",
+              "decoded-inspection-limit",
+              "http-unavailable",
+              "semantic-parser-failure"
+            ],
+            "interruptions": {},
+            "analysisCharged": 497,
+            "requests": 8
+          },
+          "engineOn": {
+            "state": "incomplete",
+            "stopReason": "discovered-frontier-drained",
+            "tp": 0,
+            "targets": 1,
+            "fp": 1,
+            "otherPrivateOrSuspicious": 0,
+            "bundleAnalyzers": {
+              "directText": "inspected",
+              "offlineEngine": "inspected",
+              "semantic": "failed"
+            },
+            "analyzerHistogram": {
+              "inspected": 20,
+              "failed": 1
+            },
+            "nonTerminal": 0,
+            "consistency": {
+              "statePendingFree": true,
+              "inventoryPending": 0,
+              "countsPending": 0,
+              "countsDeferred": 0,
+              "importantUninspected": 1,
+              "verdict": "limited"
+            },
+            "lateChunkRequested": true,
+            "chunkRequested": true,
+            "workerRequested": true,
+            "gapCodes": [
+              "bare-extension-literals",
+              "decoded-inspection-limit",
+              "http-unavailable",
+              "semantic-parser-failure"
+            ],
+            "interruptions": {},
+            "analysisCharged": 457,
+            "requests": 8
+          },
+          "loadedTwiceWithMirror": {
+            "state": "incomplete",
+            "stopReason": "discovered-frontier-drained",
+            "tp": 0,
+            "targets": 1,
+            "fp": 1,
+            "otherPrivateOrSuspicious": 0,
+            "bundleAnalyzers": {
+              "directText": "inspected",
+              "offlineEngine": "unsupported",
+              "semantic": "failed"
+            },
+            "analyzerHistogram": {
+              "inspected": 13,
+              "unsupported": 9,
+              "failed": 1,
+              "incomplete": 1
+            },
+            "nonTerminal": 0,
+            "consistency": {
+              "statePendingFree": true,
+              "inventoryPending": 0,
+              "countsPending": 0,
+              "countsDeferred": 0,
+              "importantUninspected": 0,
+              "verdict": "limited"
+            },
+            "lateChunkRequested": true,
+            "chunkRequested": true,
+            "workerRequested": true,
+            "gapCodes": [
+              "analysis-unfinished",
+              "bare-extension-literals",
+              "decoded-inspection-limit",
+              "http-unavailable",
+              "semantic-parser-failure"
+            ],
+            "interruptions": {},
+            "analysisCharged": 632,
+            "requests": 9
+          }
+        },
+        "metricsStable": true
+      },
+      "new": {
+        "build": "2.8.0+cc5fecf8cb75f1c7",
+        "runs": 5,
+        "errors": 0,
+        "wallMsMedian": 7615,
+        "wallMs": [
+          7619,
+          7411,
+          7615,
+          7294,
+          7622
+        ],
+        "maxRssKiB": 473400,
+        "metrics": {
+          "engineOff": {
+            "state": "incomplete",
+            "stopReason": "discovered-frontier-drained",
+            "tp": 0,
+            "targets": 1,
+            "fp": 1,
+            "otherPrivateOrSuspicious": 0,
+            "bundleAnalyzers": {
+              "directText": "inspected",
+              "offlineEngine": "unsupported",
+              "semantic": "failed"
+            },
+            "analyzerHistogram": {
+              "inspected": 12,
+              "unsupported": 8,
+              "failed": 1
+            },
+            "nonTerminal": 0,
+            "consistency": {
+              "statePendingFree": true,
+              "inventoryPending": 0,
+              "countsPending": 0,
+              "countsDeferred": 0,
+              "importantUninspected": 0,
+              "verdict": "limited"
+            },
+            "lateChunkRequested": true,
+            "chunkRequested": true,
+            "workerRequested": true,
+            "gapCodes": [
+              "bare-extension-literals",
+              "decoded-inspection-limit",
+              "http-unavailable",
+              "semantic-parser-failure"
+            ],
+            "interruptions": {},
+            "analysisCharged": 390,
+            "requests": 8
+          },
+          "engineOn": {
+            "state": "incomplete",
+            "stopReason": "discovered-frontier-drained",
+            "tp": 0,
+            "targets": 1,
+            "fp": 1,
+            "otherPrivateOrSuspicious": 0,
+            "bundleAnalyzers": {
+              "directText": "inspected",
+              "offlineEngine": "inspected",
+              "semantic": "failed"
+            },
+            "analyzerHistogram": {
+              "inspected": 20,
+              "failed": 1
+            },
+            "nonTerminal": 0,
+            "consistency": {
+              "statePendingFree": true,
+              "inventoryPending": 0,
+              "countsPending": 0,
+              "countsDeferred": 0,
+              "importantUninspected": 1,
+              "verdict": "limited"
+            },
+            "lateChunkRequested": true,
+            "chunkRequested": true,
+            "workerRequested": true,
+            "gapCodes": [
+              "bare-extension-literals",
+              "decoded-inspection-limit",
+              "http-unavailable",
+              "semantic-parser-failure"
+            ],
+            "interruptions": {},
+            "analysisCharged": 410,
+            "requests": 8
+          },
+          "loadedTwiceWithMirror": {
+            "state": "incomplete",
+            "stopReason": "discovered-frontier-drained",
+            "tp": 0,
+            "targets": 1,
+            "fp": 1,
+            "otherPrivateOrSuspicious": 0,
+            "bundleAnalyzers": {
+              "directText": "inspected",
+              "offlineEngine": "unsupported",
+              "semantic": "failed"
+            },
+            "analyzerHistogram": {
+              "inspected": 13,
+              "unsupported": 9,
+              "failed": 1,
+              "incomplete": 1
+            },
+            "nonTerminal": 0,
+            "consistency": {
+              "statePendingFree": true,
+              "inventoryPending": 0,
+              "countsPending": 0,
+              "countsDeferred": 0,
+              "importantUninspected": 0,
+              "verdict": "limited"
+            },
+            "lateChunkRequested": true,
+            "chunkRequested": true,
+            "workerRequested": true,
+            "gapCodes": [
+              "analysis-unfinished",
+              "bare-extension-literals",
+              "decoded-inspection-limit",
+              "http-unavailable",
+              "semantic-parser-failure"
+            ],
+            "interruptions": {},
+            "analysisCharged": 505,
+            "requests": 9
+          }
+        },
+        "metricsStable": true
+      }
+    }
+  },
+  "runs": [
+    {
+      "group": "G5",
+      "implementation": "<local path>",
+      "build": {
+        "version": "2.7.0",
+        "id": "2.7.0+3772c88c496661b5",
+        "sourceDigest": "3772c88c496661b5bb04bab02b52500cae9985367c118ac9ac70904ebf5806f4"
+      },
+      "rep": 0,
+      "metrics": {
+        "engineOff": {
+          "state": "incomplete",
+          "stopReason": "discovered-frontier-drained",
+          "tp": 0,
+          "targets": 1,
+          "fp": 1,
+          "otherPrivateOrSuspicious": 0,
+          "bundleAnalyzers": {
+            "directText": "inspected",
+            "offlineEngine": "unsupported",
+            "semantic": "failed"
+          },
+          "analyzerHistogram": {
+            "inspected": 12,
+            "unsupported": 8,
+            "failed": 1
+          },
+          "nonTerminal": 0,
+          "consistency": {
+            "statePendingFree": true,
+            "inventoryPending": 0,
+            "countsPending": 0,
+            "countsDeferred": 0,
+            "importantUninspected": 0,
+            "verdict": "limited"
+          },
+          "lateChunkRequested": true,
+          "chunkRequested": true,
+          "workerRequested": true,
+          "gapCodes": [
+            "bare-extension-literals",
+            "decoded-inspection-limit",
+            "http-unavailable",
+            "semantic-parser-failure"
+          ],
+          "interruptions": {},
+          "analysisCharged": 497,
+          "requests": 8
+        },
+        "engineOn": {
+          "state": "incomplete",
+          "stopReason": "discovered-frontier-drained",
+          "tp": 0,
+          "targets": 1,
+          "fp": 1,
+          "otherPrivateOrSuspicious": 0,
+          "bundleAnalyzers": {
+            "directText": "inspected",
+            "offlineEngine": "inspected",
+            "semantic": "failed"
+          },
+          "analyzerHistogram": {
+            "inspected": 20,
+            "failed": 1
+          },
+          "nonTerminal": 0,
+          "consistency": {
+            "statePendingFree": true,
+            "inventoryPending": 0,
+            "countsPending": 0,
+            "countsDeferred": 0,
+            "importantUninspected": 1,
+            "verdict": "limited"
+          },
+          "lateChunkRequested": true,
+          "chunkRequested": true,
+          "workerRequested": true,
+          "gapCodes": [
+            "bare-extension-literals",
+            "decoded-inspection-limit",
+            "http-unavailable",
+            "semantic-parser-failure"
+          ],
+          "interruptions": {},
+          "analysisCharged": 457,
+          "requests": 8
+        },
+        "loadedTwiceWithMirror": {
+          "state": "incomplete",
+          "stopReason": "discovered-frontier-drained",
+          "tp": 0,
+          "targets": 1,
+          "fp": 1,
+          "otherPrivateOrSuspicious": 0,
+          "bundleAnalyzers": {
+            "directText": "inspected",
+            "offlineEngine": "unsupported",
+            "semantic": "failed"
+          },
+          "analyzerHistogram": {
+            "inspected": 13,
+            "unsupported": 9,
+            "failed": 1,
+            "incomplete": 1
+          },
+          "nonTerminal": 0,
+          "consistency": {
+            "statePendingFree": true,
+            "inventoryPending": 0,
+            "countsPending": 0,
+            "countsDeferred": 0,
+            "importantUninspected": 0,
+            "verdict": "limited"
+          },
+          "lateChunkRequested": true,
+          "chunkRequested": true,
+          "workerRequested": true,
+          "gapCodes": [
+            "analysis-unfinished",
+            "bare-extension-literals",
+            "decoded-inspection-limit",
+            "http-unavailable",
+            "semantic-parser-failure"
+          ],
+          "interruptions": {},
+          "analysisCharged": 632,
+          "requests": 9
+        }
+      },
+      "stable": {},
+      "elapsedMs": 10909,
+      "maxRssKiB": 383320,
+      "egressViolations": [],
+      "wallMs": 11627
+    },
+    {
+      "group": "G5",
+      "implementation": "<local path>",
+      "build": {
+        "version": "2.8.0",
+        "id": "2.8.0+cc5fecf8cb75f1c7",
+        "sourceDigest": "cc5fecf8cb75f1c7e607178fa5dcf7527dadec872f7c9dd4b381a4c365256810"
+      },
+      "rep": 0,
+      "metrics": {
+        "engineOff": {
+          "state": "incomplete",
+          "stopReason": "discovered-frontier-drained",
+          "tp": 0,
+          "targets": 1,
+          "fp": 1,
+          "otherPrivateOrSuspicious": 0,
+          "bundleAnalyzers": {
+            "directText": "inspected",
+            "offlineEngine": "unsupported",
+            "semantic": "failed"
+          },
+          "analyzerHistogram": {
+            "inspected": 12,
+            "unsupported": 8,
+            "failed": 1
+          },
+          "nonTerminal": 0,
+          "consistency": {
+            "statePendingFree": true,
+            "inventoryPending": 0,
+            "countsPending": 0,
+            "countsDeferred": 0,
+            "importantUninspected": 0,
+            "verdict": "limited"
+          },
+          "lateChunkRequested": true,
+          "chunkRequested": true,
+          "workerRequested": true,
+          "gapCodes": [
+            "bare-extension-literals",
+            "decoded-inspection-limit",
+            "http-unavailable",
+            "semantic-parser-failure"
+          ],
+          "interruptions": {},
+          "analysisCharged": 390,
+          "requests": 8
+        },
+        "engineOn": {
+          "state": "incomplete",
+          "stopReason": "discovered-frontier-drained",
+          "tp": 0,
+          "targets": 1,
+          "fp": 1,
+          "otherPrivateOrSuspicious": 0,
+          "bundleAnalyzers": {
+            "directText": "inspected",
+            "offlineEngine": "inspected",
+            "semantic": "failed"
+          },
+          "analyzerHistogram": {
+            "inspected": 20,
+            "failed": 1
+          },
+          "nonTerminal": 0,
+          "consistency": {
+            "statePendingFree": true,
+            "inventoryPending": 0,
+            "countsPending": 0,
+            "countsDeferred": 0,
+            "importantUninspected": 1,
+            "verdict": "limited"
+          },
+          "lateChunkRequested": true,
+          "chunkRequested": true,
+          "workerRequested": true,
+          "gapCodes": [
+            "bare-extension-literals",
+            "decoded-inspection-limit",
+            "http-unavailable",
+            "semantic-parser-failure"
+          ],
+          "interruptions": {},
+          "analysisCharged": 410,
+          "requests": 8
+        },
+        "loadedTwiceWithMirror": {
+          "state": "incomplete",
+          "stopReason": "discovered-frontier-drained",
+          "tp": 0,
+          "targets": 1,
+          "fp": 1,
+          "otherPrivateOrSuspicious": 0,
+          "bundleAnalyzers": {
+            "directText": "inspected",
+            "offlineEngine": "unsupported",
+            "semantic": "failed"
+          },
+          "analyzerHistogram": {
+            "inspected": 13,
+            "unsupported": 9,
+            "failed": 1,
+            "incomplete": 1
+          },
+          "nonTerminal": 0,
+          "consistency": {
+            "statePendingFree": true,
+            "inventoryPending": 0,
+            "countsPending": 0,
+            "countsDeferred": 0,
+            "importantUninspected": 0,
+            "verdict": "limited"
+          },
+          "lateChunkRequested": true,
+          "chunkRequested": true,
+          "workerRequested": true,
+          "gapCodes": [
+            "analysis-unfinished",
+            "bare-extension-literals",
+            "decoded-inspection-limit",
+            "http-unavailable",
+            "semantic-parser-failure"
+          ],
+          "interruptions": {},
+          "analysisCharged": 505,
+          "requests": 9
+        }
+      },
+      "stable": {},
+      "elapsedMs": 6868,
+      "maxRssKiB": 470912,
+      "egressViolations": [],
+      "wallMs": 7619
+    },
+    {
+      "group": "G5",
+      "implementation": "<local path>",
+      "build": {
+        "version": "2.8.0",
+        "id": "2.8.0+cc5fecf8cb75f1c7",
+        "sourceDigest": "cc5fecf8cb75f1c7e607178fa5dcf7527dadec872f7c9dd4b381a4c365256810"
+      },
+      "rep": 1,
+      "metrics": {
+        "engineOff": {
+          "state": "incomplete",
+          "stopReason": "discovered-frontier-drained",
+          "tp": 0,
+          "targets": 1,
+          "fp": 1,
+          "otherPrivateOrSuspicious": 0,
+          "bundleAnalyzers": {
+            "directText": "inspected",
+            "offlineEngine": "unsupported",
+            "semantic": "failed"
+          },
+          "analyzerHistogram": {
+            "inspected": 12,
+            "unsupported": 8,
+            "failed": 1
+          },
+          "nonTerminal": 0,
+          "consistency": {
+            "statePendingFree": true,
+            "inventoryPending": 0,
+            "countsPending": 0,
+            "countsDeferred": 0,
+            "importantUninspected": 0,
+            "verdict": "limited"
+          },
+          "lateChunkRequested": true,
+          "chunkRequested": true,
+          "workerRequested": true,
+          "gapCodes": [
+            "bare-extension-literals",
+            "decoded-inspection-limit",
+            "http-unavailable",
+            "semantic-parser-failure"
+          ],
+          "interruptions": {},
+          "analysisCharged": 395,
+          "requests": 8
+        },
+        "engineOn": {
+          "state": "incomplete",
+          "stopReason": "discovered-frontier-drained",
+          "tp": 0,
+          "targets": 1,
+          "fp": 1,
+          "otherPrivateOrSuspicious": 0,
+          "bundleAnalyzers": {
+            "directText": "inspected",
+            "offlineEngine": "inspected",
+            "semantic": "failed"
+          },
+          "analyzerHistogram": {
+            "inspected": 20,
+            "failed": 1
+          },
+          "nonTerminal": 0,
+          "consistency": {
+            "statePendingFree": true,
+            "inventoryPending": 0,
+            "countsPending": 0,
+            "countsDeferred": 0,
+            "importantUninspected": 1,
+            "verdict": "limited"
+          },
+          "lateChunkRequested": true,
+          "chunkRequested": true,
+          "workerRequested": true,
+          "gapCodes": [
+            "bare-extension-literals",
+            "decoded-inspection-limit",
+            "http-unavailable",
+            "semantic-parser-failure"
+          ],
+          "interruptions": {},
+          "analysisCharged": 377,
+          "requests": 8
+        },
+        "loadedTwiceWithMirror": {
+          "state": "incomplete",
+          "stopReason": "discovered-frontier-drained",
+          "tp": 0,
+          "targets": 1,
+          "fp": 1,
+          "otherPrivateOrSuspicious": 0,
+          "bundleAnalyzers": {
+            "directText": "inspected",
+            "offlineEngine": "unsupported",
+            "semantic": "failed"
+          },
+          "analyzerHistogram": {
+            "inspected": 13,
+            "unsupported": 9,
+            "failed": 1,
+            "incomplete": 1
+          },
+          "nonTerminal": 0,
+          "consistency": {
+            "statePendingFree": true,
+            "inventoryPending": 0,
+            "countsPending": 0,
+            "countsDeferred": 0,
+            "importantUninspected": 0,
+            "verdict": "limited"
+          },
+          "lateChunkRequested": true,
+          "chunkRequested": true,
+          "workerRequested": true,
+          "gapCodes": [
+            "analysis-unfinished",
+            "bare-extension-literals",
+            "decoded-inspection-limit",
+            "http-unavailable",
+            "semantic-parser-failure"
+          ],
+          "interruptions": {},
+          "analysisCharged": 492,
+          "requests": 9
+        }
+      },
+      "stable": {},
+      "elapsedMs": 6708,
+      "maxRssKiB": 470696,
+      "egressViolations": [],
+      "wallMs": 7411
+    },
+    {
+      "group": "G5",
+      "implementation": "<local path>",
+      "build": {
+        "version": "2.7.0",
+        "id": "2.7.0+3772c88c496661b5",
+        "sourceDigest": "3772c88c496661b5bb04bab02b52500cae9985367c118ac9ac70904ebf5806f4"
+      },
+      "rep": 1,
+      "metrics": {
+        "engineOff": {
+          "state": "incomplete",
+          "stopReason": "discovered-frontier-drained",
+          "tp": 0,
+          "targets": 1,
+          "fp": 1,
+          "otherPrivateOrSuspicious": 0,
+          "bundleAnalyzers": {
+            "directText": "inspected",
+            "offlineEngine": "unsupported",
+            "semantic": "failed"
+          },
+          "analyzerHistogram": {
+            "inspected": 12,
+            "unsupported": 8,
+            "failed": 1
+          },
+          "nonTerminal": 0,
+          "consistency": {
+            "statePendingFree": true,
+            "inventoryPending": 0,
+            "countsPending": 0,
+            "countsDeferred": 0,
+            "importantUninspected": 0,
+            "verdict": "limited"
+          },
+          "lateChunkRequested": true,
+          "chunkRequested": true,
+          "workerRequested": true,
+          "gapCodes": [
+            "bare-extension-literals",
+            "decoded-inspection-limit",
+            "http-unavailable",
+            "semantic-parser-failure"
+          ],
+          "interruptions": {},
+          "analysisCharged": 439,
+          "requests": 8
+        },
+        "engineOn": {
+          "state": "incomplete",
+          "stopReason": "discovered-frontier-drained",
+          "tp": 0,
+          "targets": 1,
+          "fp": 1,
+          "otherPrivateOrSuspicious": 0,
+          "bundleAnalyzers": {
+            "directText": "inspected",
+            "offlineEngine": "inspected",
+            "semantic": "failed"
+          },
+          "analyzerHistogram": {
+            "inspected": 20,
+            "failed": 1
+          },
+          "nonTerminal": 0,
+          "consistency": {
+            "statePendingFree": true,
+            "inventoryPending": 0,
+            "countsPending": 0,
+            "countsDeferred": 0,
+            "importantUninspected": 1,
+            "verdict": "limited"
+          },
+          "lateChunkRequested": true,
+          "chunkRequested": true,
+          "workerRequested": true,
+          "gapCodes": [
+            "bare-extension-literals",
+            "decoded-inspection-limit",
+            "http-unavailable",
+            "semantic-parser-failure"
+          ],
+          "interruptions": {},
+          "analysisCharged": 462,
+          "requests": 8
+        },
+        "loadedTwiceWithMirror": {
+          "state": "incomplete",
+          "stopReason": "discovered-frontier-drained",
+          "tp": 0,
+          "targets": 1,
+          "fp": 1,
+          "otherPrivateOrSuspicious": 0,
+          "bundleAnalyzers": {
+            "directText": "inspected",
+            "offlineEngine": "unsupported",
+            "semantic": "failed"
+          },
+          "analyzerHistogram": {
+            "inspected": 13,
+            "unsupported": 9,
+            "failed": 1,
+            "incomplete": 1
+          },
+          "nonTerminal": 0,
+          "consistency": {
+            "statePendingFree": true,
+            "inventoryPending": 0,
+            "countsPending": 0,
+            "countsDeferred": 0,
+            "importantUninspected": 0,
+            "verdict": "limited"
+          },
+          "lateChunkRequested": true,
+          "chunkRequested": true,
+          "workerRequested": true,
+          "gapCodes": [
+            "analysis-unfinished",
+            "bare-extension-literals",
+            "decoded-inspection-limit",
+            "http-unavailable",
+            "semantic-parser-failure"
+          ],
+          "interruptions": {},
+          "analysisCharged": 640,
+          "requests": 9
+        }
+      },
+      "stable": {},
+      "elapsedMs": 10972,
+      "maxRssKiB": 383628,
+      "egressViolations": [],
+      "wallMs": 11636
+    },
+    {
+      "group": "G5",
+      "implementation": "<local path>",
+      "build": {
+        "version": "2.7.0",
+        "id": "2.7.0+3772c88c496661b5",
+        "sourceDigest": "3772c88c496661b5bb04bab02b52500cae9985367c118ac9ac70904ebf5806f4"
+      },
+      "rep": 2,
+      "metrics": {
+        "engineOff": {
+          "state": "incomplete",
+          "stopReason": "discovered-frontier-drained",
+          "tp": 0,
+          "targets": 1,
+          "fp": 1,
+          "otherPrivateOrSuspicious": 0,
+          "bundleAnalyzers": {
+            "directText": "inspected",
+            "offlineEngine": "unsupported",
+            "semantic": "failed"
+          },
+          "analyzerHistogram": {
+            "inspected": 12,
+            "unsupported": 8,
+            "failed": 1
+          },
+          "nonTerminal": 0,
+          "consistency": {
+            "statePendingFree": true,
+            "inventoryPending": 0,
+            "countsPending": 0,
+            "countsDeferred": 0,
+            "importantUninspected": 0,
+            "verdict": "limited"
+          },
+          "lateChunkRequested": true,
+          "chunkRequested": true,
+          "workerRequested": true,
+          "gapCodes": [
+            "bare-extension-literals",
+            "decoded-inspection-limit",
+            "http-unavailable",
+            "semantic-parser-failure"
+          ],
+          "interruptions": {},
+          "analysisCharged": 471,
+          "requests": 8
+        },
+        "engineOn": {
+          "state": "incomplete",
+          "stopReason": "discovered-frontier-drained",
+          "tp": 0,
+          "targets": 1,
+          "fp": 1,
+          "otherPrivateOrSuspicious": 0,
+          "bundleAnalyzers": {
+            "directText": "inspected",
+            "offlineEngine": "inspected",
+            "semantic": "failed"
+          },
+          "analyzerHistogram": {
+            "inspected": 20,
+            "failed": 1
+          },
+          "nonTerminal": 0,
+          "consistency": {
+            "statePendingFree": true,
+            "inventoryPending": 0,
+            "countsPending": 0,
+            "countsDeferred": 0,
+            "importantUninspected": 1,
+            "verdict": "limited"
+          },
+          "lateChunkRequested": true,
+          "chunkRequested": true,
+          "workerRequested": true,
+          "gapCodes": [
+            "bare-extension-literals",
+            "decoded-inspection-limit",
+            "http-unavailable",
+            "semantic-parser-failure"
+          ],
+          "interruptions": {},
+          "analysisCharged": 453,
+          "requests": 8
+        },
+        "loadedTwiceWithMirror": {
+          "state": "incomplete",
+          "stopReason": "discovered-frontier-drained",
+          "tp": 0,
+          "targets": 1,
+          "fp": 1,
+          "otherPrivateOrSuspicious": 0,
+          "bundleAnalyzers": {
+            "directText": "inspected",
+            "offlineEngine": "unsupported",
+            "semantic": "failed"
+          },
+          "analyzerHistogram": {
+            "inspected": 13,
+            "unsupported": 9,
+            "failed": 1,
+            "incomplete": 1
+          },
+          "nonTerminal": 0,
+          "consistency": {
+            "statePendingFree": true,
+            "inventoryPending": 0,
+            "countsPending": 0,
+            "countsDeferred": 0,
+            "importantUninspected": 0,
+            "verdict": "limited"
+          },
+          "lateChunkRequested": true,
+          "chunkRequested": true,
+          "workerRequested": true,
+          "gapCodes": [
+            "analysis-unfinished",
+            "bare-extension-literals",
+            "decoded-inspection-limit",
+            "http-unavailable",
+            "semantic-parser-failure"
+          ],
+          "interruptions": {},
+          "analysisCharged": 631,
+          "requests": 9
+        }
+      },
+      "stable": {},
+      "elapsedMs": 11201,
+      "maxRssKiB": 382004,
+      "egressViolations": [],
+      "wallMs": 11851
+    },
+    {
+      "group": "G5",
+      "implementation": "<local path>",
+      "build": {
+        "version": "2.8.0",
+        "id": "2.8.0+cc5fecf8cb75f1c7",
+        "sourceDigest": "cc5fecf8cb75f1c7e607178fa5dcf7527dadec872f7c9dd4b381a4c365256810"
+      },
+      "rep": 2,
+      "metrics": {
+        "engineOff": {
+          "state": "incomplete",
+          "stopReason": "discovered-frontier-drained",
+          "tp": 0,
+          "targets": 1,
+          "fp": 1,
+          "otherPrivateOrSuspicious": 0,
+          "bundleAnalyzers": {
+            "directText": "inspected",
+            "offlineEngine": "unsupported",
+            "semantic": "failed"
+          },
+          "analyzerHistogram": {
+            "inspected": 12,
+            "unsupported": 8,
+            "failed": 1
+          },
+          "nonTerminal": 0,
+          "consistency": {
+            "statePendingFree": true,
+            "inventoryPending": 0,
+            "countsPending": 0,
+            "countsDeferred": 0,
+            "importantUninspected": 0,
+            "verdict": "limited"
+          },
+          "lateChunkRequested": true,
+          "chunkRequested": true,
+          "workerRequested": true,
+          "gapCodes": [
+            "bare-extension-literals",
+            "decoded-inspection-limit",
+            "http-unavailable",
+            "semantic-parser-failure"
+          ],
+          "interruptions": {},
+          "analysisCharged": 379,
+          "requests": 8
+        },
+        "engineOn": {
+          "state": "incomplete",
+          "stopReason": "discovered-frontier-drained",
+          "tp": 0,
+          "targets": 1,
+          "fp": 1,
+          "otherPrivateOrSuspicious": 0,
+          "bundleAnalyzers": {
+            "directText": "inspected",
+            "offlineEngine": "inspected",
+            "semantic": "failed"
+          },
+          "analyzerHistogram": {
+            "inspected": 20,
+            "failed": 1
+          },
+          "nonTerminal": 0,
+          "consistency": {
+            "statePendingFree": true,
+            "inventoryPending": 0,
+            "countsPending": 0,
+            "countsDeferred": 0,
+            "importantUninspected": 1,
+            "verdict": "limited"
+          },
+          "lateChunkRequested": true,
+          "chunkRequested": true,
+          "workerRequested": true,
+          "gapCodes": [
+            "bare-extension-literals",
+            "decoded-inspection-limit",
+            "http-unavailable",
+            "semantic-parser-failure"
+          ],
+          "interruptions": {},
+          "analysisCharged": 361,
+          "requests": 8
+        },
+        "loadedTwiceWithMirror": {
+          "state": "incomplete",
+          "stopReason": "discovered-frontier-drained",
+          "tp": 0,
+          "targets": 1,
+          "fp": 1,
+          "otherPrivateOrSuspicious": 0,
+          "bundleAnalyzers": {
+            "directText": "inspected",
+            "offlineEngine": "unsupported",
+            "semantic": "failed"
+          },
+          "analyzerHistogram": {
+            "inspected": 13,
+            "unsupported": 9,
+            "failed": 1,
+            "incomplete": 1
+          },
+          "nonTerminal": 0,
+          "consistency": {
+            "statePendingFree": true,
+            "inventoryPending": 0,
+            "countsPending": 0,
+            "countsDeferred": 0,
+            "importantUninspected": 0,
+            "verdict": "limited"
+          },
+          "lateChunkRequested": true,
+          "chunkRequested": true,
+          "workerRequested": true,
+          "gapCodes": [
+            "analysis-unfinished",
+            "bare-extension-literals",
+            "decoded-inspection-limit",
+            "http-unavailable",
+            "semantic-parser-failure"
+          ],
+          "interruptions": {},
+          "analysisCharged": 512,
+          "requests": 9
+        }
+      },
+      "stable": {},
+      "elapsedMs": 6903,
+      "maxRssKiB": 469616,
+      "egressViolations": [],
+      "wallMs": 7615
+    },
+    {
+      "group": "G5",
+      "implementation": "<local path>",
+      "build": {
+        "version": "2.8.0",
+        "id": "2.8.0+cc5fecf8cb75f1c7",
+        "sourceDigest": "cc5fecf8cb75f1c7e607178fa5dcf7527dadec872f7c9dd4b381a4c365256810"
+      },
+      "rep": 3,
+      "metrics": {
+        "engineOff": {
+          "state": "incomplete",
+          "stopReason": "discovered-frontier-drained",
+          "tp": 0,
+          "targets": 1,
+          "fp": 1,
+          "otherPrivateOrSuspicious": 0,
+          "bundleAnalyzers": {
+            "directText": "inspected",
+            "offlineEngine": "unsupported",
+            "semantic": "failed"
+          },
+          "analyzerHistogram": {
+            "inspected": 12,
+            "unsupported": 8,
+            "failed": 1
+          },
+          "nonTerminal": 0,
+          "consistency": {
+            "statePendingFree": true,
+            "inventoryPending": 0,
+            "countsPending": 0,
+            "countsDeferred": 0,
+            "importantUninspected": 0,
+            "verdict": "limited"
+          },
+          "lateChunkRequested": true,
+          "chunkRequested": true,
+          "workerRequested": true,
+          "gapCodes": [
+            "bare-extension-literals",
+            "decoded-inspection-limit",
+            "http-unavailable",
+            "semantic-parser-failure"
+          ],
+          "interruptions": {},
+          "analysisCharged": 375,
+          "requests": 8
+        },
+        "engineOn": {
+          "state": "incomplete",
+          "stopReason": "discovered-frontier-drained",
+          "tp": 0,
+          "targets": 1,
+          "fp": 1,
+          "otherPrivateOrSuspicious": 0,
+          "bundleAnalyzers": {
+            "directText": "inspected",
+            "offlineEngine": "inspected",
+            "semantic": "failed"
+          },
+          "analyzerHistogram": {
+            "inspected": 20,
+            "failed": 1
+          },
+          "nonTerminal": 0,
+          "consistency": {
+            "statePendingFree": true,
+            "inventoryPending": 0,
+            "countsPending": 0,
+            "countsDeferred": 0,
+            "importantUninspected": 1,
+            "verdict": "limited"
+          },
+          "lateChunkRequested": true,
+          "chunkRequested": true,
+          "workerRequested": true,
+          "gapCodes": [
+            "bare-extension-literals",
+            "decoded-inspection-limit",
+            "http-unavailable",
+            "semantic-parser-failure"
+          ],
+          "interruptions": {},
+          "analysisCharged": 376,
+          "requests": 8
+        },
+        "loadedTwiceWithMirror": {
+          "state": "incomplete",
+          "stopReason": "discovered-frontier-drained",
+          "tp": 0,
+          "targets": 1,
+          "fp": 1,
+          "otherPrivateOrSuspicious": 0,
+          "bundleAnalyzers": {
+            "directText": "inspected",
+            "offlineEngine": "unsupported",
+            "semantic": "failed"
+          },
+          "analyzerHistogram": {
+            "inspected": 13,
+            "unsupported": 9,
+            "failed": 1,
+            "incomplete": 1
+          },
+          "nonTerminal": 0,
+          "consistency": {
+            "statePendingFree": true,
+            "inventoryPending": 0,
+            "countsPending": 0,
+            "countsDeferred": 0,
+            "importantUninspected": 0,
+            "verdict": "limited"
+          },
+          "lateChunkRequested": true,
+          "chunkRequested": true,
+          "workerRequested": true,
+          "gapCodes": [
+            "analysis-unfinished",
+            "bare-extension-literals",
+            "decoded-inspection-limit",
+            "http-unavailable",
+            "semantic-parser-failure"
+          ],
+          "interruptions": {},
+          "analysisCharged": 513,
+          "requests": 9
+        }
+      },
+      "stable": {},
+      "elapsedMs": 6604,
+      "maxRssKiB": 471864,
+      "egressViolations": [],
+      "wallMs": 7294
+    },
+    {
+      "group": "G5",
+      "implementation": "<local path>",
+      "build": {
+        "version": "2.7.0",
+        "id": "2.7.0+3772c88c496661b5",
+        "sourceDigest": "3772c88c496661b5bb04bab02b52500cae9985367c118ac9ac70904ebf5806f4"
+      },
+      "rep": 3,
+      "metrics": {
+        "engineOff": {
+          "state": "incomplete",
+          "stopReason": "discovered-frontier-drained",
+          "tp": 0,
+          "targets": 1,
+          "fp": 1,
+          "otherPrivateOrSuspicious": 0,
+          "bundleAnalyzers": {
+            "directText": "inspected",
+            "offlineEngine": "unsupported",
+            "semantic": "failed"
+          },
+          "analyzerHistogram": {
+            "inspected": 12,
+            "unsupported": 8,
+            "failed": 1
+          },
+          "nonTerminal": 0,
+          "consistency": {
+            "statePendingFree": true,
+            "inventoryPending": 0,
+            "countsPending": 0,
+            "countsDeferred": 0,
+            "importantUninspected": 0,
+            "verdict": "limited"
+          },
+          "lateChunkRequested": true,
+          "chunkRequested": true,
+          "workerRequested": true,
+          "gapCodes": [
+            "bare-extension-literals",
+            "decoded-inspection-limit",
+            "http-unavailable",
+            "semantic-parser-failure"
+          ],
+          "interruptions": {},
+          "analysisCharged": 428,
+          "requests": 8
+        },
+        "engineOn": {
+          "state": "incomplete",
+          "stopReason": "discovered-frontier-drained",
+          "tp": 0,
+          "targets": 1,
+          "fp": 1,
+          "otherPrivateOrSuspicious": 0,
+          "bundleAnalyzers": {
+            "directText": "inspected",
+            "offlineEngine": "inspected",
+            "semantic": "failed"
+          },
+          "analyzerHistogram": {
+            "inspected": 20,
+            "failed": 1
+          },
+          "nonTerminal": 0,
+          "consistency": {
+            "statePendingFree": true,
+            "inventoryPending": 0,
+            "countsPending": 0,
+            "countsDeferred": 0,
+            "importantUninspected": 1,
+            "verdict": "limited"
+          },
+          "lateChunkRequested": true,
+          "chunkRequested": true,
+          "workerRequested": true,
+          "gapCodes": [
+            "bare-extension-literals",
+            "decoded-inspection-limit",
+            "http-unavailable",
+            "semantic-parser-failure"
+          ],
+          "interruptions": {},
+          "analysisCharged": 460,
+          "requests": 8
+        },
+        "loadedTwiceWithMirror": {
+          "state": "incomplete",
+          "stopReason": "discovered-frontier-drained",
+          "tp": 0,
+          "targets": 1,
+          "fp": 1,
+          "otherPrivateOrSuspicious": 0,
+          "bundleAnalyzers": {
+            "directText": "inspected",
+            "offlineEngine": "unsupported",
+            "semantic": "failed"
+          },
+          "analyzerHistogram": {
+            "inspected": 13,
+            "unsupported": 9,
+            "failed": 1,
+            "incomplete": 1
+          },
+          "nonTerminal": 0,
+          "consistency": {
+            "statePendingFree": true,
+            "inventoryPending": 0,
+            "countsPending": 0,
+            "countsDeferred": 0,
+            "importantUninspected": 0,
+            "verdict": "limited"
+          },
+          "lateChunkRequested": true,
+          "chunkRequested": true,
+          "workerRequested": true,
+          "gapCodes": [
+            "analysis-unfinished",
+            "bare-extension-literals",
+            "decoded-inspection-limit",
+            "http-unavailable",
+            "semantic-parser-failure"
+          ],
+          "interruptions": {},
+          "analysisCharged": 585,
+          "requests": 9
+        }
+      },
+      "stable": {},
+      "elapsedMs": 10973,
+      "maxRssKiB": 383892,
+      "egressViolations": [],
+      "wallMs": 11656
+    },
+    {
+      "group": "G5",
+      "implementation": "<local path>",
+      "build": {
+        "version": "2.7.0",
+        "id": "2.7.0+3772c88c496661b5",
+        "sourceDigest": "3772c88c496661b5bb04bab02b52500cae9985367c118ac9ac70904ebf5806f4"
+      },
+      "rep": 4,
+      "metrics": {
+        "engineOff": {
+          "state": "incomplete",
+          "stopReason": "discovered-frontier-drained",
+          "tp": 0,
+          "targets": 1,
+          "fp": 1,
+          "otherPrivateOrSuspicious": 0,
+          "bundleAnalyzers": {
+            "directText": "inspected",
+            "offlineEngine": "unsupported",
+            "semantic": "failed"
+          },
+          "analyzerHistogram": {
+            "inspected": 12,
+            "unsupported": 8,
+            "failed": 1
+          },
+          "nonTerminal": 0,
+          "consistency": {
+            "statePendingFree": true,
+            "inventoryPending": 0,
+            "countsPending": 0,
+            "countsDeferred": 0,
+            "importantUninspected": 0,
+            "verdict": "limited"
+          },
+          "lateChunkRequested": true,
+          "chunkRequested": true,
+          "workerRequested": true,
+          "gapCodes": [
+            "bare-extension-literals",
+            "decoded-inspection-limit",
+            "http-unavailable",
+            "semantic-parser-failure"
+          ],
+          "interruptions": {},
+          "analysisCharged": 443,
+          "requests": 8
+        },
+        "engineOn": {
+          "state": "incomplete",
+          "stopReason": "discovered-frontier-drained",
+          "tp": 0,
+          "targets": 1,
+          "fp": 1,
+          "otherPrivateOrSuspicious": 0,
+          "bundleAnalyzers": {
+            "directText": "inspected",
+            "offlineEngine": "inspected",
+            "semantic": "failed"
+          },
+          "analyzerHistogram": {
+            "inspected": 20,
+            "failed": 1
+          },
+          "nonTerminal": 0,
+          "consistency": {
+            "statePendingFree": true,
+            "inventoryPending": 0,
+            "countsPending": 0,
+            "countsDeferred": 0,
+            "importantUninspected": 1,
+            "verdict": "limited"
+          },
+          "lateChunkRequested": true,
+          "chunkRequested": true,
+          "workerRequested": true,
+          "gapCodes": [
+            "bare-extension-literals",
+            "decoded-inspection-limit",
+            "http-unavailable",
+            "semantic-parser-failure"
+          ],
+          "interruptions": {},
+          "analysisCharged": 453,
+          "requests": 8
+        },
+        "loadedTwiceWithMirror": {
+          "state": "incomplete",
+          "stopReason": "discovered-frontier-drained",
+          "tp": 0,
+          "targets": 1,
+          "fp": 1,
+          "otherPrivateOrSuspicious": 0,
+          "bundleAnalyzers": {
+            "directText": "inspected",
+            "offlineEngine": "unsupported",
+            "semantic": "failed"
+          },
+          "analyzerHistogram": {
+            "inspected": 13,
+            "unsupported": 9,
+            "failed": 1,
+            "incomplete": 1
+          },
+          "nonTerminal": 0,
+          "consistency": {
+            "statePendingFree": true,
+            "inventoryPending": 0,
+            "countsPending": 0,
+            "countsDeferred": 0,
+            "importantUninspected": 0,
+            "verdict": "limited"
+          },
+          "lateChunkRequested": true,
+          "chunkRequested": true,
+          "workerRequested": true,
+          "gapCodes": [
+            "analysis-unfinished",
+            "bare-extension-literals",
+            "decoded-inspection-limit",
+            "http-unavailable",
+            "semantic-parser-failure"
+          ],
+          "interruptions": {},
+          "analysisCharged": 567,
+          "requests": 9
+        }
+      },
+      "stable": {},
+      "elapsedMs": 10937,
+      "maxRssKiB": 383248,
+      "egressViolations": [],
+      "wallMs": 11635
+    },
+    {
+      "group": "G5",
+      "implementation": "<local path>",
+      "build": {
+        "version": "2.8.0",
+        "id": "2.8.0+cc5fecf8cb75f1c7",
+        "sourceDigest": "cc5fecf8cb75f1c7e607178fa5dcf7527dadec872f7c9dd4b381a4c365256810"
+      },
+      "rep": 4,
+      "metrics": {
+        "engineOff": {
+          "state": "incomplete",
+          "stopReason": "discovered-frontier-drained",
+          "tp": 0,
+          "targets": 1,
+          "fp": 1,
+          "otherPrivateOrSuspicious": 0,
+          "bundleAnalyzers": {
+            "directText": "inspected",
+            "offlineEngine": "unsupported",
+            "semantic": "failed"
+          },
+          "analyzerHistogram": {
+            "inspected": 12,
+            "unsupported": 8,
+            "failed": 1
+          },
+          "nonTerminal": 0,
+          "consistency": {
+            "statePendingFree": true,
+            "inventoryPending": 0,
+            "countsPending": 0,
+            "countsDeferred": 0,
+            "importantUninspected": 0,
+            "verdict": "limited"
+          },
+          "lateChunkRequested": true,
+          "chunkRequested": true,
+          "workerRequested": true,
+          "gapCodes": [
+            "bare-extension-literals",
+            "decoded-inspection-limit",
+            "http-unavailable",
+            "semantic-parser-failure"
+          ],
+          "interruptions": {},
+          "analysisCharged": 391,
+          "requests": 8
+        },
+        "engineOn": {
+          "state": "incomplete",
+          "stopReason": "discovered-frontier-drained",
+          "tp": 0,
+          "targets": 1,
+          "fp": 1,
+          "otherPrivateOrSuspicious": 0,
+          "bundleAnalyzers": {
+            "directText": "inspected",
+            "offlineEngine": "inspected",
+            "semantic": "failed"
+          },
+          "analyzerHistogram": {
+            "inspected": 20,
+            "failed": 1
+          },
+          "nonTerminal": 0,
+          "consistency": {
+            "statePendingFree": true,
+            "inventoryPending": 0,
+            "countsPending": 0,
+            "countsDeferred": 0,
+            "importantUninspected": 1,
+            "verdict": "limited"
+          },
+          "lateChunkRequested": true,
+          "chunkRequested": true,
+          "workerRequested": true,
+          "gapCodes": [
+            "bare-extension-literals",
+            "decoded-inspection-limit",
+            "http-unavailable",
+            "semantic-parser-failure"
+          ],
+          "interruptions": {},
+          "analysisCharged": 394,
+          "requests": 8
+        },
+        "loadedTwiceWithMirror": {
+          "state": "incomplete",
+          "stopReason": "discovered-frontier-drained",
+          "tp": 0,
+          "targets": 1,
+          "fp": 1,
+          "otherPrivateOrSuspicious": 0,
+          "bundleAnalyzers": {
+            "directText": "inspected",
+            "offlineEngine": "unsupported",
+            "semantic": "failed"
+          },
+          "analyzerHistogram": {
+            "inspected": 13,
+            "unsupported": 9,
+            "failed": 1,
+            "incomplete": 1
+          },
+          "nonTerminal": 0,
+          "consistency": {
+            "statePendingFree": true,
+            "inventoryPending": 0,
+            "countsPending": 0,
+            "countsDeferred": 0,
+            "importantUninspected": 0,
+            "verdict": "limited"
+          },
+          "lateChunkRequested": true,
+          "chunkRequested": true,
+          "workerRequested": true,
+          "gapCodes": [
+            "analysis-unfinished",
+            "bare-extension-literals",
+            "decoded-inspection-limit",
+            "http-unavailable",
+            "semantic-parser-failure"
+          ],
+          "interruptions": {},
+          "analysisCharged": 499,
+          "requests": 9
+        }
+      },
+      "stable": {},
+      "elapsedMs": 6931,
+      "maxRssKiB": 473400,
+      "egressViolations": [],
+      "wallMs": 7622
+    }
+  ],
+  "output": "benchmarks/2.8.0/evaluation-g5-recheck.json"
+}

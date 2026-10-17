@@ -1,0 +1,54 @@
+import type { ScanConfig } from './types.js';
+export const deepPaths = ['/.env','/.env.local','/.env.production','/.env.backup','/config.json','/config.js','/.npmrc','/.git/HEAD','/debug','/debug/vars','/server.log','/error.log','/backup.sql','/index.php.bak','/config.php.bak'];
+export function normalizeUrl(input: string, base?: string): string {
+  const u = new URL(input, base);
+  if (!['http:', 'https:'].includes(u.protocol) || u.username || u.password) throw new Error('Only HTTP(S) URLs without user credentials are allowed');
+  if (u.href.length > 4096) throw new Error('URL too long');
+  u.hash = ''; return u.href; // Preserve query order/escaping; targets may assign semantics to them.
+}
+export function exactOrigin(input: string): string {
+  const u = new URL(normalizeUrl(input));
+  if (u.pathname !== '/' || u.search) throw new Error('Origin entries must contain only scheme, host and port');
+  return u.origin;
+}
+export function makeConfig(input: Partial<ScanConfig>): ScanConfig {
+  const c: ScanConfig = { name: 'Authorized website', urls: [], relatedOrigins: [], privateOrigins: [], browser: false,
+    deep: false,maxRetries:1, semanticAnalysis:true,debuggerScripts:true,staleAssetCheck:false,staleAssetUrls:[],robotsPolicy:'respect',browserNavigationUrls:[],readOnlyPostEndpoints: [], requestsPerSecond: 2, concurrency: 2, maxDepth: 3,
+    maxPages: 30, maxResources: 200, maxResourceBytes: 8 * 1024 * 1024, maxTotalBytes: 80 * 1024 * 1024,
+    timeoutMs: 10000, maxDurationMs: 120000, queryVariants: 3, browserPages: 5,
+    browserSettleMs: 1000, maxMaps: 25, maxMapSources: 40, deepPaths, adjacentMaps: true, preset:'custom',maxWireResourceBytes:16*1024*1024,maxDecodedTotalBytes:160*1024*1024,maxMapDepth:4,maxMapSections:50,browserScrollSteps:0,browserScrollDelayMs:500, ...input };
+  if (!Array.isArray(c.urls) || !c.urls.length || c.urls.length > 50) throw new Error('Supply 1–50 authorized URLs');
+  c.urls = c.urls.map(u => normalizeUrl(/^[A-Za-z][A-Za-z0-9+.-]*:\/\//.test(u.trim())?u.trim():'https://'+u.trim()));
+  for (const field of ['relatedOrigins','privateOrigins'] as const) {
+    if (!Array.isArray(c[field]) || c[field].length > 50) throw new Error('Invalid origin list');
+    c[field] = c[field].map(exactOrigin);
+  }
+  if (c.developmentFixtureOrigin) {
+    c.developmentFixtureOrigin = exactOrigin(c.developmentFixtureOrigin);
+    const host = new URL(c.developmentFixtureOrigin).hostname;
+    if (!['127.0.0.1','[::1]','localhost'].includes(host)) throw new Error('Development fixture must be a loopback origin');
+  }
+  if (!Array.isArray(c.readOnlyPostEndpoints) || c.readOnlyPostEndpoints.length > 20) throw new Error('Invalid POST endpoint list');
+  c.readOnlyPostEndpoints = c.readOnlyPostEndpoints.map(u => normalizeUrl(u));
+  if(!['respect','owner-authorized-audit'].includes(c.robotsPolicy!))throw new Error('Invalid robots policy');
+  if(!Array.isArray(c.browserNavigationUrls)||c.browserNavigationUrls.length>10)throw new Error('Select at most ten read-only browser navigation URLs');
+  c.browserNavigationUrls=c.browserNavigationUrls.map(u=>normalizeUrl(u,c.urls[0]));
+  if(!Array.isArray(c.staleAssetUrls)||c.staleAssetUrls.length>200)throw new Error('Stale assets require at most 200 exact URLs from authorized history or a deployment manifest');
+  c.staleAssetUrls=c.staleAssetUrls.map(u=>normalizeUrl(u,c.urls[0]));
+  const origins=new Set([...c.urls.map(u=>new URL(u).origin),...c.relatedOrigins]);if(c.browserNavigationUrls.some(u=>!origins.has(new URL(u).origin)))throw new Error('Browser navigation requires an explicitly approved exact origin');
+  const limits: Record<string, [number, number]> = {
+    maxRetries:[0,1],requestsPerSecond: [0.1, 20], concurrency: [1, 8], maxDepth: [0, 10], maxPages: [1, 500],
+    maxResources: [1, 2000], maxResourceBytes: [1024, 32 * 1024 * 1024], maxTotalBytes: [1024, 500 * 1024 * 1024],
+    timeoutMs: [100, 30000], maxDurationMs: [100, 3600000], queryVariants: [1, 10], browserPages: [1, 50],
+    browserSettleMs: [0, 5000], maxMaps: [0, 100], maxMapSources: [1, 100],maxWireResourceBytes:[1024,32*1024*1024],maxDecodedTotalBytes:[1024,500*1024*1024],maxMapDepth:[0,8],maxMapSections:[1,100],browserScrollSteps:[0,10],browserScrollDelayMs:[100,2000]
+  };
+  for (const [k, [min, max]] of Object.entries(limits)) {
+    const n = (c as unknown as Record<string, unknown>)[k];
+    if (typeof n !== 'number' || !Number.isFinite(n) || n < min || n > max || (k !== 'requestsPerSecond' && !Number.isInteger(n))) throw new Error(`Invalid setting: ${k}`);
+  }
+  if (typeof c.name !== 'string' || c.name.length > 100) throw new Error('Invalid project name');
+  if(!['quick','standard','thorough','custom'].includes(c.preset))throw new Error('Invalid preset');
+  for (const k of ['browser','deep','adjacentMaps','semanticAnalysis','debuggerScripts','staleAssetCheck'] as const) if (typeof c[k] !== 'boolean') throw new Error(`Invalid setting: ${k}`);
+  if (!Array.isArray(c.deepPaths) || c.deepPaths.length > 30 || c.deepPaths.some(p => typeof p !== 'string' || !/^\/[A-Za-z0-9._/-]{1,100}$/.test(p) || p.includes('..'))) throw new Error('Deep checks require at most 30 fixed paths');
+  return c;
+}

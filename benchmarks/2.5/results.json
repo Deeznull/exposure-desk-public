@@ -1,0 +1,239 @@
+{
+  "schema": "exposure-release-verification/1",
+  "version": "2.5.0-rc.1",
+  "build": {
+    "version": "2.5.0-rc.1",
+    "id": "2.5.0-rc.1+97836a16c30888f3",
+    "sourceDigest": "97836a16c30888f377f84ff49e955851b7249caf6bcb87a64689b1da208bcb09"
+  },
+  "unit": {
+    "tests": 333,
+    "pass": 333,
+    "fail": 0,
+    "cancelled": 0,
+    "skipped": 0,
+    "todo": 0,
+    "durationMs": 180015.1784
+  },
+  "browser": {
+    "tests": 22,
+    "pass": 22,
+    "fail": 0,
+    "cancelled": 0,
+    "skipped": 0,
+    "todo": 0,
+    "durationMs": 220482.1057
+  },
+  "cancellationStress": {
+    "tests": 60,
+    "pass": 60,
+    "fail": 0,
+    "cancelled": 0,
+    "skipped": 0,
+    "todo": 0,
+    "durationMs": 198500.101
+  },
+  "cliSmoke": {
+    "passed": 4,
+    "failed": false
+  },
+  "persistenceSmoke": {
+    "platform": "win32",
+    "syntheticPermissionException": false,
+    "projectRestart": true,
+    "correlationRestart": true,
+    "vaultRestart": true,
+    "operatorPermissions": true,
+    "deletion": true
+  },
+  "benchmark": {
+    "planted": 110,
+    "detected": 110,
+    "missed": 0,
+    "falsePositives": 0,
+    "componentErrors": 0,
+    "locationErrors": 0,
+    "privateTargets": 106,
+    "publicTargets": 3,
+    "suspiciousTargets": 1
+  },
+  "pipeline": {
+    "status": "passed",
+    "summary": {
+      "planted": 17,
+      "found": 17,
+      "missed": 0
+    }
+  },
+  "legacyCorpus": {
+    "baseline": {
+      "targets": 13,
+      "detected": 13,
+      "falsePositives": 0,
+      "exposureTargets": 5,
+      "exposureMisses": 0,
+      "exposureFalsePositives": 0,
+      "classificationErrors": 0,
+      "elapsedMs": 1371.4412,
+      "maxRssKiB": 212776,
+      "build": "2.4.0-rc.1+5d5acf0f7f18d7e6"
+    },
+    "final": {
+      "targets": 13,
+      "detected": 13,
+      "falsePositives": 0,
+      "exposureTargets": 5,
+      "exposureMisses": 0,
+      "exposureFalsePositives": 0,
+      "classificationErrors": 0,
+      "elapsedMs": 1401.5067000000001,
+      "maxRssKiB": 235292,
+      "build": "2.5.0-rc.1+97836a16c30888f3"
+    }
+  },
+  "acquisition": {
+    "baseline": {
+      "build": "2.4.0-rc.1+5d5acf0f7f18d7e6",
+      "detected": 5,
+      "targets": 5,
+      "falsePositives": 0,
+      "knownInspected": 9,
+      "knownResources": 9,
+      "forbiddenArrivals": 0,
+      "elapsedMs": 3188.8257,
+      "maxRssKiB": 228492
+    },
+    "final": {
+      "build": "2.5.0-rc.1+97836a16c30888f3",
+      "detected": 5,
+      "targets": 5,
+      "falsePositives": 0,
+      "knownInspected": 9,
+      "knownResources": 9,
+      "forbiddenArrivals": 0,
+      "elapsedMs": 4947.4859,
+      "maxRssKiB": 245720
+    }
+  },
+  "evaluation": {
+    "corpusDigest": "41f8c2dd214da8bd7192d2d6a8863ed96e4d274b9c8d312edf97c7bc02e94479",
+    "frozenAt": "2026-10-08T04:15:23.216Z",
+    "repeat": 3,
+    "errors": [],
+    "groups": {
+      "G1": {
+        "baselineBuild": "2.4.0-rc.1+5d5acf0f7f18d7e6",
+        "newBuild": "2.5.0-rc.1+97836a16c30888f3",
+        "wallMsMedian": {
+          "baseline": 830,
+          "new": 1194
+        },
+        "maxRssKiB": {
+          "baseline": 198984,
+          "new": 205752
+        }
+      },
+      "G2": {
+        "baselineBuild": "2.4.0-rc.1+5d5acf0f7f18d7e6",
+        "newBuild": "2.5.0-rc.1+97836a16c30888f3",
+        "wallMsMedian": {
+          "baseline": 10188,
+          "new": 3490
+        },
+        "maxRssKiB": {
+          "baseline": 196420,
+          "new": 194488
+        }
+      },
+      "G3": {
+        "baselineBuild": "2.4.0-rc.1+5d5acf0f7f18d7e6",
+        "newBuild": "2.5.0-rc.1+97836a16c30888f3",
+        "wallMsMedian": {
+          "baseline": 10851,
+          "new": 10008
+        },
+        "maxRssKiB": {
+          "baseline": 195316,
+          "new": 194960
+        }
+      },
+      "G4": {
+        "baselineBuild": "2.4.0-rc.1+5d5acf0f7f18d7e6",
+        "newBuild": "2.5.0-rc.1+97836a16c30888f3",
+        "wallMsMedian": {
+          "baseline": 1862,
+          "new": 1946
+        },
+        "maxRssKiB": {
+          "baseline": 188104,
+          "new": 194772
+        }
+      },
+      "G5": {
+        "baselineBuild": "2.4.0-rc.1+5d5acf0f7f18d7e6",
+        "newBuild": "2.5.0-rc.1+97836a16c30888f3",
+        "wallMsMedian": {
+          "baseline": 9610,
+          "new": 8375
+        },
+        "maxRssKiB": {
+          "baseline": 447336,
+          "new": 515888
+        }
+      },
+      "G6": {
+        "baselineBuild": "2.4.0-rc.1+5d5acf0f7f18d7e6",
+        "newBuild": "2.5.0-rc.1+97836a16c30888f3",
+        "wallMsMedian": {
+          "baseline": 4667,
+          "new": 3094
+        },
+        "maxRssKiB": {
+          "baseline": 447448,
+          "new": 600544
+        }
+      },
+      "G7": {
+        "baselineBuild": "2.4.0-rc.1+5d5acf0f7f18d7e6",
+        "newBuild": "2.5.0-rc.1+97836a16c30888f3",
+        "wallMsMedian": {
+          "baseline": 15487,
+          "new": 16159
+        },
+        "maxRssKiB": {
+          "baseline": 174460,
+          "new": 185868
+        }
+      },
+      "G8": {
+        "baselineBuild": "2.4.0-rc.1+5d5acf0f7f18d7e6",
+        "newBuild": "2.5.0-rc.1+97836a16c30888f3",
+        "wallMsMedian": {
+          "baseline": 2503,
+          "new": 3942
+        },
+        "maxRssKiB": {
+          "baseline": 186348,
+          "new": 193288
+        }
+      },
+      "G9": {
+        "baselineBuild": "2.4.0-rc.1+5d5acf0f7f18d7e6",
+        "newBuild": "2.5.0-rc.1+97836a16c30888f3",
+        "wallMsMedian": {
+          "baseline": 3902,
+          "new": 3947
+        },
+        "maxRssKiB": {
+          "baseline": 176028,
+          "new": 188976
+        }
+      }
+    }
+  },
+  "preflight": {
+    "ok": true,
+    "failed": []
+  },
+  "generatedAt": "2026-10-08T07:22:47.354Z"
+}

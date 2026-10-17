@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+<head>
+<!-- Synthetic recon fixture. Hosts are reserved .example/.test names; nothing here is real. -->
+<link rel="stylesheet" href="/static/site.css">
+<link rel="preconnect" href="https://cdn.vendor.example">
+<script src="/static/app.js?v=42"></script>
+<script src="https://cdn.vendor.example/lib/widget.min.js"></script>
+</head>
+<body>
+<a href="/account/settings?tab=billing#top">Settings</a>
+<a href="https://help.shop.example/articles/returns?ref=footer">Returns</a>
+<a href="mailto:support@shop.example">Mail</a>
+<a href="javascript:void(0)">noop</a>
+<img src="//images.shop.example/logo.png" alt="">
+<form action="/search" method="get"><input name="q"><select name="category"></select><button name="go">Go</button></form>
+<form action="https://shop.example/login?next=/cart" method="post"><input name="email"><input type="password" name="password"><textarea name="note"></textarea></form>
+<div style="background:url('/static/hero.webp')"></div>
+<script>
+  window.__CONFIG__={apiUrl:"https://api.shop.example/v1",graphqlEndpoint:"/graphql",region:"eu"};
+  fetch("/api/v1/cart?session=1").then(r=>r.json());
+</script>
+</body>
+</html>

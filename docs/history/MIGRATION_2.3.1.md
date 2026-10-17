@@ -1,0 +1,15 @@
+# Migration to 2.3.1-rc.1
+
+Close the prior application before launching the candidate from its extracted folder. Use the same existing operator-owned data directory or EXPOSURE_DATA_DIR setting. No operator projects, correlation keys, schedules, vault files or history were reset during development. The 2.3.0 source/Windows archives remain preserved.
+
+No workspace/vault schema change. Existing project configuration is accepted; maxRetries defaults to one and is constrained to 0–1. Request/page/duration budgets keep their existing controls; failed page attempts now consume the page budget. Browser navigation has an end-to-end deadline of up to max(8 seconds, four request-timeout intervals), capped by the remaining overall scan deadline, to include guarded local queue/engine analysis; individual guarded network attempts keep the request timeout. Fresh browser dependencies may repeat even during a focused retry. Offline response/code analysis is separate from browser delivery and settling; all work still stops at the scan deadline. Runtime snapshots retain immediate direct findings while their offline inspections finish. A shared engine failure marks every waiting inspection incomplete.
+
+Resource records add types, attempt identities, phase timings, analyzer states and valid-map state. Findings may include endpoint observations. Occurrence positions are optional: report consumers must omit a position when coordinates are unavailable. A metadata observation has no invented SARIF region. Old saved evidence is retained; empty legacy observation excerpts do not establish an exact source position or endpoint. Recapture the resource to obtain that evidence.
+
+Coverage groups now count unique URLs, with a separate runtime-page row. Image rows count source families; aggregatedSkips records rendition totals. Baseline probes and deployment checks are separate. HTTP body analysis, map validation and semantic completion are separate states. Timings measure local phases; they do not prove why a remote service timed out.
+
+Use Retry important gaps after a scan stops. Review the exact URLs and exclusions, then start with fresh budgets. Optional failed pages can be included deliberately. The plan cannot add origins, follow credential-bearing capability URLs, reuse old raw bodies or claim complete project coverage. Success exclusions apply to static acquisition; browser re-navigation must fetch a fresh public document and dependencies. Existing checkpoint resume remains a fresh guarded scan of seeds/frontier.
+
+Scans across this implementation change, changed scope/coverage or a focused retry are not absence-comparable. Removal from public content does not establish credential revocation. Retained private values remain masked except deliberate local reveal/copy/export or encrypted evidence saving.
+
+Windows x64 is the verified host. Linux, arm64 and different Windows application-control/browser policies require their own execution checks; file integrity is not execution verification.

@@ -1,0 +1,41 @@
+{
+  "projects": [
+    {
+      "name": "Company public website",
+      "urls": [
+        "https://www.example.com/"
+      ],
+      "relatedOrigins": [],
+      "privateOrigins": [],
+      "browser": true,
+      "deep": false,
+      "readOnlyPostEndpoints": [],
+      "requestsPerSecond": 2,
+      "concurrency": 2,
+      "globalConcurrency": 2,
+      "originConcurrency": 2,
+      "originRequestsPerSecond": 2,
+      "maxActiveOrigins": 4,
+      "maxBrowserOrigins": 2,
+      "maxDepth": 3,
+      "maxPages": 30,
+      "maxResources": 200,
+      "maxResourceBytes": 1048576,
+      "maxTotalBytes": 20971520,
+      "timeoutMs": 10000,
+      "maxDurationMs": 120000,
+      "originMaxDurationMs": 120000,
+      "projectMaxDurationMs": 120000,
+      "queryVariants": 3,
+      "browserPages": 5,
+      "browserSettleMs": 1000,
+      "maxMaps": 25,
+      "maxMapSources": 40,
+      "adjacentMaps": true,
+      "robotsPolicy": "respect",
+      "browserNavigationUrls": [],
+      "domainScope": "registrable-domain",
+      "maxAutoDiscoveredOrigins": 50
+    }
+  ]
+}

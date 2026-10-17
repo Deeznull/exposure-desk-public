@@ -1,0 +1,5669 @@
+{
+  "state": "incomplete",
+  "browser": {
+    "requested": true,
+    "launch": true,
+    "runtimePages": 5,
+    "isolation": "checked",
+    "isolationChecks": {
+      "freshProfile": true,
+      "denyProxy": true,
+      "resolverBlocked": true,
+      "minimalEnvironment": true,
+      "ownDebugPort": true,
+      "routesBeforeNavigation": true,
+      "sharedWorkerDisabled": true
+    },
+    "background": {
+      "count": 4,
+      "hosts": [
+        "accounts.google.com",
+        "www.google.com",
+        "update.googleapis.com"
+      ]
+    },
+    "pages": [
+      {
+        "url": "http://127.0.0.1:52180/",
+        "verdict": "partial",
+        "causes": [
+          "dom-not-ready",
+          "local-rate-limit",
+          "deadline",
+          "blocked-dependency",
+          "unrouted-dependency"
+        ],
+        "pendingAtDeadline": {
+          "localQueue": 2,
+          "network": 0
+        },
+        "blocked": {
+          "scope": 3,
+          "policy": 9,
+          "unrouted": 3,
+          "examples": [
+            "http://127.0.0.1:52180",
+            "http://127.0.0.1:52179",
+            "http://127.0.0.1:52181",
+            "https://accounts.google.com",
+            "https://android.clients.google.com"
+          ]
+        },
+        "commitMs": 1396,
+        "extendedMs": 100,
+        "settleMs": 6148
+      },
+      {
+        "url": "http://127.0.0.1:52180/child",
+        "verdict": "partial",
+        "causes": [
+          "deadline",
+          "unrouted-dependency"
+        ],
+        "pendingAtDeadline": {
+          "localQueue": 0,
+          "network": 0
+        },
+        "blocked": {
+          "scope": 0,
+          "policy": 0,
+          "unrouted": 3,
+          "examples": [
+            "https://accounts.google.com",
+            "https://android.clients.google.com"
+          ]
+        },
+        "commitMs": 708,
+        "domReadyMs": 722,
+        "settleMs": 4537
+      },
+      {
+        "url": "http://127.0.0.1:52180/fallback",
+        "verdict": "partial",
+        "causes": [
+          "unrouted-dependency"
+        ],
+        "pendingAtDeadline": {
+          "localQueue": 0,
+          "network": 0
+        },
+        "blocked": {
+          "scope": 0,
+          "policy": 0,
+          "unrouted": 2,
+          "examples": [
+            "https://accounts.google.com",
+            "https://android.clients.google.com"
+          ]
+        },
+        "commitMs": 367,
+        "domReadyMs": 378,
+        "settleMs": 1501
+      },
+      {
+        "url": "http://127.0.0.1:52180/frame",
+        "verdict": "partial",
+        "causes": [
+          "unrouted-dependency"
+        ],
+        "pendingAtDeadline": {
+          "localQueue": 0,
+          "network": 0
+        },
+        "blocked": {
+          "scope": 0,
+          "policy": 0,
+          "unrouted": 1,
+          "examples": [
+            "https://accounts.google.com"
+          ]
+        },
+        "commitMs": 362,
+        "domReadyMs": 373,
+        "settleMs": 1557
+      },
+      {
+        "url": "http://127.0.0.1:52180/about",
+        "verdict": "partial",
+        "causes": [
+          "unrouted-dependency"
+        ],
+        "pendingAtDeadline": {
+          "localQueue": 0,
+          "network": 0
+        },
+        "blocked": {
+          "scope": 0,
+          "policy": 0,
+          "unrouted": 2,
+          "examples": [
+            "https://accounts.google.com",
+            "https://android.clients.google.com"
+          ]
+        },
+        "commitMs": 350,
+        "domReadyMs": 359,
+        "settleMs": 1546
+      }
+    ],
+    "cleanup": "confirmed"
+  },
+  "accounting": {
+    "networkAttempts": 53,
+    "blockedEvents": 46,
+    "uniqueResources": 36,
+    "repeatedRequests": 17,
+    "downloadedBytes": 141676,
+    "retainedDecodedBytes": 76277,
+    "textAnalyzedBytes": 76277,
+    "intentionalSkips": 6,
+    "httpErrors": 3,
+    "networkFailures": 2,
+    "timeouts": 0,
+    "failedAttempts": 2,
+    "successfulResponses": 45,
+    "discoveredUrls": 34,
+    "reusedTextInspections": 111,
+    "runtimeCaptures": 19,
+    "reusedDiscoveries": 83,
+    "verifiedMirrors": 0,
+    "coverageGaps": 14
+  },
+  "resources": [
+    {
+      "url": "http://127.0.0.1:52180/robots.txt",
+      "attemptId": 1,
+      "timings": {
+        "preflightMs": 330,
+        "rateWaitMs": 0,
+        "queueMs": 0,
+        "dnsMs": 1,
+        "connectMs": 1,
+        "headersMs": 1,
+        "bodyMs": 0,
+        "totalMs": 333,
+        "analysisMs": 647,
+        "analyzedAt": 1791432509392,
+        "engineMs": 647
+      },
+      "status": "scanned",
+      "code": 200,
+      "bytes": 55,
+      "partial": false,
+      "chain": [],
+      "kind": "robots",
+      "analysis": "analyzed",
+      "requestHeaderNames": [
+        "accept",
+        "accept-encoding",
+        "accept-language",
+        "host",
+        "user-agent"
+      ],
+      "contentType": "text/plain",
+      "httpDisposition": "success",
+      "resourceType": "other",
+      "discoveryChains": [
+        []
+      ],
+      "contentHash": "64f2c094d3f11c05e000c40607e38e24502dc089c121449820019a7483c34ec7",
+      "textBytes": 55,
+      "analyzers": {
+        "directText": {
+          "status": "inspected"
+        },
+        "offlineEngine": {
+          "status": "inspected",
+          "reused": false
+        }
+      }
+    },
+    {
+      "url": "http://127.0.0.1:52180/sitemap.xml",
+      "attemptId": 2,
+      "timings": {
+        "preflightMs": 340,
+        "rateWaitMs": 48,
+        "queueMs": 48,
+        "dnsMs": 0,
+        "connectMs": 1,
+        "headersMs": 0,
+        "bodyMs": 0,
+        "totalMs": 389,
+        "analysisMs": 651,
+        "analyzedAt": 1791432509452,
+        "engineMs": 650
+      },
+      "status": "scanned",
+      "code": 200,
+      "bytes": 97,
+      "partial": false,
+      "chain": [],
+      "kind": "sitemap",
+      "analysis": "analyzed",
+      "requestHeaderNames": [
+        "accept",
+        "accept-encoding",
+        "accept-language",
+        "host",
+        "user-agent"
+      ],
+      "contentType": "application/xml",
+      "httpDisposition": "success",
+      "resourceType": "sitemap",
+      "discoveryChains": [
+        [],
+        [
+          "http://127.0.0.1:52180/robots.txt"
+        ]
+      ],
+      "contentHash": "58564a5aed05d828b5b721d9dd397295076f7a9f303b20cd813accce575c6d6b",
+      "textBytes": 97,
+      "analyzers": {
+        "directText": {
+          "status": "inspected"
+        },
+        "offlineEngine": {
+          "status": "inspected",
+          "reused": false
+        }
+      }
+    },
+    {
+      "url": "http://127.0.0.1:52180/",
+      "attemptId": 3,
+      "timings": {
+        "preflightMs": 310,
+        "rateWaitMs": 0,
+        "queueMs": 0,
+        "dnsMs": 0,
+        "connectMs": 1,
+        "headersMs": 1,
+        "bodyMs": 0,
+        "totalMs": 312,
+        "analysisMs": 607,
+        "analyzedAt": 1791432510312,
+        "engineMs": 604
+      },
+      "status": "scanned",
+      "code": 200,
+      "bytes": 1021,
+      "partial": false,
+      "chain": [],
+      "kind": "page",
+      "analysis": "analyzed",
+      "requestHeaderNames": [
+        "accept",
+        "accept-encoding",
+        "accept-language",
+        "host",
+        "user-agent"
+      ],
+      "contentType": "text/html",
+      "httpDisposition": "success",
+      "resourceType": "page",
+      "discoveryChains": [
+        []
+      ],
+      "contentHash": "7bb37bcfb2931f2d4df53038e80384b72b3fb07e9f4684cfdaf552890b6f93cd",
+      "textBytes": 1021,
+      "analyzers": {
+        "directText": {
+          "status": "inspected"
+        },
+        "offlineEngine": {
+          "status": "inspected",
+          "reused": false
+        }
+      }
+    },
+    {
+      "url": "http://127.0.0.1:52179/outside.js",
+      "status": "blocked",
+      "analysis": "skipped",
+      "reason": "scope",
+      "bytes": 0,
+      "chain": [
+        "http://127.0.0.1:52180/",
+        "document/base URL"
+      ],
+      "kind": "script",
+      "resourceType": "javascript"
+    },
+    {
+      "url": "http://127.0.0.1:52181/",
+      "status": "blocked",
+      "analysis": "skipped",
+      "reason": "scope",
+      "bytes": 0,
+      "chain": [
+        "http://127.0.0.1:52180/",
+        "static bundle literal"
+      ],
+      "kind": "asset-hint",
+      "resourceType": "other"
+    },
+    {
+      "url": "http://127.0.0.1:52180/manifest.webmanifest",
+      "attemptId": 4,
+      "timings": {
+        "preflightMs": 442,
+        "rateWaitMs": 0,
+        "queueMs": 0,
+        "dnsMs": 0,
+        "connectMs": 1,
+        "headersMs": 1,
+        "bodyMs": 0,
+        "totalMs": 444,
+        "analysisMs": 783,
+        "analyzedAt": 1791432511545,
+        "engineMs": 782
+      },
+      "status": "scanned",
+      "code": 200,
+      "bytes": 50,
+      "partial": false,
+      "chain": [
+        "http://127.0.0.1:52180/",
+        "document/base URL"
+      ],
+      "kind": "manifest",
+      "analysis": "analyzed",
+      "requestHeaderNames": [
+        "accept",
+        "accept-encoding",
+        "accept-language",
+        "host",
+        "user-agent"
+      ],
+      "contentType": "application/manifest+json",
+      "httpDisposition": "success",
+      "resourceType": "configuration",
+      "discoveryChains": [
+        [
+          "http://127.0.0.1:52180/",
+          "document/base URL"
+        ],
+        [
+          "http://127.0.0.1:52180/",
+          "rendered page",
+          "http://127.0.0.1:52180/",
+          "document/base URL"
+        ]
+      ],
+      "contentHash": "2caccdeef887d3896a1469b370ab221b8567cc2b0a92671f6ea2b4f5e8e73e3e",
+      "textBytes": 50,
+      "analyzers": {
+        "directText": {
+          "status": "inspected"
+        },
+        "offlineEngine": {
+          "status": "inspected",
+          "reused": false
+        }
+      },
+      "certainty": "confirmed"
+    },
+    {
+      "url": "http://127.0.0.1:52180/app.min.js",
+      "attemptId": 5,
+      "timings": {
+        "preflightMs": 463,
+        "rateWaitMs": 29,
+        "queueMs": 29,
+        "dnsMs": 0,
+        "connectMs": 1,
+        "headersMs": 1,
+        "bodyMs": 0,
+        "totalMs": 494,
+        "analysisMs": 1143,
+        "analyzedAt": 1791432511955,
+        "engineMs": 1138
+      },
+      "status": "scanned",
+      "code": 200,
+      "bytes": 1658,
+      "partial": false,
+      "chain": [
+        "http://127.0.0.1:52180/",
+        "document/base URL"
+      ],
+      "kind": "script",
+      "analysis": "analyzed",
+      "requestHeaderNames": [
+        "accept",
+        "accept-encoding",
+        "accept-language",
+        "host",
+        "user-agent"
+      ],
+      "contentType": "text/javascript",
+      "httpDisposition": "success",
+      "resourceType": "javascript",
+      "discoveryChains": [
+        [
+          "http://127.0.0.1:52180/",
+          "document/base URL"
+        ],
+        [
+          "http://127.0.0.1:52180/",
+          "rendered page",
+          "http://127.0.0.1:52180/",
+          "document/base URL"
+        ]
+      ],
+      "contentHash": "f20708291173991fddd87b9cc0421998fe77216569d130a925149c0ccf1cf551",
+      "textBytes": 1658,
+      "analyzers": {
+        "directText": {
+          "status": "inspected"
+        },
+        "offlineEngine": {
+          "status": "inspected",
+          "reused": false
+        },
+        "semantic": {
+          "status": "inspected"
+        }
+      },
+      "certainty": "confirmed"
+    },
+    {
+      "url": "http://127.0.0.1:52180/inline.js",
+      "attemptId": 6,
+      "timings": {
+        "preflightMs": 353,
+        "rateWaitMs": 0,
+        "queueMs": 0,
+        "dnsMs": 0,
+        "connectMs": 1,
+        "headersMs": 1,
+        "bodyMs": 0,
+        "totalMs": 355,
+        "analysisMs": 1013,
+        "analyzedAt": 1791432512914,
+        "engineMs": 1011
+      },
+      "status": "scanned",
+      "code": 200,
+      "bytes": 337,
+      "partial": false,
+      "chain": [
+        "http://127.0.0.1:52180/",
+        "document/base URL"
+      ],
+      "kind": "script",
+      "analysis": "analyzed",
+      "requestHeaderNames": [
+        "accept",
+        "accept-encoding",
+        "accept-language",
+        "host",
+        "user-agent"
+      ],
+      "contentType": "text/javascript",
+      "httpDisposition": "success",
+      "resourceType": "javascript",
+      "discoveryChains": [
+        [
+          "http://127.0.0.1:52180/",
+          "document/base URL"
+        ],
+        [
+          "http://127.0.0.1:52180/",
+          "rendered page",
+          "http://127.0.0.1:52180/",
+          "document/base URL"
+        ]
+      ],
+      "contentHash": "72ff60afc356a4b8a6931fe256dc4cb14b08f496170fd96a1c71d6db7e428dd4",
+      "textBytes": 337,
+      "analyzers": {
+        "directText": {
+          "status": "inspected"
+        },
+        "offlineEngine": {
+          "status": "inspected",
+          "reused": false
+        },
+        "semantic": {
+          "status": "inspected"
+        },
+        "sourceMap": {
+          "status": "inspected"
+        }
+      },
+      "certainty": "confirmed",
+      "sourceMap": {
+        "valid": true
+      }
+    },
+    {
+      "url": "http://127.0.0.1:52180/conventional.js",
+      "attemptId": 8,
+      "timings": {
+        "preflightMs": 332,
+        "rateWaitMs": 0,
+        "queueMs": 0,
+        "dnsMs": 0,
+        "connectMs": 1,
+        "headersMs": 9,
+        "bodyMs": 0,
+        "totalMs": 342,
+        "analysisMs": 1342,
+        "analyzedAt": 1791432513642,
+        "engineMs": 663
+      },
+      "status": "scanned",
+      "code": 200,
+      "bytes": 10,
+      "partial": false,
+      "chain": [
+        "http://127.0.0.1:52180/",
+        "document/base URL"
+      ],
+      "kind": "script",
+      "analysis": "analyzed",
+      "requestHeaderNames": [
+        "accept",
+        "accept-encoding",
+        "accept-language",
+        "host",
+        "user-agent"
+      ],
+      "contentType": "text/javascript",
+      "httpDisposition": "success",
+      "resourceType": "javascript",
+      "discoveryChains": [
+        [
+          "http://127.0.0.1:52180/",
+          "document/base URL"
+        ],
+        [
+          "http://127.0.0.1:52180/",
+          "rendered page",
+          "http://127.0.0.1:52180/",
+          "document/base URL"
+        ]
+      ],
+      "contentHash": "e92611ecbb9ec4c98576b8e12896f9422bbef9713c284039789653e1d417caa4",
+      "textBytes": 10,
+      "analyzers": {
+        "directText": {
+          "status": "inspected"
+        },
+        "offlineEngine": {
+          "status": "inspected",
+          "reused": false
+        },
+        "semantic": {
+          "status": "inspected"
+        }
+      },
+      "certainty": "confirmed"
+    },
+    {
+      "url": "http://127.0.0.1:52180/",
+      "attemptId": 7,
+      "timings": {
+        "preflightMs": 1374,
+        "rateWaitMs": 0,
+        "queueMs": 0,
+        "dnsMs": 0,
+        "connectMs": 9,
+        "headersMs": 0,
+        "bodyMs": 0,
+        "totalMs": 1383,
+        "analysisMs": 11207,
+        "analyzedAt": 1791432524195,
+        "engineMs": 329
+      },
+      "status": "scanned",
+      "code": 200,
+      "bytes": 1021,
+      "partial": false,
+      "chain": [
+        "about:blank",
+        "observed browser request"
+      ],
+      "kind": "browser",
+      "analysis": "analyzed",
+      "requestHeaderNames": [
+        "accept",
+        "accept-encoding",
+        "accept-language",
+        "host",
+        "user-agent"
+      ],
+      "contentType": "text/html",
+      "httpDisposition": "success",
+      "resourceType": "page",
+      "discoveryChains": [
+        []
+      ],
+      "provenance": {
+        "channel": "guarded-route",
+        "attribution": "page",
+        "resourceType": "document",
+        "source": "about:blank",
+        "targetOrigin": true,
+        "evidenceSource": "frame-tree",
+        "evidence": "Playwright request routed through guarded Node transport; frame tree position and resource type recorded. Missing initiator remains unknown."
+      },
+      "contentHash": "7bb37bcfb2931f2d4df53038e80384b72b3fb07e9f4684cfdaf552890b6f93cd",
+      "textBytes": 1021,
+      "analyzers": {
+        "directText": {
+          "status": "inspected"
+        },
+        "offlineEngine": {
+          "status": "inspected",
+          "reused": true
+        }
+      }
+    },
+    {
+      "url": "http://127.0.0.1:52180/#debugger-6A601D1DEAAADFBD74A956484DAEBBDC-16",
+      "kind": "runtime-capture",
+      "resourceType": "runtime-capture",
+      "bytes": 10428,
+      "status": "downloaded",
+      "analysis": "analyzed",
+      "chain": [
+        "http://127.0.0.1:52180/",
+        "Debugger loaded script"
+      ],
+      "contentHash": "1b5c31c526a4baf61cffdaf0751b74e08509263ebd7e13e7056f305170014331",
+      "analyzers": {
+        "debugger": {
+          "status": "inspected",
+          "reused": false,
+          "contentHash": "1b5c31c526a4baf61cffdaf0751b74e08509263ebd7e13e7056f305170014331"
+        },
+        "directText": {
+          "status": "inspected"
+        },
+        "semantic": {
+          "status": "inspected"
+        }
+      },
+      "discoveryCount": 12,
+      "examples": [
+        "http://127.0.0.1:52180/",
+        "http://127.0.0.1:52180/child",
+        "http://127.0.0.1:52180/fallback",
+        "http://127.0.0.1:52180/frame",
+        "http://127.0.0.1:52180/about"
+      ]
+    },
+    {
+      "url": "http://127.0.0.1:52180/#debugger-6A601D1DEAAADFBD74A956484DAEBBDC-17",
+      "kind": "runtime-capture",
+      "resourceType": "runtime-capture",
+      "bytes": 116,
+      "status": "downloaded",
+      "analysis": "analyzed",
+      "chain": [
+        "http://127.0.0.1:52180/",
+        "Debugger loaded script"
+      ],
+      "contentHash": "ceb74286d43fc194ff50d1f86945a29e8926db77c473259a98c48a10ff62d7d7",
+      "analyzers": {
+        "debugger": {
+          "status": "inspected",
+          "reused": false,
+          "contentHash": "ceb74286d43fc194ff50d1f86945a29e8926db77c473259a98c48a10ff62d7d7"
+        },
+        "directText": {
+          "status": "inspected"
+        },
+        "semantic": {
+          "status": "inspected"
+        }
+      },
+      "discoveryCount": 6,
+      "examples": [
+        "http://127.0.0.1:52180/child",
+        "http://127.0.0.1:52180/fallback",
+        "http://127.0.0.1:52180/frame",
+        "http://127.0.0.1:52180/about"
+      ]
+    },
+    {
+      "url": "http://127.0.0.1:52180/#debugger-6A601D1DEAAADFBD74A956484DAEBBDC-18",
+      "kind": "runtime-capture",
+      "resourceType": "runtime-capture",
+      "bytes": 174,
+      "status": "downloaded",
+      "analysis": "analyzed",
+      "chain": [
+        "http://127.0.0.1:52180/",
+        "Debugger loaded script"
+      ],
+      "contentHash": "9e22374178d30310bf36b9ad25aeb7e094195c70fae675a5d8e48cad46b77308",
+      "analyzers": {
+        "debugger": {
+          "status": "inspected",
+          "reused": false,
+          "contentHash": "9e22374178d30310bf36b9ad25aeb7e094195c70fae675a5d8e48cad46b77308"
+        },
+        "directText": {
+          "status": "inspected"
+        },
+        "semantic": {
+          "status": "inspected"
+        }
+      },
+      "discoveryCount": 6,
+      "examples": [
+        "http://127.0.0.1:52180/child",
+        "http://127.0.0.1:52180/fallback",
+        "http://127.0.0.1:52180/frame",
+        "http://127.0.0.1:52180/about"
+      ]
+    },
+    {
+      "url": "http://127.0.0.1:52180/#debugger-6A601D1DEAAADFBD74A956484DAEBBDC-21",
+      "kind": "runtime-capture",
+      "resourceType": "runtime-capture",
+      "bytes": 11285,
+      "status": "downloaded",
+      "analysis": "analyzed",
+      "chain": [
+        "http://127.0.0.1:52180/",
+        "Debugger loaded script"
+      ],
+      "contentHash": "8995b66c740cc1e3f79f0317ef1c6526d98322093224c49807a665807e4f9490",
+      "analyzers": {
+        "debugger": {
+          "status": "inspected",
+          "reused": false,
+          "contentHash": "8995b66c740cc1e3f79f0317ef1c6526d98322093224c49807a665807e4f9490"
+        },
+        "directText": {
+          "status": "inspected"
+        },
+        "semantic": {
+          "status": "inspected"
+        }
+      },
+      "discoveryCount": 6,
+      "examples": [
+        "http://127.0.0.1:52180/child",
+        "http://127.0.0.1:52180/fallback",
+        "http://127.0.0.1:52180/frame",
+        "http://127.0.0.1:52180/about"
+      ]
+    },
+    {
+      "url": "http://127.0.0.1:52180/header-map.js",
+      "attemptId": 15,
+      "timings": {
+        "preflightMs": 330,
+        "rateWaitMs": 0,
+        "queueMs": 0,
+        "dnsMs": 0,
+        "connectMs": 10,
+        "headersMs": 1,
+        "bodyMs": 0,
+        "totalMs": 341,
+        "analysisMs": 1740,
+        "analyzedAt": 1791432515724,
+        "engineMs": 671
+      },
+      "status": "scanned",
+      "code": 200,
+      "bytes": 10,
+      "partial": false,
+      "chain": [
+        "http://127.0.0.1:52180/",
+        "document/base URL"
+      ],
+      "kind": "script",
+      "analysis": "analyzed",
+      "requestHeaderNames": [
+        "accept",
+        "accept-encoding",
+        "accept-language",
+        "host",
+        "user-agent"
+      ],
+      "contentType": "text/javascript",
+      "httpDisposition": "success",
+      "resourceType": "javascript",
+      "discoveryChains": [
+        [
+          "http://127.0.0.1:52180/",
+          "document/base URL"
+        ],
+        [
+          "http://127.0.0.1:52180/",
+          "rendered page",
+          "http://127.0.0.1:52180/",
+          "document/base URL"
+        ]
+      ],
+      "contentHash": "5c8c72cad540d513ab690c03cf6eea84eb1d565adddfd7344a07ceb847d163e5",
+      "textBytes": 10,
+      "analyzers": {
+        "directText": {
+          "status": "inspected"
+        },
+        "offlineEngine": {
+          "status": "inspected",
+          "reused": false
+        },
+        "semantic": {
+          "status": "inspected"
+        }
+      },
+      "certainty": "confirmed"
+    },
+    {
+      "url": "http://127.0.0.1:52180/#debugger-6A601D1DEAAADFBD74A956484DAEBBDC-22",
+      "kind": "runtime-capture",
+      "resourceType": "runtime-capture",
+      "bytes": 5043,
+      "status": "downloaded",
+      "analysis": "analyzed",
+      "chain": [
+        "http://127.0.0.1:52180/",
+        "Debugger loaded script"
+      ],
+      "contentHash": "84537f83db1b0899e63543de44c2992ca51f74d13375fba4a352963c6e5ed862",
+      "analyzers": {
+        "debugger": {
+          "status": "inspected",
+          "reused": false,
+          "contentHash": "84537f83db1b0899e63543de44c2992ca51f74d13375fba4a352963c6e5ed862"
+        },
+        "directText": {
+          "status": "inspected"
+        },
+        "semantic": {
+          "status": "inspected"
+        }
+      },
+      "discoveryCount": 5,
+      "examples": [
+        "http://127.0.0.1:52180/child",
+        "http://127.0.0.1:52180/fallback",
+        "http://127.0.0.1:52180/frame",
+        "http://127.0.0.1:52180/about"
+      ]
+    },
+    {
+      "url": "http://127.0.0.1:52180/lazy.js",
+      "attemptId": 16,
+      "timings": {
+        "preflightMs": 341,
+        "rateWaitMs": 1,
+        "queueMs": 1,
+        "dnsMs": 0,
+        "connectMs": 0,
+        "headersMs": 1,
+        "bodyMs": 0,
+        "totalMs": 343,
+        "analysisMs": 999,
+        "analyzedAt": 1791432515257,
+        "engineMs": 997
+      },
+      "status": "scanned",
+      "code": 200,
+      "bytes": 311,
+      "partial": false,
+      "chain": [
+        "http://127.0.0.1:52180/",
+        "document/base URL",
+        "http://127.0.0.1:52180/app.min.js",
+        "importing module"
+      ],
+      "kind": "module",
+      "analysis": "analyzed",
+      "requestHeaderNames": [
+        "accept",
+        "accept-encoding",
+        "accept-language",
+        "host",
+        "user-agent"
+      ],
+      "contentType": "text/javascript",
+      "httpDisposition": "success",
+      "resourceType": "javascript",
+      "discoveryChains": [
+        [
+          "http://127.0.0.1:52180/",
+          "document/base URL",
+          "http://127.0.0.1:52180/app.min.js",
+          "importing module"
+        ]
+      ],
+      "contentHash": "86cacaab113e359510d29acc2a6b64724150bc5428594d72a39ba5b10438feef",
+      "textBytes": 311,
+      "analyzers": {
+        "directText": {
+          "status": "inspected"
+        },
+        "offlineEngine": {
+          "status": "inspected",
+          "reused": false
+        },
+        "semantic": {
+          "status": "inspected"
+        }
+      },
+      "certainty": "confirmed"
+    },
+    {
+      "url": "http://127.0.0.1:52180/worker.js",
+      "attemptId": 17,
+      "timings": {
+        "preflightMs": 327,
+        "rateWaitMs": 0,
+        "queueMs": 0,
+        "dnsMs": 0,
+        "connectMs": 2,
+        "headersMs": 0,
+        "bodyMs": 0,
+        "totalMs": 329,
+        "analysisMs": 990,
+        "analyzedAt": 1791432516577,
+        "engineMs": 988
+      },
+      "status": "scanned",
+      "code": 200,
+      "bytes": 172,
+      "partial": false,
+      "chain": [
+        "http://127.0.0.1:52180/",
+        "document/base URL",
+        "http://127.0.0.1:52180/app.min.js",
+        "worker document base"
+      ],
+      "kind": "asset",
+      "analysis": "analyzed",
+      "requestHeaderNames": [
+        "accept",
+        "accept-encoding",
+        "accept-language",
+        "host",
+        "user-agent"
+      ],
+      "contentType": "text/javascript",
+      "httpDisposition": "success",
+      "resourceType": "javascript",
+      "discoveryChains": [
+        [
+          "http://127.0.0.1:52180/",
+          "document/base URL",
+          "http://127.0.0.1:52180/app.min.js",
+          "worker document base"
+        ]
+      ],
+      "contentHash": "e82ba0d0b78918df6f3de44769b067da27de505b7da746b1e0e8b23bb433e4f6",
+      "textBytes": 172,
+      "analyzers": {
+        "directText": {
+          "status": "inspected"
+        },
+        "offlineEngine": {
+          "status": "inspected",
+          "reused": false
+        },
+        "semantic": {
+          "status": "inspected"
+        }
+      },
+      "certainty": "confirmed"
+    },
+    {
+      "url": "http://127.0.0.1:52180/sw.js",
+      "attemptId": 18,
+      "timings": {
+        "preflightMs": 326,
+        "rateWaitMs": 0,
+        "queueMs": 0,
+        "dnsMs": 0,
+        "connectMs": 1,
+        "headersMs": 0,
+        "bodyMs": 0,
+        "totalMs": 328,
+        "analysisMs": 667,
+        "analyzedAt": 1791432516720,
+        "engineMs": 666
+      },
+      "status": "scanned",
+      "code": 200,
+      "bytes": 65,
+      "partial": false,
+      "chain": [
+        "http://127.0.0.1:52180/",
+        "document/base URL",
+        "http://127.0.0.1:52180/app.min.js",
+        "service worker registration"
+      ],
+      "kind": "asset",
+      "analysis": "analyzed",
+      "requestHeaderNames": [
+        "accept",
+        "accept-encoding",
+        "accept-language",
+        "host",
+        "user-agent"
+      ],
+      "contentType": "text/javascript",
+      "httpDisposition": "success",
+      "resourceType": "javascript",
+      "discoveryChains": [
+        [
+          "http://127.0.0.1:52180/",
+          "document/base URL",
+          "http://127.0.0.1:52180/app.min.js",
+          "service worker registration"
+        ]
+      ],
+      "contentHash": "712892760245d480362468ae05024b4167cd2d289ce42244be1b9f2c001de75e",
+      "textBytes": 65,
+      "analyzers": {
+        "directText": {
+          "status": "inspected"
+        },
+        "offlineEngine": {
+          "status": "inspected",
+          "reused": false
+        },
+        "semantic": {
+          "status": "inspected"
+        }
+      },
+      "certainty": "confirmed"
+    },
+    {
+      "url": "http://127.0.0.1:52180/app.min.js.map",
+      "attemptId": 19,
+      "timings": {
+        "preflightMs": 337,
+        "rateWaitMs": 0,
+        "queueMs": 0,
+        "dnsMs": 0,
+        "connectMs": 8,
+        "headersMs": 1,
+        "bodyMs": 0,
+        "totalMs": 346,
+        "analysisMs": 9193,
+        "analyzedAt": 1791432526118,
+        "engineMs": 1015
+      },
+      "status": "scanned",
+      "code": 200,
+      "bytes": 417,
+      "partial": false,
+      "chain": [
+        "http://127.0.0.1:52180/",
+        "document/base URL",
+        "http://127.0.0.1:52180/app.min.js",
+        "source-map comment"
+      ],
+      "kind": "map",
+      "analysis": "analyzed",
+      "requestHeaderNames": [
+        "accept",
+        "accept-encoding",
+        "accept-language",
+        "host",
+        "user-agent"
+      ],
+      "contentType": "application/json",
+      "httpDisposition": "success",
+      "resourceType": "source-map",
+      "discoveryChains": [
+        [
+          "http://127.0.0.1:52180/",
+          "document/base URL",
+          "http://127.0.0.1:52180/app.min.js",
+          "source-map comment"
+        ],
+        [
+          "http://127.0.0.1:52180/",
+          "document/base URL",
+          "http://127.0.0.1:52180/app.min.js"
+        ],
+        [
+          "http://127.0.0.1:52180/",
+          "Debugger loaded script",
+          "http://127.0.0.1:52180/app.min.js"
+        ],
+        [
+          "http://127.0.0.1:52180/",
+          "observed browser request",
+          "http://127.0.0.1:52180/app.min.js"
+        ]
+      ],
+      "contentHash": "08073b6a6aab72c659e59719227bd12b0fa7c0e4e50ed0aaad068740d3a1f4d3",
+      "textBytes": 417,
+      "analyzers": {
+        "directText": {
+          "status": "inspected"
+        },
+        "offlineEngine": {
+          "status": "inspected",
+          "reused": false
+        },
+        "sourceMap": {
+          "status": "inspected"
+        }
+      },
+      "certainty": "confirmed",
+      "sourceMap": {
+        "valid": true
+      }
+    },
+    {
+      "url": "http://127.0.0.1:52180/conventional.js.map",
+      "attemptId": 20,
+      "timings": {
+        "preflightMs": 326,
+        "rateWaitMs": 0,
+        "queueMs": 0,
+        "dnsMs": 0,
+        "connectMs": 1,
+        "headersMs": 1,
+        "bodyMs": 0,
+        "totalMs": 328,
+        "analysisMs": 998,
+        "analyzedAt": 1791432518047,
+        "engineMs": 997
+      },
+      "status": "scanned",
+      "code": 200,
+      "bytes": 208,
+      "partial": false,
+      "chain": [
+        "http://127.0.0.1:52180/",
+        "document/base URL",
+        "http://127.0.0.1:52180/conventional.js"
+      ],
+      "kind": "map-guess",
+      "analysis": "analyzed",
+      "requestHeaderNames": [
+        "accept",
+        "accept-encoding",
+        "accept-language",
+        "host",
+        "user-agent"
+      ],
+      "contentType": "application/json",
+      "httpDisposition": "success",
+      "resourceType": "source-map",
+      "discoveryChains": [
+        [
+          "http://127.0.0.1:52180/",
+          "document/base URL",
+          "http://127.0.0.1:52180/conventional.js"
+        ],
+        [
+          "http://127.0.0.1:52180/",
+          "Debugger loaded script",
+          "http://127.0.0.1:52180/conventional.js"
+        ],
+        [
+          "http://127.0.0.1:52180/",
+          "observed browser request",
+          "http://127.0.0.1:52180/conventional.js"
+        ]
+      ],
+      "contentHash": "712521ef3f02df2c59e47d3a198de1b65dfd87249a3f8f56d09a19246dbe26e4",
+      "textBytes": 208,
+      "analyzers": {
+        "directText": {
+          "status": "inspected"
+        },
+        "offlineEngine": {
+          "status": "inspected",
+          "reused": false
+        },
+        "sourceMap": {
+          "status": "inspected"
+        }
+      },
+      "sourceMap": {
+        "valid": true
+      }
+    },
+    {
+      "url": "http://127.0.0.1:52180/site.css",
+      "attemptId": 9,
+      "timings": {
+        "preflightMs": 4926,
+        "rateWaitMs": 1,
+        "queueMs": 1,
+        "dnsMs": 0,
+        "connectMs": 1,
+        "headersMs": 0,
+        "bodyMs": 0,
+        "totalMs": 4928,
+        "analysisMs": 662,
+        "analyzedAt": 1791432518595,
+        "engineMs": 660
+      },
+      "status": "scanned",
+      "code": 200,
+      "bytes": 92,
+      "partial": false,
+      "chain": [
+        "http://127.0.0.1:52180/",
+        "observed browser request"
+      ],
+      "kind": "browser",
+      "analysis": "analyzed",
+      "requestHeaderNames": [
+        "accept",
+        "accept-encoding",
+        "accept-language",
+        "host",
+        "referer",
+        "user-agent"
+      ],
+      "contentType": "text/css",
+      "httpDisposition": "success",
+      "resourceType": "other",
+      "discoveryChains": [
+        [
+          "http://127.0.0.1:52180/",
+          "document/base URL"
+        ],
+        [
+          "http://127.0.0.1:52180/",
+          "rendered page",
+          "http://127.0.0.1:52180/",
+          "document/base URL"
+        ]
+      ],
+      "provenance": {
+        "channel": "guarded-route",
+        "attribution": "page",
+        "resourceType": "stylesheet",
+        "source": "http://127.0.0.1:52180/",
+        "targetOrigin": true,
+        "evidenceSource": "frame-tree",
+        "evidence": "Playwright request routed through guarded Node transport; frame tree position and resource type recorded. Missing initiator remains unknown."
+      },
+      "contentHash": "d9fe64c4b43d4ad106de0997da9bd53b5865e1793a3b1437143446d56ec46de0",
+      "textBytes": 92,
+      "analyzers": {
+        "directText": {
+          "status": "inspected"
+        },
+        "offlineEngine": {
+          "status": "inspected",
+          "reused": false
+        }
+      }
+    },
+    {
+      "url": "http://127.0.0.1:52180/#debugger-6A601D1DEAAADFBD74A956484DAEBBDC-23",
+      "kind": "runtime-capture",
+      "resourceType": "runtime-capture",
+      "bytes": 78,
+      "status": "downloaded",
+      "analysis": "analyzed",
+      "chain": [
+        "http://127.0.0.1:52180/",
+        "Debugger loaded script"
+      ],
+      "contentHash": "c268b986218df9493cb70260a899bb2d62d7c22dac5a77db17983e32f1564d8a",
+      "analyzers": {
+        "debugger": {
+          "status": "inspected",
+          "reused": false,
+          "contentHash": "c268b986218df9493cb70260a899bb2d62d7c22dac5a77db17983e32f1564d8a"
+        },
+        "directText": {
+          "status": "inspected"
+        },
+        "semantic": {
+          "status": "inspected",
+          "reason": "Shares http://127.0.0.1:52180/#inline-0",
+          "reused": true
+        }
+      }
+    },
+    {
+      "url": "http://127.0.0.1:52180/inline.js.map",
+      "attemptId": 21,
+      "timings": {
+        "preflightMs": 332,
+        "rateWaitMs": 0,
+        "queueMs": 0,
+        "dnsMs": 0,
+        "connectMs": 1,
+        "headersMs": 0,
+        "bodyMs": 0,
+        "totalMs": 333,
+        "analysisMs": 670,
+        "analyzedAt": 1791432519383,
+        "engineMs": 669
+      },
+      "status": "skipped",
+      "code": 200,
+      "bytes": 47,
+      "partial": false,
+      "chain": [
+        "http://127.0.0.1:52180/",
+        "document/base URL",
+        "http://127.0.0.1:52180/inline.js",
+        "inline source map",
+        "sourcesContent",
+        "webpack://fixture/src/hf.ts",
+        "http://127.0.0.1:52180/inline.js"
+      ],
+      "kind": "map-guess",
+      "analysis": "analyzed",
+      "requestHeaderNames": [
+        "accept",
+        "accept-encoding",
+        "accept-language",
+        "host",
+        "user-agent"
+      ],
+      "contentType": "text/plain",
+      "httpDisposition": "success",
+      "resourceType": "source-map",
+      "discoveryChains": [
+        [
+          "http://127.0.0.1:52180/",
+          "document/base URL",
+          "http://127.0.0.1:52180/inline.js",
+          "inline source map",
+          "sourcesContent",
+          "webpack://fixture/src/hf.ts",
+          "http://127.0.0.1:52180/inline.js"
+        ],
+        [
+          "http://127.0.0.1:52180/",
+          "document/base URL",
+          "http://127.0.0.1:52180/inline.js"
+        ],
+        [
+          "http://127.0.0.1:52180/",
+          "Debugger loaded script",
+          "http://127.0.0.1:52180/inline.js"
+        ],
+        [
+          "http://127.0.0.1:52180/",
+          "observed browser request",
+          "http://127.0.0.1:52180/inline.js"
+        ]
+      ],
+      "contentHash": "a9dca0b5cc5486328280b0f3ef2727eb7921296c02ccb8e3597dedab85b1cc9c",
+      "textBytes": 47,
+      "analyzers": {
+        "directText": {
+          "status": "inspected"
+        },
+        "offlineEngine": {
+          "status": "inspected",
+          "reused": false
+        }
+      },
+      "reason": "optional-map-not-present"
+    },
+    {
+      "url": "http://127.0.0.1:52180/app.min.js",
+      "attemptId": 10,
+      "timings": {
+        "preflightMs": 5919,
+        "rateWaitMs": 0,
+        "queueMs": 0,
+        "dnsMs": 0,
+        "connectMs": 1,
+        "headersMs": 0,
+        "bodyMs": 0,
+        "totalMs": 5920,
+        "analysisMs": 344,
+        "analyzedAt": 1791432519271,
+        "engineMs": 343
+      },
+      "status": "scanned",
+      "code": 200,
+      "bytes": 1658,
+      "partial": false,
+      "chain": [
+        "http://127.0.0.1:52180/",
+        "observed browser request"
+      ],
+      "kind": "browser",
+      "analysis": "analyzed",
+      "requestHeaderNames": [
+        "accept",
+        "accept-encoding",
+        "accept-language",
+        "host",
+        "referer",
+        "user-agent"
+      ],
+      "contentType": "text/javascript",
+      "httpDisposition": "success",
+      "resourceType": "javascript",
+      "discoveryChains": [
+        [
+          "http://127.0.0.1:52180/",
+          "document/base URL"
+        ],
+        [
+          "http://127.0.0.1:52180/",
+          "rendered page",
+          "http://127.0.0.1:52180/",
+          "document/base URL"
+        ]
+      ],
+      "analyzers": {
+        "semantic": {
+          "status": "inspected"
+        },
+        "directText": {
+          "status": "inspected"
+        },
+        "offlineEngine": {
+          "status": "inspected",
+          "reused": true
+        }
+      },
+      "provenance": {
+        "channel": "guarded-route",
+        "attribution": "page",
+        "resourceType": "script",
+        "source": "http://127.0.0.1:52180/",
+        "targetOrigin": true,
+        "evidenceSource": "frame-tree",
+        "evidence": "Playwright request routed through guarded Node transport; frame tree position and resource type recorded. Missing initiator remains unknown."
+      },
+      "contentHash": "f20708291173991fddd87b9cc0421998fe77216569d130a925149c0ccf1cf551",
+      "textBytes": 1658
+    },
+    {
+      "url": "ws://127.0.0.1:52180/socket",
+      "status": "blocked",
+      "analysis": "skipped",
+      "reason": "websocket-disabled",
+      "bytes": 0,
+      "chain": [
+        "http://127.0.0.1:52180/",
+        "observed WebSocket request"
+      ],
+      "kind": "browser",
+      "resourceType": "other"
+    },
+    {
+      "url": "http://127.0.0.1:52180/#debugger-6A601D1DEAAADFBD74A956484DAEBBDC-24",
+      "kind": "runtime-capture",
+      "resourceType": "runtime-capture",
+      "bytes": 1658,
+      "status": "downloaded",
+      "analysis": "analyzed",
+      "chain": [
+        "http://127.0.0.1:52180/",
+        "Debugger loaded script"
+      ],
+      "contentHash": "f20708291173991fddd87b9cc0421998fe77216569d130a925149c0ccf1cf551",
+      "analyzers": {
+        "debugger": {
+          "status": "inspected",
+          "reused": false,
+          "contentHash": "f20708291173991fddd87b9cc0421998fe77216569d130a925149c0ccf1cf551"
+        },
+        "directText": {
+          "status": "inspected"
+        },
+        "semantic": {
+          "status": "inspected",
+          "reason": "Shares http://127.0.0.1:52180/app.min.js",
+          "reused": true
+        }
+      }
+    },
+    {
+      "url": "http://127.0.0.1:52180/#debugger-6A601D1DEAAADFBD74A956484DAEBBDC-25",
+      "kind": "runtime-capture",
+      "resourceType": "runtime-capture",
+      "bytes": 11035,
+      "status": "downloaded",
+      "analysis": "analyzed",
+      "chain": [
+        "http://127.0.0.1:52180/",
+        "Debugger loaded script"
+      ],
+      "contentHash": "fd3b882cab3a898b34e827ab330d9fb152340d61f7d0c3cec30247018af131e4",
+      "analyzers": {
+        "debugger": {
+          "status": "inspected",
+          "reused": false,
+          "contentHash": "fd3b882cab3a898b34e827ab330d9fb152340d61f7d0c3cec30247018af131e4"
+        },
+        "directText": {
+          "status": "inspected"
+        },
+        "semantic": {
+          "status": "inspected"
+        }
+      },
+      "discoveryCount": 6,
+      "examples": [
+        "http://127.0.0.1:52180/child",
+        "http://127.0.0.1:52180/fallback",
+        "http://127.0.0.1:52180/frame",
+        "http://127.0.0.1:52180/about"
+      ]
+    },
+    {
+      "url": "http://127.0.0.1:52180/#debugger-6A601D1DEAAADFBD74A956484DAEBBDC-31",
+      "kind": "runtime-capture",
+      "resourceType": "runtime-capture",
+      "bytes": 61,
+      "status": "downloaded",
+      "analysis": "analyzed",
+      "chain": [
+        "http://127.0.0.1:52180/",
+        "Debugger loaded script"
+      ],
+      "contentHash": "a3c74b2aecbdd0b615e6a2eed4788a374366e25d5fdcd45dca45d55fbb119046",
+      "analyzers": {
+        "debugger": {
+          "status": "inspected",
+          "reused": false,
+          "contentHash": "a3c74b2aecbdd0b615e6a2eed4788a374366e25d5fdcd45dca45d55fbb119046"
+        },
+        "directText": {
+          "status": "inspected"
+        },
+        "semantic": {
+          "status": "inspected"
+        }
+      },
+      "discoveryCount": 31,
+      "examples": [
+        "http://127.0.0.1:52180/",
+        "http://127.0.0.1:52180/child",
+        "http://127.0.0.1:52180/fallback",
+        "http://127.0.0.1:52180/frame",
+        "http://127.0.0.1:52180/about"
+      ]
+    },
+    {
+      "url": "http://127.0.0.1:52180/#debugger-6A601D1DEAAADFBD74A956484DAEBBDC-32",
+      "kind": "runtime-capture",
+      "resourceType": "runtime-capture",
+      "bytes": 82,
+      "status": "downloaded",
+      "analysis": "analyzed",
+      "chain": [
+        "http://127.0.0.1:52180/",
+        "Debugger loaded script"
+      ],
+      "contentHash": "81eae22b8e6beade7859f6420fab265f79d6ef1f2944b92eab4cce4457fd0ecd",
+      "analyzers": {
+        "debugger": {
+          "status": "inspected",
+          "reused": false,
+          "contentHash": "81eae22b8e6beade7859f6420fab265f79d6ef1f2944b92eab4cce4457fd0ecd"
+        },
+        "directText": {
+          "status": "inspected"
+        },
+        "semantic": {
+          "status": "inspected"
+        }
+      },
+      "discoveryCount": 2,
+      "examples": [
+        "http://127.0.0.1:52180/"
+      ]
+    },
+    {
+      "url": "http://127.0.0.1:52180/#debugger-6A601D1DEAAADFBD74A956484DAEBBDC-38",
+      "kind": "runtime-capture",
+      "resourceType": "runtime-capture",
+      "bytes": 174,
+      "status": "downloaded",
+      "analysis": "analyzed",
+      "chain": [
+        "http://127.0.0.1:52180/",
+        "Debugger loaded script"
+      ],
+      "contentHash": "03405fb336d94eeb999ad0329e0947f0a7596386730aaeeef8c3dd48d57c38db",
+      "analyzers": {
+        "debugger": {
+          "status": "inspected",
+          "reused": false,
+          "contentHash": "03405fb336d94eeb999ad0329e0947f0a7596386730aaeeef8c3dd48d57c38db"
+        },
+        "directText": {
+          "status": "inspected"
+        },
+        "semantic": {
+          "status": "inspected"
+        }
+      }
+    },
+    {
+      "url": "http://127.0.0.1:52180/#debugger-6A601D1DEAAADFBD74A956484DAEBBDC-44",
+      "kind": "runtime-capture",
+      "resourceType": "runtime-capture",
+      "bytes": 129,
+      "status": "downloaded",
+      "analysis": "analyzed",
+      "chain": [
+        "http://127.0.0.1:52180/",
+        "Debugger loaded script"
+      ],
+      "contentHash": "45102f31984976915609dc77ec3a4702d223374ce00a42c65e9d582434a437b3",
+      "analyzers": {
+        "debugger": {
+          "status": "inspected",
+          "reused": false,
+          "contentHash": "45102f31984976915609dc77ec3a4702d223374ce00a42c65e9d582434a437b3"
+        },
+        "directText": {
+          "status": "inspected"
+        },
+        "semantic": {
+          "status": "inspected"
+        }
+      }
+    },
+    {
+      "url": "http://127.0.0.1:52180/#debugger-6A601D1DEAAADFBD74A956484DAEBBDC-57",
+      "kind": "runtime-capture",
+      "resourceType": "runtime-capture",
+      "bytes": 176,
+      "status": "downloaded",
+      "analysis": "analyzed",
+      "chain": [
+        "http://127.0.0.1:52180/",
+        "Debugger loaded script"
+      ],
+      "contentHash": "d372abb2efb058c4ffa764de5d2d5d0873ce1a63d10eea27dadd17d842e5b389",
+      "analyzers": {
+        "debugger": {
+          "status": "inspected",
+          "reused": false,
+          "contentHash": "d372abb2efb058c4ffa764de5d2d5d0873ce1a63d10eea27dadd17d842e5b389"
+        },
+        "directText": {
+          "status": "inspected"
+        },
+        "semantic": {
+          "status": "inspected"
+        }
+      }
+    },
+    {
+      "url": "http://127.0.0.1:52180/lazy.js.map",
+      "attemptId": 33,
+      "timings": {
+        "preflightMs": 328,
+        "rateWaitMs": 0,
+        "queueMs": 0,
+        "dnsMs": 0,
+        "connectMs": 9,
+        "headersMs": 1,
+        "bodyMs": 0,
+        "totalMs": 338,
+        "analysisMs": 7276,
+        "analyzedAt": 1791432526997,
+        "engineMs": 341
+      },
+      "status": "skipped",
+      "code": 200,
+      "bytes": 47,
+      "partial": false,
+      "chain": [
+        "http://127.0.0.1:52180/",
+        "document/base URL",
+        "http://127.0.0.1:52180/app.min.js",
+        "importing module",
+        "http://127.0.0.1:52180/lazy.js"
+      ],
+      "kind": "map-guess",
+      "analysis": "analyzed",
+      "requestHeaderNames": [
+        "accept",
+        "accept-encoding",
+        "accept-language",
+        "host",
+        "user-agent"
+      ],
+      "contentType": "text/plain",
+      "httpDisposition": "success",
+      "resourceType": "source-map",
+      "discoveryChains": [
+        [
+          "http://127.0.0.1:52180/",
+          "document/base URL",
+          "http://127.0.0.1:52180/app.min.js",
+          "importing module",
+          "http://127.0.0.1:52180/lazy.js"
+        ],
+        [
+          "http://127.0.0.1:52180/",
+          "Debugger loaded script",
+          "http://127.0.0.1:52180/lazy.js"
+        ],
+        [
+          "http://127.0.0.1:52180/",
+          "observed browser request",
+          "http://127.0.0.1:52180/lazy.js"
+        ]
+      ],
+      "contentHash": "a9dca0b5cc5486328280b0f3ef2727eb7921296c02ccb8e3597dedab85b1cc9c",
+      "textBytes": 47,
+      "analyzers": {
+        "directText": {
+          "status": "inspected"
+        },
+        "offlineEngine": {
+          "status": "inspected",
+          "reused": true
+        }
+      },
+      "reason": "optional-map-not-present"
+    },
+    {
+      "url": "http://127.0.0.1:52180/api/public",
+      "attemptId": 23,
+      "timings": {
+        "preflightMs": 1713,
+        "rateWaitMs": 0,
+        "queueMs": 0,
+        "dnsMs": 0,
+        "connectMs": 1,
+        "headersMs": 0,
+        "bodyMs": 0,
+        "totalMs": 1714,
+        "analysisMs": 994,
+        "analyzedAt": 1791432521654,
+        "engineMs": 989
+      },
+      "status": "scanned",
+      "code": 200,
+      "bytes": 749,
+      "partial": false,
+      "chain": [
+        "http://127.0.0.1:52180/",
+        "observed browser request"
+      ],
+      "kind": "browser",
+      "analysis": "analyzed",
+      "requestHeaderNames": [
+        "accept",
+        "accept-encoding",
+        "accept-language",
+        "host",
+        "referer",
+        "user-agent"
+      ],
+      "contentType": "application/json",
+      "httpDisposition": "success",
+      "resourceType": "configuration",
+      "provenance": {
+        "channel": "guarded-route",
+        "attribution": "page",
+        "resourceType": "fetch",
+        "source": "http://127.0.0.1:52180/",
+        "targetOrigin": true,
+        "evidenceSource": "frame-tree",
+        "evidence": "Playwright request routed through guarded Node transport; frame tree position and resource type recorded. Missing initiator remains unknown."
+      },
+      "contentHash": "7b50283881f88129ed10e0b39a9dda5dad3d2b26e201dfd14d87476ceae80726",
+      "textBytes": 749,
+      "analyzers": {
+        "directText": {
+          "status": "inspected"
+        },
+        "offlineEngine": {
+          "status": "inspected",
+          "reused": false
+        }
+      }
+    },
+    {
+      "url": "http://127.0.0.1:52180/collect?api_key=[redacted]",
+      "status": "blocked",
+      "analysis": "skipped",
+      "reason": "credential-in-request",
+      "bytes": 0,
+      "chain": [
+        "http://127.0.0.1:52180/",
+        "observed browser request"
+      ],
+      "kind": "browser",
+      "provenance": {
+        "channel": "guarded-route",
+        "attribution": "page",
+        "resourceType": "fetch",
+        "source": "http://127.0.0.1:52180/",
+        "targetOrigin": true,
+        "evidenceSource": "frame-tree",
+        "evidence": "Playwright request routed through guarded Node transport; frame tree position and resource type recorded. Missing initiator remains unknown."
+      },
+      "resourceType": "other"
+    },
+    {
+      "url": "http://127.0.0.1:52180/collect",
+      "status": "blocked",
+      "analysis": "skipped",
+      "reason": "credential-in-request",
+      "bytes": 0,
+      "chain": [
+        "http://127.0.0.1:52180/",
+        "observed browser request"
+      ],
+      "kind": "browser",
+      "provenance": {
+        "channel": "guarded-route",
+        "attribution": "page",
+        "resourceType": "fetch",
+        "source": "http://127.0.0.1:52180/",
+        "targetOrigin": true,
+        "evidenceSource": "frame-tree",
+        "evidence": "Playwright request routed through guarded Node transport; frame tree position and resource type recorded. Missing initiator remains unknown."
+      },
+      "resourceType": "other"
+    },
+    {
+      "url": "http://127.0.0.1:52180/collect",
+      "status": "blocked",
+      "analysis": "skipped",
+      "reason": "credential-in-request",
+      "bytes": 0,
+      "chain": [
+        "http://127.0.0.1:52180/",
+        "observed browser request"
+      ],
+      "kind": "browser",
+      "provenance": {
+        "channel": "guarded-route",
+        "attribution": "page",
+        "resourceType": "fetch",
+        "source": "http://127.0.0.1:52180/",
+        "targetOrigin": true,
+        "evidenceSource": "frame-tree",
+        "evidence": "Playwright request routed through guarded Node transport; frame tree position and resource type recorded. Missing initiator remains unknown."
+      },
+      "resourceType": "other"
+    },
+    {
+      "url": "http://127.0.0.1:52180/write",
+      "status": "blocked",
+      "analysis": "skipped",
+      "reason": "method",
+      "bytes": 0,
+      "chain": [
+        "http://127.0.0.1:52180/",
+        "observed browser request"
+      ],
+      "kind": "browser",
+      "provenance": {
+        "channel": "guarded-route",
+        "attribution": "page",
+        "resourceType": "fetch",
+        "source": "http://127.0.0.1:52180/",
+        "targetOrigin": true,
+        "evidenceSource": "frame-tree",
+        "evidence": "Playwright request routed through guarded Node transport; frame tree position and resource type recorded. Missing initiator remains unknown."
+      },
+      "resourceType": "other"
+    },
+    {
+      "url": "http://127.0.0.1:52180/delete",
+      "status": "blocked",
+      "analysis": "skipped",
+      "reason": "destructive-get",
+      "bytes": 0,
+      "chain": [
+        "http://127.0.0.1:52180/",
+        "observed browser request"
+      ],
+      "kind": "browser",
+      "provenance": {
+        "channel": "guarded-route",
+        "attribution": "page",
+        "resourceType": "fetch",
+        "source": "http://127.0.0.1:52180/",
+        "targetOrigin": true,
+        "evidenceSource": "frame-tree",
+        "evidence": "Playwright request routed through guarded Node transport; frame tree position and resource type recorded. Missing initiator remains unknown."
+      },
+      "resourceType": "other"
+    },
+    {
+      "url": "http://127.0.0.1:52180/redirect-secret",
+      "attemptId": 29,
+      "timings": {
+        "preflightMs": 3197,
+        "rateWaitMs": 0,
+        "queueMs": 0,
+        "dnsMs": 0,
+        "connectMs": 1,
+        "headersMs": 1,
+        "bodyMs": 0,
+        "totalMs": 3199,
+        "analysisMs": 670,
+        "analyzedAt": 1791432522822,
+        "engineMs": 669
+      },
+      "status": "redirect",
+      "code": 302,
+      "bytes": 0,
+      "partial": false,
+      "chain": [
+        "http://127.0.0.1:52180/",
+        "observed browser request"
+      ],
+      "kind": "browser",
+      "analysis": "analyzed",
+      "requestHeaderNames": [
+        "accept",
+        "accept-encoding",
+        "accept-language",
+        "host",
+        "referer",
+        "user-agent"
+      ],
+      "contentType": "",
+      "httpDisposition": "redirect",
+      "resourceType": "other",
+      "discoveryChains": [
+        [
+          "http://127.0.0.1:52180/",
+          "document/base URL"
+        ],
+        [
+          "http://127.0.0.1:52180/",
+          "rendered page",
+          "http://127.0.0.1:52180/",
+          "document/base URL"
+        ]
+      ],
+      "provenance": {
+        "channel": "guarded-route",
+        "attribution": "page",
+        "resourceType": "fetch",
+        "source": "http://127.0.0.1:52180/",
+        "targetOrigin": true,
+        "evidenceSource": "frame-tree",
+        "evidence": "Playwright request routed through guarded Node transport; frame tree position and resource type recorded. Missing initiator remains unknown."
+      },
+      "contentHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "textBytes": 0,
+      "analyzers": {
+        "directText": {
+          "status": "inspected"
+        },
+        "offlineEngine": {
+          "status": "inspected",
+          "reused": false
+        }
+      }
+    },
+    {
+      "url": "http://127.0.0.1:52180/collect?api_key=[redacted]",
+      "status": "blocked",
+      "analysis": "skipped",
+      "reason": "credential-in-request",
+      "bytes": 0,
+      "chain": [
+        "http://127.0.0.1:52180/",
+        "observed browser request",
+        "http://127.0.0.1:52180/redirect-secret",
+        "HTTP redirect"
+      ],
+      "kind": "browser",
+      "resourceType": "other"
+    },
+    {
+      "url": "http://127.0.0.1:52180/inline.js",
+      "attemptId": 11,
+      "timings": {
+        "preflightMs": 10502,
+        "rateWaitMs": 0,
+        "queueMs": 0,
+        "dnsMs": 1,
+        "connectMs": 0,
+        "headersMs": 1,
+        "bodyMs": 0,
+        "totalMs": 10504,
+        "analysisMs": 331,
+        "analyzedAt": 1791432523842,
+        "engineMs": 330
+      },
+      "status": "scanned",
+      "code": 200,
+      "bytes": 337,
+      "partial": false,
+      "chain": [
+        "http://127.0.0.1:52180/",
+        "observed browser request"
+      ],
+      "kind": "browser",
+      "analysis": "analyzed",
+      "requestHeaderNames": [
+        "accept",
+        "accept-encoding",
+        "accept-language",
+        "host",
+        "referer",
+        "user-agent"
+      ],
+      "contentType": "text/javascript",
+      "httpDisposition": "success",
+      "resourceType": "javascript",
+      "discoveryChains": [
+        [
+          "http://127.0.0.1:52180/",
+          "document/base URL"
+        ],
+        [
+          "http://127.0.0.1:52180/",
+          "rendered page",
+          "http://127.0.0.1:52180/",
+          "document/base URL"
+        ]
+      ],
+      "analyzers": {
+        "semantic": {
+          "status": "inspected"
+        },
+        "directText": {
+          "status": "inspected"
+        },
+        "offlineEngine": {
+          "status": "inspected",
+          "reused": true
+        }
+      },
+      "provenance": {
+        "channel": "guarded-route",
+        "attribution": "page",
+        "resourceType": "script",
+        "source": "http://127.0.0.1:52180/",
+        "targetOrigin": true,
+        "evidenceSource": "frame-tree",
+        "evidence": "Playwright request routed through guarded Node transport; frame tree position and resource type recorded. Missing initiator remains unknown."
+      },
+      "contentHash": "72ff60afc356a4b8a6931fe256dc4cb14b08f496170fd96a1c71d6db7e428dd4",
+      "textBytes": 337
+    },
+    {
+      "url": "http://127.0.0.1:52180/#debugger-6A601D1DEAAADFBD74A956484DAEBBDC-58",
+      "kind": "runtime-capture",
+      "resourceType": "runtime-capture",
+      "bytes": 337,
+      "status": "downloaded",
+      "analysis": "analyzed",
+      "chain": [
+        "http://127.0.0.1:52180/",
+        "Debugger loaded script"
+      ],
+      "contentHash": "72ff60afc356a4b8a6931fe256dc4cb14b08f496170fd96a1c71d6db7e428dd4",
+      "analyzers": {
+        "debugger": {
+          "status": "inspected",
+          "reused": false,
+          "contentHash": "72ff60afc356a4b8a6931fe256dc4cb14b08f496170fd96a1c71d6db7e428dd4"
+        },
+        "directText": {
+          "status": "inspected"
+        },
+        "semantic": {
+          "status": "inspected",
+          "reason": "Shares http://127.0.0.1:52180/inline.js",
+          "reused": true
+        }
+      }
+    },
+    {
+      "url": "http://127.0.0.1:52180/worker.js",
+      "attemptId": 32,
+      "timings": {
+        "preflightMs": 4770,
+        "rateWaitMs": 0,
+        "queueMs": 0,
+        "dnsMs": 1,
+        "connectMs": 1,
+        "headersMs": 0,
+        "bodyMs": 1,
+        "totalMs": 4774,
+        "analysisMs": 331,
+        "analyzedAt": 1791432524066,
+        "engineMs": 331
+      },
+      "status": "scanned",
+      "code": 200,
+      "bytes": 172,
+      "partial": false,
+      "chain": [
+        "http://127.0.0.1:52180/",
+        "observed browser request"
+      ],
+      "kind": "browser",
+      "analysis": "analyzed",
+      "requestHeaderNames": [
+        "accept",
+        "accept-encoding",
+        "accept-language",
+        "host",
+        "referer"
+      ],
+      "contentType": "text/javascript",
+      "httpDisposition": "success",
+      "resourceType": "javascript",
+      "discoveryChains": [
+        [
+          "http://127.0.0.1:52180/",
+          "document/base URL",
+          "http://127.0.0.1:52180/app.min.js",
+          "worker document base"
+        ]
+      ],
+      "analyzers": {
+        "semantic": {
+          "status": "inspected"
+        },
+        "directText": {
+          "status": "inspected"
+        },
+        "offlineEngine": {
+          "status": "inspected",
+          "reused": true
+        }
+      },
+      "provenance": {
+        "channel": "guarded-route",
+        "attribution": "page",
+        "resourceType": "script",
+        "source": "http://127.0.0.1:52180/",
+        "targetOrigin": true,
+        "evidenceSource": "frame-tree",
+        "evidence": "Playwright request routed through guarded Node transport; frame tree position and resource type recorded. Missing initiator remains unknown."
+      },
+      "contentHash": "e82ba0d0b78918df6f3de44769b067da27de505b7da746b1e0e8b23bb433e4f6",
+      "textBytes": 172
+    },
+    {
+      "url": "http://127.0.0.1:52180/worker.js#debugger-6A601D1DEAAADFBD74A956484DAEBBDC-BFD1F22635409A8FADD75660A5187A0E-3",
+      "kind": "runtime-capture",
+      "resourceType": "runtime-capture",
+      "bytes": 172,
+      "status": "downloaded",
+      "analysis": "analyzed",
+      "chain": [
+        "http://127.0.0.1:52180/worker.js",
+        "Debugger loaded script"
+      ],
+      "contentHash": "e82ba0d0b78918df6f3de44769b067da27de505b7da746b1e0e8b23bb433e4f6",
+      "analyzers": {
+        "debugger": {
+          "status": "inspected",
+          "reused": false,
+          "contentHash": "e82ba0d0b78918df6f3de44769b067da27de505b7da746b1e0e8b23bb433e4f6"
+        },
+        "directText": {
+          "status": "inspected"
+        },
+        "semantic": {
+          "status": "inspected",
+          "reason": "Shares http://127.0.0.1:52180/worker.js",
+          "reused": true
+        }
+      }
+    },
+    {
+      "url": "http://127.0.0.1:52180/conventional.js",
+      "attemptId": 12,
+      "timings": {
+        "preflightMs": 11404,
+        "rateWaitMs": 0,
+        "queueMs": 0,
+        "dnsMs": 0,
+        "connectMs": 1,
+        "headersMs": 1,
+        "bodyMs": 0,
+        "totalMs": 11406,
+        "analysisMs": 330,
+        "analyzedAt": 1791432524744,
+        "engineMs": 330
+      },
+      "status": "scanned",
+      "code": 200,
+      "bytes": 10,
+      "partial": false,
+      "chain": [
+        "http://127.0.0.1:52180/",
+        "observed browser request"
+      ],
+      "kind": "browser",
+      "analysis": "analyzed",
+      "requestHeaderNames": [
+        "accept",
+        "accept-encoding",
+        "accept-language",
+        "host",
+        "referer",
+        "user-agent"
+      ],
+      "contentType": "text/javascript",
+      "httpDisposition": "success",
+      "resourceType": "javascript",
+      "discoveryChains": [
+        [
+          "http://127.0.0.1:52180/",
+          "document/base URL"
+        ],
+        [
+          "http://127.0.0.1:52180/",
+          "rendered page",
+          "http://127.0.0.1:52180/",
+          "document/base URL"
+        ]
+      ],
+      "analyzers": {
+        "semantic": {
+          "status": "inspected"
+        },
+        "directText": {
+          "status": "inspected"
+        },
+        "offlineEngine": {
+          "status": "inspected",
+          "reused": true
+        }
+      },
+      "provenance": {
+        "channel": "guarded-route",
+        "attribution": "page",
+        "resourceType": "script",
+        "source": "http://127.0.0.1:52180/",
+        "targetOrigin": true,
+        "evidenceSource": "frame-tree",
+        "evidence": "Playwright request routed through guarded Node transport; frame tree position and resource type recorded. Missing initiator remains unknown."
+      },
+      "contentHash": "e92611ecbb9ec4c98576b8e12896f9422bbef9713c284039789653e1d417caa4",
+      "textBytes": 10
+    },
+    {
+      "url": "http://127.0.0.1:52180/#debugger-6A601D1DEAAADFBD74A956484DAEBBDC-59",
+      "kind": "runtime-capture",
+      "resourceType": "runtime-capture",
+      "bytes": 10,
+      "status": "downloaded",
+      "analysis": "analyzed",
+      "chain": [
+        "http://127.0.0.1:52180/",
+        "Debugger loaded script"
+      ],
+      "contentHash": "e92611ecbb9ec4c98576b8e12896f9422bbef9713c284039789653e1d417caa4",
+      "analyzers": {
+        "debugger": {
+          "status": "inspected",
+          "reused": false,
+          "contentHash": "e92611ecbb9ec4c98576b8e12896f9422bbef9713c284039789653e1d417caa4"
+        },
+        "directText": {
+          "status": "inspected"
+        },
+        "semantic": {
+          "status": "inspected",
+          "reason": "Shares http://127.0.0.1:52180/conventional.js",
+          "reused": true
+        }
+      }
+    },
+    {
+      "url": "http://127.0.0.1:52180/header-map.js",
+      "attemptId": 13,
+      "timings": {
+        "preflightMs": 11527,
+        "rateWaitMs": 0,
+        "queueMs": 0,
+        "dnsMs": 0,
+        "connectMs": 1,
+        "headersMs": 0,
+        "bodyMs": 0,
+        "totalMs": 11529,
+        "analysisMs": 326,
+        "analyzedAt": 1791432524863,
+        "engineMs": 324
+      },
+      "status": "scanned",
+      "code": 200,
+      "bytes": 10,
+      "partial": false,
+      "chain": [
+        "http://127.0.0.1:52180/",
+        "observed browser request"
+      ],
+      "kind": "browser",
+      "analysis": "analyzed",
+      "requestHeaderNames": [
+        "accept",
+        "accept-encoding",
+        "accept-language",
+        "host",
+        "referer",
+        "user-agent"
+      ],
+      "contentType": "text/javascript",
+      "httpDisposition": "success",
+      "resourceType": "javascript",
+      "discoveryChains": [
+        [
+          "http://127.0.0.1:52180/",
+          "document/base URL"
+        ],
+        [
+          "http://127.0.0.1:52180/",
+          "rendered page",
+          "http://127.0.0.1:52180/",
+          "document/base URL"
+        ]
+      ],
+      "analyzers": {
+        "semantic": {
+          "status": "inspected"
+        },
+        "directText": {
+          "status": "inspected"
+        },
+        "offlineEngine": {
+          "status": "inspected",
+          "reused": true
+        }
+      },
+      "provenance": {
+        "channel": "guarded-route",
+        "attribution": "page",
+        "resourceType": "script",
+        "source": "http://127.0.0.1:52180/",
+        "targetOrigin": true,
+        "evidenceSource": "frame-tree",
+        "evidence": "Playwright request routed through guarded Node transport; frame tree position and resource type recorded. Missing initiator remains unknown."
+      },
+      "contentHash": "5c8c72cad540d513ab690c03cf6eea84eb1d565adddfd7344a07ceb847d163e5",
+      "textBytes": 10
+    },
+    {
+      "url": "http://127.0.0.1:52180/#debugger-6A601D1DEAAADFBD74A956484DAEBBDC-60",
+      "kind": "runtime-capture",
+      "resourceType": "runtime-capture",
+      "bytes": 10,
+      "status": "downloaded",
+      "analysis": "analyzed",
+      "chain": [
+        "http://127.0.0.1:52180/",
+        "Debugger loaded script"
+      ],
+      "contentHash": "5c8c72cad540d513ab690c03cf6eea84eb1d565adddfd7344a07ceb847d163e5",
+      "analyzers": {
+        "debugger": {
+          "status": "inspected",
+          "reused": false,
+          "contentHash": "5c8c72cad540d513ab690c03cf6eea84eb1d565adddfd7344a07ceb847d163e5"
+        },
+        "directText": {
+          "status": "inspected"
+        },
+        "semantic": {
+          "status": "inspected",
+          "reason": "Shares http://127.0.0.1:52180/header-map.js",
+          "reused": true
+        }
+      }
+    },
+    {
+      "url": "http://127.0.0.1:52180/lazy.js",
+      "attemptId": 22,
+      "timings": {
+        "preflightMs": 7348,
+        "rateWaitMs": 0,
+        "queueMs": 0,
+        "dnsMs": 0,
+        "connectMs": 1,
+        "headersMs": 1,
+        "bodyMs": 0,
+        "totalMs": 7350,
+        "analysisMs": 340,
+        "analyzedAt": 1791432526635,
+        "engineMs": 338
+      },
+      "status": "scanned",
+      "code": 200,
+      "bytes": 311,
+      "partial": false,
+      "chain": [
+        "http://127.0.0.1:52180/",
+        "observed browser request"
+      ],
+      "kind": "browser",
+      "analysis": "analyzed",
+      "requestHeaderNames": [
+        "accept",
+        "accept-encoding",
+        "accept-language",
+        "host",
+        "origin",
+        "referer",
+        "user-agent"
+      ],
+      "contentType": "text/javascript",
+      "httpDisposition": "success",
+      "resourceType": "javascript",
+      "discoveryChains": [
+        [
+          "http://127.0.0.1:52180/",
+          "document/base URL",
+          "http://127.0.0.1:52180/app.min.js",
+          "importing module"
+        ]
+      ],
+      "analyzers": {
+        "semantic": {
+          "status": "inspected"
+        },
+        "directText": {
+          "status": "inspected"
+        },
+        "offlineEngine": {
+          "status": "inspected",
+          "reused": true
+        }
+      },
+      "provenance": {
+        "channel": "guarded-route",
+        "attribution": "page",
+        "resourceType": "script",
+        "source": "http://127.0.0.1:52180/",
+        "targetOrigin": true,
+        "evidenceSource": "frame-tree",
+        "evidence": "Playwright request routed through guarded Node transport; frame tree position and resource type recorded. Missing initiator remains unknown."
+      },
+      "contentHash": "86cacaab113e359510d29acc2a6b64724150bc5428594d72a39ba5b10438feef",
+      "textBytes": 311
+    },
+    {
+      "url": "http://127.0.0.1:52180/#debugger-6A601D1DEAAADFBD74A956484DAEBBDC-61",
+      "kind": "runtime-capture",
+      "resourceType": "runtime-capture",
+      "bytes": 311,
+      "status": "downloaded",
+      "analysis": "analyzed",
+      "chain": [
+        "http://127.0.0.1:52180/",
+        "Debugger loaded script"
+      ],
+      "contentHash": "86cacaab113e359510d29acc2a6b64724150bc5428594d72a39ba5b10438feef",
+      "analyzers": {
+        "debugger": {
+          "status": "inspected",
+          "reused": false,
+          "contentHash": "86cacaab113e359510d29acc2a6b64724150bc5428594d72a39ba5b10438feef"
+        },
+        "directText": {
+          "status": "inspected"
+        },
+        "semantic": {
+          "status": "inspected",
+          "reason": "Shares http://127.0.0.1:52180/lazy.js",
+          "reused": true
+        }
+      }
+    },
+    {
+      "url": "http://127.0.0.1:52180/header.map",
+      "attemptId": 37,
+      "timings": {
+        "preflightMs": 348,
+        "rateWaitMs": 0,
+        "queueMs": 0,
+        "dnsMs": 0,
+        "connectMs": 1,
+        "headersMs": 0,
+        "bodyMs": 0,
+        "totalMs": 349,
+        "analysisMs": 685,
+        "analyzedAt": 1791432527487,
+        "engineMs": 684
+      },
+      "status": "scanned",
+      "code": 200,
+      "bytes": 87,
+      "partial": false,
+      "chain": [
+        "http://127.0.0.1:52180/",
+        "document/base URL",
+        "http://127.0.0.1:52180/header-map.js"
+      ],
+      "kind": "map",
+      "analysis": "analyzed",
+      "requestHeaderNames": [
+        "accept",
+        "accept-encoding",
+        "accept-language",
+        "host",
+        "user-agent"
+      ],
+      "contentType": "application/json",
+      "httpDisposition": "success",
+      "resourceType": "source-map",
+      "discoveryChains": [
+        [
+          "http://127.0.0.1:52180/",
+          "document/base URL",
+          "http://127.0.0.1:52180/header-map.js"
+        ],
+        [
+          "http://127.0.0.1:52180/",
+          "observed browser request",
+          "http://127.0.0.1:52180/header-map.js"
+        ]
+      ],
+      "contentHash": "5c29c4b5f60535746b7e043df863d6e7adeccbf5b82663bb3f752a60024d66fe",
+      "textBytes": 87,
+      "analyzers": {
+        "directText": {
+          "status": "inspected"
+        },
+        "offlineEngine": {
+          "status": "inspected",
+          "reused": false
+        },
+        "sourceMap": {
+          "status": "inspected"
+        }
+      },
+      "sourceMap": {
+        "valid": true
+      }
+    },
+    {
+      "url": "http://127.0.0.1:52180/header-map.js.map",
+      "attemptId": 38,
+      "timings": {
+        "preflightMs": 354,
+        "rateWaitMs": 0,
+        "queueMs": 0,
+        "dnsMs": 0,
+        "connectMs": 11,
+        "headersMs": 1,
+        "bodyMs": 0,
+        "totalMs": 366,
+        "analysisMs": 2358,
+        "analyzedAt": 1791432529721,
+        "engineMs": 329
+      },
+      "status": "skipped",
+      "code": 200,
+      "bytes": 47,
+      "partial": false,
+      "chain": [
+        "http://127.0.0.1:52180/",
+        "document/base URL",
+        "http://127.0.0.1:52180/header-map.js"
+      ],
+      "kind": "map-guess",
+      "analysis": "analyzed",
+      "requestHeaderNames": [
+        "accept",
+        "accept-encoding",
+        "accept-language",
+        "host",
+        "user-agent"
+      ],
+      "contentType": "text/plain",
+      "httpDisposition": "success",
+      "resourceType": "source-map",
+      "discoveryChains": [
+        [
+          "http://127.0.0.1:52180/",
+          "document/base URL",
+          "http://127.0.0.1:52180/header-map.js"
+        ],
+        [
+          "http://127.0.0.1:52180/",
+          "Debugger loaded script",
+          "http://127.0.0.1:52180/header-map.js"
+        ],
+        [
+          "http://127.0.0.1:52180/",
+          "observed browser request",
+          "http://127.0.0.1:52180/header-map.js"
+        ]
+      ],
+      "contentHash": "a9dca0b5cc5486328280b0f3ef2727eb7921296c02ccb8e3597dedab85b1cc9c",
+      "textBytes": 47,
+      "analyzers": {
+        "directText": {
+          "status": "inspected"
+        },
+        "offlineEngine": {
+          "status": "inspected",
+          "reused": true
+        }
+      },
+      "reason": "optional-map-not-present"
+    },
+    {
+      "url": "http://127.0.0.1:52180/collect?api_key=[redacted]",
+      "status": "blocked",
+      "analysis": "skipped",
+      "reason": "credential-in-request",
+      "bytes": 0,
+      "chain": [
+        "http://127.0.0.1:52180/",
+        "observed browser request"
+      ],
+      "kind": "browser",
+      "provenance": {
+        "channel": "guarded-route",
+        "attribution": "worker",
+        "resourceType": "fetch",
+        "source": "http://127.0.0.1:52180/",
+        "targetOrigin": true,
+        "evidenceSource": "cdp-observation",
+        "evidence": "Playwright request routed through guarded Node transport; a matching worker-channel network observation attributes it to a worker."
+      },
+      "resourceType": "other"
+    },
+    {
+      "url": "http://127.0.0.1:52180/worker.js.map",
+      "attemptId": 39,
+      "timings": {
+        "preflightMs": 345,
+        "rateWaitMs": 0,
+        "queueMs": 0,
+        "dnsMs": 0,
+        "connectMs": 1,
+        "headersMs": 0,
+        "bodyMs": 0,
+        "totalMs": 346,
+        "analysisMs": 323,
+        "analyzedAt": 1791432528157,
+        "engineMs": 322
+      },
+      "status": "skipped",
+      "code": 200,
+      "bytes": 47,
+      "partial": false,
+      "chain": [
+        "http://127.0.0.1:52180/",
+        "document/base URL",
+        "http://127.0.0.1:52180/app.min.js",
+        "worker document base",
+        "http://127.0.0.1:52180/worker.js"
+      ],
+      "kind": "map-guess",
+      "analysis": "analyzed",
+      "requestHeaderNames": [
+        "accept",
+        "accept-encoding",
+        "accept-language",
+        "host",
+        "user-agent"
+      ],
+      "contentType": "text/plain",
+      "httpDisposition": "success",
+      "resourceType": "source-map",
+      "discoveryChains": [
+        [
+          "http://127.0.0.1:52180/",
+          "document/base URL",
+          "http://127.0.0.1:52180/app.min.js",
+          "worker document base",
+          "http://127.0.0.1:52180/worker.js"
+        ],
+        [
+          "http://127.0.0.1:52180/worker.js",
+          "Debugger loaded script",
+          "http://127.0.0.1:52180/worker.js"
+        ],
+        [
+          "http://127.0.0.1:52180/",
+          "observed browser request",
+          "http://127.0.0.1:52180/worker.js"
+        ]
+      ],
+      "contentHash": "a9dca0b5cc5486328280b0f3ef2727eb7921296c02ccb8e3597dedab85b1cc9c",
+      "textBytes": 47,
+      "analyzers": {
+        "directText": {
+          "status": "inspected"
+        },
+        "offlineEngine": {
+          "status": "inspected",
+          "reused": true
+        }
+      },
+      "reason": "optional-map-not-present"
+    },
+    {
+      "url": "http://127.0.0.1:52180/api/scroll",
+      "attemptId": 40,
+      "timings": {
+        "preflightMs": 395,
+        "rateWaitMs": 0,
+        "queueMs": 0,
+        "dnsMs": 0,
+        "connectMs": 1,
+        "headersMs": 0,
+        "bodyMs": 0,
+        "totalMs": 397,
+        "analysisMs": 666,
+        "analyzedAt": 1791432528722,
+        "engineMs": 665
+      },
+      "status": "scanned",
+      "code": 200,
+      "bytes": 33,
+      "partial": false,
+      "chain": [
+        "http://127.0.0.1:52180/",
+        "observed browser request"
+      ],
+      "kind": "browser",
+      "analysis": "analyzed",
+      "requestHeaderNames": [
+        "accept",
+        "accept-encoding",
+        "accept-language",
+        "host",
+        "referer",
+        "user-agent"
+      ],
+      "contentType": "application/json",
+      "httpDisposition": "success",
+      "resourceType": "configuration",
+      "provenance": {
+        "channel": "guarded-route",
+        "attribution": "page",
+        "resourceType": "fetch",
+        "source": "http://127.0.0.1:52180/",
+        "targetOrigin": true,
+        "evidenceSource": "frame-tree",
+        "evidence": "Playwright request routed through guarded Node transport; frame tree position and resource type recorded. Missing initiator remains unknown."
+      },
+      "contentHash": "a175fc25e216ddce44aed09c426e18d0374e290bcaffa71f296ed60fff5b08aa",
+      "textBytes": 33,
+      "analyzers": {
+        "directText": {
+          "status": "inspected"
+        },
+        "offlineEngine": {
+          "status": "inspected",
+          "reused": false
+        }
+      }
+    },
+    {
+      "url": "http://127.0.0.1:52180/sw.js.map",
+      "attemptId": 42,
+      "timings": {
+        "preflightMs": 329,
+        "rateWaitMs": 0,
+        "queueMs": 0,
+        "dnsMs": 0,
+        "connectMs": 1,
+        "headersMs": 0,
+        "bodyMs": 0,
+        "totalMs": 330,
+        "analysisMs": 319,
+        "analyzedAt": 1791432528807,
+        "engineMs": 319
+      },
+      "status": "skipped",
+      "code": 200,
+      "bytes": 47,
+      "partial": false,
+      "chain": [
+        "http://127.0.0.1:52180/",
+        "document/base URL",
+        "http://127.0.0.1:52180/app.min.js",
+        "service worker registration",
+        "http://127.0.0.1:52180/sw.js"
+      ],
+      "kind": "map-guess",
+      "analysis": "analyzed",
+      "requestHeaderNames": [
+        "accept",
+        "accept-encoding",
+        "accept-language",
+        "host",
+        "user-agent"
+      ],
+      "contentType": "text/plain",
+      "httpDisposition": "success",
+      "resourceType": "source-map",
+      "discoveryChains": [
+        [
+          "http://127.0.0.1:52180/",
+          "document/base URL",
+          "http://127.0.0.1:52180/app.min.js",
+          "service worker registration",
+          "http://127.0.0.1:52180/sw.js"
+        ]
+      ],
+      "contentHash": "a9dca0b5cc5486328280b0f3ef2727eb7921296c02ccb8e3597dedab85b1cc9c",
+      "textBytes": 47,
+      "analyzers": {
+        "directText": {
+          "status": "inspected"
+        },
+        "offlineEngine": {
+          "status": "inspected",
+          "reused": true
+        }
+      },
+      "reason": "optional-map-not-present"
+    },
+    {
+      "url": "http://127.0.0.1:52180/scroll-collect?api_key=[redacted]",
+      "status": "blocked",
+      "analysis": "skipped",
+      "reason": "credential-in-request",
+      "bytes": 0,
+      "chain": [
+        "http://127.0.0.1:52180/",
+        "observed browser request"
+      ],
+      "kind": "browser",
+      "provenance": {
+        "channel": "guarded-route",
+        "attribution": "page",
+        "resourceType": "fetch",
+        "source": "http://127.0.0.1:52180/",
+        "targetOrigin": true,
+        "evidenceSource": "frame-tree",
+        "evidence": "Playwright request routed through guarded Node transport; frame tree position and resource type recorded. Missing initiator remains unknown."
+      },
+      "resourceType": "other"
+    },
+    {
+      "url": "http://127.0.0.1:52180/sources/source.ts",
+      "attemptId": 43,
+      "timings": {
+        "preflightMs": 327,
+        "rateWaitMs": 0,
+        "queueMs": 0,
+        "dnsMs": 0,
+        "connectMs": 1,
+        "headersMs": 1,
+        "bodyMs": 0,
+        "totalMs": 329,
+        "analysisMs": 997,
+        "analyzedAt": 1791432530133,
+        "engineMs": 995
+      },
+      "status": "scanned",
+      "code": 200,
+      "bytes": 127,
+      "partial": false,
+      "chain": [
+        "http://127.0.0.1:52180/",
+        "document/base URL",
+        "http://127.0.0.1:52180/header-map.js",
+        "http://127.0.0.1:52180/header.map",
+        "source reference"
+      ],
+      "kind": "source",
+      "analysis": "analyzed",
+      "requestHeaderNames": [
+        "accept",
+        "accept-encoding",
+        "accept-language",
+        "host",
+        "user-agent"
+      ],
+      "contentType": "text/plain",
+      "httpDisposition": "success",
+      "resourceType": "javascript",
+      "discoveryChains": [
+        [
+          "http://127.0.0.1:52180/",
+          "document/base URL",
+          "http://127.0.0.1:52180/header-map.js",
+          "http://127.0.0.1:52180/header.map",
+          "source reference"
+        ]
+      ],
+      "contentHash": "4ffdebb4ea5685925ec22fb553f8c29e46b7396e03adb813f30c7113c589fa0f",
+      "textBytes": 127,
+      "analyzers": {
+        "directText": {
+          "status": "inspected"
+        },
+        "offlineEngine": {
+          "status": "inspected",
+          "reused": false
+        },
+        "semantic": {
+          "status": "inspected"
+        }
+      }
+    },
+    {
+      "url": "http://127.0.0.1:52180/write",
+      "status": "blocked",
+      "analysis": "skipped",
+      "reason": "method",
+      "bytes": 0,
+      "chain": [
+        "http://127.0.0.1:52180/",
+        "observed browser request"
+      ],
+      "kind": "browser",
+      "provenance": {
+        "channel": "guarded-route",
+        "attribution": "worker",
+        "resourceType": "fetch",
+        "source": "http://127.0.0.1:52180/",
+        "targetOrigin": true,
+        "evidenceSource": "cdp-observation",
+        "evidence": "Playwright request routed through guarded Node transport; a matching worker-channel network observation attributes it to a worker."
+      },
+      "resourceType": "other"
+    },
+    {
+      "url": "http://127.0.0.1:52180/site.css",
+      "attemptId": 44,
+      "timings": {
+        "preflightMs": 322,
+        "rateWaitMs": 0,
+        "queueMs": 0,
+        "dnsMs": 0,
+        "connectMs": 1,
+        "headersMs": 1,
+        "bodyMs": 0,
+        "totalMs": 324,
+        "analysisMs": 325,
+        "analyzedAt": 1791432530371,
+        "engineMs": 324
+      },
+      "status": "scanned",
+      "code": 200,
+      "bytes": 92,
+      "partial": false,
+      "chain": [
+        "http://127.0.0.1:52180/",
+        "document/base URL"
+      ],
+      "kind": "asset",
+      "analysis": "analyzed",
+      "requestHeaderNames": [
+        "accept",
+        "accept-encoding",
+        "accept-language",
+        "host",
+        "user-agent"
+      ],
+      "contentType": "text/css",
+      "httpDisposition": "success",
+      "resourceType": "other",
+      "discoveryChains": [
+        [
+          "http://127.0.0.1:52180/",
+          "document/base URL"
+        ],
+        [
+          "http://127.0.0.1:52180/",
+          "rendered page",
+          "http://127.0.0.1:52180/",
+          "document/base URL"
+        ]
+      ],
+      "contentHash": "d9fe64c4b43d4ad106de0997da9bd53b5865e1793a3b1437143446d56ec46de0",
+      "textBytes": 92,
+      "analyzers": {
+        "directText": {
+          "status": "inspected"
+        },
+        "offlineEngine": {
+          "status": "inspected",
+          "reused": true
+        }
+      },
+      "certainty": "confirmed"
+    },
+    {
+      "url": "http://127.0.0.1:52180/login",
+      "attemptId": 45,
+      "timings": {
+        "preflightMs": 331,
+        "rateWaitMs": 0,
+        "queueMs": 0,
+        "dnsMs": 1,
+        "connectMs": 1,
+        "headersMs": 0,
+        "bodyMs": 0,
+        "totalMs": 333,
+        "analysisMs": 650,
+        "analyzedAt": 1791432531117,
+        "engineMs": 649
+      },
+      "status": "http-error",
+      "code": 401,
+      "bytes": 78,
+      "partial": false,
+      "chain": [
+        "http://127.0.0.1:52180/",
+        "document/base URL"
+      ],
+      "kind": "page",
+      "analysis": "analyzed",
+      "requestHeaderNames": [
+        "accept",
+        "accept-encoding",
+        "accept-language",
+        "host",
+        "user-agent"
+      ],
+      "contentType": "text/html",
+      "httpDisposition": "authentication-challenge",
+      "resourceType": "page",
+      "discoveryChains": [
+        [
+          "http://127.0.0.1:52180/",
+          "document/base URL"
+        ],
+        [
+          "http://127.0.0.1:52180/",
+          "rendered page",
+          "http://127.0.0.1:52180/",
+          "document/base URL"
+        ]
+      ],
+      "contentHash": "3ddbfcda64aaa3533ed41f9df0276b5b72e25ab0fa896841fb1347b29860ae9c",
+      "textBytes": 78,
+      "analyzers": {
+        "directText": {
+          "status": "inspected"
+        },
+        "offlineEngine": {
+          "status": "inspected",
+          "reused": false
+        }
+      },
+      "certainty": "confirmed"
+    },
+    {
+      "url": "http://127.0.0.1:52180/redirect-out",
+      "attemptId": 46,
+      "timings": {
+        "preflightMs": 324,
+        "rateWaitMs": 0,
+        "queueMs": 0,
+        "dnsMs": 0,
+        "connectMs": 1,
+        "headersMs": 0,
+        "bodyMs": 0,
+        "totalMs": 325,
+        "analysisMs": 323,
+        "analyzedAt": 1791432531021,
+        "engineMs": 323
+      },
+      "status": "redirect",
+      "code": 302,
+      "bytes": 0,
+      "partial": false,
+      "chain": [
+        "http://127.0.0.1:52180/",
+        "document/base URL"
+      ],
+      "kind": "page",
+      "analysis": "analyzed",
+      "requestHeaderNames": [
+        "accept",
+        "accept-encoding",
+        "accept-language",
+        "host",
+        "user-agent"
+      ],
+      "contentType": "",
+      "httpDisposition": "redirect",
+      "resourceType": "page",
+      "discoveryChains": [
+        [
+          "http://127.0.0.1:52180/",
+          "document/base URL"
+        ],
+        [
+          "http://127.0.0.1:52180/",
+          "rendered page",
+          "http://127.0.0.1:52180/",
+          "document/base URL"
+        ]
+      ],
+      "contentHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "textBytes": 0,
+      "analyzers": {
+        "directText": {
+          "status": "inspected"
+        },
+        "offlineEngine": {
+          "status": "inspected",
+          "reused": true
+        }
+      }
+    },
+    {
+      "url": "https://accounts.google.com",
+      "status": "blocked",
+      "analysis": "skipped",
+      "reason": "browser-background-denied",
+      "bytes": 0,
+      "chain": [
+        "deny-only proxy",
+        "Observed before any target document was requested in this fresh browser; proven browser background activity, denied at the proxy and never forwarded."
+      ],
+      "kind": "browser-proxy",
+      "provenance": {
+        "channel": "deny-proxy",
+        "attribution": "background",
+        "targetOrigin": false,
+        "evidenceSource": "pre-navigation",
+        "connectAuthority": "accounts.google.com:443",
+        "candidates": [
+          "https://accounts.google.com"
+        ],
+        "evidence": "Observed before any target document was requested in this fresh browser; proven browser background activity, denied at the proxy and never forwarded.",
+        "phase": "pre-navigation"
+      },
+      "resourceType": "other"
+    },
+    {
+      "url": "https://www.google.com",
+      "status": "blocked",
+      "analysis": "skipped",
+      "reason": "browser-background-denied",
+      "bytes": 0,
+      "chain": [
+        "deny-only proxy",
+        "Observed before any target document was requested in this fresh browser; proven browser background activity, denied at the proxy and never forwarded."
+      ],
+      "kind": "browser-proxy",
+      "provenance": {
+        "channel": "deny-proxy",
+        "attribution": "background",
+        "targetOrigin": false,
+        "evidenceSource": "pre-navigation",
+        "connectAuthority": "www.google.com:443",
+        "candidates": [
+          "https://www.google.com"
+        ],
+        "evidence": "Observed before any target document was requested in this fresh browser; proven browser background activity, denied at the proxy and never forwarded.",
+        "phase": "pre-navigation"
+      },
+      "resourceType": "other"
+    },
+    {
+      "url": "https://update.googleapis.com",
+      "status": "blocked",
+      "analysis": "skipped",
+      "reason": "browser-background-denied",
+      "bytes": 0,
+      "chain": [
+        "deny-only proxy",
+        "Observed before any target document was requested in this fresh browser; proven browser background activity, denied at the proxy and never forwarded."
+      ],
+      "kind": "browser-proxy",
+      "provenance": {
+        "channel": "deny-proxy",
+        "attribution": "background",
+        "targetOrigin": false,
+        "evidenceSource": "pre-navigation",
+        "connectAuthority": "update.googleapis.com:443",
+        "candidates": [
+          "https://update.googleapis.com"
+        ],
+        "evidence": "Observed before any target document was requested in this fresh browser; proven browser background activity, denied at the proxy and never forwarded.",
+        "phase": "pre-navigation"
+      },
+      "resourceType": "other"
+    },
+    {
+      "url": "https://www.google.com",
+      "status": "blocked",
+      "analysis": "skipped",
+      "reason": "browser-background-denied",
+      "bytes": 0,
+      "chain": [
+        "deny-only proxy",
+        "Observed before any target document was requested in this fresh browser; proven browser background activity, denied at the proxy and never forwarded."
+      ],
+      "kind": "browser-proxy",
+      "provenance": {
+        "channel": "deny-proxy",
+        "attribution": "background",
+        "targetOrigin": false,
+        "evidenceSource": "pre-navigation",
+        "connectAuthority": "www.google.com:443",
+        "candidates": [
+          "https://www.google.com"
+        ],
+        "evidence": "Observed before any target document was requested in this fresh browser; proven browser background activity, denied at the proxy and never forwarded.",
+        "phase": "pre-navigation"
+      },
+      "resourceType": "other"
+    },
+    {
+      "url": "https://accounts.google.com",
+      "status": "blocked",
+      "analysis": "skipped",
+      "reason": "browser-background-denied",
+      "bytes": 0,
+      "chain": [
+        "deny-only proxy",
+        "Observed before any target document was requested in this fresh browser; proven browser background activity, denied at the proxy and never forwarded."
+      ],
+      "kind": "browser-proxy",
+      "provenance": {
+        "channel": "deny-proxy",
+        "attribution": "background",
+        "targetOrigin": false,
+        "evidenceSource": "pre-navigation",
+        "connectAuthority": "accounts.google.com:443",
+        "candidates": [
+          "https://accounts.google.com"
+        ],
+        "evidence": "Observed before any target document was requested in this fresh browser; proven browser background activity, denied at the proxy and never forwarded.",
+        "phase": "pre-navigation"
+      },
+      "resourceType": "other"
+    },
+    {
+      "url": "https://accounts.google.com",
+      "status": "blocked",
+      "analysis": "skipped",
+      "reason": "unrouted-browser-traffic",
+      "bytes": 0,
+      "chain": [
+        "deny-only proxy",
+        "No page/frame/worker initiator available on this proxy request. Hostname does not establish background or harmless traffic."
+      ],
+      "kind": "browser-proxy",
+      "provenance": {
+        "channel": "deny-proxy",
+        "attribution": "unknown",
+        "targetOrigin": false,
+        "evidenceSource": "none",
+        "connectAuthority": "accounts.google.com:443",
+        "candidates": [
+          "https://accounts.google.com"
+        ],
+        "evidence": "No page/frame/worker initiator available on this proxy request. Hostname does not establish background or harmless traffic.",
+        "phase": "navigation"
+      },
+      "resourceType": "other"
+    },
+    {
+      "url": "https://accounts.google.com",
+      "status": "blocked",
+      "analysis": "skipped",
+      "reason": "unrouted-browser-traffic",
+      "bytes": 0,
+      "chain": [
+        "deny-only proxy",
+        "No page/frame/worker initiator available on this proxy request. Hostname does not establish background or harmless traffic."
+      ],
+      "kind": "browser-proxy",
+      "provenance": {
+        "channel": "deny-proxy",
+        "attribution": "unknown",
+        "targetOrigin": false,
+        "evidenceSource": "none",
+        "connectAuthority": "accounts.google.com:443",
+        "candidates": [
+          "https://accounts.google.com"
+        ],
+        "evidence": "No page/frame/worker initiator available on this proxy request. Hostname does not establish background or harmless traffic.",
+        "phase": "navigation"
+      },
+      "resourceType": "other"
+    },
+    {
+      "url": "https://android.clients.google.com",
+      "status": "blocked",
+      "analysis": "skipped",
+      "reason": "unrouted-browser-traffic",
+      "bytes": 0,
+      "chain": [
+        "deny-only proxy",
+        "No page/frame/worker initiator available on this proxy request. Hostname does not establish background or harmless traffic."
+      ],
+      "kind": "browser-proxy",
+      "provenance": {
+        "channel": "deny-proxy",
+        "attribution": "unknown",
+        "targetOrigin": false,
+        "evidenceSource": "none",
+        "connectAuthority": "android.clients.google.com:443",
+        "candidates": [
+          "https://android.clients.google.com"
+        ],
+        "evidence": "No page/frame/worker initiator available on this proxy request. Hostname does not establish background or harmless traffic.",
+        "phase": "settle"
+      },
+      "resourceType": "other"
+    },
+    {
+      "url": "http://127.0.0.1:52180/big",
+      "attemptId": 48,
+      "timings": {
+        "preflightMs": 320,
+        "rateWaitMs": 0,
+        "queueMs": 0,
+        "dnsMs": 1,
+        "connectMs": 0,
+        "headersMs": 3,
+        "bodyMs": 0,
+        "totalMs": 324,
+        "analysisMs": 653,
+        "analyzedAt": 1791432532096,
+        "engineMs": 649
+      },
+      "status": "scanned",
+      "code": 200,
+      "bytes": 65536,
+      "partial": true,
+      "chain": [
+        "http://127.0.0.1:52180/",
+        "document/base URL"
+      ],
+      "kind": "page",
+      "analysis": "analyzed",
+      "requestHeaderNames": [
+        "accept",
+        "accept-encoding",
+        "accept-language",
+        "host",
+        "user-agent"
+      ],
+      "contentType": "text/plain",
+      "httpDisposition": "success",
+      "resourceType": "page",
+      "discoveryChains": [
+        [
+          "http://127.0.0.1:52180/",
+          "document/base URL"
+        ],
+        [
+          "http://127.0.0.1:52180/",
+          "rendered page",
+          "http://127.0.0.1:52180/",
+          "document/base URL"
+        ]
+      ],
+      "contentHash": "1f8745f0d2d1387ec1af2211a3cf417b2e9e885e853472649c1d979d0e9370e3",
+      "textBytes": 65536,
+      "analyzers": {
+        "directText": {
+          "status": "inspected"
+        },
+        "offlineEngine": {
+          "status": "inspected",
+          "reused": false
+        }
+      },
+      "certainty": "confirmed"
+    },
+    {
+      "url": "http://127.0.0.1:52180/fail",
+      "attemptId": 49,
+      "timings": {
+        "preflightMs": 326,
+        "rateWaitMs": 0,
+        "queueMs": 0,
+        "dnsMs": 0,
+        "connectMs": 1,
+        "totalMs": 327,
+        "headersMs": 0
+      },
+      "status": "failed",
+      "analysis": "failed",
+      "bytes": 0,
+      "partial": false,
+      "chain": [
+        "http://127.0.0.1:52180/",
+        "document/base URL"
+      ],
+      "kind": "page",
+      "reason": "network-failure",
+      "resourceType": "page",
+      "discoveryChains": [
+        [
+          "http://127.0.0.1:52180/",
+          "document/base URL"
+        ],
+        [
+          "http://127.0.0.1:52180/",
+          "rendered page",
+          "http://127.0.0.1:52180/",
+          "document/base URL"
+        ]
+      ]
+    },
+    {
+      "url": "http://127.0.0.1:52180/fail",
+      "attemptId": 50,
+      "timings": {
+        "preflightMs": 0,
+        "rateWaitMs": 0,
+        "queueMs": 0,
+        "dnsMs": 0,
+        "connectMs": 1,
+        "totalMs": 2,
+        "headersMs": 1
+      },
+      "status": "failed",
+      "analysis": "failed",
+      "bytes": 0,
+      "partial": false,
+      "chain": [
+        "http://127.0.0.1:52180/",
+        "document/base URL"
+      ],
+      "kind": "page",
+      "reason": "network-failure",
+      "resourceType": "page",
+      "discoveryChains": [
+        [
+          "http://127.0.0.1:52180/",
+          "document/base URL"
+        ],
+        [
+          "http://127.0.0.1:52180/",
+          "rendered page",
+          "http://127.0.0.1:52180/",
+          "document/base URL"
+        ]
+      ]
+    },
+    {
+      "url": "http://127.0.0.1:52180/redirect-secret",
+      "attemptId": 52,
+      "timings": {
+        "preflightMs": 323,
+        "rateWaitMs": 0,
+        "queueMs": 0,
+        "dnsMs": 0,
+        "connectMs": 1,
+        "headersMs": 0,
+        "bodyMs": 0,
+        "totalMs": 324,
+        "analysisMs": 349,
+        "analyzedAt": 1791432532782,
+        "engineMs": 348
+      },
+      "status": "redirect",
+      "code": 302,
+      "bytes": 0,
+      "partial": false,
+      "chain": [
+        "http://127.0.0.1:52180/",
+        "document/base URL"
+      ],
+      "kind": "page",
+      "analysis": "analyzed",
+      "requestHeaderNames": [
+        "accept",
+        "accept-encoding",
+        "accept-language",
+        "host",
+        "user-agent"
+      ],
+      "contentType": "",
+      "httpDisposition": "redirect",
+      "resourceType": "page",
+      "discoveryChains": [
+        [
+          "http://127.0.0.1:52180/",
+          "document/base URL"
+        ],
+        [
+          "http://127.0.0.1:52180/",
+          "rendered page",
+          "http://127.0.0.1:52180/",
+          "document/base URL"
+        ]
+      ],
+      "contentHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "textBytes": 0,
+      "analyzers": {
+        "directText": {
+          "status": "inspected"
+        },
+        "offlineEngine": {
+          "status": "inspected",
+          "reused": true
+        }
+      }
+    },
+    {
+      "url": "http://127.0.0.1:52180/collect?api_key=[redacted]",
+      "status": "blocked",
+      "analysis": "skipped",
+      "reason": "credential-in-request",
+      "bytes": 0,
+      "chain": [
+        "http://127.0.0.1:52180/",
+        "document/base URL",
+        "http://127.0.0.1:52180/redirect-secret",
+        "HTTP redirect"
+      ],
+      "kind": "page",
+      "resourceType": "page"
+    },
+    {
+      "url": "http://127.0.0.1:52180/child",
+      "attemptId": 54,
+      "timings": {
+        "preflightMs": 326,
+        "rateWaitMs": 0,
+        "queueMs": 0,
+        "dnsMs": 0,
+        "connectMs": 1,
+        "headersMs": 0,
+        "bodyMs": 0,
+        "totalMs": 327,
+        "analysisMs": 666,
+        "analyzedAt": 1791432533777,
+        "engineMs": 665
+      },
+      "status": "scanned",
+      "code": 200,
+      "bytes": 95,
+      "partial": false,
+      "chain": [
+        "http://127.0.0.1:52180/",
+        "document/base URL"
+      ],
+      "kind": "page",
+      "analysis": "analyzed",
+      "requestHeaderNames": [
+        "accept",
+        "accept-encoding",
+        "accept-language",
+        "host",
+        "user-agent"
+      ],
+      "contentType": "text/html",
+      "httpDisposition": "success",
+      "resourceType": "page",
+      "discoveryChains": [
+        [
+          "http://127.0.0.1:52180/",
+          "document/base URL"
+        ],
+        [
+          "http://127.0.0.1:52180/",
+          "rendered page",
+          "http://127.0.0.1:52180/",
+          "document/base URL"
+        ]
+      ],
+      "contentHash": "949e8f553e19b17570e8b4634279f4be20acf6320e3a713ebed52cf67ec51e34",
+      "textBytes": 95,
+      "analyzers": {
+        "directText": {
+          "status": "inspected"
+        },
+        "offlineEngine": {
+          "status": "inspected",
+          "reused": false
+        }
+      },
+      "certainty": "confirmed"
+    },
+    {
+      "url": "http://127.0.0.1:52180/rate",
+      "attemptId": 51,
+      "timings": {
+        "preflightMs": 1806,
+        "rateWaitMs": 0,
+        "queueMs": 0,
+        "dnsMs": 0,
+        "connectMs": 1,
+        "headersMs": 0,
+        "bodyMs": 0,
+        "totalMs": 1807,
+        "analysisMs": 783,
+        "analyzedAt": 1791432534525,
+        "engineMs": 781
+      },
+      "status": "http-error",
+      "code": 429,
+      "bytes": 12,
+      "partial": false,
+      "chain": [
+        "http://127.0.0.1:52180/",
+        "document/base URL"
+      ],
+      "kind": "page",
+      "analysis": "analyzed",
+      "requestHeaderNames": [
+        "accept",
+        "accept-encoding",
+        "accept-language",
+        "host",
+        "user-agent"
+      ],
+      "contentType": "text/plain",
+      "httpDisposition": "other",
+      "resourceType": "page",
+      "discoveryChains": [
+        [
+          "http://127.0.0.1:52180/",
+          "document/base URL"
+        ],
+        [
+          "http://127.0.0.1:52180/",
+          "rendered page",
+          "http://127.0.0.1:52180/",
+          "document/base URL"
+        ]
+      ],
+      "contentHash": "a06130a5a2818ae524dd3b9b83846510af328eeeee38fb620eb0b398436cd552",
+      "textBytes": 12,
+      "analyzers": {
+        "directText": {
+          "status": "inspected"
+        },
+        "offlineEngine": {
+          "status": "inspected",
+          "reused": false
+        }
+      }
+    },
+    {
+      "url": "http://127.0.0.1:52180/rate",
+      "attemptId": 56,
+      "timings": {
+        "preflightMs": 0,
+        "rateWaitMs": 63,
+        "queueMs": 63,
+        "dnsMs": 0,
+        "connectMs": 1,
+        "headersMs": 0,
+        "bodyMs": 1,
+        "totalMs": 65,
+        "analysisMs": 348,
+        "analyzedAt": 1791432535169,
+        "engineMs": 347
+      },
+      "status": "http-error",
+      "code": 429,
+      "bytes": 12,
+      "partial": false,
+      "chain": [
+        "http://127.0.0.1:52180/",
+        "document/base URL"
+      ],
+      "kind": "page",
+      "analysis": "analyzed",
+      "requestHeaderNames": [
+        "accept",
+        "accept-encoding",
+        "accept-language",
+        "host",
+        "user-agent"
+      ],
+      "contentType": "text/plain",
+      "httpDisposition": "other",
+      "resourceType": "page",
+      "discoveryChains": [
+        [
+          "http://127.0.0.1:52180/",
+          "document/base URL"
+        ],
+        [
+          "http://127.0.0.1:52180/",
+          "rendered page",
+          "http://127.0.0.1:52180/",
+          "document/base URL"
+        ]
+      ],
+      "contentHash": "a06130a5a2818ae524dd3b9b83846510af328eeeee38fb620eb0b398436cd552",
+      "textBytes": 12,
+      "analyzers": {
+        "directText": {
+          "status": "inspected"
+        },
+        "offlineEngine": {
+          "status": "inspected",
+          "reused": true
+        }
+      },
+      "certainty": "confirmed"
+    },
+    {
+      "url": "http://127.0.0.1:52180/fallback",
+      "attemptId": 57,
+      "timings": {
+        "preflightMs": 357,
+        "rateWaitMs": 299,
+        "queueMs": 299,
+        "dnsMs": 0,
+        "connectMs": 1,
+        "headersMs": 0,
+        "bodyMs": 0,
+        "totalMs": 657,
+        "analysisMs": 695,
+        "analyzedAt": 1791432536522,
+        "engineMs": 694
+      },
+      "status": "scanned",
+      "code": 200,
+      "bytes": 61,
+      "partial": false,
+      "chain": [
+        "http://127.0.0.1:52180/",
+        "document/base URL"
+      ],
+      "kind": "page",
+      "analysis": "analyzed",
+      "requestHeaderNames": [
+        "accept",
+        "accept-encoding",
+        "accept-language",
+        "host",
+        "user-agent"
+      ],
+      "contentType": "text/html",
+      "httpDisposition": "success",
+      "resourceType": "page",
+      "discoveryChains": [
+        [
+          "http://127.0.0.1:52180/",
+          "document/base URL"
+        ],
+        [
+          "http://127.0.0.1:52180/",
+          "rendered page",
+          "http://127.0.0.1:52180/",
+          "document/base URL"
+        ]
+      ],
+      "contentHash": "718d65b3d0a3c71f38b20fdeeaeb2e85773497b1fa7272e234c91af736bdbd3d",
+      "textBytes": 61,
+      "analyzers": {
+        "directText": {
+          "status": "inspected"
+        },
+        "offlineEngine": {
+          "status": "inspected",
+          "reused": false
+        }
+      },
+      "certainty": "confirmed"
+    },
+    {
+      "url": "http://127.0.0.1:52180/child",
+      "attemptId": 58,
+      "timings": {
+        "preflightMs": 349,
+        "rateWaitMs": 337,
+        "queueMs": 337,
+        "dnsMs": 0,
+        "connectMs": 0,
+        "headersMs": 1,
+        "bodyMs": 0,
+        "totalMs": 687,
+        "analysisMs": 361,
+        "analyzedAt": 1791432536250,
+        "engineMs": 360
+      },
+      "status": "scanned",
+      "code": 200,
+      "bytes": 95,
+      "partial": false,
+      "chain": [
+        "about:blank",
+        "observed browser request"
+      ],
+      "kind": "browser",
+      "analysis": "analyzed",
+      "requestHeaderNames": [
+        "accept",
+        "accept-encoding",
+        "accept-language",
+        "host",
+        "user-agent"
+      ],
+      "contentType": "text/html",
+      "httpDisposition": "success",
+      "resourceType": "page",
+      "discoveryChains": [
+        [
+          "http://127.0.0.1:52180/",
+          "document/base URL"
+        ],
+        [
+          "http://127.0.0.1:52180/",
+          "rendered page",
+          "http://127.0.0.1:52180/",
+          "document/base URL"
+        ]
+      ],
+      "provenance": {
+        "channel": "guarded-route",
+        "attribution": "page",
+        "resourceType": "document",
+        "source": "about:blank",
+        "targetOrigin": true,
+        "evidenceSource": "frame-tree",
+        "evidence": "Playwright request routed through guarded Node transport; frame tree position and resource type recorded. Missing initiator remains unknown."
+      },
+      "contentHash": "949e8f553e19b17570e8b4634279f4be20acf6320e3a713ebed52cf67ec51e34",
+      "textBytes": 95,
+      "analyzers": {
+        "directText": {
+          "status": "inspected"
+        },
+        "offlineEngine": {
+          "status": "inspected",
+          "reused": true
+        }
+      }
+    },
+    {
+      "url": "http://127.0.0.1:52180/slow",
+      "attemptId": 55,
+      "timings": {
+        "preflightMs": 345,
+        "rateWaitMs": 632,
+        "queueMs": 632,
+        "dnsMs": 0,
+        "connectMs": 1,
+        "headersMs": 1504,
+        "bodyMs": 0,
+        "totalMs": 2482,
+        "analysisMs": 679,
+        "analyzedAt": 1791432536940,
+        "engineMs": 677
+      },
+      "status": "scanned",
+      "code": 200,
+      "bytes": 13,
+      "partial": false,
+      "chain": [
+        "http://127.0.0.1:52180/",
+        "document/base URL"
+      ],
+      "kind": "page",
+      "analysis": "analyzed",
+      "requestHeaderNames": [
+        "accept",
+        "accept-encoding",
+        "accept-language",
+        "host",
+        "user-agent"
+      ],
+      "contentType": "text/plain",
+      "httpDisposition": "success",
+      "resourceType": "page",
+      "discoveryChains": [
+        [
+          "http://127.0.0.1:52180/",
+          "document/base URL"
+        ],
+        [
+          "http://127.0.0.1:52180/",
+          "rendered page",
+          "http://127.0.0.1:52180/",
+          "document/base URL"
+        ]
+      ],
+      "contentHash": "a3e09dad59ba7c9cb9b1e951cfe99631e99219e068bac749c00d6408e55d6bac",
+      "textBytes": 13,
+      "analyzers": {
+        "directText": {
+          "status": "inspected"
+        },
+        "offlineEngine": {
+          "status": "inspected",
+          "reused": false
+        }
+      },
+      "certainty": "confirmed"
+    },
+    {
+      "url": "http://127.0.0.1:52180/nested/page",
+      "attemptId": 60,
+      "timings": {
+        "preflightMs": 324,
+        "rateWaitMs": 0,
+        "queueMs": 0,
+        "dnsMs": 1,
+        "connectMs": 0,
+        "headersMs": 1,
+        "bodyMs": 0,
+        "totalMs": 326,
+        "analysisMs": 669,
+        "analyzedAt": 1791432537518,
+        "engineMs": 668
+      },
+      "status": "scanned",
+      "code": 200,
+      "bytes": 92,
+      "partial": false,
+      "chain": [
+        "http://127.0.0.1:52180/",
+        "document/base URL",
+        "http://127.0.0.1:52180/child",
+        "document/base URL"
+      ],
+      "kind": "page",
+      "analysis": "analyzed",
+      "requestHeaderNames": [
+        "accept",
+        "accept-encoding",
+        "accept-language",
+        "host",
+        "user-agent"
+      ],
+      "contentType": "application/json",
+      "httpDisposition": "success",
+      "resourceType": "configuration",
+      "discoveryChains": [
+        [
+          "http://127.0.0.1:52180/",
+          "document/base URL",
+          "http://127.0.0.1:52180/child",
+          "document/base URL"
+        ],
+        [
+          "http://127.0.0.1:52180/sitemap.xml",
+          "http://127.0.0.1:52180/about",
+          "document/base URL"
+        ],
+        [
+          "http://127.0.0.1:52180/child",
+          "rendered page",
+          "http://127.0.0.1:52180/child",
+          "document/base URL"
+        ],
+        [
+          "about:blank",
+          "observed browser request",
+          "http://127.0.0.1:52180/about",
+          "document/base URL"
+        ],
+        [
+          "http://127.0.0.1:52180/about",
+          "rendered page",
+          "http://127.0.0.1:52180/about",
+          "document/base URL"
+        ]
+      ],
+      "contentHash": "b0446219448830c8b833f0a11279f2dd9a1c8aacd75fed56e1f135e354fa1255",
+      "textBytes": 92,
+      "analyzers": {
+        "directText": {
+          "status": "inspected"
+        },
+        "offlineEngine": {
+          "status": "inspected",
+          "reused": false
+        }
+      },
+      "certainty": "confirmed"
+    },
+    {
+      "url": "http://127.0.0.1:52180/frame",
+      "attemptId": 61,
+      "timings": {
+        "preflightMs": 339,
+        "rateWaitMs": 0,
+        "queueMs": 0,
+        "dnsMs": 0,
+        "connectMs": 1,
+        "headersMs": 0,
+        "bodyMs": 0,
+        "totalMs": 340,
+        "analysisMs": 663,
+        "analyzedAt": 1791432537945,
+        "engineMs": 662
+      },
+      "status": "scanned",
+      "code": 200,
+      "bytes": 157,
+      "partial": false,
+      "chain": [
+        "http://127.0.0.1:52180/",
+        "document/base URL",
+        "http://127.0.0.1:52180/child",
+        "frame document"
+      ],
+      "kind": "page",
+      "analysis": "analyzed",
+      "requestHeaderNames": [
+        "accept",
+        "accept-encoding",
+        "accept-language",
+        "host",
+        "user-agent"
+      ],
+      "contentType": "text/html",
+      "httpDisposition": "success",
+      "resourceType": "page",
+      "discoveryChains": [
+        [
+          "http://127.0.0.1:52180/",
+          "document/base URL",
+          "http://127.0.0.1:52180/child",
+          "frame document"
+        ],
+        [
+          "http://127.0.0.1:52180/child",
+          "rendered page",
+          "http://127.0.0.1:52180/child",
+          "frame document"
+        ]
+      ],
+      "contentHash": "44ee3804dbdbeccc4e83a5c7f6ec68116c0477447ee3f2a647a8031dd3c599f1",
+      "textBytes": 157,
+      "analyzers": {
+        "directText": {
+          "status": "inspected"
+        },
+        "offlineEngine": {
+          "status": "inspected",
+          "reused": false
+        }
+      },
+      "certainty": "confirmed"
+    },
+    {
+      "url": "http://127.0.0.1:52180/about",
+      "attemptId": 62,
+      "timings": {
+        "preflightMs": 325,
+        "rateWaitMs": 0,
+        "queueMs": 0,
+        "dnsMs": 0,
+        "connectMs": 1,
+        "headersMs": 10,
+        "bodyMs": 0,
+        "totalMs": 336,
+        "analysisMs": 789,
+        "analyzedAt": 1791432538644,
+        "engineMs": 337
+      },
+      "status": "scanned",
+      "code": 200,
+      "bytes": 131,
+      "partial": false,
+      "chain": [
+        "http://127.0.0.1:52180/sitemap.xml"
+      ],
+      "kind": "page",
+      "analysis": "analyzed",
+      "requestHeaderNames": [
+        "accept",
+        "accept-encoding",
+        "accept-language",
+        "host",
+        "user-agent"
+      ],
+      "contentType": "text/html",
+      "httpDisposition": "success",
+      "resourceType": "page",
+      "discoveryChains": [
+        [
+          "http://127.0.0.1:52180/sitemap.xml"
+        ],
+        [
+          "http://127.0.0.1:52180/",
+          "document/base URL"
+        ],
+        [
+          "http://127.0.0.1:52180/",
+          "document/base URL",
+          "http://127.0.0.1:52180/manifest.webmanifest",
+          "manifest/application JSON field start_url"
+        ],
+        [
+          "http://127.0.0.1:52180/",
+          "document/base URL",
+          "http://127.0.0.1:52180/manifest.webmanifest"
+        ],
+        [
+          "http://127.0.0.1:52180/",
+          "rendered page",
+          "http://127.0.0.1:52180/",
+          "document/base URL"
+        ]
+      ],
+      "contentHash": "432482e4344d23b2ed8a2b604893838baa0b0643ac0d1cabe56053e14ef7d088",
+      "textBytes": 131,
+      "analyzers": {
+        "directText": {
+          "status": "inspected"
+        },
+        "offlineEngine": {
+          "status": "inspected",
+          "reused": true
+        }
+      }
+    },
+    {
+      "url": "http://127.0.0.1:52180/excluded",
+      "status": "skipped",
+      "analysis": "skipped",
+      "bytes": 0,
+      "chain": [
+        "http://127.0.0.1:52180/sitemap.xml"
+      ],
+      "kind": "page",
+      "reason": "robots-exclusion"
+    },
+    {
+      "url": "http://127.0.0.1:52180/frame",
+      "attemptId": 59,
+      "timings": {
+        "preflightMs": 2252,
+        "rateWaitMs": 0,
+        "queueMs": 0,
+        "dnsMs": 0,
+        "connectMs": 1,
+        "headersMs": 1,
+        "bodyMs": 0,
+        "totalMs": 2254,
+        "analysisMs": 348,
+        "analyzedAt": 1791432538522,
+        "engineMs": 347
+      },
+      "status": "scanned",
+      "code": 200,
+      "bytes": 157,
+      "partial": false,
+      "chain": [
+        "browser page",
+        "observed browser request"
+      ],
+      "kind": "browser",
+      "analysis": "analyzed",
+      "requestHeaderNames": [
+        "accept",
+        "accept-encoding",
+        "accept-language",
+        "host",
+        "referer",
+        "user-agent"
+      ],
+      "contentType": "text/html",
+      "httpDisposition": "success",
+      "resourceType": "page",
+      "discoveryChains": [
+        [
+          "http://127.0.0.1:52180/",
+          "document/base URL",
+          "http://127.0.0.1:52180/child",
+          "frame document"
+        ],
+        [
+          "http://127.0.0.1:52180/child",
+          "rendered page",
+          "http://127.0.0.1:52180/child",
+          "frame document"
+        ]
+      ],
+      "provenance": {
+        "channel": "guarded-route",
+        "attribution": "frame",
+        "resourceType": "document",
+        "targetOrigin": true,
+        "evidenceSource": "frame-tree",
+        "evidence": "Playwright request routed through guarded Node transport; frame tree position and resource type recorded. Missing initiator remains unknown."
+      },
+      "contentHash": "44ee3804dbdbeccc4e83a5c7f6ec68116c0477447ee3f2a647a8031dd3c599f1",
+      "textBytes": 157,
+      "analyzers": {
+        "directText": {
+          "status": "inspected"
+        },
+        "offlineEngine": {
+          "status": "inspected",
+          "reused": true
+        }
+      }
+    },
+    {
+      "url": "http://127.0.0.1:52180/child#debugger-2F73D133C4878A47370C77B8BF4DE9A0-30",
+      "kind": "runtime-capture",
+      "resourceType": "runtime-capture",
+      "bytes": 114,
+      "status": "downloaded",
+      "analysis": "analyzed",
+      "chain": [
+        "http://127.0.0.1:52180/child",
+        "Debugger loaded script"
+      ],
+      "contentHash": "eab9db98a52c0c640736c6bf64246ca969e08e087eda107a20c51c2ca579f64b",
+      "analyzers": {
+        "debugger": {
+          "status": "inspected",
+          "reused": false,
+          "contentHash": "eab9db98a52c0c640736c6bf64246ca969e08e087eda107a20c51c2ca579f64b"
+        },
+        "directText": {
+          "status": "inspected"
+        },
+        "semantic": {
+          "status": "inspected",
+          "reason": "Shares http://127.0.0.1:52180/frame#inline-0",
+          "reused": true
+        }
+      },
+      "discoveryCount": 2,
+      "examples": [
+        "http://127.0.0.1:52180/frame"
+      ]
+    },
+    {
+      "url": "http://127.0.0.1:52180/api/frame",
+      "attemptId": 63,
+      "timings": {
+        "preflightMs": 804,
+        "rateWaitMs": 0,
+        "queueMs": 0,
+        "dnsMs": 0,
+        "connectMs": 1,
+        "headersMs": 0,
+        "bodyMs": 0,
+        "totalMs": 805,
+        "analysisMs": 658,
+        "analyzedAt": 1791432539663,
+        "engineMs": 657
+      },
+      "status": "scanned",
+      "code": 200,
+      "bytes": 72,
+      "partial": false,
+      "chain": [
+        "http://127.0.0.1:52180/frame",
+        "observed browser request"
+      ],
+      "kind": "browser",
+      "analysis": "analyzed",
+      "requestHeaderNames": [
+        "accept",
+        "accept-encoding",
+        "accept-language",
+        "host",
+        "referer",
+        "user-agent"
+      ],
+      "contentType": "application/json",
+      "httpDisposition": "success",
+      "resourceType": "configuration",
+      "provenance": {
+        "channel": "guarded-route",
+        "attribution": "frame",
+        "resourceType": "fetch",
+        "source": "http://127.0.0.1:52180/frame",
+        "targetOrigin": true,
+        "evidenceSource": "frame-tree",
+        "evidence": "Playwright request routed through guarded Node transport; frame tree position and resource type recorded. Missing initiator remains unknown."
+      },
+      "contentHash": "8b158e1326db7ef3564391705942e35c969c9e47d5ba23aef5bc5ef84a09d1da",
+      "textBytes": 72,
+      "analyzers": {
+        "directText": {
+          "status": "inspected"
+        },
+        "offlineEngine": {
+          "status": "inspected",
+          "reused": false
+        }
+      }
+    },
+    {
+      "url": "https://accounts.google.com",
+      "status": "blocked",
+      "analysis": "skipped",
+      "reason": "browser-background-denied",
+      "bytes": 0,
+      "chain": [
+        "deny-only proxy",
+        "Observed before any target document was requested in this fresh browser; proven browser background activity, denied at the proxy and never forwarded."
+      ],
+      "kind": "browser-proxy",
+      "provenance": {
+        "channel": "deny-proxy",
+        "attribution": "background",
+        "targetOrigin": false,
+        "evidenceSource": "pre-navigation",
+        "connectAuthority": "accounts.google.com:443",
+        "candidates": [
+          "https://accounts.google.com"
+        ],
+        "evidence": "Observed before any target document was requested in this fresh browser; proven browser background activity, denied at the proxy and never forwarded.",
+        "phase": "pre-navigation"
+      },
+      "resourceType": "other"
+    },
+    {
+      "url": "https://accounts.google.com",
+      "status": "blocked",
+      "analysis": "skipped",
+      "reason": "browser-background-denied",
+      "bytes": 0,
+      "chain": [
+        "deny-only proxy",
+        "Observed before any target document was requested in this fresh browser; proven browser background activity, denied at the proxy and never forwarded."
+      ],
+      "kind": "browser-proxy",
+      "provenance": {
+        "channel": "deny-proxy",
+        "attribution": "background",
+        "targetOrigin": false,
+        "evidenceSource": "pre-navigation",
+        "connectAuthority": "accounts.google.com:443",
+        "candidates": [
+          "https://accounts.google.com"
+        ],
+        "evidence": "Observed before any target document was requested in this fresh browser; proven browser background activity, denied at the proxy and never forwarded.",
+        "phase": "pre-navigation"
+      },
+      "resourceType": "other"
+    },
+    {
+      "url": "https://www.google.com",
+      "status": "blocked",
+      "analysis": "skipped",
+      "reason": "browser-background-denied",
+      "bytes": 0,
+      "chain": [
+        "deny-only proxy",
+        "Observed before any target document was requested in this fresh browser; proven browser background activity, denied at the proxy and never forwarded."
+      ],
+      "kind": "browser-proxy",
+      "provenance": {
+        "channel": "deny-proxy",
+        "attribution": "background",
+        "targetOrigin": false,
+        "evidenceSource": "pre-navigation",
+        "connectAuthority": "www.google.com:443",
+        "candidates": [
+          "https://www.google.com"
+        ],
+        "evidence": "Observed before any target document was requested in this fresh browser; proven browser background activity, denied at the proxy and never forwarded.",
+        "phase": "pre-navigation"
+      },
+      "resourceType": "other"
+    },
+    {
+      "url": "https://update.googleapis.com",
+      "status": "blocked",
+      "analysis": "skipped",
+      "reason": "browser-background-denied",
+      "bytes": 0,
+      "chain": [
+        "deny-only proxy",
+        "Observed before any target document was requested in this fresh browser; proven browser background activity, denied at the proxy and never forwarded."
+      ],
+      "kind": "browser-proxy",
+      "provenance": {
+        "channel": "deny-proxy",
+        "attribution": "background",
+        "targetOrigin": false,
+        "evidenceSource": "pre-navigation",
+        "connectAuthority": "update.googleapis.com:443",
+        "candidates": [
+          "https://update.googleapis.com"
+        ],
+        "evidence": "Observed before any target document was requested in this fresh browser; proven browser background activity, denied at the proxy and never forwarded.",
+        "phase": "pre-navigation"
+      },
+      "resourceType": "other"
+    },
+    {
+      "url": "https://www.google.com",
+      "status": "blocked",
+      "analysis": "skipped",
+      "reason": "browser-background-denied",
+      "bytes": 0,
+      "chain": [
+        "deny-only proxy",
+        "Observed before any target document was requested in this fresh browser; proven browser background activity, denied at the proxy and never forwarded."
+      ],
+      "kind": "browser-proxy",
+      "provenance": {
+        "channel": "deny-proxy",
+        "attribution": "background",
+        "targetOrigin": false,
+        "evidenceSource": "pre-navigation",
+        "connectAuthority": "www.google.com:443",
+        "candidates": [
+          "https://www.google.com"
+        ],
+        "evidence": "Observed before any target document was requested in this fresh browser; proven browser background activity, denied at the proxy and never forwarded.",
+        "phase": "pre-navigation"
+      },
+      "resourceType": "other"
+    },
+    {
+      "url": "https://accounts.google.com",
+      "status": "blocked",
+      "analysis": "skipped",
+      "reason": "unrouted-browser-traffic",
+      "bytes": 0,
+      "chain": [
+        "deny-only proxy",
+        "No page/frame/worker initiator available on this proxy request. Hostname does not establish background or harmless traffic."
+      ],
+      "kind": "browser-proxy",
+      "provenance": {
+        "channel": "deny-proxy",
+        "attribution": "unknown",
+        "targetOrigin": false,
+        "evidenceSource": "none",
+        "connectAuthority": "accounts.google.com:443",
+        "candidates": [
+          "https://accounts.google.com"
+        ],
+        "evidence": "No page/frame/worker initiator available on this proxy request. Hostname does not establish background or harmless traffic.",
+        "phase": "navigation"
+      },
+      "resourceType": "other"
+    },
+    {
+      "url": "https://accounts.google.com",
+      "status": "blocked",
+      "analysis": "skipped",
+      "reason": "unrouted-browser-traffic",
+      "bytes": 0,
+      "chain": [
+        "deny-only proxy",
+        "No page/frame/worker initiator available on this proxy request. Hostname does not establish background or harmless traffic."
+      ],
+      "kind": "browser-proxy",
+      "provenance": {
+        "channel": "deny-proxy",
+        "attribution": "unknown",
+        "targetOrigin": false,
+        "evidenceSource": "none",
+        "connectAuthority": "accounts.google.com:443",
+        "candidates": [
+          "https://accounts.google.com"
+        ],
+        "evidence": "No page/frame/worker initiator available on this proxy request. Hostname does not establish background or harmless traffic.",
+        "phase": "settle"
+      },
+      "resourceType": "other"
+    },
+    {
+      "url": "https://android.clients.google.com",
+      "status": "blocked",
+      "analysis": "skipped",
+      "reason": "unrouted-browser-traffic",
+      "bytes": 0,
+      "chain": [
+        "deny-only proxy",
+        "No page/frame/worker initiator available on this proxy request. Hostname does not establish background or harmless traffic."
+      ],
+      "kind": "browser-proxy",
+      "provenance": {
+        "channel": "deny-proxy",
+        "attribution": "unknown",
+        "targetOrigin": false,
+        "evidenceSource": "none",
+        "connectAuthority": "android.clients.google.com:443",
+        "candidates": [
+          "https://android.clients.google.com"
+        ],
+        "evidence": "No page/frame/worker initiator available on this proxy request. Hostname does not establish background or harmless traffic.",
+        "phase": "settle"
+      },
+      "resourceType": "other"
+    },
+    {
+      "url": "http://127.0.0.1:52180/fallback",
+      "attemptId": 64,
+      "timings": {
+        "preflightMs": 345,
+        "rateWaitMs": 0,
+        "queueMs": 0,
+        "dnsMs": 0,
+        "connectMs": 1,
+        "headersMs": 0,
+        "bodyMs": 1,
+        "totalMs": 347,
+        "analysisMs": 346,
+        "analyzedAt": 1791432543864,
+        "engineMs": 346
+      },
+      "status": "scanned",
+      "code": 200,
+      "bytes": 61,
+      "partial": false,
+      "chain": [
+        "about:blank",
+        "observed browser request"
+      ],
+      "kind": "browser",
+      "analysis": "analyzed",
+      "requestHeaderNames": [
+        "accept",
+        "accept-encoding",
+        "accept-language",
+        "host",
+        "user-agent"
+      ],
+      "contentType": "text/html",
+      "httpDisposition": "success",
+      "resourceType": "page",
+      "discoveryChains": [
+        [
+          "http://127.0.0.1:52180/",
+          "document/base URL"
+        ],
+        [
+          "http://127.0.0.1:52180/",
+          "rendered page",
+          "http://127.0.0.1:52180/",
+          "document/base URL"
+        ]
+      ],
+      "provenance": {
+        "channel": "guarded-route",
+        "attribution": "page",
+        "resourceType": "document",
+        "source": "about:blank",
+        "targetOrigin": true,
+        "evidenceSource": "frame-tree",
+        "evidence": "Playwright request routed through guarded Node transport; frame tree position and resource type recorded. Missing initiator remains unknown."
+      },
+      "contentHash": "718d65b3d0a3c71f38b20fdeeaeb2e85773497b1fa7272e234c91af736bdbd3d",
+      "textBytes": 61,
+      "analyzers": {
+        "directText": {
+          "status": "inspected"
+        },
+        "offlineEngine": {
+          "status": "inspected",
+          "reused": true
+        }
+      }
+    },
+    {
+      "url": "https://accounts.google.com",
+      "status": "blocked",
+      "analysis": "skipped",
+      "reason": "browser-background-denied",
+      "bytes": 0,
+      "chain": [
+        "deny-only proxy",
+        "Observed before any target document was requested in this fresh browser; proven browser background activity, denied at the proxy and never forwarded."
+      ],
+      "kind": "browser-proxy",
+      "provenance": {
+        "channel": "deny-proxy",
+        "attribution": "background",
+        "targetOrigin": false,
+        "evidenceSource": "pre-navigation",
+        "connectAuthority": "accounts.google.com:443",
+        "candidates": [
+          "https://accounts.google.com"
+        ],
+        "evidence": "Observed before any target document was requested in this fresh browser; proven browser background activity, denied at the proxy and never forwarded.",
+        "phase": "pre-navigation"
+      },
+      "resourceType": "other"
+    },
+    {
+      "url": "https://www.google.com",
+      "status": "blocked",
+      "analysis": "skipped",
+      "reason": "browser-background-denied",
+      "bytes": 0,
+      "chain": [
+        "deny-only proxy",
+        "Observed before any target document was requested in this fresh browser; proven browser background activity, denied at the proxy and never forwarded."
+      ],
+      "kind": "browser-proxy",
+      "provenance": {
+        "channel": "deny-proxy",
+        "attribution": "background",
+        "targetOrigin": false,
+        "evidenceSource": "pre-navigation",
+        "connectAuthority": "www.google.com:443",
+        "candidates": [
+          "https://www.google.com"
+        ],
+        "evidence": "Observed before any target document was requested in this fresh browser; proven browser background activity, denied at the proxy and never forwarded.",
+        "phase": "pre-navigation"
+      },
+      "resourceType": "other"
+    },
+    {
+      "url": "https://update.googleapis.com",
+      "status": "blocked",
+      "analysis": "skipped",
+      "reason": "browser-background-denied",
+      "bytes": 0,
+      "chain": [
+        "deny-only proxy",
+        "Observed before any target document was requested in this fresh browser; proven browser background activity, denied at the proxy and never forwarded."
+      ],
+      "kind": "browser-proxy",
+      "provenance": {
+        "channel": "deny-proxy",
+        "attribution": "background",
+        "targetOrigin": false,
+        "evidenceSource": "pre-navigation",
+        "connectAuthority": "update.googleapis.com:443",
+        "candidates": [
+          "https://update.googleapis.com"
+        ],
+        "evidence": "Observed before any target document was requested in this fresh browser; proven browser background activity, denied at the proxy and never forwarded.",
+        "phase": "pre-navigation"
+      },
+      "resourceType": "other"
+    },
+    {
+      "url": "https://www.google.com",
+      "status": "blocked",
+      "analysis": "skipped",
+      "reason": "browser-background-denied",
+      "bytes": 0,
+      "chain": [
+        "deny-only proxy",
+        "Observed before any target document was requested in this fresh browser; proven browser background activity, denied at the proxy and never forwarded."
+      ],
+      "kind": "browser-proxy",
+      "provenance": {
+        "channel": "deny-proxy",
+        "attribution": "background",
+        "targetOrigin": false,
+        "evidenceSource": "pre-navigation",
+        "connectAuthority": "www.google.com:443",
+        "candidates": [
+          "https://www.google.com"
+        ],
+        "evidence": "Observed before any target document was requested in this fresh browser; proven browser background activity, denied at the proxy and never forwarded.",
+        "phase": "pre-navigation"
+      },
+      "resourceType": "other"
+    },
+    {
+      "url": "https://accounts.google.com",
+      "status": "blocked",
+      "analysis": "skipped",
+      "reason": "unrouted-browser-traffic",
+      "bytes": 0,
+      "chain": [
+        "deny-only proxy",
+        "No page/frame/worker initiator available on this proxy request. Hostname does not establish background or harmless traffic."
+      ],
+      "kind": "browser-proxy",
+      "provenance": {
+        "channel": "deny-proxy",
+        "attribution": "unknown",
+        "targetOrigin": false,
+        "evidenceSource": "none",
+        "connectAuthority": "accounts.google.com:443",
+        "candidates": [
+          "https://accounts.google.com"
+        ],
+        "evidence": "No page/frame/worker initiator available on this proxy request. Hostname does not establish background or harmless traffic.",
+        "phase": "navigation"
+      },
+      "resourceType": "other"
+    },
+    {
+      "url": "https://android.clients.google.com",
+      "status": "blocked",
+      "analysis": "skipped",
+      "reason": "unrouted-browser-traffic",
+      "bytes": 0,
+      "chain": [
+        "deny-only proxy",
+        "No page/frame/worker initiator available on this proxy request. Hostname does not establish background or harmless traffic."
+      ],
+      "kind": "browser-proxy",
+      "provenance": {
+        "channel": "deny-proxy",
+        "attribution": "unknown",
+        "targetOrigin": false,
+        "evidenceSource": "none",
+        "connectAuthority": "android.clients.google.com:443",
+        "candidates": [
+          "https://android.clients.google.com"
+        ],
+        "evidence": "No page/frame/worker initiator available on this proxy request. Hostname does not establish background or harmless traffic.",
+        "phase": "unload"
+      },
+      "resourceType": "other"
+    },
+    {
+      "url": "http://127.0.0.1:52180/frame",
+      "attemptId": 65,
+      "timings": {
+        "preflightMs": 341,
+        "rateWaitMs": 0,
+        "queueMs": 0,
+        "dnsMs": 0,
+        "connectMs": 1,
+        "headersMs": 1,
+        "bodyMs": 0,
+        "totalMs": 343,
+        "analysisMs": 351,
+        "analyzedAt": 1791432548009,
+        "engineMs": 350
+      },
+      "status": "scanned",
+      "code": 200,
+      "bytes": 157,
+      "partial": false,
+      "chain": [
+        "about:blank",
+        "observed browser request"
+      ],
+      "kind": "browser",
+      "analysis": "analyzed",
+      "requestHeaderNames": [
+        "accept",
+        "accept-encoding",
+        "accept-language",
+        "host",
+        "user-agent"
+      ],
+      "contentType": "text/html",
+      "httpDisposition": "success",
+      "resourceType": "page",
+      "discoveryChains": [
+        [
+          "http://127.0.0.1:52180/",
+          "document/base URL",
+          "http://127.0.0.1:52180/child",
+          "frame document"
+        ],
+        [
+          "http://127.0.0.1:52180/child",
+          "rendered page",
+          "http://127.0.0.1:52180/child",
+          "frame document"
+        ]
+      ],
+      "provenance": {
+        "channel": "guarded-route",
+        "attribution": "page",
+        "resourceType": "document",
+        "source": "about:blank",
+        "targetOrigin": true,
+        "evidenceSource": "frame-tree",
+        "evidence": "Playwright request routed through guarded Node transport; frame tree position and resource type recorded. Missing initiator remains unknown."
+      },
+      "contentHash": "44ee3804dbdbeccc4e83a5c7f6ec68116c0477447ee3f2a647a8031dd3c599f1",
+      "textBytes": 157,
+      "analyzers": {
+        "directText": {
+          "status": "inspected"
+        },
+        "offlineEngine": {
+          "status": "inspected",
+          "reused": true
+        }
+      }
+    },
+    {
+      "url": "http://127.0.0.1:52180/api/frame",
+      "attemptId": 66,
+      "timings": {
+        "preflightMs": 0,
+        "rateWaitMs": 32,
+        "queueMs": 32,
+        "dnsMs": 0,
+        "connectMs": 1,
+        "headersMs": 0,
+        "bodyMs": 0,
+        "totalMs": 33,
+        "analysisMs": 340,
+        "analyzedAt": 1791432548057,
+        "engineMs": 339
+      },
+      "status": "scanned",
+      "code": 200,
+      "bytes": 72,
+      "partial": false,
+      "chain": [
+        "http://127.0.0.1:52180/frame",
+        "observed browser request"
+      ],
+      "kind": "browser",
+      "analysis": "analyzed",
+      "requestHeaderNames": [
+        "accept",
+        "accept-encoding",
+        "accept-language",
+        "host",
+        "referer",
+        "user-agent"
+      ],
+      "contentType": "application/json",
+      "httpDisposition": "success",
+      "resourceType": "configuration",
+      "provenance": {
+        "channel": "guarded-route",
+        "attribution": "page",
+        "resourceType": "fetch",
+        "source": "http://127.0.0.1:52180/frame",
+        "targetOrigin": true,
+        "evidenceSource": "frame-tree",
+        "evidence": "Playwright request routed through guarded Node transport; frame tree position and resource type recorded. Missing initiator remains unknown."
+      },
+      "contentHash": "8b158e1326db7ef3564391705942e35c969c9e47d5ba23aef5bc5ef84a09d1da",
+      "textBytes": 72,
+      "analyzers": {
+        "directText": {
+          "status": "inspected"
+        },
+        "offlineEngine": {
+          "status": "inspected",
+          "reused": true
+        }
+      }
+    },
+    {
+      "url": "https://accounts.google.com",
+      "status": "blocked",
+      "analysis": "skipped",
+      "reason": "browser-background-denied",
+      "bytes": 0,
+      "chain": [
+        "deny-only proxy",
+        "Observed before any target document was requested in this fresh browser; proven browser background activity, denied at the proxy and never forwarded."
+      ],
+      "kind": "browser-proxy",
+      "provenance": {
+        "channel": "deny-proxy",
+        "attribution": "background",
+        "targetOrigin": false,
+        "evidenceSource": "pre-navigation",
+        "connectAuthority": "accounts.google.com:443",
+        "candidates": [
+          "https://accounts.google.com"
+        ],
+        "evidence": "Observed before any target document was requested in this fresh browser; proven browser background activity, denied at the proxy and never forwarded.",
+        "phase": "pre-navigation"
+      },
+      "resourceType": "other"
+    },
+    {
+      "url": "https://www.google.com",
+      "status": "blocked",
+      "analysis": "skipped",
+      "reason": "browser-background-denied",
+      "bytes": 0,
+      "chain": [
+        "deny-only proxy",
+        "Observed before any target document was requested in this fresh browser; proven browser background activity, denied at the proxy and never forwarded."
+      ],
+      "kind": "browser-proxy",
+      "provenance": {
+        "channel": "deny-proxy",
+        "attribution": "background",
+        "targetOrigin": false,
+        "evidenceSource": "pre-navigation",
+        "connectAuthority": "www.google.com:443",
+        "candidates": [
+          "https://www.google.com"
+        ],
+        "evidence": "Observed before any target document was requested in this fresh browser; proven browser background activity, denied at the proxy and never forwarded.",
+        "phase": "pre-navigation"
+      },
+      "resourceType": "other"
+    },
+    {
+      "url": "https://update.googleapis.com",
+      "status": "blocked",
+      "analysis": "skipped",
+      "reason": "browser-background-denied",
+      "bytes": 0,
+      "chain": [
+        "deny-only proxy",
+        "Observed before any target document was requested in this fresh browser; proven browser background activity, denied at the proxy and never forwarded."
+      ],
+      "kind": "browser-proxy",
+      "provenance": {
+        "channel": "deny-proxy",
+        "attribution": "background",
+        "targetOrigin": false,
+        "evidenceSource": "pre-navigation",
+        "connectAuthority": "update.googleapis.com:443",
+        "candidates": [
+          "https://update.googleapis.com"
+        ],
+        "evidence": "Observed before any target document was requested in this fresh browser; proven browser background activity, denied at the proxy and never forwarded.",
+        "phase": "pre-navigation"
+      },
+      "resourceType": "other"
+    },
+    {
+      "url": "https://www.google.com",
+      "status": "blocked",
+      "analysis": "skipped",
+      "reason": "browser-background-denied",
+      "bytes": 0,
+      "chain": [
+        "deny-only proxy",
+        "Observed before any target document was requested in this fresh browser; proven browser background activity, denied at the proxy and never forwarded."
+      ],
+      "kind": "browser-proxy",
+      "provenance": {
+        "channel": "deny-proxy",
+        "attribution": "background",
+        "targetOrigin": false,
+        "evidenceSource": "pre-navigation",
+        "connectAuthority": "www.google.com:443",
+        "candidates": [
+          "https://www.google.com"
+        ],
+        "evidence": "Observed before any target document was requested in this fresh browser; proven browser background activity, denied at the proxy and never forwarded.",
+        "phase": "pre-navigation"
+      },
+      "resourceType": "other"
+    },
+    {
+      "url": "https://accounts.google.com",
+      "status": "blocked",
+      "analysis": "skipped",
+      "reason": "unrouted-browser-traffic",
+      "bytes": 0,
+      "chain": [
+        "deny-only proxy",
+        "No page/frame/worker initiator available on this proxy request. Hostname does not establish background or harmless traffic."
+      ],
+      "kind": "browser-proxy",
+      "provenance": {
+        "channel": "deny-proxy",
+        "attribution": "unknown",
+        "targetOrigin": false,
+        "evidenceSource": "none",
+        "connectAuthority": "accounts.google.com:443",
+        "candidates": [
+          "https://accounts.google.com"
+        ],
+        "evidence": "No page/frame/worker initiator available on this proxy request. Hostname does not establish background or harmless traffic.",
+        "phase": "navigation"
+      },
+      "resourceType": "other"
+    },
+    {
+      "url": "http://127.0.0.1:52180/about",
+      "attemptId": 67,
+      "timings": {
+        "preflightMs": 328,
+        "rateWaitMs": 0,
+        "queueMs": 0,
+        "dnsMs": 1,
+        "connectMs": 0,
+        "headersMs": 1,
+        "bodyMs": 0,
+        "totalMs": 330,
+        "analysisMs": 324,
+        "analyzedAt": 1791432551842,
+        "engineMs": 322
+      },
+      "status": "scanned",
+      "code": 200,
+      "bytes": 131,
+      "partial": false,
+      "chain": [
+        "about:blank",
+        "observed browser request"
+      ],
+      "kind": "browser",
+      "analysis": "analyzed",
+      "requestHeaderNames": [
+        "accept",
+        "accept-encoding",
+        "accept-language",
+        "host",
+        "user-agent"
+      ],
+      "contentType": "text/html",
+      "httpDisposition": "success",
+      "resourceType": "page",
+      "discoveryChains": [
+        [
+          "http://127.0.0.1:52180/sitemap.xml"
+        ],
+        [
+          "http://127.0.0.1:52180/",
+          "document/base URL"
+        ],
+        [
+          "http://127.0.0.1:52180/",
+          "document/base URL",
+          "http://127.0.0.1:52180/manifest.webmanifest",
+          "manifest/application JSON field start_url"
+        ],
+        [
+          "http://127.0.0.1:52180/",
+          "document/base URL",
+          "http://127.0.0.1:52180/manifest.webmanifest"
+        ],
+        [
+          "http://127.0.0.1:52180/",
+          "rendered page",
+          "http://127.0.0.1:52180/",
+          "document/base URL"
+        ]
+      ],
+      "provenance": {
+        "channel": "guarded-route",
+        "attribution": "page",
+        "resourceType": "document",
+        "source": "about:blank",
+        "targetOrigin": true,
+        "evidenceSource": "frame-tree",
+        "evidence": "Playwright request routed through guarded Node transport; frame tree position and resource type recorded. Missing initiator remains unknown."
+      },
+      "contentHash": "432482e4344d23b2ed8a2b604893838baa0b0643ac0d1cabe56053e14ef7d088",
+      "textBytes": 131,
+      "analyzers": {
+        "directText": {
+          "status": "inspected"
+        },
+        "offlineEngine": {
+          "status": "inspected",
+          "reused": true
+        }
+      }
+    },
+    {
+      "url": "https://accounts.google.com",
+      "status": "blocked",
+      "analysis": "skipped",
+      "reason": "browser-background-denied",
+      "bytes": 0,
+      "chain": [
+        "deny-only proxy",
+        "Observed before any target document was requested in this fresh browser; proven browser background activity, denied at the proxy and never forwarded."
+      ],
+      "kind": "browser-proxy",
+      "provenance": {
+        "channel": "deny-proxy",
+        "attribution": "background",
+        "targetOrigin": false,
+        "evidenceSource": "pre-navigation",
+        "connectAuthority": "accounts.google.com:443",
+        "candidates": [
+          "https://accounts.google.com"
+        ],
+        "evidence": "Observed before any target document was requested in this fresh browser; proven browser background activity, denied at the proxy and never forwarded.",
+        "phase": "pre-navigation"
+      },
+      "resourceType": "other"
+    },
+    {
+      "url": "https://www.google.com",
+      "status": "blocked",
+      "analysis": "skipped",
+      "reason": "browser-background-denied",
+      "bytes": 0,
+      "chain": [
+        "deny-only proxy",
+        "Observed before any target document was requested in this fresh browser; proven browser background activity, denied at the proxy and never forwarded."
+      ],
+      "kind": "browser-proxy",
+      "provenance": {
+        "channel": "deny-proxy",
+        "attribution": "background",
+        "targetOrigin": false,
+        "evidenceSource": "pre-navigation",
+        "connectAuthority": "www.google.com:443",
+        "candidates": [
+          "https://www.google.com"
+        ],
+        "evidence": "Observed before any target document was requested in this fresh browser; proven browser background activity, denied at the proxy and never forwarded.",
+        "phase": "pre-navigation"
+      },
+      "resourceType": "other"
+    },
+    {
+      "url": "https://update.googleapis.com",
+      "status": "blocked",
+      "analysis": "skipped",
+      "reason": "browser-background-denied",
+      "bytes": 0,
+      "chain": [
+        "deny-only proxy",
+        "Observed before any target document was requested in this fresh browser; proven browser background activity, denied at the proxy and never forwarded."
+      ],
+      "kind": "browser-proxy",
+      "provenance": {
+        "channel": "deny-proxy",
+        "attribution": "background",
+        "targetOrigin": false,
+        "evidenceSource": "pre-navigation",
+        "connectAuthority": "update.googleapis.com:443",
+        "candidates": [
+          "https://update.googleapis.com"
+        ],
+        "evidence": "Observed before any target document was requested in this fresh browser; proven browser background activity, denied at the proxy and never forwarded.",
+        "phase": "pre-navigation"
+      },
+      "resourceType": "other"
+    },
+    {
+      "url": "https://www.google.com",
+      "status": "blocked",
+      "analysis": "skipped",
+      "reason": "browser-background-denied",
+      "bytes": 0,
+      "chain": [
+        "deny-only proxy",
+        "Observed before any target document was requested in this fresh browser; proven browser background activity, denied at the proxy and never forwarded."
+      ],
+      "kind": "browser-proxy",
+      "provenance": {
+        "channel": "deny-proxy",
+        "attribution": "background",
+        "targetOrigin": false,
+        "evidenceSource": "pre-navigation",
+        "connectAuthority": "www.google.com:443",
+        "candidates": [
+          "https://www.google.com"
+        ],
+        "evidence": "Observed before any target document was requested in this fresh browser; proven browser background activity, denied at the proxy and never forwarded.",
+        "phase": "pre-navigation"
+      },
+      "resourceType": "other"
+    },
+    {
+      "url": "https://accounts.google.com",
+      "status": "blocked",
+      "analysis": "skipped",
+      "reason": "unrouted-browser-traffic",
+      "bytes": 0,
+      "chain": [
+        "deny-only proxy",
+        "No page/frame/worker initiator available on this proxy request. Hostname does not establish background or harmless traffic."
+      ],
+      "kind": "browser-proxy",
+      "provenance": {
+        "channel": "deny-proxy",
+        "attribution": "unknown",
+        "targetOrigin": false,
+        "evidenceSource": "none",
+        "connectAuthority": "accounts.google.com:443",
+        "candidates": [
+          "https://accounts.google.com"
+        ],
+        "evidence": "No page/frame/worker initiator available on this proxy request. Hostname does not establish background or harmless traffic.",
+        "phase": "navigation"
+      },
+      "resourceType": "other"
+    },
+    {
+      "url": "https://android.clients.google.com",
+      "status": "blocked",
+      "analysis": "skipped",
+      "reason": "unrouted-browser-traffic",
+      "bytes": 0,
+      "chain": [
+        "deny-only proxy",
+        "No page/frame/worker initiator available on this proxy request. Hostname does not establish background or harmless traffic."
+      ],
+      "kind": "browser-proxy",
+      "provenance": {
+        "channel": "deny-proxy",
+        "attribution": "unknown",
+        "targetOrigin": false,
+        "evidenceSource": "none",
+        "connectAuthority": "android.clients.google.com:443",
+        "candidates": [
+          "https://android.clients.google.com"
+        ],
+        "evidence": "No page/frame/worker initiator available on this proxy request. Hostname does not establish background or harmless traffic.",
+        "phase": "scroll"
+      },
+      "resourceType": "other"
+    }
+  ],
+  "limitations": [
+    {
+      "code": "scope",
+      "detail": "2 third-party origins were referenced (10 references) and not scanned. Excluded origins are not counted as websites.",
+      "incomplete": false,
+      "count": 10,
+      "examples": [
+        "http://127.0.0.1:52179",
+        "http://127.0.0.1:52181"
+      ],
+      "origin": "http://127.0.0.1:52180"
+    },
+    {
+      "code": "browser-disabled-channels",
+      "detail": "Service workers, WebSockets, WebRTC, WebTransport and downloads are disabled; the per-visit profile and its caches are deleted afterwards. No clicks/forms or user gestures; only normal page loading. Browser coverage is bounded and may differ from an ordinary browser.",
+      "incomplete": false,
+      "origin": "http://127.0.0.1:52180"
+    },
+    {
+      "code": "websocket-disabled",
+      "url": "ws://127.0.0.1:52180/socket",
+      "detail": "Request blocked: websocket-disabled.",
+      "incomplete": false,
+      "origin": "http://127.0.0.1:52180"
+    },
+    {
+      "code": "map-unavailable",
+      "url": "http://127.0.0.1:52180/inline.js.map",
+      "detail": "Adjacent map check returned fallback/non-map content.",
+      "incomplete": false,
+      "origin": "http://127.0.0.1:52180"
+    },
+    {
+      "code": "credential-in-request",
+      "url": "http://127.0.0.1:52180/collect?api_key=[redacted]",
+      "detail": "Locally observed credential-bearing request was blocked before transmission.",
+      "incomplete": false,
+      "origin": "http://127.0.0.1:52180"
+    },
+    {
+      "code": "credential-in-request",
+      "url": "http://127.0.0.1:52180/collect",
+      "detail": "Locally observed credential-bearing request was blocked before transmission.",
+      "incomplete": false,
+      "origin": "http://127.0.0.1:52180"
+    },
+    {
+      "code": "method",
+      "url": "http://127.0.0.1:52180/write",
+      "detail": "Request blocked: method.",
+      "incomplete": false,
+      "origin": "http://127.0.0.1:52180"
+    },
+    {
+      "code": "destructive-get",
+      "url": "http://127.0.0.1:52180/delete",
+      "detail": "Request blocked: destructive-get.",
+      "incomplete": false,
+      "origin": "http://127.0.0.1:52180"
+    },
+    {
+      "code": "credential-in-request",
+      "url": "http://127.0.0.1:52180/collect?api_key=[redacted]",
+      "detail": "Locally observed credential-bearing request was blocked before transmission.",
+      "incomplete": false,
+      "origin": "http://127.0.0.1:52180"
+    },
+    {
+      "code": "browser-readiness-timeout",
+      "url": "http://127.0.0.1:52180/",
+      "detail": "A successful document committed but DOM readiness was not observed within the limit. Available rendered/config/storage content is still inspected; application readiness and missing scripts remain unknown.",
+      "incomplete": true,
+      "origin": "http://127.0.0.1:52180"
+    },
+    {
+      "code": "map-unavailable",
+      "url": "http://127.0.0.1:52180/lazy.js.map",
+      "detail": "Adjacent map check returned fallback/non-map content.",
+      "incomplete": false,
+      "origin": "http://127.0.0.1:52180"
+    },
+    {
+      "code": "browser-settle-deadline",
+      "url": "http://127.0.0.1:52180/",
+      "detail": "Observed resource activity did not settle before the explicit page deadline (2 requests waiting in the local rate-limit queue, 0 waiting on the network); later modules/responses remain unknown.",
+      "incomplete": true,
+      "origin": "http://127.0.0.1:52180"
+    },
+    {
+      "code": "map-unavailable",
+      "url": "http://127.0.0.1:52180/worker.js.map",
+      "detail": "Adjacent map check returned fallback/non-map content.",
+      "incomplete": false,
+      "origin": "http://127.0.0.1:52180"
+    },
+    {
+      "code": "map-unavailable",
+      "url": "http://127.0.0.1:52180/sw.js.map",
+      "detail": "Adjacent map check returned fallback/non-map content.",
+      "incomplete": false,
+      "origin": "http://127.0.0.1:52180"
+    },
+    {
+      "code": "credential-in-request",
+      "url": "http://127.0.0.1:52180/scroll-collect?api_key=[redacted]",
+      "detail": "Locally observed credential-bearing request was blocked before transmission.",
+      "incomplete": false,
+      "origin": "http://127.0.0.1:52180"
+    },
+    {
+      "code": "map-unavailable",
+      "url": "http://127.0.0.1:52180/header-map.js.map",
+      "detail": "Adjacent map check returned fallback/non-map content.",
+      "incomplete": false,
+      "origin": "http://127.0.0.1:52180"
+    },
+    {
+      "code": "browser-background-denied",
+      "detail": "4 browser background connections (observed before any target document was requested) were denied at the proxy and never forwarded. Hostnames alone never prove background traffic; only pre-navigation timing does.",
+      "incomplete": false,
+      "count": 4,
+      "examples": [
+        "accounts.google.com",
+        "www.google.com",
+        "update.googleapis.com"
+      ],
+      "origin": "http://127.0.0.1:52180"
+    },
+    {
+      "code": "unrouted-browser-traffic",
+      "url": "https://accounts.google.com",
+      "detail": "Request blocked: unrouted-browser-traffic.",
+      "incomplete": true,
+      "attribution": "unknown",
+      "targetOrigin": false,
+      "origin": "http://127.0.0.1:52180"
+    },
+    {
+      "code": "unrouted-browser-traffic",
+      "url": "https://android.clients.google.com",
+      "detail": "Request blocked: unrouted-browser-traffic.",
+      "incomplete": true,
+      "attribution": "unknown",
+      "targetOrigin": false,
+      "origin": "http://127.0.0.1:52180"
+    },
+    {
+      "code": "authentication-challenge",
+      "url": "http://127.0.0.1:52180/login",
+      "detail": "HTTP 401. Authentication challenge observed; no login or credential use attempted.",
+      "incomplete": true,
+      "origin": "http://127.0.0.1:52180"
+    },
+    {
+      "code": "size-limit",
+      "url": "http://127.0.0.1:52180/big",
+      "detail": "Decoded response inspected only up to resource/origin/project byte limit.",
+      "incomplete": true,
+      "origin": "http://127.0.0.1:52180"
+    },
+    {
+      "code": "complete-document-unavailable",
+      "url": "http://127.0.0.1:52180/big",
+      "detail": "Download/decode was truncated. Retained prefix receives text detection; complete-document parser, JSON and module reconstruction are incomplete.",
+      "incomplete": true,
+      "origin": "http://127.0.0.1:52180"
+    },
+    {
+      "code": "network-failure",
+      "url": "http://127.0.0.1:52180/fail",
+      "attemptId": 49,
+      "detail": "Network attempt failed during headers; timings distinguish local processing from network waits. A timeout does not establish a remote cause. Raw exception omitted.",
+      "incomplete": true,
+      "origin": "http://127.0.0.1:52180"
+    },
+    {
+      "code": "network-failure",
+      "url": "http://127.0.0.1:52180/fail",
+      "attemptId": 50,
+      "detail": "Network attempt failed during headers; timings distinguish local processing from network waits. A timeout does not establish a remote cause. Raw exception omitted.",
+      "incomplete": true,
+      "origin": "http://127.0.0.1:52180"
+    },
+    {
+      "code": "semantic-incomplete-document",
+      "url": "http://127.0.0.1:52180/big",
+      "detail": "A truncated response cannot participate in complete-document static reconstruction. Retained text still inspected.",
+      "incomplete": true,
+      "origin": "http://127.0.0.1:52180"
+    },
+    {
+      "code": "rate-limit",
+      "url": "http://127.0.0.1:52180/rate",
+      "detail": "Rate limit/unavailability observed; backing off this origin without aggressive retries.",
+      "incomplete": true,
+      "origin": "http://127.0.0.1:52180"
+    },
+    {
+      "code": "http-unavailable",
+      "url": "http://127.0.0.1:52180/rate",
+      "detail": "HTTP 429. Bounded response inspection is separate from successful application-source coverage.",
+      "incomplete": true,
+      "origin": "http://127.0.0.1:52180"
+    },
+    {
+      "code": "robots-exclusion",
+      "url": "http://127.0.0.1:52180/excluded",
+      "detail": "Public page excluded by robots.txt. The owner-authorized audit setting can include it without authenticating.",
+      "incomplete": true,
+      "origin": "http://127.0.0.1:52180"
+    },
+    {
+      "code": "browser-settle-deadline",
+      "url": "http://127.0.0.1:52180/child",
+      "detail": "Observed resource activity did not settle before the explicit page deadline; later modules/responses remain unknown.",
+      "incomplete": true,
+      "origin": "http://127.0.0.1:52180"
+    }
+  ],
+  "arrivals": [
+    {
+      "path": "/robots.txt",
+      "method": "GET"
+    },
+    {
+      "path": "/sitemap.xml",
+      "method": "GET"
+    },
+    {
+      "path": "/",
+      "method": "GET"
+    },
+    {
+      "path": "/manifest.webmanifest",
+      "method": "GET"
+    },
+    {
+      "path": "/app.min.js",
+      "method": "GET"
+    },
+    {
+      "path": "/inline.js",
+      "method": "GET"
+    },
+    {
+      "path": "/conventional.js",
+      "method": "GET"
+    },
+    {
+      "path": "/",
+      "method": "GET"
+    },
+    {
+      "path": "/header-map.js",
+      "method": "GET"
+    },
+    {
+      "path": "/lazy.js",
+      "method": "GET"
+    },
+    {
+      "path": "/worker.js",
+      "method": "GET"
+    },
+    {
+      "path": "/sw.js",
+      "method": "GET"
+    },
+    {
+      "path": "/app.min.js.map",
+      "method": "GET"
+    },
+    {
+      "path": "/conventional.js.map",
+      "method": "GET"
+    },
+    {
+      "path": "/site.css",
+      "method": "GET"
+    },
+    {
+      "path": "/inline.js.map",
+      "method": "GET"
+    },
+    {
+      "path": "/app.min.js",
+      "method": "GET"
+    },
+    {
+      "path": "/lazy.js.map",
+      "method": "GET"
+    },
+    {
+      "path": "/api/public",
+      "method": "GET"
+    },
+    {
+      "path": "/redirect-secret",
+      "method": "GET"
+    },
+    {
+      "path": "/inline.js",
+      "method": "GET"
+    },
+    {
+      "path": "/worker.js",
+      "method": "GET"
+    },
+    {
+      "path": "/conventional.js",
+      "method": "GET"
+    },
+    {
+      "path": "/header-map.js",
+      "method": "GET"
+    },
+    {
+      "path": "/lazy.js",
+      "method": "GET"
+    },
+    {
+      "path": "/header.map",
+      "method": "GET"
+    },
+    {
+      "path": "/header-map.js.map",
+      "method": "GET"
+    },
+    {
+      "path": "/worker.js.map",
+      "method": "GET"
+    },
+    {
+      "path": "/api/scroll",
+      "method": "GET"
+    },
+    {
+      "path": "/sw.js.map",
+      "method": "GET"
+    },
+    {
+      "path": "/sources/source.ts",
+      "method": "GET"
+    },
+    {
+      "path": "/site.css",
+      "method": "GET"
+    },
+    {
+      "path": "/login",
+      "method": "GET"
+    },
+    {
+      "path": "/redirect-out",
+      "method": "GET"
+    },
+    {
+      "path": "/big",
+      "method": "GET"
+    },
+    {
+      "path": "/fail",
+      "method": "GET"
+    },
+    {
+      "path": "/fail",
+      "method": "GET"
+    },
+    {
+      "path": "/redirect-secret",
+      "method": "GET"
+    },
+    {
+      "path": "/child",
+      "method": "GET"
+    },
+    {
+      "path": "/rate",
+      "method": "GET"
+    },
+    {
+      "path": "/slow",
+      "method": "GET"
+    },
+    {
+      "path": "/rate",
+      "method": "GET"
+    },
+    {
+      "path": "/fallback",
+      "method": "GET"
+    },
+    {
+      "path": "/child",
+      "method": "GET"
+    },
+    {
+      "path": "/nested/page",
+      "method": "GET"
+    },
+    {
+      "path": "/frame",
+      "method": "GET"
+    },
+    {
+      "path": "/about",
+      "method": "GET"
+    },
+    {
+      "path": "/frame",
+      "method": "GET"
+    },
+    {
+      "path": "/api/frame",
+      "method": "GET"
+    },
+    {
+      "path": "/fallback",
+      "method": "GET"
+    },
+    {
+      "path": "/frame",
+      "method": "GET"
+    },
+    {
+      "path": "/api/frame",
+      "method": "GET"
+    },
+    {
+      "path": "/about",
+      "method": "GET"
+    }
+  ]
+}

@@ -1,0 +1,887 @@
+{
+  "schema": "stage2-comparison/1",
+  "at": "2026-10-06T18:33:51.858Z",
+  "build": {
+    "version": "2.3.0-rc.1",
+    "id": "2.3.0-rc.1+5fd9435d84e583c6",
+    "sourceDigest": "5fd9435d84e583c60e6c96b8727db9dca5b70ecc2a7eb83eace453768b202052"
+  },
+  "baselineBuild": {
+    "version": "2.2.0-rc.1",
+    "id": "2.2.0-rc.1+8399b64166f5075d",
+    "sourceDigest": "8399b64166f5075d8dad0dd24956b747491357732294979764110cec2fee7130"
+  },
+  "corpusDigest": "41b7636e922326aa05c70731a8cd1c408e6a4e44472d0af278503baca370dec8",
+  "seed": "ExposureDesk/stage2/heldout/20261006/73",
+  "fixtureCount": 19,
+  "heldout": {
+    "before": {
+      "credentialTargets": 16,
+      "detected": 9,
+      "missed": [
+        "alias-chain",
+        "template-array",
+        "late-decoding",
+        "sas-fragment",
+        "module-split",
+        "debugger-only",
+        "stale-exact-url"
+      ],
+      "negativeControls": 3,
+      "falsePositives": 0
+    },
+    "after": {
+      "credentialTargets": 16,
+      "detected": 16,
+      "missed": [],
+      "negativeControls": 3,
+      "falsePositives": 0
+    },
+    "provider": [
+      {
+        "provider": "Azure",
+        "before": {
+          "credentialTargets": 2,
+          "credentialDetected": 1,
+          "missed": [
+            "sas-fragment"
+          ],
+          "negativeControls": 0,
+          "falsePositives": 0
+        },
+        "after": {
+          "credentialTargets": 2,
+          "credentialDetected": 2,
+          "missed": [],
+          "negativeControls": 0,
+          "falsePositives": 0
+        }
+      },
+      {
+        "provider": "OpenAI",
+        "before": {
+          "credentialTargets": 11,
+          "credentialDetected": 6,
+          "missed": [
+            "alias-chain",
+            "late-decoding",
+            "module-split",
+            "debugger-only",
+            "stale-exact-url"
+          ],
+          "negativeControls": 0,
+          "falsePositives": 0
+        },
+        "after": {
+          "credentialTargets": 11,
+          "credentialDetected": 11,
+          "missed": [],
+          "negativeControls": 0,
+          "falsePositives": 0
+        }
+      },
+      {
+        "provider": "Stripe",
+        "before": {
+          "credentialTargets": 1,
+          "credentialDetected": 0,
+          "missed": [
+            "template-array"
+          ],
+          "negativeControls": 1,
+          "falsePositives": 0
+        },
+        "after": {
+          "credentialTargets": 1,
+          "credentialDetected": 1,
+          "missed": [],
+          "negativeControls": 1,
+          "falsePositives": 0
+        }
+      },
+      {
+        "provider": "none",
+        "before": {
+          "credentialTargets": 0,
+          "credentialDetected": 0,
+          "missed": [],
+          "negativeControls": 2,
+          "falsePositives": 0
+        },
+        "after": {
+          "credentialTargets": 0,
+          "credentialDetected": 0,
+          "missed": [],
+          "negativeControls": 2,
+          "falsePositives": 0
+        }
+      },
+      {
+        "provider": "snyk",
+        "before": {
+          "credentialTargets": 2,
+          "credentialDetected": 2,
+          "missed": [],
+          "negativeControls": 0,
+          "falsePositives": 0
+        },
+        "after": {
+          "credentialTargets": 2,
+          "credentialDetected": 2,
+          "missed": [],
+          "negativeControls": 0,
+          "falsePositives": 0
+        }
+      }
+    ],
+    "acquisition": [
+      {
+        "mechanism": "browser-json",
+        "before": {
+          "credentialTargets": 1,
+          "credentialDetected": 1,
+          "missed": [],
+          "negativeControls": 0,
+          "falsePositives": 0
+        },
+        "after": {
+          "credentialTargets": 1,
+          "credentialDetected": 1,
+          "missed": [],
+          "negativeControls": 0,
+          "falsePositives": 0
+        }
+      },
+      {
+        "mechanism": "browser-request",
+        "before": {
+          "credentialTargets": 1,
+          "credentialDetected": 1,
+          "missed": [],
+          "negativeControls": 0,
+          "falsePositives": 0
+        },
+        "after": {
+          "credentialTargets": 1,
+          "credentialDetected": 1,
+          "missed": [],
+          "negativeControls": 0,
+          "falsePositives": 0
+        }
+      },
+      {
+        "mechanism": "capability",
+        "before": {
+          "credentialTargets": 1,
+          "credentialDetected": 0,
+          "missed": [
+            "sas-fragment"
+          ],
+          "negativeControls": 0,
+          "falsePositives": 0
+        },
+        "after": {
+          "credentialTargets": 1,
+          "credentialDetected": 1,
+          "missed": [],
+          "negativeControls": 0,
+          "falsePositives": 0
+        }
+      },
+      {
+        "mechanism": "chunked-text",
+        "before": {
+          "credentialTargets": 2,
+          "credentialDetected": 2,
+          "missed": [],
+          "negativeControls": 0,
+          "falsePositives": 0
+        },
+        "after": {
+          "credentialTargets": 2,
+          "credentialDetected": 2,
+          "missed": [],
+          "negativeControls": 0,
+          "falsePositives": 0
+        }
+      },
+      {
+        "mechanism": "context",
+        "before": {
+          "credentialTargets": 1,
+          "credentialDetected": 1,
+          "missed": [],
+          "negativeControls": 0,
+          "falsePositives": 0
+        },
+        "after": {
+          "credentialTargets": 1,
+          "credentialDetected": 1,
+          "missed": [],
+          "negativeControls": 0,
+          "falsePositives": 0
+        }
+      },
+      {
+        "mechanism": "cross-module",
+        "before": {
+          "credentialTargets": 1,
+          "credentialDetected": 0,
+          "missed": [
+            "module-split"
+          ],
+          "negativeControls": 0,
+          "falsePositives": 0
+        },
+        "after": {
+          "credentialTargets": 1,
+          "credentialDetected": 1,
+          "missed": [],
+          "negativeControls": 0,
+          "falsePositives": 0
+        }
+      },
+      {
+        "mechanism": "debugger",
+        "before": {
+          "credentialTargets": 1,
+          "credentialDetected": 0,
+          "missed": [
+            "debugger-only"
+          ],
+          "negativeControls": 0,
+          "falsePositives": 0
+        },
+        "after": {
+          "credentialTargets": 1,
+          "credentialDetected": 1,
+          "missed": [],
+          "negativeControls": 0,
+          "falsePositives": 0
+        }
+      },
+      {
+        "mechanism": "decoded-engine",
+        "before": {
+          "credentialTargets": 1,
+          "credentialDetected": 1,
+          "missed": [],
+          "negativeControls": 0,
+          "falsePositives": 0
+        },
+        "after": {
+          "credentialTargets": 1,
+          "credentialDetected": 1,
+          "missed": [],
+          "negativeControls": 0,
+          "falsePositives": 0
+        }
+      },
+      {
+        "mechanism": "decoded-priority",
+        "before": {
+          "credentialTargets": 1,
+          "credentialDetected": 0,
+          "missed": [
+            "late-decoding"
+          ],
+          "negativeControls": 0,
+          "falsePositives": 0
+        },
+        "after": {
+          "credentialTargets": 1,
+          "credentialDetected": 1,
+          "missed": [],
+          "negativeControls": 0,
+          "falsePositives": 0
+        }
+      },
+      {
+        "mechanism": "engine",
+        "before": {
+          "credentialTargets": 1,
+          "credentialDetected": 1,
+          "missed": [],
+          "negativeControls": 0,
+          "falsePositives": 0
+        },
+        "after": {
+          "credentialTargets": 1,
+          "credentialDetected": 1,
+          "missed": [],
+          "negativeControls": 0,
+          "falsePositives": 0
+        }
+      },
+      {
+        "mechanism": "negative",
+        "before": {
+          "credentialTargets": 0,
+          "credentialDetected": 0,
+          "missed": [],
+          "negativeControls": 3,
+          "falsePositives": 0
+        },
+        "after": {
+          "credentialTargets": 0,
+          "credentialDetected": 0,
+          "missed": [],
+          "negativeControls": 3,
+          "falsePositives": 0
+        }
+      },
+      {
+        "mechanism": "parser-isolation",
+        "before": {
+          "credentialTargets": 1,
+          "credentialDetected": 1,
+          "missed": [],
+          "negativeControls": 0,
+          "falsePositives": 0
+        },
+        "after": {
+          "credentialTargets": 1,
+          "credentialDetected": 1,
+          "missed": [],
+          "negativeControls": 0,
+          "falsePositives": 0
+        }
+      },
+      {
+        "mechanism": "semantic",
+        "before": {
+          "credentialTargets": 2,
+          "credentialDetected": 0,
+          "missed": [
+            "alias-chain",
+            "template-array"
+          ],
+          "negativeControls": 0,
+          "falsePositives": 0
+        },
+        "after": {
+          "credentialTargets": 2,
+          "credentialDetected": 2,
+          "missed": [],
+          "negativeControls": 0,
+          "falsePositives": 0
+        }
+      },
+      {
+        "mechanism": "source-map",
+        "before": {
+          "credentialTargets": 1,
+          "credentialDetected": 1,
+          "missed": [],
+          "negativeControls": 0,
+          "falsePositives": 0
+        },
+        "after": {
+          "credentialTargets": 1,
+          "credentialDetected": 1,
+          "missed": [],
+          "negativeControls": 0,
+          "falsePositives": 0
+        }
+      },
+      {
+        "mechanism": "stale-asset",
+        "before": {
+          "credentialTargets": 1,
+          "credentialDetected": 0,
+          "missed": [
+            "stale-exact-url"
+          ],
+          "negativeControls": 0,
+          "falsePositives": 0
+        },
+        "after": {
+          "credentialTargets": 1,
+          "credentialDetected": 1,
+          "missed": [],
+          "negativeControls": 0,
+          "falsePositives": 0
+        }
+      }
+    ],
+    "measurement": {
+      "beforeElapsedMs": 35356,
+      "afterElapsedMs": 45154,
+      "beforePeakNodeRssKiB": 176472,
+      "afterPeakNodeRssKiB": 196780,
+      "memoryLimitation": "Node process high-water RSS including worker threads; offline engine and Chromium child RSS not included."
+    }
+  },
+  "selectedBenchmark": {
+    "before": {
+      "planted": 102,
+      "detected": 102,
+      "missed": 0,
+      "falsePositives": 0,
+      "componentErrors": 0,
+      "locationErrors": 0,
+      "privateTargets": 98,
+      "publicTargets": 3,
+      "suspiciousTargets": 1
+    },
+    "after": {
+      "planted": 102,
+      "detected": 102,
+      "missed": 0,
+      "falsePositives": 0,
+      "componentErrors": 0,
+      "locationErrors": 0,
+      "privateTargets": 98,
+      "publicTargets": 3,
+      "suspiciousTargets": 1
+    },
+    "negativeControls": 7,
+    "regressions": [],
+    "provider": [
+      {
+        "provider": "AWS",
+        "categories": [
+          {
+            "category": "private-credential",
+            "targets": 5,
+            "detected": 5
+          }
+        ]
+      },
+      {
+        "provider": "AWS Bedrock",
+        "categories": [
+          {
+            "category": "private-credential",
+            "targets": 3,
+            "detected": 3
+          }
+        ]
+      },
+      {
+        "provider": "AWS Route53",
+        "categories": [
+          {
+            "category": "private-credential",
+            "targets": 1,
+            "detected": 1
+          }
+        ]
+      },
+      {
+        "provider": "Anthropic",
+        "categories": [
+          {
+            "category": "private-credential",
+            "targets": 5,
+            "detected": 5
+          }
+        ]
+      },
+      {
+        "provider": "Azure",
+        "categories": [
+          {
+            "category": "private-credential",
+            "targets": 3,
+            "detected": 3
+          }
+        ]
+      },
+      {
+        "provider": "Azure AI",
+        "categories": [
+          {
+            "category": "private-credential",
+            "targets": 3,
+            "detected": 3
+          }
+        ]
+      },
+      {
+        "provider": "Binance",
+        "categories": [
+          {
+            "category": "private-credential",
+            "targets": 1,
+            "detected": 1
+          }
+        ]
+      },
+      {
+        "provider": "Braintree",
+        "categories": [
+          {
+            "category": "private-credential",
+            "targets": 1,
+            "detected": 1
+          }
+        ]
+      },
+      {
+        "provider": "Cloudflare",
+        "categories": [
+          {
+            "category": "private-credential",
+            "targets": 6,
+            "detected": 6
+          }
+        ]
+      },
+      {
+        "provider": "Cohere",
+        "categories": [
+          {
+            "category": "private-credential",
+            "targets": 1,
+            "detected": 1
+          }
+        ]
+      },
+      {
+        "provider": "Coinbase",
+        "categories": [
+          {
+            "category": "private-credential",
+            "targets": 2,
+            "detected": 2
+          }
+        ]
+      },
+      {
+        "provider": "DigitalOcean",
+        "categories": [
+          {
+            "category": "private-credential",
+            "targets": 5,
+            "detected": 5
+          }
+        ]
+      },
+      {
+        "provider": "ElevenLabs",
+        "categories": [
+          {
+            "category": "private-credential",
+            "targets": 2,
+            "detected": 2
+          }
+        ]
+      },
+      {
+        "provider": "GitHub",
+        "categories": [
+          {
+            "category": "private-credential",
+            "targets": 1,
+            "detected": 1
+          }
+        ]
+      },
+      {
+        "provider": "GoDaddy",
+        "categories": [
+          {
+            "category": "private-credential",
+            "targets": 3,
+            "detected": 3
+          }
+        ]
+      },
+      {
+        "provider": "Google / Gemini",
+        "categories": [
+          {
+            "category": "suspicious",
+            "targets": 1,
+            "detected": 1
+          }
+        ]
+      },
+      {
+        "provider": "Google Cloud",
+        "categories": [
+          {
+            "category": "private-credential",
+            "targets": 3,
+            "detected": 3
+          }
+        ]
+      },
+      {
+        "provider": "Groq",
+        "categories": [
+          {
+            "category": "private-credential",
+            "targets": 2,
+            "detected": 2
+          }
+        ]
+      },
+      {
+        "provider": "Heroku",
+        "categories": [
+          {
+            "category": "private-credential",
+            "targets": 1,
+            "detected": 1
+          }
+        ]
+      },
+      {
+        "provider": "Hugging Face",
+        "categories": [
+          {
+            "category": "private-credential",
+            "targets": 2,
+            "detected": 2
+          }
+        ]
+      },
+      {
+        "provider": "Kraken",
+        "categories": [
+          {
+            "category": "private-credential",
+            "targets": 1,
+            "detected": 1
+          }
+        ]
+      },
+      {
+        "provider": "Mailgun",
+        "categories": [
+          {
+            "category": "private-credential",
+            "targets": 1,
+            "detected": 1
+          },
+          {
+            "category": "public-identifier",
+            "targets": 1,
+            "detected": 1
+          }
+        ]
+      },
+      {
+        "provider": "Mistral",
+        "categories": [
+          {
+            "category": "private-credential",
+            "targets": 2,
+            "detected": 2
+          }
+        ]
+      },
+      {
+        "provider": "Namecheap",
+        "categories": [
+          {
+            "category": "private-credential",
+            "targets": 1,
+            "detected": 1
+          }
+        ]
+      },
+      {
+        "provider": "Netlify",
+        "categories": [
+          {
+            "category": "private-credential",
+            "targets": 1,
+            "detected": 1
+          }
+        ]
+      },
+      {
+        "provider": "OAuth",
+        "categories": [
+          {
+            "category": "private-credential",
+            "targets": 1,
+            "detected": 1
+          }
+        ]
+      },
+      {
+        "provider": "OpenAI",
+        "categories": [
+          {
+            "category": "private-credential",
+            "targets": 6,
+            "detected": 6
+          }
+        ]
+      },
+      {
+        "provider": "OpenRouter",
+        "categories": [
+          {
+            "category": "private-credential",
+            "targets": 2,
+            "detected": 2
+          }
+        ]
+      },
+      {
+        "provider": "PayPal",
+        "categories": [
+          {
+            "category": "private-credential",
+            "targets": 2,
+            "detected": 2
+          }
+        ]
+      },
+      {
+        "provider": "Perplexity",
+        "categories": [
+          {
+            "category": "private-credential",
+            "targets": 2,
+            "detected": 2
+          }
+        ]
+      },
+      {
+        "provider": "Postmark",
+        "categories": [
+          {
+            "category": "private-credential",
+            "targets": 4,
+            "detected": 4
+          }
+        ]
+      },
+      {
+        "provider": "Replicate",
+        "categories": [
+          {
+            "category": "private-credential",
+            "targets": 2,
+            "detected": 2
+          }
+        ]
+      },
+      {
+        "provider": "Resend",
+        "categories": [
+          {
+            "category": "private-credential",
+            "targets": 3,
+            "detected": 3
+          }
+        ]
+      },
+      {
+        "provider": "SendGrid",
+        "categories": [
+          {
+            "category": "private-credential",
+            "targets": 2,
+            "detected": 2
+          }
+        ]
+      },
+      {
+        "provider": "Sentry",
+        "categories": [
+          {
+            "category": "private-credential",
+            "targets": 3,
+            "detected": 3
+          }
+        ]
+      },
+      {
+        "provider": "Slack",
+        "categories": [
+          {
+            "category": "private-credential",
+            "targets": 1,
+            "detected": 1
+          }
+        ]
+      },
+      {
+        "provider": "Square",
+        "categories": [
+          {
+            "category": "private-credential",
+            "targets": 1,
+            "detected": 1
+          }
+        ]
+      },
+      {
+        "provider": "Stability AI",
+        "categories": [
+          {
+            "category": "private-credential",
+            "targets": 1,
+            "detected": 1
+          }
+        ]
+      },
+      {
+        "provider": "Stripe",
+        "categories": [
+          {
+            "category": "private-credential",
+            "targets": 6,
+            "detected": 6
+          },
+          {
+            "category": "public-identifier",
+            "targets": 2,
+            "detected": 2
+          }
+        ]
+      },
+      {
+        "provider": "Supabase",
+        "categories": [
+          {
+            "category": "private-credential",
+            "targets": 1,
+            "detected": 1
+          }
+        ]
+      },
+      {
+        "provider": "Twilio",
+        "categories": [
+          {
+            "category": "private-credential",
+            "targets": 2,
+            "detected": 2
+          }
+        ]
+      },
+      {
+        "provider": "Vercel",
+        "categories": [
+          {
+            "category": "private-credential",
+            "targets": 1,
+            "detected": 1
+          }
+        ]
+      },
+      {
+        "provider": "Vonage",
+        "categories": [
+          {
+            "category": "private-credential",
+            "targets": 2,
+            "detected": 2
+          }
+        ]
+      }
+    ],
+    "beforeElapsedMs": 44842,
+    "afterElapsedMs": 82912
+  },
+  "informationObservations": "Excluded from credential recall and private false positives. Endpoint/config/debug review observations are not evidence of authorization failure or credential validity.",
+  "limitations": "Fixed synthetic selected and held-out corpora. No universal real-world accuracy estimate; host scheduling and extra work affect latency; engine and browser child memory not included."
+}

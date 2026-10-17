@@ -1,0 +1,811 @@
+{
+  "arrivals": [
+    "/robots.txt",
+    "/sitemap.xml",
+    "/",
+    "/webpack.js",
+    "/assets/vite.js",
+    "/_astro/renderer.js",
+    "/_astro/island.js",
+    "/_nuxt/lazy.js",
+    "/_next/static/build42/_buildManifest.js",
+    "/_next/static/build42/_ssgManifest.js",
+    "/.js",
+    "/assets/lazy.js",
+    "/assets/1.abc.js",
+    "/_next/static/chunks/page.js"
+  ],
+  "view": {
+    "schema": "exposure-scan/1",
+    "build": {
+      "version": "2.2.0-rc.1",
+      "id": "2.2.0-rc.1+8399b64166f5075d",
+      "sourceDigest": "8399b64166f5075d8dad0dd24956b747491357732294979764110cec2fee7130"
+    },
+    "id": "8bf0d54b-104e-4172-938d-fc107929b065",
+    "name": "Authorized website",
+    "state": "completed",
+    "startedAt": "2026-10-06T16:35:45.492Z",
+    "endedAt": "2026-10-06T16:35:59.838Z",
+    "elapsedMs": 14346,
+    "config": {
+      "name": "Authorized website",
+      "urls": [
+        "http://127.0.0.1:55787/"
+      ],
+      "relatedOrigins": [],
+      "privateOrigins": [],
+      "browser": false,
+      "deep": false,
+      "robotsPolicy": "respect",
+      "browserNavigationUrls": [],
+      "readOnlyPostEndpoints": [],
+      "requestsPerSecond": 20,
+      "concurrency": 2,
+      "maxDepth": 3,
+      "maxPages": 30,
+      "maxResources": 200,
+      "maxResourceBytes": 8388608,
+      "maxTotalBytes": 83886080,
+      "timeoutMs": 10000,
+      "maxDurationMs": 120000,
+      "queryVariants": 3,
+      "browserPages": 5,
+      "browserSettleMs": 1000,
+      "maxMaps": 25,
+      "maxMapSources": 40,
+      "deepPaths": [
+        "/.env",
+        "/.env.local",
+        "/.env.production",
+        "/.env.backup",
+        "/config.json",
+        "/config.js",
+        "/.npmrc",
+        "/.git/HEAD",
+        "/debug",
+        "/debug/vars",
+        "/server.log",
+        "/error.log",
+        "/backup.sql",
+        "/index.php.bak",
+        "/config.php.bak"
+      ],
+      "adjacentMaps": false,
+      "preset": "custom",
+      "maxWireResourceBytes": 16777216,
+      "maxDecodedTotalBytes": 167772160,
+      "maxMapDepth": 4,
+      "maxMapSections": 50,
+      "browserScrollSteps": 0,
+      "browserScrollDelayMs": 500,
+      "developmentFixtureOrigin": "http://127.0.0.1:55787"
+    },
+    "counts": {
+      "resources": 14,
+      "scanned": 10,
+      "blocked": 0,
+      "bytes": 950,
+      "pending": 0,
+      "findings": 5
+    },
+    "accounting": {
+      "networkAttempts": 14,
+      "blockedEvents": 0,
+      "uniqueResources": 14,
+      "repeatedRequests": 0,
+      "downloadedBytes": 950,
+      "retainedDecodedBytes": 950,
+      "textAnalyzedBytes": 950,
+      "intentionalSkips": 0,
+      "httpErrors": 4,
+      "coverageGaps": 0
+    },
+    "stopReason": "discovered-frontier-drained",
+    "uninspected": [],
+    "coverage": {
+      "assessment": "configured-checks-completed",
+      "summary": "The discovered frontier and configured checks completed within limits. This does not establish whole-site coverage or security.",
+      "discoveryNote": "Resources never discovered cannot be counted. Framework discovery, runtime snapshots and origin scope are bounded; a drained queue means no more discovered work.",
+      "groups": {
+        "applicationPages": {
+          "discovered": 1,
+          "downloaded": 1,
+          "analyzed": 1,
+          "successful": 1,
+          "errorResponses": 0,
+          "blocked": 0,
+          "skipped": 0,
+          "uninspected": 0
+        },
+        "javascript": {
+          "discovered": 11,
+          "downloaded": 11,
+          "analyzed": 11,
+          "successful": 9,
+          "errorResponses": 2,
+          "blocked": 0,
+          "skipped": 0,
+          "uninspected": 0
+        },
+        "jsonConfig": {
+          "discovered": 0,
+          "downloaded": 0,
+          "analyzed": 0,
+          "successful": 0,
+          "errorResponses": 0,
+          "blocked": 0,
+          "skipped": 0,
+          "uninspected": 0
+        },
+        "sourceMaps": {
+          "discovered": 1,
+          "downloaded": 1,
+          "analyzed": 1,
+          "successful": 0,
+          "errorResponses": 1,
+          "blocked": 0,
+          "skipped": 0,
+          "uninspected": 0
+        },
+        "deploymentChecks": {
+          "discovered": 0,
+          "downloaded": 0,
+          "analyzed": 0,
+          "successful": 0,
+          "errorResponses": 0,
+          "blocked": 0,
+          "skipped": 0,
+          "uninspected": 0
+        },
+        "other": {
+          "discovered": 1,
+          "downloaded": 1,
+          "analyzed": 1,
+          "successful": 0,
+          "errorResponses": 1,
+          "blocked": 0,
+          "skipped": 0,
+          "uninspected": 0
+        },
+        "browserRuntime": {
+          "discovered": 0,
+          "downloaded": 0,
+          "analyzed": 0,
+          "successful": 0,
+          "errorResponses": 0,
+          "blocked": 0,
+          "skipped": 0,
+          "uninspected": 0
+        }
+      },
+      "entryPoints": [
+        {
+          "url": "http://127.0.0.1:55787/",
+          "successful": true,
+          "analyzed": true
+        }
+      ],
+      "requestComparison": [
+        {
+          "url": "http://127.0.0.1:55787/",
+          "staticStatus": 200,
+          "staticHeaders": [
+            "accept",
+            "accept-encoding",
+            "host"
+          ],
+          "browserHeaders": [],
+          "conclusion": "No browser document response recorded; review browser failures and routed requests."
+        }
+      ],
+      "deploymentChecks": {
+        "planned": 0,
+        "attempted": 0,
+        "remaining": 0
+      }
+    },
+    "engines": {
+      "websiteRules": "website/2.2.0",
+      "gitleaks": "8.30.1",
+      "ruleDigest": "e163e53b9e7e8a8511e77271e2b323ed057759542a6d988258afe3a1fa329caf",
+      "companyRules": "none"
+    },
+    "findings": [
+      {
+        "id": "3202b893919fcb9a2527784b40b5daac",
+        "fingerprint": "3202b893919fcb9a2527784b40b5daac",
+        "category": "private-credential",
+        "provider": "Supabase",
+        "rule": "supabase-secret",
+        "severity": "critical",
+        "confidence": "high",
+        "reasons": [
+          "Matches a documented credential format; validity and privileges are unverified."
+        ],
+        "masked": "[redacted: 61 characters]",
+        "validity": "unverified",
+        "impact": "Potential privileged application or signing access. Validity, permissions, expiry and restrictions are unknown.",
+        "remediation": "Revoke and replace the exposed credential. Remove the public value/file; move private credentials to backend secret storage. Rebuild frontend assets, remove stale assets, review provider usage and rescan.",
+        "occurrences": [
+          {
+            "url": "http://127.0.0.1:55787/_astro/island.js",
+            "line": 1,
+            "column": 1,
+            "byteOffset": 0,
+            "chain": [
+              "http://127.0.0.1:55787/",
+              "Astro island component-url"
+            ],
+            "transformations": [],
+            "excerpt": "[redacted]",
+            "evidence": "Unauthenticated HTTP response",
+            "coordinates": "generated",
+            "byteOffsetEncoding": "utf-8-decoded-text"
+          }
+        ],
+        "environment": "unknown",
+        "exposureGroup": "other",
+        "financialPriority": "urgent"
+      },
+      {
+        "id": "0c36cfd9228d395327b0abd884263fd3",
+        "fingerprint": "0c36cfd9228d395327b0abd884263fd3",
+        "category": "private-credential",
+        "provider": "Anthropic",
+        "rule": "anthropic",
+        "severity": "high",
+        "confidence": "high",
+        "reasons": [
+          "Matches a documented credential format; validity and privileges are unverified."
+        ],
+        "masked": "[redacted: 115 characters]",
+        "validity": "unverified",
+        "impact": "Potential paid AI usage. Validity, permissions, expiry and restrictions are unknown.",
+        "remediation": "Revoke and replace the exposed credential. Remove the public value/file; move private credentials to backend secret storage. Rebuild frontend assets, remove stale assets, review provider usage and rescan.",
+        "occurrences": [
+          {
+            "url": "http://127.0.0.1:55787/_nuxt/lazy.js",
+            "line": 1,
+            "column": 1,
+            "byteOffset": 0,
+            "chain": [
+              "http://127.0.0.1:55787/",
+              "Inline framework/hydration JSON"
+            ],
+            "transformations": [],
+            "excerpt": "[redacted]",
+            "evidence": "Unauthenticated HTTP response",
+            "coordinates": "generated",
+            "byteOffsetEncoding": "utf-8-decoded-text"
+          }
+        ],
+        "environment": "unknown",
+        "exposureGroup": "paid-ai",
+        "financialPriority": "urgent"
+      },
+      {
+        "id": "21b83c3b6b361cf788f991ea9564c168",
+        "fingerprint": "21b83c3b6b361cf788f991ea9564c168",
+        "category": "private-credential",
+        "provider": "Replicate",
+        "rule": "replicate",
+        "severity": "high",
+        "confidence": "high",
+        "reasons": [
+          "Matches a documented credential format; validity and privileges are unverified."
+        ],
+        "masked": "[redacted: 43 characters]",
+        "validity": "unverified",
+        "impact": "Potential paid AI usage. Validity, permissions, expiry and restrictions are unknown.",
+        "remediation": "Revoke and replace the exposed credential. Remove the public value/file; move private credentials to backend secret storage. Rebuild frontend assets, remove stale assets, review provider usage and rescan.",
+        "occurrences": [
+          {
+            "url": "http://127.0.0.1:55787/assets/lazy.js",
+            "line": 1,
+            "column": 1,
+            "byteOffset": 0,
+            "chain": [
+              "http://127.0.0.1:55787/",
+              "document/base URL",
+              "http://127.0.0.1:55787/assets/vite.js",
+              "Vite dependency table build base"
+            ],
+            "transformations": [],
+            "excerpt": "[redacted]",
+            "evidence": "Unauthenticated HTTP response",
+            "coordinates": "generated",
+            "byteOffsetEncoding": "utf-8-decoded-text"
+          }
+        ],
+        "environment": "unknown",
+        "exposureGroup": "paid-ai",
+        "financialPriority": "urgent"
+      },
+      {
+        "id": "848a593209e40fb321157b98db96ddc9",
+        "fingerprint": "848a593209e40fb321157b98db96ddc9",
+        "category": "private-credential",
+        "provider": "Stripe",
+        "rule": "stripe-secret",
+        "severity": "high",
+        "confidence": "high",
+        "reasons": [
+          "Matches a documented credential format; validity and privileges are unverified."
+        ],
+        "masked": "[redacted: 59 characters]",
+        "validity": "unverified",
+        "impact": "Potential payment operations. Validity, permissions, expiry and restrictions are unknown.",
+        "remediation": "Revoke and replace the exposed credential. Remove the public value/file; move private credentials to backend secret storage. Rebuild frontend assets, remove stale assets, review provider usage and rescan.",
+        "occurrences": [
+          {
+            "url": "http://127.0.0.1:55787/assets/1.abc.js",
+            "line": 1,
+            "column": 1,
+            "byteOffset": 0,
+            "chain": [
+              "http://127.0.0.1:55787/",
+              "document/base URL",
+              "http://127.0.0.1:55787/webpack.js",
+              "Webpack public build base"
+            ],
+            "transformations": [],
+            "excerpt": "[redacted]",
+            "evidence": "Unauthenticated HTTP response",
+            "coordinates": "generated",
+            "byteOffsetEncoding": "utf-8-decoded-text"
+          }
+        ],
+        "environment": "production",
+        "exposureGroup": "payments",
+        "financialPriority": "urgent"
+      },
+      {
+        "id": "8f57305550f1c88dbae877eb2ff9508b",
+        "fingerprint": "8f57305550f1c88dbae877eb2ff9508b",
+        "category": "private-credential",
+        "provider": "OpenAI",
+        "rule": "openai",
+        "severity": "high",
+        "confidence": "high",
+        "reasons": [
+          "Matches a documented credential format; validity and privileges are unverified."
+        ],
+        "masked": "[redacted: 110 characters]",
+        "validity": "unverified",
+        "impact": "Potential paid AI usage. Validity, permissions, expiry and restrictions are unknown.",
+        "remediation": "Revoke and replace the exposed credential. Remove the public value/file; move private credentials to backend secret storage. Rebuild frontend assets, remove stale assets, review provider usage and rescan.",
+        "occurrences": [
+          {
+            "url": "http://127.0.0.1:55787/_next/static/chunks/page.js",
+            "line": 1,
+            "column": 1,
+            "byteOffset": 0,
+            "chain": [
+              "http://127.0.0.1:55787/",
+              "Next hydration build ID",
+              "http://127.0.0.1:55787/_next/static/build42/_buildManifest.js",
+              "Next build base"
+            ],
+            "transformations": [],
+            "excerpt": "[redacted]",
+            "evidence": "Unauthenticated HTTP response",
+            "coordinates": "generated",
+            "byteOffsetEncoding": "utf-8-decoded-text"
+          }
+        ],
+        "environment": "unknown",
+        "exposureGroup": "paid-ai",
+        "financialPriority": "urgent"
+      }
+    ],
+    "resources": [
+      {
+        "url": "http://127.0.0.1:55787/robots.txt",
+        "status": "http-error",
+        "code": 404,
+        "bytes": 7,
+        "partial": false,
+        "chain": [],
+        "kind": "robots",
+        "analysis": "analyzed",
+        "requestHeaderNames": [
+          "accept",
+          "accept-encoding",
+          "host"
+        ],
+        "contentType": "",
+        "httpDisposition": "not-found",
+        "textBytes": 7
+      },
+      {
+        "url": "http://127.0.0.1:55787/sitemap.xml",
+        "status": "http-error",
+        "code": 404,
+        "bytes": 7,
+        "partial": false,
+        "chain": [],
+        "kind": "sitemap",
+        "analysis": "analyzed",
+        "requestHeaderNames": [
+          "accept",
+          "accept-encoding",
+          "host"
+        ],
+        "contentType": "",
+        "httpDisposition": "not-found",
+        "discoveryChains": [
+          []
+        ],
+        "textBytes": 7
+      },
+      {
+        "url": "http://127.0.0.1:55787/",
+        "status": "scanned",
+        "code": 200,
+        "bytes": 352,
+        "partial": false,
+        "chain": [],
+        "kind": "page",
+        "analysis": "analyzed",
+        "requestHeaderNames": [
+          "accept",
+          "accept-encoding",
+          "host"
+        ],
+        "contentType": "text/html",
+        "httpDisposition": "success",
+        "discoveryChains": [
+          []
+        ],
+        "textBytes": 352
+      },
+      {
+        "url": "http://127.0.0.1:55787/webpack.js",
+        "status": "scanned",
+        "code": 200,
+        "bytes": 46,
+        "partial": false,
+        "chain": [
+          "http://127.0.0.1:55787/",
+          "document/base URL"
+        ],
+        "kind": "asset",
+        "analysis": "analyzed",
+        "requestHeaderNames": [
+          "accept",
+          "accept-encoding",
+          "host"
+        ],
+        "contentType": "text/javascript",
+        "httpDisposition": "success",
+        "discoveryChains": [
+          [
+            "http://127.0.0.1:55787/",
+            "document/base URL"
+          ]
+        ],
+        "textBytes": 46
+      },
+      {
+        "url": "http://127.0.0.1:55787/assets/vite.js",
+        "status": "scanned",
+        "code": 200,
+        "bytes": 53,
+        "partial": false,
+        "chain": [
+          "http://127.0.0.1:55787/",
+          "document/base URL"
+        ],
+        "kind": "asset",
+        "analysis": "analyzed",
+        "requestHeaderNames": [
+          "accept",
+          "accept-encoding",
+          "host"
+        ],
+        "contentType": "text/javascript",
+        "httpDisposition": "success",
+        "discoveryChains": [
+          [
+            "http://127.0.0.1:55787/",
+            "document/base URL"
+          ]
+        ],
+        "textBytes": 53
+      },
+      {
+        "url": "http://127.0.0.1:55787/_astro/renderer.js",
+        "status": "scanned",
+        "code": 200,
+        "bytes": 29,
+        "partial": false,
+        "chain": [
+          "http://127.0.0.1:55787/",
+          "Astro island renderer-url"
+        ],
+        "kind": "asset",
+        "analysis": "analyzed",
+        "requestHeaderNames": [
+          "accept",
+          "accept-encoding",
+          "host"
+        ],
+        "contentType": "text/javascript",
+        "httpDisposition": "success",
+        "discoveryChains": [
+          [
+            "http://127.0.0.1:55787/",
+            "Astro island renderer-url"
+          ]
+        ],
+        "textBytes": 29
+      },
+      {
+        "url": "http://127.0.0.1:55787/_astro/island.js",
+        "status": "scanned",
+        "code": 200,
+        "bytes": 61,
+        "partial": false,
+        "chain": [
+          "http://127.0.0.1:55787/",
+          "Astro island component-url"
+        ],
+        "kind": "asset",
+        "analysis": "analyzed",
+        "requestHeaderNames": [
+          "accept",
+          "accept-encoding",
+          "host"
+        ],
+        "contentType": "text/javascript",
+        "httpDisposition": "success",
+        "discoveryChains": [
+          [
+            "http://127.0.0.1:55787/",
+            "Astro island component-url"
+          ]
+        ],
+        "textBytes": 61
+      },
+      {
+        "url": "http://127.0.0.1:55787/_nuxt/lazy.js",
+        "status": "scanned",
+        "code": 200,
+        "bytes": 115,
+        "partial": false,
+        "chain": [
+          "http://127.0.0.1:55787/",
+          "Inline framework/hydration JSON"
+        ],
+        "kind": "asset",
+        "analysis": "analyzed",
+        "requestHeaderNames": [
+          "accept",
+          "accept-encoding",
+          "host"
+        ],
+        "contentType": "text/javascript",
+        "httpDisposition": "success",
+        "discoveryChains": [
+          [
+            "http://127.0.0.1:55787/",
+            "Inline framework/hydration JSON"
+          ]
+        ],
+        "textBytes": 115
+      },
+      {
+        "url": "http://127.0.0.1:55787/_next/static/build42/_buildManifest.js",
+        "status": "scanned",
+        "code": 200,
+        "bytes": 54,
+        "partial": false,
+        "chain": [
+          "http://127.0.0.1:55787/",
+          "Next hydration build ID"
+        ],
+        "kind": "framework-manifest",
+        "analysis": "analyzed",
+        "requestHeaderNames": [
+          "accept",
+          "accept-encoding",
+          "host"
+        ],
+        "contentType": "text/javascript",
+        "httpDisposition": "success",
+        "discoveryChains": [
+          [
+            "http://127.0.0.1:55787/",
+            "Next hydration build ID"
+          ]
+        ],
+        "textBytes": 54
+      },
+      {
+        "url": "http://127.0.0.1:55787/_next/static/build42/_ssgManifest.js",
+        "status": "http-error",
+        "code": 404,
+        "bytes": 7,
+        "partial": false,
+        "chain": [
+          "http://127.0.0.1:55787/",
+          "Next hydration build ID"
+        ],
+        "kind": "framework-manifest",
+        "analysis": "analyzed",
+        "requestHeaderNames": [
+          "accept",
+          "accept-encoding",
+          "host"
+        ],
+        "contentType": "",
+        "httpDisposition": "not-found",
+        "discoveryChains": [
+          [
+            "http://127.0.0.1:55787/",
+            "Next hydration build ID"
+          ]
+        ],
+        "textBytes": 7
+      },
+      {
+        "url": "http://127.0.0.1:55787/.js",
+        "status": "http-error",
+        "code": 404,
+        "bytes": 7,
+        "partial": false,
+        "chain": [
+          "http://127.0.0.1:55787/",
+          "document/base URL",
+          "http://127.0.0.1:55787/webpack.js",
+          "static bundle literal"
+        ],
+        "kind": "asset-hint",
+        "analysis": "analyzed",
+        "requestHeaderNames": [
+          "accept",
+          "accept-encoding",
+          "host"
+        ],
+        "contentType": "",
+        "httpDisposition": "not-found",
+        "discoveryChains": [
+          [
+            "http://127.0.0.1:55787/",
+            "document/base URL",
+            "http://127.0.0.1:55787/webpack.js",
+            "static bundle literal"
+          ]
+        ],
+        "textBytes": 7
+      },
+      {
+        "url": "http://127.0.0.1:55787/assets/lazy.js",
+        "status": "scanned",
+        "code": 200,
+        "bytes": 43,
+        "partial": false,
+        "chain": [
+          "http://127.0.0.1:55787/",
+          "document/base URL",
+          "http://127.0.0.1:55787/assets/vite.js",
+          "Vite dependency table build base"
+        ],
+        "kind": "asset",
+        "analysis": "analyzed",
+        "requestHeaderNames": [
+          "accept",
+          "accept-encoding",
+          "host"
+        ],
+        "contentType": "text/javascript",
+        "httpDisposition": "success",
+        "discoveryChains": [
+          [
+            "http://127.0.0.1:55787/",
+            "document/base URL",
+            "http://127.0.0.1:55787/assets/vite.js",
+            "Vite dependency table build base"
+          ]
+        ],
+        "textBytes": 43
+      },
+      {
+        "url": "http://127.0.0.1:55787/assets/1.abc.js",
+        "status": "scanned",
+        "code": 200,
+        "bytes": 59,
+        "partial": false,
+        "chain": [
+          "http://127.0.0.1:55787/",
+          "document/base URL",
+          "http://127.0.0.1:55787/webpack.js",
+          "Webpack public build base"
+        ],
+        "kind": "asset",
+        "analysis": "analyzed",
+        "requestHeaderNames": [
+          "accept",
+          "accept-encoding",
+          "host"
+        ],
+        "contentType": "text/javascript",
+        "httpDisposition": "success",
+        "discoveryChains": [
+          [
+            "http://127.0.0.1:55787/",
+            "document/base URL",
+            "http://127.0.0.1:55787/webpack.js",
+            "Webpack public build base"
+          ]
+        ],
+        "textBytes": 59
+      },
+      {
+        "url": "http://127.0.0.1:55787/_next/static/chunks/page.js",
+        "status": "scanned",
+        "code": 200,
+        "bytes": 110,
+        "partial": false,
+        "chain": [
+          "http://127.0.0.1:55787/",
+          "Next hydration build ID",
+          "http://127.0.0.1:55787/_next/static/build42/_buildManifest.js",
+          "Next build base"
+        ],
+        "kind": "asset",
+        "analysis": "analyzed",
+        "requestHeaderNames": [
+          "accept",
+          "accept-encoding",
+          "host"
+        ],
+        "contentType": "text/javascript",
+        "httpDisposition": "success",
+        "discoveryChains": [
+          [
+            "http://127.0.0.1:55787/",
+            "Next hydration build ID",
+            "http://127.0.0.1:55787/_next/static/build42/_buildManifest.js",
+            "Next build base"
+          ]
+        ],
+        "textBytes": 110
+      }
+    ],
+    "limitations": [
+      {
+        "code": "http-unavailable",
+        "url": "http://127.0.0.1:55787/robots.txt",
+        "detail": "HTTP 404. Requested content was unavailable; the bounded error response was still inspected.",
+        "incomplete": false
+      },
+      {
+        "code": "http-unavailable",
+        "url": "http://127.0.0.1:55787/sitemap.xml",
+        "detail": "HTTP 404. Requested content was unavailable; the bounded error response was still inspected.",
+        "incomplete": false
+      },
+      {
+        "code": "http-unavailable",
+        "url": "http://127.0.0.1:55787/_next/static/build42/_ssgManifest.js",
+        "detail": "HTTP 404. Requested content was unavailable; the bounded error response was still inspected.",
+        "incomplete": false
+      },
+      {
+        "code": "http-unavailable",
+        "url": "http://127.0.0.1:55787/.js",
+        "detail": "HTTP 404. Requested content was unavailable; the bounded error response was still inspected.",
+        "incomplete": false
+      }
+    ],
+    "stage": "Finished",
+    "browserStatus": {
+      "requested": false,
+      "launch": false,
+      "runtimePages": 0,
+      "isolation": "unverified"
+    }
+  }
+}

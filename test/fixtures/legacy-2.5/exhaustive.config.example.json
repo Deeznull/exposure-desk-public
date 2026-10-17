@@ -1,0 +1,16 @@
+{
+  "projects": [
+    {
+      "name": "Authorized multi-origin project",
+      "urls": [
+        "https://www.example.com/",
+        "https://www.example.com/application"
+      ],
+      "relatedOrigins": [
+        "https://assets.example.com"
+      ],
+      "domainScope": "registrable-domain",
+      "maxAutoDiscoveredOrigins": 50
+    }
+  ]
+}

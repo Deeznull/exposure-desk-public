@@ -1,0 +1,2254 @@
+{
+  "at": "2026-10-06T19:39:13.819Z",
+  "build": {
+    "version": "2.3.0-rc.1",
+    "id": "2.3.0-rc.1+ac899613d3ae6a8a",
+    "sourceDigest": "ac899613d3ae6a8ac9ccf5b37c9d120e605d213627011aad6d60f9027a4c99a8"
+  },
+  "seed": "ExposureDesk/scan-repair/20261006/921",
+  "offlineEngine": false,
+  "rows": [
+    {
+      "name": "starvation",
+      "elapsedMs": 5855,
+      "accounting": {
+        "networkAttempts": 30,
+        "blockedEvents": 5,
+        "uniqueResources": 25,
+        "repeatedRequests": 5,
+        "downloadedBytes": 70440,
+        "retainedDecodedBytes": 70440,
+        "textAnalyzedBytes": 70440,
+        "intentionalSkips": 115,
+        "httpErrors": 0,
+        "networkFailures": 8,
+        "timeouts": 8,
+        "failedAttempts": 8,
+        "successfulResponses": 22,
+        "discoveredUrls": 741,
+        "reusedTextInspections": 0,
+        "runtimeCaptures": 5,
+        "coverageGaps": 16
+      },
+      "coverage": {
+        "applicationPages": {
+          "discovered": 262,
+          "downloaded": 1,
+          "analyzed": 1,
+          "successful": 1,
+          "errorResponses": 0,
+          "blocked": 0,
+          "skipped": 0,
+          "uninspected": 261
+        },
+        "javascript": {
+          "discovered": 18,
+          "downloaded": 18,
+          "analyzed": 18,
+          "successful": 18,
+          "errorResponses": 0,
+          "blocked": 0,
+          "skipped": 0,
+          "uninspected": 0
+        },
+        "jsonConfig": {
+          "discovered": 0,
+          "downloaded": 0,
+          "analyzed": 0,
+          "successful": 0,
+          "errorResponses": 0,
+          "blocked": 0,
+          "skipped": 0,
+          "uninspected": 0
+        },
+        "sourceMaps": {
+          "discovered": 0,
+          "downloaded": 0,
+          "analyzed": 0,
+          "successful": 0,
+          "errorResponses": 0,
+          "blocked": 0,
+          "skipped": 0,
+          "uninspected": 0
+        },
+        "sitemaps": {
+          "discovered": 1,
+          "downloaded": 1,
+          "analyzed": 1,
+          "successful": 1,
+          "errorResponses": 0,
+          "blocked": 0,
+          "skipped": 0,
+          "uninspected": 0
+        },
+        "baselineRequests": {
+          "discovered": 0,
+          "downloaded": 0,
+          "analyzed": 0,
+          "successful": 0,
+          "errorResponses": 0,
+          "blocked": 0,
+          "skipped": 0,
+          "uninspected": 0
+        },
+        "deploymentChecks": {
+          "discovered": 0,
+          "downloaded": 0,
+          "analyzed": 0,
+          "successful": 0,
+          "errorResponses": 0,
+          "blocked": 0,
+          "skipped": 0,
+          "uninspected": 0
+        },
+        "images": {
+          "discovered": 115,
+          "downloaded": 0,
+          "analyzed": 0,
+          "successful": 0,
+          "errorResponses": 0,
+          "blocked": 0,
+          "skipped": 115,
+          "uninspected": 0
+        },
+        "runtimeCaptures": {
+          "discovered": 0,
+          "downloaded": 0,
+          "analyzed": 0,
+          "successful": 0,
+          "errorResponses": 0,
+          "blocked": 0,
+          "skipped": 0,
+          "uninspected": 0
+        },
+        "other": {
+          "discovered": 5,
+          "downloaded": 1,
+          "analyzed": 1,
+          "successful": 1,
+          "errorResponses": 0,
+          "blocked": 4,
+          "skipped": 4,
+          "uninspected": 0
+        },
+        "browserRuntime": {
+          "discovered": 1,
+          "downloaded": 0,
+          "analyzed": 0,
+          "successful": 0,
+          "errorResponses": 0,
+          "blocked": 0,
+          "skipped": 0,
+          "uninspected": 1
+        }
+      },
+      "semantic": {
+        "modules": 23,
+        "nodes": 4129,
+        "views": 0,
+        "elapsedMs": 42
+      },
+      "scheduler": {
+        "classes": {
+          "entryPages": {
+            "pending": 0,
+            "active": 0,
+            "oldestQueuedMs": 0
+          },
+          "javascript": {
+            "pending": 0,
+            "active": 0,
+            "oldestQueuedMs": 0
+          },
+          "configuration": {
+            "pending": 0,
+            "active": 0,
+            "oldestQueuedMs": 0
+          },
+          "sourceMaps": {
+            "pending": 0,
+            "active": 0,
+            "oldestQueuedMs": 0
+          },
+          "discovery": {
+            "pending": 0,
+            "active": 0,
+            "oldestQueuedMs": 0
+          },
+          "optionalPages": {
+            "pending": 0,
+            "active": 0,
+            "oldestQueuedMs": 0
+          },
+          "other": {
+            "pending": 0,
+            "active": 0,
+            "oldestQueuedMs": 0
+          },
+          "baseline": {
+            "pending": 0,
+            "active": 0,
+            "oldestQueuedMs": 0
+          },
+          "deployment": {
+            "pending": 0,
+            "active": 0,
+            "oldestQueuedMs": 0
+          }
+        },
+        "dispatches": [
+          {
+            "class": "javascript",
+            "url": "http://127.0.0.1:51088/assets/app0.js",
+            "at": 1791315547661
+          },
+          {
+            "class": "javascript",
+            "url": "http://127.0.0.1:51088/assets/app1.js",
+            "at": 1791315547661
+          },
+          {
+            "class": "javascript",
+            "url": "http://127.0.0.1:51088/assets/app2.js",
+            "at": 1791315547721
+          },
+          {
+            "class": "javascript",
+            "url": "http://127.0.0.1:51088/assets/app3.js",
+            "at": 1791315547721
+          },
+          {
+            "class": "javascript",
+            "url": "http://127.0.0.1:51088/assets/app4.js",
+            "at": 1791315547823
+          },
+          {
+            "class": "javascript",
+            "url": "http://127.0.0.1:51088/assets/app5.js",
+            "at": 1791315547824
+          },
+          {
+            "class": "javascript",
+            "url": "http://127.0.0.1:51088/assets/app6.js",
+            "at": 1791315547920
+          },
+          {
+            "class": "javascript",
+            "url": "http://127.0.0.1:51088/assets/app7.js",
+            "at": 1791315547920
+          },
+          {
+            "class": "javascript",
+            "url": "http://127.0.0.1:51088/assets/app8.js",
+            "at": 1791315548025
+          },
+          {
+            "class": "javascript",
+            "url": "http://127.0.0.1:51088/assets/app9.js",
+            "at": 1791315548025
+          },
+          {
+            "class": "javascript",
+            "url": "http://127.0.0.1:51088/assets/app10.js",
+            "at": 1791315548118
+          },
+          {
+            "class": "javascript",
+            "url": "http://127.0.0.1:51088/assets/app11.js",
+            "at": 1791315548118
+          },
+          {
+            "class": "javascript",
+            "url": "http://127.0.0.1:51088/assets/app12.js",
+            "at": 1791315548223
+          },
+          {
+            "class": "javascript",
+            "url": "http://127.0.0.1:51088/assets/app13.js",
+            "at": 1791315548223
+          },
+          {
+            "class": "javascript",
+            "url": "http://127.0.0.1:51088/assets/app14.js",
+            "at": 1791315548324
+          },
+          {
+            "class": "javascript",
+            "url": "http://127.0.0.1:51088/assets/app15.js",
+            "at": 1791315548324
+          },
+          {
+            "class": "javascript",
+            "url": "http://127.0.0.1:51088/assets/app16.js",
+            "at": 1791315548416
+          },
+          {
+            "class": "javascript",
+            "url": "http://127.0.0.1:51088/assets/app17.js",
+            "at": 1791315548416
+          },
+          {
+            "class": "discovery",
+            "url": "http://127.0.0.1:51088/sitemap.xml",
+            "at": 1791315549395
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/0",
+            "at": 1791315549439
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/1",
+            "at": 1791315549440
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/2",
+            "at": 1791315550600
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/3",
+            "at": 1791315550604
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/4",
+            "at": 1791315551749
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/5",
+            "at": 1791315551752
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/6",
+            "at": 1791315551755
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/7",
+            "at": 1791315551758
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/8",
+            "at": 1791315551763
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/9",
+            "at": 1791315551767
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/10",
+            "at": 1791315551769
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/11",
+            "at": 1791315551772
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/12",
+            "at": 1791315551776
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/13",
+            "at": 1791315551779
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/14",
+            "at": 1791315551783
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/15",
+            "at": 1791315551786
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/16",
+            "at": 1791315551788
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/17",
+            "at": 1791315551790
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/18",
+            "at": 1791315551793
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/19",
+            "at": 1791315551797
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/20",
+            "at": 1791315551800
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/21",
+            "at": 1791315551804
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/22",
+            "at": 1791315551808
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/23",
+            "at": 1791315551811
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/24",
+            "at": 1791315551813
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/25",
+            "at": 1791315551815
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/26",
+            "at": 1791315551817
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/27",
+            "at": 1791315551819
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/28",
+            "at": 1791315551821
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/29",
+            "at": 1791315551822
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/30",
+            "at": 1791315551824
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/31",
+            "at": 1791315551827
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/32",
+            "at": 1791315551829
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/33",
+            "at": 1791315551833
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/34",
+            "at": 1791315551836
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/35",
+            "at": 1791315551839
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/36",
+            "at": 1791315551841
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/37",
+            "at": 1791315551843
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/38",
+            "at": 1791315551845
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/39",
+            "at": 1791315551846
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/40",
+            "at": 1791315551850
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/41",
+            "at": 1791315551852
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/42",
+            "at": 1791315551855
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/43",
+            "at": 1791315551858
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/44",
+            "at": 1791315551861
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/45",
+            "at": 1791315551863
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/46",
+            "at": 1791315551865
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/47",
+            "at": 1791315551867
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/48",
+            "at": 1791315551868
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/49",
+            "at": 1791315551870
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/50",
+            "at": 1791315551872
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/51",
+            "at": 1791315551874
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/52",
+            "at": 1791315551876
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/53",
+            "at": 1791315551877
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/54",
+            "at": 1791315551879
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/55",
+            "at": 1791315551880
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/56",
+            "at": 1791315551882
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/57",
+            "at": 1791315551884
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/58",
+            "at": 1791315551885
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/59",
+            "at": 1791315551887
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/60",
+            "at": 1791315551888
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/61",
+            "at": 1791315551890
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/62",
+            "at": 1791315551891
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/63",
+            "at": 1791315551893
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/64",
+            "at": 1791315551896
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/65",
+            "at": 1791315551898
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/66",
+            "at": 1791315551901
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/67",
+            "at": 1791315551902
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/68",
+            "at": 1791315551905
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/69",
+            "at": 1791315551908
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/70",
+            "at": 1791315551911
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/71",
+            "at": 1791315551914
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/72",
+            "at": 1791315551916
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/73",
+            "at": 1791315551917
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/74",
+            "at": 1791315551918
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/75",
+            "at": 1791315551920
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/76",
+            "at": 1791315551921
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/77",
+            "at": 1791315551922
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/78",
+            "at": 1791315551924
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/79",
+            "at": 1791315551926
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/80",
+            "at": 1791315551928
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/81",
+            "at": 1791315551931
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/82",
+            "at": 1791315551934
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/83",
+            "at": 1791315551936
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/84",
+            "at": 1791315551937
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/85",
+            "at": 1791315551939
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/86",
+            "at": 1791315551940
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/87",
+            "at": 1791315551941
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/88",
+            "at": 1791315551943
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/89",
+            "at": 1791315551945
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/90",
+            "at": 1791315551946
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/91",
+            "at": 1791315551947
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/92",
+            "at": 1791315551949
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/93",
+            "at": 1791315551951
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/94",
+            "at": 1791315551952
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/95",
+            "at": 1791315551954
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/96",
+            "at": 1791315551955
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/97",
+            "at": 1791315551956
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/98",
+            "at": 1791315551957
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/99",
+            "at": 1791315551959
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/100",
+            "at": 1791315551960
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/101",
+            "at": 1791315551962
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/102",
+            "at": 1791315551964
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/103",
+            "at": 1791315551965
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/104",
+            "at": 1791315551966
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/105",
+            "at": 1791315551967
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/106",
+            "at": 1791315551969
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/107",
+            "at": 1791315551970
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/108",
+            "at": 1791315551971
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/109",
+            "at": 1791315551972
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/110",
+            "at": 1791315551974
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/111",
+            "at": 1791315551975
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/112",
+            "at": 1791315551976
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/113",
+            "at": 1791315551977
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/114",
+            "at": 1791315551978
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/115",
+            "at": 1791315551979
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/116",
+            "at": 1791315551981
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/117",
+            "at": 1791315551982
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/118",
+            "at": 1791315551983
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/119",
+            "at": 1791315551984
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/120",
+            "at": 1791315551985
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/121",
+            "at": 1791315551986
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/122",
+            "at": 1791315551987
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/123",
+            "at": 1791315551988
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/124",
+            "at": 1791315551989
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/125",
+            "at": 1791315551990
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/126",
+            "at": 1791315551991
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/127",
+            "at": 1791315551993
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/128",
+            "at": 1791315551995
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/129",
+            "at": 1791315551997
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/130",
+            "at": 1791315551999
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/131",
+            "at": 1791315552001
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/132",
+            "at": 1791315552003
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/133",
+            "at": 1791315552004
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/134",
+            "at": 1791315552006
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/135",
+            "at": 1791315552007
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/136",
+            "at": 1791315552008
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/137",
+            "at": 1791315552009
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/138",
+            "at": 1791315552010
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/139",
+            "at": 1791315552011
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/140",
+            "at": 1791315552012
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/141",
+            "at": 1791315552013
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/142",
+            "at": 1791315552014
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/143",
+            "at": 1791315552016
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/144",
+            "at": 1791315552017
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/145",
+            "at": 1791315552017
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/146",
+            "at": 1791315552018
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/147",
+            "at": 1791315552019
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/148",
+            "at": 1791315552020
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/149",
+            "at": 1791315552022
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/150",
+            "at": 1791315552022
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/151",
+            "at": 1791315552023
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/152",
+            "at": 1791315552024
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/153",
+            "at": 1791315552025
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/154",
+            "at": 1791315552026
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/155",
+            "at": 1791315552027
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/156",
+            "at": 1791315552029
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/157",
+            "at": 1791315552030
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/158",
+            "at": 1791315552031
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/159",
+            "at": 1791315552031
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/160",
+            "at": 1791315552032
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/161",
+            "at": 1791315552033
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/162",
+            "at": 1791315552034
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/163",
+            "at": 1791315552034
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/164",
+            "at": 1791315552035
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/165",
+            "at": 1791315552036
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/166",
+            "at": 1791315552037
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/167",
+            "at": 1791315552037
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/168",
+            "at": 1791315552038
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/169",
+            "at": 1791315552039
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/170",
+            "at": 1791315552040
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/171",
+            "at": 1791315552040
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/172",
+            "at": 1791315552041
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/173",
+            "at": 1791315552042
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/174",
+            "at": 1791315552042
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/175",
+            "at": 1791315552043
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/176",
+            "at": 1791315552044
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/177",
+            "at": 1791315552044
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/178",
+            "at": 1791315552045
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/179",
+            "at": 1791315552046
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/180",
+            "at": 1791315552046
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/181",
+            "at": 1791315552047
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/182",
+            "at": 1791315552048
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/183",
+            "at": 1791315552049
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/184",
+            "at": 1791315552050
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/185",
+            "at": 1791315552051
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/186",
+            "at": 1791315552052
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/187",
+            "at": 1791315552054
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/188",
+            "at": 1791315552055
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/189",
+            "at": 1791315552056
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/190",
+            "at": 1791315552057
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/191",
+            "at": 1791315552058
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/192",
+            "at": 1791315552059
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/193",
+            "at": 1791315552060
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/194",
+            "at": 1791315552060
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/195",
+            "at": 1791315552061
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/196",
+            "at": 1791315552062
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/197",
+            "at": 1791315552062
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/198",
+            "at": 1791315552063
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/199",
+            "at": 1791315552063
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/200",
+            "at": 1791315552063
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/201",
+            "at": 1791315552064
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/202",
+            "at": 1791315552064
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/203",
+            "at": 1791315552065
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/204",
+            "at": 1791315552065
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/205",
+            "at": 1791315552066
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/206",
+            "at": 1791315552066
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/207",
+            "at": 1791315552067
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/208",
+            "at": 1791315552067
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/209",
+            "at": 1791315552067
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/210",
+            "at": 1791315552068
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/211",
+            "at": 1791315552069
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/212",
+            "at": 1791315552069
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/213",
+            "at": 1791315552070
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/214",
+            "at": 1791315552070
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/215",
+            "at": 1791315552070
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/216",
+            "at": 1791315552071
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/217",
+            "at": 1791315552071
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/218",
+            "at": 1791315552072
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/219",
+            "at": 1791315552072
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/220",
+            "at": 1791315552072
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/221",
+            "at": 1791315552072
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/222",
+            "at": 1791315552073
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/223",
+            "at": 1791315552073
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/224",
+            "at": 1791315552073
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/225",
+            "at": 1791315552074
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/226",
+            "at": 1791315552074
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/227",
+            "at": 1791315552074
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/228",
+            "at": 1791315552075
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/229",
+            "at": 1791315552075
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/230",
+            "at": 1791315552075
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/231",
+            "at": 1791315552075
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/232",
+            "at": 1791315552076
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/233",
+            "at": 1791315552076
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/234",
+            "at": 1791315552076
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/235",
+            "at": 1791315552076
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/236",
+            "at": 1791315552077
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/237",
+            "at": 1791315552077
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/238",
+            "at": 1791315552077
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/239",
+            "at": 1791315552077
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/240",
+            "at": 1791315552077
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/241",
+            "at": 1791315552078
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/242",
+            "at": 1791315552078
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/243",
+            "at": 1791315552078
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/244",
+            "at": 1791315552078
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/245",
+            "at": 1791315552078
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/246",
+            "at": 1791315552078
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/247",
+            "at": 1791315552078
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/248",
+            "at": 1791315552079
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/249",
+            "at": 1791315552079
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/250",
+            "at": 1791315552079
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/251",
+            "at": 1791315552079
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/252",
+            "at": 1791315552079
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/253",
+            "at": 1791315552079
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/254",
+            "at": 1791315552079
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/255",
+            "at": 1791315552079
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/256",
+            "at": 1791315552079
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/257",
+            "at": 1791315552079
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/258",
+            "at": 1791315552079
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/259",
+            "at": 1791315552079
+          },
+          {
+            "class": "optionalPages",
+            "url": "http://127.0.0.1:51088/listing/260",
+            "at": 1791315552079
+          }
+        ],
+        "pageAttempts": 5,
+        "timeToFirstJavaScriptMs": 602
+      },
+      "diagnosis": "Browser runtime inspection did not finish; check launch/navigation and request policy before retrying selected routes. 8 network/cancelled attempts failed (8 timeouts); phase timings show local waits. Remote causes remain unknown.",
+      "analyzedJavaScript": 18,
+      "runtimePages": 0,
+      "failures": 8,
+      "timeoutGaps": 8,
+      "queryGaps": 0,
+      "aggregateSkips": [
+        {
+          "reason": "Known raster image bodies / Next image renditions intentionally skipped after local URL inspection; distinct source images stay separate",
+          "count": 460,
+          "families": 115,
+          "examples": [
+            "http://127.0.0.1:51088/_next/image?url=%2Fphotos%2F0.png&w=320&q=75",
+            "http://127.0.0.1:51088/_next/image?url=%2Fphotos%2F0.png&w=640&q=75",
+            "http://127.0.0.1:51088/_next/image?url=%2Fphotos%2F0.png&w=960&q=75",
+            "http://127.0.0.1:51088/_next/image?url=%2Fphotos%2F0.png&w=1280&q=75",
+            "http://127.0.0.1:51088/_next/image?url=%2Fphotos%2F1.png&w=320&q=75",
+            "http://127.0.0.1:51088/_next/image?url=%2Fphotos%2F1.png&w=640&q=75",
+            "http://127.0.0.1:51088/_next/image?url=%2Fphotos%2F1.png&w=960&q=75",
+            "http://127.0.0.1:51088/_next/image?url=%2Fphotos%2F1.png&w=1280&q=75"
+          ]
+        }
+      ],
+      "credentialPaths": {
+        "http": true,
+        "browser": false
+      },
+      "information": [],
+      "dispatch": [
+        "/robots.txt",
+        "/",
+        "/assets/app0.js",
+        "/assets/app1.js",
+        "/assets/app2.js",
+        "/assets/app3.js",
+        "/assets/app4.js",
+        "/assets/app5.js",
+        "/assets/app6.js",
+        "/assets/app7.js",
+        "/assets/app8.js",
+        "/assets/app9.js",
+        "/assets/app10.js",
+        "/assets/app11.js",
+        "/assets/app12.js",
+        "/assets/app13.js",
+        "/assets/app14.js",
+        "/assets/app15.js",
+        "/assets/app16.js",
+        "/assets/app17.js",
+        "/",
+        "/sitemap.xml",
+        "/listing/0",
+        "/listing/1",
+        "/listing/0",
+        "/listing/1",
+        "/listing/2",
+        "/listing/3",
+        "/listing/2",
+        "/listing/3"
+      ]
+    },
+    {
+      "name": "classification",
+      "elapsedMs": 678,
+      "accounting": {
+        "networkAttempts": 12,
+        "blockedEvents": 0,
+        "uniqueResources": 12,
+        "repeatedRequests": 0,
+        "downloadedBytes": 669,
+        "retainedDecodedBytes": 669,
+        "textAnalyzedBytes": 669,
+        "intentionalSkips": 0,
+        "httpErrors": 5,
+        "networkFailures": 0,
+        "timeouts": 0,
+        "failedAttempts": 0,
+        "successfulResponses": 7,
+        "discoveredUrls": 11,
+        "reusedTextInspections": 0,
+        "runtimeCaptures": 0,
+        "coverageGaps": 2
+      },
+      "coverage": {
+        "applicationPages": {
+          "discovered": 1,
+          "downloaded": 1,
+          "analyzed": 1,
+          "successful": 1,
+          "errorResponses": 0,
+          "blocked": 0,
+          "skipped": 0,
+          "uninspected": 0
+        },
+        "javascript": {
+          "discovered": 1,
+          "downloaded": 1,
+          "analyzed": 1,
+          "successful": 1,
+          "errorResponses": 0,
+          "blocked": 0,
+          "skipped": 0,
+          "uninspected": 0
+        },
+        "jsonConfig": {
+          "discovered": 0,
+          "downloaded": 0,
+          "analyzed": 0,
+          "successful": 0,
+          "errorResponses": 0,
+          "blocked": 0,
+          "skipped": 0,
+          "uninspected": 0
+        },
+        "sourceMaps": {
+          "discovered": 8,
+          "downloaded": 8,
+          "analyzed": 8,
+          "successful": 1,
+          "errorResponses": 5,
+          "blocked": 0,
+          "skipped": 0,
+          "uninspected": 7
+        },
+        "sitemaps": {
+          "discovered": 1,
+          "downloaded": 1,
+          "analyzed": 1,
+          "successful": 1,
+          "errorResponses": 0,
+          "blocked": 0,
+          "skipped": 0,
+          "uninspected": 0
+        },
+        "baselineRequests": {
+          "discovered": 0,
+          "downloaded": 0,
+          "analyzed": 0,
+          "successful": 0,
+          "errorResponses": 0,
+          "blocked": 0,
+          "skipped": 0,
+          "uninspected": 0
+        },
+        "deploymentChecks": {
+          "discovered": 0,
+          "downloaded": 0,
+          "analyzed": 0,
+          "successful": 0,
+          "errorResponses": 0,
+          "blocked": 0,
+          "skipped": 0,
+          "uninspected": 0
+        },
+        "images": {
+          "discovered": 0,
+          "downloaded": 0,
+          "analyzed": 0,
+          "successful": 0,
+          "errorResponses": 0,
+          "blocked": 0,
+          "skipped": 0,
+          "uninspected": 0
+        },
+        "runtimeCaptures": {
+          "discovered": 0,
+          "downloaded": 0,
+          "analyzed": 0,
+          "successful": 0,
+          "errorResponses": 0,
+          "blocked": 0,
+          "skipped": 0,
+          "uninspected": 0
+        },
+        "other": {
+          "discovered": 1,
+          "downloaded": 1,
+          "analyzed": 1,
+          "successful": 1,
+          "errorResponses": 0,
+          "blocked": 0,
+          "skipped": 0,
+          "uninspected": 0
+        },
+        "browserRuntime": {
+          "discovered": 0,
+          "downloaded": 0,
+          "analyzed": 0,
+          "successful": 0,
+          "errorResponses": 0,
+          "blocked": 0,
+          "skipped": 0,
+          "uninspected": 0
+        }
+      },
+      "semantic": {
+        "modules": 2,
+        "nodes": 67,
+        "views": 1,
+        "elapsedMs": 7
+      },
+      "scheduler": {
+        "classes": {
+          "entryPages": {
+            "pending": 0,
+            "active": 0,
+            "oldestQueuedMs": 0
+          },
+          "javascript": {
+            "pending": 0,
+            "active": 0,
+            "oldestQueuedMs": 0
+          },
+          "configuration": {
+            "pending": 0,
+            "active": 0,
+            "oldestQueuedMs": 0
+          },
+          "sourceMaps": {
+            "pending": 0,
+            "active": 0,
+            "oldestQueuedMs": 0
+          },
+          "discovery": {
+            "pending": 0,
+            "active": 0,
+            "oldestQueuedMs": 0
+          },
+          "optionalPages": {
+            "pending": 0,
+            "active": 0,
+            "oldestQueuedMs": 0
+          },
+          "other": {
+            "pending": 0,
+            "active": 0,
+            "oldestQueuedMs": 0
+          },
+          "baseline": {
+            "pending": 0,
+            "active": 0,
+            "oldestQueuedMs": 0
+          },
+          "deployment": {
+            "pending": 0,
+            "active": 0,
+            "oldestQueuedMs": 0
+          }
+        },
+        "dispatches": [
+          {
+            "class": "javascript",
+            "url": "http://127.0.0.1:51088/assets/maps.js",
+            "at": 1791315552991
+          },
+          {
+            "class": "discovery",
+            "url": "http://127.0.0.1:51088/sitemap.xml",
+            "at": 1791315552991
+          },
+          {
+            "class": "sourceMaps",
+            "url": "http://127.0.0.1:51088/maps/valid.map",
+            "at": 1791315553086
+          },
+          {
+            "class": "sourceMaps",
+            "url": "http://127.0.0.1:51088/maps/invalid.map",
+            "at": 1791315553086
+          },
+          {
+            "class": "sourceMaps",
+            "url": "http://127.0.0.1:51088/maps/fallback.map",
+            "at": 1791315553191
+          },
+          {
+            "class": "sourceMaps",
+            "url": "http://127.0.0.1:51088/maps/missing0.js.map",
+            "at": 1791315553191
+          },
+          {
+            "class": "sourceMaps",
+            "url": "http://127.0.0.1:51088/maps/missing1.js.map",
+            "at": 1791315553292
+          },
+          {
+            "class": "sourceMaps",
+            "url": "http://127.0.0.1:51088/maps/missing2.js.map",
+            "at": 1791315553292
+          },
+          {
+            "class": "sourceMaps",
+            "url": "http://127.0.0.1:51088/maps/missing3.js.map",
+            "at": 1791315553387
+          },
+          {
+            "class": "sourceMaps",
+            "url": "http://127.0.0.1:51088/maps/missing4.js.map",
+            "at": 1791315553387
+          }
+        ],
+        "pageAttempts": 1,
+        "timeToFirstJavaScriptMs": 109
+      },
+      "diagnosis": "7 map candidates are unavailable, invalid or incomplete; body analysis is not map validation.",
+      "analyzedJavaScript": 1,
+      "runtimePages": 0,
+      "failures": 0,
+      "timeoutGaps": 0,
+      "queryGaps": 0,
+      "aggregateSkips": [],
+      "credentialPaths": {
+        "http": false,
+        "browser": false
+      },
+      "information": [
+        {
+          "rule": "public-source-map",
+          "remediation": "Confirm whether publishing source maps is intended. Remove unnecessary maps and stale source assets; rebuild and rescan.",
+          "occurrences": [
+            {
+              "url": "http://127.0.0.1:51088/maps/valid.map",
+              "chain": [
+                "http://127.0.0.1:51088/map-workload",
+                "document/base URL",
+                "http://127.0.0.1:51088/assets/maps.js",
+                "static bundle literal"
+              ],
+              "transformations": [],
+              "excerpt": "",
+              "evidence": "Unauthenticated HTTP response",
+              "coordinates": "unavailable",
+              "byteOffsetEncoding": "utf-8-decoded-text",
+              "exposure": "public-response",
+              "excerptUnavailableReason": "Observation comes from resource metadata; no matched source text was retained."
+            }
+          ]
+        }
+      ],
+      "dispatch": [
+        "/robots.txt",
+        "/map-workload",
+        "/assets/maps.js",
+        "/sitemap.xml",
+        "/maps/valid.map",
+        "/maps/invalid.map",
+        "/maps/fallback.map",
+        "/maps/missing0.js.map",
+        "/maps/missing1.js.map",
+        "/maps/missing2.js.map",
+        "/maps/missing3.js.map",
+        "/maps/missing4.js.map"
+      ]
+    },
+    {
+      "name": "evidence",
+      "elapsedMs": 196,
+      "accounting": {
+        "networkAttempts": 3,
+        "blockedEvents": 0,
+        "uniqueResources": 3,
+        "repeatedRequests": 0,
+        "downloadedBytes": 258,
+        "retainedDecodedBytes": 258,
+        "textAnalyzedBytes": 258,
+        "intentionalSkips": 1,
+        "httpErrors": 0,
+        "networkFailures": 0,
+        "timeouts": 0,
+        "failedAttempts": 0,
+        "successfulResponses": 3,
+        "discoveredUrls": 3,
+        "reusedTextInspections": 0,
+        "runtimeCaptures": 0,
+        "coverageGaps": 0
+      },
+      "coverage": {
+        "applicationPages": {
+          "discovered": 1,
+          "downloaded": 1,
+          "analyzed": 1,
+          "successful": 1,
+          "errorResponses": 0,
+          "blocked": 0,
+          "skipped": 0,
+          "uninspected": 0
+        },
+        "javascript": {
+          "discovered": 0,
+          "downloaded": 0,
+          "analyzed": 0,
+          "successful": 0,
+          "errorResponses": 0,
+          "blocked": 0,
+          "skipped": 0,
+          "uninspected": 0
+        },
+        "jsonConfig": {
+          "discovered": 0,
+          "downloaded": 0,
+          "analyzed": 0,
+          "successful": 0,
+          "errorResponses": 0,
+          "blocked": 0,
+          "skipped": 0,
+          "uninspected": 0
+        },
+        "sourceMaps": {
+          "discovered": 0,
+          "downloaded": 0,
+          "analyzed": 0,
+          "successful": 0,
+          "errorResponses": 0,
+          "blocked": 0,
+          "skipped": 0,
+          "uninspected": 0
+        },
+        "sitemaps": {
+          "discovered": 1,
+          "downloaded": 1,
+          "analyzed": 1,
+          "successful": 1,
+          "errorResponses": 0,
+          "blocked": 0,
+          "skipped": 0,
+          "uninspected": 0
+        },
+        "baselineRequests": {
+          "discovered": 0,
+          "downloaded": 0,
+          "analyzed": 0,
+          "successful": 0,
+          "errorResponses": 0,
+          "blocked": 0,
+          "skipped": 0,
+          "uninspected": 0
+        },
+        "deploymentChecks": {
+          "discovered": 0,
+          "downloaded": 0,
+          "analyzed": 0,
+          "successful": 0,
+          "errorResponses": 0,
+          "blocked": 0,
+          "skipped": 0,
+          "uninspected": 0
+        },
+        "images": {
+          "discovered": 1,
+          "downloaded": 0,
+          "analyzed": 0,
+          "successful": 0,
+          "errorResponses": 0,
+          "blocked": 0,
+          "skipped": 1,
+          "uninspected": 0
+        },
+        "runtimeCaptures": {
+          "discovered": 0,
+          "downloaded": 0,
+          "analyzed": 0,
+          "successful": 0,
+          "errorResponses": 0,
+          "blocked": 0,
+          "skipped": 0,
+          "uninspected": 0
+        },
+        "other": {
+          "discovered": 1,
+          "downloaded": 1,
+          "analyzed": 1,
+          "successful": 1,
+          "errorResponses": 0,
+          "blocked": 0,
+          "skipped": 0,
+          "uninspected": 0
+        },
+        "browserRuntime": {
+          "discovered": 0,
+          "downloaded": 0,
+          "analyzed": 0,
+          "successful": 0,
+          "errorResponses": 0,
+          "blocked": 0,
+          "skipped": 0,
+          "uninspected": 0
+        }
+      },
+      "semantic": {
+        "modules": 1,
+        "nodes": 13,
+        "views": 0,
+        "elapsedMs": 5
+      },
+      "scheduler": {
+        "classes": {
+          "entryPages": {
+            "pending": 0,
+            "active": 0,
+            "oldestQueuedMs": 0
+          },
+          "javascript": {
+            "pending": 0,
+            "active": 0,
+            "oldestQueuedMs": 0
+          },
+          "configuration": {
+            "pending": 0,
+            "active": 0,
+            "oldestQueuedMs": 0
+          },
+          "sourceMaps": {
+            "pending": 0,
+            "active": 0,
+            "oldestQueuedMs": 0
+          },
+          "discovery": {
+            "pending": 0,
+            "active": 0,
+            "oldestQueuedMs": 0
+          },
+          "optionalPages": {
+            "pending": 0,
+            "active": 0,
+            "oldestQueuedMs": 0
+          },
+          "other": {
+            "pending": 0,
+            "active": 0,
+            "oldestQueuedMs": 0
+          },
+          "baseline": {
+            "pending": 0,
+            "active": 0,
+            "oldestQueuedMs": 0
+          },
+          "deployment": {
+            "pending": 0,
+            "active": 0,
+            "oldestQueuedMs": 0
+          }
+        },
+        "dispatches": [
+          {
+            "class": "discovery",
+            "url": "http://127.0.0.1:51088/sitemap.xml",
+            "at": 1791315553680
+          }
+        ],
+        "pageAttempts": 1
+      },
+      "diagnosis": "Discovered resources and configured checks finished within limits. Whole-site security remains untested.",
+      "analyzedJavaScript": 0,
+      "runtimePages": 0,
+      "failures": 0,
+      "timeoutGaps": 0,
+      "queryGaps": 0,
+      "aggregateSkips": [
+        {
+          "reason": "Known raster image bodies / Next image renditions intentionally skipped after local URL inspection; distinct source images stay separate",
+          "count": 1,
+          "families": 1,
+          "examples": [
+            "[redacted]"
+          ]
+        }
+      ],
+      "credentialPaths": {
+        "http": false,
+        "browser": false
+      },
+      "information": [
+        {
+          "rule": "public-storage-or-database-endpoint",
+          "observation": {
+            "endpoint": "[redacted]",
+            "role": "public-image-object",
+            "extraction": "literal-url",
+            "authorization": "untested"
+          },
+          "remediation": "Confirm that this referenced image/object is intended to be public. Review bucket policies independently; the reference does not establish broader read/write access.",
+          "occurrences": [
+            {
+              "url": "http://127.0.0.1:51088/evidence",
+              "line": 1,
+              "column": 17,
+              "byteOffset": 16,
+              "chain": [],
+              "transformations": [],
+              "excerpt": "<html><img src=\"[redacted]\"><script>const privateKey=\"[redacted]",
+              "evidence": "Unauthenticated HTTP response",
+              "coordinates": "generated",
+              "byteOffsetEncoding": "utf-8-decoded-text",
+              "exposure": "public-response"
+            }
+          ]
+        }
+      ],
+      "dispatch": [
+        "/robots.txt",
+        "/evidence",
+        "/sitemap.xml"
+      ]
+    },
+    {
+      "name": "endpoint-evidence",
+      "finding": {
+        "id": "e0df67cf8f3a5b4de2f080cddd4500ac",
+        "fingerprint": "e0df67cf8f3a5b4de2f080cddd4500ac",
+        "category": "information",
+        "provider": "Website",
+        "rule": "public-storage-or-database-endpoint",
+        "severity": "info",
+        "confidence": "high",
+        "reasons": [
+          "Literal storage/database URL in public content; access policies and sensitive contents remain untested."
+        ],
+        "masked": "No credential inferred",
+        "validity": "unverified",
+        "impact": "Public implementation or configuration information; no private credential inferred.",
+        "remediation": "Confirm that this referenced image/object is intended to be public. Review bucket policies independently; the reference does not establish broader read/write access.",
+        "occurrences": [
+          {
+            "url": "https://fixture.invalid/",
+            "line": 1,
+            "column": 11,
+            "byteOffset": 10,
+            "chain": [],
+            "transformations": [],
+            "excerpt": "<img src=\"https://public-assets.s3.eu-west-1.amazonaws.com/photos/hero.png\">",
+            "evidence": "Public HTML",
+            "coordinates": "generated",
+            "byteOffsetEncoding": "utf-8-decoded-text",
+            "exposure": "public-response"
+          }
+        ],
+        "environment": "unknown",
+        "exposureGroup": "other",
+        "financialPriority": "none",
+        "observation": {
+          "endpoint": "https://public-assets.s3.eu-west-1.amazonaws.com/photos/hero.png",
+          "role": "public-image-object",
+          "extraction": "literal-url",
+          "authorization": "untested"
+        }
+      }
+    }
+  ],
+  "peakNodeRssKiB": 203796,
+  "limits": "Local deterministic workload-shape recreations, not replay of missing target response bodies. Baseline deliberately unavailable engine isolates scheduling; actual pinned engine/browser exercised separately."
+}

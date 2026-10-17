@@ -1,0 +1,19 @@
+{
+  "projects": [
+    {
+      "name": "Exact origins only",
+      "urls": [
+        "https://www.example.com/"
+      ],
+      "relatedOrigins": [
+        "https://assets.example.com"
+      ],
+      "coverage": "quick",
+      "traffic": "normal",
+      "domainScope": "exact-origin",
+      "browserLocale": "en-US",
+      "browserTimezone": "UTC",
+      "staticUserAgent": "product"
+    }
+  ]
+}

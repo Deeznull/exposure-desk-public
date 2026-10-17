@@ -1,0 +1,232 @@
+{
+ "schema": "exposure-matrix-reuse/1",
+ "reusedFrom": "2.8.0 release records (benchmarks/2.8.0/matrix.json, the 2.8 side measured 2026-10-12 on this computer by build 2.8.0+cc5fecf8cb75f1c7, harness 43537d3099028d72, Node v24.18.1, the same build, measurement harness and Node as this release's baseline)",
+ "label": "2.8.0 matrix figures reused from the 2.8.0 release records (owner decision 2026-10-11)",
+ "spotCheck": {
+  "criteria": "per run: same state, keys (found/planted), connections (requests, TCP, TLS, attempts, opened, browser navigations, 0 egress) and memory settings (budget and workers used, caps, analysis processes, heap limits and out-of-memory per role, memory gaps) as the reused record; time within 15 %. Peak RSS within 10 % is reported per run, not a criterion.",
+  "rows": [
+   {
+    "id": "2.8.0/quick+normal/singlex1",
+    "run": 1,
+    "measuredAt": "2026-10-15T00:04:08.766Z",
+    "build": "2.8.0+cc5fecf8cb75f1c7",
+    "durationS": 13.1,
+    "recordDurationS": 13.1,
+    "timeChangePct": 0,
+    "peakRssMb": 206,
+    "recordPeakRssMb": 186,
+    "rssChangePct": 10.8,
+    "rssWithin10Pct": false,
+    "keys": "6/8",
+    "requests": 25,
+    "tcp": 25,
+    "navigations": 0,
+    "differsFromRecord": [],
+    "meetsCriteria": true
+   },
+   {
+    "id": "2.8.0/standard+normal/singlex1",
+    "run": 1,
+    "measuredAt": "2026-10-15T00:04:22.413Z",
+    "build": "2.8.0+cc5fecf8cb75f1c7",
+    "durationS": 38,
+    "recordDurationS": 38.9,
+    "timeChangePct": -2.4,
+    "peakRssMb": 208,
+    "recordPeakRssMb": 201,
+    "rssChangePct": 3.5,
+    "rssWithin10Pct": true,
+    "keys": "7/8",
+    "requests": 49,
+    "tcp": 49,
+    "navigations": 5,
+    "differsFromRecord": [],
+    "meetsCriteria": true
+   },
+   {
+    "id": "2.8.0/deep+normal/singlex1",
+    "run": 1,
+    "measuredAt": "2026-10-15T00:05:01.007Z",
+    "build": "2.8.0+cc5fecf8cb75f1c7",
+    "durationS": 77.6,
+    "recordDurationS": 78.9,
+    "timeChangePct": -1.5,
+    "peakRssMb": 209,
+    "recordPeakRssMb": 199,
+    "rssChangePct": 5,
+    "rssWithin10Pct": true,
+    "keys": "8/8",
+    "requests": 61,
+    "tcp": 61,
+    "navigations": 10,
+    "differsFromRecord": [],
+    "meetsCriteria": true
+   },
+   {
+    "id": "2.8.0/standard+normal/bundlex1",
+    "run": 1,
+    "measuredAt": "2026-10-15T00:06:19.239Z",
+    "build": "2.8.0+cc5fecf8cb75f1c7",
+    "durationS": 21.4,
+    "recordDurationS": 21.3,
+    "timeChangePct": 0.5,
+    "peakRssMb": 346,
+    "recordPeakRssMb": 334,
+    "rssChangePct": 3.6,
+    "rssWithin10Pct": true,
+    "keys": "7/7",
+    "requests": 41,
+    "tcp": 41,
+    "navigations": 1,
+    "differsFromRecord": [],
+    "meetsCriteria": true
+   },
+   {
+    "id": "2.8.0/standard+low-impact/multix3",
+    "run": 1,
+    "measuredAt": "2026-10-15T00:06:41.253Z",
+    "build": "2.8.0+cc5fecf8cb75f1c7",
+    "durationS": 158.5,
+    "recordDurationS": 158.6,
+    "timeChangePct": -0.1,
+    "peakRssMb": 209,
+    "recordPeakRssMb": 195,
+    "rssChangePct": 7.2,
+    "rssWithin10Pct": true,
+    "keys": "21/24",
+    "requests": 118,
+    "tcp": 5,
+    "navigations": 9,
+    "differsFromRecord": [],
+    "meetsCriteria": true
+   },
+   {
+    "id": "2.8.0/standard+normal/multix10",
+    "run": 1,
+    "measuredAt": "2026-10-15T00:09:20.362Z",
+    "build": "2.8.0+cc5fecf8cb75f1c7",
+    "durationS": 156.4,
+    "recordDurationS": 168.2,
+    "timeChangePct": -7,
+    "peakRssMb": 296,
+    "recordPeakRssMb": 278,
+    "rssChangePct": 6.5,
+    "rssWithin10Pct": true,
+    "keys": "70/80",
+    "requests": 489,
+    "tcp": 489,
+    "navigations": 50,
+    "differsFromRecord": [
+     {
+      "field": "requests",
+      "run": 489,
+      "record": 490
+     },
+     {
+      "field": "tcp",
+      "run": 489,
+      "record": 490
+     },
+     {
+      "field": "tls",
+      "run": 489,
+      "record": 490
+     },
+     {
+      "field": "attempts",
+      "run": 489,
+      "record": 490
+     },
+     {
+      "field": "opened",
+      "run": 489,
+      "record": 490
+     }
+    ],
+    "meetsCriteria": false
+   },
+   {
+    "id": "2.8.0/standard+normal/multix10",
+    "run": 2,
+    "measuredAt": "2026-10-15T02:53:59.677Z",
+    "build": "2.8.0+cc5fecf8cb75f1c7",
+    "durationS": 168.8,
+    "recordDurationS": 168.2,
+    "timeChangePct": 0.4,
+    "peakRssMb": 228,
+    "recordPeakRssMb": 278,
+    "rssChangePct": -18,
+    "rssWithin10Pct": false,
+    "keys": "70/80",
+    "requests": 490,
+    "tcp": 490,
+    "navigations": 50,
+    "differsFromRecord": [
+     {
+      "field": "parserProcesses",
+      "run": 1,
+      "record": 2
+     }
+    ],
+    "meetsCriteria": false
+   }
+  ],
+  "byId": [
+   {
+    "id": "2.8.0/quick+normal/singlex1",
+    "runs": 1,
+    "status": "match"
+   },
+   {
+    "id": "2.8.0/standard+normal/singlex1",
+    "runs": 1,
+    "status": "match"
+   },
+   {
+    "id": "2.8.0/deep+normal/singlex1",
+    "runs": 1,
+    "status": "match"
+   },
+   {
+    "id": "2.8.0/standard+normal/bundlex1",
+    "runs": 1,
+    "status": "match"
+   },
+   {
+    "id": "2.8.0/standard+low-impact/multix3",
+    "runs": 1,
+    "status": "match"
+   },
+   {
+    "id": "2.8.0/standard+normal/multix10",
+    "runs": 2,
+    "status": "within same-build variance",
+    "fieldsThatDifferBetweenSameDayRuns": [
+     "requests",
+     "tcp",
+     "tls",
+     "attempts",
+     "opened",
+     "parserProcesses"
+    ],
+    "fieldsThatDifferFromRecord": [
+     "requests",
+     "tcp",
+     "tls",
+     "attempts",
+     "opened",
+     "parserProcesses"
+    ]
+   }
+  ],
+  "allMatchOrWithinVariance": true,
+  "decision": "D7 (w9-release, 2026-10-15): five row ids match. The browser row 2.8.0/standard+normal/multix10 was run twice on the extracted 2.8.0 ZIP the same day: run 1 gave 489 requests/TCP (record 490) with 2 parser processes (record 2); run 2 gave 490 (equal) with 1 parser process. Keys 70/80 and time (-7 %, +0.4 %) are within the criteria in both. Every field that differs from the record also differs between the two same-build runs, so the record is consistent with the build (the 2.7.0 build likewise gave 492 and 494 in two release records), and the 2.8.0 side is reused as labelled. Peak RSS varies the same way (296 and 228 MiB, record 278; quick+normal/singlex1 206 against 186, +10.8 %), so it is reported, not gated."
+ },
+ "slowRows": [
+  {
+   "checkedAt": "2026-10-15T03:04:43.025Z",
+   "criteria": "a 2.9.0 row more than 15 % slower than its reused 2.8.0 row: that 2.8.0 row is rerun the same day",
+   "rows": []
+  }
+ ]
+}

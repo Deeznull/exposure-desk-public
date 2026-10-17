@@ -1,0 +1,865 @@
+{
+  "schema": "exposure-release-verification/1",
+  "version": "2.7.0",
+  "build": {
+    "version": "2.7.0",
+    "id": "2.7.0+3772c88c496661b5",
+    "sourceDigest": "3772c88c496661b5bb04bab02b52500cae9985367c118ac9ac70904ebf5806f4"
+  },
+  "ruleVersion": "website/2.7.0",
+  "unit": {
+    "tests": 491,
+    "pass": 491,
+    "fail": 0,
+    "cancelled": 0,
+    "skipped": 0,
+    "todo": 0,
+    "durationMs": 702048.4712
+  },
+  "browser": {
+    "tests": 34,
+    "pass": 34,
+    "fail": 0,
+    "cancelled": 0,
+    "skipped": 0,
+    "todo": 0,
+    "durationMs": 450758.1613
+  },
+  "cancellationStress": {
+    "tests": 60,
+    "pass": 60,
+    "fail": 0,
+    "cancelled": 0,
+    "skipped": 0,
+    "todo": 0,
+    "durationMs": 210940.605
+  },
+  "cliSmoke": {
+    "passed": 4,
+    "failed": false
+  },
+  "persistenceSmoke": {
+    "platform": "win32",
+    "syntheticPermissionException": false,
+    "projectRestart": true,
+    "correlationRestart": true,
+    "vaultRestart": true,
+    "operatorPermissions": true,
+    "deletion": true
+  },
+  "benchmark": {
+    "planted": 130,
+    "detected": 130,
+    "missed": 0,
+    "falsePositives": 0,
+    "componentErrors": 0,
+    "locationErrors": 0,
+    "privateTargets": 125,
+    "publicTargets": 3,
+    "suspiciousTargets": 2
+  },
+  "pipeline": {
+    "status": "passed",
+    "summary": {
+      "planted": 17,
+      "found": 17,
+      "missed": 0
+    }
+  },
+  "legacyCorpus": {
+    "baseline": {
+      "targets": 13,
+      "detected": 13,
+      "falsePositives": 0,
+      "exposureTargets": 5,
+      "exposureMisses": 0,
+      "exposureFalsePositives": 0,
+      "classificationErrors": 0,
+      "elapsedMs": 1469.6181000000001,
+      "maxRssKiB": 231600,
+      "build": "2.6.0+8b02299c3915954b"
+    },
+    "final": {
+      "targets": 13,
+      "detected": 13,
+      "falsePositives": 0,
+      "exposureTargets": 5,
+      "exposureMisses": 0,
+      "exposureFalsePositives": 0,
+      "classificationErrors": 0,
+      "elapsedMs": 1916.0040999999999,
+      "maxRssKiB": 213692,
+      "build": "2.7.0+3772c88c496661b5"
+    }
+  },
+  "acquisition": {
+    "baseline": {
+      "build": "2.6.0+8b02299c3915954b",
+      "detected": 5,
+      "targets": 5,
+      "falsePositives": 0,
+      "knownInspected": 9,
+      "knownResources": 9,
+      "forbiddenArrivals": 0,
+      "elapsedMs": 5446.023,
+      "maxRssKiB": 246584
+    },
+    "final": {
+      "build": "2.7.0+3772c88c496661b5",
+      "detected": 5,
+      "targets": 5,
+      "falsePositives": 0,
+      "knownInspected": 9,
+      "knownResources": 9,
+      "forbiddenArrivals": 0,
+      "elapsedMs": 5074.4294,
+      "maxRssKiB": 204196
+    }
+  },
+  "evaluation": {
+    "role": "legacy-settings regression",
+    "corpusDigest": "41f8c2dd214da8bd7192d2d6a8863ed96e4d274b9c8d312edf97c7bc02e94479",
+    "frozenAt": "2026-10-08T04:15:23.216Z",
+    "repeat": 3,
+    "errors": [],
+    "groups": {
+      "G1": {
+        "baselineBuild": "2.6.0+8b02299c3915954b",
+        "newBuild": "2.7.0+3772c88c496661b5",
+        "wallMsMedian": {
+          "baseline": 1271,
+          "new": 1268
+        },
+        "maxRssKiB": {
+          "baseline": 204804,
+          "new": 208560
+        }
+      },
+      "G2": {
+        "baselineBuild": "2.6.0+8b02299c3915954b",
+        "newBuild": "2.7.0+3772c88c496661b5",
+        "wallMsMedian": {
+          "baseline": 3601,
+          "new": 3982
+        },
+        "maxRssKiB": {
+          "baseline": 197352,
+          "new": 196708
+        }
+      },
+      "G3": {
+        "baselineBuild": "2.6.0+8b02299c3915954b",
+        "newBuild": "2.7.0+3772c88c496661b5",
+        "wallMsMedian": {
+          "baseline": 10239,
+          "new": 10096
+        },
+        "maxRssKiB": {
+          "baseline": 198396,
+          "new": 205776
+        }
+      },
+      "G4": {
+        "baselineBuild": "2.6.0+8b02299c3915954b",
+        "newBuild": "2.7.0+3772c88c496661b5",
+        "wallMsMedian": {
+          "baseline": 1983,
+          "new": 1969
+        },
+        "maxRssKiB": {
+          "baseline": 209404,
+          "new": 203540
+        }
+      },
+      "G5": {
+        "baselineBuild": "2.6.0+8b02299c3915954b",
+        "newBuild": "2.7.0+3772c88c496661b5",
+        "wallMsMedian": {
+          "baseline": 9627,
+          "new": 9672
+        },
+        "maxRssKiB": {
+          "baseline": 693068,
+          "new": 382560
+        }
+      },
+      "G6": {
+        "baselineBuild": "2.6.0+8b02299c3915954b",
+        "newBuild": "2.7.0+3772c88c496661b5",
+        "wallMsMedian": {
+          "baseline": 3843,
+          "new": 4081
+        },
+        "maxRssKiB": {
+          "baseline": 629612,
+          "new": 462200
+        }
+      },
+      "G7": {
+        "baselineBuild": "2.6.0+8b02299c3915954b",
+        "newBuild": "2.7.0+3772c88c496661b5",
+        "wallMsMedian": {
+          "baseline": 16158,
+          "new": 16169
+        },
+        "maxRssKiB": {
+          "baseline": 195420,
+          "new": 196656
+        }
+      },
+      "G8": {
+        "baselineBuild": "2.6.0+8b02299c3915954b",
+        "newBuild": "2.7.0+3772c88c496661b5",
+        "wallMsMedian": {
+          "baseline": 3612,
+          "new": 4025
+        },
+        "maxRssKiB": {
+          "baseline": 197140,
+          "new": 197572
+        }
+      },
+      "G9": {
+        "baselineBuild": "2.6.0+8b02299c3915954b",
+        "newBuild": "2.7.0+3772c88c496661b5",
+        "wallMsMedian": {
+          "baseline": 3979,
+          "new": 3938
+        },
+        "maxRssKiB": {
+          "baseline": 192140,
+          "new": 208388
+        }
+      }
+    }
+  },
+  "readyOptionMatrix": {
+    "source": "benchmarks/2.7.0/matrix.json",
+    "generatedAt": "2026-10-10T14:09:01.389Z",
+    "scans": 57,
+    "checks": {
+      "Low-impact fewer connections than Normal, requests no more than Normal's": {
+        "passed": 4,
+        "total": 4,
+        "failed": []
+      },
+      "Low-impact fewer requests and connections than Normal": {
+        "passed": 8,
+        "total": 8,
+        "failed": []
+      },
+      "Deep+Low-impact keeps Deep+Normal recall": {
+        "passed": 4,
+        "total": 4,
+        "failed": []
+      },
+      "Quick reports its limits": {
+        "passed": 8,
+        "total": 8,
+        "failed": []
+      },
+      "Quick fastest": {
+        "passed": 8,
+        "total": 8,
+        "failed": []
+      },
+      "Within limits": {
+        "passed": 33,
+        "total": 33,
+        "failed": []
+      },
+      "Finds its keys at its memory setting": {
+        "passed": 33,
+        "total": 33,
+        "failed": []
+      },
+      "Keeps the 2.6.0 recall": {
+        "passed": 24,
+        "total": 24,
+        "failed": []
+      },
+      "Adjustment only lowers": {
+        "passed": 36,
+        "total": 36,
+        "failed": []
+      },
+      "Settings as recorded": {
+        "passed": 33,
+        "total": 33,
+        "failed": []
+      }
+    }
+  },
+  "externalCorpus": [
+    {
+      "coverage": "quick",
+      "traffic": "low-impact",
+      "preset": null,
+      "mode": "acquisition",
+      "overall": {
+        "truePositives": 27,
+        "falsePositives": 3,
+        "falseNegatives": 0,
+        "precision": 0.9,
+        "recall": 1
+      },
+      "negativeAlerts": 3,
+      "sites": 20,
+      "requests": 526,
+      "durationMs": 1040235,
+      "states": {
+        "incomplete": 17,
+        "completed": 3
+      },
+      "build": "2.7.0+3772c88c496661b5"
+    },
+    {
+      "coverage": "quick",
+      "traffic": "low-impact",
+      "preset": null,
+      "mode": "discovery",
+      "overall": {
+        "truePositives": 24,
+        "falsePositives": 3,
+        "falseNegatives": 3,
+        "precision": 0.889,
+        "recall": 0.889
+      },
+      "negativeAlerts": 3,
+      "sites": 20,
+      "requests": 474,
+      "durationMs": 950565,
+      "states": {
+        "incomplete": 19,
+        "completed": 1
+      },
+      "build": "2.7.0+3772c88c496661b5"
+    },
+    {
+      "coverage": "quick",
+      "traffic": "normal",
+      "preset": null,
+      "mode": "acquisition",
+      "overall": {
+        "truePositives": 27,
+        "falsePositives": 3,
+        "falseNegatives": 0,
+        "precision": 0.9,
+        "recall": 1
+      },
+      "negativeAlerts": 3,
+      "sites": 20,
+      "requests": 526,
+      "durationMs": 336067,
+      "states": {
+        "incomplete": 17,
+        "completed": 3
+      },
+      "build": "2.7.0+3772c88c496661b5"
+    },
+    {
+      "coverage": "quick",
+      "traffic": "normal",
+      "preset": null,
+      "mode": "discovery",
+      "overall": {
+        "truePositives": 24,
+        "falsePositives": 3,
+        "falseNegatives": 3,
+        "precision": 0.889,
+        "recall": 0.889
+      },
+      "negativeAlerts": 3,
+      "sites": 20,
+      "requests": 474,
+      "durationMs": 336170,
+      "states": {
+        "incomplete": 19,
+        "completed": 1
+      },
+      "build": "2.7.0+3772c88c496661b5"
+    },
+    {
+      "coverage": "standard",
+      "traffic": "low-impact",
+      "preset": null,
+      "mode": "acquisition",
+      "overall": {
+        "truePositives": 27,
+        "falsePositives": 3,
+        "falseNegatives": 0,
+        "precision": 0.9,
+        "recall": 1
+      },
+      "negativeAlerts": 3,
+      "sites": 20,
+      "requests": 587,
+      "durationMs": 1352182,
+      "states": {
+        "incomplete": 20
+      },
+      "build": "2.7.0+3772c88c496661b5"
+    },
+    {
+      "coverage": "standard",
+      "traffic": "low-impact",
+      "preset": null,
+      "mode": "discovery",
+      "overall": {
+        "truePositives": 27,
+        "falsePositives": 3,
+        "falseNegatives": 0,
+        "precision": 0.9,
+        "recall": 1
+      },
+      "negativeAlerts": 3,
+      "sites": 20,
+      "requests": 922,
+      "durationMs": 1845926,
+      "states": {
+        "incomplete": 20
+      },
+      "build": "2.7.0+3772c88c496661b5"
+    },
+    {
+      "coverage": "standard",
+      "traffic": "normal",
+      "preset": null,
+      "mode": "acquisition",
+      "overall": {
+        "truePositives": 27,
+        "falsePositives": 3,
+        "falseNegatives": 0,
+        "precision": 0.9,
+        "recall": 1
+      },
+      "negativeAlerts": 3,
+      "sites": 20,
+      "requests": 768,
+      "durationMs": 823140,
+      "states": {
+        "incomplete": 20
+      },
+      "build": "2.7.0+3772c88c496661b5"
+    },
+    {
+      "coverage": "standard",
+      "traffic": "normal",
+      "preset": null,
+      "mode": "discovery",
+      "overall": {
+        "truePositives": 27,
+        "falsePositives": 3,
+        "falseNegatives": 0,
+        "precision": 0.9,
+        "recall": 1
+      },
+      "negativeAlerts": 3,
+      "sites": 20,
+      "requests": 1336,
+      "durationMs": 801909,
+      "states": {
+        "incomplete": 20
+      },
+      "build": "2.7.0+3772c88c496661b5"
+    },
+    {
+      "coverage": "deep",
+      "traffic": "low-impact",
+      "preset": null,
+      "mode": "acquisition",
+      "overall": {
+        "truePositives": 27,
+        "falsePositives": 3,
+        "falseNegatives": 0,
+        "precision": 0.9,
+        "recall": 1
+      },
+      "negativeAlerts": 3,
+      "sites": 20,
+      "requests": 612,
+      "durationMs": 1788523,
+      "states": {
+        "incomplete": 20
+      },
+      "build": "2.7.0+3772c88c496661b5"
+    },
+    {
+      "coverage": "deep",
+      "traffic": "low-impact",
+      "preset": null,
+      "mode": "discovery",
+      "overall": {
+        "truePositives": 27,
+        "falsePositives": 3,
+        "falseNegatives": 0,
+        "precision": 0.9,
+        "recall": 1
+      },
+      "negativeAlerts": 3,
+      "sites": 20,
+      "requests": 924,
+      "durationMs": 1865830,
+      "states": {
+        "incomplete": 20
+      },
+      "build": "2.7.0+3772c88c496661b5"
+    },
+    {
+      "coverage": "deep",
+      "traffic": "normal",
+      "preset": null,
+      "mode": "acquisition",
+      "overall": {
+        "truePositives": 27,
+        "falsePositives": 3,
+        "falseNegatives": 0,
+        "precision": 0.9,
+        "recall": 1
+      },
+      "negativeAlerts": 3,
+      "sites": 20,
+      "requests": 1067,
+      "durationMs": 1600030,
+      "states": {
+        "incomplete": 20
+      },
+      "build": "2.7.0+3772c88c496661b5"
+    },
+    {
+      "coverage": "deep",
+      "traffic": "normal",
+      "preset": null,
+      "mode": "discovery",
+      "overall": {
+        "truePositives": 27,
+        "falsePositives": 3,
+        "falseNegatives": 0,
+        "precision": 0.9,
+        "recall": 1
+      },
+      "negativeAlerts": 3,
+      "sites": 20,
+      "requests": 1333,
+      "durationMs": 834587,
+      "states": {
+        "incomplete": 20
+      },
+      "build": "2.7.0+3772c88c496661b5"
+    }
+  ],
+  "externalCorpusSource": "benchmarks/2.7.0/external-corpus",
+  "preflight": {
+    "ok": true,
+    "failed": []
+  },
+  "machineState": {
+    "source": "benchmarks/2.7.0/machine-state.json",
+    "host": {
+      "platform": "Windows_NT 10.0.26200 x64",
+      "cpuModel": "8-core x86-64 laptop CPU",
+      "logicalCpus": 16,
+      "totalMemGiB": 31.3
+    },
+    "steps": [
+      {
+        "step": "Nonbrowser suite (sanity)",
+        "durationS": 697,
+        "acThroughout": true,
+        "cpuLoadPercent": {
+          "before": 1.3,
+          "median": 10.2,
+          "max": 18
+        },
+        "freeMemGiBMin": 15.9
+      },
+      {
+        "step": "Browser suite (sanity)",
+        "durationS": 453,
+        "acThroughout": true,
+        "cpuLoadPercent": {
+          "before": 4.1,
+          "median": 15.3,
+          "max": 38
+        },
+        "freeMemGiBMin": 15.3
+      },
+      {
+        "step": "Cancellation stress (20 passes)",
+        "durationS": 211,
+        "acThroughout": true,
+        "cpuLoadPercent": {
+          "before": 3.7,
+          "median": 25.7,
+          "max": 40.8
+        },
+        "freeMemGiBMin": 15.5
+      },
+      {
+        "step": "CLI smoke",
+        "durationS": 12,
+        "acThroughout": true,
+        "cpuLoadPercent": {
+          "before": 8,
+          "median": 11.6,
+          "max": 11.6
+        },
+        "freeMemGiBMin": 16.3
+      },
+      {
+        "step": "Persistence smoke",
+        "durationS": 8,
+        "acThroughout": true,
+        "cpuLoadPercent": {
+          "before": 2.5,
+          "median": 10.3,
+          "max": 10.3
+        },
+        "freeMemGiBMin": 16.5
+      },
+      {
+        "step": "Provider corpus benchmark",
+        "durationS": 46,
+        "acThroughout": true,
+        "cpuLoadPercent": {
+          "before": 6.4,
+          "median": 8.6,
+          "max": 9.1
+        },
+        "freeMemGiBMin": 16.4
+      },
+      {
+        "step": "Pipeline self-test",
+        "durationS": 25,
+        "acThroughout": true,
+        "cpuLoadPercent": {
+          "before": 4.6,
+          "median": 18.4,
+          "max": 25.2
+        },
+        "freeMemGiBMin": 15.8
+      },
+      {
+        "step": "Legacy 2.4 corpora, 2.6.0",
+        "durationS": 2,
+        "acThroughout": true,
+        "cpuLoadPercent": {
+          "before": 7.7,
+          "median": 6.6,
+          "max": 6.6
+        },
+        "freeMemGiBMin": 16.4
+      },
+      {
+        "step": "Legacy 2.4 corpora, 2.7.0",
+        "durationS": 2,
+        "acThroughout": true,
+        "cpuLoadPercent": {
+          "before": 2.4,
+          "median": 2.9,
+          "max": 2.9
+        },
+        "freeMemGiBMin": 16.5
+      },
+      {
+        "step": "Dynamic application, 2.6.0",
+        "durationS": 6,
+        "acThroughout": true,
+        "cpuLoadPercent": {
+          "before": 4.3,
+          "median": 13.7,
+          "max": 13.7
+        },
+        "freeMemGiBMin": 15.8
+      },
+      {
+        "step": "Dynamic application, 2.7.0",
+        "durationS": 6,
+        "acThroughout": true,
+        "cpuLoadPercent": {
+          "before": 7.5,
+          "median": 13,
+          "max": 13
+        },
+        "freeMemGiBMin": 15.8
+      },
+      {
+        "step": "Frozen 2.5 corpus, legacy settings (3 repetitions)",
+        "durationS": 334,
+        "acThroughout": true,
+        "cpuLoadPercent": {
+          "before": 10.1,
+          "median": 11.9,
+          "max": 23
+        },
+        "freeMemGiBMin": 15.9
+      },
+      {
+        "step": "Ready-option matrix",
+        "durationS": 7744,
+        "acThroughout": true,
+        "cpuLoadPercent": {
+          "before": 4.7,
+          "median": 14,
+          "max": 44.3
+        },
+        "freeMemGiBMin": 15.1
+      },
+      {
+        "step": "External corpus, quick+normal, discovery",
+        "durationS": 339,
+        "acThroughout": true,
+        "cpuLoadPercent": {
+          "before": 5.8,
+          "median": 9,
+          "max": 18
+        },
+        "freeMemGiBMin": 15.9
+      },
+      {
+        "step": "External corpus, quick+normal, acquisition",
+        "durationS": 337,
+        "acThroughout": true,
+        "cpuLoadPercent": {
+          "before": 1.4,
+          "median": 10.2,
+          "max": 17.9
+        },
+        "freeMemGiBMin": 15.9
+      },
+      {
+        "step": "External corpus, quick+low-impact, discovery",
+        "durationS": 951,
+        "acThroughout": true,
+        "cpuLoadPercent": {
+          "before": 4.8,
+          "median": 4.4,
+          "max": 13.7
+        },
+        "freeMemGiBMin": 15.9
+      },
+      {
+        "step": "External corpus, quick+low-impact, acquisition",
+        "durationS": 1041,
+        "acThroughout": true,
+        "cpuLoadPercent": {
+          "before": 2.5,
+          "median": 4.2,
+          "max": 12.3
+        },
+        "freeMemGiBMin": 15.9
+      },
+      {
+        "step": "External corpus, standard+normal, discovery",
+        "durationS": 803,
+        "acThroughout": true,
+        "cpuLoadPercent": {
+          "before": 2.2,
+          "median": 9.8,
+          "max": 31
+        },
+        "freeMemGiBMin": 15.2
+      },
+      {
+        "step": "External corpus, standard+normal, acquisition",
+        "durationS": 824,
+        "acThroughout": true,
+        "cpuLoadPercent": {
+          "before": 3.6,
+          "median": 15.9,
+          "max": 26.4
+        },
+        "freeMemGiBMin": 15.2
+      },
+      {
+        "step": "External corpus, standard+low-impact, discovery",
+        "durationS": 1847,
+        "acThroughout": true,
+        "cpuLoadPercent": {
+          "before": 2.3,
+          "median": 4.1,
+          "max": 29.5
+        },
+        "freeMemGiBMin": 15.3
+      },
+      {
+        "step": "External corpus, standard+low-impact, acquisition",
+        "durationS": 1353,
+        "acThroughout": true,
+        "cpuLoadPercent": {
+          "before": 2.4,
+          "median": 5.5,
+          "max": 23.5
+        },
+        "freeMemGiBMin": 15.2
+      },
+      {
+        "step": "External corpus, deep+normal, discovery",
+        "durationS": 835,
+        "acThroughout": false,
+        "cpuLoadPercent": {
+          "before": 2.9,
+          "median": 16.7,
+          "max": 55.1
+        },
+        "freeMemGiBMin": 13.7
+      },
+      {
+        "step": "External corpus, deep+normal, acquisition",
+        "durationS": 1602,
+        "acThroughout": false,
+        "cpuLoadPercent": {
+          "before": 9.8,
+          "median": 22.6,
+          "max": 45.4
+        },
+        "freeMemGiBMin": 12.9
+      },
+      {
+        "step": "External corpus, deep+low-impact, discovery",
+        "durationS": 1867,
+        "acThroughout": false,
+        "cpuLoadPercent": {
+          "before": 10.6,
+          "median": 9.6,
+          "max": 46.4
+        },
+        "freeMemGiBMin": 14
+      },
+      {
+        "step": "External corpus, deep+low-impact, acquisition",
+        "durationS": 1789,
+        "acThroughout": true,
+        "cpuLoadPercent": {
+          "before": 4.4,
+          "median": 6.9,
+          "max": 23.3
+        },
+        "freeMemGiBMin": 15.3
+      },
+      {
+        "step": "Nonbrowser suite (final)",
+        "durationS": 703,
+        "acThroughout": true,
+        "cpuLoadPercent": {
+          "before": 4.3,
+          "median": 9.2,
+          "max": 20.6
+        },
+        "freeMemGiBMin": 15.7
+      },
+      {
+        "step": "Browser suite (final)",
+        "durationS": 452,
+        "acThroughout": true,
+        "cpuLoadPercent": {
+          "before": 2.3,
+          "median": 14.8,
+          "max": 40.8
+        },
+        "freeMemGiBMin": 15
+      }
+    ]
+  },
+  "generatedAt": "2026-10-10T18:20:19.083Z"
+}

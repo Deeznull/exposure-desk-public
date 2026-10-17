@@ -1,0 +1,1573 @@
+{
+  "schema": "exposure-release-verification/1",
+  "version": "2.9.0",
+  "build": {
+    "version": "2.9.0",
+    "id": "2.9.0+b251a3ea63449d85",
+    "sourceDigest": "b251a3ea63449d850376c0e55b818b8d02a4b1de7d1ffd85b3b447e68679370f"
+  },
+  "ruleVersion": "website/2.9.0",
+  "unit": {
+    "tests": 761,
+    "pass": 761,
+    "fail": 0,
+    "cancelled": 0,
+    "skipped": 0,
+    "todo": 0,
+    "durationMs": 1111652.0515
+  },
+  "browser": {
+    "tests": 46,
+    "pass": 46,
+    "fail": 0,
+    "cancelled": 0,
+    "skipped": 0,
+    "todo": 0,
+    "durationMs": 467013.5534
+  },
+  "cancellationStress": {
+    "tests": 60,
+    "pass": 60,
+    "fail": 0,
+    "cancelled": 0,
+    "skipped": 0,
+    "todo": 0,
+    "durationMs": 244335.088
+  },
+  "cliSmoke": {
+    "passed": 4,
+    "failed": false
+  },
+  "persistenceSmoke": {
+    "platform": "win32",
+    "syntheticPermissionException": false,
+    "projectRestart": true,
+    "correlationRestart": true,
+    "vaultRestart": true,
+    "operatorPermissions": true,
+    "deletion": true
+  },
+  "benchmark": {
+    "planted": 167,
+    "detected": 167,
+    "missed": 0,
+    "falsePositives": 0,
+    "componentErrors": 0,
+    "locationErrors": 0,
+    "privateTargets": 162,
+    "publicTargets": 3,
+    "suspiciousTargets": 2
+  },
+  "pipeline": {
+    "status": "passed",
+    "summary": {
+      "planted": 17,
+      "found": 17,
+      "missed": 0
+    }
+  },
+  "legacyCorpus": {
+    "baseline": {
+      "targets": 13,
+      "detected": 13,
+      "falsePositives": 0,
+      "exposureTargets": 5,
+      "exposureMisses": 0,
+      "exposureFalsePositives": 0,
+      "classificationErrors": 0,
+      "elapsedMs": 2469.8187,
+      "maxRssKiB": 213576,
+      "build": "2.8.0+cc5fecf8cb75f1c7"
+    },
+    "final": {
+      "targets": 13,
+      "detected": 13,
+      "falsePositives": 0,
+      "exposureTargets": 5,
+      "exposureMisses": 0,
+      "exposureFalsePositives": 0,
+      "classificationErrors": 0,
+      "elapsedMs": 2540.923,
+      "maxRssKiB": 232428,
+      "build": "2.9.0+b251a3ea63449d85"
+    },
+    "baselineSource": "benchmarks/2.8.0/final-legacy-evaluation.json",
+    "baselineReused": "2.8.0 legacy-evaluation figures reused from the 2.8.0 release records (owner decision 2026-10-11), not re-measured"
+  },
+  "acquisition": {
+    "baseline": {
+      "build": "2.8.0+cc5fecf8cb75f1c7",
+      "detected": 5,
+      "targets": 5,
+      "falsePositives": 0,
+      "knownInspected": 9,
+      "knownResources": 9,
+      "forbiddenArrivals": 0,
+      "elapsedMs": 5574.3228,
+      "maxRssKiB": 213620
+    },
+    "final": {
+      "build": "2.9.0+b251a3ea63449d85",
+      "detected": 5,
+      "targets": 5,
+      "falsePositives": 0,
+      "knownInspected": 9,
+      "knownResources": 9,
+      "forbiddenArrivals": 0,
+      "elapsedMs": 6629.4014,
+      "maxRssKiB": 228180
+    },
+    "baselineSource": "benchmarks/2.8.0/final-acquisition.json",
+    "baselineReused": "2.8.0 legacy-evaluation figures reused from the 2.8.0 release records (owner decision 2026-10-11), not re-measured"
+  },
+  "massScan": {
+    "schema": "exposure-mass-measure/1",
+    "build": "2.9.0+b251a3ea63449d85",
+    "date": "2026-10-15T04:09:15.578Z",
+    "fixture": {
+      "origins": 50,
+      "addressing": "127.0.0.1 to 127.0.0.50, one port",
+      "targets": 200,
+      "blockTargets": 200,
+      "blockedOrigins": "2 of every 5 origins answer every request with HTTP 429 or 403",
+      "keys": "synthetic, nonfunctional sk-proj- values: one per target page, one per origin shared by its targets",
+      "realHosts": 0,
+      "largeBundle": {
+        "targets": 16,
+        "bundle": "origin k serves its own copy of the frozen G5 bundle (1,252,570 bytes, scripts/eval-2.5-corpus.mjs) at /static/app.js, preceded by a comment with k and a statement holding the origin key; even k with the syntax error corrected (parses), odd k unchanged (both parses fail)",
+        "readyCeilingMb": 512
+      }
+    },
+    "settings": {
+      "coverage": "quick",
+      "traffic": "normal",
+      "state": "--state on every run (mass mode)",
+      "failOn": "never"
+    },
+    "egressViolations": 0,
+    "scale": [
+      {
+        "name": "c1",
+        "targets": 200,
+        "concurrency": 1,
+        "program": false,
+        "coverage": "quick",
+        "traffic": "normal",
+        "exit": 0,
+        "wallMs": 2238247,
+        "requests": 4400,
+        "requestsPerSecond": 2,
+        "targetsPerSecond": 0.09,
+        "peakRssMb": 204,
+        "budget": {
+          "oneSharedBudget": true,
+          "capacityMb": 256,
+          "peakMb": 256,
+          "peakWithinCapacity": true,
+          "concurrentChildHeapMb": 256,
+          "childHeapWithinCapacity": true,
+          "readyOptionCeiling": true
+        },
+        "analysisChildren": {
+          "spawned": 1,
+          "concurrentPeakRssMb": 74,
+          "outOfMemory": 0
+        },
+        "ownKeysFound": 200,
+        "sharedKeysFound": 50,
+        "unexpectedFindings": 0,
+        "summary": {
+          "targets": 200,
+          "scanned": 200,
+          "notStarted": 0,
+          "skipped": 0,
+          "interrupted": false,
+          "exit": 0,
+          "concurrency": 1,
+          "statuses": {
+            "done": 200
+          },
+          "halted": null,
+          "uniqueFindings": 250,
+          "sharedFindings": 50,
+          "findings": 400,
+          "program": null,
+          "effectiveConcurrency": 1,
+          "sharedWaitMs": 0,
+          "sharedWaitByCause": {
+            "analysisMs": 0,
+            "parserMs": 0,
+            "preflightMs": 0,
+            "programSlotMs": 0
+          },
+          "memoryGate": null
+        },
+        "targetStatuses": {
+          "completed": 200
+        },
+        "stopReasons": {
+          "quick-target-set-done": 200
+        },
+        "unfinished": 0
+      },
+      {
+        "name": "c4",
+        "targets": 200,
+        "concurrency": 4,
+        "program": false,
+        "coverage": "quick",
+        "traffic": "normal",
+        "exit": 0,
+        "wallMs": 592478,
+        "requests": 4400,
+        "requestsPerSecond": 7.4,
+        "targetsPerSecond": 0.34,
+        "peakRssMb": 309,
+        "budget": {
+          "oneSharedBudget": true,
+          "capacityMb": 256,
+          "peakMb": 256,
+          "peakWithinCapacity": true,
+          "concurrentChildHeapMb": 256,
+          "childHeapWithinCapacity": true,
+          "readyOptionCeiling": true
+        },
+        "analysisChildren": {
+          "spawned": 1,
+          "concurrentPeakRssMb": 74,
+          "outOfMemory": 0
+        },
+        "ownKeysFound": 200,
+        "sharedKeysFound": 50,
+        "unexpectedFindings": 0,
+        "summary": {
+          "targets": 200,
+          "scanned": 200,
+          "notStarted": 0,
+          "skipped": 0,
+          "interrupted": false,
+          "exit": 0,
+          "concurrency": 4,
+          "statuses": {
+            "done": 200
+          },
+          "halted": null,
+          "uniqueFindings": 250,
+          "sharedFindings": 50,
+          "findings": 400,
+          "program": null,
+          "effectiveConcurrency": 4,
+          "sharedWaitMs": 29627,
+          "sharedWaitByCause": {
+            "analysisMs": 0,
+            "parserMs": 1,
+            "preflightMs": 29626,
+            "programSlotMs": 0
+          },
+          "memoryGate": {
+            "ceilingMb": 512,
+            "marginMb": 64,
+            "startRssMb": 192,
+            "peakRssMb": 309,
+            "perTargetMb": 27.5,
+            "admissionWaits": 0,
+            "parseCollections": 0,
+            "parseCollectMs": 0
+          }
+        },
+        "targetStatuses": {
+          "completed": 200
+        },
+        "stopReasons": {
+          "quick-target-set-done": 200
+        },
+        "unfinished": 0
+      },
+      {
+        "name": "c16",
+        "targets": 200,
+        "concurrency": 16,
+        "program": false,
+        "coverage": "quick",
+        "traffic": "normal",
+        "exit": 0,
+        "wallMs": 207370,
+        "requests": 4400,
+        "requestsPerSecond": 21.2,
+        "targetsPerSecond": 0.96,
+        "peakRssMb": 329,
+        "budget": {
+          "oneSharedBudget": true,
+          "capacityMb": 256,
+          "peakMb": 256,
+          "peakWithinCapacity": true,
+          "concurrentChildHeapMb": 256,
+          "childHeapWithinCapacity": true,
+          "readyOptionCeiling": true
+        },
+        "analysisChildren": {
+          "spawned": 1,
+          "concurrentPeakRssMb": 74,
+          "outOfMemory": 0
+        },
+        "ownKeysFound": 200,
+        "sharedKeysFound": 50,
+        "unexpectedFindings": 0,
+        "summary": {
+          "targets": 200,
+          "scanned": 200,
+          "notStarted": 0,
+          "skipped": 0,
+          "interrupted": false,
+          "exit": 0,
+          "concurrency": 16,
+          "statuses": {
+            "done": 200
+          },
+          "halted": null,
+          "uniqueFindings": 250,
+          "sharedFindings": 50,
+          "findings": 400,
+          "program": null,
+          "effectiveConcurrency": 16,
+          "sharedWaitMs": 221636,
+          "sharedWaitByCause": {
+            "analysisMs": 499,
+            "parserMs": 1,
+            "preflightMs": 221136,
+            "programSlotMs": 0
+          },
+          "memoryGate": {
+            "ceilingMb": 512,
+            "marginMb": 64,
+            "startRssMb": 191,
+            "peakRssMb": 329,
+            "perTargetMb": 8.5,
+            "admissionWaits": 0,
+            "parseCollections": 0,
+            "parseCollectMs": 0
+          }
+        },
+        "targetStatuses": {
+          "completed": 200
+        },
+        "stopReasons": {
+          "quick-target-set-done": 200
+        },
+        "unfinished": 0
+      },
+      {
+        "name": "program-c64",
+        "targets": 200,
+        "concurrency": 64,
+        "program": true,
+        "coverage": "quick",
+        "traffic": "normal",
+        "exit": 0,
+        "wallMs": 173059,
+        "requests": 4400,
+        "requestsPerSecond": 25.4,
+        "targetsPerSecond": 1.16,
+        "peakRssMb": 357,
+        "budget": {
+          "oneSharedBudget": true,
+          "capacityMb": 256,
+          "peakMb": 256,
+          "peakWithinCapacity": true,
+          "concurrentChildHeapMb": 256,
+          "childHeapWithinCapacity": true,
+          "readyOptionCeiling": true
+        },
+        "analysisChildren": {
+          "spawned": 1,
+          "concurrentPeakRssMb": 74,
+          "outOfMemory": 0
+        },
+        "ownKeysFound": 200,
+        "sharedKeysFound": 50,
+        "unexpectedFindings": 0,
+        "summary": {
+          "targets": 200,
+          "scanned": 200,
+          "notStarted": 0,
+          "skipped": 0,
+          "interrupted": false,
+          "exit": 0,
+          "concurrency": 64,
+          "statuses": {
+            "done": 200
+          },
+          "halted": null,
+          "uniqueFindings": 250,
+          "sharedFindings": 50,
+          "findings": 400,
+          "program": {
+            "requestsPerSecond": 50,
+            "concurrency": 64,
+            "active": 0,
+            "peakActive": 5,
+            "granted": 4400,
+            "waits": 4298,
+            "waitMs": 7513804,
+            "maxWaitMs": 3138
+          },
+          "effectiveConcurrency": 64,
+          "sharedWaitMs": 7649624,
+          "sharedWaitByCause": {
+            "analysisMs": 0,
+            "parserMs": 142,
+            "preflightMs": 135874,
+            "programSlotMs": 7513608
+          },
+          "memoryGate": {
+            "ceilingMb": 512,
+            "marginMb": 64,
+            "startRssMb": 193,
+            "peakRssMb": 357,
+            "perTargetMb": 2.6,
+            "admissionWaits": 32,
+            "parseCollections": 0,
+            "parseCollectMs": 0
+          }
+        },
+        "targetStatuses": {
+          "completed": 200
+        },
+        "stopReasons": {
+          "quick-target-set-done": 200
+        },
+        "unfinished": 0
+      },
+      {
+        "name": "large-c1",
+        "targets": 16,
+        "concurrency": 1,
+        "program": false,
+        "coverage": "standard",
+        "traffic": "normal",
+        "exit": 2,
+        "wallMs": 240140,
+        "requests": 448,
+        "requestsPerSecond": 1.9,
+        "targetsPerSecond": 0.07,
+        "peakRssMb": 379,
+        "budget": {
+          "oneSharedBudget": true,
+          "capacityMb": 256,
+          "peakMb": 256,
+          "peakWithinCapacity": true,
+          "concurrentChildHeapMb": 256,
+          "childHeapWithinCapacity": true,
+          "readyOptionCeiling": true
+        },
+        "analysisChildren": {
+          "spawned": 48,
+          "concurrentPeakRssMb": 283,
+          "outOfMemory": 0
+        },
+        "ownKeysFound": 16,
+        "sharedKeysFound": 16,
+        "unexpectedFindings": 0,
+        "summary": {
+          "targets": 16,
+          "scanned": 16,
+          "notStarted": 0,
+          "skipped": 0,
+          "interrupted": false,
+          "exit": 2,
+          "concurrency": 1,
+          "statuses": {
+            "failed": 16
+          },
+          "halted": null,
+          "uniqueFindings": 33,
+          "sharedFindings": 1,
+          "findings": 48,
+          "program": null,
+          "effectiveConcurrency": 1,
+          "sharedWaitMs": 11,
+          "sharedWaitByCause": {
+            "analysisMs": 0,
+            "parserMs": 11,
+            "preflightMs": 0,
+            "programSlotMs": 0
+          },
+          "memoryGate": null
+        },
+        "targetStatuses": {
+          "incomplete": 16
+        },
+        "stopReasons": {
+          "discovered-frontier-drained": 16
+        },
+        "unfinished": 16
+      },
+      {
+        "name": "large-c4",
+        "targets": 16,
+        "concurrency": 4,
+        "program": false,
+        "coverage": "standard",
+        "traffic": "normal",
+        "exit": 2,
+        "wallMs": 66299,
+        "requests": 448,
+        "requestsPerSecond": 6.8,
+        "targetsPerSecond": 0.24,
+        "peakRssMb": 382,
+        "budget": {
+          "oneSharedBudget": true,
+          "capacityMb": 256,
+          "peakMb": 256,
+          "peakWithinCapacity": true,
+          "concurrentChildHeapMb": 256,
+          "childHeapWithinCapacity": true,
+          "readyOptionCeiling": true
+        },
+        "analysisChildren": {
+          "spawned": 43,
+          "concurrentPeakRssMb": 375,
+          "outOfMemory": 0
+        },
+        "ownKeysFound": 16,
+        "sharedKeysFound": 16,
+        "unexpectedFindings": 0,
+        "summary": {
+          "targets": 16,
+          "scanned": 16,
+          "notStarted": 0,
+          "skipped": 0,
+          "interrupted": false,
+          "exit": 2,
+          "concurrency": 4,
+          "statuses": {
+            "failed": 16
+          },
+          "halted": null,
+          "uniqueFindings": 33,
+          "sharedFindings": 1,
+          "findings": 48,
+          "program": null,
+          "effectiveConcurrency": 4,
+          "sharedWaitMs": 4280,
+          "sharedWaitByCause": {
+            "analysisMs": 2798,
+            "parserMs": 871,
+            "preflightMs": 611,
+            "programSlotMs": 0
+          },
+          "memoryGate": {
+            "ceilingMb": 512,
+            "marginMb": 64,
+            "startRssMb": 191,
+            "peakRssMb": 382,
+            "perTargetMb": 40.5,
+            "admissionWaits": 0,
+            "parseCollections": 16,
+            "parseCollectMs": 180
+          }
+        },
+        "targetStatuses": {
+          "incomplete": 16
+        },
+        "stopReasons": {
+          "discovered-frontier-drained": 16
+        },
+        "unfinished": 16
+      },
+      {
+        "name": "large-c16",
+        "targets": 16,
+        "concurrency": 16,
+        "program": false,
+        "coverage": "standard",
+        "traffic": "normal",
+        "exit": 2,
+        "wallMs": 27994,
+        "requests": 448,
+        "requestsPerSecond": 16,
+        "targetsPerSecond": 0.57,
+        "peakRssMb": 390,
+        "budget": {
+          "oneSharedBudget": true,
+          "capacityMb": 256,
+          "peakMb": 256,
+          "peakWithinCapacity": true,
+          "concurrentChildHeapMb": 256,
+          "childHeapWithinCapacity": true,
+          "readyOptionCeiling": true
+        },
+        "analysisChildren": {
+          "spawned": 43,
+          "concurrentPeakRssMb": 371,
+          "outOfMemory": 0
+        },
+        "ownKeysFound": 16,
+        "sharedKeysFound": 16,
+        "unexpectedFindings": 0,
+        "summary": {
+          "targets": 16,
+          "scanned": 16,
+          "notStarted": 0,
+          "skipped": 0,
+          "interrupted": false,
+          "exit": 2,
+          "concurrency": 16,
+          "statuses": {
+            "failed": 16
+          },
+          "halted": null,
+          "uniqueFindings": 33,
+          "sharedFindings": 1,
+          "findings": 48,
+          "program": null,
+          "effectiveConcurrency": 16,
+          "sharedWaitMs": 115448,
+          "sharedWaitByCause": {
+            "analysisMs": 46795,
+            "parserMs": 50070,
+            "preflightMs": 18583,
+            "programSlotMs": 0
+          },
+          "memoryGate": {
+            "ceilingMb": 512,
+            "marginMb": 64,
+            "startRssMb": 191,
+            "peakRssMb": 390,
+            "perTargetMb": 11.4,
+            "admissionWaits": 0,
+            "parseCollections": 16,
+            "parseCollectMs": 182
+          }
+        },
+        "targetStatuses": {
+          "incomplete": 16
+        },
+        "stopReasons": {
+          "discovered-frontier-drained": 16
+        },
+        "unfinished": 16
+      }
+    ],
+    "resume": [],
+    "block": []
+  },
+  "linuxCi": {
+    "schema": "exposure-linux-ci/1",
+    "workflow": "Linux",
+    "runId": "38684371332",
+    "url": "https://github.com/Deeznull/exposure-desk/actions/runs/38684371332",
+    "commit": "a6630b5151c0c9766ebbd24eeb97d5b54a19c17b",
+    "branch": "v3-w9-integ",
+    "event": "workflow_dispatch",
+    "attempt": 1,
+    "conclusion": "failure",
+    "createdAt": "2026-10-15T04:59:37Z",
+    "updatedAt": "2026-10-15T05:18:48Z",
+    "runner": "GitHub-hosted ubuntu-24.04 runners (see linux.yml)",
+    "role": "release run",
+    "jobs": {
+      "nonbrowser": {
+        "job": "Tests (nonbrowser)",
+        "jobId": 116255772157,
+        "conclusion": "success",
+        "tests": 761,
+        "pass": 760,
+        "fail": 0,
+        "skipped": 1,
+        "cancelled": 0,
+        "todo": 0
+      },
+      "browser": {
+        "job": "Tests (browser)",
+        "jobId": 116255772248,
+        "conclusion": "success",
+        "tests": 46,
+        "pass": 46,
+        "fail": 0,
+        "skipped": 0,
+        "cancelled": 0,
+        "todo": 0
+      },
+      "package": {
+        "job": "Linux x64 package",
+        "jobId": 116255772049,
+        "conclusion": "failure",
+        "built": true,
+        "checksumFileMatches": true,
+        "packagedSmoke": "success",
+        "upload": "failed: Artifact storage quota has been hit",
+        "note": "The package was built from the records commit (8048 files, 266136232 bytes, sha256 cc1d2e11d7ef198522e094418c175242d381af8f0c97c21a2a2a8ff244b73073; build 2.9.0+b251a3ea63449d85), passed sha256sum --check and its packaged smoke test (13/13 checks, analysis processes on the bundled runtime, none left running); only the artifact upload step failed, because the repository artifact storage quota is full. The package is therefore not in artifacts/ (BLOCKED)."
+      },
+      "container": {
+        "job": "Container image",
+        "jobId": 116255772225,
+        "conclusion": "success"
+      }
+    },
+    "artifact": null,
+    "measurementRuns": [
+      {
+        "runId": "38638887840",
+        "url": "https://github.com/Deeznull/exposure-desk/actions/runs/38638887840",
+        "commit": "3b1628ad960d6032c2d7d81a3cafa34721230a70",
+        "branch": "v3-w9-integ",
+        "event": "workflow_dispatch",
+        "attempt": 1,
+        "conclusion": "failure",
+        "createdAt": "2026-10-14T21:15:54Z",
+        "updatedAt": "2026-10-14T21:39:48Z",
+        "jobs": {
+          "nonbrowser": {
+            "job": "Tests (nonbrowser)",
+            "jobId": 116109030966,
+            "conclusion": "success",
+            "tests": 761,
+            "pass": 760,
+            "fail": 0,
+            "skipped": 1,
+            "cancelled": 0,
+            "todo": 0
+          },
+          "browser": {
+            "job": "Tests (browser)",
+            "jobId": 116109030889,
+            "conclusion": "success",
+            "tests": 46,
+            "pass": 46,
+            "fail": 0,
+            "skipped": 0,
+            "cancelled": 0,
+            "todo": 0
+          },
+          "package": {
+            "job": "Linux x64 package",
+            "jobId": 116109030458,
+            "conclusion": "failure",
+            "built": true,
+            "checksumFileMatches": true,
+            "packagedSmoke": "success",
+            "upload": "failed: Artifact storage quota has been hit",
+            "note": "The package was built (8020 files, 266033884 bytes, sha256 629046c94a868e6ba5f0fb113f0c65d7e7f5a70921922fb53958ac5cc95f864f), passed sha256sum --check and its packaged smoke test; only the artifact upload step failed, because the repository artifact storage quota is full."
+          },
+          "container": {
+            "job": "Container image",
+            "jobId": 116109030839,
+            "conclusion": "success"
+          }
+        },
+        "note": "Measurement run on the version-freeze commit (build digest b251a3ea63449d85, the release build). The workflow conclusion is failure only because the artifact upload hit the storage quota."
+      }
+    ],
+    "measurementNote": "Run 38638887840 on the version-freeze commit 3b1628a has the same build digest as the release; its suites and package results are kept here as the measurement run.",
+    "note": "Release run on the records commit a6630b5 (build digest b251a3ea63449d85, equal to the release build). One dispatch; the workflow conclusion is failure only because the artifact upload hit the repository storage quota, so no Linux package could be downloaded. Old artifacts were not deleted (brief); once storage is freed, one dispatch of linux.yml on the release commit builds the package for download."
+  },
+  "evaluation": {
+    "role": "legacy-settings regression",
+    "corpusDigest": "41f8c2dd214da8bd7192d2d6a8863ed96e4d274b9c8d312edf97c7bc02e94479",
+    "frozenAt": "2026-10-08T04:15:23.216Z",
+    "repeat": 3,
+    "errors": [],
+    "groups": {
+      "G1": {
+        "baselineBuild": "2.8.0+cc5fecf8cb75f1c7",
+        "newBuild": "2.9.0+b251a3ea63449d85",
+        "wallMsMedian": {
+          "baseline": 1598,
+          "new": 1576
+        },
+        "maxRssKiB": {
+          "baseline": 243916,
+          "new": 239976
+        }
+      },
+      "G2": {
+        "baselineBuild": "2.8.0+cc5fecf8cb75f1c7",
+        "newBuild": "2.9.0+b251a3ea63449d85",
+        "wallMsMedian": {
+          "baseline": 4700,
+          "new": 5151
+        },
+        "maxRssKiB": {
+          "baseline": 249452,
+          "new": 237508
+        }
+      },
+      "G3": {
+        "baselineBuild": "2.8.0+cc5fecf8cb75f1c7",
+        "newBuild": "2.9.0+b251a3ea63449d85",
+        "wallMsMedian": {
+          "baseline": 12263,
+          "new": 13029
+        },
+        "maxRssKiB": {
+          "baseline": 243580,
+          "new": 236520
+        }
+      },
+      "G4": {
+        "baselineBuild": "2.8.0+cc5fecf8cb75f1c7",
+        "newBuild": "2.9.0+b251a3ea63449d85",
+        "wallMsMedian": {
+          "baseline": 2193,
+          "new": 2202
+        },
+        "maxRssKiB": {
+          "baseline": 248672,
+          "new": 237188
+        }
+      },
+      "G5": {
+        "baselineBuild": "2.8.0+cc5fecf8cb75f1c7",
+        "newBuild": "2.9.0+b251a3ea63449d85",
+        "wallMsMedian": {
+          "baseline": 6403,
+          "new": 5930
+        },
+        "maxRssKiB": {
+          "baseline": 491628,
+          "new": 410896
+        }
+      },
+      "G5F": {
+        "baselineBuild": "2.8.0+cc5fecf8cb75f1c7",
+        "newBuild": "2.9.0+b251a3ea63449d85",
+        "wallMsMedian": {
+          "baseline": 6097,
+          "new": 6188
+        },
+        "maxRssKiB": {
+          "baseline": 442484,
+          "new": 441836
+        }
+      },
+      "G6": {
+        "baselineBuild": "2.8.0+cc5fecf8cb75f1c7",
+        "newBuild": "2.9.0+b251a3ea63449d85",
+        "wallMsMedian": {
+          "baseline": 4551,
+          "new": 4092
+        },
+        "maxRssKiB": {
+          "baseline": 483404,
+          "new": 407216
+        }
+      },
+      "G7": {
+        "baselineBuild": "2.8.0+cc5fecf8cb75f1c7",
+        "newBuild": "2.9.0+b251a3ea63449d85",
+        "wallMsMedian": {
+          "baseline": 8467,
+          "new": 8542
+        },
+        "maxRssKiB": {
+          "baseline": 231312,
+          "new": 235500
+        }
+      },
+      "G8": {
+        "baselineBuild": "2.8.0+cc5fecf8cb75f1c7",
+        "newBuild": "2.9.0+b251a3ea63449d85",
+        "wallMsMedian": {
+          "baseline": 4774,
+          "new": 5181
+        },
+        "maxRssKiB": {
+          "baseline": 249940,
+          "new": 236492
+        }
+      },
+      "G9": {
+        "baselineBuild": "2.8.0+cc5fecf8cb75f1c7",
+        "newBuild": "2.9.0+b251a3ea63449d85",
+        "wallMsMedian": {
+          "baseline": 2867,
+          "new": 2856
+        },
+        "maxRssKiB": {
+          "baseline": 246136,
+          "new": 234816
+        }
+      }
+    }
+  },
+  "readyOptionMatrix": {
+    "source": "benchmarks/2.9.0/matrix.json",
+    "generatedAt": "2026-10-15T01:17:46.618Z",
+    "scans": 57,
+    "checks": {
+      "Low-impact fewer connections than Normal, requests no more than Normal's": {
+        "passed": 4,
+        "total": 4,
+        "failed": []
+      },
+      "Low-impact fewer requests and connections than Normal": {
+        "passed": 8,
+        "total": 8,
+        "failed": []
+      },
+      "Deep+Low-impact keeps Deep+Normal recall": {
+        "passed": 4,
+        "total": 4,
+        "failed": []
+      },
+      "Quick reports its limits": {
+        "passed": 8,
+        "total": 8,
+        "failed": []
+      },
+      "Quick fastest": {
+        "passed": 8,
+        "total": 8,
+        "failed": []
+      },
+      "Within limits": {
+        "passed": 33,
+        "total": 33,
+        "failed": []
+      },
+      "Finds its keys at its memory setting": {
+        "passed": 33,
+        "total": 33,
+        "failed": []
+      },
+      "Keeps the 2.8.0 recall": {
+        "passed": 24,
+        "total": 24,
+        "failed": []
+      },
+      "Adjustment only lowers": {
+        "passed": 36,
+        "total": 36,
+        "failed": []
+      },
+      "Settings as recorded": {
+        "passed": 33,
+        "total": 33,
+        "failed": []
+      }
+    }
+  },
+  "externalCorpus": [
+    {
+      "coverage": "quick",
+      "traffic": "low-impact",
+      "preset": null,
+      "mode": "acquisition",
+      "overall": {
+        "truePositives": 27,
+        "falsePositives": 3,
+        "falseNegatives": 0,
+        "precision": 0.9,
+        "recall": 1
+      },
+      "negativeAlerts": 3,
+      "sites": 20,
+      "requests": 526,
+      "durationMs": 1032036,
+      "states": {
+        "incomplete": 17,
+        "completed": 3
+      },
+      "build": "2.9.0+b251a3ea63449d85"
+    },
+    {
+      "coverage": "quick",
+      "traffic": "low-impact",
+      "preset": null,
+      "mode": "discovery",
+      "overall": {
+        "truePositives": 24,
+        "falsePositives": 3,
+        "falseNegatives": 3,
+        "precision": 0.889,
+        "recall": 0.889
+      },
+      "negativeAlerts": 3,
+      "sites": 20,
+      "requests": 474,
+      "durationMs": 937418,
+      "states": {
+        "incomplete": 19,
+        "completed": 1
+      },
+      "build": "2.9.0+b251a3ea63449d85"
+    },
+    {
+      "coverage": "quick",
+      "traffic": "normal",
+      "preset": null,
+      "mode": "acquisition",
+      "overall": {
+        "truePositives": 27,
+        "falsePositives": 3,
+        "falseNegatives": 0,
+        "precision": 0.9,
+        "recall": 1
+      },
+      "negativeAlerts": 3,
+      "sites": 20,
+      "requests": 526,
+      "durationMs": 274469,
+      "states": {
+        "incomplete": 17,
+        "completed": 3
+      },
+      "build": "2.9.0+b251a3ea63449d85"
+    },
+    {
+      "coverage": "quick",
+      "traffic": "normal",
+      "preset": null,
+      "mode": "discovery",
+      "overall": {
+        "truePositives": 24,
+        "falsePositives": 3,
+        "falseNegatives": 3,
+        "precision": 0.889,
+        "recall": 0.889
+      },
+      "negativeAlerts": 3,
+      "sites": 20,
+      "requests": 474,
+      "durationMs": 265754,
+      "states": {
+        "incomplete": 19,
+        "completed": 1
+      },
+      "build": "2.9.0+b251a3ea63449d85"
+    },
+    {
+      "coverage": "standard",
+      "traffic": "low-impact",
+      "preset": null,
+      "mode": "acquisition",
+      "overall": {
+        "truePositives": 27,
+        "falsePositives": 3,
+        "falseNegatives": 0,
+        "precision": 0.9,
+        "recall": 1
+      },
+      "negativeAlerts": 3,
+      "sites": 20,
+      "requests": 587,
+      "durationMs": 1288540,
+      "states": {
+        "incomplete": 20
+      },
+      "build": "2.9.0+b251a3ea63449d85"
+    },
+    {
+      "coverage": "standard",
+      "traffic": "low-impact",
+      "preset": null,
+      "mode": "discovery",
+      "overall": {
+        "truePositives": 27,
+        "falsePositives": 3,
+        "falseNegatives": 0,
+        "precision": 0.9,
+        "recall": 1
+      },
+      "negativeAlerts": 3,
+      "sites": 20,
+      "requests": 921,
+      "durationMs": 1833310,
+      "states": {
+        "incomplete": 20
+      },
+      "build": "2.9.0+b251a3ea63449d85"
+    },
+    {
+      "coverage": "standard",
+      "traffic": "normal",
+      "preset": null,
+      "mode": "acquisition",
+      "overall": {
+        "truePositives": 27,
+        "falsePositives": 3,
+        "falseNegatives": 0,
+        "precision": 0.9,
+        "recall": 1
+      },
+      "negativeAlerts": 3,
+      "sites": 20,
+      "requests": 768,
+      "durationMs": 757230,
+      "states": {
+        "incomplete": 20
+      },
+      "build": "2.9.0+b251a3ea63449d85"
+    },
+    {
+      "coverage": "standard",
+      "traffic": "normal",
+      "preset": null,
+      "mode": "discovery",
+      "overall": {
+        "truePositives": 27,
+        "falsePositives": 3,
+        "falseNegatives": 0,
+        "precision": 0.9,
+        "recall": 1
+      },
+      "negativeAlerts": 3,
+      "sites": 20,
+      "requests": 1334,
+      "durationMs": 693349,
+      "states": {
+        "incomplete": 20
+      },
+      "build": "2.9.0+b251a3ea63449d85"
+    },
+    {
+      "coverage": "deep",
+      "traffic": "low-impact",
+      "preset": null,
+      "mode": "acquisition",
+      "overall": {
+        "truePositives": 27,
+        "falsePositives": 3,
+        "falseNegatives": 0,
+        "precision": 0.9,
+        "recall": 1
+      },
+      "negativeAlerts": 3,
+      "sites": 20,
+      "requests": 612,
+      "durationMs": 1726309,
+      "states": {
+        "incomplete": 20
+      },
+      "build": "2.9.0+b251a3ea63449d85"
+    },
+    {
+      "coverage": "deep",
+      "traffic": "low-impact",
+      "preset": null,
+      "mode": "discovery",
+      "overall": {
+        "truePositives": 27,
+        "falsePositives": 3,
+        "falseNegatives": 0,
+        "precision": 0.9,
+        "recall": 1
+      },
+      "negativeAlerts": 3,
+      "sites": 20,
+      "requests": 922,
+      "durationMs": 1837073,
+      "states": {
+        "incomplete": 20
+      },
+      "build": "2.9.0+b251a3ea63449d85"
+    },
+    {
+      "coverage": "deep",
+      "traffic": "normal",
+      "preset": null,
+      "mode": "acquisition",
+      "overall": {
+        "truePositives": 27,
+        "falsePositives": 3,
+        "falseNegatives": 0,
+        "precision": 0.9,
+        "recall": 1
+      },
+      "negativeAlerts": 3,
+      "sites": 20,
+      "requests": 1067,
+      "durationMs": 1390139,
+      "states": {
+        "incomplete": 20
+      },
+      "build": "2.9.0+b251a3ea63449d85"
+    },
+    {
+      "coverage": "deep",
+      "traffic": "normal",
+      "preset": null,
+      "mode": "discovery",
+      "overall": {
+        "truePositives": 27,
+        "falsePositives": 3,
+        "falseNegatives": 0,
+        "precision": 0.9,
+        "recall": 1
+      },
+      "negativeAlerts": 3,
+      "sites": 20,
+      "requests": 1332,
+      "durationMs": 715119,
+      "states": {
+        "incomplete": 20
+      },
+      "build": "2.9.0+b251a3ea63449d85"
+    }
+  ],
+  "externalCorpusSource": "benchmarks/2.9.0/external-corpus",
+  "preflight": {
+    "ok": true,
+    "failed": []
+  },
+  "machineState": {
+    "source": "benchmarks/2.9.0/machine-state.json",
+    "host": {
+      "platform": "Windows_NT 10.0.26200 x64",
+      "cpuModel": "8-core x86-64 laptop CPU",
+      "logicalCpus": 16,
+      "totalMemGiB": 31.3
+    },
+    "steps": [
+      {
+        "step": "Mass scan c16 (loopback fixtures)",
+        "durationS": 208,
+        "acThroughout": true,
+        "cpuLoadPercent": {
+          "before": 26.9,
+          "median": 25.8,
+          "max": 38.1
+        },
+        "freeMemGiBMin": 11.6
+      },
+      {
+        "step": "Cancel stress (20 passes)",
+        "durationS": 244,
+        "acThroughout": true,
+        "cpuLoadPercent": {
+          "before": 26.6,
+          "median": 38.4,
+          "max": 59
+        },
+        "freeMemGiBMin": 10.8
+      },
+      {
+        "step": "CLI smoke (first run, superseded by the quiet rerun)",
+        "durationS": 15,
+        "acThroughout": true,
+        "cpuLoadPercent": {
+          "before": 31.6,
+          "median": 75.7,
+          "max": 100
+        },
+        "freeMemGiBMin": 9.3
+      },
+      {
+        "step": "Persistence smoke",
+        "durationS": 10,
+        "acThroughout": true,
+        "cpuLoadPercent": {
+          "before": 19.6,
+          "median": 17.1,
+          "max": 17.9
+        },
+        "freeMemGiBMin": 13.5
+      },
+      {
+        "step": "Provider corpus benchmark (first run, superseded by the quiet rerun)",
+        "durationS": 79,
+        "acThroughout": true,
+        "cpuLoadPercent": {
+          "before": 17.5,
+          "median": 100,
+          "max": 100
+        },
+        "freeMemGiBMin": 7.9
+      },
+      {
+        "step": "Pipeline self-test",
+        "durationS": 13,
+        "acThroughout": true,
+        "cpuLoadPercent": {
+          "before": 26.3,
+          "median": 34.4,
+          "max": 43.2
+        },
+        "freeMemGiBMin": 11.9
+      },
+      {
+        "step": "Legacy evaluation (2.9.0 side) (first run, superseded by the quiet rerun)",
+        "durationS": 4,
+        "acThroughout": true,
+        "cpuLoadPercent": {
+          "before": 38,
+          "median": 31.6,
+          "max": 31.6
+        },
+        "freeMemGiBMin": 12.4
+      },
+      {
+        "step": "Acquisition evaluation (2.9.0 side) (first run, superseded by the quiet rerun)",
+        "durationS": 7,
+        "acThroughout": true,
+        "cpuLoadPercent": {
+          "before": 32.2,
+          "median": 37.4,
+          "max": 37.4
+        },
+        "freeMemGiBMin": 11.9
+      },
+      {
+        "step": "Frozen 2.5 corpus evaluation (2.8.0 and 2.9.0, 3 repeats) (first run, superseded by the quiet rerun)",
+        "durationS": 696,
+        "acThroughout": true,
+        "cpuLoadPercent": {
+          "before": 34.5,
+          "median": 100,
+          "max": 100
+        },
+        "freeMemGiBMin": 4.7
+      },
+      {
+        "step": "Matrix spot check (2.8.0 rows, same day)",
+        "durationS": 469,
+        "acThroughout": true,
+        "cpuLoadPercent": {
+          "before": 3.8,
+          "median": 13.5,
+          "max": 41.6
+        },
+        "freeMemGiBMin": 12.6
+      },
+      {
+        "step": "Matrix 2.9.0 side (resources, current, small)",
+        "durationS": 3916,
+        "acThroughout": true,
+        "cpuLoadPercent": {
+          "before": 6.3,
+          "median": 8.8,
+          "max": 56
+        },
+        "freeMemGiBMin": 12.5
+      },
+      {
+        "step": "External corpus 2-standard-low-impact-discovery",
+        "durationS": 1836,
+        "acThroughout": true,
+        "cpuLoadPercent": {
+          "before": 11.7,
+          "median": 4.9,
+          "max": 45.1
+        },
+        "freeMemGiBMin": 11.9
+      },
+      {
+        "step": "External corpus 3-deep-low-impact-discovery",
+        "durationS": 1840,
+        "acThroughout": true,
+        "cpuLoadPercent": {
+          "before": 11.7,
+          "median": 4.9,
+          "max": 45.1
+        },
+        "freeMemGiBMin": 11.9
+      },
+      {
+        "step": "External corpus 3-deep-normal-acquisition",
+        "durationS": 1391,
+        "acThroughout": true,
+        "cpuLoadPercent": {
+          "before": 6.5,
+          "median": 15.4,
+          "max": 35
+        },
+        "freeMemGiBMin": 12
+      },
+      {
+        "step": "External corpus 3-deep-low-impact-acquisition",
+        "durationS": 1727,
+        "acThroughout": true,
+        "cpuLoadPercent": {
+          "before": 6.5,
+          "median": 13.6,
+          "max": 35
+        },
+        "freeMemGiBMin": 12
+      },
+      {
+        "step": "External corpus 1-quick-low-impact-acquisition",
+        "durationS": 1033,
+        "acThroughout": true,
+        "cpuLoadPercent": {
+          "before": 1.4,
+          "median": 2.9,
+          "max": 25
+        },
+        "freeMemGiBMin": 12.6
+      },
+      {
+        "step": "External corpus 2-standard-low-impact-acquisition",
+        "durationS": 1290,
+        "acThroughout": true,
+        "cpuLoadPercent": {
+          "before": 1.4,
+          "median": 2.7,
+          "max": 25
+        },
+        "freeMemGiBMin": 12.6
+      },
+      {
+        "step": "External corpus 2-standard-normal-acquisition",
+        "durationS": 758,
+        "acThroughout": true,
+        "cpuLoadPercent": {
+          "before": 1.6,
+          "median": 13.4,
+          "max": 27
+        },
+        "freeMemGiBMin": 12.6
+      },
+      {
+        "step": "External corpus 1-quick-low-impact-discovery",
+        "durationS": 938,
+        "acThroughout": true,
+        "cpuLoadPercent": {
+          "before": 1.6,
+          "median": 10.2,
+          "max": 27
+        },
+        "freeMemGiBMin": 12.6
+      },
+      {
+        "step": "External corpus 2-standard-normal-discovery",
+        "durationS": 694,
+        "acThroughout": true,
+        "cpuLoadPercent": {
+          "before": 6.1,
+          "median": 13,
+          "max": 49.6
+        },
+        "freeMemGiBMin": 11.9
+      },
+      {
+        "step": "External corpus 3-deep-normal-discovery",
+        "durationS": 716,
+        "acThroughout": true,
+        "cpuLoadPercent": {
+          "before": 6.1,
+          "median": 12.9,
+          "max": 49.6
+        },
+        "freeMemGiBMin": 11.9
+      },
+      {
+        "step": "External corpus 1-quick-normal-discovery",
+        "durationS": 267,
+        "acThroughout": true,
+        "cpuLoadPercent": {
+          "before": 1.9,
+          "median": 4.7,
+          "max": 21.8
+        },
+        "freeMemGiBMin": 13.1
+      },
+      {
+        "step": "External corpus 1-quick-normal-acquisition",
+        "durationS": 275,
+        "acThroughout": true,
+        "cpuLoadPercent": {
+          "before": 1.9,
+          "median": 4.7,
+          "max": 21.8
+        },
+        "freeMemGiBMin": 13.1
+      },
+      {
+        "step": "Mass scan c1, c4, program-c64, large-c1/c4/c16 (loopback fixtures)",
+        "durationS": 3344,
+        "acThroughout": true,
+        "cpuLoadPercent": {
+          "before": 3.3,
+          "median": 2,
+          "max": 27.8
+        },
+        "freeMemGiBMin": 13
+      },
+      {
+        "step": "Legacy evaluation (2.9.0 side, quiet rerun)",
+        "durationS": 3,
+        "acThroughout": true,
+        "cpuLoadPercent": {
+          "before": 4,
+          "median": 7.8,
+          "max": 7.8
+        },
+        "freeMemGiBMin": 13.5
+      },
+      {
+        "step": "Acquisition evaluation (2.9.0 side, quiet rerun)",
+        "durationS": 8,
+        "acThroughout": true,
+        "cpuLoadPercent": {
+          "before": 6.1,
+          "median": 10.4,
+          "max": 24.9
+        },
+        "freeMemGiBMin": 13
+      },
+      {
+        "step": "Frozen 2.5 corpus evaluation (2.8.0 and 2.9.0, 3 repeats, rerun alone)",
+        "durationS": 338,
+        "acThroughout": true,
+        "cpuLoadPercent": {
+          "before": 17.7,
+          "median": 12,
+          "max": 22.4
+        },
+        "freeMemGiBMin": 12.9
+      },
+      {
+        "step": "Nonbrowser suite (final)",
+        "durationS": 1113,
+        "acThroughout": true,
+        "cpuLoadPercent": {
+          "before": 10,
+          "median": 4,
+          "max": 31.4
+        },
+        "freeMemGiBMin": 13
+      },
+      {
+        "step": "Browser suite (final)",
+        "durationS": 468,
+        "acThroughout": true,
+        "cpuLoadPercent": {
+          "before": 1.1,
+          "median": 12.2,
+          "max": 33.2
+        },
+        "freeMemGiBMin": 12.4
+      },
+      {
+        "step": "CLI smoke (quiet rerun)",
+        "durationS": 6,
+        "acThroughout": true,
+        "cpuLoadPercent": {
+          "before": 1.4,
+          "median": 11.2,
+          "max": 11.2
+        },
+        "freeMemGiBMin": 13.3
+      },
+      {
+        "step": "Provider corpus benchmark (quiet rerun)",
+        "durationS": 31,
+        "acThroughout": true,
+        "cpuLoadPercent": {
+          "before": 12.3,
+          "median": 8.6,
+          "max": 11.9
+        },
+        "freeMemGiBMin": 13.5
+      }
+    ]
+  },
+  "notes": {
+    "matrixBaseline": "The 24 rows of build 2.8.0+cc5fecf8cb75f1c7 are reused from the 2.8.0 release records (benchmarks/2.8.0/matrix.json; owner decision 2026-10-11) after a same-day spot check of 6 rows on the extracted 2.8.0 Windows x64 ZIP (benchmarks/2.9.0/matrix-reuse.json); they were not re-measured on the ZIP.",
+    "massScanLarge": "The large-c1/c4/c16 rows (16 targets, Standard, 8 of 16 bundles fail both parses) end with every target incomplete and exit 2 by design; every key was found.",
+    "browserSuiteRuns": "Browser suite runs on this build. Every run of the browser suite, or of a browser test file alone, on build 2.9.0+b251a3ea63449d85 on this computer: the full sanity run before the measurements passed 44/46 (914.6 s) while an unrelated CPU-bound job outside the project saturated the computer (CPU at or above 95 % for most of the run, free memory down to about 5 GiB); both failures were Chrome not confirming its exit within the 3 s cleanup bound, one in chrome-background-browser.test.js and one in completeness-browser.test.js. Run alone, chrome-background-browser.test.js passed 2/2; completeness-browser.test.js failed 2 of 4 the same way while the outside job still ran, then passed 4/4 twice on a quiet machine. The final full run after the measurements, on a quiet machine, passed 46/46 (467.0 s; the row above). The nonbrowser sanity run under the same load passed 760/761: one mass-mode test in mass-scale.test.js saw its analysis turn deferred at the analysis-turn limit; that file alone then passed 32/32 and the final run passed 761/761 (the row above). Record of every run: `benchmarks/2.9.0/browser-attempts.json`.",
+    "linuxCiRuns": "Linux CI runs on this build. Two runs of linux.yml on GitHub-hosted Ubuntu runners, both with build digest b251a3ea63449d85. The release run 38684371332 on the records commit a6630b5 passed 760/761 nonbrowser tests (the Windows-only ACL test skipped) and 46/46 browser and UI tests and built and smoke-tested the container image; its package job built the Linux x64 package (8048 files, 266,136,232 bytes, sha256 cc1d2e11…3073) and passed `sha256sum --check` and the packaged smoke test (13/13 checks) on the runner. Only the artifact upload failed, because the repository's GitHub Actions artifact storage quota was full, so that job and the run are marked failure and the Linux package is not in `artifacts` (blocked until storage is freed; no artifacts were deleted). The measurement run 38638887840 on the version-freeze commit 3b1628a had the same results (760/761, 46/46, container ok, package built and smoke-tested, upload refused for the same quota). Pass/fail only, no timing or memory figures. Record: `benchmarks/2.9.0/linux-ci.json`."
+  },
+  "generatedAt": "2026-10-15T05:20:02.466Z"
+}

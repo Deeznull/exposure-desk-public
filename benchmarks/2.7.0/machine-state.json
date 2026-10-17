@@ -1,0 +1,689 @@
+{
+  "schema": "exposure-machine-state/1",
+  "method": "Sampled while the measurements ran, by a sampler outside the project: CPU load over all logical processors every 5 s (the measurement itself included; \"before\" is the 10 s idle window ahead of each step), free physical memory every 5 s, and the power source (BatteryStatus.PowerOnline) and battery charge every 60 s and at each step change.",
+  "host": {
+    "platform": "Windows_NT 10.0.26200 x64",
+    "cpuModel": "8-core x86-64 laptop CPU",
+    "logicalCpus": 16,
+    "totalMemGiB": 31.3
+  },
+  "steps": [
+    {
+      "step": "Nonbrowser suite (sanity)",
+      "log": "benchmarks/2.7.0/sanity-unit.log",
+      "start": "2026-10-10T13:27:54+02:00",
+      "end": "2026-10-10T13:39:31+02:00",
+      "exit": 0,
+      "durationS": 697,
+      "samples": 139,
+      "power": {
+        "acThroughout": true,
+        "sources": [
+          "AC"
+        ],
+        "batteryPercentMin": 100
+      },
+      "cpuLoadPercent": {
+        "before": 1.3,
+        "median": 10.2,
+        "max": 18
+      },
+      "freeMemGiB": {
+        "before": 16.6,
+        "min": 15.9
+      }
+    },
+    {
+      "step": "Browser suite (sanity)",
+      "log": "benchmarks/2.7.0/sanity-browser.log",
+      "start": "2026-10-10T13:39:41+02:00",
+      "end": "2026-10-10T13:47:14+02:00",
+      "exit": 0,
+      "durationS": 453,
+      "samples": 90,
+      "power": {
+        "acThroughout": true,
+        "sources": [
+          "AC"
+        ],
+        "batteryPercentMin": 100
+      },
+      "cpuLoadPercent": {
+        "before": 4.1,
+        "median": 15.3,
+        "max": 38
+      },
+      "freeMemGiB": {
+        "before": 16.6,
+        "min": 15.3
+      }
+    },
+    {
+      "step": "Cancellation stress (20 passes)",
+      "log": "benchmarks/2.7.0/cancel-stress.log",
+      "start": "2026-10-10T13:47:24+02:00",
+      "end": "2026-10-10T13:50:55+02:00",
+      "exit": 0,
+      "durationS": 211,
+      "samples": 41,
+      "power": {
+        "acThroughout": true,
+        "sources": [
+          "AC"
+        ],
+        "batteryPercentMin": 100
+      },
+      "cpuLoadPercent": {
+        "before": 3.7,
+        "median": 25.7,
+        "max": 40.8
+      },
+      "freeMemGiB": {
+        "before": 16.5,
+        "min": 15.5
+      }
+    },
+    {
+      "step": "CLI smoke",
+      "log": "benchmarks/2.7.0/cli-smoke.log",
+      "start": "2026-10-10T13:51:05+02:00",
+      "end": "2026-10-10T13:51:17+02:00",
+      "exit": 0,
+      "durationS": 12,
+      "samples": 3,
+      "power": {
+        "acThroughout": true,
+        "sources": [
+          "AC"
+        ],
+        "batteryPercentMin": 100
+      },
+      "cpuLoadPercent": {
+        "before": 8,
+        "median": 11.6,
+        "max": 11.6
+      },
+      "freeMemGiB": {
+        "before": 16.5,
+        "min": 16.3
+      }
+    },
+    {
+      "step": "Persistence smoke",
+      "log": "benchmarks/2.7.0/persistence-smoke.log",
+      "start": "2026-10-10T13:51:27+02:00",
+      "end": "2026-10-10T13:51:35+02:00",
+      "exit": 0,
+      "durationS": 8,
+      "samples": 1,
+      "power": {
+        "acThroughout": true,
+        "sources": [
+          "AC"
+        ],
+        "batteryPercentMin": 100
+      },
+      "cpuLoadPercent": {
+        "before": 2.5,
+        "median": 10.3,
+        "max": 10.3
+      },
+      "freeMemGiB": {
+        "before": 16.5,
+        "min": 16.5
+      }
+    },
+    {
+      "step": "Provider corpus benchmark",
+      "log": "benchmarks/2.7.0/benchmark.log",
+      "start": "2026-10-10T13:51:45+02:00",
+      "end": "2026-10-10T13:52:31+02:00",
+      "exit": 0,
+      "durationS": 46,
+      "samples": 9,
+      "power": {
+        "acThroughout": true,
+        "sources": [
+          "AC"
+        ],
+        "batteryPercentMin": 100
+      },
+      "cpuLoadPercent": {
+        "before": 6.4,
+        "median": 8.6,
+        "max": 9.1
+      },
+      "freeMemGiB": {
+        "before": 16.5,
+        "min": 16.4
+      }
+    },
+    {
+      "step": "Pipeline self-test",
+      "log": "benchmarks/2.7.0/pipeline.log",
+      "start": "2026-10-10T13:52:41+02:00",
+      "end": "2026-10-10T13:53:06+02:00",
+      "exit": 0,
+      "durationS": 25,
+      "samples": 5,
+      "power": {
+        "acThroughout": true,
+        "sources": [
+          "AC"
+        ],
+        "batteryPercentMin": 100
+      },
+      "cpuLoadPercent": {
+        "before": 4.6,
+        "median": 18.4,
+        "max": 25.2
+      },
+      "freeMemGiB": {
+        "before": 16.5,
+        "min": 15.8
+      }
+    },
+    {
+      "step": "Legacy 2.4 corpora, 2.6.0",
+      "log": "benchmarks/2.7.0/baseline-legacy-evaluation.log",
+      "start": "2026-10-10T13:53:17+02:00",
+      "end": "2026-10-10T13:53:19+02:00",
+      "exit": 0,
+      "durationS": 2,
+      "samples": 1,
+      "power": {
+        "acThroughout": true,
+        "sources": [
+          "AC"
+        ],
+        "batteryPercentMin": 100
+      },
+      "cpuLoadPercent": {
+        "before": 7.7,
+        "median": 6.6,
+        "max": 6.6
+      },
+      "freeMemGiB": {
+        "before": 16.5,
+        "min": 16.4
+      }
+    },
+    {
+      "step": "Legacy 2.4 corpora, 2.7.0",
+      "log": "benchmarks/2.7.0/final-legacy-evaluation.log",
+      "start": "2026-10-10T13:53:29+02:00",
+      "end": "2026-10-10T13:53:31+02:00",
+      "exit": 0,
+      "durationS": 2,
+      "samples": 1,
+      "power": {
+        "acThroughout": true,
+        "sources": [
+          "AC"
+        ],
+        "batteryPercentMin": 100
+      },
+      "cpuLoadPercent": {
+        "before": 2.4,
+        "median": 2.9,
+        "max": 2.9
+      },
+      "freeMemGiB": {
+        "before": 16.6,
+        "min": 16.5
+      }
+    },
+    {
+      "step": "Dynamic application, 2.6.0",
+      "log": "benchmarks/2.7.0/baseline-acquisition.log",
+      "start": "2026-10-10T13:53:41+02:00",
+      "end": "2026-10-10T13:53:47+02:00",
+      "exit": 0,
+      "durationS": 6,
+      "samples": 1,
+      "power": {
+        "acThroughout": true,
+        "sources": [
+          "AC"
+        ],
+        "batteryPercentMin": 100
+      },
+      "cpuLoadPercent": {
+        "before": 4.3,
+        "median": 13.7,
+        "max": 13.7
+      },
+      "freeMemGiB": {
+        "before": 16.5,
+        "min": 15.8
+      }
+    },
+    {
+      "step": "Dynamic application, 2.7.0",
+      "log": "benchmarks/2.7.0/final-acquisition.log",
+      "start": "2026-10-10T13:53:57+02:00",
+      "end": "2026-10-10T13:54:03+02:00",
+      "exit": 0,
+      "durationS": 6,
+      "samples": 1,
+      "power": {
+        "acThroughout": true,
+        "sources": [
+          "AC"
+        ],
+        "batteryPercentMin": 100
+      },
+      "cpuLoadPercent": {
+        "before": 7.5,
+        "median": 13,
+        "max": 13
+      },
+      "freeMemGiB": {
+        "before": 16.5,
+        "min": 15.8
+      }
+    },
+    {
+      "step": "Frozen 2.5 corpus, legacy settings (3 repetitions)",
+      "log": "benchmarks/2.7.0/evaluation.log",
+      "start": "2026-10-10T13:54:13+02:00",
+      "end": "2026-10-10T13:59:47+02:00",
+      "exit": 0,
+      "durationS": 334,
+      "samples": 66,
+      "power": {
+        "acThroughout": true,
+        "sources": [
+          "AC"
+        ],
+        "batteryPercentMin": 100
+      },
+      "cpuLoadPercent": {
+        "before": 10.1,
+        "median": 11.9,
+        "max": 23
+      },
+      "freeMemGiB": {
+        "before": 16.5,
+        "min": 15.9
+      }
+    },
+    {
+      "step": "Ready-option matrix",
+      "log": "benchmarks/2.7.0/matrix.log",
+      "start": "2026-10-10T13:59:57+02:00",
+      "end": "2026-10-10T16:09:01+02:00",
+      "exit": 0,
+      "durationS": 7744,
+      "samples": 1537,
+      "power": {
+        "acThroughout": true,
+        "sources": [
+          "AC"
+        ],
+        "batteryPercentMin": 100
+      },
+      "cpuLoadPercent": {
+        "before": 4.7,
+        "median": 14,
+        "max": 44.3
+      },
+      "freeMemGiB": {
+        "before": 16.5,
+        "min": 15.1
+      }
+    },
+    {
+      "step": "External corpus, quick+normal, discovery",
+      "log": "benchmarks/2.7.0/external-corpus-1-quick-normal-discovery.log",
+      "start": "2026-10-10T16:09:11+02:00",
+      "end": "2026-10-10T16:14:50+02:00",
+      "exit": 0,
+      "durationS": 339,
+      "samples": 68,
+      "power": {
+        "acThroughout": true,
+        "sources": [
+          "AC"
+        ],
+        "batteryPercentMin": 100
+      },
+      "cpuLoadPercent": {
+        "before": 5.8,
+        "median": 9,
+        "max": 18
+      },
+      "freeMemGiB": {
+        "before": 16.2,
+        "min": 15.9
+      }
+    },
+    {
+      "step": "External corpus, quick+normal, acquisition",
+      "log": "benchmarks/2.7.0/external-corpus-1-quick-normal-acquisition.log",
+      "start": "2026-10-10T16:15:00+02:00",
+      "end": "2026-10-10T16:20:37+02:00",
+      "exit": 0,
+      "durationS": 337,
+      "samples": 67,
+      "power": {
+        "acThroughout": true,
+        "sources": [
+          "AC"
+        ],
+        "batteryPercentMin": 100
+      },
+      "cpuLoadPercent": {
+        "before": 1.4,
+        "median": 10.2,
+        "max": 17.9
+      },
+      "freeMemGiB": {
+        "before": 16.3,
+        "min": 15.9
+      }
+    },
+    {
+      "step": "External corpus, quick+low-impact, discovery",
+      "log": "benchmarks/2.7.0/external-corpus-1-quick-low-impact-discovery.log",
+      "start": "2026-10-10T16:20:47+02:00",
+      "end": "2026-10-10T16:36:38+02:00",
+      "exit": 0,
+      "durationS": 951,
+      "samples": 189,
+      "power": {
+        "acThroughout": true,
+        "sources": [
+          "AC"
+        ],
+        "batteryPercentMin": 100
+      },
+      "cpuLoadPercent": {
+        "before": 4.8,
+        "median": 4.4,
+        "max": 13.7
+      },
+      "freeMemGiB": {
+        "before": 16.3,
+        "min": 15.9
+      }
+    },
+    {
+      "step": "External corpus, quick+low-impact, acquisition",
+      "log": "benchmarks/2.7.0/external-corpus-1-quick-low-impact-acquisition.log",
+      "start": "2026-10-10T16:36:48+02:00",
+      "end": "2026-10-10T16:54:09+02:00",
+      "exit": 0,
+      "durationS": 1041,
+      "samples": 207,
+      "power": {
+        "acThroughout": true,
+        "sources": [
+          "AC"
+        ],
+        "batteryPercentMin": 100
+      },
+      "cpuLoadPercent": {
+        "before": 2.5,
+        "median": 4.2,
+        "max": 12.3
+      },
+      "freeMemGiB": {
+        "before": 16.3,
+        "min": 15.9
+      }
+    },
+    {
+      "step": "External corpus, standard+normal, discovery",
+      "log": "benchmarks/2.7.0/external-corpus-2-standard-normal-discovery.log",
+      "start": "2026-10-10T16:54:19+02:00",
+      "end": "2026-10-10T17:07:42+02:00",
+      "exit": 0,
+      "durationS": 803,
+      "samples": 159,
+      "power": {
+        "acThroughout": true,
+        "sources": [
+          "AC"
+        ],
+        "batteryPercentMin": 100
+      },
+      "cpuLoadPercent": {
+        "before": 2.2,
+        "median": 9.8,
+        "max": 31
+      },
+      "freeMemGiB": {
+        "before": 16.2,
+        "min": 15.2
+      }
+    },
+    {
+      "step": "External corpus, standard+normal, acquisition",
+      "log": "benchmarks/2.7.0/external-corpus-2-standard-normal-acquisition.log",
+      "start": "2026-10-10T17:07:52+02:00",
+      "end": "2026-10-10T17:21:36+02:00",
+      "exit": 0,
+      "durationS": 824,
+      "samples": 164,
+      "power": {
+        "acThroughout": true,
+        "sources": [
+          "AC"
+        ],
+        "batteryPercentMin": 100
+      },
+      "cpuLoadPercent": {
+        "before": 3.6,
+        "median": 15.9,
+        "max": 26.4
+      },
+      "freeMemGiB": {
+        "before": 16.2,
+        "min": 15.2
+      }
+    },
+    {
+      "step": "External corpus, standard+low-impact, discovery",
+      "log": "benchmarks/2.7.0/external-corpus-2-standard-low-impact-discovery.log",
+      "start": "2026-10-10T17:21:46+02:00",
+      "end": "2026-10-10T17:52:33+02:00",
+      "exit": 0,
+      "durationS": 1847,
+      "samples": 366,
+      "power": {
+        "acThroughout": true,
+        "sources": [
+          "AC"
+        ],
+        "batteryPercentMin": 100
+      },
+      "cpuLoadPercent": {
+        "before": 2.3,
+        "median": 4.1,
+        "max": 29.5
+      },
+      "freeMemGiB": {
+        "before": 16.1,
+        "min": 15.3
+      }
+    },
+    {
+      "step": "External corpus, standard+low-impact, acquisition",
+      "log": "benchmarks/2.7.0/external-corpus-2-standard-low-impact-acquisition.log",
+      "start": "2026-10-10T17:52:43+02:00",
+      "end": "2026-10-10T18:15:16+02:00",
+      "exit": 0,
+      "durationS": 1353,
+      "samples": 269,
+      "power": {
+        "acThroughout": true,
+        "sources": [
+          "AC"
+        ],
+        "batteryPercentMin": 100
+      },
+      "cpuLoadPercent": {
+        "before": 2.4,
+        "median": 5.5,
+        "max": 23.5
+      },
+      "freeMemGiB": {
+        "before": 16.2,
+        "min": 15.2
+      }
+    },
+    {
+      "step": "External corpus, deep+normal, discovery",
+      "log": "benchmarks/2.7.0/external-corpus-3-deep-normal-discovery.log",
+      "start": "2026-10-10T18:15:26+02:00",
+      "end": "2026-10-10T18:29:21+02:00",
+      "exit": 0,
+      "durationS": 835,
+      "samples": 165,
+      "power": {
+        "acThroughout": false,
+        "sources": [
+          "AC",
+          "battery"
+        ],
+        "batteryPercentMin": 96
+      },
+      "cpuLoadPercent": {
+        "before": 2.9,
+        "median": 16.7,
+        "max": 55.1
+      },
+      "freeMemGiB": {
+        "before": 16.1,
+        "min": 13.7
+      }
+    },
+    {
+      "step": "External corpus, deep+normal, acquisition",
+      "log": "benchmarks/2.7.0/external-corpus-3-deep-normal-acquisition.log",
+      "start": "2026-10-10T18:29:31+02:00",
+      "end": "2026-10-10T18:56:13+02:00",
+      "exit": 0,
+      "durationS": 1602,
+      "samples": 317,
+      "power": {
+        "acThroughout": false,
+        "sources": [
+          "battery"
+        ],
+        "batteryPercentMin": 85
+      },
+      "cpuLoadPercent": {
+        "before": 9.8,
+        "median": 22.6,
+        "max": 45.4
+      },
+      "freeMemGiB": {
+        "before": 15,
+        "min": 12.9
+      }
+    },
+    {
+      "step": "External corpus, deep+low-impact, discovery",
+      "log": "benchmarks/2.7.0/external-corpus-3-deep-low-impact-discovery.log",
+      "start": "2026-10-10T18:56:23+02:00",
+      "end": "2026-10-10T19:27:30+02:00",
+      "exit": 0,
+      "durationS": 1867,
+      "samples": 371,
+      "power": {
+        "acThroughout": false,
+        "sources": [
+          "battery",
+          "AC"
+        ],
+        "batteryPercentMin": 80
+      },
+      "cpuLoadPercent": {
+        "before": 10.6,
+        "median": 9.6,
+        "max": 46.4
+      },
+      "freeMemGiB": {
+        "before": 14.8,
+        "min": 14
+      }
+    },
+    {
+      "step": "External corpus, deep+low-impact, acquisition",
+      "log": "benchmarks/2.7.0/external-corpus-3-deep-low-impact-acquisition.log",
+      "start": "2026-10-10T19:27:40+02:00",
+      "end": "2026-10-10T19:57:29+02:00",
+      "exit": 0,
+      "durationS": 1789,
+      "samples": 355,
+      "power": {
+        "acThroughout": true,
+        "sources": [
+          "AC"
+        ],
+        "batteryPercentMin": 89
+      },
+      "cpuLoadPercent": {
+        "before": 4.4,
+        "median": 6.9,
+        "max": 23.3
+      },
+      "freeMemGiB": {
+        "before": 16.5,
+        "min": 15.3
+      }
+    },
+    {
+      "step": "Nonbrowser suite (final)",
+      "log": "benchmarks/2.7.0/final-unit.log",
+      "start": "2026-10-10T19:58:04+02:00",
+      "end": "2026-10-10T20:09:47+02:00",
+      "exit": 0,
+      "durationS": 703,
+      "samples": 140,
+      "power": {
+        "acThroughout": true,
+        "sources": [
+          "AC"
+        ],
+        "batteryPercentMin": 97
+      },
+      "cpuLoadPercent": {
+        "before": 4.3,
+        "median": 9.2,
+        "max": 20.6
+      },
+      "freeMemGiB": {
+        "before": 16.3,
+        "min": 15.7
+      }
+    },
+    {
+      "step": "Browser suite (final)",
+      "log": "benchmarks/2.7.0/final-browser.log",
+      "start": "2026-10-10T20:09:57+02:00",
+      "end": "2026-10-10T20:17:29+02:00",
+      "exit": 0,
+      "durationS": 452,
+      "samples": 90,
+      "power": {
+        "acThroughout": true,
+        "sources": [
+          "AC"
+        ],
+        "batteryPercentMin": 98
+      },
+      "cpuLoadPercent": {
+        "before": 2.3,
+        "median": 14.8,
+        "max": 40.8
+      },
+      "freeMemGiB": {
+        "before": 16.3,
+        "min": 15
+      }
+    }
+  ]
+}

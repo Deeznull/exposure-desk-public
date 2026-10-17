@@ -1,0 +1,49 @@
+# Dependencies, build output and bundled third-party runtimes (rebuilt or restored locally; see README and RELEASE_PACKAGE.md)
+node_modules/
+dist/
+runtime/
+browser/
+tools/*.exe
+.cache/
+
+# Local-only: release archives and memos, finished internal work notes
+artifacts/
+archive/notes/
+
+# Reports: only the synthetic fixture reports are tracked
+reports/*
+!reports/fixture.html
+!reports/fixture.json
+!reports/fixture.sarif.json
+
+# Internal working notes: kept on disk, never committed or packaged (HANDOFF.md is the shipped release handoff)
+HANDOFF_*.md
+*PROGRESS*.md
+ORCHESTRATOR_HANDOFF.md
+NEXT_CHAT_START.md
+UPGRADE_NEXT_PLAN.md
+UPGRADE_SCAN_PROFILES_PLAN.md
+REPAIR_*.md
+
+# Logs, environment files, local data folders and scan exports
+*.log
+*.tap
+*.env
+.env
+.env.*
+data/
+exposure-data/
+launch-data/
+/scan-*
+*.sensitive.*
+.upgrade-*
+
+# Local editor and assistant settings
+.claude/
+.vscode/
+.idea/
+Thumbs.db
+desktop.ini
+
+# Local list of strings the public export must not contain
+.public-export-denylist

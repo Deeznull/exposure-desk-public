@@ -1,0 +1,668 @@
+{
+  "schema": "exposure-pipeline-self-test/1",
+  "startedAt": "2026-10-06T16:36:13.367Z",
+  "endedAt": "2026-10-06T16:37:04.016Z",
+  "build": {
+    "version": "2.2.0-rc.1",
+    "id": "2.2.0-rc.1+8399b64166f5075d",
+    "sourceDigest": "8399b64166f5075d8dad0dd24956b747491357732294979764110cec2fee7130"
+  },
+  "engines": {
+    "websiteRules": "website/2.2.0",
+    "gitleaks": "8.30.1",
+    "ruleDigest": "e163e53b9e7e8a8511e77271e2b323ed057759542a6d988258afe3a1fa329caf",
+    "companyRules": "none"
+  },
+  "status": "passed",
+  "checks": {
+    "offlineEngine": true,
+    "browserExecuted": true,
+    "cookieSemantics": true,
+    "freshStorage": true,
+    "noGetterCalls": true,
+    "outboundIsolation": true,
+    "baseHref": true,
+    "errorBodyAnalyzed": true,
+    "soft404Rejected": true,
+    "configConfirmed": true,
+    "scopeExclusionVisible": true,
+    "blockedEncodedEngineRequest": true
+  },
+  "summary": {
+    "planted": 17,
+    "found": 17,
+    "missed": 0
+  },
+  "results": [
+    {
+      "id": "html-comment",
+      "kind": "HTML",
+      "found": true,
+      "category": "private-credential",
+      "rule": "github",
+      "detectors": [
+        "github"
+      ],
+      "locations": [
+        {
+          "path": "/",
+          "line": 1,
+          "transformations": [],
+          "evidence": "Unauthenticated HTTP response"
+        },
+        {
+          "path": "/",
+          "sourceLabel": "rendered DOM snapshot",
+          "line": 1,
+          "transformations": [],
+          "evidence": "Rendered unauthenticated page"
+        },
+        {
+          "path": "/__exposure_baseline_0160f25e-eb88-465e-b0b8-267fe3948985_0",
+          "line": 1,
+          "transformations": [],
+          "evidence": "Unauthenticated HTTP response"
+        },
+        {
+          "path": "/__exposure_baseline_0160f25e-eb88-465e-b0b8-267fe3948985_1",
+          "line": 1,
+          "transformations": [],
+          "evidence": "Unauthenticated HTTP response"
+        },
+        {
+          "path": "/.env",
+          "line": 1,
+          "transformations": [],
+          "evidence": "Unauthenticated HTTP response"
+        }
+      ]
+    },
+    {
+      "id": "base-login-linked-script",
+      "kind": "JavaScript",
+      "found": true,
+      "category": "private-credential",
+      "rule": "openai",
+      "detectors": [
+        "openai"
+      ],
+      "locations": [
+        {
+          "path": "/assets/entry.js",
+          "line": 1,
+          "transformations": [],
+          "evidence": "Unauthenticated HTTP response"
+        }
+      ]
+    },
+    {
+      "id": "lazy-module",
+      "kind": "JavaScript",
+      "found": true,
+      "category": "private-credential",
+      "rule": "stripe-secret",
+      "detectors": [
+        "stripe-secret"
+      ],
+      "locations": [
+        {
+          "path": "/assets/lazy.js",
+          "line": 1,
+          "transformations": [],
+          "evidence": "Unauthenticated HTTP response"
+        }
+      ]
+    },
+    {
+      "id": "json-response",
+      "kind": "JSON",
+      "found": true,
+      "category": "private-credential",
+      "rule": "supabase-secret",
+      "detectors": [
+        "supabase-secret"
+      ],
+      "locations": [
+        {
+          "path": "/api/json",
+          "line": 1,
+          "transformations": [],
+          "evidence": "Unauthenticated HTTP response"
+        }
+      ]
+    },
+    {
+      "id": "response-header",
+      "kind": "headers",
+      "found": true,
+      "category": "private-credential",
+      "rule": "sendgrid",
+      "detectors": [
+        "sendgrid"
+      ],
+      "locations": [
+        {
+          "path": "/headers",
+          "line": 1,
+          "transformations": [],
+          "evidence": "Unauthenticated response headers"
+        }
+      ]
+    },
+    {
+      "id": "virtual-map-source",
+      "kind": "embedded source",
+      "found": true,
+      "category": "private-credential",
+      "rule": "huggingface",
+      "detectors": [
+        "huggingface"
+      ],
+      "locations": [
+        {
+          "path": "/assets/entry.js.map",
+          "line": 1,
+          "transformations": [],
+          "evidence": "Unauthenticated HTTP response"
+        },
+        {
+          "path": "/assets/entry.js.map",
+          "line": 1,
+          "transformations": [
+            "JavaScript string-escape decoding"
+          ],
+          "evidence": "Unauthenticated HTTP response"
+        },
+        {
+          "path": "/assets/entry.js.map",
+          "sourceLabel": "webpack://virtual/config.ts",
+          "line": 1,
+          "transformations": [],
+          "evidence": "Source embedded in publicly reachable source map"
+        }
+      ]
+    },
+    {
+      "id": "403-error-response",
+      "kind": "error body",
+      "found": true,
+      "category": "private-credential",
+      "rule": "provider-context:anthropic",
+      "detectors": [
+        "provider-context:anthropic"
+      ],
+      "locations": [
+        {
+          "path": "/error",
+          "line": 1,
+          "transformations": [],
+          "evidence": "Bounded HTTP 403 error response; successful application content was unavailable"
+        }
+      ]
+    },
+    {
+      "id": "gzip-response",
+      "kind": "compression",
+      "found": true,
+      "category": "private-credential",
+      "rule": "replicate",
+      "detectors": [
+        "replicate"
+      ],
+      "locations": [
+        {
+          "path": "/compressed",
+          "line": 1,
+          "transformations": [],
+          "evidence": "Unauthenticated HTTP response"
+        }
+      ]
+    },
+    {
+      "id": "encoded-engine-only",
+      "kind": "Base64 / Gitleaks",
+      "found": true,
+      "category": "private-credential",
+      "rule": "gitleaks:snyk-api-token",
+      "detectors": [
+        "gitleaks:snyk-api-token",
+        "gitleaks"
+      ],
+      "locations": [
+        {
+          "path": "/assets/entry.js",
+          "line": 1,
+          "transformations": [
+            "Base64 decoding"
+          ],
+          "evidence": "Unauthenticated HTTP response"
+        },
+        {
+          "path": "/encoded",
+          "line": 1,
+          "transformations": [
+            "Base64 decoding"
+          ],
+          "evidence": "Unauthenticated HTTP response"
+        },
+        {
+          "path": "/collector",
+          "line": 1,
+          "transformations": [
+            "Base64 decoding"
+          ],
+          "evidence": "Locally observed candidate request; blocked candidates were never sent"
+        }
+      ]
+    },
+    {
+      "id": "runtime-global",
+      "kind": "runtime",
+      "found": true,
+      "category": "private-credential",
+      "rule": "provider-context:cohere",
+      "detectors": [
+        "provider-context:cohere"
+      ],
+      "locations": [
+        {
+          "path": "/",
+          "sourceLabel": "runtime globals (no source line)",
+          "line": 1,
+          "transformations": [
+            "JavaScript string-escape decoding"
+          ],
+          "evidence": "Own enumerable/static runtime configuration; getters were not invoked"
+        }
+      ]
+    },
+    {
+      "id": "fresh-storage",
+      "kind": "storage",
+      "found": true,
+      "category": "private-credential",
+      "rule": "provider-context:mistral",
+      "detectors": [
+        "provider-context:mistral"
+      ],
+      "locations": [
+        {
+          "path": "/",
+          "sourceLabel": "storage (no source line)",
+          "line": 1,
+          "transformations": [
+            "JavaScript string-escape decoding"
+          ],
+          "evidence": "Storage created by a fresh unauthenticated visit"
+        },
+        {
+          "path": "/frame",
+          "sourceLabel": "storage (no source line)",
+          "line": 1,
+          "transformations": [
+            "JavaScript string-escape decoding"
+          ],
+          "evidence": "Storage created by a fresh unauthenticated visit"
+        },
+        {
+          "path": "/selected",
+          "sourceLabel": "storage (no source line)",
+          "line": 1,
+          "transformations": [
+            "JavaScript string-escape decoding"
+          ],
+          "evidence": "Storage created by a fresh unauthenticated visit"
+        }
+      ]
+    },
+    {
+      "id": "frame-runtime",
+      "kind": "frame runtime",
+      "found": true,
+      "category": "private-credential",
+      "rule": "resend-key",
+      "detectors": [
+        "resend-key"
+      ],
+      "locations": [
+        {
+          "path": "/frame",
+          "sourceLabel": "runtime globals (no source line)",
+          "line": 1,
+          "transformations": [],
+          "evidence": "Own enumerable/static runtime configuration; getters were not invoked"
+        },
+        {
+          "path": "/frame",
+          "sourceLabel": "runtime globals (no source line)",
+          "line": 1,
+          "transformations": [
+            "JavaScript string-escape decoding"
+          ],
+          "evidence": "Own enumerable/static runtime configuration; getters were not invoked"
+        }
+      ]
+    },
+    {
+      "id": "selected-read-only-page",
+      "kind": "selected navigation",
+      "found": true,
+      "category": "private-credential",
+      "rule": "provider-context:postmark",
+      "detectors": [
+        "provider-context:postmark"
+      ],
+      "locations": [
+        {
+          "path": "/selected",
+          "sourceLabel": "runtime globals (no source line)",
+          "line": 1,
+          "transformations": [
+            "JavaScript string-escape decoding"
+          ],
+          "evidence": "Own enumerable/static runtime configuration; getters were not invoked"
+        }
+      ]
+    },
+    {
+      "id": "bounded-scroll-response",
+      "kind": "scroll fetch",
+      "found": true,
+      "category": "private-credential",
+      "rule": "provider-context:aws",
+      "detectors": [
+        "provider-context:aws"
+      ],
+      "locations": [
+        {
+          "path": "/scroll",
+          "line": 1,
+          "transformations": [],
+          "evidence": "Response during unauthenticated browser loading"
+        }
+      ]
+    },
+    {
+      "id": "stripe-public-decoy",
+      "kind": "public identifier",
+      "found": true,
+      "category": "public-identifier",
+      "rule": "stripe-public",
+      "detectors": [
+        "stripe-public"
+      ],
+      "locations": [
+        {
+          "path": "/assets/lazy.js",
+          "line": 1,
+          "transformations": [],
+          "evidence": "Unauthenticated HTTP response"
+        }
+      ]
+    },
+    {
+      "id": "supabase-public-decoy",
+      "kind": "public identifier",
+      "found": true,
+      "category": "public-identifier",
+      "rule": "supabase-public",
+      "detectors": [
+        "supabase-public"
+      ],
+      "locations": [
+        {
+          "path": "/api/json",
+          "line": 1,
+          "transformations": [],
+          "evidence": "Unauthenticated HTTP response"
+        }
+      ]
+    },
+    {
+      "id": "anonymous-jwt-decoy",
+      "kind": "public identifier",
+      "found": true,
+      "category": "public-identifier",
+      "rule": "supabase-legacy-jwt",
+      "detectors": [
+        "supabase-legacy-jwt"
+      ],
+      "locations": [
+        {
+          "path": "/assets/lazy.js",
+          "line": 1,
+          "transformations": [],
+          "evidence": "Unauthenticated HTTP response"
+        }
+      ]
+    }
+  ],
+  "scan": {
+    "state": "incomplete",
+    "stopReason": "discovered-frontier-drained",
+    "browser": {
+      "requested": true,
+      "launch": true,
+      "runtimePages": 2,
+      "isolation": "unverified"
+    },
+    "coverage": {
+      "assessment": "limited",
+      "summary": "Coverage is limited, interrupted or in progress. Review resource status and remaining checks.",
+      "discoveryNote": "Resources never discovered cannot be counted. Framework discovery, runtime snapshots and origin scope are bounded; a drained queue means no more discovered work.",
+      "groups": {
+        "applicationPages": {
+          "discovered": 5,
+          "downloaded": 5,
+          "analyzed": 5,
+          "successful": 5,
+          "errorResponses": 0,
+          "blocked": 0,
+          "skipped": 0,
+          "uninspected": 0
+        },
+        "javascript": {
+          "discovered": 3,
+          "downloaded": 2,
+          "analyzed": 2,
+          "successful": 2,
+          "errorResponses": 0,
+          "blocked": 1,
+          "skipped": 0,
+          "uninspected": 0
+        },
+        "jsonConfig": {
+          "discovered": 4,
+          "downloaded": 4,
+          "analyzed": 4,
+          "successful": 3,
+          "errorResponses": 1,
+          "blocked": 0,
+          "skipped": 0,
+          "uninspected": 0
+        },
+        "sourceMaps": {
+          "discovered": 2,
+          "downloaded": 2,
+          "analyzed": 2,
+          "successful": 2,
+          "errorResponses": 0,
+          "blocked": 0,
+          "skipped": 0,
+          "uninspected": 0
+        },
+        "deploymentChecks": {
+          "discovered": 4,
+          "downloaded": 4,
+          "analyzed": 4,
+          "successful": 3,
+          "errorResponses": 0,
+          "blocked": 0,
+          "skipped": 1,
+          "uninspected": 0
+        },
+        "other": {
+          "discovered": 13,
+          "downloaded": 5,
+          "analyzed": 5,
+          "successful": 5,
+          "errorResponses": 0,
+          "blocked": 8,
+          "skipped": 0,
+          "uninspected": 0
+        },
+        "browserRuntime": {
+          "discovered": 22,
+          "downloaded": 13,
+          "analyzed": 2,
+          "successful": 2,
+          "errorResponses": 1,
+          "blocked": 14,
+          "skipped": 14,
+          "uninspected": 0
+        }
+      },
+      "entryPoints": [
+        {
+          "url": "http://127.0.0.1:55857/",
+          "successful": true,
+          "analyzed": true
+        }
+      ],
+      "requestComparison": [
+        {
+          "url": "http://127.0.0.1:55857/",
+          "staticStatus": 200,
+          "browserStatus": 200,
+          "staticHeaders": [
+            "accept",
+            "accept-encoding",
+            "host"
+          ],
+          "browserHeaders": [
+            "accept",
+            "accept-encoding",
+            "accept-language",
+            "host",
+            "user-agent"
+          ],
+          "conclusion": "Recorded responses have the same HTTP status. Header values and causal effects were not inferred."
+        }
+      ],
+      "deploymentChecks": {
+        "planned": 2,
+        "attempted": 2,
+        "remaining": 0
+      }
+    },
+    "accounting": {
+      "networkAttempts": 29,
+      "blockedEvents": 15,
+      "uniqueResources": 20,
+      "repeatedRequests": 9,
+      "downloadedBytes": 9135,
+      "retainedDecodedBytes": 9095,
+      "textAnalyzedBytes": 9095,
+      "intentionalSkips": 1,
+      "httpErrors": 2,
+      "coverageGaps": 6
+    },
+    "limitations": [
+      {
+        "code": "login-form-present",
+        "url": "http://127.0.0.1:55857/",
+        "detail": "Password form observed. Public content and linked scripts are still inspected; no form was submitted and authenticated areas remain outside coverage.",
+        "incomplete": false
+      },
+      {
+        "code": "http-refusal",
+        "url": "http://127.0.0.1:55857/error",
+        "detail": "HTTP 403. HTTP refusal observed; status alone does not establish login requirements or its cause.",
+        "incomplete": true
+      },
+      {
+        "code": "scope",
+        "url": "http://127.0.0.1:55856/outside.js",
+        "detail": "External dependency was not scanned.",
+        "incomplete": false
+      },
+      {
+        "code": "browser-disabled-channels",
+        "detail": "Service workers, WebSockets, WebRTC, WebTransport, downloads and persistent browser caches are disabled. No clicks/forms or user gestures; only normal page loading. Browser coverage is bounded and may differ from an ordinary browser.",
+        "incomplete": false
+      },
+      {
+        "code": "unrouted-browser-traffic",
+        "url": "update.googleapis.com:443",
+        "detail": "Request blocked: unrouted-browser-traffic.",
+        "incomplete": true
+      },
+      {
+        "code": "unrouted-browser-traffic",
+        "url": "accounts.google.com:443",
+        "detail": "Request blocked: unrouted-browser-traffic.",
+        "incomplete": true
+      },
+      {
+        "code": "unrouted-browser-traffic",
+        "url": "www.google.com:443",
+        "detail": "Request blocked: unrouted-browser-traffic.",
+        "incomplete": true
+      },
+      {
+        "code": "browser-page-budget",
+        "detail": "Runtime inspection limited to configured page count.",
+        "incomplete": true
+      },
+      {
+        "code": "websocket-disabled",
+        "url": "ws://127.0.0.1:55857/socket",
+        "detail": "Request blocked: websocket-disabled.",
+        "incomplete": false
+      },
+      {
+        "code": "credential-in-request",
+        "url": "http://127.0.0.1:55857/collector?v=[redacted]",
+        "detail": "Locally observed credential-bearing request was blocked before transmission.",
+        "incomplete": false
+      },
+      {
+        "code": "method",
+        "url": "http://127.0.0.1:55857/write",
+        "detail": "Request blocked: method.",
+        "incomplete": false
+      },
+      {
+        "code": "destructive-get",
+        "url": "http://127.0.0.1:55857/delete",
+        "detail": "Request blocked: destructive-get.",
+        "incomplete": false
+      },
+      {
+        "code": "unrouted-browser-traffic",
+        "url": "android.clients.google.com:443",
+        "detail": "Request blocked: unrouted-browser-traffic.",
+        "incomplete": true
+      },
+      {
+        "code": "login-form-present",
+        "url": "http://127.0.0.1:55857/__exposure_baseline_0160f25e-eb88-465e-b0b8-267fe3948985_0",
+        "detail": "Password form observed. Public content and linked scripts are still inspected; no form was submitted and authenticated areas remain outside coverage.",
+        "incomplete": false
+      },
+      {
+        "code": "login-form-present",
+        "url": "http://127.0.0.1:55857/__exposure_baseline_0160f25e-eb88-465e-b0b8-267fe3948985_1",
+        "detail": "Password form observed. Public content and linked scripts are still inspected; no form was submitted and authenticated areas remain outside coverage.",
+        "incomplete": false
+      },
+      {
+        "code": "login-form-present",
+        "url": "http://127.0.0.1:55857/.env",
+        "detail": "Password form observed. Public content and linked scripts are still inspected; no form was submitted and authenticated areas remain outside coverage.",
+        "incomplete": false
+      }
+    ]
+  },
+  "note": "Synthetic nonfunctional examples, local analysis only. Deliberate 403 and excluded origins make scan coverage incomplete; self-test passes only when each expected stage and isolation assertion is observed. Full browser isolation/UI suite is a separate required release check."
+}

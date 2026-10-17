@@ -1,0 +1,89 @@
+{
+  "schema": "exposure-browser-attempts/1",
+  "build": "2.7.0+3772c88c496661b5",
+  "note": "Every full browser-suite run on the 2.7.0 release build, in order, on one Windows x64 computer with local fixtures only; final-browser.log is the run used by release-summary. \"earlierBuilds\" lists the repeated runs of test/repair-browser.test.ts (the test that failed once in 2.6.0 attempt 2) on 2.7.0 development builds: after the engine and large-text lanes became first-come, first-served queues (build 35f4698, light load; per-run table in the w1-stable work handoff, no logs kept) and after the analysis workers moved into child processes (build d91a1fe; logs in the w2-guard data folder, not packaged).",
+  "runs": [
+    {
+      "run": "full browser suite, sanity run before the measurements",
+      "log": "benchmarks/2.7.0/sanity-browser.log",
+      "command": "node <local path> browser (node scripts/test.mjs --browser)",
+      "tests": 34,
+      "pass": 34,
+      "fail": 0,
+      "skipped": 0,
+      "cancelled": 0,
+      "durationS": 452.2,
+      "failing": []
+    },
+    {
+      "run": "full browser suite, final run after the measurements",
+      "log": "benchmarks/2.7.0/final-browser.log",
+      "command": "node <local path> browser (node scripts/test.mjs --browser)",
+      "tests": 34,
+      "pass": 34,
+      "fail": 0,
+      "skipped": 0,
+      "cancelled": 0,
+      "durationS": 450.8,
+      "failing": []
+    }
+  ],
+  "earlierBuilds": [
+    {
+      "build": "35f4698 (commit; 2.7.0 development)",
+      "test": "test/repair-browser.test.ts",
+      "command": "node <local path> browser -- node --test --test-isolation=none --test-concurrency=1 dist/test/repair-browser.test.js",
+      "runs": 12,
+      "runsPassed": 12,
+      "tests": 36,
+      "pass": 36,
+      "fail": 0,
+      "wallS": "37–39 per run",
+      "source": "HANDOFF_V3_w1-stable.md, \"Repeated runs (batch 1, build 35f4698, light load)\""
+    },
+    {
+      "build": "d91a1fe (commit; 2.7.0 development)",
+      "test": "test/repair-browser.test.ts",
+      "runs": 3,
+      "runsPassed": 3,
+      "tests": 9,
+      "pass": 9,
+      "fail": 0,
+      "runsDetail": [
+        {
+          "run": "repair-browser alone, run 1",
+          "log": "<local path>",
+          "tests": 3,
+          "pass": 3,
+          "fail": 0,
+          "skipped": 0,
+          "cancelled": 0,
+          "durationS": 36.6,
+          "failing": []
+        },
+        {
+          "run": "repair-browser alone, run 2",
+          "log": "<local path>",
+          "tests": 3,
+          "pass": 3,
+          "fail": 0,
+          "skipped": 0,
+          "cancelled": 0,
+          "durationS": 37.3,
+          "failing": []
+        },
+        {
+          "run": "repair-browser alone, run 3",
+          "log": "<local path>",
+          "tests": 3,
+          "pass": 3,
+          "fail": 0,
+          "skipped": 0,
+          "cancelled": 0,
+          "durationS": 37.2,
+          "failing": []
+        }
+      ]
+    }
+  ]
+}

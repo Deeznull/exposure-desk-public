@@ -1,0 +1,25 @@
+{
+  "projects": [
+    {
+      "name": "Company public website",
+      "urls": [
+        "https://www.example.com/"
+      ],
+      "relatedOrigins": [],
+      "privateOrigins": [],
+      "coverage": "standard",
+      "traffic": "normal",
+      "domainScope": "registrable-domain",
+      "maxAutoDiscoveredOrigins": 50
+    },
+    {
+      "name": "Shop on a fragile server",
+      "urls": [
+        "https://shop.example.com/"
+      ],
+      "coverage": "deep",
+      "traffic": "low-impact",
+      "domainScope": "registrable-domain"
+    }
+  ]
+}

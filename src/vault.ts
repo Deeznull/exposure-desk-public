@@ -1,0 +1,20 @@
+import { createCipheriv, createDecipheriv, randomBytes, scrypt } from 'node:crypto';
+import { readFile, readdir, rm } from 'node:fs/promises';
+import path from 'node:path';
+import type { Store } from './storage.js';
+const kdf={N:131072,r:8,p:1};
+async function derive(password:string,salt:Buffer){if(typeof password!=='string'||password.length<12||password.length>1024)throw new Error('Vault password must contain 12–1024 characters');return new Promise<Buffer>((resolve,reject)=>scrypt(password,salt,32,{...kdf,maxmem:256*1024*1024},(e,k)=>e?reject(e):resolve(k)));}
+export class Vault {
+  private key?:Buffer;private timer?:ReturnType<typeof setTimeout>;private salt?:Buffer;
+  constructor(readonly store:Store){}
+  status(){return {unlocked:!!this.key,configured:!!this.salt,timeoutMinutes:this.store.settings.vaultMinutes,algorithm:'AES-256-GCM / scrypt N=131072 r=8 p=1',recovery:'No password recovery. Redacted history/checkpoints cannot restore full evidence.'};}
+  async init(){try{const meta=JSON.parse(await readFile(path.join(this.store.dir,'vault','meta.json'),'utf8'));if(meta.schema!=='exposure-vault/1'||JSON.stringify(meta.kdf)!==JSON.stringify(kdf))throw new Error('Unsupported vault');this.salt=Buffer.from(meta.salt,'base64');if(this.salt.length!==16)throw new Error('Invalid vault');}catch(e:any){if(e.code!=='ENOENT')throw e;}}
+  touch(){clearTimeout(this.timer);this.timer=setTimeout(()=>this.lock(),this.store.settings.vaultMinutes*60000);this.timer.unref();}
+  lock(){clearTimeout(this.timer);this.key?.fill(0);this.key=undefined;}
+  private encrypt(id:string,value:unknown,key=this.key){if(!key)throw new Error('Unlock the vault first');const plain=Buffer.from(JSON.stringify(value));if(plain.length>32*1024*1024)throw new Error('Vault evidence exceeds 32 MiB');const iv=randomBytes(12),c=createCipheriv('aes-256-gcm',key,iv);c.setAAD(Buffer.from('ExposureDesk/vault/1/'+id));const ciphertext=Buffer.concat([c.update(plain),c.final()]);plain.fill(0);return {schema:'exposure-vault-entry/1',id,iv:iv.toString('base64'),tag:c.getAuthTag().toString('base64'),ciphertext:ciphertext.toString('base64')};}
+  private decrypt(id:string,j:any,key=this.key){if(!key)throw new Error('Unlock the vault first');if(j.schema!=='exposure-vault-entry/1'||j.id!==id||typeof j.ciphertext!=='string'||j.ciphertext.length>45*1024*1024)throw new Error('Invalid vault entry');const d=createDecipheriv('aes-256-gcm',key,Buffer.from(j.iv,'base64'));d.setAAD(Buffer.from('ExposureDesk/vault/1/'+id));d.setAuthTag(Buffer.from(j.tag,'base64'));const plain=Buffer.concat([d.update(Buffer.from(j.ciphertext,'base64')),d.final()]);try{return JSON.parse(plain.toString('utf8'));}finally{plain.fill(0);}}
+  async unlock(password:string,create=false){this.lock();if(!this.salt&&!create)throw new Error('Create the vault first');const salt=this.salt||randomBytes(16),key=await derive(password,salt);try{if(this.salt){const check=JSON.parse(await readFile(path.join(this.store.dir,'vault','check.json'),'utf8'));this.decrypt('check',check,key);}else{await this.store.atomic('vault/check.json',this.encrypt('check',{ok:true},key));await this.store.atomic('vault/meta.json',{schema:'exposure-vault/1',kdf,salt:salt.toString('base64')});this.salt=salt;}this.key=key;this.touch();}catch{key.fill(0);throw new Error('Vault unlock failed. Check password or restore an intact vault.');}}
+  async put(id:string,value:unknown){if(!/^[a-f0-9-]{36}$/.test(id))throw new Error('Invalid scan');await this.store.atomic('vault/'+id+'.json',this.encrypt(id,value));this.touch();}
+  async get(id:string){if(!/^[a-f0-9-]{36}$/.test(id))throw new Error('Invalid scan');const value=this.decrypt(id,JSON.parse(await readFile(path.join(this.store.dir,'vault',id+'.json'),'utf8')));this.touch();return value;}
+  async delete(){this.lock();for(const f of await readdir(path.join(this.store.dir,'vault')))if(/^[a-f0-9-]+\.json$/.test(f)||['meta.json','check.json'].includes(f))await rm(path.join(this.store.dir,'vault',f),{force:true});this.salt=undefined;}
+}

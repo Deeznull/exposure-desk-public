@@ -1,0 +1,64 @@
+[
+  {
+    "allows_bounty_splitting": true,
+    "average_time_to_bounty_awarded": null,
+    "handle": "acme",
+    "id": 1001,
+    "managed_program": true,
+    "name": "Acme Example",
+    "offers_bounties": true,
+    "submission_state": "open",
+    "url": "https://hackerone.example/acme",
+    "website": "https://www.acme.example",
+    "targets": {
+      "in_scope": [
+        {"asset_identifier": "www.acme.example", "asset_type": "URL", "eligible_for_bounty": true, "eligible_for_submission": true, "max_severity": "critical"},
+        {"asset_identifier": "*.shop.acme.example", "asset_type": "WILDCARD", "eligible_for_bounty": true, "eligible_for_submission": true, "max_severity": "high"},
+        {"asset_identifier": "old.acme.example", "asset_type": "URL", "eligible_for_bounty": false, "eligible_for_submission": false, "max_severity": "none"},
+        {"asset_identifier": "intranet.example.mil", "asset_type": "URL", "eligible_for_bounty": true, "eligible_for_submission": true, "max_severity": "critical"},
+        {"asset_identifier": "id123456789", "asset_type": "APPLE_STORE_APP_ID", "eligible_for_bounty": true, "eligible_for_submission": true, "max_severity": "high"}
+      ],
+      "out_of_scope": [
+        {"asset_identifier": "blog.acme.example", "asset_type": "URL", "eligible_for_bounty": false, "eligible_for_submission": false},
+        {"asset_identifier": "https://www.acme.example/admin/", "asset_type": "URL", "eligible_for_bounty": false, "eligible_for_submission": false}
+      ]
+    }
+  },
+  {
+    "handle": "globex",
+    "id": 1002,
+    "name": "Globex Test",
+    "offers_bounties": false,
+    "url": "https://hackerone.example/globex",
+    "targets": {
+      "in_scope": [
+        {"asset_identifier": "globex.test", "asset_type": "URL", "eligible_for_submission": true}
+      ],
+      "out_of_scope": []
+    }
+  },
+  {
+    "handle": "dupe-a",
+    "id": 1003,
+    "name": "Shared Name",
+    "offers_bounties": false,
+    "url": "https://hackerone.example/dupe-a",
+    "targets": {"in_scope": [{"asset_identifier": "a.dupe.test", "asset_type": "URL"}], "out_of_scope": []}
+  },
+  {
+    "handle": "dupe-b",
+    "id": 1004,
+    "name": "Shared Name",
+    "offers_bounties": false,
+    "url": "https://hackerone.example/dupe-b",
+    "targets": {"in_scope": [{"asset_identifier": "b.dupe.test", "asset_type": "URL"}], "out_of_scope": []}
+  },
+  {
+    "handle": "nothing-web",
+    "id": 1005,
+    "name": "Mobile Only",
+    "offers_bounties": true,
+    "url": "https://hackerone.example/nothing-web",
+    "targets": {"in_scope": [{"asset_identifier": "com.mobile.only", "asset_type": "GOOGLE_PLAY_APP_ID"}], "out_of_scope": []}
+  }
+]

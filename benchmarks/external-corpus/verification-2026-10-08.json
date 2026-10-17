@@ -1,0 +1,2610 @@
+{
+  "schema": "exposure-external-corpus-verification/1",
+  "recordedAt": "2026-10-08",
+  "note": "External synthetic detection corpus written by a separate non-Claude AI and verified before use. Values are HMAC-derived synthetic strings on reserved .example.test origins; the corpus itself is not part of this project and is never packaged. Counts describe this corpus only, not real-site accuracy. No values are stored here.",
+  "source": {
+    "folder": "<local path>",
+    "status": "complete 2026-10-08 07:22:19 Europe/Amsterdam",
+    "seed": "ExposureDesk/detection-corpus/v2",
+    "sha256": {
+      "corpus.sha256": "ef9187db6d80638de95cb1b0e4133d44187525a4c44a2a5989b49d1ad21b594a",
+      "synthetic-values.json": "12a5ab6fe737fa0429a564aef3a696abe552dfa2d62909d557da893ba1ded6c0",
+      "corpus-index.json": "4c3d625b5adb0a4335f18a6748a0bee074f42e6db6c51ccedb70103533058b22",
+      "generated-files.json": "e68fd3e4476310bf685e26f8674fda2e57caa3bfd1a2eaf6771a582700731af7",
+      "generate.mjs": "9e1a75d4fa1deaf16776c1ab1149897c87f2da4acb3169bed5cbc09e9a6d539f",
+      "score.mjs": "5e01b10ec2d8e42e60003217ed49b89bd733307f8e1ba8c34636eb1ab2bea2be"
+    }
+  },
+  "verification": {
+    "regeneration": {
+      "runs": 2,
+      "files": 283,
+      "identicalBetweenRuns": 283,
+      "identicalToShipped": 283,
+      "manifestEntries": 281,
+      "manifestMismatches": 0,
+      "undeclaredOutputs": 0
+    },
+    "values": {
+      "registryValues": 434,
+      "hashMismatches": 0,
+      "seedMatches": true,
+      "knownPublicExampleMatches": 0,
+      "credentialsFoundInThirdPartyInputs": 0,
+      "servedOriginsReserved": true
+    },
+    "scorer": "score.mjs (exposure-corpus-score/2) read the real redacted JSON report of this build; matching by origin/path and byte/UTF-16 location"
+  },
+  "harness": "scripts/external-corpus.mjs (pinned score.mjs and corpus.sha256; every manifest entry re-hashed; 127.0.0.1 only; egress tripwire)",
+  "measurements": {
+    "before": {
+      "acquisition": {
+        "build": "2.5.0-rc.1+6a6e01c46a615843",
+        "settings": {
+          "mode": "acquisition",
+          "preset": "thorough",
+          "browser": false,
+          "scope": "exact-origin",
+          "requestsPerSecond": 20,
+          "egressViolations": 0
+        },
+        "overall": {
+          "truePositives": 19,
+          "falsePositives": 3,
+          "falseNegatives": 8,
+          "precision": 0.864,
+          "recall": 0.704
+        },
+        "byExpectedProvider": {
+          "AWS": {
+            "truePositives": 0,
+            "falsePositives": 0,
+            "falseNegatives": 1,
+            "precision": null,
+            "recall": 0
+          },
+          "Anthropic": {
+            "truePositives": 1,
+            "falsePositives": 0,
+            "falseNegatives": 1,
+            "precision": 1,
+            "recall": 0.5
+          },
+          "Application signing": {
+            "truePositives": 2,
+            "falsePositives": 0,
+            "falseNegatives": 2,
+            "precision": 1,
+            "recall": 0.5
+          },
+          "Azure": {
+            "truePositives": 0,
+            "falsePositives": 0,
+            "falseNegatives": 1,
+            "precision": null,
+            "recall": 0
+          },
+          "Bitcoin wallet": {
+            "truePositives": 1,
+            "falsePositives": 0,
+            "falseNegatives": 0,
+            "precision": 1,
+            "recall": 1
+          },
+          "Database": {
+            "truePositives": 1,
+            "falsePositives": 0,
+            "falseNegatives": 1,
+            "precision": 1,
+            "recall": 0.5
+          },
+          "Ethereum wallet": {
+            "truePositives": 1,
+            "falsePositives": 0,
+            "falseNegatives": 0,
+            "precision": 1,
+            "recall": 1
+          },
+          "GitHub": {
+            "truePositives": 1,
+            "falsePositives": 0,
+            "falseNegatives": 0,
+            "precision": 1,
+            "recall": 1
+          },
+          "Google Cloud": {
+            "truePositives": 1,
+            "falsePositives": 0,
+            "falseNegatives": 0,
+            "precision": 1,
+            "recall": 1
+          },
+          "Kraken": {
+            "truePositives": 1,
+            "falsePositives": 0,
+            "falseNegatives": 0,
+            "precision": 1,
+            "recall": 1
+          },
+          "OAuth": {
+            "truePositives": 0,
+            "falsePositives": 0,
+            "falseNegatives": 1,
+            "precision": null,
+            "recall": 0
+          },
+          "OpenAI": {
+            "truePositives": 2,
+            "falsePositives": 1,
+            "falseNegatives": 0,
+            "precision": 0.667,
+            "recall": 1
+          },
+          "OpenRouter": {
+            "truePositives": 1,
+            "falsePositives": 0,
+            "falseNegatives": 0,
+            "precision": 1,
+            "recall": 1
+          },
+          "SendGrid": {
+            "truePositives": 1,
+            "falsePositives": 0,
+            "falseNegatives": 0,
+            "precision": 1,
+            "recall": 1
+          },
+          "Stripe": {
+            "truePositives": 4,
+            "falsePositives": 2,
+            "falseNegatives": 0,
+            "precision": 0.667,
+            "recall": 1
+          },
+          "Supabase": {
+            "truePositives": 1,
+            "falsePositives": 0,
+            "falseNegatives": 0,
+            "precision": 1,
+            "recall": 1
+          },
+          "Twilio": {
+            "truePositives": 0,
+            "falsePositives": 0,
+            "falseNegatives": 1,
+            "precision": null,
+            "recall": 0
+          },
+          "npm": {
+            "truePositives": 1,
+            "falsePositives": 0,
+            "falseNegatives": 0,
+            "precision": 1,
+            "recall": 1
+          }
+        },
+        "byOccurrencePlacement": {
+          "base64": {
+            "truePositives": 1,
+            "falsePositives": 0,
+            "falseNegatives": 0,
+            "precision": 1,
+            "recall": 1
+          },
+          "charcode-array": {
+            "truePositives": 0,
+            "falsePositives": 0,
+            "falseNegatives": 1,
+            "precision": null,
+            "recall": 0
+          },
+          "commented-out-code": {
+            "truePositives": 1,
+            "falsePositives": 0,
+            "falseNegatives": 0,
+            "precision": 1,
+            "recall": 1
+          },
+          "config-object": {
+            "truePositives": 4,
+            "falsePositives": 0,
+            "falseNegatives": 2,
+            "precision": 1,
+            "recall": 0.667
+          },
+          "constant-split": {
+            "truePositives": 0,
+            "falsePositives": 0,
+            "falseNegatives": 1,
+            "precision": null,
+            "recall": 0
+          },
+          "cross-chunk-split": {
+            "truePositives": 0,
+            "falsePositives": 0,
+            "falseNegatives": 1,
+            "precision": null,
+            "recall": 0
+          },
+          "docker-compose": {
+            "truePositives": 1,
+            "falsePositives": 0,
+            "falseNegatives": 0,
+            "precision": 1,
+            "recall": 1
+          },
+          "env-backup": {
+            "truePositives": 1,
+            "falsePositives": 0,
+            "falseNegatives": 0,
+            "precision": 1,
+            "recall": 1
+          },
+          "env-file": {
+            "truePositives": 1,
+            "falsePositives": 0,
+            "falseNegatives": 1,
+            "precision": 1,
+            "recall": 0.5
+          },
+          "env-inlining": {
+            "truePositives": 1,
+            "falsePositives": 0,
+            "falseNegatives": 0,
+            "precision": 1,
+            "recall": 1
+          },
+          "git-remote-url": {
+            "truePositives": 1,
+            "falsePositives": 0,
+            "falseNegatives": 0,
+            "precision": 1,
+            "recall": 1
+          },
+          "hex": {
+            "truePositives": 0,
+            "falsePositives": 0,
+            "falseNegatives": 1,
+            "precision": null,
+            "recall": 0
+          },
+          "html-comment": {
+            "truePositives": 1,
+            "falsePositives": 0,
+            "falseNegatives": 0,
+            "precision": 1,
+            "recall": 1
+          },
+          "hydration-blob": {
+            "truePositives": 1,
+            "falsePositives": 0,
+            "falseNegatives": 0,
+            "precision": 1,
+            "recall": 1
+          },
+          "json-api": {
+            "truePositives": 2,
+            "falsePositives": 0,
+            "falseNegatives": 0,
+            "precision": 1,
+            "recall": 1
+          },
+          "npmrc": {
+            "truePositives": 1,
+            "falsePositives": 0,
+            "falseNegatives": 0,
+            "precision": 1,
+            "recall": 1
+          },
+          "old-deployment-bundle": {
+            "truePositives": 1,
+            "falsePositives": 0,
+            "falseNegatives": 0,
+            "precision": 1,
+            "recall": 1
+          },
+          "sdk-initialisation": {
+            "truePositives": 4,
+            "falsePositives": 0,
+            "falseNegatives": 1,
+            "precision": 1,
+            "recall": 0.8
+          },
+          "source-map": {
+            "truePositives": 1,
+            "falsePositives": 0,
+            "falseNegatives": 0,
+            "precision": 1,
+            "recall": 1
+          },
+          "source-map-only": {
+            "truePositives": 1,
+            "falsePositives": 0,
+            "falseNegatives": 0,
+            "precision": 1,
+            "recall": 1
+          },
+          "stack-trace": {
+            "truePositives": 1,
+            "falsePositives": 0,
+            "falseNegatives": 2,
+            "precision": 1,
+            "recall": 0.333
+          },
+          "wp-config-backup": {
+            "truePositives": 0,
+            "falsePositives": 0,
+            "falseNegatives": 2,
+            "precision": null,
+            "recall": 0
+          }
+        },
+        "negativeAlerts": [
+          {
+            "site": "storefront-theme",
+            "negativeId": "stripe-test",
+            "kind": "test-mode",
+            "provider": "Stripe"
+          },
+          {
+            "site": "docs-clean",
+            "negativeId": "docs-openai",
+            "kind": "documentation-example",
+            "provider": "OpenAI"
+          },
+          {
+            "site": "docs-clean",
+            "negativeId": "docs-stripe-test",
+            "kind": "test-mode",
+            "provider": "Stripe"
+          }
+        ],
+        "missed": [
+          {
+            "site": "angular-portal",
+            "id": "aws-temporary-partial",
+            "provider": "AWS",
+            "placement": "config-object",
+            "detectedAsOtherCategory": true
+          },
+          {
+            "site": "angular-portal",
+            "id": "azure-secret-partial",
+            "provider": "Azure",
+            "placement": "config-object",
+            "detectedAsOtherCategory": true
+          },
+          {
+            "site": "sveltekit-notes",
+            "id": "twilio-auth",
+            "provider": "Twilio",
+            "placement": "sdk-initialisation",
+            "detectedAsOtherCategory": true
+          },
+          {
+            "site": "wordpress-shop",
+            "id": "wordpress-auth",
+            "provider": "Application signing",
+            "placement": "wp-config-backup",
+            "detectedAsOtherCategory": false
+          },
+          {
+            "site": "wordpress-shop",
+            "id": "wordpress-db",
+            "provider": "Database",
+            "placement": "wp-config-backup",
+            "detectedAsOtherCategory": false
+          },
+          {
+            "site": "laravel-booking",
+            "id": "laravel-app-key",
+            "provider": "Application signing",
+            "placement": "env-file",
+            "detectedAsOtherCategory": false
+          },
+          {
+            "site": "django-console",
+            "id": "django-oauth",
+            "provider": "OAuth",
+            "placement": "stack-trace",
+            "detectedAsOtherCategory": false
+          },
+          {
+            "site": "vite-encoded",
+            "id": "anthropic-encoded",
+            "provider": "Anthropic",
+            "placement": "hex",
+            "detectedAsOtherCategory": false
+          }
+        ],
+        "classificationMistakes": [
+          {
+            "expected": "angular-portal/aws-temporary-partial",
+            "fields": [
+              "category"
+            ]
+          },
+          {
+            "expected": "angular-portal/azure-secret-partial",
+            "fields": [
+              "category",
+              "provider",
+              "financialImpact"
+            ]
+          },
+          {
+            "expected": "sveltekit-notes/twilio-auth",
+            "fields": [
+              "category",
+              "provider"
+            ]
+          },
+          {
+            "expected": "firebase-admin/google-service-key",
+            "fields": [
+              "provider",
+              "financialImpact"
+            ]
+          },
+          {
+            "expected": "wallet-console/bitcoin-wallet",
+            "fields": [
+              "provider"
+            ]
+          },
+          {
+            "expected": "wallet-console/ethereum-wallet",
+            "fields": [
+              "provider"
+            ]
+          }
+        ],
+        "acquisitionMisses": [],
+        "sites": [
+          {
+            "name": "next-support",
+            "state": "incomplete",
+            "requests": 30,
+            "truePositives": 2,
+            "falsePositives": 0,
+            "falseNegatives": 0,
+            "incompleteGaps": [
+              "decoded-inspection-limit",
+              "http-unavailable"
+            ]
+          },
+          {
+            "name": "vite-studio",
+            "state": "incomplete",
+            "requests": 27,
+            "truePositives": 2,
+            "falsePositives": 0,
+            "falseNegatives": 0,
+            "incompleteGaps": [
+              "decoded-inspection-limit",
+              "unresolved-module-reference"
+            ]
+          },
+          {
+            "name": "cra-inbox",
+            "state": "incomplete",
+            "requests": 27,
+            "truePositives": 1,
+            "falsePositives": 0,
+            "falseNegatives": 0,
+            "incompleteGaps": [
+              "decoded-inspection-limit"
+            ]
+          },
+          {
+            "name": "nuxt-travel",
+            "state": "incomplete",
+            "requests": 26,
+            "truePositives": 0,
+            "falsePositives": 0,
+            "falseNegatives": 0,
+            "incompleteGaps": [
+              "decoded-inspection-limit"
+            ]
+          },
+          {
+            "name": "angular-portal",
+            "state": "incomplete",
+            "requests": 30,
+            "truePositives": 0,
+            "falsePositives": 0,
+            "falseNegatives": 2,
+            "incompleteGaps": [
+              "decoded-inspection-limit"
+            ]
+          },
+          {
+            "name": "sveltekit-notes",
+            "state": "incomplete",
+            "requests": 29,
+            "truePositives": 1,
+            "falsePositives": 0,
+            "falseNegatives": 1,
+            "incompleteGaps": [
+              "decoded-inspection-limit",
+              "http-unavailable"
+            ]
+          },
+          {
+            "name": "astro-journal",
+            "state": "incomplete",
+            "requests": 28,
+            "truePositives": 0,
+            "falsePositives": 0,
+            "falseNegatives": 0,
+            "incompleteGaps": [
+              "http-unavailable"
+            ]
+          },
+          {
+            "name": "wordpress-shop",
+            "state": "incomplete",
+            "requests": 28,
+            "truePositives": 0,
+            "falsePositives": 0,
+            "falseNegatives": 2,
+            "incompleteGaps": [
+              "decoded-inspection-limit",
+              "http-unavailable"
+            ]
+          },
+          {
+            "name": "laravel-booking",
+            "state": "incomplete",
+            "requests": 29,
+            "truePositives": 1,
+            "falsePositives": 0,
+            "falseNegatives": 1,
+            "incompleteGaps": [
+              "decoded-inspection-limit",
+              "http-unavailable"
+            ]
+          },
+          {
+            "name": "django-console",
+            "state": "incomplete",
+            "requests": 26,
+            "truePositives": 1,
+            "falsePositives": 0,
+            "falseNegatives": 1,
+            "incompleteGaps": [
+              "http-unavailable"
+            ]
+          },
+          {
+            "name": "marketing-clean",
+            "state": "incomplete",
+            "requests": 28,
+            "truePositives": 0,
+            "falsePositives": 0,
+            "falseNegatives": 0,
+            "incompleteGaps": [
+              "http-unavailable"
+            ]
+          },
+          {
+            "name": "firebase-admin",
+            "state": "incomplete",
+            "requests": 27,
+            "truePositives": 1,
+            "falsePositives": 0,
+            "falseNegatives": 0,
+            "incompleteGaps": [
+              "decoded-inspection-limit"
+            ]
+          },
+          {
+            "name": "storefront-theme",
+            "state": "incomplete",
+            "requests": 29,
+            "truePositives": 2,
+            "falsePositives": 1,
+            "falseNegatives": 0,
+            "incompleteGaps": [
+              "decoded-inspection-limit",
+              "http-unavailable"
+            ]
+          },
+          {
+            "name": "express-config",
+            "state": "incomplete",
+            "requests": 28,
+            "truePositives": 2,
+            "falsePositives": 0,
+            "falseNegatives": 0,
+            "incompleteGaps": [
+              "http-unavailable"
+            ]
+          },
+          {
+            "name": "deployment-archive",
+            "state": "incomplete",
+            "requests": 30,
+            "truePositives": 2,
+            "falsePositives": 0,
+            "falseNegatives": 0,
+            "incompleteGaps": [
+              "decoded-inspection-limit",
+              "http-unavailable"
+            ]
+          },
+          {
+            "name": "vite-encoded",
+            "state": "incomplete",
+            "requests": 30,
+            "truePositives": 1,
+            "falsePositives": 0,
+            "falseNegatives": 1,
+            "incompleteGaps": [
+              "decoded-inspection-limit"
+            ]
+          },
+          {
+            "name": "next-stale",
+            "state": "incomplete",
+            "requests": 33,
+            "truePositives": 1,
+            "falsePositives": 0,
+            "falseNegatives": 0,
+            "incompleteGaps": [
+              "decoded-inspection-limit",
+              "http-unavailable"
+            ]
+          },
+          {
+            "name": "wallet-console",
+            "state": "incomplete",
+            "requests": 26,
+            "truePositives": 2,
+            "falsePositives": 0,
+            "falseNegatives": 0,
+            "incompleteGaps": [
+              "decoded-inspection-limit",
+              "http-unavailable"
+            ]
+          },
+          {
+            "name": "docs-clean",
+            "state": "incomplete",
+            "requests": 26,
+            "truePositives": 0,
+            "falsePositives": 2,
+            "falseNegatives": 0,
+            "incompleteGaps": [
+              "decoded-inspection-limit",
+              "http-unavailable"
+            ]
+          },
+          {
+            "name": "firebase-public",
+            "state": "incomplete",
+            "requests": 27,
+            "truePositives": 0,
+            "falsePositives": 0,
+            "falseNegatives": 0,
+            "incompleteGaps": [
+              "decoded-inspection-limit"
+            ]
+          }
+        ]
+      },
+      "discovery": {
+        "build": "2.5.0-rc.1+6a6e01c46a615843",
+        "settings": {
+          "mode": "discovery",
+          "preset": "thorough",
+          "browser": false,
+          "scope": "exact-origin",
+          "requestsPerSecond": 20,
+          "egressViolations": 0
+        },
+        "overall": {
+          "truePositives": 19,
+          "falsePositives": 3,
+          "falseNegatives": 8,
+          "precision": 0.864,
+          "recall": 0.704
+        },
+        "byExpectedProvider": {
+          "AWS": {
+            "truePositives": 0,
+            "falsePositives": 0,
+            "falseNegatives": 1,
+            "precision": null,
+            "recall": 0
+          },
+          "Anthropic": {
+            "truePositives": 1,
+            "falsePositives": 0,
+            "falseNegatives": 1,
+            "precision": 1,
+            "recall": 0.5
+          },
+          "Application signing": {
+            "truePositives": 2,
+            "falsePositives": 0,
+            "falseNegatives": 2,
+            "precision": 1,
+            "recall": 0.5
+          },
+          "Azure": {
+            "truePositives": 0,
+            "falsePositives": 0,
+            "falseNegatives": 1,
+            "precision": null,
+            "recall": 0
+          },
+          "Bitcoin wallet": {
+            "truePositives": 1,
+            "falsePositives": 0,
+            "falseNegatives": 0,
+            "precision": 1,
+            "recall": 1
+          },
+          "Database": {
+            "truePositives": 1,
+            "falsePositives": 0,
+            "falseNegatives": 1,
+            "precision": 1,
+            "recall": 0.5
+          },
+          "Ethereum wallet": {
+            "truePositives": 1,
+            "falsePositives": 0,
+            "falseNegatives": 0,
+            "precision": 1,
+            "recall": 1
+          },
+          "GitHub": {
+            "truePositives": 1,
+            "falsePositives": 0,
+            "falseNegatives": 0,
+            "precision": 1,
+            "recall": 1
+          },
+          "Google Cloud": {
+            "truePositives": 1,
+            "falsePositives": 0,
+            "falseNegatives": 0,
+            "precision": 1,
+            "recall": 1
+          },
+          "Kraken": {
+            "truePositives": 1,
+            "falsePositives": 0,
+            "falseNegatives": 0,
+            "precision": 1,
+            "recall": 1
+          },
+          "OAuth": {
+            "truePositives": 0,
+            "falsePositives": 0,
+            "falseNegatives": 1,
+            "precision": null,
+            "recall": 0
+          },
+          "OpenAI": {
+            "truePositives": 2,
+            "falsePositives": 1,
+            "falseNegatives": 0,
+            "precision": 0.667,
+            "recall": 1
+          },
+          "OpenRouter": {
+            "truePositives": 1,
+            "falsePositives": 0,
+            "falseNegatives": 0,
+            "precision": 1,
+            "recall": 1
+          },
+          "SendGrid": {
+            "truePositives": 1,
+            "falsePositives": 0,
+            "falseNegatives": 0,
+            "precision": 1,
+            "recall": 1
+          },
+          "Stripe": {
+            "truePositives": 4,
+            "falsePositives": 2,
+            "falseNegatives": 0,
+            "precision": 0.667,
+            "recall": 1
+          },
+          "Supabase": {
+            "truePositives": 1,
+            "falsePositives": 0,
+            "falseNegatives": 0,
+            "precision": 1,
+            "recall": 1
+          },
+          "Twilio": {
+            "truePositives": 0,
+            "falsePositives": 0,
+            "falseNegatives": 1,
+            "precision": null,
+            "recall": 0
+          },
+          "npm": {
+            "truePositives": 1,
+            "falsePositives": 0,
+            "falseNegatives": 0,
+            "precision": 1,
+            "recall": 1
+          }
+        },
+        "byOccurrencePlacement": {
+          "base64": {
+            "truePositives": 1,
+            "falsePositives": 0,
+            "falseNegatives": 0,
+            "precision": 1,
+            "recall": 1
+          },
+          "charcode-array": {
+            "truePositives": 0,
+            "falsePositives": 0,
+            "falseNegatives": 1,
+            "precision": null,
+            "recall": 0
+          },
+          "commented-out-code": {
+            "truePositives": 1,
+            "falsePositives": 0,
+            "falseNegatives": 0,
+            "precision": 1,
+            "recall": 1
+          },
+          "config-object": {
+            "truePositives": 4,
+            "falsePositives": 0,
+            "falseNegatives": 2,
+            "precision": 1,
+            "recall": 0.667
+          },
+          "constant-split": {
+            "truePositives": 1,
+            "falsePositives": 0,
+            "falseNegatives": 0,
+            "precision": 1,
+            "recall": 1
+          },
+          "cross-chunk-split": {
+            "truePositives": 0,
+            "falsePositives": 0,
+            "falseNegatives": 1,
+            "precision": null,
+            "recall": 0
+          },
+          "docker-compose": {
+            "truePositives": 1,
+            "falsePositives": 0,
+            "falseNegatives": 0,
+            "precision": 1,
+            "recall": 1
+          },
+          "env-backup": {
+            "truePositives": 1,
+            "falsePositives": 0,
+            "falseNegatives": 0,
+            "precision": 1,
+            "recall": 1
+          },
+          "env-file": {
+            "truePositives": 1,
+            "falsePositives": 0,
+            "falseNegatives": 1,
+            "precision": 1,
+            "recall": 0.5
+          },
+          "env-inlining": {
+            "truePositives": 1,
+            "falsePositives": 0,
+            "falseNegatives": 0,
+            "precision": 1,
+            "recall": 1
+          },
+          "git-remote-url": {
+            "truePositives": 0,
+            "falsePositives": 0,
+            "falseNegatives": 1,
+            "precision": null,
+            "recall": 0
+          },
+          "hex": {
+            "truePositives": 0,
+            "falsePositives": 0,
+            "falseNegatives": 1,
+            "precision": null,
+            "recall": 0
+          },
+          "html-comment": {
+            "truePositives": 1,
+            "falsePositives": 0,
+            "falseNegatives": 0,
+            "precision": 1,
+            "recall": 1
+          },
+          "hydration-blob": {
+            "truePositives": 1,
+            "falsePositives": 0,
+            "falseNegatives": 0,
+            "precision": 1,
+            "recall": 1
+          },
+          "json-api": {
+            "truePositives": 2,
+            "falsePositives": 0,
+            "falseNegatives": 0,
+            "precision": 1,
+            "recall": 1
+          },
+          "npmrc": {
+            "truePositives": 1,
+            "falsePositives": 0,
+            "falseNegatives": 0,
+            "precision": 1,
+            "recall": 1
+          },
+          "old-deployment-bundle": {
+            "truePositives": 1,
+            "falsePositives": 0,
+            "falseNegatives": 0,
+            "precision": 1,
+            "recall": 1
+          },
+          "sdk-initialisation": {
+            "truePositives": 4,
+            "falsePositives": 0,
+            "falseNegatives": 1,
+            "precision": 1,
+            "recall": 0.8
+          },
+          "source-map": {
+            "truePositives": 1,
+            "falsePositives": 0,
+            "falseNegatives": 0,
+            "precision": 1,
+            "recall": 1
+          },
+          "source-map-only": {
+            "truePositives": 1,
+            "falsePositives": 0,
+            "falseNegatives": 0,
+            "precision": 1,
+            "recall": 1
+          },
+          "stack-trace": {
+            "truePositives": 1,
+            "falsePositives": 0,
+            "falseNegatives": 2,
+            "precision": 1,
+            "recall": 0.333
+          },
+          "wp-config-backup": {
+            "truePositives": 0,
+            "falsePositives": 0,
+            "falseNegatives": 2,
+            "precision": null,
+            "recall": 0
+          }
+        },
+        "negativeAlerts": [
+          {
+            "site": "storefront-theme",
+            "negativeId": "stripe-test",
+            "kind": "test-mode",
+            "provider": "Stripe"
+          },
+          {
+            "site": "docs-clean",
+            "negativeId": "docs-openai",
+            "kind": "documentation-example",
+            "provider": "OpenAI"
+          },
+          {
+            "site": "docs-clean",
+            "negativeId": "docs-stripe-test",
+            "kind": "test-mode",
+            "provider": "Stripe"
+          }
+        ],
+        "missed": [
+          {
+            "site": "angular-portal",
+            "id": "aws-temporary-partial",
+            "provider": "AWS",
+            "placement": "config-object",
+            "detectedAsOtherCategory": true
+          },
+          {
+            "site": "angular-portal",
+            "id": "azure-secret-partial",
+            "provider": "Azure",
+            "placement": "config-object",
+            "detectedAsOtherCategory": true
+          },
+          {
+            "site": "sveltekit-notes",
+            "id": "twilio-auth",
+            "provider": "Twilio",
+            "placement": "sdk-initialisation",
+            "detectedAsOtherCategory": true
+          },
+          {
+            "site": "wordpress-shop",
+            "id": "wordpress-auth",
+            "provider": "Application signing",
+            "placement": "wp-config-backup",
+            "detectedAsOtherCategory": false
+          },
+          {
+            "site": "wordpress-shop",
+            "id": "wordpress-db",
+            "provider": "Database",
+            "placement": "wp-config-backup",
+            "detectedAsOtherCategory": false
+          },
+          {
+            "site": "laravel-booking",
+            "id": "laravel-app-key",
+            "provider": "Application signing",
+            "placement": "env-file",
+            "detectedAsOtherCategory": false
+          },
+          {
+            "site": "django-console",
+            "id": "django-oauth",
+            "provider": "OAuth",
+            "placement": "stack-trace",
+            "detectedAsOtherCategory": false
+          },
+          {
+            "site": "vite-encoded",
+            "id": "anthropic-encoded",
+            "provider": "Anthropic",
+            "placement": "hex",
+            "detectedAsOtherCategory": false
+          }
+        ],
+        "classificationMistakes": [
+          {
+            "expected": "angular-portal/aws-temporary-partial",
+            "fields": [
+              "category"
+            ]
+          },
+          {
+            "expected": "angular-portal/azure-secret-partial",
+            "fields": [
+              "category",
+              "provider",
+              "financialImpact"
+            ]
+          },
+          {
+            "expected": "sveltekit-notes/twilio-auth",
+            "fields": [
+              "category",
+              "provider"
+            ]
+          },
+          {
+            "expected": "firebase-admin/google-service-key",
+            "fields": [
+              "provider",
+              "financialImpact"
+            ]
+          },
+          {
+            "expected": "wallet-console/bitcoin-wallet",
+            "fields": [
+              "provider"
+            ]
+          },
+          {
+            "expected": "wallet-console/ethereum-wallet",
+            "fields": [
+              "provider"
+            ]
+          }
+        ],
+        "acquisitionMisses": [
+          {
+            "site": "vite-studio",
+            "path": "/.vite/manifest.json"
+          },
+          {
+            "site": "cra-inbox",
+            "path": "/asset-manifest.json"
+          },
+          {
+            "site": "sveltekit-notes",
+            "path": "/_app/version.json"
+          },
+          {
+            "site": "wordpress-shop",
+            "path": "/wp-config.php.bak"
+          },
+          {
+            "site": "laravel-booking",
+            "path": "/build/manifest.json"
+          },
+          {
+            "site": "firebase-admin",
+            "path": "/__/firebase/init.json"
+          },
+          {
+            "site": "storefront-theme",
+            "path": "/theme/config.json"
+          },
+          {
+            "site": "deployment-archive",
+            "path": "/.git/config"
+          },
+          {
+            "site": "firebase-public",
+            "path": "/__/firebase/init.json"
+          }
+        ],
+        "sites": [
+          {
+            "name": "next-support",
+            "state": "incomplete",
+            "requests": 72,
+            "truePositives": 2,
+            "falsePositives": 0,
+            "falseNegatives": 0,
+            "incompleteGaps": [
+              "decoded-inspection-limit",
+              "http-unavailable"
+            ]
+          },
+          {
+            "name": "vite-studio",
+            "state": "incomplete",
+            "requests": 92,
+            "truePositives": 2,
+            "falsePositives": 0,
+            "falseNegatives": 0,
+            "incompleteGaps": [
+              "analysis-unfinished",
+              "decoded-inspection-limit",
+              "semantic-budget",
+              "unresolved-module-reference"
+            ]
+          },
+          {
+            "name": "cra-inbox",
+            "state": "incomplete",
+            "requests": 66,
+            "truePositives": 1,
+            "falsePositives": 0,
+            "falseNegatives": 0,
+            "incompleteGaps": [
+              "decoded-inspection-limit"
+            ]
+          },
+          {
+            "name": "nuxt-travel",
+            "state": "incomplete",
+            "requests": 58,
+            "truePositives": 0,
+            "falsePositives": 0,
+            "falseNegatives": 0,
+            "incompleteGaps": [
+              "decoded-inspection-limit"
+            ]
+          },
+          {
+            "name": "angular-portal",
+            "state": "incomplete",
+            "requests": 60,
+            "truePositives": 0,
+            "falsePositives": 0,
+            "falseNegatives": 2,
+            "incompleteGaps": [
+              "decoded-inspection-limit"
+            ]
+          },
+          {
+            "name": "sveltekit-notes",
+            "state": "incomplete",
+            "requests": 28,
+            "truePositives": 1,
+            "falsePositives": 0,
+            "falseNegatives": 1,
+            "incompleteGaps": [
+              "decoded-inspection-limit",
+              "http-unavailable"
+            ]
+          },
+          {
+            "name": "astro-journal",
+            "state": "incomplete",
+            "requests": 58,
+            "truePositives": 0,
+            "falsePositives": 0,
+            "falseNegatives": 0,
+            "incompleteGaps": [
+              "http-unavailable",
+              "semantic-provenance-budget"
+            ]
+          },
+          {
+            "name": "wordpress-shop",
+            "state": "incomplete",
+            "requests": 47,
+            "truePositives": 0,
+            "falsePositives": 0,
+            "falseNegatives": 2,
+            "incompleteGaps": [
+              "decoded-inspection-limit",
+              "http-unavailable"
+            ]
+          },
+          {
+            "name": "laravel-booking",
+            "state": "incomplete",
+            "requests": 60,
+            "truePositives": 1,
+            "falsePositives": 0,
+            "falseNegatives": 1,
+            "incompleteGaps": [
+              "decoded-inspection-limit",
+              "http-unavailable"
+            ]
+          },
+          {
+            "name": "django-console",
+            "state": "incomplete",
+            "requests": 28,
+            "truePositives": 1,
+            "falsePositives": 0,
+            "falseNegatives": 1,
+            "incompleteGaps": [
+              "http-unavailable"
+            ]
+          },
+          {
+            "name": "marketing-clean",
+            "state": "incomplete",
+            "requests": 60,
+            "truePositives": 0,
+            "falsePositives": 0,
+            "falseNegatives": 0,
+            "incompleteGaps": [
+              "http-unavailable",
+              "semantic-provenance-budget"
+            ]
+          },
+          {
+            "name": "firebase-admin",
+            "state": "incomplete",
+            "requests": 40,
+            "truePositives": 1,
+            "falsePositives": 0,
+            "falseNegatives": 0,
+            "incompleteGaps": [
+              "analysis-unfinished",
+              "decoded-inspection-limit",
+              "semantic-budget",
+              "semantic-provenance-budget"
+            ]
+          },
+          {
+            "name": "storefront-theme",
+            "state": "incomplete",
+            "requests": 82,
+            "truePositives": 2,
+            "falsePositives": 1,
+            "falseNegatives": 0,
+            "incompleteGaps": [
+              "decoded-inspection-limit",
+              "http-unavailable"
+            ]
+          },
+          {
+            "name": "express-config",
+            "state": "incomplete",
+            "requests": 40,
+            "truePositives": 2,
+            "falsePositives": 0,
+            "falseNegatives": 0,
+            "incompleteGaps": [
+              "http-unavailable",
+              "semantic-provenance-budget"
+            ]
+          },
+          {
+            "name": "deployment-archive",
+            "state": "incomplete",
+            "requests": 43,
+            "truePositives": 2,
+            "falsePositives": 0,
+            "falseNegatives": 0,
+            "incompleteGaps": [
+              "decoded-inspection-limit",
+              "http-unavailable"
+            ]
+          },
+          {
+            "name": "vite-encoded",
+            "state": "incomplete",
+            "requests": 60,
+            "truePositives": 1,
+            "falsePositives": 0,
+            "falseNegatives": 1,
+            "incompleteGaps": [
+              "analysis-unfinished",
+              "decoded-inspection-limit",
+              "semantic-budget"
+            ]
+          },
+          {
+            "name": "next-stale",
+            "state": "incomplete",
+            "requests": 75,
+            "truePositives": 1,
+            "falsePositives": 0,
+            "falseNegatives": 0,
+            "incompleteGaps": [
+              "decoded-inspection-limit",
+              "http-unavailable"
+            ]
+          },
+          {
+            "name": "wallet-console",
+            "state": "incomplete",
+            "requests": 100,
+            "truePositives": 2,
+            "falsePositives": 0,
+            "falseNegatives": 0,
+            "incompleteGaps": [
+              "analysis-unfinished",
+              "decoded-inspection-limit",
+              "http-unavailable",
+              "semantic-budget"
+            ]
+          },
+          {
+            "name": "docs-clean",
+            "state": "incomplete",
+            "requests": 66,
+            "truePositives": 0,
+            "falsePositives": 2,
+            "falseNegatives": 0,
+            "incompleteGaps": [
+              "decoded-inspection-limit",
+              "http-unavailable"
+            ]
+          },
+          {
+            "name": "firebase-public",
+            "state": "incomplete",
+            "requests": 26,
+            "truePositives": 0,
+            "falsePositives": 0,
+            "falseNegatives": 0,
+            "incompleteGaps": [
+              "decoded-inspection-limit",
+              "semantic-provenance-budget"
+            ]
+          }
+        ]
+      }
+    },
+    "after": {
+      "acquisition": {
+        "build": "2.5.0-rc.1+0a83da1192924e25",
+        "settings": {
+          "mode": "acquisition",
+          "preset": "thorough",
+          "browser": false,
+          "scope": "exact-origin",
+          "requestsPerSecond": 20,
+          "egressViolations": 0
+        },
+        "overall": {
+          "truePositives": 27,
+          "falsePositives": 3,
+          "falseNegatives": 0,
+          "precision": 0.9,
+          "recall": 1
+        },
+        "byExpectedProvider": {
+          "AWS": {
+            "truePositives": 1,
+            "falsePositives": 0,
+            "falseNegatives": 0,
+            "precision": 1,
+            "recall": 1
+          },
+          "Anthropic": {
+            "truePositives": 2,
+            "falsePositives": 0,
+            "falseNegatives": 0,
+            "precision": 1,
+            "recall": 1
+          },
+          "Application signing": {
+            "truePositives": 4,
+            "falsePositives": 0,
+            "falseNegatives": 0,
+            "precision": 1,
+            "recall": 1
+          },
+          "Azure": {
+            "truePositives": 1,
+            "falsePositives": 0,
+            "falseNegatives": 0,
+            "precision": 1,
+            "recall": 1
+          },
+          "Bitcoin wallet": {
+            "truePositives": 1,
+            "falsePositives": 0,
+            "falseNegatives": 0,
+            "precision": 1,
+            "recall": 1
+          },
+          "Database": {
+            "truePositives": 2,
+            "falsePositives": 0,
+            "falseNegatives": 0,
+            "precision": 1,
+            "recall": 1
+          },
+          "Ethereum wallet": {
+            "truePositives": 1,
+            "falsePositives": 0,
+            "falseNegatives": 0,
+            "precision": 1,
+            "recall": 1
+          },
+          "GitHub": {
+            "truePositives": 1,
+            "falsePositives": 0,
+            "falseNegatives": 0,
+            "precision": 1,
+            "recall": 1
+          },
+          "Google Cloud": {
+            "truePositives": 1,
+            "falsePositives": 0,
+            "falseNegatives": 0,
+            "precision": 1,
+            "recall": 1
+          },
+          "Kraken": {
+            "truePositives": 1,
+            "falsePositives": 0,
+            "falseNegatives": 0,
+            "precision": 1,
+            "recall": 1
+          },
+          "OAuth": {
+            "truePositives": 1,
+            "falsePositives": 0,
+            "falseNegatives": 0,
+            "precision": 1,
+            "recall": 1
+          },
+          "OpenAI": {
+            "truePositives": 2,
+            "falsePositives": 1,
+            "falseNegatives": 0,
+            "precision": 0.667,
+            "recall": 1
+          },
+          "OpenRouter": {
+            "truePositives": 1,
+            "falsePositives": 0,
+            "falseNegatives": 0,
+            "precision": 1,
+            "recall": 1
+          },
+          "SendGrid": {
+            "truePositives": 1,
+            "falsePositives": 0,
+            "falseNegatives": 0,
+            "precision": 1,
+            "recall": 1
+          },
+          "Stripe": {
+            "truePositives": 4,
+            "falsePositives": 2,
+            "falseNegatives": 0,
+            "precision": 0.667,
+            "recall": 1
+          },
+          "Supabase": {
+            "truePositives": 1,
+            "falsePositives": 0,
+            "falseNegatives": 0,
+            "precision": 1,
+            "recall": 1
+          },
+          "Twilio": {
+            "truePositives": 1,
+            "falsePositives": 0,
+            "falseNegatives": 0,
+            "precision": 1,
+            "recall": 1
+          },
+          "npm": {
+            "truePositives": 1,
+            "falsePositives": 0,
+            "falseNegatives": 0,
+            "precision": 1,
+            "recall": 1
+          }
+        },
+        "byOccurrencePlacement": {
+          "base64": {
+            "truePositives": 1,
+            "falsePositives": 0,
+            "falseNegatives": 0,
+            "precision": 1,
+            "recall": 1
+          },
+          "charcode-array": {
+            "truePositives": 0,
+            "falsePositives": 0,
+            "falseNegatives": 1,
+            "precision": null,
+            "recall": 0
+          },
+          "commented-out-code": {
+            "truePositives": 1,
+            "falsePositives": 0,
+            "falseNegatives": 0,
+            "precision": 1,
+            "recall": 1
+          },
+          "config-object": {
+            "truePositives": 6,
+            "falsePositives": 0,
+            "falseNegatives": 0,
+            "precision": 1,
+            "recall": 1
+          },
+          "constant-split": {
+            "truePositives": 0,
+            "falsePositives": 0,
+            "falseNegatives": 1,
+            "precision": null,
+            "recall": 0
+          },
+          "cross-chunk-split": {
+            "truePositives": 0,
+            "falsePositives": 0,
+            "falseNegatives": 1,
+            "precision": null,
+            "recall": 0
+          },
+          "docker-compose": {
+            "truePositives": 1,
+            "falsePositives": 0,
+            "falseNegatives": 0,
+            "precision": 1,
+            "recall": 1
+          },
+          "env-backup": {
+            "truePositives": 1,
+            "falsePositives": 0,
+            "falseNegatives": 0,
+            "precision": 1,
+            "recall": 1
+          },
+          "env-file": {
+            "truePositives": 2,
+            "falsePositives": 0,
+            "falseNegatives": 0,
+            "precision": 1,
+            "recall": 1
+          },
+          "env-inlining": {
+            "truePositives": 1,
+            "falsePositives": 0,
+            "falseNegatives": 0,
+            "precision": 1,
+            "recall": 1
+          },
+          "git-remote-url": {
+            "truePositives": 1,
+            "falsePositives": 0,
+            "falseNegatives": 0,
+            "precision": 1,
+            "recall": 1
+          },
+          "hex": {
+            "truePositives": 1,
+            "falsePositives": 0,
+            "falseNegatives": 0,
+            "precision": 1,
+            "recall": 1
+          },
+          "html-comment": {
+            "truePositives": 1,
+            "falsePositives": 0,
+            "falseNegatives": 0,
+            "precision": 1,
+            "recall": 1
+          },
+          "hydration-blob": {
+            "truePositives": 1,
+            "falsePositives": 0,
+            "falseNegatives": 0,
+            "precision": 1,
+            "recall": 1
+          },
+          "json-api": {
+            "truePositives": 2,
+            "falsePositives": 0,
+            "falseNegatives": 0,
+            "precision": 1,
+            "recall": 1
+          },
+          "npmrc": {
+            "truePositives": 1,
+            "falsePositives": 0,
+            "falseNegatives": 0,
+            "precision": 1,
+            "recall": 1
+          },
+          "old-deployment-bundle": {
+            "truePositives": 1,
+            "falsePositives": 0,
+            "falseNegatives": 0,
+            "precision": 1,
+            "recall": 1
+          },
+          "sdk-initialisation": {
+            "truePositives": 5,
+            "falsePositives": 0,
+            "falseNegatives": 0,
+            "precision": 1,
+            "recall": 1
+          },
+          "source-map": {
+            "truePositives": 1,
+            "falsePositives": 0,
+            "falseNegatives": 0,
+            "precision": 1,
+            "recall": 1
+          },
+          "source-map-only": {
+            "truePositives": 1,
+            "falsePositives": 0,
+            "falseNegatives": 0,
+            "precision": 1,
+            "recall": 1
+          },
+          "stack-trace": {
+            "truePositives": 3,
+            "falsePositives": 0,
+            "falseNegatives": 0,
+            "precision": 1,
+            "recall": 1
+          },
+          "wp-config-backup": {
+            "truePositives": 2,
+            "falsePositives": 0,
+            "falseNegatives": 0,
+            "precision": 1,
+            "recall": 1
+          }
+        },
+        "negativeAlerts": [
+          {
+            "site": "storefront-theme",
+            "negativeId": "stripe-test",
+            "kind": "test-mode",
+            "provider": "Stripe"
+          },
+          {
+            "site": "docs-clean",
+            "negativeId": "docs-openai",
+            "kind": "documentation-example",
+            "provider": "OpenAI"
+          },
+          {
+            "site": "docs-clean",
+            "negativeId": "docs-stripe-test",
+            "kind": "test-mode",
+            "provider": "Stripe"
+          }
+        ],
+        "missed": [],
+        "classificationMistakes": [
+          {
+            "expected": "wallet-console/bitcoin-wallet",
+            "fields": [
+              "provider"
+            ]
+          },
+          {
+            "expected": "wallet-console/ethereum-wallet",
+            "fields": [
+              "provider"
+            ]
+          }
+        ],
+        "acquisitionMisses": [],
+        "sites": [
+          {
+            "name": "next-support",
+            "state": "incomplete",
+            "requests": 30,
+            "truePositives": 2,
+            "falsePositives": 0,
+            "falseNegatives": 0,
+            "incompleteGaps": [
+              "decoded-inspection-limit",
+              "http-unavailable"
+            ]
+          },
+          {
+            "name": "vite-studio",
+            "state": "incomplete",
+            "requests": 27,
+            "truePositives": 2,
+            "falsePositives": 0,
+            "falseNegatives": 0,
+            "incompleteGaps": [
+              "decoded-inspection-limit",
+              "unresolved-module-reference"
+            ]
+          },
+          {
+            "name": "cra-inbox",
+            "state": "incomplete",
+            "requests": 27,
+            "truePositives": 1,
+            "falsePositives": 0,
+            "falseNegatives": 0,
+            "incompleteGaps": [
+              "decoded-inspection-limit"
+            ]
+          },
+          {
+            "name": "nuxt-travel",
+            "state": "incomplete",
+            "requests": 26,
+            "truePositives": 0,
+            "falsePositives": 0,
+            "falseNegatives": 0,
+            "incompleteGaps": [
+              "decoded-inspection-limit"
+            ]
+          },
+          {
+            "name": "angular-portal",
+            "state": "incomplete",
+            "requests": 30,
+            "truePositives": 2,
+            "falsePositives": 0,
+            "falseNegatives": 0,
+            "incompleteGaps": [
+              "decoded-inspection-limit"
+            ]
+          },
+          {
+            "name": "sveltekit-notes",
+            "state": "incomplete",
+            "requests": 29,
+            "truePositives": 2,
+            "falsePositives": 0,
+            "falseNegatives": 0,
+            "incompleteGaps": [
+              "decoded-inspection-limit",
+              "http-unavailable"
+            ]
+          },
+          {
+            "name": "astro-journal",
+            "state": "incomplete",
+            "requests": 28,
+            "truePositives": 0,
+            "falsePositives": 0,
+            "falseNegatives": 0,
+            "incompleteGaps": [
+              "http-unavailable"
+            ]
+          },
+          {
+            "name": "wordpress-shop",
+            "state": "incomplete",
+            "requests": 28,
+            "truePositives": 2,
+            "falsePositives": 0,
+            "falseNegatives": 0,
+            "incompleteGaps": [
+              "decoded-inspection-limit",
+              "http-unavailable"
+            ]
+          },
+          {
+            "name": "laravel-booking",
+            "state": "incomplete",
+            "requests": 29,
+            "truePositives": 2,
+            "falsePositives": 0,
+            "falseNegatives": 0,
+            "incompleteGaps": [
+              "decoded-inspection-limit",
+              "http-unavailable"
+            ]
+          },
+          {
+            "name": "django-console",
+            "state": "incomplete",
+            "requests": 26,
+            "truePositives": 2,
+            "falsePositives": 0,
+            "falseNegatives": 0,
+            "incompleteGaps": [
+              "http-unavailable"
+            ]
+          },
+          {
+            "name": "marketing-clean",
+            "state": "incomplete",
+            "requests": 28,
+            "truePositives": 0,
+            "falsePositives": 0,
+            "falseNegatives": 0,
+            "incompleteGaps": [
+              "http-unavailable"
+            ]
+          },
+          {
+            "name": "firebase-admin",
+            "state": "incomplete",
+            "requests": 27,
+            "truePositives": 1,
+            "falsePositives": 0,
+            "falseNegatives": 0,
+            "incompleteGaps": [
+              "decoded-inspection-limit"
+            ]
+          },
+          {
+            "name": "storefront-theme",
+            "state": "incomplete",
+            "requests": 29,
+            "truePositives": 2,
+            "falsePositives": 1,
+            "falseNegatives": 0,
+            "incompleteGaps": [
+              "decoded-inspection-limit",
+              "http-unavailable"
+            ]
+          },
+          {
+            "name": "express-config",
+            "state": "incomplete",
+            "requests": 28,
+            "truePositives": 2,
+            "falsePositives": 0,
+            "falseNegatives": 0,
+            "incompleteGaps": [
+              "http-unavailable"
+            ]
+          },
+          {
+            "name": "deployment-archive",
+            "state": "incomplete",
+            "requests": 30,
+            "truePositives": 2,
+            "falsePositives": 0,
+            "falseNegatives": 0,
+            "incompleteGaps": [
+              "decoded-inspection-limit",
+              "http-unavailable"
+            ]
+          },
+          {
+            "name": "vite-encoded",
+            "state": "incomplete",
+            "requests": 30,
+            "truePositives": 2,
+            "falsePositives": 0,
+            "falseNegatives": 0,
+            "incompleteGaps": [
+              "decoded-inspection-limit"
+            ]
+          },
+          {
+            "name": "next-stale",
+            "state": "incomplete",
+            "requests": 33,
+            "truePositives": 1,
+            "falsePositives": 0,
+            "falseNegatives": 0,
+            "incompleteGaps": [
+              "decoded-inspection-limit",
+              "http-unavailable"
+            ]
+          },
+          {
+            "name": "wallet-console",
+            "state": "incomplete",
+            "requests": 26,
+            "truePositives": 2,
+            "falsePositives": 0,
+            "falseNegatives": 0,
+            "incompleteGaps": [
+              "decoded-inspection-limit",
+              "http-unavailable"
+            ]
+          },
+          {
+            "name": "docs-clean",
+            "state": "incomplete",
+            "requests": 26,
+            "truePositives": 0,
+            "falsePositives": 2,
+            "falseNegatives": 0,
+            "incompleteGaps": [
+              "decoded-inspection-limit",
+              "http-unavailable"
+            ]
+          },
+          {
+            "name": "firebase-public",
+            "state": "incomplete",
+            "requests": 27,
+            "truePositives": 0,
+            "falsePositives": 0,
+            "falseNegatives": 0,
+            "incompleteGaps": [
+              "decoded-inspection-limit"
+            ]
+          }
+        ]
+      },
+      "discovery": {
+        "build": "2.5.0-rc.1+0a83da1192924e25",
+        "settings": {
+          "mode": "discovery",
+          "preset": "thorough",
+          "browser": false,
+          "scope": "exact-origin",
+          "requestsPerSecond": 20,
+          "egressViolations": 0
+        },
+        "overall": {
+          "truePositives": 25,
+          "falsePositives": 3,
+          "falseNegatives": 2,
+          "precision": 0.893,
+          "recall": 0.926
+        },
+        "byExpectedProvider": {
+          "AWS": {
+            "truePositives": 1,
+            "falsePositives": 0,
+            "falseNegatives": 0,
+            "precision": 1,
+            "recall": 1
+          },
+          "Anthropic": {
+            "truePositives": 2,
+            "falsePositives": 0,
+            "falseNegatives": 0,
+            "precision": 1,
+            "recall": 1
+          },
+          "Application signing": {
+            "truePositives": 3,
+            "falsePositives": 0,
+            "falseNegatives": 1,
+            "precision": 1,
+            "recall": 0.75
+          },
+          "Azure": {
+            "truePositives": 1,
+            "falsePositives": 0,
+            "falseNegatives": 0,
+            "precision": 1,
+            "recall": 1
+          },
+          "Bitcoin wallet": {
+            "truePositives": 1,
+            "falsePositives": 0,
+            "falseNegatives": 0,
+            "precision": 1,
+            "recall": 1
+          },
+          "Database": {
+            "truePositives": 1,
+            "falsePositives": 0,
+            "falseNegatives": 1,
+            "precision": 1,
+            "recall": 0.5
+          },
+          "Ethereum wallet": {
+            "truePositives": 1,
+            "falsePositives": 0,
+            "falseNegatives": 0,
+            "precision": 1,
+            "recall": 1
+          },
+          "GitHub": {
+            "truePositives": 1,
+            "falsePositives": 0,
+            "falseNegatives": 0,
+            "precision": 1,
+            "recall": 1
+          },
+          "Google Cloud": {
+            "truePositives": 1,
+            "falsePositives": 0,
+            "falseNegatives": 0,
+            "precision": 1,
+            "recall": 1
+          },
+          "Kraken": {
+            "truePositives": 1,
+            "falsePositives": 0,
+            "falseNegatives": 0,
+            "precision": 1,
+            "recall": 1
+          },
+          "OAuth": {
+            "truePositives": 1,
+            "falsePositives": 0,
+            "falseNegatives": 0,
+            "precision": 1,
+            "recall": 1
+          },
+          "OpenAI": {
+            "truePositives": 2,
+            "falsePositives": 1,
+            "falseNegatives": 0,
+            "precision": 0.667,
+            "recall": 1
+          },
+          "OpenRouter": {
+            "truePositives": 1,
+            "falsePositives": 0,
+            "falseNegatives": 0,
+            "precision": 1,
+            "recall": 1
+          },
+          "SendGrid": {
+            "truePositives": 1,
+            "falsePositives": 0,
+            "falseNegatives": 0,
+            "precision": 1,
+            "recall": 1
+          },
+          "Stripe": {
+            "truePositives": 4,
+            "falsePositives": 2,
+            "falseNegatives": 0,
+            "precision": 0.667,
+            "recall": 1
+          },
+          "Supabase": {
+            "truePositives": 1,
+            "falsePositives": 0,
+            "falseNegatives": 0,
+            "precision": 1,
+            "recall": 1
+          },
+          "Twilio": {
+            "truePositives": 1,
+            "falsePositives": 0,
+            "falseNegatives": 0,
+            "precision": 1,
+            "recall": 1
+          },
+          "npm": {
+            "truePositives": 1,
+            "falsePositives": 0,
+            "falseNegatives": 0,
+            "precision": 1,
+            "recall": 1
+          }
+        },
+        "byOccurrencePlacement": {
+          "base64": {
+            "truePositives": 1,
+            "falsePositives": 0,
+            "falseNegatives": 0,
+            "precision": 1,
+            "recall": 1
+          },
+          "charcode-array": {
+            "truePositives": 0,
+            "falsePositives": 0,
+            "falseNegatives": 1,
+            "precision": null,
+            "recall": 0
+          },
+          "commented-out-code": {
+            "truePositives": 1,
+            "falsePositives": 0,
+            "falseNegatives": 0,
+            "precision": 1,
+            "recall": 1
+          },
+          "config-object": {
+            "truePositives": 6,
+            "falsePositives": 0,
+            "falseNegatives": 0,
+            "precision": 1,
+            "recall": 1
+          },
+          "constant-split": {
+            "truePositives": 1,
+            "falsePositives": 0,
+            "falseNegatives": 0,
+            "precision": 1,
+            "recall": 1
+          },
+          "cross-chunk-split": {
+            "truePositives": 0,
+            "falsePositives": 0,
+            "falseNegatives": 1,
+            "precision": null,
+            "recall": 0
+          },
+          "docker-compose": {
+            "truePositives": 1,
+            "falsePositives": 0,
+            "falseNegatives": 0,
+            "precision": 1,
+            "recall": 1
+          },
+          "env-backup": {
+            "truePositives": 1,
+            "falsePositives": 0,
+            "falseNegatives": 0,
+            "precision": 1,
+            "recall": 1
+          },
+          "env-file": {
+            "truePositives": 2,
+            "falsePositives": 0,
+            "falseNegatives": 0,
+            "precision": 1,
+            "recall": 1
+          },
+          "env-inlining": {
+            "truePositives": 1,
+            "falsePositives": 0,
+            "falseNegatives": 0,
+            "precision": 1,
+            "recall": 1
+          },
+          "git-remote-url": {
+            "truePositives": 0,
+            "falsePositives": 0,
+            "falseNegatives": 1,
+            "precision": null,
+            "recall": 0
+          },
+          "hex": {
+            "truePositives": 1,
+            "falsePositives": 0,
+            "falseNegatives": 0,
+            "precision": 1,
+            "recall": 1
+          },
+          "html-comment": {
+            "truePositives": 1,
+            "falsePositives": 0,
+            "falseNegatives": 0,
+            "precision": 1,
+            "recall": 1
+          },
+          "hydration-blob": {
+            "truePositives": 1,
+            "falsePositives": 0,
+            "falseNegatives": 0,
+            "precision": 1,
+            "recall": 1
+          },
+          "json-api": {
+            "truePositives": 2,
+            "falsePositives": 0,
+            "falseNegatives": 0,
+            "precision": 1,
+            "recall": 1
+          },
+          "npmrc": {
+            "truePositives": 1,
+            "falsePositives": 0,
+            "falseNegatives": 0,
+            "precision": 1,
+            "recall": 1
+          },
+          "old-deployment-bundle": {
+            "truePositives": 1,
+            "falsePositives": 0,
+            "falseNegatives": 0,
+            "precision": 1,
+            "recall": 1
+          },
+          "sdk-initialisation": {
+            "truePositives": 5,
+            "falsePositives": 0,
+            "falseNegatives": 0,
+            "precision": 1,
+            "recall": 1
+          },
+          "source-map": {
+            "truePositives": 1,
+            "falsePositives": 0,
+            "falseNegatives": 0,
+            "precision": 1,
+            "recall": 1
+          },
+          "source-map-only": {
+            "truePositives": 1,
+            "falsePositives": 0,
+            "falseNegatives": 0,
+            "precision": 1,
+            "recall": 1
+          },
+          "stack-trace": {
+            "truePositives": 3,
+            "falsePositives": 0,
+            "falseNegatives": 0,
+            "precision": 1,
+            "recall": 1
+          },
+          "wp-config-backup": {
+            "truePositives": 0,
+            "falsePositives": 0,
+            "falseNegatives": 2,
+            "precision": null,
+            "recall": 0
+          }
+        },
+        "negativeAlerts": [
+          {
+            "site": "storefront-theme",
+            "negativeId": "stripe-test",
+            "kind": "test-mode",
+            "provider": "Stripe"
+          },
+          {
+            "site": "docs-clean",
+            "negativeId": "docs-openai",
+            "kind": "documentation-example",
+            "provider": "OpenAI"
+          },
+          {
+            "site": "docs-clean",
+            "negativeId": "docs-stripe-test",
+            "kind": "test-mode",
+            "provider": "Stripe"
+          }
+        ],
+        "missed": [
+          {
+            "site": "wordpress-shop",
+            "id": "wordpress-auth",
+            "provider": "Application signing",
+            "placement": "wp-config-backup",
+            "detectedAsOtherCategory": false
+          },
+          {
+            "site": "wordpress-shop",
+            "id": "wordpress-db",
+            "provider": "Database",
+            "placement": "wp-config-backup",
+            "detectedAsOtherCategory": false
+          }
+        ],
+        "classificationMistakes": [
+          {
+            "expected": "wallet-console/bitcoin-wallet",
+            "fields": [
+              "provider"
+            ]
+          },
+          {
+            "expected": "wallet-console/ethereum-wallet",
+            "fields": [
+              "provider"
+            ]
+          }
+        ],
+        "acquisitionMisses": [
+          {
+            "site": "vite-studio",
+            "path": "/.vite/manifest.json"
+          },
+          {
+            "site": "cra-inbox",
+            "path": "/asset-manifest.json"
+          },
+          {
+            "site": "sveltekit-notes",
+            "path": "/_app/version.json"
+          },
+          {
+            "site": "wordpress-shop",
+            "path": "/wp-config.php.bak"
+          },
+          {
+            "site": "laravel-booking",
+            "path": "/build/manifest.json"
+          },
+          {
+            "site": "firebase-admin",
+            "path": "/__/firebase/init.json"
+          },
+          {
+            "site": "storefront-theme",
+            "path": "/theme/config.json"
+          },
+          {
+            "site": "deployment-archive",
+            "path": "/.git/config"
+          },
+          {
+            "site": "firebase-public",
+            "path": "/__/firebase/init.json"
+          }
+        ],
+        "sites": [
+          {
+            "name": "next-support",
+            "state": "incomplete",
+            "requests": 72,
+            "truePositives": 2,
+            "falsePositives": 0,
+            "falseNegatives": 0,
+            "incompleteGaps": [
+              "decoded-inspection-limit",
+              "http-unavailable"
+            ]
+          },
+          {
+            "name": "vite-studio",
+            "state": "incomplete",
+            "requests": 92,
+            "truePositives": 2,
+            "falsePositives": 0,
+            "falseNegatives": 0,
+            "incompleteGaps": [
+              "analysis-unfinished",
+              "decoded-inspection-limit",
+              "semantic-budget",
+              "unresolved-module-reference"
+            ]
+          },
+          {
+            "name": "cra-inbox",
+            "state": "incomplete",
+            "requests": 66,
+            "truePositives": 1,
+            "falsePositives": 0,
+            "falseNegatives": 0,
+            "incompleteGaps": [
+              "decoded-inspection-limit"
+            ]
+          },
+          {
+            "name": "nuxt-travel",
+            "state": "incomplete",
+            "requests": 58,
+            "truePositives": 0,
+            "falsePositives": 0,
+            "falseNegatives": 0,
+            "incompleteGaps": [
+              "decoded-inspection-limit"
+            ]
+          },
+          {
+            "name": "angular-portal",
+            "state": "incomplete",
+            "requests": 60,
+            "truePositives": 2,
+            "falsePositives": 0,
+            "falseNegatives": 0,
+            "incompleteGaps": [
+              "decoded-inspection-limit"
+            ]
+          },
+          {
+            "name": "sveltekit-notes",
+            "state": "incomplete",
+            "requests": 28,
+            "truePositives": 2,
+            "falsePositives": 0,
+            "falseNegatives": 0,
+            "incompleteGaps": [
+              "decoded-inspection-limit",
+              "http-unavailable"
+            ]
+          },
+          {
+            "name": "astro-journal",
+            "state": "incomplete",
+            "requests": 58,
+            "truePositives": 0,
+            "falsePositives": 0,
+            "falseNegatives": 0,
+            "incompleteGaps": [
+              "http-unavailable",
+              "semantic-provenance-budget"
+            ]
+          },
+          {
+            "name": "wordpress-shop",
+            "state": "incomplete",
+            "requests": 47,
+            "truePositives": 0,
+            "falsePositives": 0,
+            "falseNegatives": 2,
+            "incompleteGaps": [
+              "decoded-inspection-limit",
+              "http-unavailable"
+            ]
+          },
+          {
+            "name": "laravel-booking",
+            "state": "incomplete",
+            "requests": 60,
+            "truePositives": 2,
+            "falsePositives": 0,
+            "falseNegatives": 0,
+            "incompleteGaps": [
+              "decoded-inspection-limit",
+              "http-unavailable"
+            ]
+          },
+          {
+            "name": "django-console",
+            "state": "incomplete",
+            "requests": 28,
+            "truePositives": 2,
+            "falsePositives": 0,
+            "falseNegatives": 0,
+            "incompleteGaps": [
+              "http-unavailable"
+            ]
+          },
+          {
+            "name": "marketing-clean",
+            "state": "incomplete",
+            "requests": 60,
+            "truePositives": 0,
+            "falsePositives": 0,
+            "falseNegatives": 0,
+            "incompleteGaps": [
+              "http-unavailable",
+              "semantic-provenance-budget"
+            ]
+          },
+          {
+            "name": "firebase-admin",
+            "state": "incomplete",
+            "requests": 40,
+            "truePositives": 1,
+            "falsePositives": 0,
+            "falseNegatives": 0,
+            "incompleteGaps": [
+              "analysis-unfinished",
+              "decoded-inspection-limit",
+              "semantic-budget",
+              "semantic-provenance-budget"
+            ]
+          },
+          {
+            "name": "storefront-theme",
+            "state": "incomplete",
+            "requests": 82,
+            "truePositives": 2,
+            "falsePositives": 1,
+            "falseNegatives": 0,
+            "incompleteGaps": [
+              "decoded-inspection-limit",
+              "http-unavailable"
+            ]
+          },
+          {
+            "name": "express-config",
+            "state": "incomplete",
+            "requests": 40,
+            "truePositives": 2,
+            "falsePositives": 0,
+            "falseNegatives": 0,
+            "incompleteGaps": [
+              "http-unavailable",
+              "semantic-provenance-budget"
+            ]
+          },
+          {
+            "name": "deployment-archive",
+            "state": "incomplete",
+            "requests": 43,
+            "truePositives": 2,
+            "falsePositives": 0,
+            "falseNegatives": 0,
+            "incompleteGaps": [
+              "decoded-inspection-limit",
+              "http-unavailable"
+            ]
+          },
+          {
+            "name": "vite-encoded",
+            "state": "incomplete",
+            "requests": 60,
+            "truePositives": 2,
+            "falsePositives": 0,
+            "falseNegatives": 0,
+            "incompleteGaps": [
+              "analysis-unfinished",
+              "decoded-inspection-limit",
+              "semantic-budget"
+            ]
+          },
+          {
+            "name": "next-stale",
+            "state": "incomplete",
+            "requests": 75,
+            "truePositives": 1,
+            "falsePositives": 0,
+            "falseNegatives": 0,
+            "incompleteGaps": [
+              "decoded-inspection-limit",
+              "http-unavailable"
+            ]
+          },
+          {
+            "name": "wallet-console",
+            "state": "incomplete",
+            "requests": 100,
+            "truePositives": 2,
+            "falsePositives": 0,
+            "falseNegatives": 0,
+            "incompleteGaps": [
+              "analysis-unfinished",
+              "decoded-inspection-limit",
+              "http-unavailable",
+              "semantic-budget"
+            ]
+          },
+          {
+            "name": "docs-clean",
+            "state": "incomplete",
+            "requests": 66,
+            "truePositives": 0,
+            "falsePositives": 2,
+            "falseNegatives": 0,
+            "incompleteGaps": [
+              "decoded-inspection-limit",
+              "http-unavailable"
+            ]
+          },
+          {
+            "name": "firebase-public",
+            "state": "incomplete",
+            "requests": 26,
+            "truePositives": 0,
+            "falsePositives": 0,
+            "falseNegatives": 0,
+            "incompleteGaps": [
+              "decoded-inspection-limit",
+              "semantic-provenance-budget"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

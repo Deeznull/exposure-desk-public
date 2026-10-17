@@ -1,0 +1,638 @@
+{
+  "schema": "exposure-machine-state/1",
+  "method": "Sampled while the measurements ran, by a sampler outside the project: CPU load over all logical processors every 5 s (the measurement itself included; \"before\" is the 10 s idle window ahead of each step), free physical memory every 5 s, and the power source (BatteryStatus.PowerOnline) and battery charge every 60 s and at each step change. A sample belongs to the step whose start and end contain it; two steps that waited for the measurement limiter start when it let them run, so they have no idle window before them. The sanity suites are not listed: they are w5-fix's final Windows runs on the same build digest (reused). The 2.7.0 side of the matrix ran partly under outside load (about 07:42–08:04: CPU at 99 % for minutes, free memory down to 3.2 GB; not part of this project); the 6 rows measured then were run again alone (the next step), and those reruns replace them. The first run of external pair 1 is listed although it was measured again: from about 10:12 an unrelated program kept the CPU at 98–100 % and free memory below 10 GB, and the computer ran on battery for part of it; its results were equal but its times were not used. From then on every step waited for 2 minutes below 50 % CPU with at least 11000 MiB free before it started, and none of them saw CPU at 95 % or more or less than 10000 MiB free.",
+  "host": {
+    "platform": "Windows_NT 10.0.26200 x64",
+    "cpuModel": "8-core x86-64 laptop CPU",
+    "logicalCpus": 16,
+    "totalMemGiB": 31.3
+  },
+  "steps": [
+    {
+      "step": "Mass scan (loopback fixtures)",
+      "log": "benchmarks/2.8.0/mass-scan.log",
+      "start": "2026-10-12T05:46:01+02:00",
+      "end": "2026-10-12T07:02:50+02:00",
+      "exit": 0,
+      "durationS": 4609,
+      "samples": 915,
+      "power": {
+        "acThroughout": true,
+        "sources": [
+          "AC"
+        ],
+        "batteryPercentMin": 100
+      },
+      "cpuLoadPercent": {
+        "before": 5.5,
+        "median": 12.4,
+        "max": 48.1
+      },
+      "freeMemGiB": {
+        "before": 11.9,
+        "min": 9.5
+      }
+    },
+    {
+      "step": "Cancellation stress (20 passes)",
+      "log": "benchmarks/2.8.0/cancel-stress.log",
+      "start": "2026-10-12T07:03:01+02:00",
+      "end": "2026-10-12T07:06:38+02:00",
+      "exit": 0,
+      "durationS": 217,
+      "samples": 43,
+      "power": {
+        "acThroughout": true,
+        "sources": [
+          "AC"
+        ],
+        "batteryPercentMin": 100
+      },
+      "cpuLoadPercent": {
+        "before": 5.7,
+        "median": 21.2,
+        "max": 32.4
+      },
+      "freeMemGiB": {
+        "before": 12.3,
+        "min": 11.1
+      }
+    },
+    {
+      "step": "CLI smoke",
+      "log": "benchmarks/2.8.0/cli-smoke.log",
+      "start": "2026-10-12T07:06:49+02:00",
+      "end": "2026-10-12T07:06:55+02:00",
+      "exit": 0,
+      "durationS": 6,
+      "samples": 1,
+      "power": {
+        "acThroughout": true,
+        "sources": [
+          "AC"
+        ],
+        "batteryPercentMin": 100
+      },
+      "cpuLoadPercent": {
+        "before": 11.8,
+        "median": 9.5,
+        "max": 9.5
+      },
+      "freeMemGiB": {
+        "before": 12.4,
+        "min": 12.2
+      }
+    },
+    {
+      "step": "Persistence smoke",
+      "log": "benchmarks/2.8.0/persistence-smoke.log",
+      "start": "2026-10-12T07:07:05+02:00",
+      "end": "2026-10-12T07:07:15+02:00",
+      "exit": 0,
+      "durationS": 10,
+      "samples": 2,
+      "power": {
+        "acThroughout": true,
+        "sources": [
+          "AC"
+        ],
+        "batteryPercentMin": 100
+      },
+      "cpuLoadPercent": {
+        "before": 5.1,
+        "median": 10.1,
+        "max": 14.3
+      },
+      "freeMemGiB": {
+        "before": 12.4,
+        "min": 12.3
+      }
+    },
+    {
+      "step": "Provider corpus benchmark",
+      "log": "benchmarks/2.8.0/benchmark.log",
+      "start": "2026-10-12T07:07:25+02:00",
+      "end": "2026-10-12T07:07:49+02:00",
+      "exit": 0,
+      "durationS": 24,
+      "samples": 5,
+      "power": {
+        "acThroughout": true,
+        "sources": [
+          "AC"
+        ],
+        "batteryPercentMin": 100
+      },
+      "cpuLoadPercent": {
+        "before": 7.2,
+        "median": 14.3,
+        "max": 17.2
+      },
+      "freeMemGiB": {
+        "before": 12.4,
+        "min": 12.2
+      }
+    },
+    {
+      "step": "Pipeline self-test",
+      "log": "benchmarks/2.8.0/pipeline.log",
+      "start": "2026-10-12T07:07:59+02:00",
+      "end": "2026-10-12T07:08:12+02:00",
+      "exit": 0,
+      "durationS": 13,
+      "samples": 2,
+      "power": {
+        "acThroughout": true,
+        "sources": [
+          "AC"
+        ],
+        "batteryPercentMin": 100
+      },
+      "cpuLoadPercent": {
+        "before": 5.9,
+        "median": 19.5,
+        "max": 23.2
+      },
+      "freeMemGiB": {
+        "before": 12.3,
+        "min": 11.6
+      }
+    },
+    {
+      "step": "Legacy 2.4 corpora, 2.8.0",
+      "log": "benchmarks/2.8.0/final-legacy-evaluation.log",
+      "start": "2026-10-12T07:08:22+02:00",
+      "end": "2026-10-12T07:08:25+02:00",
+      "exit": 0,
+      "durationS": 3,
+      "samples": 1,
+      "power": {
+        "acThroughout": true,
+        "sources": [
+          "AC"
+        ],
+        "batteryPercentMin": 100
+      },
+      "cpuLoadPercent": {
+        "before": 10.3,
+        "median": 9.5,
+        "max": 9.5
+      },
+      "freeMemGiB": {
+        "before": 12.4,
+        "min": 12.2
+      }
+    },
+    {
+      "step": "Dynamic application, 2.8.0",
+      "log": "benchmarks/2.8.0/final-acquisition.log",
+      "start": "2026-10-12T07:08:35+02:00",
+      "end": "2026-10-12T07:08:42+02:00",
+      "exit": 0,
+      "durationS": 7,
+      "samples": 1,
+      "power": {
+        "acThroughout": true,
+        "sources": [
+          "AC"
+        ],
+        "batteryPercentMin": 100
+      },
+      "cpuLoadPercent": {
+        "before": 9,
+        "median": 14.1,
+        "max": 14.1
+      },
+      "freeMemGiB": {
+        "before": 12.1,
+        "min": 11.5
+      }
+    },
+    {
+      "step": "Frozen 2.5 corpus, legacy settings (3 repetitions)",
+      "log": "benchmarks/2.8.0/evaluation.log",
+      "start": "2026-10-12T07:08:52+02:00",
+      "end": "2026-10-12T07:14:30+02:00",
+      "exit": 0,
+      "durationS": 338,
+      "samples": 67,
+      "power": {
+        "acThroughout": true,
+        "sources": [
+          "AC"
+        ],
+        "batteryPercentMin": 100
+      },
+      "cpuLoadPercent": {
+        "before": 8.4,
+        "median": 15,
+        "max": 36.3
+      },
+      "freeMemGiB": {
+        "before": 12.3,
+        "min": 10.9
+      }
+    },
+    {
+      "step": "Matrix spot check (6 reused 2.7.0 rows)",
+      "log": "benchmarks/2.8.0/matrix-spot.log",
+      "start": "2026-10-12T07:14:41+02:00",
+      "end": "2026-10-12T07:24:54+02:00",
+      "exit": 0,
+      "durationS": 613,
+      "samples": 122,
+      "power": {
+        "acThroughout": true,
+        "sources": [
+          "AC"
+        ],
+        "batteryPercentMin": 100
+      },
+      "cpuLoadPercent": {
+        "before": 7.5,
+        "median": 24.5,
+        "max": 53.4
+      },
+      "freeMemGiB": {
+        "before": 11.7,
+        "min": 10.1
+      }
+    },
+    {
+      "step": "Ready-option matrix, 2.7.0 side (full rerun after spot check)",
+      "log": "benchmarks/2.8.0/matrix-prev.log",
+      "start": "2026-10-12T07:25:04+02:00",
+      "end": "2026-10-12T08:25:44+02:00",
+      "exit": 0,
+      "durationS": 3640,
+      "samples": 719,
+      "power": {
+        "acThroughout": true,
+        "sources": [
+          "AC"
+        ],
+        "batteryPercentMin": 100
+      },
+      "cpuLoadPercent": {
+        "before": 10.5,
+        "median": 20.4,
+        "max": 100
+      },
+      "freeMemGiB": {
+        "before": 11.5,
+        "min": 3.2
+      }
+    },
+    {
+      "step": "Ready-option matrix, 2.7.0 rows measured under outside load, rerun",
+      "log": "benchmarks/2.8.0/matrix-prev-disturbed.log",
+      "start": "2026-10-12T08:25:44+02:00",
+      "end": "2026-10-12T08:42:37+02:00",
+      "exit": 0,
+      "durationS": 1013,
+      "samples": 199,
+      "power": {
+        "acThroughout": true,
+        "sources": [
+          "AC"
+        ],
+        "batteryPercentMin": 100
+      },
+      "cpuLoadPercent": {
+        "before": null,
+        "median": 13.4,
+        "max": 33.2
+      },
+      "freeMemGiB": {
+        "before": null,
+        "min": 14.7
+      }
+    },
+    {
+      "step": "Ready-option matrix",
+      "log": "benchmarks/2.8.0/matrix.log",
+      "start": "2026-10-12T08:42:37+02:00",
+      "end": "2026-10-12T09:46:49+02:00",
+      "exit": 0,
+      "durationS": 3852,
+      "samples": 765,
+      "power": {
+        "acThroughout": true,
+        "sources": [
+          "AC"
+        ],
+        "batteryPercentMin": 99
+      },
+      "cpuLoadPercent": {
+        "before": null,
+        "median": 10.2,
+        "max": 42.4
+      },
+      "freeMemGiB": {
+        "before": null,
+        "min": 11
+      }
+    },
+    {
+      "step": "External corpus pair 1 (2-wide, under outside load; measured again below): 2:standard:low-impact:discovery 3:deep:low-impact:discovery",
+      "log": "working log outside the project: ext-pair-1.log",
+      "start": "2026-10-12T09:46:59+02:00",
+      "end": "2026-10-12T10:18:40+02:00",
+      "exit": 0,
+      "durationS": 1901,
+      "samples": 374,
+      "power": {
+        "acThroughout": false,
+        "sources": [
+          "AC",
+          "battery"
+        ],
+        "batteryPercentMin": 86
+      },
+      "cpuLoadPercent": {
+        "before": 7.5,
+        "median": 17.1,
+        "max": 100
+      },
+      "freeMemGiB": {
+        "before": 13.1,
+        "min": 5.7
+      }
+    },
+    {
+      "step": "Focused bundle mirror check (quiet machine; mirror-check.json)",
+      "log": "working log outside the project: mirror/run2.log",
+      "start": "2026-10-12T10:32:52+02:00",
+      "end": "2026-10-12T10:34:54+02:00",
+      "exit": 0,
+      "durationS": 122,
+      "samples": 24,
+      "power": {
+        "acThroughout": true,
+        "sources": [
+          "AC"
+        ],
+        "batteryPercentMin": 92
+      },
+      "cpuLoadPercent": {
+        "before": 6.5,
+        "median": 16.7,
+        "max": 35.7
+      },
+      "freeMemGiB": {
+        "before": 13.9,
+        "min": 12.3
+      }
+    },
+    {
+      "step": "External corpus pair 1 (2-wide, quiet machine): 2:standard:low-impact:discovery 3:deep:low-impact:discovery",
+      "log": "working log outside the project: ext-pair-1.log",
+      "start": "2026-10-12T10:35:04+02:00",
+      "end": "2026-10-12T11:05:45+02:00",
+      "exit": 0,
+      "durationS": 1841,
+      "samples": 365,
+      "power": {
+        "acThroughout": true,
+        "sources": [
+          "AC"
+        ],
+        "batteryPercentMin": 92
+      },
+      "cpuLoadPercent": {
+        "before": 13.8,
+        "median": 6.4,
+        "max": 45.2
+      },
+      "freeMemGiB": {
+        "before": 12.5,
+        "min": 10
+      }
+    },
+    {
+      "step": "External corpus pair 2 (2-wide, quiet machine): 3:deep:low-impact:acquisition 3:deep:normal:acquisition",
+      "log": "working log outside the project: ext-pair-2.log",
+      "start": "2026-10-12T11:05:55+02:00",
+      "end": "2026-10-12T11:34:24+02:00",
+      "exit": 0,
+      "durationS": 1709,
+      "samples": 339,
+      "power": {
+        "acThroughout": true,
+        "sources": [
+          "AC"
+        ],
+        "batteryPercentMin": 98
+      },
+      "cpuLoadPercent": {
+        "before": 9.2,
+        "median": 16.6,
+        "max": 36.5
+      },
+      "freeMemGiB": {
+        "before": 12.1,
+        "min": 10.3
+      }
+    },
+    {
+      "step": "External corpus pair 3 (2-wide, quiet machine): 2:standard:low-impact:acquisition 1:quick:low-impact:acquisition",
+      "log": "working log outside the project: ext-pair-3.log",
+      "start": "2026-10-12T11:34:35+02:00",
+      "end": "2026-10-12T11:55:55+02:00",
+      "exit": 0,
+      "durationS": 1280,
+      "samples": 254,
+      "power": {
+        "acThroughout": true,
+        "sources": [
+          "AC"
+        ],
+        "batteryPercentMin": 100
+      },
+      "cpuLoadPercent": {
+        "before": 6.2,
+        "median": 7.4,
+        "max": 26.8
+      },
+      "freeMemGiB": {
+        "before": 15.2,
+        "min": 12.6
+      }
+    },
+    {
+      "step": "External corpus pair 4 (2-wide, quiet machine): 1:quick:low-impact:discovery 2:standard:normal:acquisition",
+      "log": "working log outside the project: ext-pair-4.log",
+      "start": "2026-10-12T11:56:05+02:00",
+      "end": "2026-10-12T12:11:47+02:00",
+      "exit": 0,
+      "durationS": 942,
+      "samples": 187,
+      "power": {
+        "acThroughout": true,
+        "sources": [
+          "AC"
+        ],
+        "batteryPercentMin": 100
+      },
+      "cpuLoadPercent": {
+        "before": 10.8,
+        "median": 16.3,
+        "max": 33.2
+      },
+      "freeMemGiB": {
+        "before": 13.4,
+        "min": 11.3
+      }
+    },
+    {
+      "step": "External corpus pair 5 (2-wide, quiet machine): 2:standard:normal:discovery 3:deep:normal:discovery",
+      "log": "working log outside the project: ext-pair-5.log",
+      "start": "2026-10-12T12:11:58+02:00",
+      "end": "2026-10-12T12:23:53+02:00",
+      "exit": 0,
+      "durationS": 715,
+      "samples": 142,
+      "power": {
+        "acThroughout": true,
+        "sources": [
+          "AC"
+        ],
+        "batteryPercentMin": 100
+      },
+      "cpuLoadPercent": {
+        "before": 10.9,
+        "median": 19.8,
+        "max": 54.3
+      },
+      "freeMemGiB": {
+        "before": 13.7,
+        "min": 11.9
+      }
+    },
+    {
+      "step": "External corpus pair 6 (2-wide, quiet machine): 1:quick:normal:discovery 1:quick:normal:acquisition",
+      "log": "working log outside the project: ext-pair-6.log",
+      "start": "2026-10-12T12:24:04+02:00",
+      "end": "2026-10-12T12:28:43+02:00",
+      "exit": 0,
+      "durationS": 279,
+      "samples": 55,
+      "power": {
+        "acThroughout": true,
+        "sources": [
+          "AC"
+        ],
+        "batteryPercentMin": 100
+      },
+      "cpuLoadPercent": {
+        "before": 11.1,
+        "median": 13.6,
+        "max": 27.2
+      },
+      "freeMemGiB": {
+        "before": 13.8,
+        "min": 13
+      }
+    },
+    {
+      "step": "Frozen 2.5 corpus G5 memory recheck (5 repetitions)",
+      "log": "working log outside the project: g5-recheck.log",
+      "start": "2026-10-12T12:29:25+02:00",
+      "end": "2026-10-12T12:31:07+02:00",
+      "exit": 0,
+      "durationS": 102,
+      "samples": 21,
+      "power": {
+        "acThroughout": true,
+        "sources": [
+          "AC"
+        ],
+        "batteryPercentMin": 100
+      },
+      "cpuLoadPercent": {
+        "before": 10.9,
+        "median": 22.7,
+        "max": 26.9
+      },
+      "freeMemGiB": {
+        "before": 13.7,
+        "min": 13.2
+      }
+    },
+    {
+      "step": "Screenshots (regenerated, compared with docs/screenshots)",
+      "log": "working log outside the project: shots.log",
+      "start": "2026-10-12T12:31:18+02:00",
+      "end": "2026-10-12T12:32:29+02:00",
+      "exit": 0,
+      "durationS": 71,
+      "samples": 14,
+      "power": {
+        "acThroughout": true,
+        "sources": [
+          "AC"
+        ],
+        "batteryPercentMin": 100
+      },
+      "cpuLoadPercent": {
+        "before": 14.3,
+        "median": 18,
+        "max": 26.5
+      },
+      "freeMemGiB": {
+        "before": 13.9,
+        "min": 12.6
+      }
+    },
+    {
+      "step": "Nonbrowser suite (final)",
+      "log": "benchmarks/2.8.0/final-unit.log",
+      "start": "2026-10-12T12:32:40+02:00",
+      "end": "2026-10-12T12:50:43+02:00",
+      "exit": 0,
+      "durationS": 1083,
+      "samples": 215,
+      "power": {
+        "acThroughout": true,
+        "sources": [
+          "AC"
+        ],
+        "batteryPercentMin": 100
+      },
+      "cpuLoadPercent": {
+        "before": 9.9,
+        "median": 12.6,
+        "max": 37.6
+      },
+      "freeMemGiB": {
+        "before": 13.9,
+        "min": 13.1
+      }
+    },
+    {
+      "step": "Browser suite (final)",
+      "log": "benchmarks/2.8.0/final-browser.log",
+      "start": "2026-10-12T12:50:53+02:00",
+      "end": "2026-10-12T12:57:47+02:00",
+      "exit": 0,
+      "durationS": 414,
+      "samples": 82,
+      "power": {
+        "acThroughout": true,
+        "sources": [
+          "AC"
+        ],
+        "batteryPercentMin": 100
+      },
+      "cpuLoadPercent": {
+        "before": 13.7,
+        "median": 18.4,
+        "max": 33.6
+      },
+      "freeMemGiB": {
+        "before": 13.8,
+        "min": 12.6
+      }
+    }
+  ]
+}

@@ -1,0 +1,199 @@
+{
+  "schema": "stage2-heldout/1",
+  "seed": "ExposureDesk/stage2/heldout/20261006/73",
+  "build": {
+    "version": "2.3.1-rc.1",
+    "id": "2.3.1-rc.1+1b19d40f69120ab9",
+    "sourceDigest": "1b19d40f69120ab990e89655815cd8f2a16c2dbd31046b4f4b63c84239a9bdf0"
+  },
+  "engine": "8.30.1",
+  "fixtureCount": 19,
+  "summary": {
+    "credentialTargets": 16,
+    "detected": 10,
+    "missed": [
+      "module-split",
+      "source-map-only",
+      "debugger-only",
+      "blocked-request-only",
+      "stale-exact-url",
+      "late-application-json"
+    ],
+    "negativeControls": 3,
+    "falsePositives": 0
+  },
+  "rows": [
+    {
+      "id": "alias-chain",
+      "provider": "OpenAI",
+      "mechanism": "semantic",
+      "privateExpected": true,
+      "detected": true,
+      "falsePositives": 0,
+      "elapsedMs": 1374
+    },
+    {
+      "id": "template-array",
+      "provider": "Stripe",
+      "mechanism": "semantic",
+      "privateExpected": true,
+      "detected": true,
+      "falsePositives": 0,
+      "elapsedMs": 1335
+    },
+    {
+      "id": "encoded-engine",
+      "provider": "snyk",
+      "mechanism": "decoded-engine",
+      "privateExpected": true,
+      "detected": true,
+      "falsePositives": 0,
+      "elapsedMs": 1268
+    },
+    {
+      "id": "literal-engine",
+      "provider": "snyk",
+      "mechanism": "engine",
+      "privateExpected": true,
+      "detected": true,
+      "falsePositives": 0,
+      "elapsedMs": 673
+    },
+    {
+      "id": "large-end",
+      "provider": "OpenAI",
+      "mechanism": "chunked-text",
+      "privateExpected": true,
+      "detected": true,
+      "falsePositives": 0,
+      "elapsedMs": 1261
+    },
+    {
+      "id": "chunk-boundary",
+      "provider": "OpenAI",
+      "mechanism": "chunked-text",
+      "privateExpected": true,
+      "detected": true,
+      "falsePositives": 0,
+      "elapsedMs": 696
+    },
+    {
+      "id": "late-decoding",
+      "provider": "OpenAI",
+      "mechanism": "decoded-priority",
+      "privateExpected": true,
+      "detected": true,
+      "falsePositives": 0,
+      "elapsedMs": 2058
+    },
+    {
+      "id": "malformed",
+      "provider": "OpenAI",
+      "mechanism": "parser-isolation",
+      "privateExpected": true,
+      "detected": true,
+      "falsePositives": 0,
+      "elapsedMs": 745
+    },
+    {
+      "id": "azure-connection",
+      "provider": "Azure",
+      "mechanism": "context",
+      "privateExpected": true,
+      "detected": true,
+      "falsePositives": 0,
+      "elapsedMs": 1404
+    },
+    {
+      "id": "sas-fragment",
+      "provider": "Azure",
+      "mechanism": "capability",
+      "privateExpected": true,
+      "detected": true,
+      "falsePositives": 0,
+      "elapsedMs": 1392
+    },
+    {
+      "id": "public-decoy",
+      "provider": "Stripe",
+      "mechanism": "negative",
+      "privateExpected": false,
+      "detected": false,
+      "falsePositives": 0,
+      "elapsedMs": 785
+    },
+    {
+      "id": "clean",
+      "provider": "none",
+      "mechanism": "negative",
+      "privateExpected": false,
+      "detected": false,
+      "falsePositives": 0,
+      "elapsedMs": 2805
+    },
+    {
+      "id": "unknown-expression",
+      "provider": "none",
+      "mechanism": "negative",
+      "privateExpected": false,
+      "detected": false,
+      "falsePositives": 0,
+      "elapsedMs": 723
+    },
+    {
+      "id": "module-split",
+      "provider": "OpenAI",
+      "mechanism": "cross-module",
+      "privateExpected": true,
+      "detected": false,
+      "falsePositives": 0
+    },
+    {
+      "id": "source-map-only",
+      "provider": "OpenAI",
+      "mechanism": "source-map",
+      "privateExpected": true,
+      "detected": false,
+      "falsePositives": 0
+    },
+    {
+      "id": "debugger-only",
+      "provider": "OpenAI",
+      "mechanism": "debugger",
+      "privateExpected": true,
+      "detected": false,
+      "falsePositives": 0
+    },
+    {
+      "id": "blocked-request-only",
+      "provider": "OpenAI",
+      "mechanism": "browser-request",
+      "privateExpected": true,
+      "detected": false,
+      "falsePositives": 0
+    },
+    {
+      "id": "stale-exact-url",
+      "provider": "OpenAI",
+      "mechanism": "stale-asset",
+      "privateExpected": true,
+      "detected": false,
+      "falsePositives": 0
+    },
+    {
+      "id": "late-application-json",
+      "provider": "OpenAI",
+      "mechanism": "browser-json",
+      "privateExpected": true,
+      "detected": false,
+      "falsePositives": 0
+    }
+  ],
+  "elapsedMs": 20258,
+  "rssStart": 138043392,
+  "rssEnd": 125382656,
+  "limits": "Fixed synthetic held-out acceptance cases; no universal real-world accuracy estimate. Information observations excluded from credential recall.",
+  "corpusDigest": "41b7636e922326aa05c70731a8cd1c408e6a4e44472d0af278503baca370dec8",
+  "peakNodeRssKiB": 195508,
+  "memoryMeasurement": "Node process high-water RSS including worker threads; offline engine and Chromium child RSS not included."
+}

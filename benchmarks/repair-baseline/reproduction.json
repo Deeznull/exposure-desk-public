@@ -1,0 +1,433 @@
+{
+  "at": "2026-10-06T19:22:13.809Z",
+  "build": {
+    "version": "2.3.0-rc.1",
+    "id": "2.3.0-rc.1+5fd9435d84e583c6",
+    "sourceDigest": "5fd9435d84e583c60e6c96b8727db9dca5b70ecc2a7eb83eace453768b202052"
+  },
+  "seed": "ExposureDesk/scan-repair/20261006/921",
+  "offlineEngine": false,
+  "rows": [
+    {
+      "name": "starvation",
+      "elapsedMs": 7536,
+      "accounting": {
+        "networkAttempts": 32,
+        "blockedEvents": 1,
+        "uniqueResources": 32,
+        "repeatedRequests": 0,
+        "downloadedBytes": 42132,
+        "retainedDecodedBytes": 42132,
+        "textAnalyzedBytes": 42132,
+        "intentionalSkips": 0,
+        "httpErrors": 0,
+        "coverageGaps": 519
+      },
+      "coverage": {
+        "applicationPages": {
+          "discovered": 262,
+          "downloaded": 1,
+          "analyzed": 1,
+          "successful": 1,
+          "errorResponses": 0,
+          "blocked": 1,
+          "skipped": 0,
+          "uninspected": 261
+        },
+        "javascript": {
+          "discovered": 18,
+          "downloaded": 0,
+          "analyzed": 0,
+          "successful": 0,
+          "errorResponses": 0,
+          "blocked": 0,
+          "skipped": 0,
+          "uninspected": 18
+        },
+        "jsonConfig": {
+          "discovered": 0,
+          "downloaded": 0,
+          "analyzed": 0,
+          "successful": 0,
+          "errorResponses": 0,
+          "blocked": 0,
+          "skipped": 0,
+          "uninspected": 0
+        },
+        "sourceMaps": {
+          "discovered": 1,
+          "downloaded": 1,
+          "analyzed": 1,
+          "successful": 1,
+          "errorResponses": 0,
+          "blocked": 0,
+          "skipped": 0,
+          "uninspected": 0
+        },
+        "deploymentChecks": {
+          "discovered": 0,
+          "downloaded": 0,
+          "analyzed": 0,
+          "successful": 0,
+          "errorResponses": 0,
+          "blocked": 0,
+          "skipped": 0,
+          "uninspected": 0
+        },
+        "other": {
+          "discovered": 4,
+          "downloaded": 1,
+          "analyzed": 1,
+          "successful": 1,
+          "errorResponses": 0,
+          "blocked": 0,
+          "skipped": 0,
+          "uninspected": 3
+        },
+        "browserRuntime": {
+          "discovered": 0,
+          "downloaded": 0,
+          "analyzed": 0,
+          "successful": 0,
+          "errorResponses": 0,
+          "blocked": 0,
+          "skipped": 0,
+          "uninspected": 1
+        }
+      },
+      "diagnosis": "Coverage is limited, interrupted or in progress. Review resource status and remaining checks.",
+      "analyzedJavaScript": 0,
+      "runtimePages": 0,
+      "failures": 29,
+      "timeoutGaps": 58,
+      "queryGaps": 457,
+      "credentialPaths": {
+        "http": false,
+        "browser": false
+      },
+      "information": [],
+      "dispatch": [
+        "/robots.txt",
+        "/",
+        "/sitemap.xml",
+        "/listing/0",
+        "/listing/1",
+        "/listing/2",
+        "/listing/3",
+        "/listing/4",
+        "/listing/5",
+        "/listing/6",
+        "/listing/7",
+        "/listing/8",
+        "/listing/9",
+        "/listing/10",
+        "/listing/11",
+        "/listing/12",
+        "/listing/13",
+        "/listing/14",
+        "/listing/15",
+        "/listing/16",
+        "/listing/17",
+        "/listing/18",
+        "/listing/19",
+        "/listing/20",
+        "/listing/21",
+        "/listing/22",
+        "/listing/23",
+        "/listing/24",
+        "/listing/25",
+        "/listing/26",
+        "/listing/27",
+        "/listing/28"
+      ]
+    },
+    {
+      "name": "classification",
+      "elapsedMs": 665,
+      "accounting": {
+        "networkAttempts": 12,
+        "blockedEvents": 0,
+        "uniqueResources": 12,
+        "repeatedRequests": 0,
+        "downloadedBytes": 669,
+        "retainedDecodedBytes": 669,
+        "textAnalyzedBytes": 669,
+        "intentionalSkips": 0,
+        "httpErrors": 5,
+        "coverageGaps": 0
+      },
+      "coverage": {
+        "applicationPages": {
+          "discovered": 1,
+          "downloaded": 1,
+          "analyzed": 1,
+          "successful": 1,
+          "errorResponses": 0,
+          "blocked": 0,
+          "skipped": 0,
+          "uninspected": 0
+        },
+        "javascript": {
+          "discovered": 1,
+          "downloaded": 1,
+          "analyzed": 1,
+          "successful": 1,
+          "errorResponses": 0,
+          "blocked": 0,
+          "skipped": 0,
+          "uninspected": 0
+        },
+        "jsonConfig": {
+          "discovered": 0,
+          "downloaded": 0,
+          "analyzed": 0,
+          "successful": 0,
+          "errorResponses": 0,
+          "blocked": 0,
+          "skipped": 0,
+          "uninspected": 0
+        },
+        "sourceMaps": {
+          "discovered": 9,
+          "downloaded": 9,
+          "analyzed": 9,
+          "successful": 4,
+          "errorResponses": 5,
+          "blocked": 0,
+          "skipped": 0,
+          "uninspected": 0
+        },
+        "deploymentChecks": {
+          "discovered": 0,
+          "downloaded": 0,
+          "analyzed": 0,
+          "successful": 0,
+          "errorResponses": 0,
+          "blocked": 0,
+          "skipped": 0,
+          "uninspected": 0
+        },
+        "other": {
+          "discovered": 1,
+          "downloaded": 1,
+          "analyzed": 1,
+          "successful": 1,
+          "errorResponses": 0,
+          "blocked": 0,
+          "skipped": 0,
+          "uninspected": 0
+        },
+        "browserRuntime": {
+          "discovered": 0,
+          "downloaded": 0,
+          "analyzed": 0,
+          "successful": 0,
+          "errorResponses": 0,
+          "blocked": 0,
+          "skipped": 0,
+          "uninspected": 0
+        }
+      },
+      "semantic": {
+        "modules": 1,
+        "nodes": 55,
+        "views": 1,
+        "elapsedMs": 5
+      },
+      "diagnosis": "The discovered frontier and configured checks completed within limits. This does not establish whole-site coverage or security.",
+      "analyzedJavaScript": 1,
+      "runtimePages": 0,
+      "failures": 0,
+      "timeoutGaps": 0,
+      "queryGaps": 0,
+      "credentialPaths": {
+        "http": false,
+        "browser": false
+      },
+      "information": [],
+      "dispatch": [
+        "/robots.txt",
+        "/map-workload",
+        "/sitemap.xml",
+        "/assets/maps.js",
+        "/maps/valid.map",
+        "/maps/invalid.map",
+        "/maps/fallback.map",
+        "/maps/missing0.js.map",
+        "/maps/missing1.js.map",
+        "/maps/missing2.js.map",
+        "/maps/missing3.js.map",
+        "/maps/missing4.js.map"
+      ]
+    },
+    {
+      "name": "evidence",
+      "elapsedMs": 194,
+      "accounting": {
+        "networkAttempts": 3,
+        "blockedEvents": 1,
+        "uniqueResources": 3,
+        "repeatedRequests": 0,
+        "downloadedBytes": 258,
+        "retainedDecodedBytes": 258,
+        "textAnalyzedBytes": 258,
+        "intentionalSkips": 0,
+        "httpErrors": 0,
+        "coverageGaps": 0
+      },
+      "coverage": {
+        "applicationPages": {
+          "discovered": 1,
+          "downloaded": 1,
+          "analyzed": 1,
+          "successful": 1,
+          "errorResponses": 0,
+          "blocked": 0,
+          "skipped": 0,
+          "uninspected": 0
+        },
+        "javascript": {
+          "discovered": 0,
+          "downloaded": 0,
+          "analyzed": 0,
+          "successful": 0,
+          "errorResponses": 0,
+          "blocked": 0,
+          "skipped": 0,
+          "uninspected": 0
+        },
+        "jsonConfig": {
+          "discovered": 0,
+          "downloaded": 0,
+          "analyzed": 0,
+          "successful": 0,
+          "errorResponses": 0,
+          "blocked": 0,
+          "skipped": 0,
+          "uninspected": 0
+        },
+        "sourceMaps": {
+          "discovered": 1,
+          "downloaded": 1,
+          "analyzed": 1,
+          "successful": 1,
+          "errorResponses": 0,
+          "blocked": 0,
+          "skipped": 0,
+          "uninspected": 0
+        },
+        "deploymentChecks": {
+          "discovered": 0,
+          "downloaded": 0,
+          "analyzed": 0,
+          "successful": 0,
+          "errorResponses": 0,
+          "blocked": 0,
+          "skipped": 0,
+          "uninspected": 0
+        },
+        "other": {
+          "discovered": 2,
+          "downloaded": 1,
+          "analyzed": 1,
+          "successful": 1,
+          "errorResponses": 0,
+          "blocked": 1,
+          "skipped": 0,
+          "uninspected": 0
+        },
+        "browserRuntime": {
+          "discovered": 0,
+          "downloaded": 0,
+          "analyzed": 0,
+          "successful": 0,
+          "errorResponses": 0,
+          "blocked": 0,
+          "skipped": 0,
+          "uninspected": 0
+        }
+      },
+      "semantic": {
+        "modules": 1,
+        "nodes": 14,
+        "views": 0,
+        "elapsedMs": 5
+      },
+      "diagnosis": "The discovered frontier and configured checks completed within limits. This does not establish whole-site coverage or security.",
+      "analyzedJavaScript": 0,
+      "runtimePages": 0,
+      "failures": 0,
+      "timeoutGaps": 0,
+      "queryGaps": 0,
+      "credentialPaths": {
+        "http": false,
+        "browser": false
+      },
+      "information": [
+        {
+          "rule": "public-storage-or-database-endpoint",
+          "remediation": "Confirm whether public sources/configuration are intended; disable production source maps or remove stale files if unnecessary.",
+          "occurrences": [
+            {
+              "url": "http://127.0.0.1:61751/evidence",
+              "line": 1,
+              "column": 1,
+              "byteOffset": 0,
+              "chain": [],
+              "transformations": [],
+              "excerpt": "",
+              "evidence": "Unauthenticated HTTP response",
+              "coordinates": "generated",
+              "byteOffsetEncoding": "utf-8-decoded-text",
+              "exposure": "public-response"
+            }
+          ]
+        }
+      ],
+      "dispatch": [
+        "/robots.txt",
+        "/evidence",
+        "/sitemap.xml"
+      ]
+    },
+    {
+      "name": "endpoint-evidence",
+      "finding": {
+        "id": "1f48c2d8eb61633dfc19b8b69f4f99d4",
+        "fingerprint": "1f48c2d8eb61633dfc19b8b69f4f99d4",
+        "category": "information",
+        "provider": "Website",
+        "rule": "public-storage-or-database-endpoint",
+        "severity": "info",
+        "confidence": "high",
+        "reasons": [
+          "Public storage/database endpoint reference without observed credential material. Accessibility, privileges and sensitive contents are unverified."
+        ],
+        "masked": "No credential inferred",
+        "validity": "unverified",
+        "impact": "Public implementation or configuration information; no private credential inferred.",
+        "remediation": "Confirm whether public sources/configuration are intended; disable production source maps or remove stale files if unnecessary.",
+        "occurrences": [
+          {
+            "url": "https://fixture.invalid/",
+            "line": 1,
+            "column": 1,
+            "byteOffset": 0,
+            "chain": [],
+            "transformations": [],
+            "excerpt": "",
+            "evidence": "Unauthenticated HTTP response",
+            "coordinates": "generated",
+            "byteOffsetEncoding": "utf-8-decoded-text",
+            "exposure": "public-response"
+          }
+        ],
+        "environment": "unknown",
+        "exposureGroup": "other",
+        "financialPriority": "none"
+      }
+    }
+  ],
+  "peakNodeRssKiB": 193436,
+  "limits": "Local deterministic workload-shape recreations, not replay of missing target response bodies. Baseline deliberately unavailable engine isolates scheduling; actual pinned engine/browser exercised separately."
+}

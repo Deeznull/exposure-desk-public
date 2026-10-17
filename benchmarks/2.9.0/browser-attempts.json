@@ -1,0 +1,155 @@
+{
+  "schema": "exposure-browser-attempts/1",
+  "build": "2.9.0+b251a3ea63449d85",
+  "note": "Every browser-suite run, and every run of a browser test file alone, on the 2.9.0 release build digest on the Windows x64 measurement computer, in order, with local fixtures only; final-browser.log is the run used by release-summary. The sanity runs ran while an unrelated CPU-bound job outside the suite runner saturated the computer; the failing tests were rerun alone, and the final suites ran on a quiet machine. \"nonbrowser\" lists the nonbrowser suite runs the same way. \"linux\" lists the browser jobs of the Linux CI runs on this build digest (GitHub-hosted Ubuntu runners; pass/fail only; linux-ci.json).",
+  "runs": [
+    {
+      "run": "full browser suite, sanity run before the measurements, under the CPU load of an unrelated job outside the suite runner (16 CPU-bound processes; CPU at or above 95 % for most of the run, free memory down to about 5 GiB; machine/samples in machine-state.json); both failures: Chrome did not confirm its exit within the 3 s cleanup bound (browser-process-exit gap)",
+      "log": "<local path>",
+      "command": "node <local path> browser (node scripts/test.mjs --browser)",
+      "tests": 46,
+      "pass": 44,
+      "fail": 2,
+      "skipped": 0,
+      "cancelled": 0,
+      "durationS": 914.6,
+      "failing": [
+        "a real-browser loopback scan without other gaps ends complete; Chrome service connections stay denied, listed and informational",
+        "scripts parsed after the page inspection has ended are not captured, so no capture is left pending when the scan ends"
+      ]
+    },
+    {
+      "run": "chrome-background-browser.test.js alone, focused rerun after the sanity run",
+      "log": "<local path>",
+      "command": "node <local path> browser -- node --test --test-isolation=none --test-concurrency=1 --test-timeout=600000 dist/test/chrome-background-browser.test.js",
+      "tests": 2,
+      "pass": 2,
+      "fail": 0,
+      "skipped": 0,
+      "cancelled": 0,
+      "durationS": 44.4,
+      "failing": []
+    },
+    {
+      "run": "completeness-browser.test.js alone, first focused rerun, again under the CPU load of an unrelated job outside the suite runner (16 CPU-bound processes; CPU at or above 95 % for most of the run, free memory down to about 5 GiB; machine/samples in machine-state.json); the same browser-process-exit gap",
+      "log": "<local path>",
+      "command": "node <local path> browser -- node --test --test-isolation=none --test-concurrency=1 --test-timeout=600000 dist/test/completeness-browser.test.js",
+      "tests": 4,
+      "pass": 2,
+      "fail": 2,
+      "skipped": 0,
+      "cancelled": 0,
+      "durationS": 77.4,
+      "failing": [
+        "scripts parsed after the page inspection has ended are not captured, so no capture is left pending when the scan ends",
+        "requests a page starts after its inspection has ended are aborted and never sent, so no analysis is left pending when the scan ends"
+      ]
+    },
+    {
+      "run": "completeness-browser.test.js alone, second focused rerun after a quiet-machine gate",
+      "log": "<local path>",
+      "command": "node <local path> browser -- node --test --test-isolation=none --test-concurrency=1 --test-timeout=600000 dist/test/completeness-browser.test.js",
+      "tests": 4,
+      "pass": 4,
+      "fail": 0,
+      "skipped": 0,
+      "cancelled": 0,
+      "durationS": 20.9,
+      "failing": []
+    },
+    {
+      "run": "completeness-browser.test.js alone, third focused rerun after a quiet-machine gate",
+      "log": "<local path>",
+      "command": "node <local path> browser -- node --test --test-isolation=none --test-concurrency=1 --test-timeout=600000 dist/test/completeness-browser.test.js",
+      "tests": 4,
+      "pass": 4,
+      "fail": 0,
+      "skipped": 0,
+      "cancelled": 0,
+      "durationS": 20.2,
+      "failing": []
+    },
+    {
+      "run": "full browser suite, final run after the measurements on a quiet machine",
+      "log": "benchmarks/2.9.0/final-browser.log",
+      "command": "node <local path> browser (node scripts/test.mjs --browser)",
+      "tests": 46,
+      "pass": 46,
+      "fail": 0,
+      "skipped": 0,
+      "cancelled": 0,
+      "durationS": 467,
+      "failing": []
+    }
+  ],
+  "nonbrowser": [
+    {
+      "run": "full nonbrowser suite, sanity run before the measurements, under the CPU load of an unrelated job outside the suite runner (16 CPU-bound processes; CPU at or above 95 % for most of the run, free memory down to about 5 GiB; machine/samples in machine-state.json); the failure: an analysis turn hit its analysis-turn limit (AnalysisDeferred analysis-turn-limit)",
+      "log": "<local path>",
+      "command": "node <local path> nonbrowser (node scripts/test.mjs)",
+      "tests": 761,
+      "pass": 760,
+      "fail": 1,
+      "skipped": 0,
+      "cancelled": 0,
+      "durationS": 1863.4,
+      "failing": [
+        "mass mode: an analysis turn that waits longer than its turn, website and scan limits for an engine lane other targets hold still completes and finds the key"
+      ]
+    },
+    {
+      "run": "mass-scale.test.js alone, focused rerun after the sanity run",
+      "log": "<local path>",
+      "command": "node <local path> nonbrowser -- node --test --test-isolation=none --test-concurrency=1 --test-timeout=600000 dist/test/mass-scale.test.js",
+      "tests": 32,
+      "pass": 32,
+      "fail": 0,
+      "skipped": 0,
+      "cancelled": 0,
+      "durationS": 233.4,
+      "failing": []
+    },
+    {
+      "run": "full nonbrowser suite, final run after the measurements on a quiet machine",
+      "log": "benchmarks/2.9.0/final-unit.log",
+      "command": "node <local path> nonbrowser (node scripts/test.mjs)",
+      "tests": 761,
+      "pass": 761,
+      "fail": 0,
+      "skipped": 0,
+      "cancelled": 0,
+      "durationS": 1111.7,
+      "failing": []
+    }
+  ],
+  "linux": [
+    {
+      "runId": "38638887840",
+      "commit": "3b1628ad960d6032c2d7d81a3cafa34721230a70",
+      "role": "measurement run on the version-freeze commit (same build digest)",
+      "job": "Tests (browser)",
+      "jobId": 116109030889,
+      "conclusion": "success",
+      "tests": 46,
+      "pass": 46,
+      "fail": 0,
+      "skipped": 0,
+      "cancelled": 0,
+      "todo": 0
+    },
+    {
+      "runId": "38684371332",
+      "commit": "a6630b5151c0c9766ebbd24eeb97d5b54a19c17b",
+      "role": "release run",
+      "job": "Tests (browser)",
+      "jobId": 116255772248,
+      "conclusion": "success",
+      "tests": 46,
+      "pass": 46,
+      "fail": 0,
+      "skipped": 0,
+      "cancelled": 0,
+      "todo": 0
+    }
+  ]
+}

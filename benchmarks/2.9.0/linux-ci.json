@@ -1,0 +1,110 @@
+{
+  "schema": "exposure-linux-ci/1",
+  "workflow": "Linux",
+  "runId": "38684371332",
+  "url": "https://github.com/Deeznull/exposure-desk/actions/runs/38684371332",
+  "commit": "a6630b5151c0c9766ebbd24eeb97d5b54a19c17b",
+  "branch": "v3-w9-integ",
+  "event": "workflow_dispatch",
+  "attempt": 1,
+  "conclusion": "failure",
+  "createdAt": "2026-10-15T04:59:37Z",
+  "updatedAt": "2026-10-15T05:18:48Z",
+  "runner": "GitHub-hosted ubuntu-24.04 runners (see linux.yml)",
+  "role": "release run",
+  "jobs": {
+    "nonbrowser": {
+      "job": "Tests (nonbrowser)",
+      "jobId": 116255772157,
+      "conclusion": "success",
+      "tests": 761,
+      "pass": 760,
+      "fail": 0,
+      "skipped": 1,
+      "cancelled": 0,
+      "todo": 0
+    },
+    "browser": {
+      "job": "Tests (browser)",
+      "jobId": 116255772248,
+      "conclusion": "success",
+      "tests": 46,
+      "pass": 46,
+      "fail": 0,
+      "skipped": 0,
+      "cancelled": 0,
+      "todo": 0
+    },
+    "package": {
+      "job": "Linux x64 package",
+      "jobId": 116255772049,
+      "conclusion": "failure",
+      "built": true,
+      "checksumFileMatches": true,
+      "packagedSmoke": "success",
+      "upload": "failed: Artifact storage quota has been hit",
+      "note": "The package was built from the records commit (8048 files, 266136232 bytes, sha256 cc1d2e11d7ef198522e094418c175242d381af8f0c97c21a2a2a8ff244b73073; build 2.9.0+b251a3ea63449d85), passed sha256sum --check and its packaged smoke test (13/13 checks, analysis processes on the bundled runtime, none left running); only the artifact upload step failed, because the repository artifact storage quota is full. The package is therefore not in artifacts/ (BLOCKED)."
+    },
+    "container": {
+      "job": "Container image",
+      "jobId": 116255772225,
+      "conclusion": "success"
+    }
+  },
+  "artifact": null,
+  "measurementRuns": [
+    {
+      "runId": "38638887840",
+      "url": "https://github.com/Deeznull/exposure-desk/actions/runs/38638887840",
+      "commit": "3b1628ad960d6032c2d7d81a3cafa34721230a70",
+      "branch": "v3-w9-integ",
+      "event": "workflow_dispatch",
+      "attempt": 1,
+      "conclusion": "failure",
+      "createdAt": "2026-10-14T21:15:54Z",
+      "updatedAt": "2026-10-14T21:39:48Z",
+      "jobs": {
+        "nonbrowser": {
+          "job": "Tests (nonbrowser)",
+          "jobId": 116109030966,
+          "conclusion": "success",
+          "tests": 761,
+          "pass": 760,
+          "fail": 0,
+          "skipped": 1,
+          "cancelled": 0,
+          "todo": 0
+        },
+        "browser": {
+          "job": "Tests (browser)",
+          "jobId": 116109030889,
+          "conclusion": "success",
+          "tests": 46,
+          "pass": 46,
+          "fail": 0,
+          "skipped": 0,
+          "cancelled": 0,
+          "todo": 0
+        },
+        "package": {
+          "job": "Linux x64 package",
+          "jobId": 116109030458,
+          "conclusion": "failure",
+          "built": true,
+          "checksumFileMatches": true,
+          "packagedSmoke": "success",
+          "upload": "failed: Artifact storage quota has been hit",
+          "note": "The package was built (8020 files, 266033884 bytes, sha256 629046c94a868e6ba5f0fb113f0c65d7e7f5a70921922fb53958ac5cc95f864f), passed sha256sum --check and its packaged smoke test; only the artifact upload step failed, because the repository artifact storage quota is full."
+        },
+        "container": {
+          "job": "Container image",
+          "jobId": 116109030839,
+          "conclusion": "success"
+        }
+      },
+      "note": "Measurement run on the version-freeze commit (build digest b251a3ea63449d85, the release build). The workflow conclusion is failure only because the artifact upload hit the storage quota."
+    }
+  ],
+  "measurementNote": "Run 38638887840 on the version-freeze commit 3b1628a has the same build digest as the release; its suites and package results are kept here as the measurement run.",
+  "note": "Release run on the records commit a6630b5 (build digest b251a3ea63449d85, equal to the release build). One dispatch; the workflow conclusion is failure only because the artifact upload hit the repository storage quota, so no Linux package could be downloaded. Old artifacts were not deleted (brief); once storage is freed, one dispatch of linux.yml on the release commit builds the package for download."
+}

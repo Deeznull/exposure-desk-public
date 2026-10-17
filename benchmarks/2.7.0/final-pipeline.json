@@ -1,0 +1,1805 @@
+{
+  "schema": "exposure-pipeline-self-test/1",
+  "startedAt": "2026-10-10T11:52:42.028Z",
+  "endedAt": "2026-10-10T11:53:06.844Z",
+  "build": {
+    "version": "2.7.0",
+    "id": "2.7.0+3772c88c496661b5",
+    "sourceDigest": "3772c88c496661b5bb04bab02b52500cae9985367c118ac9ac70904ebf5806f4"
+  },
+  "engines": {
+    "websiteRules": "website/2.7.0",
+    "gitleaks": "8.30.1",
+    "ruleDigest": "e163e53b9e7e8a8511e77271e2b323ed057759542a6d988258afe3a1fa329caf",
+    "companyRules": "none"
+  },
+  "status": "passed",
+  "checks": {
+    "offlineEngine": true,
+    "browserExecuted": true,
+    "cookieSemantics": true,
+    "freshStorage": true,
+    "noGetterCalls": true,
+    "outboundIsolation": true,
+    "baseHref": true,
+    "errorBodyAnalyzed": true,
+    "soft404Rejected": true,
+    "configConfirmed": true,
+    "scopeExclusionVisible": true,
+    "blockedEncodedEngineRequest": true
+  },
+  "summary": {
+    "planted": 17,
+    "found": 17,
+    "missed": 0
+  },
+  "results": [
+    {
+      "id": "html-comment",
+      "kind": "HTML",
+      "found": true,
+      "category": "private-credential",
+      "triage": "direct-leak",
+      "rule": "github",
+      "detectors": [
+        "github"
+      ],
+      "locations": [
+        {
+          "path": "/",
+          "line": 1,
+          "transformations": [],
+          "evidence": "Unauthenticated HTTP response"
+        },
+        {
+          "path": "/",
+          "sourceLabel": "rendered DOM snapshot",
+          "line": 1,
+          "transformations": [],
+          "evidence": "Rendered unauthenticated page"
+        },
+        {
+          "path": "/fcedadc464ca4bb8b5b0dd5c",
+          "line": 1,
+          "transformations": [],
+          "evidence": "Unauthenticated HTTP response"
+        },
+        {
+          "path": "/5ae3b790186e4118b0d73384",
+          "line": 1,
+          "transformations": [],
+          "evidence": "Unauthenticated HTTP response"
+        },
+        {
+          "path": "/.env",
+          "line": 1,
+          "transformations": [],
+          "evidence": "Unauthenticated HTTP response"
+        }
+      ]
+    },
+    {
+      "id": "base-login-linked-script",
+      "kind": "JavaScript",
+      "found": true,
+      "category": "private-credential",
+      "triage": "direct-leak",
+      "rule": "openai",
+      "detectors": [
+        "openai"
+      ],
+      "locations": [
+        {
+          "path": "/assets/entry.js",
+          "line": 1,
+          "transformations": [],
+          "evidence": "Unauthenticated HTTP response"
+        },
+        {
+          "path": "/",
+          "sourceLabel": "page debugger script 24 (reported source URL; attribution unverified)",
+          "line": 1,
+          "transformations": [],
+          "evidence": "Debugger captured code during isolated anonymous loading; local runtime evidence"
+        }
+      ]
+    },
+    {
+      "id": "lazy-module",
+      "kind": "JavaScript",
+      "found": true,
+      "category": "private-credential",
+      "triage": "direct-leak",
+      "rule": "stripe-secret",
+      "detectors": [
+        "stripe-secret"
+      ],
+      "locations": [
+        {
+          "path": "/assets/lazy.js",
+          "line": 1,
+          "transformations": [],
+          "evidence": "Unauthenticated HTTP response"
+        },
+        {
+          "path": "/",
+          "sourceLabel": "page debugger script 23 (reported source URL; attribution unverified)",
+          "line": 1,
+          "transformations": [],
+          "evidence": "Debugger captured code during isolated anonymous loading; local runtime evidence"
+        }
+      ]
+    },
+    {
+      "id": "json-response",
+      "kind": "JSON",
+      "found": true,
+      "category": "private-credential",
+      "triage": "direct-leak",
+      "rule": "supabase-secret",
+      "detectors": [
+        "supabase-secret"
+      ],
+      "locations": [
+        {
+          "path": "/api/json",
+          "line": 1,
+          "transformations": [],
+          "evidence": "Response during unauthenticated browser loading"
+        }
+      ]
+    },
+    {
+      "id": "response-header",
+      "kind": "headers",
+      "found": true,
+      "category": "private-credential",
+      "triage": "direct-leak",
+      "rule": "sendgrid",
+      "detectors": [
+        "sendgrid"
+      ],
+      "locations": [
+        {
+          "path": "/headers",
+          "line": 1,
+          "transformations": [],
+          "evidence": "Unauthenticated response headers"
+        }
+      ]
+    },
+    {
+      "id": "virtual-map-source",
+      "kind": "embedded source",
+      "found": true,
+      "category": "private-credential",
+      "triage": "direct-leak",
+      "rule": "huggingface",
+      "detectors": [
+        "huggingface"
+      ],
+      "locations": [
+        {
+          "path": "/assets/entry.js.map",
+          "line": 1,
+          "transformations": [],
+          "evidence": "Unauthenticated HTTP response"
+        },
+        {
+          "path": "/assets/entry.js.map",
+          "line": 1,
+          "transformations": [
+            "JavaScript string-escape decoding"
+          ],
+          "evidence": "Unauthenticated HTTP response"
+        },
+        {
+          "path": "/assets/entry.js.map",
+          "sourceLabel": "webpack://virtual/config.ts",
+          "line": 1,
+          "transformations": [],
+          "evidence": "Source embedded in publicly reachable source map"
+        }
+      ]
+    },
+    {
+      "id": "403-error-response",
+      "kind": "error body",
+      "found": true,
+      "category": "private-credential",
+      "triage": "direct-leak",
+      "rule": "provider-context:anthropic",
+      "detectors": [
+        "provider-context:anthropic"
+      ],
+      "locations": [
+        {
+          "path": "/error",
+          "line": 1,
+          "transformations": [],
+          "evidence": "Bounded HTTP 403 error response; successful application content was unavailable"
+        }
+      ]
+    },
+    {
+      "id": "gzip-response",
+      "kind": "compression",
+      "found": true,
+      "category": "private-credential",
+      "triage": "direct-leak",
+      "rule": "replicate",
+      "detectors": [
+        "replicate"
+      ],
+      "locations": [
+        {
+          "path": "/compressed",
+          "line": 1,
+          "transformations": [],
+          "evidence": "Response during unauthenticated browser loading"
+        }
+      ]
+    },
+    {
+      "id": "encoded-engine-only",
+      "kind": "Base64 / Gitleaks",
+      "found": true,
+      "category": "private-credential",
+      "triage": "direct-leak",
+      "rule": "gitleaks:snyk-api-token",
+      "detectors": [
+        "gitleaks:snyk-api-token",
+        "gitleaks"
+      ],
+      "locations": [
+        {
+          "path": "/assets/entry.js",
+          "line": 1,
+          "transformations": [
+            "Base64 decoding"
+          ],
+          "evidence": "Unauthenticated HTTP response"
+        },
+        {
+          "path": "/assets/entry.js",
+          "line": 1,
+          "transformations": [
+            "Literal",
+            "Constant concatenation",
+            "Base64 decoding"
+          ],
+          "evidence": "Unambiguous static reconstruction from publicly downloaded sources"
+        },
+        {
+          "path": "/assets/entry.js",
+          "line": 1,
+          "transformations": [
+            "Static request/SDK argument construction",
+            "Base64 decoding"
+          ],
+          "evidence": "Unambiguous static reconstruction from publicly downloaded sources"
+        },
+        {
+          "path": "/",
+          "sourceLabel": "page debugger script 24 (reported source URL; attribution unverified)",
+          "line": 1,
+          "transformations": [
+            "Base64 decoding"
+          ],
+          "evidence": "Debugger captured code during isolated anonymous loading; local runtime evidence"
+        },
+        {
+          "path": "/",
+          "sourceLabel": "debugger mirror (exact captured/downloaded content)",
+          "line": 1,
+          "transformations": [
+            "Literal",
+            "Constant concatenation",
+            "Base64 decoding"
+          ],
+          "evidence": "Exact runtime capture mirror; reconstructed locally"
+        },
+        {
+          "path": "/",
+          "sourceLabel": "debugger mirror (exact captured/downloaded content)",
+          "line": 1,
+          "transformations": [
+            "Static request/SDK argument construction",
+            "Base64 decoding"
+          ],
+          "evidence": "Exact runtime capture mirror; reconstructed locally"
+        },
+        {
+          "path": "/collector",
+          "line": 1,
+          "transformations": [
+            "Base64 decoding"
+          ],
+          "evidence": "Locally observed candidate request; blocked candidates were never sent"
+        },
+        {
+          "path": "/encoded",
+          "line": 1,
+          "transformations": [
+            "Base64 decoding"
+          ],
+          "evidence": "Response during unauthenticated browser loading"
+        }
+      ]
+    },
+    {
+      "id": "runtime-global",
+      "kind": "runtime",
+      "found": true,
+      "category": "private-credential",
+      "triage": "direct-leak",
+      "rule": "provider-context:cohere",
+      "detectors": [
+        "provider-context:cohere"
+      ],
+      "locations": [
+        {
+          "path": "/",
+          "sourceLabel": "runtime globals (no source line)",
+          "line": 1,
+          "transformations": [
+            "JavaScript string-escape decoding"
+          ],
+          "evidence": "Own enumerable/static runtime configuration; getters were not invoked"
+        }
+      ]
+    },
+    {
+      "id": "fresh-storage",
+      "kind": "storage",
+      "found": true,
+      "category": "private-credential",
+      "triage": "direct-leak",
+      "rule": "provider-context:mistral",
+      "detectors": [
+        "provider-context:mistral"
+      ],
+      "locations": [
+        {
+          "path": "/",
+          "sourceLabel": "storage (no source line)",
+          "line": 1,
+          "transformations": [
+            "JavaScript string-escape decoding"
+          ],
+          "evidence": "Storage created by a fresh unauthenticated visit"
+        },
+        {
+          "path": "/frame",
+          "sourceLabel": "storage (no source line)",
+          "line": 1,
+          "transformations": [
+            "JavaScript string-escape decoding"
+          ],
+          "evidence": "Storage created by a fresh unauthenticated visit"
+        }
+      ]
+    },
+    {
+      "id": "frame-runtime",
+      "kind": "frame runtime",
+      "found": true,
+      "category": "private-credential",
+      "triage": "direct-leak",
+      "rule": "provider-context:resend",
+      "detectors": [
+        "provider-context:resend"
+      ],
+      "locations": [
+        {
+          "path": "/frame",
+          "sourceLabel": "runtime globals (no source line)",
+          "line": 1,
+          "transformations": [],
+          "evidence": "Own enumerable/static runtime configuration; getters were not invoked"
+        },
+        {
+          "path": "/frame",
+          "sourceLabel": "runtime globals (no source line)",
+          "line": 1,
+          "transformations": [
+            "JavaScript string-escape decoding"
+          ],
+          "evidence": "Own enumerable/static runtime configuration; getters were not invoked"
+        }
+      ]
+    },
+    {
+      "id": "selected-read-only-page",
+      "kind": "selected navigation",
+      "found": true,
+      "category": "private-credential",
+      "triage": "direct-leak",
+      "rule": "provider-context:postmark",
+      "detectors": [
+        "provider-context:postmark"
+      ],
+      "locations": [
+        {
+          "path": "/selected",
+          "sourceLabel": "runtime globals (no source line)",
+          "line": 1,
+          "transformations": [
+            "JavaScript string-escape decoding"
+          ],
+          "evidence": "Own enumerable/static runtime configuration; getters were not invoked"
+        }
+      ]
+    },
+    {
+      "id": "bounded-scroll-response",
+      "kind": "scroll fetch",
+      "found": true,
+      "category": "private-credential",
+      "triage": "direct-leak",
+      "rule": "provider-context:aws",
+      "detectors": [
+        "provider-context:aws"
+      ],
+      "locations": [
+        {
+          "path": "/scroll",
+          "line": 1,
+          "transformations": [],
+          "evidence": "Response during unauthenticated browser loading"
+        }
+      ]
+    },
+    {
+      "id": "stripe-public-decoy",
+      "kind": "public identifier",
+      "found": true,
+      "category": "public-identifier",
+      "triage": "insignificant-removed",
+      "detectors": [],
+      "locations": []
+    },
+    {
+      "id": "supabase-public-decoy",
+      "kind": "public identifier",
+      "found": true,
+      "category": "public-identifier",
+      "triage": "insignificant-removed",
+      "detectors": [],
+      "locations": []
+    },
+    {
+      "id": "anonymous-jwt-decoy",
+      "kind": "public identifier",
+      "found": true,
+      "category": "public-identifier",
+      "triage": "insignificant-removed",
+      "detectors": [],
+      "locations": []
+    }
+  ],
+  "scan": {
+    "state": "incomplete",
+    "stopReason": "discovered-frontier-drained",
+    "browser": {
+      "requested": true,
+      "launch": true,
+      "runtimePages": 2,
+      "isolation": "checked",
+      "isolationChecks": {
+        "freshProfile": true,
+        "denyProxy": true,
+        "resolverBlocked": true,
+        "minimalEnvironment": true,
+        "ownDebugPort": true,
+        "routesBeforeNavigation": true,
+        "sharedWorkerDisabled": true
+      },
+      "background": {
+        "count": 4,
+        "hosts": [
+          "update.googleapis.com",
+          "accounts.google.com",
+          "www.google.com"
+        ]
+      },
+      "pages": [
+        {
+          "url": "http://127.0.0.1:54898/",
+          "verdict": "partial",
+          "causes": [
+            "local-rate-limit",
+            "deadline",
+            "blocked-dependency",
+            "unrouted-dependency"
+          ],
+          "pendingAtDeadline": {
+            "localQueue": 8,
+            "network": 0
+          },
+          "blocked": {
+            "scope": 2,
+            "policy": 3,
+            "unrouted": 2,
+            "examples": [
+              "http://127.0.0.1:54897",
+              "http://127.0.0.1:54898",
+              "https://accounts.google.com",
+              "https://android.clients.google.com"
+            ]
+          },
+          "commitMs": 536,
+          "domReadyMs": 2938,
+          "extendedMs": 550,
+          "settleMs": 1989
+        },
+        {
+          "url": "http://127.0.0.1:54898/selected",
+          "verdict": "partial",
+          "causes": [
+            "unrouted-dependency"
+          ],
+          "pendingAtDeadline": {
+            "localQueue": 0,
+            "network": 0
+          },
+          "blocked": {
+            "scope": 0,
+            "policy": 0,
+            "unrouted": 1,
+            "examples": [
+              "https://accounts.google.com"
+            ]
+          },
+          "commitMs": 364,
+          "domReadyMs": 377,
+          "settleMs": 370
+        }
+      ],
+      "cleanup": "confirmed"
+    },
+    "coverage": {
+      "assessment": "limited",
+      "groups": {
+        "entryDocuments": {
+          "discovered": 1,
+          "downloaded": 1,
+          "analyzed": 1,
+          "successful": 1,
+          "errorResponses": 0,
+          "blocked": 0,
+          "skipped": 0,
+          "uninspected": 0,
+          "currentStates": {
+            "inspected": 0,
+            "reused": 1,
+            "pending": 0,
+            "unavailable": 0,
+            "failed": 0,
+            "unsupported": 0,
+            "deferred": 0,
+            "partial": 0
+          },
+          "reasons": {
+            "Exact text and detector configuration matched successful in-memory inspection; other configured analyzers completed": 1
+          }
+        },
+        "applicationPages": {
+          "discovered": 4,
+          "downloaded": 4,
+          "analyzed": 4,
+          "successful": 4,
+          "errorResponses": 0,
+          "blocked": 0,
+          "skipped": 0,
+          "uninspected": 0,
+          "currentStates": {
+            "inspected": 1,
+            "reused": 3,
+            "pending": 0,
+            "unavailable": 0,
+            "failed": 0,
+            "unsupported": 0,
+            "deferred": 0,
+            "partial": 0
+          },
+          "reasons": {
+            "Exact text and detector configuration matched successful in-memory inspection; other configured analyzers completed": 3
+          }
+        },
+        "javascript": {
+          "discovered": 2,
+          "downloaded": 2,
+          "analyzed": 2,
+          "successful": 2,
+          "errorResponses": 0,
+          "blocked": 0,
+          "skipped": 0,
+          "uninspected": 0,
+          "currentStates": {
+            "inspected": 0,
+            "reused": 2,
+            "pending": 0,
+            "unavailable": 0,
+            "failed": 0,
+            "unsupported": 0,
+            "deferred": 0,
+            "partial": 0
+          },
+          "reasons": {
+            "Exact text and detector configuration matched successful in-memory inspection; other configured analyzers completed": 2
+          }
+        },
+        "jsonConfig": {
+          "discovered": 4,
+          "downloaded": 4,
+          "analyzed": 4,
+          "successful": 3,
+          "errorResponses": 1,
+          "blocked": 0,
+          "skipped": 0,
+          "uninspected": 1,
+          "currentStates": {
+            "inspected": 1,
+            "reused": 2,
+            "pending": 0,
+            "unavailable": 1,
+            "failed": 0,
+            "unsupported": 0,
+            "deferred": 0,
+            "partial": 0
+          },
+          "reasons": {
+            "HTTP 403": 1,
+            "Exact text and detector configuration matched successful in-memory inspection; other configured analyzers completed": 2
+          }
+        },
+        "sourceMaps": {
+          "discovered": 1,
+          "downloaded": 1,
+          "analyzed": 1,
+          "successful": 1,
+          "errorResponses": 0,
+          "blocked": 0,
+          "skipped": 0,
+          "uninspected": 0,
+          "currentStates": {
+            "inspected": 1,
+            "reused": 0,
+            "pending": 0,
+            "unavailable": 0,
+            "failed": 0,
+            "unsupported": 0,
+            "deferred": 0,
+            "partial": 0
+          },
+          "reasons": {}
+        },
+        "sitemaps": {
+          "discovered": 1,
+          "downloaded": 1,
+          "analyzed": 1,
+          "successful": 1,
+          "errorResponses": 0,
+          "blocked": 0,
+          "skipped": 0,
+          "uninspected": 0,
+          "currentStates": {
+            "inspected": 1,
+            "reused": 0,
+            "pending": 0,
+            "unavailable": 0,
+            "failed": 0,
+            "unsupported": 0,
+            "deferred": 0,
+            "partial": 0
+          },
+          "reasons": {}
+        },
+        "baselineRequests": {
+          "discovered": 2,
+          "downloaded": 2,
+          "analyzed": 2,
+          "successful": 2,
+          "errorResponses": 0,
+          "blocked": 0,
+          "skipped": 0,
+          "uninspected": 0,
+          "currentStates": {
+            "inspected": 0,
+            "reused": 2,
+            "pending": 0,
+            "unavailable": 0,
+            "failed": 0,
+            "unsupported": 0,
+            "deferred": 0,
+            "partial": 0
+          },
+          "reasons": {
+            "Exact text and detector configuration matched successful in-memory inspection; other configured analyzers completed": 2
+          }
+        },
+        "deploymentChecks": {
+          "discovered": 2,
+          "downloaded": 2,
+          "analyzed": 2,
+          "successful": 2,
+          "errorResponses": 0,
+          "blocked": 0,
+          "skipped": 1,
+          "uninspected": 0,
+          "currentStates": {
+            "inspected": 1,
+            "reused": 1,
+            "pending": 0,
+            "unavailable": 0,
+            "failed": 0,
+            "unsupported": 0,
+            "deferred": 0,
+            "partial": 0
+          },
+          "reasons": {
+            "Exact text and detector configuration matched successful in-memory inspection; other configured analyzers completed": 1
+          }
+        },
+        "images": {
+          "discovered": 0,
+          "downloaded": 0,
+          "analyzed": 0,
+          "successful": 0,
+          "errorResponses": 0,
+          "blocked": 0,
+          "skipped": 0,
+          "uninspected": 0,
+          "currentStates": {
+            "inspected": 0,
+            "reused": 0,
+            "pending": 0,
+            "unavailable": 0,
+            "failed": 0,
+            "unsupported": 0,
+            "deferred": 0,
+            "partial": 0
+          },
+          "reasons": {}
+        },
+        "runtimeCaptures": {
+          "discovered": 15,
+          "downloaded": 0,
+          "analyzed": 15,
+          "successful": 0,
+          "errorResponses": 0,
+          "blocked": 0,
+          "skipped": 0,
+          "uninspected": 0,
+          "currentStates": {
+            "inspected": 15,
+            "reused": 0,
+            "pending": 0,
+            "unavailable": 0,
+            "failed": 0,
+            "unsupported": 0,
+            "deferred": 0,
+            "partial": 0
+          },
+          "reasons": {}
+        },
+        "other": {
+          "discovered": 6,
+          "downloaded": 3,
+          "analyzed": 3,
+          "successful": 3,
+          "errorResponses": 0,
+          "blocked": 3,
+          "skipped": 3,
+          "uninspected": 3,
+          "currentStates": {
+            "inspected": 3,
+            "reused": 0,
+            "pending": 0,
+            "unavailable": 0,
+            "failed": 0,
+            "unsupported": 3,
+            "deferred": 0,
+            "partial": 0
+          },
+          "reasons": {
+            "method": 1,
+            "destructive-get": 1,
+            "credential-in-request": 1
+          }
+        },
+        "domainExcluded": {
+          "discovered": 0,
+          "downloaded": 0,
+          "analyzed": 0,
+          "successful": 0,
+          "errorResponses": 0,
+          "blocked": 0,
+          "skipped": 0,
+          "uninspected": 0,
+          "currentStates": {
+            "inspected": 0,
+            "reused": 0,
+            "pending": 0,
+            "unavailable": 0,
+            "failed": 0,
+            "unsupported": 0,
+            "deferred": 0,
+            "partial": 0
+          },
+          "reasons": {}
+        },
+        "externalDependencies": {
+          "discovered": 6,
+          "downloaded": 0,
+          "analyzed": 0,
+          "successful": 0,
+          "errorResponses": 0,
+          "blocked": 6,
+          "skipped": 6,
+          "uninspected": 6,
+          "currentStates": {
+            "inspected": 0,
+            "reused": 0,
+            "pending": 0,
+            "unavailable": 0,
+            "failed": 0,
+            "unsupported": 6,
+            "deferred": 0,
+            "partial": 0
+          },
+          "reasons": {
+            "scope": 1,
+            "websocket-disabled": 1,
+            "browser-background-denied": 2,
+            "unrouted-browser-traffic": 2
+          }
+        },
+        "browserRuntime": {
+          "discovered": 2,
+          "downloaded": 2,
+          "analyzed": 2,
+          "successful": 2,
+          "errorResponses": 0,
+          "blocked": 0,
+          "skipped": 0,
+          "uninspected": 0,
+          "currentStates": {
+            "inspected": 2,
+            "reused": 0,
+            "pending": 0,
+            "unavailable": 0,
+            "failed": 0,
+            "unsupported": 0,
+            "deferred": 0,
+            "partial": 0
+          },
+          "reasons": {}
+        }
+      },
+      "entryPoints": [
+        {
+          "url": "http://127.0.0.1:54898/",
+          "successful": true,
+          "analyzed": true
+        }
+      ],
+      "highValueLimited": true,
+      "optionalPagesLimited": false,
+      "origins": {
+        "http://127.0.0.1:54898": {
+          "assessment": "limited",
+          "groups": {
+            "entryDocuments": {
+              "discovered": 1,
+              "downloaded": 1,
+              "analyzed": 1,
+              "successful": 1,
+              "errorResponses": 0,
+              "blocked": 0,
+              "skipped": 0,
+              "uninspected": 0,
+              "currentStates": {
+                "inspected": 0,
+                "reused": 1,
+                "pending": 0,
+                "unavailable": 0,
+                "failed": 0,
+                "unsupported": 0,
+                "deferred": 0,
+                "partial": 0
+              },
+              "reasons": {
+                "Exact text and detector configuration matched successful in-memory inspection; other configured analyzers completed": 1
+              }
+            },
+            "applicationPages": {
+              "discovered": 4,
+              "downloaded": 4,
+              "analyzed": 4,
+              "successful": 4,
+              "errorResponses": 0,
+              "blocked": 0,
+              "skipped": 0,
+              "uninspected": 0,
+              "currentStates": {
+                "inspected": 1,
+                "reused": 3,
+                "pending": 0,
+                "unavailable": 0,
+                "failed": 0,
+                "unsupported": 0,
+                "deferred": 0,
+                "partial": 0
+              },
+              "reasons": {
+                "Exact text and detector configuration matched successful in-memory inspection; other configured analyzers completed": 3
+              }
+            },
+            "javascript": {
+              "discovered": 2,
+              "downloaded": 2,
+              "analyzed": 2,
+              "successful": 2,
+              "errorResponses": 0,
+              "blocked": 0,
+              "skipped": 0,
+              "uninspected": 0,
+              "currentStates": {
+                "inspected": 0,
+                "reused": 2,
+                "pending": 0,
+                "unavailable": 0,
+                "failed": 0,
+                "unsupported": 0,
+                "deferred": 0,
+                "partial": 0
+              },
+              "reasons": {
+                "Exact text and detector configuration matched successful in-memory inspection; other configured analyzers completed": 2
+              }
+            },
+            "jsonConfig": {
+              "discovered": 4,
+              "downloaded": 4,
+              "analyzed": 4,
+              "successful": 3,
+              "errorResponses": 1,
+              "blocked": 0,
+              "skipped": 0,
+              "uninspected": 1,
+              "currentStates": {
+                "inspected": 1,
+                "reused": 2,
+                "pending": 0,
+                "unavailable": 1,
+                "failed": 0,
+                "unsupported": 0,
+                "deferred": 0,
+                "partial": 0
+              },
+              "reasons": {
+                "HTTP 403": 1,
+                "Exact text and detector configuration matched successful in-memory inspection; other configured analyzers completed": 2
+              }
+            },
+            "sourceMaps": {
+              "discovered": 1,
+              "downloaded": 1,
+              "analyzed": 1,
+              "successful": 1,
+              "errorResponses": 0,
+              "blocked": 0,
+              "skipped": 0,
+              "uninspected": 0,
+              "currentStates": {
+                "inspected": 1,
+                "reused": 0,
+                "pending": 0,
+                "unavailable": 0,
+                "failed": 0,
+                "unsupported": 0,
+                "deferred": 0,
+                "partial": 0
+              },
+              "reasons": {}
+            },
+            "sitemaps": {
+              "discovered": 1,
+              "downloaded": 1,
+              "analyzed": 1,
+              "successful": 1,
+              "errorResponses": 0,
+              "blocked": 0,
+              "skipped": 0,
+              "uninspected": 0,
+              "currentStates": {
+                "inspected": 1,
+                "reused": 0,
+                "pending": 0,
+                "unavailable": 0,
+                "failed": 0,
+                "unsupported": 0,
+                "deferred": 0,
+                "partial": 0
+              },
+              "reasons": {}
+            },
+            "baselineRequests": {
+              "discovered": 2,
+              "downloaded": 2,
+              "analyzed": 2,
+              "successful": 2,
+              "errorResponses": 0,
+              "blocked": 0,
+              "skipped": 0,
+              "uninspected": 0,
+              "currentStates": {
+                "inspected": 0,
+                "reused": 2,
+                "pending": 0,
+                "unavailable": 0,
+                "failed": 0,
+                "unsupported": 0,
+                "deferred": 0,
+                "partial": 0
+              },
+              "reasons": {
+                "Exact text and detector configuration matched successful in-memory inspection; other configured analyzers completed": 2
+              }
+            },
+            "deploymentChecks": {
+              "discovered": 2,
+              "downloaded": 2,
+              "analyzed": 2,
+              "successful": 2,
+              "errorResponses": 0,
+              "blocked": 0,
+              "skipped": 1,
+              "uninspected": 0,
+              "currentStates": {
+                "inspected": 1,
+                "reused": 1,
+                "pending": 0,
+                "unavailable": 0,
+                "failed": 0,
+                "unsupported": 0,
+                "deferred": 0,
+                "partial": 0
+              },
+              "reasons": {
+                "Exact text and detector configuration matched successful in-memory inspection; other configured analyzers completed": 1
+              }
+            },
+            "images": {
+              "discovered": 0,
+              "downloaded": 0,
+              "analyzed": 0,
+              "successful": 0,
+              "errorResponses": 0,
+              "blocked": 0,
+              "skipped": 0,
+              "uninspected": 0,
+              "currentStates": {
+                "inspected": 0,
+                "reused": 0,
+                "pending": 0,
+                "unavailable": 0,
+                "failed": 0,
+                "unsupported": 0,
+                "deferred": 0,
+                "partial": 0
+              },
+              "reasons": {}
+            },
+            "runtimeCaptures": {
+              "discovered": 15,
+              "downloaded": 0,
+              "analyzed": 15,
+              "successful": 0,
+              "errorResponses": 0,
+              "blocked": 0,
+              "skipped": 0,
+              "uninspected": 0,
+              "currentStates": {
+                "inspected": 15,
+                "reused": 0,
+                "pending": 0,
+                "unavailable": 0,
+                "failed": 0,
+                "unsupported": 0,
+                "deferred": 0,
+                "partial": 0
+              },
+              "reasons": {}
+            },
+            "other": {
+              "discovered": 6,
+              "downloaded": 3,
+              "analyzed": 3,
+              "successful": 3,
+              "errorResponses": 0,
+              "blocked": 3,
+              "skipped": 3,
+              "uninspected": 3,
+              "currentStates": {
+                "inspected": 3,
+                "reused": 0,
+                "pending": 0,
+                "unavailable": 0,
+                "failed": 0,
+                "unsupported": 3,
+                "deferred": 0,
+                "partial": 0
+              },
+              "reasons": {
+                "method": 1,
+                "destructive-get": 1,
+                "credential-in-request": 1
+              }
+            },
+            "domainExcluded": {
+              "discovered": 0,
+              "downloaded": 0,
+              "analyzed": 0,
+              "successful": 0,
+              "errorResponses": 0,
+              "blocked": 0,
+              "skipped": 0,
+              "uninspected": 0,
+              "currentStates": {
+                "inspected": 0,
+                "reused": 0,
+                "pending": 0,
+                "unavailable": 0,
+                "failed": 0,
+                "unsupported": 0,
+                "deferred": 0,
+                "partial": 0
+              },
+              "reasons": {}
+            },
+            "externalDependencies": {
+              "discovered": 0,
+              "downloaded": 0,
+              "analyzed": 0,
+              "successful": 0,
+              "errorResponses": 0,
+              "blocked": 0,
+              "skipped": 0,
+              "uninspected": 0,
+              "currentStates": {
+                "inspected": 0,
+                "reused": 0,
+                "pending": 0,
+                "unavailable": 0,
+                "failed": 0,
+                "unsupported": 0,
+                "deferred": 0,
+                "partial": 0
+              },
+              "reasons": {}
+            },
+            "browserRuntime": {
+              "discovered": 2,
+              "downloaded": 2,
+              "analyzed": 2,
+              "successful": 2,
+              "errorResponses": 0,
+              "blocked": 0,
+              "skipped": 0,
+              "uninspected": 0,
+              "currentStates": {
+                "inspected": 2,
+                "reused": 0,
+                "pending": 0,
+                "unavailable": 0,
+                "failed": 0,
+                "unsupported": 0,
+                "deferred": 0,
+                "partial": 0
+              },
+              "reasons": {}
+            }
+          },
+          "entryPoints": [
+            {
+              "url": "http://127.0.0.1:54898/",
+              "successful": true,
+              "analyzed": true
+            }
+          ],
+          "highValueLimited": true,
+          "optionalPagesLimited": false
+        }
+      },
+      "inventory": [
+        {
+          "url": "http://127.0.0.1:54898/robots.txt",
+          "category": "other",
+          "state": "inspected",
+          "chain": []
+        },
+        {
+          "url": "http://127.0.0.1:54898/",
+          "category": "entryDocuments",
+          "state": "reused",
+          "reason": "Exact text and detector configuration matched successful in-memory inspection; other configured analyzers completed",
+          "chain": [
+            "about:blank",
+            "observed browser request"
+          ]
+        },
+        {
+          "url": "http://127.0.0.1:54898/sitemap.xml",
+          "category": "sitemaps",
+          "state": "inspected",
+          "chain": []
+        },
+        {
+          "url": "http://127.0.0.1:54898/assets/lazy.js",
+          "category": "javascript",
+          "state": "reused",
+          "reason": "Exact text and detector configuration matched successful in-memory inspection; other configured analyzers completed",
+          "chain": [
+            "http://127.0.0.1:54898/",
+            "observed browser request"
+          ]
+        },
+        {
+          "url": "http://127.0.0.1:54898/assets/entry.js",
+          "category": "javascript",
+          "state": "reused",
+          "reason": "Exact text and detector configuration matched successful in-memory inspection; other configured analyzers completed",
+          "chain": [
+            "http://127.0.0.1:54898/",
+            "observed browser request"
+          ]
+        },
+        {
+          "url": "http://127.0.0.1:54898/frame",
+          "category": "applicationPages",
+          "state": "reused",
+          "reason": "Exact text and detector configuration matched successful in-memory inspection; other configured analyzers completed",
+          "chain": [
+            "browser page",
+            "observed browser request"
+          ]
+        },
+        {
+          "url": "http://127.0.0.1:54898/error",
+          "category": "jsonConfig",
+          "state": "unavailable",
+          "reason": "HTTP 403",
+          "chain": [
+            "http://127.0.0.1:54898/",
+            "document/base URL"
+          ]
+        },
+        {
+          "url": "http://127.0.0.1:54898/encoded",
+          "category": "jsonConfig",
+          "state": "reused",
+          "reason": "Exact text and detector configuration matched successful in-memory inspection; other configured analyzers completed",
+          "chain": [
+            "http://127.0.0.1:54898/",
+            "document/base URL"
+          ]
+        },
+        {
+          "url": "http://127.0.0.1:54898/compressed",
+          "category": "applicationPages",
+          "state": "reused",
+          "reason": "Exact text and detector configuration matched successful in-memory inspection; other configured analyzers completed",
+          "chain": [
+            "http://127.0.0.1:54898/",
+            "document/base URL"
+          ]
+        },
+        {
+          "url": "http://127.0.0.1:54898/api/json",
+          "category": "jsonConfig",
+          "state": "reused",
+          "reason": "Exact text and detector configuration matched successful in-memory inspection; other configured analyzers completed",
+          "chain": [
+            "http://127.0.0.1:54898/",
+            "document/base URL"
+          ]
+        },
+        {
+          "url": "http://127.0.0.1:54898/headers",
+          "category": "applicationPages",
+          "state": "reused",
+          "reason": "Exact text and detector configuration matched successful in-memory inspection; other configured analyzers completed",
+          "chain": [
+            "http://127.0.0.1:54898/",
+            "document/base URL"
+          ]
+        },
+        {
+          "url": "http://127.0.0.1:54898/assets/entry.js.map",
+          "category": "sourceMaps",
+          "state": "inspected",
+          "chain": [
+            "http://127.0.0.1:54898/",
+            "document/base URL",
+            "http://127.0.0.1:54898/assets/entry.js",
+            "source-map comment"
+          ]
+        },
+        {
+          "url": "http://127.0.0.1:54898/5ae3b790186e4118b0d73384",
+          "category": "baselineRequests",
+          "state": "reused",
+          "reason": "Exact text and detector configuration matched successful in-memory inspection; other configured analyzers completed",
+          "chain": []
+        },
+        {
+          "url": "http://127.0.0.1:54898/fcedadc464ca4bb8b5b0dd5c",
+          "category": "baselineRequests",
+          "state": "reused",
+          "reason": "Exact text and detector configuration matched successful in-memory inspection; other configured analyzers completed",
+          "chain": []
+        },
+        {
+          "url": "http://127.0.0.1:54898/.env",
+          "category": "deploymentChecks",
+          "state": "reused",
+          "reason": "Exact text and detector configuration matched successful in-memory inspection; other configured analyzers completed",
+          "chain": []
+        },
+        {
+          "url": "http://127.0.0.1:54898/config.json",
+          "category": "deploymentChecks",
+          "state": "inspected",
+          "chain": []
+        },
+        {
+          "url": "http://127.0.0.1:54897/outside.js",
+          "category": "externalDependencies",
+          "state": "unsupported",
+          "reason": "scope",
+          "chain": [
+            "http://127.0.0.1:54898/",
+            "document/base URL"
+          ]
+        },
+        {
+          "url": "http://127.0.0.1:54898/#debugger-55192970FA9BEE232CCA38ACCAFF187D-16",
+          "category": "runtimeCaptures",
+          "state": "inspected",
+          "chain": [
+            "http://127.0.0.1:54898/",
+            "Debugger loaded script"
+          ]
+        },
+        {
+          "url": "http://127.0.0.1:54898/#debugger-55192970FA9BEE232CCA38ACCAFF187D-17",
+          "category": "runtimeCaptures",
+          "state": "inspected",
+          "chain": [
+            "http://127.0.0.1:54898/",
+            "Debugger loaded script"
+          ]
+        },
+        {
+          "url": "http://127.0.0.1:54898/#debugger-55192970FA9BEE232CCA38ACCAFF187D-18",
+          "category": "runtimeCaptures",
+          "state": "inspected",
+          "chain": [
+            "http://127.0.0.1:54898/",
+            "Debugger loaded script"
+          ]
+        },
+        {
+          "url": "http://127.0.0.1:54898/#debugger-55192970FA9BEE232CCA38ACCAFF187D-21",
+          "category": "runtimeCaptures",
+          "state": "inspected",
+          "chain": [
+            "http://127.0.0.1:54898/",
+            "Debugger loaded script"
+          ]
+        },
+        {
+          "url": "http://127.0.0.1:54898/#debugger-55192970FA9BEE232CCA38ACCAFF187D-22",
+          "category": "runtimeCaptures",
+          "state": "inspected",
+          "chain": [
+            "http://127.0.0.1:54898/",
+            "Debugger loaded script"
+          ]
+        },
+        {
+          "url": "ws://127.0.0.1:54898/socket",
+          "category": "externalDependencies",
+          "state": "unsupported",
+          "reason": "websocket-disabled",
+          "chain": [
+            "http://127.0.0.1:54898/",
+            "observed WebSocket request"
+          ]
+        },
+        {
+          "url": "http://127.0.0.1:54898/#debugger-55192970FA9BEE232CCA38ACCAFF187D-24",
+          "category": "runtimeCaptures",
+          "state": "inspected",
+          "chain": [
+            "http://127.0.0.1:54898/",
+            "Debugger loaded script"
+          ]
+        },
+        {
+          "url": "http://127.0.0.1:54898/#debugger-55192970FA9BEE232CCA38ACCAFF187D-23",
+          "category": "runtimeCaptures",
+          "state": "inspected",
+          "chain": [
+            "http://127.0.0.1:54898/",
+            "Debugger loaded script"
+          ]
+        },
+        {
+          "url": "http://127.0.0.1:54898/#debugger-55192970FA9BEE232CCA38ACCAFF187D-25",
+          "category": "runtimeCaptures",
+          "state": "inspected",
+          "chain": [
+            "http://127.0.0.1:54898/",
+            "Debugger loaded script"
+          ]
+        },
+        {
+          "url": "http://127.0.0.1:54898/#debugger-55192970FA9BEE232CCA38ACCAFF187D-31",
+          "category": "runtimeCaptures",
+          "state": "inspected",
+          "chain": [
+            "http://127.0.0.1:54898/",
+            "Debugger loaded script"
+          ]
+        },
+        {
+          "url": "http://127.0.0.1:54898/#debugger-55192970FA9BEE232CCA38ACCAFF187D-32",
+          "category": "runtimeCaptures",
+          "state": "inspected",
+          "chain": [
+            "http://127.0.0.1:54898/",
+            "Debugger loaded script"
+          ]
+        },
+        {
+          "url": "http://127.0.0.1:54898/#debugger-55192970FA9BEE232CCA38ACCAFF187D-38",
+          "category": "runtimeCaptures",
+          "state": "inspected",
+          "chain": [
+            "http://127.0.0.1:54898/",
+            "Debugger loaded script"
+          ]
+        },
+        {
+          "url": "http://127.0.0.1:54898/#debugger-55192970FA9BEE232CCA38ACCAFF187D-44",
+          "category": "runtimeCaptures",
+          "state": "inspected",
+          "chain": [
+            "http://127.0.0.1:54898/",
+            "Debugger loaded script"
+          ]
+        },
+        {
+          "url": "http://127.0.0.1:54898/#debugger-55192970FA9BEE232CCA38ACCAFF187D-57",
+          "category": "runtimeCaptures",
+          "state": "inspected",
+          "chain": [
+            "http://127.0.0.1:54898/",
+            "Debugger loaded script"
+          ]
+        },
+        {
+          "url": "http://127.0.0.1:54898/cookie",
+          "category": "other",
+          "state": "inspected",
+          "chain": [
+            "http://127.0.0.1:54898/",
+            "observed browser request"
+          ]
+        },
+        {
+          "url": "http://127.0.0.1:54898/fresh-2",
+          "category": "other",
+          "state": "inspected",
+          "chain": [
+            "http://127.0.0.1:54898/",
+            "observed browser request"
+          ]
+        },
+        {
+          "url": "http://127.0.0.1:54898/write",
+          "category": "other",
+          "state": "unsupported",
+          "reason": "method",
+          "chain": [
+            "http://127.0.0.1:54898/",
+            "observed browser request"
+          ]
+        },
+        {
+          "url": "http://127.0.0.1:54898/delete",
+          "category": "other",
+          "state": "unsupported",
+          "reason": "destructive-get",
+          "chain": [
+            "http://127.0.0.1:54898/",
+            "observed browser request"
+          ]
+        },
+        {
+          "url": "http://127.0.0.1:54898/#debugger-55192970FA9BEE232CCA38ACCAFF187D-79",
+          "category": "runtimeCaptures",
+          "state": "inspected",
+          "chain": [
+            "http://127.0.0.1:54898/",
+            "Debugger loaded script"
+          ]
+        },
+        {
+          "url": "http://127.0.0.1:54898/scroll",
+          "category": "jsonConfig",
+          "state": "inspected",
+          "chain": [
+            "http://127.0.0.1:54898/",
+            "observed browser request"
+          ]
+        },
+        {
+          "url": "http://127.0.0.1:54898/collector?v=[redacted]",
+          "category": "other",
+          "state": "unsupported",
+          "reason": "credential-in-request",
+          "chain": [
+            "http://127.0.0.1:54898/",
+            "observed browser request"
+          ]
+        },
+        {
+          "url": "https://update.googleapis.com",
+          "category": "externalDependencies",
+          "state": "unsupported",
+          "reason": "browser-background-denied",
+          "chain": [
+            "deny-only proxy",
+            "Observed before any target document was requested in this fresh browser; proven browser background activity, denied at the proxy and never forwarded."
+          ]
+        },
+        {
+          "url": "https://accounts.google.com",
+          "category": "externalDependencies",
+          "state": "unsupported",
+          "reason": "unrouted-browser-traffic",
+          "chain": [
+            "deny-only proxy",
+            "No page/frame/worker initiator available on this proxy request. Hostname does not establish background or harmless traffic."
+          ]
+        },
+        {
+          "url": "https://www.google.com",
+          "category": "externalDependencies",
+          "state": "unsupported",
+          "reason": "browser-background-denied",
+          "chain": [
+            "deny-only proxy",
+            "Observed before any target document was requested in this fresh browser; proven browser background activity, denied at the proxy and never forwarded."
+          ]
+        },
+        {
+          "url": "https://android.clients.google.com",
+          "category": "externalDependencies",
+          "state": "unsupported",
+          "reason": "unrouted-browser-traffic",
+          "chain": [
+            "deny-only proxy",
+            "No page/frame/worker initiator available on this proxy request. Hostname does not establish background or harmless traffic."
+          ]
+        },
+        {
+          "url": "http://127.0.0.1:54898/selected",
+          "category": "applicationPages",
+          "state": "inspected",
+          "chain": [
+            "about:blank",
+            "observed browser request"
+          ]
+        },
+        {
+          "url": "http://127.0.0.1:54898/selected#debugger-3A6E52BFEFF795BE10E039F66262B993-22",
+          "category": "runtimeCaptures",
+          "state": "inspected",
+          "chain": [
+            "http://127.0.0.1:54898/selected",
+            "Debugger loaded script"
+          ]
+        }
+      ],
+      "summary": "Coverage is limited or in progress; inspect each origin and resource category. No findings means no supported exposure was detected in inspected coverage.",
+      "discoveryNote": "Discovered is the known unique URL inventory. Each URL has exactly one current state and category; inspected plus reused counts configured inspection coverage. Pending means live work only; deferred and partial are terminal states of unfinished work. Legacy downloaded/analyzed/error counters are historical evidence and can overlap. Browser runtime is a separate navigation count. Undiscovered resources cannot be counted; inventory omissions are reported.",
+      "deploymentChecks": {
+        "planned": 2,
+        "attempted": 2,
+        "remaining": 0
+      },
+      "requestComparison": [
+        {
+          "url": "http://127.0.0.1:54898/",
+          "headerProfile": "v2",
+          "staticStatus": 200,
+          "browserStatus": 200,
+          "staticHeaders": [
+            "accept",
+            "accept-encoding",
+            "accept-language",
+            "host",
+            "user-agent"
+          ],
+          "browserHeaders": [
+            "accept",
+            "accept-encoding",
+            "accept-language",
+            "host",
+            "user-agent"
+          ],
+          "conclusion": "Recorded statuses match; causes not inferred."
+        }
+      ]
+    },
+    "accounting": {
+      "networkAttempts": 29,
+      "blockedEvents": 18,
+      "uniqueResources": 20,
+      "repeatedRequests": 9,
+      "downloadedBytes": 9135,
+      "retainedDecodedBytes": 9095,
+      "textAnalyzedBytes": 9095,
+      "intentionalSkips": 1,
+      "httpErrors": 2,
+      "networkFailures": 0,
+      "timeouts": 0,
+      "failedAttempts": 0,
+      "successfulResponses": 27,
+      "discoveredUrls": 16,
+      "reusedTextInspections": 56,
+      "runtimeCaptures": 15,
+      "reusedDiscoveries": 31,
+      "verifiedMirrors": 0,
+      "connectionsOpened": 29,
+      "connectionsReused": 0,
+      "connectionReplays": 0,
+      "tlsHandshakes": 0,
+      "browserCacheHits": 0,
+      "requestsAvoided": 0,
+      "protectedHostBlocks": 0,
+      "coverageGaps": 5
+    },
+    "limitations": [
+      {
+        "code": "login-form-present",
+        "url": "http://127.0.0.1:54898/",
+        "detail": "Password form observed. Public content and linked scripts are still inspected; no form was submitted and authenticated areas remain outside coverage.",
+        "incomplete": false,
+        "origin": "http://127.0.0.1:54898"
+      },
+      {
+        "code": "scope",
+        "detail": "1 third-party origin were referenced (5 references) and not scanned. Excluded origins are not counted as websites.",
+        "incomplete": false,
+        "count": 5,
+        "examples": [
+          "http://127.0.0.1:54897"
+        ],
+        "origin": "http://127.0.0.1:54898"
+      },
+      {
+        "code": "browser-disabled-channels",
+        "detail": "Service workers, WebSockets, WebRTC, WebTransport and downloads are disabled; the per-visit profile and its caches are deleted afterwards. No clicks/forms or user gestures; only normal page loading. Browser coverage is bounded and may differ from an ordinary browser.",
+        "incomplete": false,
+        "origin": "http://127.0.0.1:54898"
+      },
+      {
+        "code": "browser-page-budget",
+        "detail": "Runtime inspection limited to configured page count.",
+        "incomplete": true,
+        "origin": "http://127.0.0.1:54898"
+      },
+      {
+        "code": "websocket-disabled",
+        "url": "ws://127.0.0.1:54898/socket",
+        "detail": "Request blocked: websocket-disabled.",
+        "incomplete": false,
+        "origin": "http://127.0.0.1:54898"
+      },
+      {
+        "code": "browser-settle-deadline",
+        "url": "http://127.0.0.1:54898/",
+        "detail": "Observed resource activity did not settle before the explicit page deadline (8 requests waiting in the local rate-limit queue, 0 waiting on the network); later modules/responses remain unknown.",
+        "incomplete": true,
+        "origin": "http://127.0.0.1:54898"
+      },
+      {
+        "code": "method",
+        "url": "http://127.0.0.1:54898/write",
+        "detail": "Request blocked: method.",
+        "incomplete": false,
+        "origin": "http://127.0.0.1:54898"
+      },
+      {
+        "code": "destructive-get",
+        "url": "http://127.0.0.1:54898/delete",
+        "detail": "Request blocked: destructive-get.",
+        "incomplete": false,
+        "origin": "http://127.0.0.1:54898"
+      },
+      {
+        "code": "credential-in-request",
+        "url": "http://127.0.0.1:54898/collector?v=[redacted]",
+        "detail": "Locally observed credential-bearing request was blocked before transmission.",
+        "incomplete": false,
+        "origin": "http://127.0.0.1:54898"
+      },
+      {
+        "code": "browser-background-denied",
+        "detail": "4 browser background connections (observed before any target document was requested) were denied at the proxy and never forwarded. Hostnames alone never prove background traffic; only pre-navigation timing does.",
+        "incomplete": false,
+        "count": 4,
+        "examples": [
+          "update.googleapis.com",
+          "accounts.google.com",
+          "www.google.com"
+        ],
+        "origin": "http://127.0.0.1:54898"
+      },
+      {
+        "code": "unrouted-browser-traffic",
+        "url": "https://accounts.google.com",
+        "detail": "Request blocked: unrouted-browser-traffic.",
+        "incomplete": true,
+        "attribution": "unknown",
+        "targetOrigin": false,
+        "origin": "http://127.0.0.1:54898"
+      },
+      {
+        "code": "unrouted-browser-traffic",
+        "url": "https://android.clients.google.com",
+        "detail": "Request blocked: unrouted-browser-traffic.",
+        "incomplete": true,
+        "attribution": "unknown",
+        "targetOrigin": false,
+        "origin": "http://127.0.0.1:54898"
+      },
+      {
+        "code": "http-refusal",
+        "url": "http://127.0.0.1:54898/error",
+        "detail": "HTTP 403. HTTP refusal observed; status alone does not establish login requirements or its cause.",
+        "incomplete": true,
+        "origin": "http://127.0.0.1:54898"
+      },
+      {
+        "code": "login-form-present",
+        "url": "http://127.0.0.1:54898/fcedadc464ca4bb8b5b0dd5c",
+        "detail": "Password form observed. Public content and linked scripts are still inspected; no form was submitted and authenticated areas remain outside coverage.",
+        "incomplete": false,
+        "origin": "http://127.0.0.1:54898"
+      },
+      {
+        "code": "login-form-present",
+        "url": "http://127.0.0.1:54898/5ae3b790186e4118b0d73384",
+        "detail": "Password form observed. Public content and linked scripts are still inspected; no form was submitted and authenticated areas remain outside coverage.",
+        "incomplete": false,
+        "origin": "http://127.0.0.1:54898"
+      },
+      {
+        "code": "login-form-present",
+        "url": "http://127.0.0.1:54898/.env",
+        "detail": "Password form observed. Public content and linked scripts are still inspected; no form was submitted and authenticated areas remain outside coverage.",
+        "incomplete": false,
+        "origin": "http://127.0.0.1:54898"
+      }
+    ]
+  },
+  "note": "Synthetic nonfunctional examples, local analysis only. Deliberate 403 and excluded origins make scan coverage incomplete; self-test passes only when each expected stage and isolation assertion is observed. Full browser isolation/UI suite is a separate required release check."
+}

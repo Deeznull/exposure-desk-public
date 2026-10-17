@@ -1,0 +1,61 @@
+{
+  "schema": "exposure-release-preflight/1",
+  "at": "2026-10-08T07:04:16.419Z",
+  "ok": true,
+  "failed": [],
+  "checks": {
+    "2.4 archive: Exposure Desk 2.4.0-rc.1 Source.zip": {
+      "ok": true
+    },
+    "2.4 archive: Exposure Desk 2.4.0-rc.1 Windows x64.zip": {
+      "ok": true
+    },
+    "historical record: release-2.4-results.json": {
+      "ok": true
+    },
+    "historical record: final-parity-2.4.json": {
+      "ok": true
+    },
+    "historical record: release-2.3.1-results.json": {
+      "ok": true
+    },
+    "historical record: final-parity-2.3.1.json": {
+      "ok": true
+    },
+    "historical record: release-2.3-results.json": {
+      "ok": true
+    },
+    "historical record: release-2.2-results.json": {
+      "ok": true
+    },
+    "baseline is 2.4.0-rc.1+5d5acf0f7f18d7e6": {
+      "ok": true,
+      "detail": {
+        "files": 179,
+        "mismatches": 0
+      }
+    },
+    "bundled Node v24.18.1": {
+      "ok": true,
+      "detail": "v24.18.1"
+    },
+    "Gitleaks 8.30.1 binary hash": {
+      "ok": true
+    },
+    "Chrome for Testing 153.0.8010.12": {
+      "ok": true
+    },
+    "BIP39 wordlist digest": {
+      "ok": true
+    },
+    "System32 tar.exe present": {
+      "ok": true
+    },
+    "evaluation corpus unchanged since freeze": {
+      "ok": true,
+      "detail": {
+        "frozenAt": "2026-10-08T04:15:23.216Z"
+      }
+    }
+  }
+}

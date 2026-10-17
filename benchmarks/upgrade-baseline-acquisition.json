@@ -1,0 +1,83 @@
+{
+  "build": {
+    "version": "2.3.1-rc.1",
+    "id": "2.3.1-rc.1+6543b980ccdd8f3a",
+    "sourceDigest": "6543b980ccdd8f3a0fc3d1b1f2e17ed1fe2a80d9e2ad3aa958416ca7763796cd"
+  },
+  "seed": "ExposureDesk/acquisition-heldout/20261007/952",
+  "corpusDigest": "627f7d571e418431fc1c9d17c4a2d353fb8f3d133177b6d4f4e0bb98e219225c",
+  "rows": [
+    {
+      "id": "module",
+      "provider": "OpenAI",
+      "framework": "ESM",
+      "channel": "cross-module",
+      "detected": true
+    },
+    {
+      "id": "map",
+      "provider": "OpenAI",
+      "framework": "TypeScript/React",
+      "channel": "source-map",
+      "detected": false
+    },
+    {
+      "id": "worker",
+      "provider": "OpenAI",
+      "framework": "ESM",
+      "channel": "descendant-debugger",
+      "detected": false
+    },
+    {
+      "id": "iframe",
+      "provider": "OpenAI",
+      "framework": "ESM",
+      "channel": "descendant-debugger",
+      "detected": true
+    },
+    {
+      "id": "route",
+      "provider": "OpenAI",
+      "framework": "ESM",
+      "channel": "approved-route",
+      "detected": false
+    }
+  ],
+  "targets": 5,
+  "detected": 2,
+  "falsePositives": 0,
+  "acquisition": {
+    "knownResources": 9,
+    "inspected": 8,
+    "uninspected": [
+      "/settings"
+    ],
+    "runtimePages": 2,
+    "runtimeCaptures": 22,
+    "networkAttempts": 19,
+    "forbiddenArrivals": 0
+  },
+  "elapsedMs": 3146.9988,
+  "maxRssKiB": 229144,
+  "gaps": [
+    "browser-disabled-channels",
+    "browser-disabled-channels",
+    "unrouted-browser-traffic",
+    "unrouted-browser-traffic",
+    "unrouted-browser-traffic",
+    "invalid-map",
+    "debugger-target-limit",
+    "unrouted-browser-traffic",
+    "unrouted-browser-traffic",
+    "unrouted-browser-traffic",
+    "debugger-target-limit",
+    "scope",
+    "credential-in-request",
+    "scope"
+  ],
+  "limitations": [
+    "One synthetic dynamic application group, no population accuracy inference.",
+    "Matched settings, seed, bodies and installed Chromium; two explicitly approved browser routes.",
+    "Node peak RSS includes worker memory; native browser child memory is not included."
+  ]
+}

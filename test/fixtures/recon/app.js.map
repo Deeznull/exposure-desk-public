@@ -1,0 +1,19 @@
+{
+ "version": 3,
+ "file": "app.js",
+ "sourceRoot": "",
+ "sources": [
+  "webpack://shop/./src/index.ts",
+  "webpack://shop/./src/api/client.ts",
+  "webpack://shop/../node_modules/tiny-lib/index.js",
+  "webpack://shop/./src/missing.ts"
+ ],
+ "sourcesContent": [
+  "import {client} from \"./api/client\";\nexport const start=()=>client.get(\"/api/v2/health\");\n",
+  "export const client={get:(p:string)=>fetch(p)};\n",
+  "module.exports=function tiny(){return 1;};\n",
+  null
+ ],
+ "names": [],
+ "mappings": "AAAA"
+}

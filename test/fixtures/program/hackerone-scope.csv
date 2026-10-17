@@ -1,0 +1,12 @@
+identifier,asset_type,instruction,eligible_for_bounty,eligible_for_submission,availability_requirement,confidentiality_requirement,integrity_requirement,max_severity,system_tags,created_at,updated_at
+app.acme.example,URL,"Main web application.
+Use the ""X-Bug-Bounty"" header, please.",true,true,high,high,high,critical,,2026-01-01 00:00:00 UTC,2026-01-02 00:00:00 UTC
+*.acme.example,WILDCARD,Any subdomain,true,true,,,,critical,,2026-01-01 00:00:00 UTC,2026-01-02 00:00:00 UTC
+https://api.acme.test/v2/,URL,Version 2 only,true,true,,,,high,,2026-01-01 00:00:00 UTC,2026-01-02 00:00:00 UTC
+legacy.acme.example,URL,Retired; reports not accepted,false,false,,,,none,,2026-01-01 00:00:00 UTC,2026-01-02 00:00:00 UTC
+"staging.acme.example, beta.acme.example",URL,Two hosts in one row,true,true,,,,medium,,2026-01-01 00:00:00 UTC,2026-01-02 00:00:00 UTC
+192.0.2.0/24,CIDR,Documentation range,true,true,,,,medium,,2026-01-01 00:00:00 UTC,2026-01-02 00:00:00 UTC
+portal.example.gov,URL,Must never be scanned,true,true,,,,critical,,2026-01-01 00:00:00 UTC,2026-01-02 00:00:00 UTC
+com.acme.mobile,GOOGLE_PLAY_APP_ID,Android app,true,true,,,,high,,2026-01-01 00:00:00 UTC,2026-01-02 00:00:00 UTC
+Main web application,OTHER,Described in words,true,true,,,,low,,2026-01-01 00:00:00 UTC,2026-01-02 00:00:00 UTC
+*.com,WILDCARD,Mistakenly broad,true,true,,,,low,,2026-01-01 00:00:00 UTC,2026-01-02 00:00:00 UTC

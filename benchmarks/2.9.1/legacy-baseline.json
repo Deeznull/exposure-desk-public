@@ -1,0 +1,10 @@
+{
+  "source": "benchmarks/2.9.0",
+  "legacy": "final-legacy-evaluation.json",
+  "acquisition": "final-acquisition.json",
+  "build": "2.9.0+b251a3ea63449d85",
+  "measured": "2026-10-15",
+  "decision": "owner decision 2026-10-11",
+  "condition": "git diff v2.9.0..HEAD is empty for scripts/upgrade-evaluate.mjs, scripts/upgrade-corpus.mjs and scripts/upgrade-acquisition.mjs (their corpora are inline; corpus digests unchanged); the recorded 2.9.0 side ran on the released 2.9.0 build with Node v24.18.1, the same runtime as this release",
+  "note": "2.9.0 legacy-evaluation figures reused from the 2.9.0 release records (owner decision 2026-10-11), not re-measured"
+}

@@ -1,0 +1,26 @@
+{
+  "schema": "repair-verification/1",
+  "at": "2026-10-06T19:56:27.641Z",
+  "build": {
+    "version": "2.3.1-rc.1",
+    "id": "2.3.1-rc.1+d80fa89a980f71c3",
+    "sourceDigest": "d80fa89a980f71c38c83c1a46d4cba16143cc160765bcc3e342094a93b57856d"
+  },
+  "platform": "win32",
+  "arch": "x64",
+  "node": "v24.18.1",
+  "runs": [
+    {
+      "name": "nonbrowser",
+      "exit": 1,
+      "elapsedMs": 133035,
+      "counts": [
+        "# tests 208",
+        "# pass 207",
+        "# fail 1",
+        "# skipped 0",
+        "# duration_ms 132937.7188"
+      ]
+    }
+  ]
+}

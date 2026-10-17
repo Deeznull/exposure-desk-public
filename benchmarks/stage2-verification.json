@@ -1,0 +1,73 @@
+{
+  "schema": "stage2-verification/1",
+  "at": "2026-10-06T18:23:22.109Z",
+  "build": {
+    "version": "2.3.0-rc.1",
+    "id": "2.3.0-rc.1+5fd9435d84e583c6",
+    "sourceDigest": "5fd9435d84e583c60e6c96b8727db9dca5b70ecc2a7eb83eace453768b202052"
+  },
+  "platform": "win32",
+  "arch": "x64",
+  "node": "v24.18.1",
+  "runs": [
+    {
+      "name": "nonbrowser",
+      "exit": 0,
+      "elapsedMs": 215911,
+      "counts": [
+        "# tests 192",
+        "# pass 192",
+        "# fail 0",
+        "# skipped 0",
+        "# duration_ms 215738.7666"
+      ]
+    },
+    {
+      "name": "browser",
+      "exit": 0,
+      "elapsedMs": 176266,
+      "counts": [
+        "# tests 4",
+        "# pass 4",
+        "# fail 0",
+        "# skipped 0",
+        "# duration_ms 176097.8027"
+      ]
+    },
+    {
+      "name": "benchmark",
+      "exit": 0,
+      "elapsedMs": 82912,
+      "counts": null
+    },
+    {
+      "name": "heldout",
+      "exit": 0,
+      "elapsedMs": 46647,
+      "counts": null
+    },
+    {
+      "name": "pipeline",
+      "exit": 0,
+      "elapsedMs": 61071,
+      "counts": null
+    },
+    {
+      "name": "cli",
+      "exit": 0,
+      "elapsedMs": 21395,
+      "counts": null
+    },
+    {
+      "name": "persistence",
+      "exit": 0,
+      "elapsedMs": 13633,
+      "counts": null
+    }
+  ],
+  "parity": {
+    "status": "verified",
+    "compiled": "2.3.0-rc.1+5fd9435d84e583c6",
+    "launched": "2.3.0-rc.1+5fd9435d84e583c6"
+  }
+}

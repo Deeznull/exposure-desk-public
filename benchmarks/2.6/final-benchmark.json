@@ -1,0 +1,2062 @@
+{
+  "schema": "exposure-benchmark/1",
+  "at": "2026-10-09T14:10:13.510Z",
+  "engines": {
+    "website": "website/2.6.0",
+    "gitleaks": "8.30.1",
+    "digest": "e163e53b9e7e8a8511e77271e2b323ed057759542a6d988258afe3a1fa329caf"
+  },
+  "summary": {
+    "planted": 110,
+    "detected": 110,
+    "missed": 0,
+    "falsePositives": 0,
+    "componentErrors": 0,
+    "locationErrors": 0,
+    "privateTargets": 106,
+    "publicTargets": 3,
+    "suspiciousTargets": 1
+  },
+  "results": [
+    {
+      "id": "openai-apiKey",
+      "provider": "OpenAI",
+      "expectedCategory": "private-credential",
+      "planted": 1,
+      "detected": 1,
+      "missed": 0,
+      "ruleIds": [
+        "provider-context:openai"
+      ],
+      "detectors": [
+        "provider-context"
+      ],
+      "categoryCorrect": true,
+      "componentsCorrect": true,
+      "locationCorrect": true,
+      "transformations": []
+    },
+    {
+      "id": "anthropic-apiKey",
+      "provider": "Anthropic",
+      "expectedCategory": "private-credential",
+      "planted": 1,
+      "detected": 1,
+      "missed": 0,
+      "ruleIds": [
+        "provider-context:anthropic"
+      ],
+      "detectors": [
+        "provider-context"
+      ],
+      "categoryCorrect": true,
+      "componentsCorrect": true,
+      "locationCorrect": true,
+      "transformations": []
+    },
+    {
+      "id": "cohere-apiKey",
+      "provider": "Cohere",
+      "expectedCategory": "private-credential",
+      "planted": 1,
+      "detected": 1,
+      "missed": 0,
+      "ruleIds": [
+        "provider-context:cohere"
+      ],
+      "detectors": [
+        "provider-context"
+      ],
+      "categoryCorrect": true,
+      "componentsCorrect": true,
+      "locationCorrect": true,
+      "transformations": []
+    },
+    {
+      "id": "replicate-apiKey",
+      "provider": "Replicate",
+      "expectedCategory": "private-credential",
+      "planted": 1,
+      "detected": 1,
+      "missed": 0,
+      "ruleIds": [
+        "provider-context:replicate"
+      ],
+      "detectors": [
+        "provider-context"
+      ],
+      "categoryCorrect": true,
+      "componentsCorrect": true,
+      "locationCorrect": true,
+      "transformations": []
+    },
+    {
+      "id": "hugging-face-apiKey",
+      "provider": "Hugging Face",
+      "expectedCategory": "private-credential",
+      "planted": 1,
+      "detected": 1,
+      "missed": 0,
+      "ruleIds": [
+        "provider-context:huggingface"
+      ],
+      "detectors": [
+        "provider-context"
+      ],
+      "categoryCorrect": true,
+      "componentsCorrect": true,
+      "locationCorrect": true,
+      "transformations": []
+    },
+    {
+      "id": "elevenlabs-apiKey",
+      "provider": "ElevenLabs",
+      "expectedCategory": "private-credential",
+      "planted": 1,
+      "detected": 1,
+      "missed": 0,
+      "ruleIds": [
+        "provider-context:elevenlabs"
+      ],
+      "detectors": [
+        "provider-context"
+      ],
+      "categoryCorrect": true,
+      "componentsCorrect": true,
+      "locationCorrect": true,
+      "transformations": []
+    },
+    {
+      "id": "stability-ai-apiKey",
+      "provider": "Stability AI",
+      "expectedCategory": "private-credential",
+      "planted": 1,
+      "detected": 1,
+      "missed": 0,
+      "ruleIds": [
+        "provider-context:stabilityai"
+      ],
+      "detectors": [
+        "provider-context"
+      ],
+      "categoryCorrect": true,
+      "componentsCorrect": true,
+      "locationCorrect": true,
+      "transformations": []
+    },
+    {
+      "id": "groq-apiKey",
+      "provider": "Groq",
+      "expectedCategory": "private-credential",
+      "planted": 1,
+      "detected": 1,
+      "missed": 0,
+      "ruleIds": [
+        "provider-context:groq"
+      ],
+      "detectors": [
+        "provider-context"
+      ],
+      "categoryCorrect": true,
+      "componentsCorrect": true,
+      "locationCorrect": true,
+      "transformations": []
+    },
+    {
+      "id": "mistral-apiKey",
+      "provider": "Mistral",
+      "expectedCategory": "private-credential",
+      "planted": 1,
+      "detected": 1,
+      "missed": 0,
+      "ruleIds": [
+        "provider-context:mistral"
+      ],
+      "detectors": [
+        "provider-context"
+      ],
+      "categoryCorrect": true,
+      "componentsCorrect": true,
+      "locationCorrect": true,
+      "transformations": []
+    },
+    {
+      "id": "perplexity-apiKey",
+      "provider": "Perplexity",
+      "expectedCategory": "private-credential",
+      "planted": 1,
+      "detected": 1,
+      "missed": 0,
+      "ruleIds": [
+        "provider-context:perplexity"
+      ],
+      "detectors": [
+        "provider-context"
+      ],
+      "categoryCorrect": true,
+      "componentsCorrect": true,
+      "locationCorrect": true,
+      "transformations": []
+    },
+    {
+      "id": "openrouter-apiKey",
+      "provider": "OpenRouter",
+      "expectedCategory": "private-credential",
+      "planted": 1,
+      "detected": 1,
+      "missed": 0,
+      "ruleIds": [
+        "provider-context:openrouter"
+      ],
+      "detectors": [
+        "provider-context"
+      ],
+      "categoryCorrect": true,
+      "componentsCorrect": true,
+      "locationCorrect": true,
+      "transformations": []
+    },
+    {
+      "id": "digitalocean-apiKey",
+      "provider": "DigitalOcean",
+      "expectedCategory": "private-credential",
+      "planted": 1,
+      "detected": 1,
+      "missed": 0,
+      "ruleIds": [
+        "provider-context:digitalocean"
+      ],
+      "detectors": [
+        "provider-context"
+      ],
+      "categoryCorrect": true,
+      "componentsCorrect": true,
+      "locationCorrect": true,
+      "transformations": []
+    },
+    {
+      "id": "sendgrid-apiKey",
+      "provider": "SendGrid",
+      "expectedCategory": "private-credential",
+      "planted": 1,
+      "detected": 1,
+      "missed": 0,
+      "ruleIds": [
+        "provider-context:sendgrid"
+      ],
+      "detectors": [
+        "provider-context"
+      ],
+      "categoryCorrect": true,
+      "componentsCorrect": true,
+      "locationCorrect": true,
+      "transformations": []
+    },
+    {
+      "id": "mailgun-apiKey",
+      "provider": "Mailgun",
+      "expectedCategory": "private-credential",
+      "planted": 1,
+      "detected": 1,
+      "missed": 0,
+      "ruleIds": [
+        "provider-context:mailgun"
+      ],
+      "detectors": [
+        "provider-context"
+      ],
+      "categoryCorrect": true,
+      "componentsCorrect": true,
+      "locationCorrect": true,
+      "transformations": []
+    },
+    {
+      "id": "vercel-apiKey",
+      "provider": "Vercel",
+      "expectedCategory": "private-credential",
+      "planted": 1,
+      "detected": 1,
+      "missed": 0,
+      "ruleIds": [
+        "provider-context:vercel"
+      ],
+      "detectors": [
+        "provider-context"
+      ],
+      "categoryCorrect": true,
+      "componentsCorrect": true,
+      "locationCorrect": true,
+      "transformations": []
+    },
+    {
+      "id": "netlify-apiKey",
+      "provider": "Netlify",
+      "expectedCategory": "private-credential",
+      "planted": 1,
+      "detected": 1,
+      "missed": 0,
+      "ruleIds": [
+        "provider-context:netlify"
+      ],
+      "detectors": [
+        "provider-context"
+      ],
+      "categoryCorrect": true,
+      "componentsCorrect": true,
+      "locationCorrect": true,
+      "transformations": []
+    },
+    {
+      "id": "heroku-apiKey",
+      "provider": "Heroku",
+      "expectedCategory": "private-credential",
+      "planted": 1,
+      "detected": 1,
+      "missed": 0,
+      "ruleIds": [
+        "provider-context:heroku"
+      ],
+      "detectors": [
+        "provider-context"
+      ],
+      "categoryCorrect": true,
+      "componentsCorrect": true,
+      "locationCorrect": true,
+      "transformations": []
+    },
+    {
+      "id": "sentry-apiKey",
+      "provider": "Sentry",
+      "expectedCategory": "private-credential",
+      "planted": 1,
+      "detected": 1,
+      "missed": 0,
+      "ruleIds": [
+        "provider-context:sentry"
+      ],
+      "detectors": [
+        "provider-context"
+      ],
+      "categoryCorrect": true,
+      "componentsCorrect": true,
+      "locationCorrect": true,
+      "transformations": []
+    },
+    {
+      "id": "square-apiKey",
+      "provider": "Square",
+      "expectedCategory": "private-credential",
+      "planted": 1,
+      "detected": 1,
+      "missed": 0,
+      "ruleIds": [
+        "provider-context:square"
+      ],
+      "detectors": [
+        "provider-context"
+      ],
+      "categoryCorrect": true,
+      "componentsCorrect": true,
+      "locationCorrect": true,
+      "transformations": []
+    },
+    {
+      "id": "openai-project",
+      "provider": "OpenAI",
+      "expectedCategory": "private-credential",
+      "planted": 1,
+      "detected": 1,
+      "missed": 0,
+      "ruleIds": [
+        "openai"
+      ],
+      "detectors": [
+        "website"
+      ],
+      "categoryCorrect": true,
+      "componentsCorrect": true,
+      "locationCorrect": true,
+      "transformations": []
+    },
+    {
+      "id": "anthropic-api",
+      "provider": "Anthropic",
+      "expectedCategory": "private-credential",
+      "planted": 1,
+      "detected": 1,
+      "missed": 0,
+      "ruleIds": [
+        "anthropic"
+      ],
+      "detectors": [
+        "website"
+      ],
+      "categoryCorrect": true,
+      "componentsCorrect": true,
+      "locationCorrect": true,
+      "transformations": []
+    },
+    {
+      "id": "hf",
+      "provider": "Hugging Face",
+      "expectedCategory": "private-credential",
+      "planted": 1,
+      "detected": 1,
+      "missed": 0,
+      "ruleIds": [
+        "huggingface"
+      ],
+      "detectors": [
+        "website"
+      ],
+      "categoryCorrect": true,
+      "componentsCorrect": true,
+      "locationCorrect": true,
+      "transformations": []
+    },
+    {
+      "id": "replicate",
+      "provider": "Replicate",
+      "expectedCategory": "private-credential",
+      "planted": 1,
+      "detected": 1,
+      "missed": 0,
+      "ruleIds": [
+        "replicate"
+      ],
+      "detectors": [
+        "website"
+      ],
+      "categoryCorrect": true,
+      "componentsCorrect": true,
+      "locationCorrect": true,
+      "transformations": []
+    },
+    {
+      "id": "sendgrid",
+      "provider": "SendGrid",
+      "expectedCategory": "private-credential",
+      "planted": 1,
+      "detected": 1,
+      "missed": 0,
+      "ruleIds": [
+        "sendgrid"
+      ],
+      "detectors": [
+        "website"
+      ],
+      "categoryCorrect": true,
+      "componentsCorrect": true,
+      "locationCorrect": true,
+      "transformations": []
+    },
+    {
+      "id": "groq",
+      "provider": "Groq",
+      "expectedCategory": "private-credential",
+      "planted": 1,
+      "detected": 1,
+      "missed": 0,
+      "ruleIds": [
+        "groq"
+      ],
+      "detectors": [
+        "website"
+      ],
+      "categoryCorrect": true,
+      "componentsCorrect": true,
+      "locationCorrect": true,
+      "transformations": []
+    },
+    {
+      "id": "perplexity",
+      "provider": "Perplexity",
+      "expectedCategory": "private-credential",
+      "planted": 1,
+      "detected": 1,
+      "missed": 0,
+      "ruleIds": [
+        "perplexity"
+      ],
+      "detectors": [
+        "website"
+      ],
+      "categoryCorrect": true,
+      "componentsCorrect": true,
+      "locationCorrect": true,
+      "transformations": []
+    },
+    {
+      "id": "openrouter",
+      "provider": "OpenRouter",
+      "expectedCategory": "private-credential",
+      "planted": 1,
+      "detected": 1,
+      "missed": 0,
+      "ruleIds": [
+        "openrouter"
+      ],
+      "detectors": [
+        "website"
+      ],
+      "categoryCorrect": true,
+      "componentsCorrect": true,
+      "locationCorrect": true,
+      "transformations": []
+    },
+    {
+      "id": "digitalocean-pat",
+      "provider": "DigitalOcean",
+      "expectedCategory": "private-credential",
+      "planted": 1,
+      "detected": 1,
+      "missed": 0,
+      "ruleIds": [
+        "digitalocean"
+      ],
+      "detectors": [
+        "website"
+      ],
+      "categoryCorrect": true,
+      "componentsCorrect": true,
+      "locationCorrect": true,
+      "transformations": []
+    },
+    {
+      "id": "digitalocean-oauth",
+      "provider": "DigitalOcean",
+      "expectedCategory": "private-credential",
+      "planted": 1,
+      "detected": 1,
+      "missed": 0,
+      "ruleIds": [
+        "digitalocean"
+      ],
+      "detectors": [
+        "website"
+      ],
+      "categoryCorrect": true,
+      "componentsCorrect": true,
+      "locationCorrect": true,
+      "transformations": []
+    },
+    {
+      "id": "bedrock-long",
+      "provider": "AWS Bedrock",
+      "expectedCategory": "private-credential",
+      "planted": 1,
+      "detected": 1,
+      "missed": 0,
+      "ruleIds": [
+        "bedrock-bearer"
+      ],
+      "detectors": [
+        "website"
+      ],
+      "categoryCorrect": true,
+      "componentsCorrect": true,
+      "locationCorrect": true,
+      "transformations": []
+    },
+    {
+      "id": "bedrock-short",
+      "provider": "AWS Bedrock",
+      "expectedCategory": "private-credential",
+      "planted": 1,
+      "detected": 1,
+      "missed": 0,
+      "ruleIds": [
+        "bedrock-bearer"
+      ],
+      "detectors": [
+        "website"
+      ],
+      "categoryCorrect": true,
+      "componentsCorrect": true,
+      "locationCorrect": true,
+      "transformations": []
+    },
+    {
+      "id": "stripe-org",
+      "provider": "Stripe",
+      "expectedCategory": "private-credential",
+      "planted": 1,
+      "detected": 1,
+      "missed": 0,
+      "ruleIds": [
+        "stripe-org"
+      ],
+      "detectors": [
+        "website"
+      ],
+      "categoryCorrect": true,
+      "componentsCorrect": true,
+      "locationCorrect": true,
+      "transformations": []
+    },
+    {
+      "id": "stripe-sk-live",
+      "provider": "Stripe",
+      "expectedCategory": "private-credential",
+      "planted": 1,
+      "detected": 1,
+      "missed": 0,
+      "ruleIds": [
+        "stripe-secret"
+      ],
+      "detectors": [
+        "website"
+      ],
+      "categoryCorrect": true,
+      "componentsCorrect": true,
+      "locationCorrect": true,
+      "transformations": []
+    },
+    {
+      "id": "stripe-rk-live",
+      "provider": "Stripe",
+      "expectedCategory": "private-credential",
+      "planted": 1,
+      "detected": 1,
+      "missed": 0,
+      "ruleIds": [
+        "stripe-secret"
+      ],
+      "detectors": [
+        "website"
+      ],
+      "categoryCorrect": true,
+      "componentsCorrect": true,
+      "locationCorrect": true,
+      "transformations": []
+    },
+    {
+      "id": "stripe-sk-test",
+      "provider": "Stripe",
+      "expectedCategory": "private-credential",
+      "planted": 1,
+      "detected": 1,
+      "missed": 0,
+      "ruleIds": [
+        "stripe-secret"
+      ],
+      "detectors": [
+        "website"
+      ],
+      "categoryCorrect": true,
+      "componentsCorrect": true,
+      "locationCorrect": true,
+      "transformations": []
+    },
+    {
+      "id": "stripe-rk-test",
+      "provider": "Stripe",
+      "expectedCategory": "private-credential",
+      "planted": 1,
+      "detected": 1,
+      "missed": 0,
+      "ruleIds": [
+        "stripe-secret"
+      ],
+      "detectors": [
+        "website"
+      ],
+      "categoryCorrect": true,
+      "componentsCorrect": true,
+      "locationCorrect": true,
+      "transformations": []
+    },
+    {
+      "id": "stripe-pk-live",
+      "provider": "Stripe",
+      "expectedCategory": "public-identifier",
+      "planted": 1,
+      "detected": 1,
+      "missed": 0,
+      "ruleIds": [
+        "stripe-public"
+      ],
+      "detectors": [
+        "website"
+      ],
+      "categoryCorrect": true,
+      "componentsCorrect": true,
+      "locationCorrect": true,
+      "transformations": []
+    },
+    {
+      "id": "stripe-pk-test",
+      "provider": "Stripe",
+      "expectedCategory": "public-identifier",
+      "planted": 1,
+      "detected": 1,
+      "missed": 0,
+      "ruleIds": [
+        "stripe-public"
+      ],
+      "detectors": [
+        "website"
+      ],
+      "categoryCorrect": true,
+      "componentsCorrect": true,
+      "locationCorrect": true,
+      "transformations": []
+    },
+    {
+      "id": "stripe-webhook",
+      "provider": "Stripe",
+      "expectedCategory": "private-credential",
+      "planted": 1,
+      "detected": 1,
+      "missed": 0,
+      "ruleIds": [
+        "stripe-signing"
+      ],
+      "detectors": [
+        "website"
+      ],
+      "categoryCorrect": true,
+      "componentsCorrect": true,
+      "locationCorrect": true,
+      "transformations": []
+    },
+    {
+      "id": "google-api",
+      "provider": "Google / Gemini",
+      "expectedCategory": "suspicious",
+      "planted": 1,
+      "detected": 1,
+      "missed": 0,
+      "ruleIds": [
+        "google-api"
+      ],
+      "detectors": [
+        "website"
+      ],
+      "categoryCorrect": true,
+      "componentsCorrect": true,
+      "locationCorrect": true,
+      "transformations": []
+    },
+    {
+      "id": "sentry-auth",
+      "provider": "Sentry",
+      "expectedCategory": "private-credential",
+      "planted": 1,
+      "detected": 1,
+      "missed": 0,
+      "ruleIds": [
+        "sentry-auth"
+      ],
+      "detectors": [
+        "website"
+      ],
+      "categoryCorrect": true,
+      "componentsCorrect": true,
+      "locationCorrect": true,
+      "transformations": []
+    },
+    {
+      "id": "mailgun-public",
+      "provider": "Mailgun",
+      "expectedCategory": "public-identifier",
+      "planted": 1,
+      "detected": 1,
+      "missed": 0,
+      "ruleIds": [
+        "mailgun-public"
+      ],
+      "detectors": [
+        "website"
+      ],
+      "categoryCorrect": true,
+      "componentsCorrect": true,
+      "locationCorrect": true,
+      "transformations": []
+    },
+    {
+      "id": "cloudflare-user",
+      "provider": "Cloudflare",
+      "expectedCategory": "private-credential",
+      "planted": 1,
+      "detected": 1,
+      "missed": 0,
+      "ruleIds": [
+        "cloudflare-prefixed"
+      ],
+      "detectors": [
+        "website"
+      ],
+      "categoryCorrect": true,
+      "componentsCorrect": true,
+      "locationCorrect": true,
+      "transformations": []
+    },
+    {
+      "id": "cloudflare-account",
+      "provider": "Cloudflare",
+      "expectedCategory": "private-credential",
+      "planted": 1,
+      "detected": 1,
+      "missed": 0,
+      "ruleIds": [
+        "cloudflare-prefixed"
+      ],
+      "detectors": [
+        "website"
+      ],
+      "categoryCorrect": true,
+      "componentsCorrect": true,
+      "locationCorrect": true,
+      "transformations": []
+    },
+    {
+      "id": "cloudflare-global",
+      "provider": "Cloudflare",
+      "expectedCategory": "private-credential",
+      "planted": 1,
+      "detected": 1,
+      "missed": 0,
+      "ruleIds": [
+        "cloudflare-prefixed"
+      ],
+      "detectors": [
+        "website"
+      ],
+      "categoryCorrect": true,
+      "componentsCorrect": true,
+      "locationCorrect": true,
+      "transformations": []
+    },
+    {
+      "id": "cloudflare-access",
+      "provider": "Cloudflare",
+      "expectedCategory": "private-credential",
+      "planted": 1,
+      "detected": 1,
+      "missed": 0,
+      "ruleIds": [
+        "cloudflare-prefixed"
+      ],
+      "detectors": [
+        "website"
+      ],
+      "categoryCorrect": true,
+      "componentsCorrect": true,
+      "locationCorrect": true,
+      "transformations": []
+    },
+    {
+      "id": "github",
+      "provider": "GitHub",
+      "expectedCategory": "private-credential",
+      "planted": 1,
+      "detected": 1,
+      "missed": 0,
+      "ruleIds": [
+        "github"
+      ],
+      "detectors": [
+        "website"
+      ],
+      "categoryCorrect": true,
+      "componentsCorrect": true,
+      "locationCorrect": true,
+      "transformations": []
+    },
+    {
+      "id": "supabase",
+      "provider": "Supabase",
+      "expectedCategory": "private-credential",
+      "planted": 1,
+      "detected": 1,
+      "missed": 0,
+      "ruleIds": [
+        "supabase-secret"
+      ],
+      "detectors": [
+        "website"
+      ],
+      "categoryCorrect": true,
+      "componentsCorrect": true,
+      "locationCorrect": true,
+      "transformations": []
+    },
+    {
+      "id": "aws-long",
+      "provider": "AWS",
+      "expectedCategory": "private-credential",
+      "planted": 1,
+      "detected": 1,
+      "missed": 0,
+      "ruleIds": [
+        "provider-context:aws"
+      ],
+      "detectors": [
+        "provider-context"
+      ],
+      "categoryCorrect": true,
+      "componentsCorrect": true,
+      "locationCorrect": true,
+      "transformations": []
+    },
+    {
+      "id": "aws-temp",
+      "provider": "AWS",
+      "expectedCategory": "private-credential",
+      "planted": 1,
+      "detected": 1,
+      "missed": 0,
+      "ruleIds": [
+        "provider-context:aws"
+      ],
+      "detectors": [
+        "provider-context"
+      ],
+      "categoryCorrect": true,
+      "componentsCorrect": true,
+      "locationCorrect": true,
+      "transformations": []
+    },
+    {
+      "id": "aws-temp-partial",
+      "provider": "AWS",
+      "expectedCategory": "private-credential",
+      "planted": 1,
+      "detected": 1,
+      "missed": 0,
+      "ruleIds": [
+        "provider-context:aws"
+      ],
+      "detectors": [
+        "provider-context"
+      ],
+      "categoryCorrect": true,
+      "componentsCorrect": true,
+      "locationCorrect": true,
+      "transformations": []
+    },
+    {
+      "id": "route53",
+      "provider": "AWS Route53",
+      "expectedCategory": "private-credential",
+      "planted": 1,
+      "detected": 1,
+      "missed": 0,
+      "ruleIds": [
+        "provider-context:awsroute53"
+      ],
+      "detectors": [
+        "provider-context"
+      ],
+      "categoryCorrect": true,
+      "componentsCorrect": true,
+      "locationCorrect": true,
+      "transformations": []
+    },
+    {
+      "id": "azure-client",
+      "provider": "Azure",
+      "expectedCategory": "private-credential",
+      "planted": 1,
+      "detected": 1,
+      "missed": 0,
+      "ruleIds": [
+        "provider-context:azure"
+      ],
+      "detectors": [
+        "provider-context"
+      ],
+      "categoryCorrect": true,
+      "componentsCorrect": true,
+      "locationCorrect": true,
+      "transformations": []
+    },
+    {
+      "id": "paypal-complete",
+      "provider": "PayPal",
+      "expectedCategory": "private-credential",
+      "planted": 1,
+      "detected": 1,
+      "missed": 0,
+      "ruleIds": [
+        "provider-context:paypal"
+      ],
+      "detectors": [
+        "provider-context"
+      ],
+      "categoryCorrect": true,
+      "componentsCorrect": true,
+      "locationCorrect": true,
+      "transformations": []
+    },
+    {
+      "id": "paypal-partial",
+      "provider": "PayPal",
+      "expectedCategory": "private-credential",
+      "planted": 1,
+      "detected": 1,
+      "missed": 0,
+      "ruleIds": [
+        "provider-context:paypal"
+      ],
+      "detectors": [
+        "provider-context"
+      ],
+      "categoryCorrect": true,
+      "componentsCorrect": true,
+      "locationCorrect": true,
+      "transformations": []
+    },
+    {
+      "id": "braintree",
+      "provider": "Braintree",
+      "expectedCategory": "private-credential",
+      "planted": 1,
+      "detected": 1,
+      "missed": 0,
+      "ruleIds": [
+        "provider-context:braintree"
+      ],
+      "detectors": [
+        "provider-context"
+      ],
+      "categoryCorrect": true,
+      "componentsCorrect": true,
+      "locationCorrect": true,
+      "transformations": []
+    },
+    {
+      "id": "twilio-auth",
+      "provider": "Twilio",
+      "expectedCategory": "private-credential",
+      "planted": 1,
+      "detected": 1,
+      "missed": 0,
+      "ruleIds": [
+        "provider-context:twilio"
+      ],
+      "detectors": [
+        "provider-context"
+      ],
+      "categoryCorrect": true,
+      "componentsCorrect": true,
+      "locationCorrect": true,
+      "transformations": []
+    },
+    {
+      "id": "twilio-api",
+      "provider": "Twilio",
+      "expectedCategory": "private-credential",
+      "planted": 1,
+      "detected": 1,
+      "missed": 0,
+      "ruleIds": [
+        "provider-context:twilio"
+      ],
+      "detectors": [
+        "provider-context"
+      ],
+      "categoryCorrect": true,
+      "componentsCorrect": true,
+      "locationCorrect": true,
+      "transformations": []
+    },
+    {
+      "id": "kraken",
+      "provider": "Kraken",
+      "expectedCategory": "private-credential",
+      "planted": 1,
+      "detected": 1,
+      "missed": 0,
+      "ruleIds": [
+        "provider-context:kraken"
+      ],
+      "detectors": [
+        "provider-context"
+      ],
+      "categoryCorrect": true,
+      "componentsCorrect": true,
+      "locationCorrect": true,
+      "transformations": []
+    },
+    {
+      "id": "binance",
+      "provider": "Binance",
+      "expectedCategory": "private-credential",
+      "planted": 1,
+      "detected": 1,
+      "missed": 0,
+      "ruleIds": [
+        "provider-context:binance"
+      ],
+      "detectors": [
+        "provider-context"
+      ],
+      "categoryCorrect": true,
+      "componentsCorrect": true,
+      "locationCorrect": true,
+      "transformations": []
+    },
+    {
+      "id": "coinbase-exchange",
+      "provider": "Coinbase",
+      "expectedCategory": "private-credential",
+      "planted": 1,
+      "detected": 1,
+      "missed": 0,
+      "ruleIds": [
+        "provider-context:coinbase"
+      ],
+      "detectors": [
+        "provider-context"
+      ],
+      "categoryCorrect": true,
+      "componentsCorrect": true,
+      "locationCorrect": true,
+      "transformations": []
+    },
+    {
+      "id": "vonage",
+      "provider": "Vonage",
+      "expectedCategory": "private-credential",
+      "planted": 1,
+      "detected": 1,
+      "missed": 0,
+      "ruleIds": [
+        "provider-context:vonage"
+      ],
+      "detectors": [
+        "provider-context"
+      ],
+      "categoryCorrect": true,
+      "componentsCorrect": true,
+      "locationCorrect": true,
+      "transformations": []
+    },
+    {
+      "id": "godaddy",
+      "provider": "GoDaddy",
+      "expectedCategory": "private-credential",
+      "planted": 1,
+      "detected": 1,
+      "missed": 0,
+      "ruleIds": [
+        "provider-context:godaddy"
+      ],
+      "detectors": [
+        "provider-context"
+      ],
+      "categoryCorrect": true,
+      "componentsCorrect": true,
+      "locationCorrect": true,
+      "transformations": []
+    },
+    {
+      "id": "namecheap",
+      "provider": "Namecheap",
+      "expectedCategory": "private-credential",
+      "planted": 1,
+      "detected": 1,
+      "missed": 0,
+      "ruleIds": [
+        "provider-context:namecheap"
+      ],
+      "detectors": [
+        "provider-context"
+      ],
+      "categoryCorrect": true,
+      "componentsCorrect": true,
+      "locationCorrect": true,
+      "transformations": []
+    },
+    {
+      "id": "cloudflare-global-pair",
+      "provider": "Cloudflare",
+      "expectedCategory": "private-credential",
+      "planted": 1,
+      "detected": 1,
+      "missed": 0,
+      "ruleIds": [
+        "provider-context:cloudflare"
+      ],
+      "detectors": [
+        "provider-context"
+      ],
+      "categoryCorrect": true,
+      "componentsCorrect": true,
+      "locationCorrect": true,
+      "transformations": []
+    },
+    {
+      "id": "cloudflare-apiToken",
+      "provider": "Cloudflare",
+      "expectedCategory": "private-credential",
+      "planted": 1,
+      "detected": 1,
+      "missed": 0,
+      "ruleIds": [
+        "provider-context:cloudflare"
+      ],
+      "detectors": [
+        "provider-context"
+      ],
+      "categoryCorrect": true,
+      "componentsCorrect": true,
+      "locationCorrect": true,
+      "transformations": []
+    },
+    {
+      "id": "oauth-secret",
+      "provider": "OAuth",
+      "expectedCategory": "private-credential",
+      "planted": 1,
+      "detected": 1,
+      "missed": 0,
+      "ruleIds": [
+        "provider-context:oauth"
+      ],
+      "detectors": [
+        "provider-context"
+      ],
+      "categoryCorrect": true,
+      "componentsCorrect": true,
+      "locationCorrect": true,
+      "transformations": []
+    },
+    {
+      "id": "google-service-account",
+      "provider": "Google Cloud",
+      "expectedCategory": "private-credential",
+      "planted": 1,
+      "detected": 1,
+      "missed": 0,
+      "ruleIds": [
+        "provider-context:googlecloud"
+      ],
+      "detectors": [
+        "provider-context"
+      ],
+      "categoryCorrect": true,
+      "componentsCorrect": true,
+      "locationCorrect": true,
+      "transformations": [
+        "Static string-escape decoding"
+      ]
+    },
+    {
+      "id": "coinbase-signing",
+      "provider": "Coinbase",
+      "expectedCategory": "private-credential",
+      "planted": 1,
+      "detected": 1,
+      "missed": 0,
+      "ruleIds": [
+        "provider-context:coinbase"
+      ],
+      "detectors": [
+        "provider-context"
+      ],
+      "categoryCorrect": true,
+      "componentsCorrect": true,
+      "locationCorrect": true,
+      "transformations": [
+        "Static string-escape decoding"
+      ]
+    },
+    {
+      "id": "vonage-signing",
+      "provider": "Vonage",
+      "expectedCategory": "private-credential",
+      "planted": 1,
+      "detected": 1,
+      "missed": 0,
+      "ruleIds": [
+        "provider-context:vonage"
+      ],
+      "detectors": [
+        "provider-context"
+      ],
+      "categoryCorrect": true,
+      "componentsCorrect": true,
+      "locationCorrect": true,
+      "transformations": [
+        "Static string-escape decoding"
+      ]
+    },
+    {
+      "id": "openai-accessToken",
+      "provider": "OpenAI",
+      "expectedCategory": "private-credential",
+      "planted": 1,
+      "detected": 1,
+      "missed": 0,
+      "ruleIds": [
+        "provider-context:openai"
+      ],
+      "detectors": [
+        "provider-context"
+      ],
+      "categoryCorrect": true,
+      "componentsCorrect": true,
+      "locationCorrect": true,
+      "transformations": []
+    },
+    {
+      "id": "anthropic-accessToken",
+      "provider": "Anthropic",
+      "expectedCategory": "private-credential",
+      "planted": 1,
+      "detected": 1,
+      "missed": 0,
+      "ruleIds": [
+        "provider-context:anthropic"
+      ],
+      "detectors": [
+        "provider-context"
+      ],
+      "categoryCorrect": true,
+      "componentsCorrect": true,
+      "locationCorrect": true,
+      "transformations": []
+    },
+    {
+      "id": "google-cloud-accessToken",
+      "provider": "Google Cloud",
+      "expectedCategory": "private-credential",
+      "planted": 1,
+      "detected": 1,
+      "missed": 0,
+      "ruleIds": [
+        "provider-context:googlecloud"
+      ],
+      "detectors": [
+        "provider-context"
+      ],
+      "categoryCorrect": true,
+      "componentsCorrect": true,
+      "locationCorrect": true,
+      "transformations": []
+    },
+    {
+      "id": "aws-bedrock-accessToken",
+      "provider": "AWS Bedrock",
+      "expectedCategory": "private-credential",
+      "planted": 1,
+      "detected": 1,
+      "missed": 0,
+      "ruleIds": [
+        "provider-context:awsbedrock"
+      ],
+      "detectors": [
+        "provider-context"
+      ],
+      "categoryCorrect": true,
+      "componentsCorrect": true,
+      "locationCorrect": true,
+      "transformations": []
+    },
+    {
+      "id": "godaddy-pat",
+      "provider": "GoDaddy",
+      "expectedCategory": "private-credential",
+      "planted": 1,
+      "detected": 1,
+      "missed": 0,
+      "ruleIds": [
+        "provider-context:godaddy"
+      ],
+      "detectors": [
+        "provider-context"
+      ],
+      "categoryCorrect": true,
+      "componentsCorrect": true,
+      "locationCorrect": true,
+      "transformations": []
+    },
+    {
+      "id": "env-crlf-location",
+      "provider": "GoDaddy",
+      "expectedCategory": "private-credential",
+      "planted": 1,
+      "detected": 1,
+      "missed": 0,
+      "ruleIds": [
+        "provider-context:godaddy"
+      ],
+      "detectors": [
+        "provider-context"
+      ],
+      "categoryCorrect": true,
+      "componentsCorrect": true,
+      "locationCorrect": true,
+      "transformations": []
+    },
+    {
+      "id": "qualified-json-openai",
+      "provider": "OpenAI",
+      "expectedCategory": "private-credential",
+      "planted": 1,
+      "detected": 1,
+      "missed": 0,
+      "ruleIds": [
+        "provider-context:openai"
+      ],
+      "detectors": [
+        "provider-context"
+      ],
+      "categoryCorrect": true,
+      "componentsCorrect": true,
+      "locationCorrect": true,
+      "transformations": []
+    },
+    {
+      "id": "qualified-json-aws",
+      "provider": "AWS",
+      "expectedCategory": "private-credential",
+      "planted": 1,
+      "detected": 1,
+      "missed": 0,
+      "ruleIds": [
+        "provider-context:aws"
+      ],
+      "detectors": [
+        "provider-context"
+      ],
+      "categoryCorrect": true,
+      "componentsCorrect": true,
+      "locationCorrect": true,
+      "transformations": []
+    },
+    {
+      "id": "openai-legacy",
+      "provider": "OpenAI",
+      "expectedCategory": "private-credential",
+      "planted": 1,
+      "detected": 1,
+      "missed": 0,
+      "ruleIds": [
+        "openai"
+      ],
+      "detectors": [
+        "website"
+      ],
+      "categoryCorrect": true,
+      "componentsCorrect": true,
+      "locationCorrect": true,
+      "transformations": []
+    },
+    {
+      "id": "openai-service-account",
+      "provider": "OpenAI",
+      "expectedCategory": "private-credential",
+      "planted": 1,
+      "detected": 1,
+      "missed": 0,
+      "ruleIds": [
+        "openai"
+      ],
+      "detectors": [
+        "website"
+      ],
+      "categoryCorrect": true,
+      "componentsCorrect": true,
+      "locationCorrect": true,
+      "transformations": []
+    },
+    {
+      "id": "anthropic-admin",
+      "provider": "Anthropic",
+      "expectedCategory": "private-credential",
+      "planted": 1,
+      "detected": 1,
+      "missed": 0,
+      "ruleIds": [
+        "anthropic"
+      ],
+      "detectors": [
+        "website"
+      ],
+      "categoryCorrect": true,
+      "componentsCorrect": true,
+      "locationCorrect": true,
+      "transformations": []
+    },
+    {
+      "id": "anthropic-oauth",
+      "provider": "Anthropic",
+      "expectedCategory": "private-credential",
+      "planted": 1,
+      "detected": 1,
+      "missed": 0,
+      "ruleIds": [
+        "anthropic"
+      ],
+      "detectors": [
+        "website"
+      ],
+      "categoryCorrect": true,
+      "componentsCorrect": true,
+      "locationCorrect": true,
+      "transformations": []
+    },
+    {
+      "id": "sentry-service",
+      "provider": "Sentry",
+      "expectedCategory": "private-credential",
+      "planted": 1,
+      "detected": 1,
+      "missed": 0,
+      "ruleIds": [
+        "sentry-auth"
+      ],
+      "detectors": [
+        "website"
+      ],
+      "categoryCorrect": true,
+      "componentsCorrect": true,
+      "locationCorrect": true,
+      "transformations": []
+    },
+    {
+      "id": "digitalocean-refresh",
+      "provider": "DigitalOcean",
+      "expectedCategory": "private-credential",
+      "planted": 1,
+      "detected": 1,
+      "missed": 0,
+      "ruleIds": [
+        "digitalocean"
+      ],
+      "detectors": [
+        "website"
+      ],
+      "categoryCorrect": true,
+      "componentsCorrect": true,
+      "locationCorrect": true,
+      "transformations": []
+    },
+    {
+      "id": "digitalocean-application",
+      "provider": "DigitalOcean",
+      "expectedCategory": "private-credential",
+      "planted": 1,
+      "detected": 1,
+      "missed": 0,
+      "ruleIds": [
+        "digitalocean"
+      ],
+      "detectors": [
+        "website"
+      ],
+      "categoryCorrect": true,
+      "componentsCorrect": true,
+      "locationCorrect": true,
+      "transformations": []
+    },
+    {
+      "id": "sdk-variable-split",
+      "provider": "Mistral",
+      "expectedCategory": "private-credential",
+      "planted": 1,
+      "detected": 1,
+      "missed": 0,
+      "ruleIds": [
+        "provider-context:mistral"
+      ],
+      "detectors": [
+        "provider-context"
+      ],
+      "categoryCorrect": true,
+      "componentsCorrect": true,
+      "locationCorrect": true,
+      "transformations": [
+        "Static string concatenation (no execution)",
+        "Static const variable reference (location is declaration)"
+      ]
+    },
+    {
+      "id": "request-header",
+      "provider": "ElevenLabs",
+      "expectedCategory": "private-credential",
+      "planted": 1,
+      "detected": 1,
+      "missed": 0,
+      "ruleIds": [
+        "provider-context:elevenlabs"
+      ],
+      "detectors": [
+        "provider-context"
+      ],
+      "categoryCorrect": true,
+      "componentsCorrect": true,
+      "locationCorrect": true,
+      "transformations": []
+    },
+    {
+      "id": "azure-account-key",
+      "provider": "Azure",
+      "expectedCategory": "private-credential",
+      "planted": 1,
+      "detected": 1,
+      "missed": 0,
+      "ruleIds": [
+        "provider-context:azure-storage-connection"
+      ],
+      "detectors": [
+        "provider-context"
+      ],
+      "categoryCorrect": true,
+      "componentsCorrect": true,
+      "locationCorrect": true,
+      "transformations": []
+    },
+    {
+      "id": "azure-sas",
+      "provider": "Azure",
+      "expectedCategory": "private-credential",
+      "planted": 1,
+      "detected": 1,
+      "missed": 0,
+      "ruleIds": [
+        "provider-context:azure"
+      ],
+      "detectors": [
+        "provider-context"
+      ],
+      "categoryCorrect": true,
+      "componentsCorrect": true,
+      "locationCorrect": true,
+      "transformations": [
+        "URL query decoding"
+      ]
+    },
+    {
+      "id": "wallet-mnemonic-field",
+      "provider": "Wallet seed phrase",
+      "expectedCategory": "private-credential",
+      "planted": 1,
+      "detected": 1,
+      "missed": 0,
+      "ruleIds": [
+        "bip39-mnemonic"
+      ],
+      "detectors": [
+        "website"
+      ],
+      "categoryCorrect": true,
+      "componentsCorrect": true,
+      "locationCorrect": true,
+      "transformations": []
+    },
+    {
+      "id": "wallet-wif",
+      "provider": "Wallet private key",
+      "expectedCategory": "private-credential",
+      "planted": 1,
+      "detected": 1,
+      "missed": 0,
+      "ruleIds": [
+        "wif-private-key"
+      ],
+      "detectors": [
+        "website"
+      ],
+      "categoryCorrect": true,
+      "componentsCorrect": true,
+      "locationCorrect": true,
+      "transformations": []
+    },
+    {
+      "id": "wallet-xprv",
+      "provider": "Wallet extended private key",
+      "expectedCategory": "private-credential",
+      "planted": 1,
+      "detected": 1,
+      "missed": 0,
+      "ruleIds": [
+        "extended-private-key"
+      ],
+      "detectors": [
+        "website"
+      ],
+      "categoryCorrect": true,
+      "componentsCorrect": true,
+      "locationCorrect": true,
+      "transformations": []
+    },
+    {
+      "id": "wallet-hex-constructor",
+      "provider": "Wallet private key",
+      "expectedCategory": "private-credential",
+      "planted": 1,
+      "detected": 1,
+      "missed": 0,
+      "ruleIds": [
+        "hex-private-key"
+      ],
+      "detectors": [
+        "website"
+      ],
+      "categoryCorrect": true,
+      "componentsCorrect": true,
+      "locationCorrect": true,
+      "transformations": []
+    },
+    {
+      "id": "wallet-solana",
+      "provider": "Wallet private key",
+      "expectedCategory": "private-credential",
+      "planted": 1,
+      "detected": 1,
+      "missed": 0,
+      "ruleIds": [
+        "solana-secret-key"
+      ],
+      "detectors": [
+        "website"
+      ],
+      "categoryCorrect": true,
+      "componentsCorrect": true,
+      "locationCorrect": true,
+      "transformations": []
+    },
+    {
+      "id": "jwk-ec-private",
+      "provider": "JWK private key",
+      "expectedCategory": "private-credential",
+      "planted": 1,
+      "detected": 1,
+      "missed": 0,
+      "ruleIds": [
+        "jwk-private-key"
+      ],
+      "detectors": [
+        "website"
+      ],
+      "categoryCorrect": true,
+      "componentsCorrect": true,
+      "locationCorrect": true,
+      "transformations": []
+    },
+    {
+      "id": "pgp-private-block",
+      "provider": "PGP private key",
+      "expectedCategory": "private-credential",
+      "planted": 1,
+      "detected": 1,
+      "missed": 0,
+      "ruleIds": [
+        "pgp-private-key"
+      ],
+      "detectors": [
+        "website"
+      ],
+      "categoryCorrect": true,
+      "componentsCorrect": true,
+      "locationCorrect": true,
+      "transformations": [
+        "Escaped PEM newline decoding",
+        "JavaScript string-escape decoding"
+      ]
+    },
+    {
+      "id": "signing-jwt-sign",
+      "provider": "Application signing",
+      "expectedCategory": "private-credential",
+      "planted": 1,
+      "detected": 1,
+      "missed": 0,
+      "ruleIds": [
+        "signing-sink"
+      ],
+      "detectors": [
+        "website"
+      ],
+      "categoryCorrect": true,
+      "componentsCorrect": true,
+      "locationCorrect": true,
+      "transformations": []
+    },
+    {
+      "id": "azure-ai-apiKey",
+      "provider": "Azure AI",
+      "expectedCategory": "private-credential",
+      "planted": 1,
+      "detected": 1,
+      "missed": 0,
+      "ruleIds": [
+        "provider-context:azureai"
+      ],
+      "detectors": [
+        "provider-context"
+      ],
+      "categoryCorrect": true,
+      "componentsCorrect": true,
+      "locationCorrect": true,
+      "transformations": []
+    },
+    {
+      "id": "resend-apiKey",
+      "provider": "Resend",
+      "expectedCategory": "private-credential",
+      "planted": 1,
+      "detected": 1,
+      "missed": 0,
+      "ruleIds": [
+        "provider-context:resend"
+      ],
+      "detectors": [
+        "provider-context"
+      ],
+      "categoryCorrect": true,
+      "componentsCorrect": true,
+      "locationCorrect": true,
+      "transformations": []
+    },
+    {
+      "id": "postmark-serverToken",
+      "provider": "Postmark",
+      "expectedCategory": "private-credential",
+      "planted": 1,
+      "detected": 1,
+      "missed": 0,
+      "ruleIds": [
+        "provider-context:postmark"
+      ],
+      "detectors": [
+        "provider-context"
+      ],
+      "categoryCorrect": true,
+      "componentsCorrect": true,
+      "locationCorrect": true,
+      "transformations": []
+    },
+    {
+      "id": "postmark-accountToken",
+      "provider": "Postmark",
+      "expectedCategory": "private-credential",
+      "planted": 1,
+      "detected": 1,
+      "missed": 0,
+      "ruleIds": [
+        "provider-context:postmark"
+      ],
+      "detectors": [
+        "provider-context"
+      ],
+      "categoryCorrect": true,
+      "componentsCorrect": true,
+      "locationCorrect": true,
+      "transformations": []
+    },
+    {
+      "id": "postmark-smtp",
+      "provider": "Postmark",
+      "expectedCategory": "private-credential",
+      "planted": 1,
+      "detected": 1,
+      "missed": 0,
+      "ruleIds": [
+        "provider-context:postmark"
+      ],
+      "detectors": [
+        "provider-context"
+      ],
+      "categoryCorrect": true,
+      "componentsCorrect": true,
+      "locationCorrect": true,
+      "transformations": []
+    },
+    {
+      "id": "postmark-header",
+      "provider": "Postmark",
+      "expectedCategory": "private-credential",
+      "planted": 1,
+      "detected": 1,
+      "missed": 0,
+      "ruleIds": [
+        "provider-context:postmark"
+      ],
+      "detectors": [
+        "provider-context"
+      ],
+      "categoryCorrect": true,
+      "componentsCorrect": true,
+      "locationCorrect": true,
+      "transformations": []
+    },
+    {
+      "id": "azure-ai-request",
+      "provider": "Azure AI",
+      "expectedCategory": "private-credential",
+      "planted": 1,
+      "detected": 1,
+      "missed": 0,
+      "ruleIds": [
+        "provider-context:azureai"
+      ],
+      "detectors": [
+        "provider-context"
+      ],
+      "categoryCorrect": true,
+      "componentsCorrect": true,
+      "locationCorrect": true,
+      "transformations": []
+    },
+    {
+      "id": "azure-ai-sdk",
+      "provider": "Azure AI",
+      "expectedCategory": "private-credential",
+      "planted": 1,
+      "detected": 1,
+      "missed": 0,
+      "ruleIds": [
+        "provider-context:azureai"
+      ],
+      "detectors": [
+        "provider-context"
+      ],
+      "categoryCorrect": true,
+      "componentsCorrect": true,
+      "locationCorrect": true,
+      "transformations": []
+    },
+    {
+      "id": "resend-prefix",
+      "provider": "Resend",
+      "expectedCategory": "private-credential",
+      "planted": 1,
+      "detected": 1,
+      "missed": 0,
+      "ruleIds": [
+        "resend-key"
+      ],
+      "detectors": [
+        "website"
+      ],
+      "categoryCorrect": true,
+      "componentsCorrect": true,
+      "locationCorrect": true,
+      "transformations": []
+    },
+    {
+      "id": "resend-sdk",
+      "provider": "Resend",
+      "expectedCategory": "private-credential",
+      "planted": 1,
+      "detected": 1,
+      "missed": 0,
+      "ruleIds": [
+        "provider-context:resend"
+      ],
+      "detectors": [
+        "provider-context"
+      ],
+      "categoryCorrect": true,
+      "componentsCorrect": true,
+      "locationCorrect": true,
+      "transformations": []
+    },
+    {
+      "id": "aws-signed-url",
+      "provider": "AWS",
+      "expectedCategory": "private-credential",
+      "planted": 1,
+      "detected": 1,
+      "missed": 0,
+      "ruleIds": [
+        "capability:aws-presigned-url"
+      ],
+      "detectors": [
+        "capability"
+      ],
+      "categoryCorrect": true,
+      "componentsCorrect": true,
+      "locationCorrect": true,
+      "transformations": []
+    },
+    {
+      "id": "google-signed-url",
+      "provider": "Google Cloud",
+      "expectedCategory": "private-credential",
+      "planted": 1,
+      "detected": 1,
+      "missed": 0,
+      "ruleIds": [
+        "capability:google-signed-url"
+      ],
+      "detectors": [
+        "capability"
+      ],
+      "categoryCorrect": true,
+      "componentsCorrect": true,
+      "locationCorrect": true,
+      "transformations": []
+    },
+    {
+      "id": "slack-webhook-capability",
+      "provider": "Slack",
+      "expectedCategory": "private-credential",
+      "planted": 1,
+      "detected": 1,
+      "missed": 0,
+      "ruleIds": [
+        "capability:slack-webhook-url"
+      ],
+      "detectors": [
+        "capability"
+      ],
+      "categoryCorrect": true,
+      "componentsCorrect": true,
+      "locationCorrect": true,
+      "transformations": []
+    }
+  ],
+  "negatives": [
+    {
+      "id": "wallet-lookalikes",
+      "falsePositives": 0
+    },
+    {
+      "id": "wallet-invalid-phrase",
+      "falsePositives": 0
+    },
+    {
+      "id": "placeholders",
+      "falsePositives": 0
+    },
+    {
+      "id": "public-identifiers",
+      "falsePositives": 0
+    },
+    {
+      "id": "ordinary-hashes",
+      "falsePositives": 0
+    },
+    {
+      "id": "provider-public-test-marker",
+      "falsePositives": 0
+    },
+    {
+      "id": "unsigned-storage-links",
+      "falsePositives": 0
+    },
+    {
+      "id": "unrelated-objects",
+      "falsePositives": 0
+    },
+    {
+      "id": "reassigned-variable",
+      "falsePositives": 0
+    }
+  ],
+  "issues": [],
+  "skipped": [
+    "Future/undocumented key formats",
+    "Arbitrary executable obfuscation",
+    "Encrypted/compressed embedded archives",
+    "Online credential validity and permission checks (intentionally forbidden)"
+  ],
+  "limits": "Synthetic fixture success does not guarantee universal detection; contextual opaque formats require explicit provider evidence."
+}

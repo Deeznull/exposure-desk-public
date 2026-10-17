@@ -1,0 +1,4797 @@
+{
+  "version": "2.1.0",
+  "$schema": "https://json.schemastore.org/sarif-2.1.0.json",
+  "runs": [
+    {
+      "tool": {
+        "driver": {
+          "name": "Exposure Desk",
+          "version": "2.4.0-rc.1",
+          "semanticVersion": "2.4.0-rc.1",
+          "rules": [
+            {
+              "id": "github",
+              "shortDescription": {
+                "text": "github"
+              }
+            },
+            {
+              "id": "openai",
+              "shortDescription": {
+                "text": "openai"
+              }
+            },
+            {
+              "id": "anthropic",
+              "shortDescription": {
+                "text": "anthropic"
+              }
+            },
+            {
+              "id": "google-api",
+              "shortDescription": {
+                "text": "google-api"
+              }
+            },
+            {
+              "id": "stripe-secret",
+              "shortDescription": {
+                "text": "stripe-secret"
+              }
+            },
+            {
+              "id": "stripe-signing",
+              "shortDescription": {
+                "text": "stripe-signing"
+              }
+            },
+            {
+              "id": "supabase-secret",
+              "shortDescription": {
+                "text": "supabase-secret"
+              }
+            },
+            {
+              "id": "structured-config-secret",
+              "shortDescription": {
+                "text": "structured-config-secret"
+              }
+            },
+            {
+              "id": "huggingface",
+              "shortDescription": {
+                "text": "huggingface"
+              }
+            },
+            {
+              "id": "aws-id",
+              "shortDescription": {
+                "text": "aws-id"
+              }
+            },
+            {
+              "id": "private-key",
+              "shortDescription": {
+                "text": "private-key"
+              }
+            },
+            {
+              "id": "provider-context:oauth",
+              "shortDescription": {
+                "text": "provider-context:oauth"
+              }
+            },
+            {
+              "id": "provider-context:sendgrid",
+              "shortDescription": {
+                "text": "provider-context:sendgrid"
+              }
+            },
+            {
+              "id": "replicate",
+              "shortDescription": {
+                "text": "replicate"
+              }
+            },
+            {
+              "id": "published-sensitive-file",
+              "shortDescription": {
+                "text": "published-sensitive-file"
+              }
+            }
+          ]
+        }
+      },
+      "invocations": [
+        {
+          "executionSuccessful": false,
+          "properties": {
+            "state": "incomplete",
+            "launch": {
+              "notRecorded": "Trigger not recorded by build 2.4.0-rc.1"
+            },
+            "run": {
+              "id": "a2b5ceb8-64d6-40e6-b27c-72c098f2cbbd",
+              "shortId": "a2b5ceb8",
+              "projectId": null,
+              "projectName": null,
+              "name": "127.0.0.1",
+              "label": "127.0.0.1",
+              "primaryHost": "127.0.0.1",
+              "state": "incomplete",
+              "phase": null,
+              "startedAt": "2026-10-08T03:38:05.336Z",
+              "endedAt": "2026-10-08T03:38:32.536Z",
+              "savedAt": null,
+              "trigger": null,
+              "triggerSource": "unavailable",
+              "triggerLabel": "Trigger not recorded",
+              "previousRunId": null,
+              "relation": null,
+              "live": false,
+              "interrupted": false,
+              "build": "2.4.0-rc.1",
+              "scope": {
+                "enteredSeeds": 1,
+                "explicitOrigins": 1,
+                "authorizedOrigins": 1,
+                "automaticOrigins": 0,
+                "contactedOrigins": 1,
+                "domainGroups": 1,
+                "domains": [
+                  "127.0.0.1"
+                ],
+                "insideNotScannedOrigins": 0,
+                "thirdPartyOrigins": 2,
+                "domainScope": "registrable-domain",
+                "recorded": {
+                  "origins": true,
+                  "scope": true
+                }
+              },
+              "counts": {
+                "resources": 52,
+                "findings": 22,
+                "pending": 0,
+                "deferred": 3
+              }
+            },
+            "build": {
+              "version": "2.4.0-rc.1",
+              "id": "2.4.0-rc.1+a31c58862ab9ec5f",
+              "sourceDigest": "a31c58862ab9ec5f386ecedb3593304ef825bf9e1305397e37c178d34a6065bd"
+            },
+            "coverage": [
+              {
+                "code": "scope",
+                "detail": "2 third-party origins were referenced (4 references) and not scanned. Excluded origins are not counted as websites.",
+                "incomplete": false,
+                "count": 4,
+                "examples": [
+                  "http://127.0.0.1:49702",
+                  "http://127.0.0.1:4317"
+                ],
+                "origin": "http://127.0.0.1:49703"
+              },
+              {
+                "code": "map-unavailable",
+                "url": "http://127.0.0.1:49703/inline.js.map",
+                "detail": "Adjacent map check returned fallback/non-map content.",
+                "incomplete": false,
+                "origin": "http://127.0.0.1:49703"
+              },
+              {
+                "code": "map-unavailable",
+                "url": "http://127.0.0.1:49703/header-map.js.map",
+                "detail": "Adjacent map check returned fallback/non-map content.",
+                "incomplete": false,
+                "origin": "http://127.0.0.1:49703"
+              },
+              {
+                "code": "map-unavailable",
+                "url": "http://127.0.0.1:49703/lazy.js.map",
+                "detail": "Adjacent map check returned fallback/non-map content.",
+                "incomplete": false,
+                "origin": "http://127.0.0.1:49703"
+              },
+              {
+                "code": "map-unavailable",
+                "url": "http://127.0.0.1:49703/worker.js.map",
+                "detail": "Adjacent map check returned fallback/non-map content.",
+                "incomplete": false,
+                "origin": "http://127.0.0.1:49703"
+              },
+              {
+                "code": "map-unavailable",
+                "url": "http://127.0.0.1:49703/sw.js.map",
+                "detail": "Adjacent map check returned fallback/non-map content.",
+                "incomplete": false,
+                "origin": "http://127.0.0.1:49703"
+              },
+              {
+                "code": "authentication-challenge",
+                "url": "http://127.0.0.1:49703/login",
+                "detail": "HTTP 401. Authentication challenge observed; no login or credential use attempted.",
+                "incomplete": true,
+                "origin": "http://127.0.0.1:49703"
+              },
+              {
+                "code": "size-limit",
+                "url": "http://127.0.0.1:49703/big",
+                "detail": "Decoded response inspected only up to resource/origin/project byte limit.",
+                "incomplete": true,
+                "origin": "http://127.0.0.1:49703"
+              },
+              {
+                "code": "complete-document-unavailable",
+                "url": "http://127.0.0.1:49703/big",
+                "detail": "Download/decode was truncated. Retained prefix receives text detection; complete-document parser, JSON and module reconstruction are incomplete.",
+                "incomplete": true,
+                "origin": "http://127.0.0.1:49703"
+              },
+              {
+                "code": "network-failure",
+                "url": "http://127.0.0.1:49703/fail",
+                "attemptId": 26,
+                "detail": "Network attempt failed during headers; timings distinguish local processing from network waits. A timeout does not establish a remote cause. Raw exception omitted.",
+                "incomplete": true,
+                "origin": "http://127.0.0.1:49703"
+              },
+              {
+                "code": "semantic-incomplete-document",
+                "url": "http://127.0.0.1:49703/big",
+                "detail": "A truncated response cannot participate in complete-document static reconstruction. Retained text still inspected.",
+                "incomplete": true,
+                "origin": "http://127.0.0.1:49703"
+              },
+              {
+                "code": "network-failure",
+                "url": "http://127.0.0.1:49703/fail",
+                "attemptId": 28,
+                "detail": "Network attempt failed during headers; timings distinguish local processing from network waits. A timeout does not establish a remote cause. Raw exception omitted.",
+                "incomplete": true,
+                "origin": "http://127.0.0.1:49703"
+              },
+              {
+                "code": "rate-limit",
+                "url": "http://127.0.0.1:49703/rate",
+                "detail": "Rate limit/unavailability observed; backing off this origin without aggressive retries.",
+                "incomplete": true,
+                "origin": "http://127.0.0.1:49703"
+              },
+              {
+                "code": "http-unavailable",
+                "url": "http://127.0.0.1:49703/rate",
+                "detail": "HTTP 429. Bounded response inspection is separate from successful application-source coverage.",
+                "incomplete": true,
+                "origin": "http://127.0.0.1:49703"
+              },
+              {
+                "code": "credential-in-request",
+                "url": "http://127.0.0.1:49703/collect?api_key=[redacted]",
+                "detail": "Locally observed credential-bearing request was blocked before transmission.",
+                "incomplete": false,
+                "origin": "http://127.0.0.1:49703"
+              },
+              {
+                "code": "robots-exclusion",
+                "url": "http://127.0.0.1:49703/excluded",
+                "detail": "Public page excluded by robots.txt. The owner-authorized audit setting can include it without authenticating.",
+                "incomplete": true,
+                "origin": "http://127.0.0.1:49703"
+              },
+              {
+                "code": "size-limit",
+                "url": "http://127.0.0.1:49703/backup.sql",
+                "detail": "Decoded response inspected only up to resource/origin/project byte limit.",
+                "incomplete": true,
+                "origin": "http://127.0.0.1:49703"
+              },
+              {
+                "code": "complete-document-unavailable",
+                "url": "http://127.0.0.1:49703/backup.sql",
+                "detail": "Download/decode was truncated. Retained prefix receives text detection; complete-document parser, JSON and module reconstruction are incomplete.",
+                "incomplete": true,
+                "origin": "http://127.0.0.1:49703"
+              },
+              {
+                "code": "semantic-incomplete-document",
+                "url": "http://127.0.0.1:49703/backup.sql",
+                "detail": "A truncated response cannot participate in complete-document static reconstruction. Retained text still inspected.",
+                "incomplete": true,
+                "origin": "http://127.0.0.1:49703"
+              }
+            ],
+            "coverageSummary": {
+              "assessment": "limited",
+              "groups": {
+                "entryDocuments": {
+                  "discovered": 1,
+                  "downloaded": 1,
+                  "analyzed": 1,
+                  "successful": 1,
+                  "errorResponses": 0,
+                  "blocked": 0,
+                  "skipped": 0,
+                  "uninspected": 0,
+                  "currentStates": {
+                    "inspected": 1,
+                    "reused": 0,
+                    "pending": 0,
+                    "unavailable": 0,
+                    "failed": 0,
+                    "unsupported": 0,
+                    "deferred": 0,
+                    "partial": 0
+                  },
+                  "reasons": {}
+                },
+                "applicationPages": {
+                  "discovered": 13,
+                  "downloaded": 10,
+                  "analyzed": 10,
+                  "successful": 5,
+                  "errorResponses": 2,
+                  "blocked": 1,
+                  "skipped": 2,
+                  "uninspected": 8,
+                  "currentStates": {
+                    "inspected": 4,
+                    "reused": 1,
+                    "pending": 0,
+                    "unavailable": 3,
+                    "failed": 1,
+                    "unsupported": 2,
+                    "deferred": 2,
+                    "partial": 0
+                  },
+                  "reasons": {
+                    "Exact text and detector configuration matched successful in-memory inspection; other configured analyzers completed": 1,
+                    "robots-exclusion": 1,
+                    "HTTP 401": 1,
+                    "scope": 1,
+                    "Partial body; complete document unavailable": 1,
+                    "network-failure": 1,
+                    "HTTP 429": 1,
+                    "credential-in-request": 2
+                  }
+                },
+                "javascript": {
+                  "discovered": 8,
+                  "downloaded": 8,
+                  "analyzed": 8,
+                  "successful": 8,
+                  "errorResponses": 0,
+                  "blocked": 0,
+                  "skipped": 0,
+                  "uninspected": 0,
+                  "currentStates": {
+                    "inspected": 7,
+                    "reused": 1,
+                    "pending": 0,
+                    "unavailable": 0,
+                    "failed": 0,
+                    "unsupported": 0,
+                    "deferred": 0,
+                    "partial": 0
+                  },
+                  "reasons": {
+                    "Exact text and detector configuration matched successful in-memory inspection; other configured analyzers completed": 1
+                  }
+                },
+                "jsonConfig": {
+                  "discovered": 2,
+                  "downloaded": 2,
+                  "analyzed": 2,
+                  "successful": 2,
+                  "errorResponses": 0,
+                  "blocked": 0,
+                  "skipped": 0,
+                  "uninspected": 0,
+                  "currentStates": {
+                    "inspected": 2,
+                    "reused": 0,
+                    "pending": 0,
+                    "unavailable": 0,
+                    "failed": 0,
+                    "unsupported": 0,
+                    "deferred": 0,
+                    "partial": 0
+                  },
+                  "reasons": {}
+                },
+                "sourceMaps": {
+                  "discovered": 8,
+                  "downloaded": 8,
+                  "analyzed": 8,
+                  "successful": 3,
+                  "errorResponses": 0,
+                  "blocked": 0,
+                  "skipped": 5,
+                  "uninspected": 5,
+                  "currentStates": {
+                    "inspected": 3,
+                    "reused": 0,
+                    "pending": 0,
+                    "unavailable": 0,
+                    "failed": 0,
+                    "unsupported": 5,
+                    "deferred": 0,
+                    "partial": 0
+                  },
+                  "reasons": {
+                    "optional-map-not-present": 5
+                  }
+                },
+                "sitemaps": {
+                  "discovered": 1,
+                  "downloaded": 1,
+                  "analyzed": 1,
+                  "successful": 1,
+                  "errorResponses": 0,
+                  "blocked": 0,
+                  "skipped": 0,
+                  "uninspected": 0,
+                  "currentStates": {
+                    "inspected": 1,
+                    "reused": 0,
+                    "pending": 0,
+                    "unavailable": 0,
+                    "failed": 0,
+                    "unsupported": 0,
+                    "deferred": 0,
+                    "partial": 0
+                  },
+                  "reasons": {}
+                },
+                "baselineRequests": {
+                  "discovered": 2,
+                  "downloaded": 2,
+                  "analyzed": 2,
+                  "successful": 2,
+                  "errorResponses": 0,
+                  "blocked": 0,
+                  "skipped": 0,
+                  "uninspected": 0,
+                  "currentStates": {
+                    "inspected": 0,
+                    "reused": 2,
+                    "pending": 0,
+                    "unavailable": 0,
+                    "failed": 0,
+                    "unsupported": 0,
+                    "deferred": 0,
+                    "partial": 0
+                  },
+                  "reasons": {
+                    "Exact text and detector configuration matched successful in-memory inspection; other configured analyzers completed": 2
+                  }
+                },
+                "deploymentChecks": {
+                  "discovered": 15,
+                  "downloaded": 15,
+                  "analyzed": 15,
+                  "successful": 14,
+                  "errorResponses": 0,
+                  "blocked": 0,
+                  "skipped": 10,
+                  "uninspected": 1,
+                  "currentStates": {
+                    "inspected": 3,
+                    "reused": 11,
+                    "pending": 0,
+                    "unavailable": 1,
+                    "failed": 0,
+                    "unsupported": 0,
+                    "deferred": 0,
+                    "partial": 0
+                  },
+                  "reasons": {
+                    "Exact text and detector configuration matched successful in-memory inspection; other configured analyzers completed": 11,
+                    "Partial body; complete document unavailable": 1
+                  }
+                },
+                "images": {
+                  "discovered": 0,
+                  "downloaded": 0,
+                  "analyzed": 0,
+                  "successful": 0,
+                  "errorResponses": 0,
+                  "blocked": 0,
+                  "skipped": 0,
+                  "uninspected": 0,
+                  "currentStates": {
+                    "inspected": 0,
+                    "reused": 0,
+                    "pending": 0,
+                    "unavailable": 0,
+                    "failed": 0,
+                    "unsupported": 0,
+                    "deferred": 0,
+                    "partial": 0
+                  },
+                  "reasons": {}
+                },
+                "runtimeCaptures": {
+                  "discovered": 0,
+                  "downloaded": 0,
+                  "analyzed": 0,
+                  "successful": 0,
+                  "errorResponses": 0,
+                  "blocked": 0,
+                  "skipped": 0,
+                  "uninspected": 0,
+                  "currentStates": {
+                    "inspected": 0,
+                    "reused": 0,
+                    "pending": 0,
+                    "unavailable": 0,
+                    "failed": 0,
+                    "unsupported": 0,
+                    "deferred": 0,
+                    "partial": 0
+                  },
+                  "reasons": {}
+                },
+                "other": {
+                  "discovered": 2,
+                  "downloaded": 2,
+                  "analyzed": 2,
+                  "successful": 2,
+                  "errorResponses": 0,
+                  "blocked": 0,
+                  "skipped": 0,
+                  "uninspected": 0,
+                  "currentStates": {
+                    "inspected": 2,
+                    "reused": 0,
+                    "pending": 0,
+                    "unavailable": 0,
+                    "failed": 0,
+                    "unsupported": 0,
+                    "deferred": 0,
+                    "partial": 0
+                  },
+                  "reasons": {}
+                },
+                "domainExcluded": {
+                  "discovered": 0,
+                  "downloaded": 0,
+                  "analyzed": 0,
+                  "successful": 0,
+                  "errorResponses": 0,
+                  "blocked": 0,
+                  "skipped": 0,
+                  "uninspected": 0,
+                  "currentStates": {
+                    "inspected": 0,
+                    "reused": 0,
+                    "pending": 0,
+                    "unavailable": 0,
+                    "failed": 0,
+                    "unsupported": 0,
+                    "deferred": 0,
+                    "partial": 0
+                  },
+                  "reasons": {}
+                },
+                "externalDependencies": {
+                  "discovered": 2,
+                  "downloaded": 0,
+                  "analyzed": 0,
+                  "successful": 0,
+                  "errorResponses": 0,
+                  "blocked": 2,
+                  "skipped": 2,
+                  "uninspected": 2,
+                  "currentStates": {
+                    "inspected": 0,
+                    "reused": 0,
+                    "pending": 0,
+                    "unavailable": 0,
+                    "failed": 0,
+                    "unsupported": 2,
+                    "deferred": 0,
+                    "partial": 0
+                  },
+                  "reasons": {
+                    "scope": 2
+                  }
+                },
+                "browserRuntime": {
+                  "discovered": 0,
+                  "downloaded": 0,
+                  "analyzed": 0,
+                  "successful": 0,
+                  "errorResponses": 0,
+                  "blocked": 0,
+                  "skipped": 0,
+                  "uninspected": 0,
+                  "currentStates": {
+                    "inspected": 0,
+                    "reused": 0,
+                    "pending": 0,
+                    "unavailable": 0,
+                    "failed": 0,
+                    "unsupported": 0,
+                    "deferred": 0,
+                    "partial": 0
+                  },
+                  "reasons": {}
+                }
+              },
+              "entryPoints": [
+                {
+                  "url": "http://127.0.0.1:49703/",
+                  "successful": true,
+                  "analyzed": true
+                }
+              ],
+              "highValueLimited": true,
+              "optionalPagesLimited": true,
+              "origins": {
+                "http://127.0.0.1:49703": {
+                  "assessment": "limited",
+                  "groups": {
+                    "entryDocuments": {
+                      "discovered": 1,
+                      "downloaded": 1,
+                      "analyzed": 1,
+                      "successful": 1,
+                      "errorResponses": 0,
+                      "blocked": 0,
+                      "skipped": 0,
+                      "uninspected": 0,
+                      "currentStates": {
+                        "inspected": 1,
+                        "reused": 0,
+                        "pending": 0,
+                        "unavailable": 0,
+                        "failed": 0,
+                        "unsupported": 0,
+                        "deferred": 0,
+                        "partial": 0
+                      },
+                      "reasons": {}
+                    },
+                    "applicationPages": {
+                      "discovered": 13,
+                      "downloaded": 10,
+                      "analyzed": 10,
+                      "successful": 5,
+                      "errorResponses": 2,
+                      "blocked": 1,
+                      "skipped": 2,
+                      "uninspected": 8,
+                      "currentStates": {
+                        "inspected": 4,
+                        "reused": 1,
+                        "pending": 0,
+                        "unavailable": 3,
+                        "failed": 1,
+                        "unsupported": 2,
+                        "deferred": 2,
+                        "partial": 0
+                      },
+                      "reasons": {
+                        "Exact text and detector configuration matched successful in-memory inspection; other configured analyzers completed": 1,
+                        "robots-exclusion": 1,
+                        "HTTP 401": 1,
+                        "scope": 1,
+                        "Partial body; complete document unavailable": 1,
+                        "network-failure": 1,
+                        "HTTP 429": 1,
+                        "credential-in-request": 2
+                      }
+                    },
+                    "javascript": {
+                      "discovered": 8,
+                      "downloaded": 8,
+                      "analyzed": 8,
+                      "successful": 8,
+                      "errorResponses": 0,
+                      "blocked": 0,
+                      "skipped": 0,
+                      "uninspected": 0,
+                      "currentStates": {
+                        "inspected": 7,
+                        "reused": 1,
+                        "pending": 0,
+                        "unavailable": 0,
+                        "failed": 0,
+                        "unsupported": 0,
+                        "deferred": 0,
+                        "partial": 0
+                      },
+                      "reasons": {
+                        "Exact text and detector configuration matched successful in-memory inspection; other configured analyzers completed": 1
+                      }
+                    },
+                    "jsonConfig": {
+                      "discovered": 2,
+                      "downloaded": 2,
+                      "analyzed": 2,
+                      "successful": 2,
+                      "errorResponses": 0,
+                      "blocked": 0,
+                      "skipped": 0,
+                      "uninspected": 0,
+                      "currentStates": {
+                        "inspected": 2,
+                        "reused": 0,
+                        "pending": 0,
+                        "unavailable": 0,
+                        "failed": 0,
+                        "unsupported": 0,
+                        "deferred": 0,
+                        "partial": 0
+                      },
+                      "reasons": {}
+                    },
+                    "sourceMaps": {
+                      "discovered": 8,
+                      "downloaded": 8,
+                      "analyzed": 8,
+                      "successful": 3,
+                      "errorResponses": 0,
+                      "blocked": 0,
+                      "skipped": 5,
+                      "uninspected": 5,
+                      "currentStates": {
+                        "inspected": 3,
+                        "reused": 0,
+                        "pending": 0,
+                        "unavailable": 0,
+                        "failed": 0,
+                        "unsupported": 5,
+                        "deferred": 0,
+                        "partial": 0
+                      },
+                      "reasons": {
+                        "optional-map-not-present": 5
+                      }
+                    },
+                    "sitemaps": {
+                      "discovered": 1,
+                      "downloaded": 1,
+                      "analyzed": 1,
+                      "successful": 1,
+                      "errorResponses": 0,
+                      "blocked": 0,
+                      "skipped": 0,
+                      "uninspected": 0,
+                      "currentStates": {
+                        "inspected": 1,
+                        "reused": 0,
+                        "pending": 0,
+                        "unavailable": 0,
+                        "failed": 0,
+                        "unsupported": 0,
+                        "deferred": 0,
+                        "partial": 0
+                      },
+                      "reasons": {}
+                    },
+                    "baselineRequests": {
+                      "discovered": 2,
+                      "downloaded": 2,
+                      "analyzed": 2,
+                      "successful": 2,
+                      "errorResponses": 0,
+                      "blocked": 0,
+                      "skipped": 0,
+                      "uninspected": 0,
+                      "currentStates": {
+                        "inspected": 0,
+                        "reused": 2,
+                        "pending": 0,
+                        "unavailable": 0,
+                        "failed": 0,
+                        "unsupported": 0,
+                        "deferred": 0,
+                        "partial": 0
+                      },
+                      "reasons": {
+                        "Exact text and detector configuration matched successful in-memory inspection; other configured analyzers completed": 2
+                      }
+                    },
+                    "deploymentChecks": {
+                      "discovered": 15,
+                      "downloaded": 15,
+                      "analyzed": 15,
+                      "successful": 14,
+                      "errorResponses": 0,
+                      "blocked": 0,
+                      "skipped": 10,
+                      "uninspected": 1,
+                      "currentStates": {
+                        "inspected": 3,
+                        "reused": 11,
+                        "pending": 0,
+                        "unavailable": 1,
+                        "failed": 0,
+                        "unsupported": 0,
+                        "deferred": 0,
+                        "partial": 0
+                      },
+                      "reasons": {
+                        "Exact text and detector configuration matched successful in-memory inspection; other configured analyzers completed": 11,
+                        "Partial body; complete document unavailable": 1
+                      }
+                    },
+                    "images": {
+                      "discovered": 0,
+                      "downloaded": 0,
+                      "analyzed": 0,
+                      "successful": 0,
+                      "errorResponses": 0,
+                      "blocked": 0,
+                      "skipped": 0,
+                      "uninspected": 0,
+                      "currentStates": {
+                        "inspected": 0,
+                        "reused": 0,
+                        "pending": 0,
+                        "unavailable": 0,
+                        "failed": 0,
+                        "unsupported": 0,
+                        "deferred": 0,
+                        "partial": 0
+                      },
+                      "reasons": {}
+                    },
+                    "runtimeCaptures": {
+                      "discovered": 0,
+                      "downloaded": 0,
+                      "analyzed": 0,
+                      "successful": 0,
+                      "errorResponses": 0,
+                      "blocked": 0,
+                      "skipped": 0,
+                      "uninspected": 0,
+                      "currentStates": {
+                        "inspected": 0,
+                        "reused": 0,
+                        "pending": 0,
+                        "unavailable": 0,
+                        "failed": 0,
+                        "unsupported": 0,
+                        "deferred": 0,
+                        "partial": 0
+                      },
+                      "reasons": {}
+                    },
+                    "other": {
+                      "discovered": 2,
+                      "downloaded": 2,
+                      "analyzed": 2,
+                      "successful": 2,
+                      "errorResponses": 0,
+                      "blocked": 0,
+                      "skipped": 0,
+                      "uninspected": 0,
+                      "currentStates": {
+                        "inspected": 2,
+                        "reused": 0,
+                        "pending": 0,
+                        "unavailable": 0,
+                        "failed": 0,
+                        "unsupported": 0,
+                        "deferred": 0,
+                        "partial": 0
+                      },
+                      "reasons": {}
+                    },
+                    "domainExcluded": {
+                      "discovered": 0,
+                      "downloaded": 0,
+                      "analyzed": 0,
+                      "successful": 0,
+                      "errorResponses": 0,
+                      "blocked": 0,
+                      "skipped": 0,
+                      "uninspected": 0,
+                      "currentStates": {
+                        "inspected": 0,
+                        "reused": 0,
+                        "pending": 0,
+                        "unavailable": 0,
+                        "failed": 0,
+                        "unsupported": 0,
+                        "deferred": 0,
+                        "partial": 0
+                      },
+                      "reasons": {}
+                    },
+                    "externalDependencies": {
+                      "discovered": 0,
+                      "downloaded": 0,
+                      "analyzed": 0,
+                      "successful": 0,
+                      "errorResponses": 0,
+                      "blocked": 0,
+                      "skipped": 0,
+                      "uninspected": 0,
+                      "currentStates": {
+                        "inspected": 0,
+                        "reused": 0,
+                        "pending": 0,
+                        "unavailable": 0,
+                        "failed": 0,
+                        "unsupported": 0,
+                        "deferred": 0,
+                        "partial": 0
+                      },
+                      "reasons": {}
+                    },
+                    "browserRuntime": {
+                      "discovered": 0,
+                      "downloaded": 0,
+                      "analyzed": 0,
+                      "successful": 0,
+                      "errorResponses": 0,
+                      "blocked": 0,
+                      "skipped": 0,
+                      "uninspected": 0,
+                      "currentStates": {
+                        "inspected": 0,
+                        "reused": 0,
+                        "pending": 0,
+                        "unavailable": 0,
+                        "failed": 0,
+                        "unsupported": 0,
+                        "deferred": 0,
+                        "partial": 0
+                      },
+                      "reasons": {}
+                    }
+                  },
+                  "entryPoints": [
+                    {
+                      "url": "http://127.0.0.1:49703/",
+                      "successful": true,
+                      "analyzed": true
+                    }
+                  ],
+                  "highValueLimited": true,
+                  "optionalPagesLimited": true
+                }
+              },
+              "inventory": [
+                {
+                  "url": "http://127.0.0.1:49703/robots.txt",
+                  "category": "other",
+                  "state": "inspected",
+                  "chain": []
+                },
+                {
+                  "url": "http://127.0.0.1:49703/",
+                  "category": "entryDocuments",
+                  "state": "inspected",
+                  "chain": []
+                },
+                {
+                  "url": "http://127.0.0.1:49703/sitemap.xml",
+                  "category": "sitemaps",
+                  "state": "inspected",
+                  "chain": []
+                },
+                {
+                  "url": "http://127.0.0.1:49703/about",
+                  "category": "applicationPages",
+                  "state": "reused",
+                  "reason": "Exact text and detector configuration matched successful in-memory inspection; other configured analyzers completed",
+                  "chain": [
+                    "http://127.0.0.1:49703/sitemap.xml"
+                  ]
+                },
+                {
+                  "url": "http://127.0.0.1:49703/excluded",
+                  "category": "applicationPages",
+                  "state": "unsupported",
+                  "reason": "robots-exclusion",
+                  "chain": [
+                    "http://127.0.0.1:49703/sitemap.xml"
+                  ]
+                },
+                {
+                  "url": "http://127.0.0.1:49703/manifest.webmanifest",
+                  "category": "jsonConfig",
+                  "state": "inspected",
+                  "chain": [
+                    "http://127.0.0.1:49703/",
+                    "document/base URL"
+                  ]
+                },
+                {
+                  "url": "http://127.0.0.1:49703/site.css",
+                  "category": "other",
+                  "state": "inspected",
+                  "chain": [
+                    "http://127.0.0.1:49703/",
+                    "document/base URL"
+                  ]
+                },
+                {
+                  "url": "http://127.0.0.1:49703/app.min.js",
+                  "category": "javascript",
+                  "state": "inspected",
+                  "chain": [
+                    "http://127.0.0.1:49703/",
+                    "document/base URL"
+                  ]
+                },
+                {
+                  "url": "http://127.0.0.1:49703/inline.js",
+                  "category": "javascript",
+                  "state": "inspected",
+                  "chain": [
+                    "http://127.0.0.1:49703/",
+                    "document/base URL"
+                  ]
+                },
+                {
+                  "url": "http://127.0.0.1:49703/conventional.js",
+                  "category": "javascript",
+                  "state": "inspected",
+                  "chain": [
+                    "http://127.0.0.1:49703/",
+                    "document/base URL"
+                  ]
+                },
+                {
+                  "url": "http://127.0.0.1:49703/header-map.js",
+                  "category": "javascript",
+                  "state": "inspected",
+                  "chain": [
+                    "http://127.0.0.1:49703/",
+                    "document/base URL"
+                  ]
+                },
+                {
+                  "url": "http://127.0.0.1:49703/login",
+                  "category": "applicationPages",
+                  "state": "unavailable",
+                  "reason": "HTTP 401",
+                  "chain": [
+                    "http://127.0.0.1:49703/",
+                    "document/base URL"
+                  ]
+                },
+                {
+                  "url": "http://127.0.0.1:49703/redirect-out",
+                  "category": "applicationPages",
+                  "state": "deferred",
+                  "reason": "scope",
+                  "chain": [
+                    "http://127.0.0.1:49703/",
+                    "document/base URL"
+                  ]
+                },
+                {
+                  "url": "http://127.0.0.1:49703/big",
+                  "category": "applicationPages",
+                  "state": "unavailable",
+                  "reason": "Partial body; complete document unavailable",
+                  "chain": [
+                    "http://127.0.0.1:49703/",
+                    "document/base URL"
+                  ]
+                },
+                {
+                  "url": "http://127.0.0.1:49703/fail",
+                  "category": "applicationPages",
+                  "state": "failed",
+                  "reason": "network-failure",
+                  "chain": [
+                    "http://127.0.0.1:49703/",
+                    "document/base URL"
+                  ]
+                },
+                {
+                  "url": "http://127.0.0.1:49703/rate",
+                  "category": "applicationPages",
+                  "state": "unavailable",
+                  "reason": "HTTP 429",
+                  "chain": [
+                    "http://127.0.0.1:49703/",
+                    "document/base URL"
+                  ]
+                },
+                {
+                  "url": "http://127.0.0.1:49703/redirect-secret",
+                  "category": "applicationPages",
+                  "state": "deferred",
+                  "reason": "credential-in-request",
+                  "chain": [
+                    "http://127.0.0.1:49703/",
+                    "document/base URL"
+                  ]
+                },
+                {
+                  "url": "http://127.0.0.1:49703/child",
+                  "category": "applicationPages",
+                  "state": "inspected",
+                  "chain": [
+                    "http://127.0.0.1:49703/",
+                    "document/base URL"
+                  ]
+                },
+                {
+                  "url": "http://127.0.0.1:49703/slow",
+                  "category": "applicationPages",
+                  "state": "inspected",
+                  "chain": [
+                    "http://127.0.0.1:49703/",
+                    "document/base URL"
+                  ]
+                },
+                {
+                  "url": "http://127.0.0.1:49703/fallback",
+                  "category": "applicationPages",
+                  "state": "inspected",
+                  "chain": [
+                    "http://127.0.0.1:49703/",
+                    "document/base URL"
+                  ]
+                },
+                {
+                  "url": "http://127.0.0.1:49703/lazy.js",
+                  "category": "javascript",
+                  "state": "inspected",
+                  "chain": [
+                    "http://127.0.0.1:49703/",
+                    "document/base URL",
+                    "http://127.0.0.1:49703/app.min.js",
+                    "importing module"
+                  ]
+                },
+                {
+                  "url": "http://127.0.0.1:49703/worker.js",
+                  "category": "javascript",
+                  "state": "reused",
+                  "reason": "Exact text and detector configuration matched successful in-memory inspection; other configured analyzers completed",
+                  "chain": [
+                    "http://127.0.0.1:49703/",
+                    "document/base URL",
+                    "http://127.0.0.1:49703/app.min.js",
+                    "worker document base"
+                  ]
+                },
+                {
+                  "url": "http://127.0.0.1:49703/sw.js",
+                  "category": "javascript",
+                  "state": "inspected",
+                  "chain": [
+                    "http://127.0.0.1:49703/",
+                    "document/base URL",
+                    "http://127.0.0.1:49703/app.min.js",
+                    "service worker registration"
+                  ]
+                },
+                {
+                  "url": "http://127.0.0.1:49703/app.min.js.map",
+                  "category": "sourceMaps",
+                  "state": "inspected",
+                  "chain": [
+                    "http://127.0.0.1:49703/",
+                    "document/base URL",
+                    "http://127.0.0.1:49703/app.min.js",
+                    "source-map comment"
+                  ]
+                },
+                {
+                  "url": "http://127.0.0.1:49703/conventional.js.map",
+                  "category": "sourceMaps",
+                  "state": "inspected",
+                  "chain": [
+                    "http://127.0.0.1:49703/",
+                    "document/base URL",
+                    "http://127.0.0.1:49703/conventional.js"
+                  ]
+                },
+                {
+                  "url": "http://127.0.0.1:49703/inline.js.map",
+                  "category": "sourceMaps",
+                  "state": "unsupported",
+                  "reason": "optional-map-not-present",
+                  "chain": [
+                    "http://127.0.0.1:49703/",
+                    "document/base URL",
+                    "http://127.0.0.1:49703/inline.js",
+                    "inline source map",
+                    "sourcesContent",
+                    "webpack://fixture/src/hf.ts",
+                    "http://127.0.0.1:49703/inline.js"
+                  ]
+                },
+                {
+                  "url": "http://127.0.0.1:49703/header.map",
+                  "category": "sourceMaps",
+                  "state": "inspected",
+                  "chain": [
+                    "http://127.0.0.1:49703/",
+                    "document/base URL",
+                    "http://127.0.0.1:49703/header-map.js"
+                  ]
+                },
+                {
+                  "url": "http://127.0.0.1:49703/header-map.js.map",
+                  "category": "sourceMaps",
+                  "state": "unsupported",
+                  "reason": "optional-map-not-present",
+                  "chain": [
+                    "http://127.0.0.1:49703/",
+                    "document/base URL",
+                    "http://127.0.0.1:49703/header-map.js"
+                  ]
+                },
+                {
+                  "url": "http://127.0.0.1:49703/lazy.js.map",
+                  "category": "sourceMaps",
+                  "state": "unsupported",
+                  "reason": "optional-map-not-present",
+                  "chain": [
+                    "http://127.0.0.1:49703/",
+                    "document/base URL",
+                    "http://127.0.0.1:49703/app.min.js",
+                    "importing module",
+                    "http://127.0.0.1:49703/lazy.js"
+                  ]
+                },
+                {
+                  "url": "http://127.0.0.1:49703/worker.js.map",
+                  "category": "sourceMaps",
+                  "state": "unsupported",
+                  "reason": "optional-map-not-present",
+                  "chain": [
+                    "http://127.0.0.1:49703/",
+                    "document/base URL",
+                    "http://127.0.0.1:49703/app.min.js",
+                    "worker document base",
+                    "http://127.0.0.1:49703/worker.js"
+                  ]
+                },
+                {
+                  "url": "http://127.0.0.1:49703/sw.js.map",
+                  "category": "sourceMaps",
+                  "state": "unsupported",
+                  "reason": "optional-map-not-present",
+                  "chain": [
+                    "http://127.0.0.1:49703/",
+                    "document/base URL",
+                    "http://127.0.0.1:49703/app.min.js",
+                    "service worker registration",
+                    "http://127.0.0.1:49703/sw.js"
+                  ]
+                },
+                {
+                  "url": "http://127.0.0.1:49703/sources/source.ts",
+                  "category": "javascript",
+                  "state": "inspected",
+                  "chain": [
+                    "http://127.0.0.1:49703/",
+                    "document/base URL",
+                    "http://127.0.0.1:49703/header-map.js",
+                    "http://127.0.0.1:49703/header.map",
+                    "source reference"
+                  ]
+                },
+                {
+                  "url": "http://127.0.0.1:49703/nested/page",
+                  "category": "jsonConfig",
+                  "state": "inspected",
+                  "chain": [
+                    "http://127.0.0.1:49703/",
+                    "document/base URL",
+                    "http://127.0.0.1:49703/child",
+                    "document/base URL"
+                  ]
+                },
+                {
+                  "url": "http://127.0.0.1:49703/frame",
+                  "category": "applicationPages",
+                  "state": "inspected",
+                  "chain": [
+                    "http://127.0.0.1:49703/",
+                    "document/base URL",
+                    "http://127.0.0.1:49703/child",
+                    "frame document"
+                  ]
+                },
+                {
+                  "url": "http://127.0.0.1:49703/__exposure_baseline_30e04d2d-1331-455a-a169-245723b2acae_0",
+                  "category": "baselineRequests",
+                  "state": "reused",
+                  "reason": "Exact text and detector configuration matched successful in-memory inspection; other configured analyzers completed",
+                  "chain": []
+                },
+                {
+                  "url": "http://127.0.0.1:49703/__exposure_baseline_30e04d2d-1331-455a-a169-245723b2acae_1",
+                  "category": "baselineRequests",
+                  "state": "reused",
+                  "reason": "Exact text and detector configuration matched successful in-memory inspection; other configured analyzers completed",
+                  "chain": []
+                },
+                {
+                  "url": "http://127.0.0.1:49703/.env",
+                  "category": "deploymentChecks",
+                  "state": "inspected",
+                  "chain": []
+                },
+                {
+                  "url": "http://127.0.0.1:49703/.env.local",
+                  "category": "deploymentChecks",
+                  "state": "reused",
+                  "reason": "Exact text and detector configuration matched successful in-memory inspection; other configured analyzers completed",
+                  "chain": []
+                },
+                {
+                  "url": "http://127.0.0.1:49703/.env.production",
+                  "category": "deploymentChecks",
+                  "state": "reused",
+                  "reason": "Exact text and detector configuration matched successful in-memory inspection; other configured analyzers completed",
+                  "chain": []
+                },
+                {
+                  "url": "http://127.0.0.1:49703/.env.backup",
+                  "category": "deploymentChecks",
+                  "state": "reused",
+                  "reason": "Exact text and detector configuration matched successful in-memory inspection; other configured analyzers completed",
+                  "chain": []
+                },
+                {
+                  "url": "http://127.0.0.1:49703/config.json",
+                  "category": "deploymentChecks",
+                  "state": "inspected",
+                  "chain": []
+                },
+                {
+                  "url": "http://127.0.0.1:49703/config.js",
+                  "category": "deploymentChecks",
+                  "state": "reused",
+                  "reason": "Exact text and detector configuration matched successful in-memory inspection; other configured analyzers completed",
+                  "chain": []
+                },
+                {
+                  "url": "http://127.0.0.1:49703/.npmrc",
+                  "category": "deploymentChecks",
+                  "state": "inspected",
+                  "chain": []
+                },
+                {
+                  "url": "http://127.0.0.1:49703/.git/HEAD",
+                  "category": "deploymentChecks",
+                  "state": "reused",
+                  "reason": "Exact text and detector configuration matched successful in-memory inspection; other configured analyzers completed",
+                  "chain": []
+                },
+                {
+                  "url": "http://127.0.0.1:49703/debug",
+                  "category": "deploymentChecks",
+                  "state": "reused",
+                  "reason": "Exact text and detector configuration matched successful in-memory inspection; other configured analyzers completed",
+                  "chain": []
+                },
+                {
+                  "url": "http://127.0.0.1:49703/debug/vars",
+                  "category": "deploymentChecks",
+                  "state": "reused",
+                  "reason": "Exact text and detector configuration matched successful in-memory inspection; other configured analyzers completed",
+                  "chain": []
+                },
+                {
+                  "url": "http://127.0.0.1:49703/server.log",
+                  "category": "deploymentChecks",
+                  "state": "reused",
+                  "reason": "Exact text and detector configuration matched successful in-memory inspection; other configured analyzers completed",
+                  "chain": []
+                },
+                {
+                  "url": "http://127.0.0.1:49703/error.log",
+                  "category": "deploymentChecks",
+                  "state": "reused",
+                  "reason": "Exact text and detector configuration matched successful in-memory inspection; other configured analyzers completed",
+                  "chain": []
+                },
+                {
+                  "url": "http://127.0.0.1:49703/backup.sql",
+                  "category": "deploymentChecks",
+                  "state": "unavailable",
+                  "reason": "Partial body; complete document unavailable",
+                  "chain": []
+                },
+                {
+                  "url": "http://127.0.0.1:49703/index.php.bak",
+                  "category": "deploymentChecks",
+                  "state": "reused",
+                  "reason": "Exact text and detector configuration matched successful in-memory inspection; other configured analyzers completed",
+                  "chain": []
+                },
+                {
+                  "url": "http://127.0.0.1:49703/config.php.bak",
+                  "category": "deploymentChecks",
+                  "state": "reused",
+                  "reason": "Exact text and detector configuration matched successful in-memory inspection; other configured analyzers completed",
+                  "chain": []
+                },
+                {
+                  "url": "http://127.0.0.1:49702/outside.js",
+                  "category": "externalDependencies",
+                  "state": "unsupported",
+                  "reason": "scope",
+                  "chain": [
+                    "http://127.0.0.1:49703/",
+                    "document/base URL"
+                  ]
+                },
+                {
+                  "url": "http://127.0.0.1:4317/",
+                  "category": "externalDependencies",
+                  "state": "unsupported",
+                  "reason": "scope",
+                  "chain": [
+                    "http://127.0.0.1:49703/",
+                    "static bundle literal"
+                  ]
+                },
+                {
+                  "url": "http://127.0.0.1:49703/collect?api_key=[redacted]",
+                  "category": "applicationPages",
+                  "state": "unsupported",
+                  "reason": "credential-in-request",
+                  "chain": [
+                    "http://127.0.0.1:49703/",
+                    "document/base URL",
+                    "http://127.0.0.1:49703/redirect-secret",
+                    "HTTP redirect"
+                  ]
+                }
+              ],
+              "summary": "Coverage is limited or in progress; inspect each origin and resource category. No findings means no supported exposure was detected in inspected coverage.",
+              "discoveryNote": "Discovered is the known unique URL inventory. Each URL has exactly one current state and category; inspected plus reused counts configured inspection coverage. Pending means live work only; deferred and partial are terminal states of unfinished work. Legacy downloaded/analyzed/error counters are historical evidence and can overlap. Browser runtime is a separate navigation count. Undiscovered resources cannot be counted; inventory omissions are reported.",
+              "deploymentChecks": {
+                "planned": 15,
+                "attempted": 15,
+                "remaining": 0
+              },
+              "requestComparison": [
+                {
+                  "url": "http://127.0.0.1:49703/",
+                  "staticStatus": 200,
+                  "staticHeaders": [
+                    "accept",
+                    "accept-encoding",
+                    "host"
+                  ],
+                  "browserHeaders": [],
+                  "conclusion": "No guarded browser document response recorded."
+                }
+              ]
+            },
+            "engines": {
+              "websiteRules": "website/2.4.0",
+              "gitleaks": "8.30.1",
+              "ruleDigest": "e163e53b9e7e8a8511e77271e2b323ed057759542a6d988258afe3a1fa329caf",
+              "companyRules": "none"
+            },
+            "accounting": {
+              "networkAttempts": 52,
+              "blockedEvents": 3,
+              "uniqueResources": 50,
+              "repeatedRequests": 2,
+              "downloadedBytes": 137380,
+              "retainedDecodedBytes": 72118,
+              "textAnalyzedBytes": 72118,
+              "intentionalSkips": 16,
+              "httpErrors": 3,
+              "networkFailures": 2,
+              "timeouts": 0,
+              "failedAttempts": 2,
+              "successfulResponses": 45,
+              "discoveredUrls": 51,
+              "reusedTextInspections": 30,
+              "runtimeCaptures": 0,
+              "reusedDiscoveries": 0,
+              "verifiedMirrors": 0,
+              "coverageGaps": 12
+            },
+            "origins": [
+              {
+                "origin": "http://127.0.0.1:49703",
+                "admitted": true,
+                "elapsedMs": 27198.3306,
+                "remainingMs": 152801.6694,
+                "softDeadline": false,
+                "deadlineReached": false,
+                "cleanupMs": 0,
+                "requests": 52,
+                "bytes": 72118,
+                "wireBytes": 137380,
+                "pages": 13,
+                "maps": 4,
+                "retries": 2,
+                "retryExhausted": 2,
+                "browserPages": 0,
+                "browserRequests": 0,
+                "browserAttempts": 0,
+                "browserElapsedMs": 0,
+                "runtimeCaptures": 0,
+                "analysisMs": 31283.212800000005,
+                "activeRequests": 0,
+                "peakRequests": 2,
+                "authorization": {
+                  "type": "explicit-seed"
+                },
+                "completion": "limited"
+              }
+            ],
+            "findingTriage": {
+              "pending": 0,
+              "removedInsignificant": 6,
+              "categories": {
+                "direct-leak": 10,
+                "high-potential-leak": 2,
+                "low-potential-leak": 10
+              }
+            },
+            "dismissedObservations": [
+              {
+                "id": "eb299eac98ec72dea71df330c6c9fea5",
+                "fingerprint": "eb299eac98ec72dea71df330c6c9fea5",
+                "category": "public-identifier",
+                "provider": "Stripe",
+                "rule": "stripe-public",
+                "severity": "info",
+                "confidence": "high",
+                "reasons": [
+                  "Publishable Stripe key is intended for client applications."
+                ],
+                "masked": "[redacted: 59 characters]",
+                "validity": "unverified",
+                "impact": "Public client identifier; assess the provider’s access controls separately.",
+                "remediation": "Confirm intended client use and enforce provider restrictions, grants and access policies.",
+                "occurrences": [
+                  {
+                    "url": "http://127.0.0.1:49703/app.min.js",
+                    "line": 1,
+                    "column": 22,
+                    "byteOffset": 21,
+                    "chain": [
+                      "http://127.0.0.1:49703/",
+                      "document/base URL",
+                      "reconstructed constant"
+                    ],
+                    "transformations": [
+                      "Literal",
+                      "Constant object"
+                    ],
+                    "excerpt": "window.PUBLIC_CONFIG=[redacted];window.__env={VITE_PRIVATE_API_KEY:\"[redacted]",
+                    "evidence": "Unambiguous static reconstruction from publicly downloaded sources",
+                    "coordinates": "approximate",
+                    "byteOffsetEncoding": "utf-8-decoded-text",
+                    "exposure": "static-reconstruction",
+                    "constituents": [
+                      {
+                        "url": "http://127.0.0.1:49703/app.min.js",
+                        "start": 29,
+                        "end": 90,
+                        "line": 1,
+                        "column": 30,
+                        "representation": "[redacted]"
+                      },
+                      {
+                        "url": "http://127.0.0.1:49703/app.min.js",
+                        "start": 100,
+                        "end": 168,
+                        "line": 1,
+                        "column": 101,
+                        "representation": "[redacted]"
+                      },
+                      {
+                        "url": "http://127.0.0.1:49703/app.min.js",
+                        "start": 186,
+                        "end": 227,
+                        "line": 1,
+                        "column": 187,
+                        "representation": "[redacted]"
+                      },
+                      {
+                        "url": "http://127.0.0.1:49703/app.min.js",
+                        "start": 238,
+                        "end": 257,
+                        "line": 1,
+                        "column": 239,
+                        "representation": "[redacted]"
+                      }
+                    ]
+                  }
+                ],
+                "environment": "production",
+                "exposureGroup": "payments",
+                "financialPriority": "none",
+                "assessment": {
+                  "ruleVersion": "website/2.4.0",
+                  "exposureConfidence": "high",
+                  "format": "stripe-public",
+                  "context": "Publishable Stripe key is intended for client applications.",
+                  "completeness": "No complete credential pair inferred",
+                  "channels": [
+                    "static-reconstruction"
+                  ],
+                  "validity": "unverified",
+                  "permissions": "unknown"
+                },
+                "triage": {
+                  "category": "insignificant",
+                  "reason": "Public client identifier intended for frontend use; no private credential or access failure established."
+                }
+              },
+              {
+                "id": "b15ff27719349430638e81a4fddd7b63",
+                "fingerprint": "b15ff27719349430638e81a4fddd7b63",
+                "category": "public-identifier",
+                "provider": "Supabase",
+                "rule": "supabase-public",
+                "severity": "info",
+                "confidence": "high",
+                "reasons": [
+                  "Supabase publishable key is intended for clients; data security depends on grants and RLS."
+                ],
+                "masked": "[redacted: 66 characters]",
+                "validity": "unverified",
+                "impact": "Public client identifier; assess the provider’s access controls separately.",
+                "remediation": "Confirm intended client use and enforce provider restrictions, grants and access policies.",
+                "occurrences": [
+                  {
+                    "url": "http://127.0.0.1:49703/app.min.js",
+                    "line": 1,
+                    "column": 22,
+                    "byteOffset": 21,
+                    "chain": [
+                      "http://127.0.0.1:49703/",
+                      "document/base URL",
+                      "reconstructed constant"
+                    ],
+                    "transformations": [
+                      "Literal",
+                      "Constant object"
+                    ],
+                    "excerpt": "window.PUBLIC_CONFIG=[redacted];window.__env={VITE_PRIVATE_API_KEY:\"[redacted]",
+                    "evidence": "Unambiguous static reconstruction from publicly downloaded sources",
+                    "coordinates": "approximate",
+                    "byteOffsetEncoding": "utf-8-decoded-text",
+                    "exposure": "static-reconstruction",
+                    "constituents": [
+                      {
+                        "url": "http://127.0.0.1:49703/app.min.js",
+                        "start": 29,
+                        "end": 90,
+                        "line": 1,
+                        "column": 30,
+                        "representation": "[redacted]"
+                      },
+                      {
+                        "url": "http://127.0.0.1:49703/app.min.js",
+                        "start": 100,
+                        "end": 168,
+                        "line": 1,
+                        "column": 101,
+                        "representation": "[redacted]"
+                      },
+                      {
+                        "url": "http://127.0.0.1:49703/app.min.js",
+                        "start": 186,
+                        "end": 227,
+                        "line": 1,
+                        "column": 187,
+                        "representation": "[redacted]"
+                      },
+                      {
+                        "url": "http://127.0.0.1:49703/app.min.js",
+                        "start": 238,
+                        "end": 257,
+                        "line": 1,
+                        "column": 239,
+                        "representation": "[redacted]"
+                      }
+                    ]
+                  }
+                ],
+                "environment": "unknown",
+                "exposureGroup": "other",
+                "financialPriority": "none",
+                "assessment": {
+                  "ruleVersion": "website/2.4.0",
+                  "exposureConfidence": "high",
+                  "format": "supabase-public",
+                  "context": "Supabase publishable key is intended for clients; data security depends on grants and RLS.",
+                  "completeness": "No complete credential pair inferred",
+                  "channels": [
+                    "static-reconstruction"
+                  ],
+                  "validity": "unverified",
+                  "permissions": "unknown"
+                },
+                "triage": {
+                  "category": "insignificant",
+                  "reason": "Public client identifier intended for frontend use; no private credential or access failure established."
+                }
+              },
+              {
+                "id": "fe2467cbd79c82b410203c626e543f9d",
+                "fingerprint": "fe2467cbd79c82b410203c626e543f9d",
+                "category": "information",
+                "provider": "Website",
+                "rule": "public-source-map",
+                "severity": "info",
+                "confidence": "high",
+                "reasons": [
+                  "Public source map was accessible; this observation alone does not establish a private credential leak."
+                ],
+                "masked": "No credential inferred",
+                "validity": "unverified",
+                "impact": "Public implementation or configuration information; no private credential inferred.",
+                "remediation": "Confirm whether publishing source maps is intended. Remove unnecessary maps and stale source assets; rebuild and rescan.",
+                "occurrences": [
+                  {
+                    "url": "http://127.0.0.1:49703/inline.js",
+                    "chain": [
+                      "http://127.0.0.1:49703/",
+                      "document/base URL",
+                      "http://127.0.0.1:49703/inline.js",
+                      "inline source map"
+                    ],
+                    "transformations": [],
+                    "excerpt": "",
+                    "evidence": "Unauthenticated HTTP response",
+                    "coordinates": "unavailable",
+                    "byteOffsetEncoding": "utf-8-decoded-text",
+                    "exposure": "public-response",
+                    "excerptUnavailableReason": "Observation comes from resource metadata; no matched source text was retained."
+                  }
+                ],
+                "environment": "unknown",
+                "exposureGroup": "other",
+                "financialPriority": "none",
+                "assessment": {
+                  "ruleVersion": "website/2.4.0",
+                  "exposureConfidence": "high",
+                  "format": "public-source-map",
+                  "context": "Public source map was accessible; this observation alone does not establish a private credential leak.",
+                  "completeness": "No complete credential pair inferred",
+                  "channels": [
+                    "public-response"
+                  ],
+                  "validity": "unverified",
+                  "permissions": "unknown"
+                },
+                "triage": {
+                  "category": "insignificant",
+                  "reason": "Public implementation or endpoint reference alone does not establish a leak. Resource coverage remains in the audit."
+                }
+              },
+              {
+                "id": "2f7a8d624a64caa9b65500500f97cf3f",
+                "fingerprint": "2f7a8d624a64caa9b65500500f97cf3f",
+                "category": "information",
+                "provider": "Website",
+                "rule": "public-source-map",
+                "severity": "info",
+                "confidence": "high",
+                "reasons": [
+                  "Public source map was accessible; this observation alone does not establish a private credential leak."
+                ],
+                "masked": "No credential inferred",
+                "validity": "unverified",
+                "impact": "Public implementation or configuration information; no private credential inferred.",
+                "remediation": "Confirm whether publishing source maps is intended. Remove unnecessary maps and stale source assets; rebuild and rescan.",
+                "occurrences": [
+                  {
+                    "url": "http://127.0.0.1:49703/app.min.js.map",
+                    "chain": [
+                      "http://127.0.0.1:49703/",
+                      "document/base URL",
+                      "http://127.0.0.1:49703/app.min.js",
+                      "source-map comment"
+                    ],
+                    "transformations": [],
+                    "excerpt": "",
+                    "evidence": "Unauthenticated HTTP response",
+                    "coordinates": "unavailable",
+                    "byteOffsetEncoding": "utf-8-decoded-text",
+                    "exposure": "public-response",
+                    "excerptUnavailableReason": "Observation comes from resource metadata; no matched source text was retained."
+                  }
+                ],
+                "environment": "unknown",
+                "exposureGroup": "other",
+                "financialPriority": "none",
+                "assessment": {
+                  "ruleVersion": "website/2.4.0",
+                  "exposureConfidence": "high",
+                  "format": "public-source-map",
+                  "context": "Public source map was accessible; this observation alone does not establish a private credential leak.",
+                  "completeness": "No complete credential pair inferred",
+                  "channels": [
+                    "public-response"
+                  ],
+                  "validity": "unverified",
+                  "permissions": "unknown"
+                },
+                "triage": {
+                  "category": "insignificant",
+                  "reason": "Public implementation or endpoint reference alone does not establish a leak. Resource coverage remains in the audit."
+                }
+              },
+              {
+                "id": "863cea90d6aae4768e3ba2ccc36affb3",
+                "fingerprint": "863cea90d6aae4768e3ba2ccc36affb3",
+                "category": "information",
+                "provider": "Website",
+                "rule": "public-source-map",
+                "severity": "info",
+                "confidence": "high",
+                "reasons": [
+                  "Public source map was accessible; this observation alone does not establish a private credential leak."
+                ],
+                "masked": "No credential inferred",
+                "validity": "unverified",
+                "impact": "Public implementation or configuration information; no private credential inferred.",
+                "remediation": "Confirm whether publishing source maps is intended. Remove unnecessary maps and stale source assets; rebuild and rescan.",
+                "occurrences": [
+                  {
+                    "url": "http://127.0.0.1:49703/conventional.js.map",
+                    "chain": [
+                      "http://127.0.0.1:49703/",
+                      "document/base URL",
+                      "http://127.0.0.1:49703/conventional.js",
+                      "http://127.0.0.1:49703/conventional.js.map"
+                    ],
+                    "transformations": [],
+                    "excerpt": "",
+                    "evidence": "Unauthenticated HTTP response",
+                    "coordinates": "unavailable",
+                    "byteOffsetEncoding": "utf-8-decoded-text",
+                    "exposure": "public-response",
+                    "excerptUnavailableReason": "Observation comes from resource metadata; no matched source text was retained."
+                  }
+                ],
+                "environment": "unknown",
+                "exposureGroup": "other",
+                "financialPriority": "none",
+                "assessment": {
+                  "ruleVersion": "website/2.4.0",
+                  "exposureConfidence": "high",
+                  "format": "public-source-map",
+                  "context": "Public source map was accessible; this observation alone does not establish a private credential leak.",
+                  "completeness": "No complete credential pair inferred",
+                  "channels": [
+                    "public-response"
+                  ],
+                  "validity": "unverified",
+                  "permissions": "unknown"
+                },
+                "triage": {
+                  "category": "insignificant",
+                  "reason": "Public implementation or endpoint reference alone does not establish a leak. Resource coverage remains in the audit."
+                }
+              },
+              {
+                "id": "5448d89d79ef14eee2c7a86bc50ce44f",
+                "fingerprint": "5448d89d79ef14eee2c7a86bc50ce44f",
+                "category": "information",
+                "provider": "Website",
+                "rule": "public-source-map",
+                "severity": "info",
+                "confidence": "high",
+                "reasons": [
+                  "Public source map was accessible; this observation alone does not establish a private credential leak."
+                ],
+                "masked": "No credential inferred",
+                "validity": "unverified",
+                "impact": "Public implementation or configuration information; no private credential inferred.",
+                "remediation": "Confirm whether publishing source maps is intended. Remove unnecessary maps and stale source assets; rebuild and rescan.",
+                "occurrences": [
+                  {
+                    "url": "http://127.0.0.1:49703/header.map",
+                    "chain": [
+                      "http://127.0.0.1:49703/",
+                      "document/base URL",
+                      "http://127.0.0.1:49703/header-map.js"
+                    ],
+                    "transformations": [],
+                    "excerpt": "",
+                    "evidence": "Unauthenticated HTTP response",
+                    "coordinates": "unavailable",
+                    "byteOffsetEncoding": "utf-8-decoded-text",
+                    "exposure": "public-response",
+                    "excerptUnavailableReason": "Observation comes from resource metadata; no matched source text was retained."
+                  }
+                ],
+                "environment": "unknown",
+                "exposureGroup": "other",
+                "financialPriority": "none",
+                "assessment": {
+                  "ruleVersion": "website/2.4.0",
+                  "exposureConfidence": "high",
+                  "format": "public-source-map",
+                  "context": "Public source map was accessible; this observation alone does not establish a private credential leak.",
+                  "completeness": "No complete credential pair inferred",
+                  "channels": [
+                    "public-response"
+                  ],
+                  "validity": "unverified",
+                  "permissions": "unknown"
+                },
+                "triage": {
+                  "category": "insignificant",
+                  "reason": "Public implementation or endpoint reference alone does not establish a leak. Resource coverage remains in the audit."
+                }
+              }
+            ],
+            "websites": {
+              "mode": "fixed",
+              "count": 1,
+              "analysisMs": 118.72130000001016,
+              "analysisMsMeaning": "elapsed allocation charge (includes worker startup and cleanup); see analysis.origins for the breakdown",
+              "importantUninspected": 0,
+              "limits": [
+                {
+                  "origin": "http://127.0.0.1:49703",
+                  "mode": "fixed",
+                  "effective": {
+                    "resources": 160,
+                    "pages": 30,
+                    "bytes": 83886080,
+                    "maps": 25,
+                    "analysisMs": 12000
+                  },
+                  "maximum": {
+                    "resources": 160,
+                    "pages": 30,
+                    "bytes": 83886080,
+                    "maps": 25,
+                    "analysisMs": 12000
+                  },
+                  "signals": {
+                    "scripts": 9,
+                    "bundleBytes": 2690,
+                    "maps": 9,
+                    "importantPending": 0,
+                    "responseMs": 2
+                  },
+                  "reasons": [
+                    "Fixed per-website maximum allocation."
+                  ],
+                  "importantUninspected": [],
+                  "importantUnresolved": 0
+                }
+              ]
+            },
+            "stopReason": "discovered-frontier-drained",
+            "uninspected": [
+              {
+                "url": "http://127.0.0.1:49703/redirect-out",
+                "depth": 1,
+                "chain": [
+                  "http://127.0.0.1:49703/",
+                  "document/base URL"
+                ],
+                "kind": "page",
+                "enqueuedAt": 1791430687348,
+                "certainty": "confirmed",
+                "context": "document/base URL",
+                "deferredReason": "scope"
+              },
+              {
+                "url": "http://127.0.0.1:49703/fail",
+                "depth": 1,
+                "chain": [
+                  "http://127.0.0.1:49703/",
+                  "document/base URL"
+                ],
+                "kind": "page",
+                "enqueuedAt": 1791430687348,
+                "certainty": "confirmed",
+                "context": "document/base URL",
+                "deferredReason": "network-failure"
+              },
+              {
+                "url": "http://127.0.0.1:49703/redirect-secret",
+                "depth": 1,
+                "chain": [
+                  "http://127.0.0.1:49703/",
+                  "document/base URL"
+                ],
+                "kind": "page",
+                "enqueuedAt": 1791430687349,
+                "certainty": "confirmed",
+                "context": "document/base URL",
+                "deferredReason": "credential-in-request"
+              }
+            ],
+            "scope": {
+              "mode": "registrable-domain",
+              "source": "default",
+              "psl": {
+                "library": "tldts",
+                "version": "7.4.16"
+              },
+              "groups": [],
+              "unsupportedSeeds": [
+                {
+                  "seed": "http://127.0.0.1:49703/",
+                  "reason": "IP address literal has no registrable domain"
+                }
+              ],
+              "otherExplicitOrigins": [],
+              "warnings": [],
+              "maxAutoDiscoveredOrigins": 50,
+              "autoAdmitted": 0,
+              "summary": "Domain scope: no entered seed has a supported registrable domain, so only the entered origins are scanned.",
+              "excluded": {
+                "thirdPartyOrigins": 2,
+                "references": 4,
+                "overflow": 0,
+                "examples": [
+                  {
+                    "origin": "http://127.0.0.1:49702",
+                    "count": 3,
+                    "reason": "ip-literal",
+                    "firstSeenIn": "http://127.0.0.1:49703/",
+                    "kinds": [
+                      "script",
+                      "asset",
+                      "page"
+                    ],
+                    "urls": [
+                      "http://127.0.0.1:49702/outside.js",
+                      "http://127.0.0.1:49702/redirect-target"
+                    ]
+                  },
+                  {
+                    "origin": "http://127.0.0.1:4317",
+                    "count": 1,
+                    "reason": "ip-literal",
+                    "firstSeenIn": "http://127.0.0.1:49703/",
+                    "kinds": [
+                      "asset-hint"
+                    ],
+                    "urls": [
+                      "http://127.0.0.1:4317/"
+                    ]
+                  }
+                ]
+              }
+            },
+            "analysis": {
+              "origins": {
+                "http://127.0.0.1:49703": {
+                  "allocationMs": 12000,
+                  "maximumMs": 12000,
+                  "chargedMs": 119,
+                  "queueWaitMs": 1198,
+                  "startupMs": 34,
+                  "workerMs": 11,
+                  "cleanupMs": 0,
+                  "viewInspectionMs": 2099,
+                  "jobs": 13,
+                  "reusedVerdicts": 75,
+                  "outcomes": {
+                    "inspected": 13
+                  }
+                }
+              },
+              "interruptions": {},
+              "backlog": {
+                "items": 0,
+                "bytes": 0,
+                "resumed": 0,
+                "deferred": 0,
+                "dropped": 0
+              },
+              "note": "chargedMs is the elapsed allocation charge (worker startup, parsing, propagation and cleanup, bounded by the slice); workerMs is the parser-reported time inside the worker; queueWaitMs is time between module admission and job start. viewInspectionMs is not charged to the allocation."
+            },
+            "discovery": {
+              "rejected": {
+                "bareExtension": 0,
+                "nonUrlContext": 0,
+                "dottedIdentifier": 0,
+                "glob": 0,
+                "examples": []
+              },
+              "unresolved": 2,
+              "observedOnly": 12,
+              "fallbacks": {},
+              "reusedDiscoveries": 0,
+              "syntax": {
+                "tokens": 1,
+                "html": 9,
+                "module": 13,
+                "json": 2,
+                "css": 1
+              },
+              "sinks": {
+                "manifest-field": 1,
+                "import": 1,
+                "fetch": 14,
+                "websocket": 1,
+                "worker": 1,
+                "service-worker": 1
+              },
+              "windowed": 0,
+              "referenceLimit": 0
+            }
+          }
+        }
+      ],
+      "results": [
+        {
+          "ruleId": "github",
+          "level": "error",
+          "message": {
+            "text": "GitHub: private-credential. [redacted: 40 characters]. Validity unverified."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "http://127.0.0.1:49703/"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 196
+                }
+              },
+              "properties": {
+                "coordinates": "generated",
+                "byteOffset": 195,
+                "chain": [],
+                "transformations": [],
+                "exposure": "public-response"
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "http://127.0.0.1:49703/app.min.js"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 924
+                }
+              },
+              "properties": {
+                "coordinates": "generated",
+                "byteOffset": 923,
+                "chain": [
+                  "http://127.0.0.1:49703/",
+                  "document/base URL"
+                ],
+                "transformations": [],
+                "exposure": "public-response"
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "http://127.0.0.1:49703/app.min.js"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 901
+                }
+              },
+              "properties": {
+                "coordinates": "approximate",
+                "byteOffset": 900,
+                "chain": [
+                  "http://127.0.0.1:49703/",
+                  "document/base URL",
+                  "reconstructed constant",
+                  "Static construction: fetch"
+                ],
+                "transformations": [
+                  "Literal",
+                  "Constant object"
+                ],
+                "exposure": "static-reconstruction",
+                "constituents": [
+                  {
+                    "url": "http://127.0.0.1:49703/app.min.js",
+                    "start": 922,
+                    "end": 964,
+                    "line": 1,
+                    "column": 923,
+                    "representation": "[redacted]"
+                  }
+                ],
+                "sink": "Static construction: fetch"
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "http://127.0.0.1:49703/app.min.js"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 884
+                }
+              },
+              "properties": {
+                "coordinates": "approximate",
+                "byteOffset": 883,
+                "chain": [
+                  "http://127.0.0.1:49703/",
+                  "document/base URL",
+                  "reconstructed constant",
+                  "Static construction: fetch"
+                ],
+                "transformations": [
+                  "Static request/SDK argument construction"
+                ],
+                "exposure": "static-reconstruction",
+                "constituents": [
+                  {
+                    "url": "http://127.0.0.1:49703/app.min.js",
+                    "start": 889,
+                    "end": 899,
+                    "line": 1,
+                    "column": 890,
+                    "representation": "[redacted]"
+                  },
+                  {
+                    "url": "http://127.0.0.1:49703/app.min.js",
+                    "start": 922,
+                    "end": 964,
+                    "line": 1,
+                    "column": 923,
+                    "representation": "[redacted]"
+                  }
+                ],
+                "sink": "Static construction: fetch"
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "http://127.0.0.1:49703/app.min.js"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 910
+                }
+              },
+              "properties": {
+                "coordinates": "approximate",
+                "byteOffset": 909,
+                "chain": [
+                  "http://127.0.0.1:49703/",
+                  "document/base URL",
+                  "reconstructed constant"
+                ],
+                "transformations": [
+                  "Literal",
+                  "Constant object"
+                ],
+                "exposure": "static-reconstruction",
+                "constituents": [
+                  {
+                    "url": "http://127.0.0.1:49703/app.min.js",
+                    "start": 922,
+                    "end": 964,
+                    "line": 1,
+                    "column": 923,
+                    "representation": "[redacted]"
+                  }
+                ]
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "http://127.0.0.1:49703/sw.js"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 24
+                }
+              },
+              "properties": {
+                "coordinates": "generated",
+                "byteOffset": 23,
+                "chain": [
+                  "http://127.0.0.1:49703/",
+                  "document/base URL",
+                  "http://127.0.0.1:49703/app.min.js",
+                  "service worker registration"
+                ],
+                "transformations": [],
+                "exposure": "public-response"
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "sessionHmac": "2cd7df4b75b0633d2ba61d6d7354b407"
+          },
+          "properties": {
+            "triage": {
+              "category": "direct-leak",
+              "reason": "Private credential material was observed in public content or anonymous runtime evidence. Validity and permissions remain unverified."
+            },
+            "assessment": {
+              "ruleVersion": "website/2.4.0",
+              "exposureConfidence": "high",
+              "format": "github",
+              "context": "Matches a documented credential format; validity and privileges are unverified.",
+              "completeness": "No complete credential pair inferred",
+              "channels": [
+                "public-response",
+                "static-reconstruction"
+              ],
+              "validity": "unverified",
+              "permissions": "unknown"
+            },
+            "category": "private-credential",
+            "severity": "high",
+            "confidence": "high",
+            "reasons": [
+              "Matches a documented credential format; validity and privileges are unverified."
+            ],
+            "impact": "Potential deployment or configuration access. Validity, permissions, expiry and restrictions are unknown.",
+            "remediation": "Revoke and replace the exposed credential. Remove the public value/file; move private credentials to backend secret storage. Rebuild frontend assets, remove stale assets, review provider usage and rescan.",
+            "exposureGroup": "deployment",
+            "financialPriority": "urgent",
+            "environment": "unknown"
+          }
+        },
+        {
+          "ruleId": "openai",
+          "level": "error",
+          "message": {
+            "text": "OpenAI: private-credential. [redacted: 110 characters]. Validity unverified."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "http://127.0.0.1:49703/app.min.js"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 297
+                }
+              },
+              "properties": {
+                "coordinates": "generated",
+                "byteOffset": 296,
+                "chain": [
+                  "http://127.0.0.1:49703/",
+                  "document/base URL"
+                ],
+                "transformations": [],
+                "exposure": "public-response"
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "http://127.0.0.1:49703/app.min.js"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 274
+                }
+              },
+              "properties": {
+                "coordinates": "approximate",
+                "byteOffset": 273,
+                "chain": [
+                  "http://127.0.0.1:49703/",
+                  "document/base URL",
+                  "reconstructed constant"
+                ],
+                "transformations": [
+                  "Literal",
+                  "Constant object"
+                ],
+                "exposure": "static-reconstruction",
+                "constituents": [
+                  {
+                    "url": "http://127.0.0.1:49703/app.min.js",
+                    "start": 295,
+                    "end": 407,
+                    "line": 1,
+                    "column": 296,
+                    "representation": "[redacted]"
+                  }
+                ]
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "http://127.0.0.1:49703/lazy.js"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 128
+                }
+              },
+              "properties": {
+                "coordinates": "approximate",
+                "byteOffset": 127,
+                "chain": [
+                  "http://127.0.0.1:49703/",
+                  "document/base URL",
+                  "http://127.0.0.1:49703/app.min.js",
+                  "importing module"
+                ],
+                "transformations": [
+                  "Static string-literal concatenation (no evaluation)"
+                ],
+                "exposure": "public-response"
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "http://127.0.0.1:49703/worker.js"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 28
+                }
+              },
+              "properties": {
+                "coordinates": "generated",
+                "byteOffset": 27,
+                "chain": [
+                  "http://127.0.0.1:49703/",
+                  "document/base URL",
+                  "http://127.0.0.1:49703/app.min.js",
+                  "worker document base"
+                ],
+                "transformations": [],
+                "exposure": "public-response"
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "http://127.0.0.1:49703/worker.js"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 7
+                }
+              },
+              "properties": {
+                "coordinates": "approximate",
+                "byteOffset": 6,
+                "chain": [
+                  "http://127.0.0.1:49703/",
+                  "document/base URL",
+                  "http://127.0.0.1:49703/app.min.js",
+                  "worker document base"
+                ],
+                "transformations": [
+                  "Static string-literal concatenation (no evaluation)"
+                ],
+                "exposure": "public-response"
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "http://127.0.0.1:49703/lazy.js"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 128
+                }
+              },
+              "properties": {
+                "coordinates": "approximate",
+                "byteOffset": 127,
+                "chain": [
+                  "http://127.0.0.1:49703/",
+                  "document/base URL",
+                  "http://127.0.0.1:49703/app.min.js",
+                  "importing module",
+                  "reconstructed constant"
+                ],
+                "transformations": [
+                  "Literal",
+                  "Constant concatenation"
+                ],
+                "exposure": "static-reconstruction",
+                "constituents": [
+                  {
+                    "url": "http://127.0.0.1:49703/lazy.js",
+                    "start": 127,
+                    "end": 154,
+                    "line": 1,
+                    "column": 128,
+                    "representation": "[redacted]"
+                  },
+                  {
+                    "url": "http://127.0.0.1:49703/lazy.js",
+                    "start": 157,
+                    "end": 244,
+                    "line": 1,
+                    "column": 158,
+                    "representation": "[redacted]"
+                  }
+                ]
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "http://127.0.0.1:49703/worker.js"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 7
+                }
+              },
+              "properties": {
+                "coordinates": "approximate",
+                "byteOffset": 6,
+                "chain": [
+                  "http://127.0.0.1:49703/",
+                  "document/base URL",
+                  "http://127.0.0.1:49703/app.min.js",
+                  "worker document base",
+                  "reconstructed constant",
+                  "Static construction: fetch"
+                ],
+                "transformations": [
+                  "Literal",
+                  "Constant concatenation"
+                ],
+                "exposure": "static-reconstruction",
+                "constituents": [
+                  {
+                    "url": "http://127.0.0.1:49703/worker.js",
+                    "start": 6,
+                    "end": 25,
+                    "line": 1,
+                    "column": 7,
+                    "representation": "[redacted]"
+                  },
+                  {
+                    "url": "http://127.0.0.1:49703/worker.js",
+                    "start": 26,
+                    "end": 138,
+                    "line": 1,
+                    "column": 27,
+                    "representation": "[redacted]"
+                  }
+                ],
+                "sink": "Static construction: fetch"
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "http://127.0.0.1:49703/worker.js"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1
+                }
+              },
+              "properties": {
+                "coordinates": "approximate",
+                "byteOffset": 0,
+                "chain": [
+                  "http://127.0.0.1:49703/",
+                  "document/base URL",
+                  "http://127.0.0.1:49703/app.min.js",
+                  "worker document base",
+                  "reconstructed constant",
+                  "Static construction: fetch"
+                ],
+                "transformations": [
+                  "Static request/SDK argument construction"
+                ],
+                "exposure": "static-reconstruction",
+                "constituents": [
+                  {
+                    "url": "http://127.0.0.1:49703/worker.js",
+                    "start": 6,
+                    "end": 25,
+                    "line": 1,
+                    "column": 7,
+                    "representation": "[redacted]"
+                  },
+                  {
+                    "url": "http://127.0.0.1:49703/worker.js",
+                    "start": 26,
+                    "end": 138,
+                    "line": 1,
+                    "column": 27,
+                    "representation": "[redacted]"
+                  }
+                ],
+                "sink": "Static construction: fetch"
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "http://127.0.0.1:49703/redirect-secret"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 31
+                }
+              },
+              "properties": {
+                "coordinates": "generated",
+                "byteOffset": 30,
+                "chain": [
+                  "http://127.0.0.1:49703/",
+                  "document/base URL"
+                ],
+                "transformations": [],
+                "exposure": "public-response"
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "http://127.0.0.1:49703/collect?api_key=[redacted]"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 40
+                }
+              },
+              "properties": {
+                "coordinates": "generated",
+                "byteOffset": 39,
+                "chain": [
+                  "http://127.0.0.1:49703/",
+                  "document/base URL",
+                  "http://127.0.0.1:49703/redirect-secret",
+                  "HTTP redirect"
+                ],
+                "transformations": [],
+                "exposure": "blocked-candidate"
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "http://127.0.0.1:49703/.env"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 16
+                }
+              },
+              "properties": {
+                "coordinates": "generated",
+                "byteOffset": 15,
+                "chain": [],
+                "transformations": [],
+                "exposure": "public-response"
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "sessionHmac": "101a47a23c27d62ae0f022d555c26c51"
+          },
+          "properties": {
+            "triage": {
+              "category": "direct-leak",
+              "reason": "Private credential material was observed in public content or anonymous runtime evidence. Validity and permissions remain unverified."
+            },
+            "assessment": {
+              "ruleVersion": "website/2.4.0",
+              "exposureConfidence": "high",
+              "format": "openai",
+              "context": "Matches a documented credential format; validity and privileges are unverified. Explicit authentication field in an outgoing candidate; blocked locally without validation. Literal authentication material in OpenAI configuration or request construction; validity, expiry, permissions and restrictions are unknown.",
+              "completeness": "private-material",
+              "channels": [
+                "public-response",
+                "static-reconstruction",
+                "blocked-candidate"
+              ],
+              "validity": "unverified",
+              "permissions": "unknown"
+            },
+            "category": "private-credential",
+            "severity": "high",
+            "confidence": "high",
+            "reasons": [
+              "Matches a documented credential format; validity and privileges are unverified.",
+              "Explicit authentication field in an outgoing candidate; blocked locally without validation.",
+              "Literal authentication material in OpenAI configuration or request construction; validity, expiry, permissions and restrictions are unknown."
+            ],
+            "impact": "Potential paid AI usage. Validity, permissions, expiry and restrictions are unknown.",
+            "remediation": "Revoke and replace the exposed credential. Remove the public value/file; move private credentials to backend secret storage. Rebuild frontend assets, remove stale assets, review provider usage and rescan.",
+            "exposureGroup": "paid-ai",
+            "financialPriority": "urgent",
+            "environment": "unknown",
+            "credentialSet": {
+              "state": "private-material",
+              "components": [
+                "OPENAI_API_KEY"
+              ],
+              "missing": [],
+              "context": "qualified environment block"
+            }
+          }
+        },
+        {
+          "ruleId": "anthropic",
+          "level": "error",
+          "message": {
+            "text": "Anthropic: private-credential. [redacted: 115 characters]. Validity unverified."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "http://127.0.0.1:49703/app.min.js"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 766
+                }
+              },
+              "properties": {
+                "coordinates": "generated",
+                "byteOffset": 765,
+                "chain": [
+                  "http://127.0.0.1:49703/",
+                  "document/base URL"
+                ],
+                "transformations": [],
+                "exposure": "public-response"
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "http://127.0.0.1:49703/app.min.js"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 745
+                }
+              },
+              "properties": {
+                "coordinates": "approximate",
+                "byteOffset": 744,
+                "chain": [
+                  "http://127.0.0.1:49703/",
+                  "document/base URL"
+                ],
+                "transformations": [
+                  "Static string-literal concatenation (no evaluation)"
+                ],
+                "exposure": "public-response"
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "http://127.0.0.1:49703/app.min.js"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 745
+                }
+              },
+              "properties": {
+                "coordinates": "approximate",
+                "byteOffset": 744,
+                "chain": [
+                  "http://127.0.0.1:49703/",
+                  "document/base URL",
+                  "reconstructed constant",
+                  "Static construction: fetch"
+                ],
+                "transformations": [
+                  "Literal",
+                  "Constant concatenation"
+                ],
+                "exposure": "static-reconstruction",
+                "constituents": [
+                  {
+                    "url": "http://127.0.0.1:49703/app.min.js",
+                    "start": 744,
+                    "end": 763,
+                    "line": 1,
+                    "column": 745,
+                    "representation": "[redacted]"
+                  },
+                  {
+                    "url": "http://127.0.0.1:49703/app.min.js",
+                    "start": 764,
+                    "end": 881,
+                    "line": 1,
+                    "column": 765,
+                    "representation": "[redacted]"
+                  }
+                ],
+                "sink": "Static construction: fetch"
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "http://127.0.0.1:49703/app.min.js"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 739
+                }
+              },
+              "properties": {
+                "coordinates": "approximate",
+                "byteOffset": 738,
+                "chain": [
+                  "http://127.0.0.1:49703/",
+                  "document/base URL",
+                  "reconstructed constant",
+                  "Static construction: fetch"
+                ],
+                "transformations": [
+                  "Static request/SDK argument construction"
+                ],
+                "exposure": "static-reconstruction",
+                "constituents": [
+                  {
+                    "url": "http://127.0.0.1:49703/app.min.js",
+                    "start": 744,
+                    "end": 763,
+                    "line": 1,
+                    "column": 745,
+                    "representation": "[redacted]"
+                  },
+                  {
+                    "url": "http://127.0.0.1:49703/app.min.js",
+                    "start": 764,
+                    "end": 881,
+                    "line": 1,
+                    "column": 765,
+                    "representation": "[redacted]"
+                  }
+                ],
+                "sink": "Static construction: fetch"
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "http://127.0.0.1:49703/app.min.js.map"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 132
+                }
+              },
+              "properties": {
+                "coordinates": "generated",
+                "byteOffset": 131,
+                "chain": [
+                  "http://127.0.0.1:49703/",
+                  "document/base URL",
+                  "http://127.0.0.1:49703/app.min.js",
+                  "source-map comment"
+                ],
+                "transformations": [],
+                "exposure": "public-response"
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "http://127.0.0.1:49703/app.min.js.map"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 98
+                }
+              },
+              "properties": {
+                "coordinates": "approximate",
+                "byteOffset": 97,
+                "chain": [
+                  "http://127.0.0.1:49703/",
+                  "document/base URL",
+                  "http://127.0.0.1:49703/app.min.js",
+                  "source-map comment"
+                ],
+                "transformations": [
+                  "JavaScript string-escape decoding"
+                ],
+                "exposure": "public-response"
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "http://127.0.0.1:49703/app.min.js.map"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 33
+                }
+              },
+              "properties": {
+                "sourceLabel": "src/config.ts",
+                "coordinates": "extracted-source",
+                "byteOffset": 32,
+                "chain": [
+                  "http://127.0.0.1:49703/",
+                  "document/base URL",
+                  "http://127.0.0.1:49703/app.min.js",
+                  "source-map comment",
+                  "sourcesContent",
+                  "src/config.ts"
+                ],
+                "transformations": [],
+                "exposure": "public-response"
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "sessionHmac": "16394e25599739dc793f884cb6c6751f"
+          },
+          "properties": {
+            "triage": {
+              "category": "direct-leak",
+              "reason": "Private credential material was observed in public content or anonymous runtime evidence. Validity and permissions remain unverified."
+            },
+            "assessment": {
+              "ruleVersion": "website/2.4.0",
+              "exposureConfidence": "high",
+              "format": "anthropic",
+              "context": "Matches a documented credential format; validity and privileges are unverified.",
+              "completeness": "No complete credential pair inferred",
+              "channels": [
+                "public-response",
+                "static-reconstruction"
+              ],
+              "validity": "unverified",
+              "permissions": "unknown"
+            },
+            "category": "private-credential",
+            "severity": "high",
+            "confidence": "high",
+            "reasons": [
+              "Matches a documented credential format; validity and privileges are unverified."
+            ],
+            "impact": "Potential paid AI usage. Validity, permissions, expiry and restrictions are unknown.",
+            "remediation": "Revoke and replace the exposed credential. Remove the public value/file; move private credentials to backend secret storage. Rebuild frontend assets, remove stale assets, review provider usage and rescan.",
+            "exposureGroup": "paid-ai",
+            "financialPriority": "urgent",
+            "environment": "unknown"
+          }
+        },
+        {
+          "ruleId": "google-api",
+          "level": "warning",
+          "message": {
+            "text": "Google / Gemini: suspicious. [redacted: 39 characters]. Validity unverified."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "http://127.0.0.1:49703/app.min.js"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 188
+                }
+              },
+              "properties": {
+                "coordinates": "generated",
+                "byteOffset": 187,
+                "chain": [
+                  "http://127.0.0.1:49703/",
+                  "document/base URL"
+                ],
+                "transformations": [],
+                "exposure": "public-response"
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "http://127.0.0.1:49703/app.min.js"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 22
+                }
+              },
+              "properties": {
+                "coordinates": "approximate",
+                "byteOffset": 21,
+                "chain": [
+                  "http://127.0.0.1:49703/",
+                  "document/base URL",
+                  "reconstructed constant"
+                ],
+                "transformations": [
+                  "Literal",
+                  "Constant object"
+                ],
+                "exposure": "static-reconstruction",
+                "constituents": [
+                  {
+                    "url": "http://127.0.0.1:49703/app.min.js",
+                    "start": 29,
+                    "end": 90,
+                    "line": 1,
+                    "column": 30,
+                    "representation": "[redacted]"
+                  },
+                  {
+                    "url": "http://127.0.0.1:49703/app.min.js",
+                    "start": 100,
+                    "end": 168,
+                    "line": 1,
+                    "column": 101,
+                    "representation": "[redacted]"
+                  },
+                  {
+                    "url": "http://127.0.0.1:49703/app.min.js",
+                    "start": 186,
+                    "end": 227,
+                    "line": 1,
+                    "column": 187,
+                    "representation": "[redacted]"
+                  },
+                  {
+                    "url": "http://127.0.0.1:49703/app.min.js",
+                    "start": 238,
+                    "end": 257,
+                    "line": 1,
+                    "column": 239,
+                    "representation": "[redacted]"
+                  }
+                ]
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "http://127.0.0.1:49703/app.min.js"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 179
+                }
+              },
+              "properties": {
+                "coordinates": "approximate",
+                "byteOffset": 178,
+                "chain": [
+                  "http://127.0.0.1:49703/",
+                  "document/base URL",
+                  "reconstructed constant"
+                ],
+                "transformations": [
+                  "Literal",
+                  "Constant object"
+                ],
+                "exposure": "static-reconstruction",
+                "constituents": [
+                  {
+                    "url": "http://127.0.0.1:49703/app.min.js",
+                    "start": 186,
+                    "end": 227,
+                    "line": 1,
+                    "column": 187,
+                    "representation": "[redacted]"
+                  },
+                  {
+                    "url": "http://127.0.0.1:49703/app.min.js",
+                    "start": 238,
+                    "end": 257,
+                    "line": 1,
+                    "column": 239,
+                    "representation": "[redacted]"
+                  }
+                ]
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "sessionHmac": "a1068c2ec00ec69d60c6c08f9467405f"
+          },
+          "properties": {
+            "triage": {
+              "category": "high-potential-leak",
+              "reason": "A possible credential or authentication component was observed; private purpose, completeness and privileges require review."
+            },
+            "assessment": {
+              "ruleVersion": "website/2.4.0",
+              "exposureConfidence": "high",
+              "format": "google-api",
+              "context": "Google API-key format; Firebase use can be public. Restrictions, enabled APIs and billable capabilities are unknown.",
+              "completeness": "No complete credential pair inferred",
+              "channels": [
+                "public-response",
+                "static-reconstruction"
+              ],
+              "validity": "unverified",
+              "permissions": "unknown"
+            },
+            "category": "suspicious",
+            "severity": "medium",
+            "confidence": "high",
+            "reasons": [
+              "Google API-key format; Firebase use can be public. Restrictions, enabled APIs and billable capabilities are unknown."
+            ],
+            "impact": "Potential credential or capability requiring operator review; restrictions and privileges unknown.",
+            "remediation": "Review the value and provider restrictions. If private, revoke/replace it and remove it from public resources, rebuild and rescan.",
+            "exposureGroup": "paid-ai",
+            "financialPriority": "review",
+            "environment": "unknown"
+          }
+        },
+        {
+          "ruleId": "stripe-secret",
+          "level": "error",
+          "message": {
+            "text": "Stripe: private-credential. [redacted: 59 characters]. Validity unverified."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "http://127.0.0.1:49703/app.min.js"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1501
+                }
+              },
+              "properties": {
+                "coordinates": "generated",
+                "byteOffset": 1500,
+                "chain": [
+                  "http://127.0.0.1:49703/",
+                  "document/base URL"
+                ],
+                "transformations": [],
+                "exposure": "public-response"
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "http://127.0.0.1:49703/app.min.js"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1473
+                }
+              },
+              "properties": {
+                "coordinates": "approximate",
+                "byteOffset": 1472,
+                "chain": [
+                  "http://127.0.0.1:49703/",
+                  "document/base URL"
+                ],
+                "transformations": [
+                  "Static string-literal concatenation (no evaluation)"
+                ],
+                "exposure": "public-response"
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "http://127.0.0.1:49703/lazy.js"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 23
+                }
+              },
+              "properties": {
+                "coordinates": "approximate",
+                "byteOffset": 22,
+                "chain": [
+                  "http://127.0.0.1:49703/",
+                  "document/base URL",
+                  "http://127.0.0.1:49703/app.min.js",
+                  "importing module"
+                ],
+                "transformations": [
+                  "Base64 decoding"
+                ],
+                "exposure": "public-response"
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "sessionHmac": "746e2bce8a5c401e55329502d032b2c9"
+          },
+          "properties": {
+            "triage": {
+              "category": "direct-leak",
+              "reason": "Private credential material was observed in public content or anonymous runtime evidence. Validity and permissions remain unverified."
+            },
+            "assessment": {
+              "ruleVersion": "website/2.4.0",
+              "exposureConfidence": "high",
+              "format": "stripe-secret",
+              "context": "Matches a documented credential format; validity and privileges are unverified.",
+              "completeness": "No complete credential pair inferred",
+              "channels": [
+                "public-response"
+              ],
+              "validity": "unverified",
+              "permissions": "unknown"
+            },
+            "category": "private-credential",
+            "severity": "high",
+            "confidence": "high",
+            "reasons": [
+              "Matches a documented credential format; validity and privileges are unverified."
+            ],
+            "impact": "Potential payment operations. Validity, permissions, expiry and restrictions are unknown.",
+            "remediation": "Revoke and replace the exposed credential. Remove the public value/file; move private credentials to backend secret storage. Rebuild frontend assets, remove stale assets, review provider usage and rescan.",
+            "exposureGroup": "payments",
+            "financialPriority": "urgent",
+            "environment": "production"
+          }
+        },
+        {
+          "ruleId": "stripe-signing",
+          "level": "error",
+          "message": {
+            "text": "Stripe: private-credential. [redacted: 57 characters]. Validity unverified."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "http://127.0.0.1:49703/app.min.js"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 638
+                }
+              },
+              "properties": {
+                "coordinates": "generated",
+                "byteOffset": 637,
+                "chain": [
+                  "http://127.0.0.1:49703/",
+                  "document/base URL"
+                ],
+                "transformations": [],
+                "exposure": "public-response"
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "http://127.0.0.1:49703/conventional.js.map"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 122
+                }
+              },
+              "properties": {
+                "coordinates": "generated",
+                "byteOffset": 121,
+                "chain": [
+                  "http://127.0.0.1:49703/",
+                  "document/base URL",
+                  "http://127.0.0.1:49703/conventional.js"
+                ],
+                "transformations": [],
+                "exposure": "public-response"
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "http://127.0.0.1:49703/conventional.js.map"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 98
+                }
+              },
+              "properties": {
+                "coordinates": "approximate",
+                "byteOffset": 97,
+                "chain": [
+                  "http://127.0.0.1:49703/",
+                  "document/base URL",
+                  "http://127.0.0.1:49703/conventional.js"
+                ],
+                "transformations": [
+                  "JavaScript string-escape decoding"
+                ],
+                "exposure": "public-response"
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "http://127.0.0.1:49703/conventional.js.map"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 23
+                }
+              },
+              "properties": {
+                "sourceLabel": "src/config.ts",
+                "coordinates": "extracted-source",
+                "byteOffset": 22,
+                "chain": [
+                  "http://127.0.0.1:49703/",
+                  "document/base URL",
+                  "http://127.0.0.1:49703/conventional.js",
+                  "http://127.0.0.1:49703/conventional.js.map",
+                  "sourcesContent",
+                  "src/config.ts"
+                ],
+                "transformations": [],
+                "exposure": "public-response"
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "sessionHmac": "9fec3dc55c2d2f05a04fa1108854bb04"
+          },
+          "properties": {
+            "triage": {
+              "category": "direct-leak",
+              "reason": "Private credential material was observed in public content or anonymous runtime evidence. Validity and permissions remain unverified."
+            },
+            "assessment": {
+              "ruleVersion": "website/2.4.0",
+              "exposureConfidence": "high",
+              "format": "stripe-signing",
+              "context": "Matches a documented credential format; validity and privileges are unverified.",
+              "completeness": "No complete credential pair inferred",
+              "channels": [
+                "public-response"
+              ],
+              "validity": "unverified",
+              "permissions": "unknown"
+            },
+            "category": "private-credential",
+            "severity": "high",
+            "confidence": "high",
+            "reasons": [
+              "Matches a documented credential format; validity and privileges are unverified."
+            ],
+            "impact": "Potential payment operations. Validity, permissions, expiry and restrictions are unknown.",
+            "remediation": "Revoke and replace the exposed credential. Remove the public value/file; move private credentials to backend secret storage. Rebuild frontend assets, remove stale assets, review provider usage and rescan.",
+            "exposureGroup": "payments",
+            "financialPriority": "urgent",
+            "environment": "unknown"
+          }
+        },
+        {
+          "ruleId": "supabase-secret",
+          "level": "error",
+          "message": {
+            "text": "Supabase: private-credential. [redacted: 61 characters]. Validity unverified."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "http://127.0.0.1:49703/app.min.js"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1031
+                }
+              },
+              "properties": {
+                "coordinates": "generated",
+                "byteOffset": 1030,
+                "chain": [
+                  "http://127.0.0.1:49703/",
+                  "document/base URL"
+                ],
+                "transformations": [],
+                "exposure": "public-response"
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "http://127.0.0.1:49703/app.min.js"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1021
+                }
+              },
+              "properties": {
+                "coordinates": "approximate",
+                "byteOffset": 1020,
+                "chain": [
+                  "http://127.0.0.1:49703/",
+                  "document/base URL",
+                  "reconstructed constant"
+                ],
+                "transformations": [
+                  "Literal",
+                  "Constant object"
+                ],
+                "exposure": "static-reconstruction",
+                "constituents": [
+                  {
+                    "url": "http://127.0.0.1:49703/app.min.js",
+                    "start": 1029,
+                    "end": 1092,
+                    "line": 1,
+                    "column": 1030,
+                    "representation": "[redacted]"
+                  }
+                ]
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "http://127.0.0.1:49703/.env"
+                },
+                "region": {
+                  "startLine": 2,
+                  "startColumn": 39
+                }
+              },
+              "properties": {
+                "coordinates": "generated",
+                "byteOffset": 164,
+                "chain": [],
+                "transformations": [],
+                "exposure": "public-response"
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "sessionHmac": "6a21d4f42906c1a93c0a1645a7ecc682"
+          },
+          "properties": {
+            "triage": {
+              "category": "direct-leak",
+              "reason": "Private credential material was observed in public content or anonymous runtime evidence. Validity and permissions remain unverified."
+            },
+            "assessment": {
+              "ruleVersion": "website/2.4.0",
+              "exposureConfidence": "high",
+              "format": "supabase-secret",
+              "context": "Matches a documented credential format; validity and privileges are unverified.",
+              "completeness": "No complete credential pair inferred",
+              "channels": [
+                "public-response",
+                "static-reconstruction"
+              ],
+              "validity": "unverified",
+              "permissions": "unknown"
+            },
+            "category": "private-credential",
+            "severity": "critical",
+            "confidence": "high",
+            "reasons": [
+              "Matches a documented credential format; validity and privileges are unverified."
+            ],
+            "impact": "Potential privileged application or signing access. Validity, permissions, expiry and restrictions are unknown.",
+            "remediation": "Revoke and replace the exposed credential. Remove the public value/file; move private credentials to backend secret storage. Rebuild frontend assets, remove stale assets, review provider usage and rescan.",
+            "exposureGroup": "other",
+            "financialPriority": "urgent",
+            "environment": "unknown"
+          }
+        },
+        {
+          "ruleId": "structured-config-secret",
+          "level": "warning",
+          "message": {
+            "text": "Generic: suspicious. [redacted: 126 characters]. Validity unverified."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "http://127.0.0.1:49703/app.min.js"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 763
+                }
+              },
+              "properties": {
+                "coordinates": "generated",
+                "byteOffset": 762,
+                "chain": [
+                  "http://127.0.0.1:49703/",
+                  "document/base URL"
+                ],
+                "transformations": [],
+                "exposure": "public-response"
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "sessionHmac": "861edd1f8dfa7f503430fbc105ef6800"
+          },
+          "properties": {
+            "triage": {
+              "category": "low-potential-leak",
+              "reason": "A possible credential or authentication component was observed; private purpose, completeness and privileges require review."
+            },
+            "assessment": {
+              "ruleVersion": "website/2.4.0",
+              "exposureConfidence": "medium",
+              "format": "structured-config-secret",
+              "context": "Sensitive configuration name (api_key) with a literal value; validity, purpose and privileges unverified.",
+              "completeness": "No complete credential pair inferred",
+              "channels": [
+                "public-response"
+              ],
+              "validity": "unverified",
+              "permissions": "unknown"
+            },
+            "category": "suspicious",
+            "severity": "medium",
+            "confidence": "medium",
+            "reasons": [
+              "Sensitive configuration name (api_key) with a literal value; validity, purpose and privileges unverified."
+            ],
+            "impact": "Potential credential or capability requiring operator review; restrictions and privileges unknown.",
+            "remediation": "Review the value and provider restrictions. If private, revoke/replace it and remove it from public resources, rebuild and rescan.",
+            "exposureGroup": "other",
+            "financialPriority": "review",
+            "environment": "unknown"
+          }
+        },
+        {
+          "ruleId": "structured-config-secret",
+          "level": "warning",
+          "message": {
+            "text": "Generic: suspicious. [redacted: 100 characters]. Validity unverified."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "http://127.0.0.1:49703/app.min.js"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1498
+                }
+              },
+              "properties": {
+                "coordinates": "generated",
+                "byteOffset": 1497,
+                "chain": [
+                  "http://127.0.0.1:49703/",
+                  "document/base URL"
+                ],
+                "transformations": [],
+                "exposure": "public-response"
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "sessionHmac": "891908a9491da5094680f846717d642e"
+          },
+          "properties": {
+            "triage": {
+              "category": "low-potential-leak",
+              "reason": "A possible credential or authentication component was observed; private purpose, completeness and privileges require review."
+            },
+            "assessment": {
+              "ruleVersion": "website/2.4.0",
+              "exposureConfidence": "medium",
+              "format": "structured-config-secret",
+              "context": "Sensitive configuration name (api_key) with a literal value; validity, purpose and privileges unverified.",
+              "completeness": "No complete credential pair inferred",
+              "channels": [
+                "public-response"
+              ],
+              "validity": "unverified",
+              "permissions": "unknown"
+            },
+            "category": "suspicious",
+            "severity": "medium",
+            "confidence": "medium",
+            "reasons": [
+              "Sensitive configuration name (api_key) with a literal value; validity, purpose and privileges unverified."
+            ],
+            "impact": "Potential credential or capability requiring operator review; restrictions and privileges unknown.",
+            "remediation": "Review the value and provider restrictions. If private, revoke/replace it and remove it from public resources, rebuild and rescan.",
+            "exposureGroup": "other",
+            "financialPriority": "review",
+            "environment": "unknown"
+          }
+        },
+        {
+          "ruleId": "huggingface",
+          "level": "error",
+          "message": {
+            "text": "Hugging Face: private-credential. [redacted: 37 characters]. Validity unverified."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "http://127.0.0.1:49703/inline.js"
+                },
+                "region": {
+                  "startLine": 2,
+                  "startColumn": 51
+                }
+              },
+              "properties": {
+                "coordinates": "approximate",
+                "byteOffset": 61,
+                "chain": [
+                  "http://127.0.0.1:49703/",
+                  "document/base URL"
+                ],
+                "transformations": [
+                  "Base64 decoding"
+                ],
+                "exposure": "public-response"
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "http://127.0.0.1:49703/inline.js"
+                },
+                "region": {
+                  "startLine": 2,
+                  "startColumn": 51
+                }
+              },
+              "properties": {
+                "coordinates": "approximate",
+                "byteOffset": 61,
+                "chain": [
+                  "http://127.0.0.1:49703/",
+                  "document/base URL"
+                ],
+                "transformations": [
+                  "Base64 decoding",
+                  "JavaScript string-escape decoding"
+                ],
+                "exposure": "public-response"
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "http://127.0.0.1:49703/inline.js"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 139
+                }
+              },
+              "properties": {
+                "coordinates": "generated",
+                "byteOffset": 138,
+                "chain": [
+                  "http://127.0.0.1:49703/",
+                  "document/base URL",
+                  "http://127.0.0.1:49703/inline.js",
+                  "inline source map"
+                ],
+                "transformations": [],
+                "exposure": "public-response"
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "http://127.0.0.1:49703/inline.js"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 112
+                }
+              },
+              "properties": {
+                "coordinates": "approximate",
+                "byteOffset": 111,
+                "chain": [
+                  "http://127.0.0.1:49703/",
+                  "document/base URL",
+                  "http://127.0.0.1:49703/inline.js",
+                  "inline source map"
+                ],
+                "transformations": [
+                  "JavaScript string-escape decoding"
+                ],
+                "exposure": "public-response"
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "http://127.0.0.1:49703/inline.js"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 26
+                }
+              },
+              "properties": {
+                "sourceLabel": "webpack://fixture/src/hf.ts",
+                "coordinates": "extracted-source",
+                "byteOffset": 25,
+                "chain": [
+                  "http://127.0.0.1:49703/",
+                  "document/base URL",
+                  "http://127.0.0.1:49703/inline.js",
+                  "inline source map",
+                  "sourcesContent",
+                  "webpack://fixture/src/hf.ts"
+                ],
+                "transformations": [],
+                "exposure": "public-response"
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "http://127.0.0.1:49703/lazy.js"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 267
+                }
+              },
+              "properties": {
+                "coordinates": "approximate",
+                "byteOffset": 266,
+                "chain": [
+                  "http://127.0.0.1:49703/",
+                  "document/base URL",
+                  "http://127.0.0.1:49703/app.min.js",
+                  "importing module"
+                ],
+                "transformations": [
+                  "JavaScript string-escape decoding"
+                ],
+                "exposure": "public-response"
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "sessionHmac": "406e7eda69e05dd092597c173b89df16"
+          },
+          "properties": {
+            "triage": {
+              "category": "direct-leak",
+              "reason": "Private credential material was observed in public content or anonymous runtime evidence. Validity and permissions remain unverified."
+            },
+            "assessment": {
+              "ruleVersion": "website/2.4.0",
+              "exposureConfidence": "high",
+              "format": "huggingface",
+              "context": "Matches a documented credential format; validity and privileges are unverified. Literal authentication material in Hugging Face configuration or request construction; validity, expiry, permissions and restrictions are unknown.",
+              "completeness": "private-material",
+              "channels": [
+                "public-response"
+              ],
+              "validity": "unverified",
+              "permissions": "unknown"
+            },
+            "category": "private-credential",
+            "severity": "high",
+            "confidence": "high",
+            "reasons": [
+              "Matches a documented credential format; validity and privileges are unverified.",
+              "Literal authentication material in Hugging Face configuration or request construction; validity, expiry, permissions and restrictions are unknown."
+            ],
+            "impact": "Potential paid AI usage. Validity, permissions, expiry and restrictions are unknown.",
+            "remediation": "Revoke and replace the exposed credential. Remove the public value/file; move private credentials to backend secret storage. Rebuild frontend assets, remove stale assets, review provider usage and rescan.",
+            "exposureGroup": "paid-ai",
+            "financialPriority": "urgent",
+            "environment": "unknown",
+            "credentialSet": {
+              "state": "private-material",
+              "components": [
+                "HUGGINGFACE_TOKEN"
+              ],
+              "missing": [],
+              "context": "qualified names in one lexical scope"
+            }
+          }
+        },
+        {
+          "ruleId": "structured-config-secret",
+          "level": "warning",
+          "message": {
+            "text": "Generic: suspicious. [redacted: 121 characters]. Validity unverified."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "http://127.0.0.1:49703/worker.js"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 25
+                }
+              },
+              "properties": {
+                "coordinates": "generated",
+                "byteOffset": 24,
+                "chain": [
+                  "http://127.0.0.1:49703/",
+                  "document/base URL",
+                  "http://127.0.0.1:49703/app.min.js",
+                  "worker document base"
+                ],
+                "transformations": [],
+                "exposure": "public-response"
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "sessionHmac": "67e70df3012decfc61172f755d9f8935"
+          },
+          "properties": {
+            "triage": {
+              "category": "low-potential-leak",
+              "reason": "A possible credential or authentication component was observed; private purpose, completeness and privileges require review."
+            },
+            "assessment": {
+              "ruleVersion": "website/2.4.0",
+              "exposureConfidence": "medium",
+              "format": "structured-config-secret",
+              "context": "Sensitive configuration name (api_key) with a literal value; validity, purpose and privileges unverified.",
+              "completeness": "No complete credential pair inferred",
+              "channels": [
+                "public-response"
+              ],
+              "validity": "unverified",
+              "permissions": "unknown"
+            },
+            "category": "suspicious",
+            "severity": "medium",
+            "confidence": "medium",
+            "reasons": [
+              "Sensitive configuration name (api_key) with a literal value; validity, purpose and privileges unverified."
+            ],
+            "impact": "Potential credential or capability requiring operator review; restrictions and privileges unknown.",
+            "remediation": "Review the value and provider restrictions. If private, revoke/replace it and remove it from public resources, rebuild and rescan.",
+            "exposureGroup": "other",
+            "financialPriority": "review",
+            "environment": "unknown"
+          }
+        },
+        {
+          "ruleId": "aws-id",
+          "level": "warning",
+          "message": {
+            "text": "AWS: suspicious. [redacted: 20 characters]. Validity unverified."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "http://127.0.0.1:49703/app.min.js.map"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 285
+                }
+              },
+              "properties": {
+                "coordinates": "generated",
+                "byteOffset": 284,
+                "chain": [
+                  "http://127.0.0.1:49703/",
+                  "document/base URL",
+                  "http://127.0.0.1:49703/app.min.js",
+                  "source-map comment"
+                ],
+                "transformations": [],
+                "exposure": "public-response"
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "http://127.0.0.1:49703/app.min.js.map"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 98
+                }
+              },
+              "properties": {
+                "coordinates": "approximate",
+                "byteOffset": 97,
+                "chain": [
+                  "http://127.0.0.1:49703/",
+                  "document/base URL",
+                  "http://127.0.0.1:49703/app.min.js",
+                  "source-map comment"
+                ],
+                "transformations": [
+                  "JavaScript string-escape decoding"
+                ],
+                "exposure": "public-response"
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "http://127.0.0.1:49703/app.min.js.map"
+                },
+                "region": {
+                  "startLine": 2,
+                  "startColumn": 33
+                }
+              },
+              "properties": {
+                "sourceLabel": "src/config.ts",
+                "coordinates": "extracted-source",
+                "byteOffset": 182,
+                "chain": [
+                  "http://127.0.0.1:49703/",
+                  "document/base URL",
+                  "http://127.0.0.1:49703/app.min.js",
+                  "source-map comment",
+                  "sourcesContent",
+                  "src/config.ts"
+                ],
+                "transformations": [],
+                "exposure": "public-response"
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "sessionHmac": "d0891bde8eb3fe20a5bfb4a51f9573f9"
+          },
+          "properties": {
+            "triage": {
+              "category": "low-potential-leak",
+              "reason": "A possible credential or authentication component was observed; private purpose, completeness and privileges require review."
+            },
+            "assessment": {
+              "ruleVersion": "website/2.4.0",
+              "exposureConfidence": "high",
+              "format": "aws-id",
+              "context": "AWS access-key ID is only one component; privileges and paired secret are unverified.",
+              "completeness": "No complete credential pair inferred",
+              "channels": [
+                "public-response"
+              ],
+              "validity": "unverified",
+              "permissions": "unknown"
+            },
+            "category": "suspicious",
+            "severity": "medium",
+            "confidence": "high",
+            "reasons": [
+              "AWS access-key ID is only one component; privileges and paired secret are unverified."
+            ],
+            "impact": "Potential credential or capability requiring operator review; restrictions and privileges unknown.",
+            "remediation": "Review the value and provider restrictions. If private, revoke/replace it and remove it from public resources, rebuild and rescan.",
+            "exposureGroup": "cloud",
+            "financialPriority": "review",
+            "environment": "unknown"
+          }
+        },
+        {
+          "ruleId": "structured-config-secret",
+          "level": "warning",
+          "message": {
+            "text": "AWS: suspicious. [redacted: 40 characters]. Validity unverified."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "http://127.0.0.1:49703/app.min.js.map"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 98
+                }
+              },
+              "properties": {
+                "coordinates": "approximate",
+                "byteOffset": 97,
+                "chain": [
+                  "http://127.0.0.1:49703/",
+                  "document/base URL",
+                  "http://127.0.0.1:49703/app.min.js",
+                  "source-map comment"
+                ],
+                "transformations": [
+                  "JavaScript string-escape decoding"
+                ],
+                "exposure": "public-response"
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "http://127.0.0.1:49703/app.min.js.map"
+                },
+                "region": {
+                  "startLine": 3,
+                  "startColumn": 36
+                }
+              },
+              "properties": {
+                "sourceLabel": "src/config.ts",
+                "coordinates": "extracted-source",
+                "byteOffset": 240,
+                "chain": [
+                  "http://127.0.0.1:49703/",
+                  "document/base URL",
+                  "http://127.0.0.1:49703/app.min.js",
+                  "source-map comment",
+                  "sourcesContent",
+                  "src/config.ts"
+                ],
+                "transformations": [],
+                "exposure": "public-response"
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "sessionHmac": "629faebce6761038fee42b7373e286d1"
+          },
+          "properties": {
+            "triage": {
+              "category": "low-potential-leak",
+              "reason": "A possible credential or authentication component was observed; private purpose, completeness and privileges require review."
+            },
+            "assessment": {
+              "ruleVersion": "website/2.4.0",
+              "exposureConfidence": "medium",
+              "format": "structured-config-secret",
+              "context": "Sensitive configuration name (AWS_SECRET_ACCESS_KEY) with a literal value; validity, purpose and privileges unverified.",
+              "completeness": "No complete credential pair inferred",
+              "channels": [
+                "public-response"
+              ],
+              "validity": "unverified",
+              "permissions": "unknown"
+            },
+            "category": "suspicious",
+            "severity": "medium",
+            "confidence": "medium",
+            "reasons": [
+              "Sensitive configuration name (AWS_SECRET_ACCESS_KEY) with a literal value; validity, purpose and privileges unverified."
+            ],
+            "impact": "Potential credential or capability requiring operator review; restrictions and privileges unknown.",
+            "remediation": "Review the value and provider restrictions. If private, revoke/replace it and remove it from public resources, rebuild and rescan.",
+            "exposureGroup": "cloud",
+            "financialPriority": "review",
+            "environment": "unknown"
+          }
+        },
+        {
+          "ruleId": "private-key",
+          "level": "error",
+          "message": {
+            "text": "Private signing key: private-credential. [redacted: 98 characters]. Validity unverified."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "http://127.0.0.1:49703/sources/source.ts"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 26
+                }
+              },
+              "properties": {
+                "coordinates": "approximate",
+                "byteOffset": 25,
+                "chain": [
+                  "http://127.0.0.1:49703/",
+                  "document/base URL",
+                  "http://127.0.0.1:49703/header-map.js",
+                  "http://127.0.0.1:49703/header.map",
+                  "source reference"
+                ],
+                "transformations": [
+                  "Escaped PEM newline decoding"
+                ],
+                "exposure": "public-response"
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "http://127.0.0.1:49703/sources/source.ts"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 25
+                }
+              },
+              "properties": {
+                "coordinates": "approximate",
+                "byteOffset": 24,
+                "chain": [
+                  "http://127.0.0.1:49703/",
+                  "document/base URL",
+                  "http://127.0.0.1:49703/header-map.js",
+                  "http://127.0.0.1:49703/header.map",
+                  "source reference"
+                ],
+                "transformations": [
+                  "JavaScript string-escape decoding"
+                ],
+                "exposure": "public-response"
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "sessionHmac": "d1b046ae5fb2404da0a62b530ae93b69"
+          },
+          "properties": {
+            "triage": {
+              "category": "direct-leak",
+              "reason": "Private credential material was observed in public content or anonymous runtime evidence. Validity and permissions remain unverified."
+            },
+            "assessment": {
+              "ruleVersion": "website/2.4.0",
+              "exposureConfidence": "high",
+              "format": "private-key",
+              "context": "Matches a documented credential format; validity and privileges are unverified.",
+              "completeness": "No complete credential pair inferred",
+              "channels": [
+                "public-response"
+              ],
+              "validity": "unverified",
+              "permissions": "unknown"
+            },
+            "category": "private-credential",
+            "severity": "critical",
+            "confidence": "high",
+            "reasons": [
+              "Matches a documented credential format; validity and privileges are unverified."
+            ],
+            "impact": "Potential privileged application or signing access. Validity, permissions, expiry and restrictions are unknown.",
+            "remediation": "Revoke and replace the exposed credential. Remove the public value/file; move private credentials to backend secret storage. Rebuild frontend assets, remove stale assets, review provider usage and rescan.",
+            "exposureGroup": "other",
+            "financialPriority": "urgent",
+            "environment": "unknown"
+          }
+        },
+        {
+          "ruleId": "provider-context:oauth",
+          "level": "error",
+          "message": {
+            "text": "OAuth: private-credential. [redacted: 48 characters]. Validity unverified."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "http://127.0.0.1:49703/site.css"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 15
+                }
+              },
+              "properties": {
+                "coordinates": "generated",
+                "byteOffset": 14,
+                "chain": [
+                  "http://127.0.0.1:49703/",
+                  "document/base URL"
+                ],
+                "transformations": [],
+                "exposure": "public-response"
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "http://127.0.0.1:49703/frame"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 64
+                }
+              },
+              "properties": {
+                "coordinates": "generated",
+                "byteOffset": 63,
+                "chain": [
+                  "http://127.0.0.1:49703/",
+                  "document/base URL",
+                  "http://127.0.0.1:49703/child",
+                  "frame document"
+                ],
+                "transformations": [],
+                "exposure": "public-response"
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "http://127.0.0.1:49703/frame"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 64
+                }
+              },
+              "properties": {
+                "coordinates": "approximate",
+                "byteOffset": 63,
+                "chain": [
+                  "http://127.0.0.1:49703/",
+                  "document/base URL",
+                  "http://127.0.0.1:49703/child",
+                  "frame document"
+                ],
+                "transformations": [
+                  "HTML script extraction without execution"
+                ],
+                "exposure": "public-response"
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "http://127.0.0.1:49703/frame#inline-0"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 23
+                }
+              },
+              "properties": {
+                "sourceLabel": "inline script 0",
+                "coordinates": "extracted-source",
+                "byteOffset": 22,
+                "chain": [
+                  "reconstructed constant"
+                ],
+                "transformations": [
+                  "Literal",
+                  "Constant object"
+                ],
+                "exposure": "static-reconstruction",
+                "constituents": [
+                  {
+                    "url": "http://127.0.0.1:49703/frame#inline-0",
+                    "start": 43,
+                    "end": 93,
+                    "line": 1,
+                    "column": 44,
+                    "representation": "[redacted]",
+                    "label": "inline script 0"
+                  }
+                ]
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "http://127.0.0.1:49703/config.json"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 24
+                }
+              },
+              "properties": {
+                "coordinates": "generated",
+                "byteOffset": 23,
+                "chain": [],
+                "transformations": [],
+                "exposure": "public-response"
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "http://127.0.0.1:49703/.npmrc"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 34
+                }
+              },
+              "properties": {
+                "coordinates": "generated",
+                "byteOffset": 33,
+                "chain": [],
+                "transformations": [],
+                "exposure": "public-response"
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "sessionHmac": "4ab9fda056628543cca0a678ef8f8fc0"
+          },
+          "properties": {
+            "triage": {
+              "category": "high-potential-leak",
+              "reason": "Private credential evidence requires review of format, context or public reachability. Validity remains unverified."
+            },
+            "assessment": {
+              "ruleVersion": "website/2.4.0",
+              "exposureConfidence": "high",
+              "format": "provider-context:oauth",
+              "context": "Sensitive variable name (api_secret) and entropy 4.94. No online verification. Sensitive configuration name (OAUTH_CLIENT_SECRET) with a literal value; validity, purpose and privileges unverified. Literal authentication material in OAuth configuration or request construction; validity, expiry, permissions and restrictions are unknown. Literal authentication material in Azure configuration or request construction; validity, expiry, permissions and restrictions are unknown. Matches a documented credential format; validity and privileges are unverified.",
+              "completeness": "partial",
+              "channels": [
+                "public-response",
+                "static-reconstruction"
+              ],
+              "validity": "unverified",
+              "permissions": "unknown"
+            },
+            "category": "private-credential",
+            "severity": "high",
+            "confidence": "high",
+            "reasons": [
+              "Sensitive variable name (api_secret) and entropy 4.94. No online verification.",
+              "Sensitive configuration name (OAUTH_CLIENT_SECRET) with a literal value; validity, purpose and privileges unverified.",
+              "Literal authentication material in OAuth configuration or request construction; validity, expiry, permissions and restrictions are unknown.",
+              "Literal authentication material in Azure configuration or request construction; validity, expiry, permissions and restrictions are unknown.",
+              "Matches a documented credential format; validity and privileges are unverified."
+            ],
+            "impact": "Potential privileged application or signing access. Validity, permissions, expiry and restrictions are unknown.",
+            "remediation": "Revoke and replace the exposed credential. Remove public values/files, move private credentials to backend secret storage, rebuild assets, remove stale assets, review provider usage and rescan.",
+            "exposureGroup": "other",
+            "financialPriority": "urgent",
+            "environment": "unknown",
+            "credentialSet": {
+              "state": "partial",
+              "components": [
+                "client secret"
+              ],
+              "missing": [
+                "client ID"
+              ],
+              "context": "qualified fields in one literal object"
+            }
+          }
+        },
+        {
+          "ruleId": "provider-context:sendgrid",
+          "level": "error",
+          "message": {
+            "text": "SendGrid: private-credential. [redacted: 69 characters]. Validity unverified."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "http://127.0.0.1:49703/nested/page"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 22
+                }
+              },
+              "properties": {
+                "coordinates": "generated",
+                "byteOffset": 21,
+                "chain": [
+                  "http://127.0.0.1:49703/",
+                  "document/base URL",
+                  "http://127.0.0.1:49703/child",
+                  "document/base URL"
+                ],
+                "transformations": [],
+                "exposure": "public-response"
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "sessionHmac": "13356225a09be5a0c0ec64102a83dd2c"
+          },
+          "properties": {
+            "triage": {
+              "category": "direct-leak",
+              "reason": "Private credential material was observed in public content or anonymous runtime evidence. Validity and permissions remain unverified."
+            },
+            "assessment": {
+              "ruleVersion": "website/2.4.0",
+              "exposureConfidence": "high",
+              "format": "provider-context:sendgrid",
+              "context": "Literal authentication material in SendGrid configuration or request construction; validity, expiry, permissions and restrictions are unknown.",
+              "completeness": "private-material",
+              "channels": [
+                "public-response"
+              ],
+              "validity": "unverified",
+              "permissions": "unknown"
+            },
+            "category": "private-credential",
+            "severity": "high",
+            "confidence": "high",
+            "reasons": [
+              "Literal authentication material in SendGrid configuration or request construction; validity, expiry, permissions and restrictions are unknown."
+            ],
+            "impact": "Potential unauthorized messaging and usage charges. Validity, permissions, expiry and restrictions are unknown.",
+            "remediation": "Revoke and replace the exposed credential. Remove the public value/file; move private credentials to backend secret storage. Rebuild frontend assets, remove stale assets, review provider usage and rescan.",
+            "exposureGroup": "messaging",
+            "financialPriority": "urgent",
+            "environment": "unknown",
+            "credentialSet": {
+              "state": "private-material",
+              "components": [
+                "SENDGRID_API_KEY"
+              ],
+              "missing": [],
+              "context": "qualified fields in one literal object"
+            }
+          }
+        },
+        {
+          "ruleId": "replicate",
+          "level": "error",
+          "message": {
+            "text": "Replicate: private-credential. [redacted: 43 characters]. Validity unverified."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "http://127.0.0.1:49703/about"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 37
+                }
+              },
+              "properties": {
+                "coordinates": "generated",
+                "byteOffset": 36,
+                "chain": [
+                  "http://127.0.0.1:49703/sitemap.xml"
+                ],
+                "transformations": [],
+                "exposure": "public-response"
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "sessionHmac": "6253d04a940aaf79da8382c9b7ac386a"
+          },
+          "properties": {
+            "triage": {
+              "category": "direct-leak",
+              "reason": "Private credential material was observed in public content or anonymous runtime evidence. Validity and permissions remain unverified."
+            },
+            "assessment": {
+              "ruleVersion": "website/2.4.0",
+              "exposureConfidence": "high",
+              "format": "replicate",
+              "context": "Matches a documented credential format; validity and privileges are unverified.",
+              "completeness": "No complete credential pair inferred",
+              "channels": [
+                "public-response"
+              ],
+              "validity": "unverified",
+              "permissions": "unknown"
+            },
+            "category": "private-credential",
+            "severity": "high",
+            "confidence": "high",
+            "reasons": [
+              "Matches a documented credential format; validity and privileges are unverified."
+            ],
+            "impact": "Potential paid AI usage. Validity, permissions, expiry and restrictions are unknown.",
+            "remediation": "Revoke and replace the exposed credential. Remove the public value/file; move private credentials to backend secret storage. Rebuild frontend assets, remove stale assets, review provider usage and rescan.",
+            "exposureGroup": "paid-ai",
+            "financialPriority": "urgent",
+            "environment": "unknown"
+          }
+        },
+        {
+          "ruleId": "published-sensitive-file",
+          "level": "note",
+          "message": {
+            "text": "Website: information. No credential inferred. Validity unverified."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "http://127.0.0.1:49703/.env"
+                }
+              },
+              "properties": {
+                "coordinates": "unavailable",
+                "excerptUnavailableReason": "Observation comes from resource metadata; no matched source text was retained.",
+                "chain": [],
+                "transformations": [],
+                "exposure": "public-response"
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "sessionHmac": "0f01f97cf6db205324535beef7572a99"
+          },
+          "properties": {
+            "triage": {
+              "category": "low-potential-leak",
+              "reason": "Potentially sensitive configuration, debugging or endpoint information; no private credential or unauthorized access established."
+            },
+            "assessment": {
+              "ruleVersion": "website/2.4.0",
+              "exposureConfidence": "high",
+              "format": "published-sensitive-file",
+              "context": "Content confirms a deployment/configuration/metadata file at a public HTTP path. Inspection was bounded; no repository reconstruction or bulk dump download.",
+              "completeness": "No complete credential pair inferred",
+              "channels": [
+                "public-response"
+              ],
+              "validity": "unverified",
+              "permissions": "unknown"
+            },
+            "category": "information",
+            "severity": "info",
+            "confidence": "high",
+            "reasons": [
+              "Content confirms a deployment/configuration/metadata file at a public HTTP path. Inspection was bounded; no repository reconstruction or bulk dump download."
+            ],
+            "impact": "Public implementation or configuration information; no private credential inferred.",
+            "remediation": "Review the exposed deployment file and web-server rules. Remove unintended public configuration/debug/backup content; rotate any separately identified private values.",
+            "exposureGroup": "other",
+            "financialPriority": "none",
+            "environment": "unknown"
+          }
+        },
+        {
+          "ruleId": "published-sensitive-file",
+          "level": "note",
+          "message": {
+            "text": "Website: information. No credential inferred. Validity unverified."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "http://127.0.0.1:49703/config.json"
+                }
+              },
+              "properties": {
+                "coordinates": "unavailable",
+                "excerptUnavailableReason": "Observation comes from resource metadata; no matched source text was retained.",
+                "chain": [],
+                "transformations": [],
+                "exposure": "public-response"
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "sessionHmac": "a1eda3db2cafe55d163fcc0abfa70aca"
+          },
+          "properties": {
+            "triage": {
+              "category": "low-potential-leak",
+              "reason": "Potentially sensitive configuration, debugging or endpoint information; no private credential or unauthorized access established."
+            },
+            "assessment": {
+              "ruleVersion": "website/2.4.0",
+              "exposureConfidence": "high",
+              "format": "published-sensitive-file",
+              "context": "Content confirms a deployment/configuration/metadata file at a public HTTP path. Inspection was bounded; no repository reconstruction or bulk dump download.",
+              "completeness": "No complete credential pair inferred",
+              "channels": [
+                "public-response"
+              ],
+              "validity": "unverified",
+              "permissions": "unknown"
+            },
+            "category": "information",
+            "severity": "info",
+            "confidence": "high",
+            "reasons": [
+              "Content confirms a deployment/configuration/metadata file at a public HTTP path. Inspection was bounded; no repository reconstruction or bulk dump download."
+            ],
+            "impact": "Public implementation or configuration information; no private credential inferred.",
+            "remediation": "Review the exposed deployment file and web-server rules. Remove unintended public configuration/debug/backup content; rotate any separately identified private values.",
+            "exposureGroup": "other",
+            "financialPriority": "none",
+            "environment": "unknown"
+          }
+        },
+        {
+          "ruleId": "published-sensitive-file",
+          "level": "note",
+          "message": {
+            "text": "Website: information. No credential inferred. Validity unverified."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "http://127.0.0.1:49703/.npmrc"
+                }
+              },
+              "properties": {
+                "coordinates": "unavailable",
+                "excerptUnavailableReason": "Observation comes from resource metadata; no matched source text was retained.",
+                "chain": [],
+                "transformations": [],
+                "exposure": "public-response"
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "sessionHmac": "1fc3e7b441b416ca24efa5a0412d12ed"
+          },
+          "properties": {
+            "triage": {
+              "category": "low-potential-leak",
+              "reason": "Potentially sensitive configuration, debugging or endpoint information; no private credential or unauthorized access established."
+            },
+            "assessment": {
+              "ruleVersion": "website/2.4.0",
+              "exposureConfidence": "high",
+              "format": "published-sensitive-file",
+              "context": "Content confirms a deployment/configuration/metadata file at a public HTTP path. Inspection was bounded; no repository reconstruction or bulk dump download.",
+              "completeness": "No complete credential pair inferred",
+              "channels": [
+                "public-response"
+              ],
+              "validity": "unverified",
+              "permissions": "unknown"
+            },
+            "category": "information",
+            "severity": "info",
+            "confidence": "high",
+            "reasons": [
+              "Content confirms a deployment/configuration/metadata file at a public HTTP path. Inspection was bounded; no repository reconstruction or bulk dump download."
+            ],
+            "impact": "Public implementation or configuration information; no private credential inferred.",
+            "remediation": "Review the exposed deployment file and web-server rules. Remove unintended public configuration/debug/backup content; rotate any separately identified private values.",
+            "exposureGroup": "other",
+            "financialPriority": "none",
+            "environment": "unknown"
+          }
+        },
+        {
+          "ruleId": "published-sensitive-file",
+          "level": "note",
+          "message": {
+            "text": "Website: information. No credential inferred. Validity unverified."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "http://127.0.0.1:49703/.git/HEAD"
+                }
+              },
+              "properties": {
+                "coordinates": "unavailable",
+                "excerptUnavailableReason": "Observation comes from resource metadata; no matched source text was retained.",
+                "chain": [],
+                "transformations": [],
+                "exposure": "public-response"
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "sessionHmac": "924637ea4925b1d3276cf426ad3fdcc2"
+          },
+          "properties": {
+            "triage": {
+              "category": "low-potential-leak",
+              "reason": "Potentially sensitive configuration, debugging or endpoint information; no private credential or unauthorized access established."
+            },
+            "assessment": {
+              "ruleVersion": "website/2.4.0",
+              "exposureConfidence": "high",
+              "format": "published-sensitive-file",
+              "context": "Content confirms a deployment/configuration/metadata file at a public HTTP path. Inspection was bounded; no repository reconstruction or bulk dump download.",
+              "completeness": "No complete credential pair inferred",
+              "channels": [
+                "public-response"
+              ],
+              "validity": "unverified",
+              "permissions": "unknown"
+            },
+            "category": "information",
+            "severity": "info",
+            "confidence": "high",
+            "reasons": [
+              "Content confirms a deployment/configuration/metadata file at a public HTTP path. Inspection was bounded; no repository reconstruction or bulk dump download."
+            ],
+            "impact": "Public implementation or configuration information; no private credential inferred.",
+            "remediation": "Review the exposed deployment file and web-server rules. Remove unintended public configuration/debug/backup content; rotate any separately identified private values.",
+            "exposureGroup": "other",
+            "financialPriority": "none",
+            "environment": "unknown"
+          }
+        },
+        {
+          "ruleId": "published-sensitive-file",
+          "level": "note",
+          "message": {
+            "text": "Website: information. No credential inferred. Validity unverified."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "http://127.0.0.1:49703/backup.sql"
+                }
+              },
+              "properties": {
+                "coordinates": "unavailable",
+                "excerptUnavailableReason": "Observation comes from resource metadata; no matched source text was retained.",
+                "chain": [],
+                "transformations": [],
+                "exposure": "public-response"
+              }
+            }
+          ],
+          "partialFingerprints": {
+            "sessionHmac": "dc82bdfceb87d21236c632ecddd5c1f2"
+          },
+          "properties": {
+            "triage": {
+              "category": "low-potential-leak",
+              "reason": "Potentially sensitive configuration, debugging or endpoint information; no private credential or unauthorized access established."
+            },
+            "assessment": {
+              "ruleVersion": "website/2.4.0",
+              "exposureConfidence": "high",
+              "format": "published-sensitive-file",
+              "context": "Content confirms a deployment/configuration/metadata file at a public HTTP path. Inspection was bounded; no repository reconstruction or bulk dump download. Only the bounded prefix was inspected; remaining content is unknown.",
+              "completeness": "No complete credential pair inferred",
+              "channels": [
+                "public-response"
+              ],
+              "validity": "unverified",
+              "permissions": "unknown"
+            },
+            "category": "information",
+            "severity": "info",
+            "confidence": "high",
+            "reasons": [
+              "Content confirms a deployment/configuration/metadata file at a public HTTP path. Inspection was bounded; no repository reconstruction or bulk dump download. Only the bounded prefix was inspected; remaining content is unknown."
+            ],
+            "impact": "Public implementation or configuration information; no private credential inferred.",
+            "remediation": "Review the exposed deployment file and web-server rules. Remove unintended public configuration/debug/backup content; rotate any separately identified private values.",
+            "exposureGroup": "other",
+            "financialPriority": "none",
+            "environment": "unknown"
+          }
+        }
+      ]
+    }
+  ]
+}

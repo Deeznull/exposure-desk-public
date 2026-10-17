@@ -1,0 +1,2348 @@
+{
+  "arrivals": [
+    "/sitemap.xml",
+    "/robots.txt",
+    "/",
+    "/assets/vite.js",
+    "/webpack.js",
+    "/_astro/island.js",
+    "/_astro/renderer.js",
+    "/_nuxt/lazy.js",
+    "/_next/static/build42/_buildManifest.js",
+    "/_next/static/build42/_ssgManifest.js",
+    "/assets/lazy.js",
+    "/assets/1.abc.js",
+    "/_next/static/chunks/page.js"
+  ],
+  "view": {
+    "schema": "exposure-scan/1",
+    "acquisitionMode": "external",
+    "build": {
+      "version": "2.4.0-rc.1",
+      "id": "2.4.0-rc.1+a31c58862ab9ec5f",
+      "sourceDigest": "a31c58862ab9ec5f386ecedb3593304ef825bf9e1305397e37c178d34a6065bd"
+    },
+    "id": "b54d4955-f6a5-4fb7-8c49-dd2e5f434f08",
+    "name": "127.0.0.1",
+    "state": "incomplete",
+    "startedAt": "2026-10-08T03:39:35.574Z",
+    "endedAt": "2026-10-08T03:39:42.762Z",
+    "elapsedMs": 7188,
+    "config": {
+      "name": "127.0.0.1",
+      "urls": [
+        "http://127.0.0.1:52230/"
+      ],
+      "relatedOrigins": [],
+      "privateOrigins": [],
+      "browser": false,
+      "maxAutoDiscoveredOrigins": 50,
+      "autoScaleByWebsiteCount": false,
+      "originAnalysisMs": 12000,
+      "semanticSliceMs": 1600,
+      "maxModuleAnalysisBytes": 4194304,
+      "maxAnalysisBytes": 33554432,
+      "originAnalysisBytes": 16777216,
+      "analysisConcurrency": 2,
+      "maxAnalysisMemoryMb": 256,
+      "browserLazyAssetLimit": 20,
+      "sensitiveFields": [],
+      "workTurnMs": 30000,
+      "analysisTurnMs": 60000,
+      "analysisBacklogBytes": 33554432,
+      "maxDiscoveryBytes": 4194304,
+      "browserBaselineMs": 750,
+      "deep": false,
+      "maxRetries": 1,
+      "semanticAnalysis": true,
+      "debuggerScripts": true,
+      "staleAssetCheck": false,
+      "staleAssetUrls": [],
+      "robotsPolicy": "respect",
+      "browserNavigationUrls": [],
+      "readOnlyPostEndpoints": [],
+      "requestsPerSecond": 20,
+      "concurrency": 2,
+      "maxDepth": 3,
+      "maxPages": 30,
+      "maxResources": 200,
+      "maxResourceBytes": 8388608,
+      "maxTotalBytes": 83886080,
+      "timeoutMs": 10000,
+      "maxDurationMs": 120000,
+      "queryVariants": 3,
+      "browserPages": 5,
+      "browserSettleMs": 1000,
+      "maxMaps": 25,
+      "maxMapSources": 40,
+      "deepPaths": [
+        "/.env",
+        "/.env.local",
+        "/.env.production",
+        "/.env.backup",
+        "/config.json",
+        "/config.js",
+        "/.npmrc",
+        "/.git/HEAD",
+        "/debug",
+        "/debug/vars",
+        "/server.log",
+        "/error.log",
+        "/backup.sql",
+        "/index.php.bak",
+        "/config.php.bak"
+      ],
+      "adjacentMaps": false,
+      "preset": "custom",
+      "maxWireResourceBytes": 16777216,
+      "maxDecodedTotalBytes": 167772160,
+      "maxMapDepth": 4,
+      "maxMapSections": 50,
+      "browserScrollSteps": 0,
+      "browserScrollDelayMs": 500,
+      "developmentFixtureOrigin": "http://127.0.0.1:52230",
+      "sizingMode": "fixed",
+      "domainScope": "registrable-domain",
+      "sameRegistrableDomainDiscovery": true,
+      "originConcurrency": 2,
+      "globalConcurrency": 2,
+      "originRequestsPerSecond": 20,
+      "maxActiveOrigins": 4,
+      "maxBrowserOrigins": 2,
+      "originMaxDurationMs": 120000,
+      "projectMaxDurationMs": 120000,
+      "originMaxPages": 30,
+      "originMaxResources": 200,
+      "originMaxTotalBytes": 83886080,
+      "originMaxMaps": 25,
+      "originBrowserPages": 5
+    },
+    "counts": {
+      "resources": 13,
+      "scanned": 10,
+      "blocked": 0,
+      "bytes": 943,
+      "pending": 0,
+      "deferred": 0,
+      "findings": 5
+    },
+    "accounting": {
+      "networkAttempts": 13,
+      "blockedEvents": 0,
+      "uniqueResources": 13,
+      "repeatedRequests": 0,
+      "downloadedBytes": 943,
+      "retainedDecodedBytes": 943,
+      "textAnalyzedBytes": 943,
+      "intentionalSkips": 0,
+      "httpErrors": 3,
+      "networkFailures": 0,
+      "timeouts": 0,
+      "failedAttempts": 0,
+      "successfulResponses": 10,
+      "discoveredUrls": 13,
+      "reusedTextInspections": 1,
+      "runtimeCaptures": 0,
+      "reusedDiscoveries": 0,
+      "verifiedMirrors": 0,
+      "coverageGaps": 0
+    },
+    "stopReason": "discovered-frontier-drained",
+    "uninspected": [],
+    "origins": [
+      {
+        "origin": "http://127.0.0.1:52230",
+        "admitted": true,
+        "elapsedMs": 7187.269400000005,
+        "remainingMs": 112812.7306,
+        "softDeadline": false,
+        "deadlineReached": false,
+        "cleanupMs": 0,
+        "requests": 13,
+        "bytes": 943,
+        "wireBytes": 943,
+        "pages": 1,
+        "maps": 0,
+        "retries": 0,
+        "retryExhausted": 0,
+        "browserPages": 0,
+        "browserRequests": 0,
+        "browserAttempts": 0,
+        "browserElapsedMs": 0,
+        "runtimeCaptures": 0,
+        "analysisMs": 9441.715299999982,
+        "activeRequests": 0,
+        "peakRequests": 1,
+        "authorization": {
+          "type": "explicit-seed"
+        },
+        "completion": "limited"
+      }
+    ],
+    "coverage": {
+      "assessment": "limited",
+      "groups": {
+        "entryDocuments": {
+          "discovered": 1,
+          "downloaded": 1,
+          "analyzed": 1,
+          "successful": 1,
+          "errorResponses": 0,
+          "blocked": 0,
+          "skipped": 0,
+          "uninspected": 0,
+          "currentStates": {
+            "inspected": 1,
+            "reused": 0,
+            "pending": 0,
+            "unavailable": 0,
+            "failed": 0,
+            "unsupported": 0,
+            "deferred": 0,
+            "partial": 0
+          },
+          "reasons": {}
+        },
+        "applicationPages": {
+          "discovered": 0,
+          "downloaded": 0,
+          "analyzed": 0,
+          "successful": 0,
+          "errorResponses": 0,
+          "blocked": 0,
+          "skipped": 0,
+          "uninspected": 0,
+          "currentStates": {
+            "inspected": 0,
+            "reused": 0,
+            "pending": 0,
+            "unavailable": 0,
+            "failed": 0,
+            "unsupported": 0,
+            "deferred": 0,
+            "partial": 0
+          },
+          "reasons": {}
+        },
+        "javascript": {
+          "discovered": 10,
+          "downloaded": 10,
+          "analyzed": 10,
+          "successful": 9,
+          "errorResponses": 1,
+          "blocked": 0,
+          "skipped": 0,
+          "uninspected": 1,
+          "currentStates": {
+            "inspected": 9,
+            "reused": 0,
+            "pending": 0,
+            "unavailable": 1,
+            "failed": 0,
+            "unsupported": 0,
+            "deferred": 0,
+            "partial": 0
+          },
+          "reasons": {
+            "HTTP 404": 1
+          }
+        },
+        "jsonConfig": {
+          "discovered": 0,
+          "downloaded": 0,
+          "analyzed": 0,
+          "successful": 0,
+          "errorResponses": 0,
+          "blocked": 0,
+          "skipped": 0,
+          "uninspected": 0,
+          "currentStates": {
+            "inspected": 0,
+            "reused": 0,
+            "pending": 0,
+            "unavailable": 0,
+            "failed": 0,
+            "unsupported": 0,
+            "deferred": 0,
+            "partial": 0
+          },
+          "reasons": {}
+        },
+        "sourceMaps": {
+          "discovered": 0,
+          "downloaded": 0,
+          "analyzed": 0,
+          "successful": 0,
+          "errorResponses": 0,
+          "blocked": 0,
+          "skipped": 0,
+          "uninspected": 0,
+          "currentStates": {
+            "inspected": 0,
+            "reused": 0,
+            "pending": 0,
+            "unavailable": 0,
+            "failed": 0,
+            "unsupported": 0,
+            "deferred": 0,
+            "partial": 0
+          },
+          "reasons": {}
+        },
+        "sitemaps": {
+          "discovered": 1,
+          "downloaded": 1,
+          "analyzed": 1,
+          "successful": 0,
+          "errorResponses": 1,
+          "blocked": 0,
+          "skipped": 0,
+          "uninspected": 1,
+          "currentStates": {
+            "inspected": 0,
+            "reused": 0,
+            "pending": 0,
+            "unavailable": 1,
+            "failed": 0,
+            "unsupported": 0,
+            "deferred": 0,
+            "partial": 0
+          },
+          "reasons": {
+            "HTTP 404": 1
+          }
+        },
+        "baselineRequests": {
+          "discovered": 0,
+          "downloaded": 0,
+          "analyzed": 0,
+          "successful": 0,
+          "errorResponses": 0,
+          "blocked": 0,
+          "skipped": 0,
+          "uninspected": 0,
+          "currentStates": {
+            "inspected": 0,
+            "reused": 0,
+            "pending": 0,
+            "unavailable": 0,
+            "failed": 0,
+            "unsupported": 0,
+            "deferred": 0,
+            "partial": 0
+          },
+          "reasons": {}
+        },
+        "deploymentChecks": {
+          "discovered": 0,
+          "downloaded": 0,
+          "analyzed": 0,
+          "successful": 0,
+          "errorResponses": 0,
+          "blocked": 0,
+          "skipped": 0,
+          "uninspected": 0,
+          "currentStates": {
+            "inspected": 0,
+            "reused": 0,
+            "pending": 0,
+            "unavailable": 0,
+            "failed": 0,
+            "unsupported": 0,
+            "deferred": 0,
+            "partial": 0
+          },
+          "reasons": {}
+        },
+        "images": {
+          "discovered": 0,
+          "downloaded": 0,
+          "analyzed": 0,
+          "successful": 0,
+          "errorResponses": 0,
+          "blocked": 0,
+          "skipped": 0,
+          "uninspected": 0,
+          "currentStates": {
+            "inspected": 0,
+            "reused": 0,
+            "pending": 0,
+            "unavailable": 0,
+            "failed": 0,
+            "unsupported": 0,
+            "deferred": 0,
+            "partial": 0
+          },
+          "reasons": {}
+        },
+        "runtimeCaptures": {
+          "discovered": 0,
+          "downloaded": 0,
+          "analyzed": 0,
+          "successful": 0,
+          "errorResponses": 0,
+          "blocked": 0,
+          "skipped": 0,
+          "uninspected": 0,
+          "currentStates": {
+            "inspected": 0,
+            "reused": 0,
+            "pending": 0,
+            "unavailable": 0,
+            "failed": 0,
+            "unsupported": 0,
+            "deferred": 0,
+            "partial": 0
+          },
+          "reasons": {}
+        },
+        "other": {
+          "discovered": 1,
+          "downloaded": 1,
+          "analyzed": 1,
+          "successful": 0,
+          "errorResponses": 1,
+          "blocked": 0,
+          "skipped": 0,
+          "uninspected": 1,
+          "currentStates": {
+            "inspected": 0,
+            "reused": 0,
+            "pending": 0,
+            "unavailable": 1,
+            "failed": 0,
+            "unsupported": 0,
+            "deferred": 0,
+            "partial": 0
+          },
+          "reasons": {
+            "HTTP 404": 1
+          }
+        },
+        "domainExcluded": {
+          "discovered": 0,
+          "downloaded": 0,
+          "analyzed": 0,
+          "successful": 0,
+          "errorResponses": 0,
+          "blocked": 0,
+          "skipped": 0,
+          "uninspected": 0,
+          "currentStates": {
+            "inspected": 0,
+            "reused": 0,
+            "pending": 0,
+            "unavailable": 0,
+            "failed": 0,
+            "unsupported": 0,
+            "deferred": 0,
+            "partial": 0
+          },
+          "reasons": {}
+        },
+        "externalDependencies": {
+          "discovered": 0,
+          "downloaded": 0,
+          "analyzed": 0,
+          "successful": 0,
+          "errorResponses": 0,
+          "blocked": 0,
+          "skipped": 0,
+          "uninspected": 0,
+          "currentStates": {
+            "inspected": 0,
+            "reused": 0,
+            "pending": 0,
+            "unavailable": 0,
+            "failed": 0,
+            "unsupported": 0,
+            "deferred": 0,
+            "partial": 0
+          },
+          "reasons": {}
+        },
+        "browserRuntime": {
+          "discovered": 0,
+          "downloaded": 0,
+          "analyzed": 0,
+          "successful": 0,
+          "errorResponses": 0,
+          "blocked": 0,
+          "skipped": 0,
+          "uninspected": 0,
+          "currentStates": {
+            "inspected": 0,
+            "reused": 0,
+            "pending": 0,
+            "unavailable": 0,
+            "failed": 0,
+            "unsupported": 0,
+            "deferred": 0,
+            "partial": 0
+          },
+          "reasons": {}
+        }
+      },
+      "entryPoints": [
+        {
+          "url": "http://127.0.0.1:52230/",
+          "successful": true,
+          "analyzed": true
+        }
+      ],
+      "highValueLimited": true,
+      "optionalPagesLimited": false,
+      "origins": {
+        "http://127.0.0.1:52230": {
+          "assessment": "limited",
+          "groups": {
+            "entryDocuments": {
+              "discovered": 1,
+              "downloaded": 1,
+              "analyzed": 1,
+              "successful": 1,
+              "errorResponses": 0,
+              "blocked": 0,
+              "skipped": 0,
+              "uninspected": 0,
+              "currentStates": {
+                "inspected": 1,
+                "reused": 0,
+                "pending": 0,
+                "unavailable": 0,
+                "failed": 0,
+                "unsupported": 0,
+                "deferred": 0,
+                "partial": 0
+              },
+              "reasons": {}
+            },
+            "applicationPages": {
+              "discovered": 0,
+              "downloaded": 0,
+              "analyzed": 0,
+              "successful": 0,
+              "errorResponses": 0,
+              "blocked": 0,
+              "skipped": 0,
+              "uninspected": 0,
+              "currentStates": {
+                "inspected": 0,
+                "reused": 0,
+                "pending": 0,
+                "unavailable": 0,
+                "failed": 0,
+                "unsupported": 0,
+                "deferred": 0,
+                "partial": 0
+              },
+              "reasons": {}
+            },
+            "javascript": {
+              "discovered": 10,
+              "downloaded": 10,
+              "analyzed": 10,
+              "successful": 9,
+              "errorResponses": 1,
+              "blocked": 0,
+              "skipped": 0,
+              "uninspected": 1,
+              "currentStates": {
+                "inspected": 9,
+                "reused": 0,
+                "pending": 0,
+                "unavailable": 1,
+                "failed": 0,
+                "unsupported": 0,
+                "deferred": 0,
+                "partial": 0
+              },
+              "reasons": {
+                "HTTP 404": 1
+              }
+            },
+            "jsonConfig": {
+              "discovered": 0,
+              "downloaded": 0,
+              "analyzed": 0,
+              "successful": 0,
+              "errorResponses": 0,
+              "blocked": 0,
+              "skipped": 0,
+              "uninspected": 0,
+              "currentStates": {
+                "inspected": 0,
+                "reused": 0,
+                "pending": 0,
+                "unavailable": 0,
+                "failed": 0,
+                "unsupported": 0,
+                "deferred": 0,
+                "partial": 0
+              },
+              "reasons": {}
+            },
+            "sourceMaps": {
+              "discovered": 0,
+              "downloaded": 0,
+              "analyzed": 0,
+              "successful": 0,
+              "errorResponses": 0,
+              "blocked": 0,
+              "skipped": 0,
+              "uninspected": 0,
+              "currentStates": {
+                "inspected": 0,
+                "reused": 0,
+                "pending": 0,
+                "unavailable": 0,
+                "failed": 0,
+                "unsupported": 0,
+                "deferred": 0,
+                "partial": 0
+              },
+              "reasons": {}
+            },
+            "sitemaps": {
+              "discovered": 1,
+              "downloaded": 1,
+              "analyzed": 1,
+              "successful": 0,
+              "errorResponses": 1,
+              "blocked": 0,
+              "skipped": 0,
+              "uninspected": 1,
+              "currentStates": {
+                "inspected": 0,
+                "reused": 0,
+                "pending": 0,
+                "unavailable": 1,
+                "failed": 0,
+                "unsupported": 0,
+                "deferred": 0,
+                "partial": 0
+              },
+              "reasons": {
+                "HTTP 404": 1
+              }
+            },
+            "baselineRequests": {
+              "discovered": 0,
+              "downloaded": 0,
+              "analyzed": 0,
+              "successful": 0,
+              "errorResponses": 0,
+              "blocked": 0,
+              "skipped": 0,
+              "uninspected": 0,
+              "currentStates": {
+                "inspected": 0,
+                "reused": 0,
+                "pending": 0,
+                "unavailable": 0,
+                "failed": 0,
+                "unsupported": 0,
+                "deferred": 0,
+                "partial": 0
+              },
+              "reasons": {}
+            },
+            "deploymentChecks": {
+              "discovered": 0,
+              "downloaded": 0,
+              "analyzed": 0,
+              "successful": 0,
+              "errorResponses": 0,
+              "blocked": 0,
+              "skipped": 0,
+              "uninspected": 0,
+              "currentStates": {
+                "inspected": 0,
+                "reused": 0,
+                "pending": 0,
+                "unavailable": 0,
+                "failed": 0,
+                "unsupported": 0,
+                "deferred": 0,
+                "partial": 0
+              },
+              "reasons": {}
+            },
+            "images": {
+              "discovered": 0,
+              "downloaded": 0,
+              "analyzed": 0,
+              "successful": 0,
+              "errorResponses": 0,
+              "blocked": 0,
+              "skipped": 0,
+              "uninspected": 0,
+              "currentStates": {
+                "inspected": 0,
+                "reused": 0,
+                "pending": 0,
+                "unavailable": 0,
+                "failed": 0,
+                "unsupported": 0,
+                "deferred": 0,
+                "partial": 0
+              },
+              "reasons": {}
+            },
+            "runtimeCaptures": {
+              "discovered": 0,
+              "downloaded": 0,
+              "analyzed": 0,
+              "successful": 0,
+              "errorResponses": 0,
+              "blocked": 0,
+              "skipped": 0,
+              "uninspected": 0,
+              "currentStates": {
+                "inspected": 0,
+                "reused": 0,
+                "pending": 0,
+                "unavailable": 0,
+                "failed": 0,
+                "unsupported": 0,
+                "deferred": 0,
+                "partial": 0
+              },
+              "reasons": {}
+            },
+            "other": {
+              "discovered": 1,
+              "downloaded": 1,
+              "analyzed": 1,
+              "successful": 0,
+              "errorResponses": 1,
+              "blocked": 0,
+              "skipped": 0,
+              "uninspected": 1,
+              "currentStates": {
+                "inspected": 0,
+                "reused": 0,
+                "pending": 0,
+                "unavailable": 1,
+                "failed": 0,
+                "unsupported": 0,
+                "deferred": 0,
+                "partial": 0
+              },
+              "reasons": {
+                "HTTP 404": 1
+              }
+            },
+            "domainExcluded": {
+              "discovered": 0,
+              "downloaded": 0,
+              "analyzed": 0,
+              "successful": 0,
+              "errorResponses": 0,
+              "blocked": 0,
+              "skipped": 0,
+              "uninspected": 0,
+              "currentStates": {
+                "inspected": 0,
+                "reused": 0,
+                "pending": 0,
+                "unavailable": 0,
+                "failed": 0,
+                "unsupported": 0,
+                "deferred": 0,
+                "partial": 0
+              },
+              "reasons": {}
+            },
+            "externalDependencies": {
+              "discovered": 0,
+              "downloaded": 0,
+              "analyzed": 0,
+              "successful": 0,
+              "errorResponses": 0,
+              "blocked": 0,
+              "skipped": 0,
+              "uninspected": 0,
+              "currentStates": {
+                "inspected": 0,
+                "reused": 0,
+                "pending": 0,
+                "unavailable": 0,
+                "failed": 0,
+                "unsupported": 0,
+                "deferred": 0,
+                "partial": 0
+              },
+              "reasons": {}
+            },
+            "browserRuntime": {
+              "discovered": 0,
+              "downloaded": 0,
+              "analyzed": 0,
+              "successful": 0,
+              "errorResponses": 0,
+              "blocked": 0,
+              "skipped": 0,
+              "uninspected": 0,
+              "currentStates": {
+                "inspected": 0,
+                "reused": 0,
+                "pending": 0,
+                "unavailable": 0,
+                "failed": 0,
+                "unsupported": 0,
+                "deferred": 0,
+                "partial": 0
+              },
+              "reasons": {}
+            }
+          },
+          "entryPoints": [
+            {
+              "url": "http://127.0.0.1:52230/",
+              "successful": true,
+              "analyzed": true
+            }
+          ],
+          "highValueLimited": true,
+          "optionalPagesLimited": false
+        }
+      },
+      "inventory": [
+        {
+          "url": "http://127.0.0.1:52230/robots.txt",
+          "category": "other",
+          "state": "unavailable",
+          "reason": "HTTP 404",
+          "chain": []
+        },
+        {
+          "url": "http://127.0.0.1:52230/",
+          "category": "entryDocuments",
+          "state": "inspected",
+          "chain": []
+        },
+        {
+          "url": "http://127.0.0.1:52230/sitemap.xml",
+          "category": "sitemaps",
+          "state": "unavailable",
+          "reason": "HTTP 404",
+          "chain": []
+        },
+        {
+          "url": "http://127.0.0.1:52230/assets/vite.js",
+          "category": "javascript",
+          "state": "inspected",
+          "chain": [
+            "http://127.0.0.1:52230/",
+            "document/base URL"
+          ]
+        },
+        {
+          "url": "http://127.0.0.1:52230/webpack.js",
+          "category": "javascript",
+          "state": "inspected",
+          "chain": [
+            "http://127.0.0.1:52230/",
+            "document/base URL"
+          ]
+        },
+        {
+          "url": "http://127.0.0.1:52230/_astro/island.js",
+          "category": "javascript",
+          "state": "inspected",
+          "chain": [
+            "http://127.0.0.1:52230/",
+            "Astro island component-url"
+          ]
+        },
+        {
+          "url": "http://127.0.0.1:52230/_astro/renderer.js",
+          "category": "javascript",
+          "state": "inspected",
+          "chain": [
+            "http://127.0.0.1:52230/",
+            "Astro island renderer-url"
+          ]
+        },
+        {
+          "url": "http://127.0.0.1:52230/_nuxt/lazy.js",
+          "category": "javascript",
+          "state": "inspected",
+          "chain": [
+            "http://127.0.0.1:52230/",
+            "Inline framework/hydration JSON"
+          ]
+        },
+        {
+          "url": "http://127.0.0.1:52230/_next/static/build42/_buildManifest.js",
+          "category": "javascript",
+          "state": "inspected",
+          "chain": [
+            "http://127.0.0.1:52230/",
+            "Next hydration build ID"
+          ]
+        },
+        {
+          "url": "http://127.0.0.1:52230/_next/static/build42/_ssgManifest.js",
+          "category": "javascript",
+          "state": "unavailable",
+          "reason": "HTTP 404",
+          "chain": [
+            "http://127.0.0.1:52230/",
+            "Next hydration build ID"
+          ]
+        },
+        {
+          "url": "http://127.0.0.1:52230/assets/lazy.js",
+          "category": "javascript",
+          "state": "inspected",
+          "chain": [
+            "http://127.0.0.1:52230/",
+            "document/base URL",
+            "http://127.0.0.1:52230/assets/vite.js",
+            "Vite dependency table build base"
+          ]
+        },
+        {
+          "url": "http://127.0.0.1:52230/assets/1.abc.js",
+          "category": "javascript",
+          "state": "inspected",
+          "chain": [
+            "http://127.0.0.1:52230/",
+            "document/base URL",
+            "http://127.0.0.1:52230/webpack.js",
+            "Webpack public build base"
+          ]
+        },
+        {
+          "url": "http://127.0.0.1:52230/_next/static/chunks/page.js",
+          "category": "javascript",
+          "state": "inspected",
+          "chain": [
+            "http://127.0.0.1:52230/",
+            "Next hydration build ID",
+            "http://127.0.0.1:52230/_next/static/build42/_buildManifest.js",
+            "Next build base"
+          ]
+        }
+      ],
+      "summary": "Coverage is limited or in progress; inspect each origin and resource category. No findings means no supported exposure was detected in inspected coverage.",
+      "discoveryNote": "Discovered is the known unique URL inventory. Each URL has exactly one current state and category; inspected plus reused counts configured inspection coverage. Pending means live work only; deferred and partial are terminal states of unfinished work. Legacy downloaded/analyzed/error counters are historical evidence and can overlap. Browser runtime is a separate navigation count. Undiscovered resources cannot be counted; inventory omissions are reported.",
+      "deploymentChecks": {
+        "planned": 0,
+        "attempted": 0,
+        "remaining": 0
+      },
+      "requestComparison": [
+        {
+          "url": "http://127.0.0.1:52230/",
+          "staticStatus": 200,
+          "staticHeaders": [
+            "accept",
+            "accept-encoding",
+            "host"
+          ],
+          "browserHeaders": [],
+          "conclusion": "No guarded browser document response recorded."
+        }
+      ]
+    },
+    "scheduler": {
+      "classes": {
+        "entryPages": {
+          "pending": 0,
+          "active": 0,
+          "oldestQueuedMs": 0,
+          "deferred": 0
+        },
+        "javascript": {
+          "pending": 0,
+          "active": 0,
+          "oldestQueuedMs": 0,
+          "deferred": 0
+        },
+        "configuration": {
+          "pending": 0,
+          "active": 0,
+          "oldestQueuedMs": 0,
+          "deferred": 0
+        },
+        "sourceMaps": {
+          "pending": 0,
+          "active": 0,
+          "oldestQueuedMs": 0,
+          "deferred": 0
+        },
+        "discovery": {
+          "pending": 0,
+          "active": 0,
+          "oldestQueuedMs": 0,
+          "deferred": 0
+        },
+        "other": {
+          "pending": 0,
+          "active": 0,
+          "oldestQueuedMs": 0,
+          "deferred": 0
+        },
+        "optionalPages": {
+          "pending": 0,
+          "active": 0,
+          "oldestQueuedMs": 0,
+          "deferred": 0
+        },
+        "baseline": {
+          "pending": 0,
+          "active": 0,
+          "oldestQueuedMs": 0,
+          "deferred": 0
+        },
+        "deployment": {
+          "pending": 0,
+          "active": 0,
+          "oldestQueuedMs": 0,
+          "deferred": 0
+        },
+        "lowValue": {
+          "pending": 0,
+          "active": 0,
+          "oldestQueuedMs": 0,
+          "deferred": 0
+        }
+      },
+      "dispatches": [
+        {
+          "class": "discovery",
+          "url": "http://127.0.0.1:52230/robots.txt",
+          "at": 1791430775574
+        },
+        {
+          "class": "discovery",
+          "url": "http://127.0.0.1:52230/sitemap.xml",
+          "at": 1791430775575
+        },
+        {
+          "class": "entryPages",
+          "url": "http://127.0.0.1:52230/",
+          "at": 1791430776659
+        },
+        {
+          "class": "javascript",
+          "url": "http://127.0.0.1:52230/assets/vite.js",
+          "at": 1791430777629
+        },
+        {
+          "class": "javascript",
+          "url": "http://127.0.0.1:52230/webpack.js",
+          "at": 1791430777629
+        },
+        {
+          "class": "javascript",
+          "url": "http://127.0.0.1:52230/_astro/island.js",
+          "at": 1791430778629
+        },
+        {
+          "class": "javascript",
+          "url": "http://127.0.0.1:52230/_astro/renderer.js",
+          "at": 1791430778698
+        },
+        {
+          "class": "javascript",
+          "url": "http://127.0.0.1:52230/_nuxt/lazy.js",
+          "at": 1791430779638
+        },
+        {
+          "class": "javascript",
+          "url": "http://127.0.0.1:52230/_next/static/build42/_buildManifest.js",
+          "at": 1791430779701
+        },
+        {
+          "class": "javascript",
+          "url": "http://127.0.0.1:52230/_next/static/build42/_ssgManifest.js",
+          "at": 1791430780652
+        },
+        {
+          "class": "javascript",
+          "url": "http://127.0.0.1:52230/assets/lazy.js",
+          "at": 1791430780722
+        },
+        {
+          "class": "javascript",
+          "url": "http://127.0.0.1:52230/assets/1.abc.js",
+          "at": 1791430781711
+        },
+        {
+          "class": "javascript",
+          "url": "http://127.0.0.1:52230/_next/static/chunks/page.js",
+          "at": 1791430781742
+        }
+      ],
+      "peakBrowserOrigins": 0,
+      "pageAttempts": 1,
+      "timeToFirstJavaScriptMs": 3054
+    },
+    "aggregatedSkips": [],
+    "dismissedObservations": [],
+    "websites": {
+      "mode": "fixed",
+      "count": 1,
+      "analysisMs": 82.87729999999283,
+      "analysisMsMeaning": "elapsed allocation charge (includes worker startup and cleanup); see analysis.origins for the breakdown",
+      "importantUninspected": 0,
+      "limits": [
+        {
+          "origin": "http://127.0.0.1:52230",
+          "mode": "fixed",
+          "effective": {
+            "resources": 200,
+            "pages": 30,
+            "bytes": 83886080,
+            "maps": 25,
+            "analysisMs": 12000
+          },
+          "maximum": {
+            "resources": 200,
+            "pages": 30,
+            "bytes": 83886080,
+            "maps": 25,
+            "analysisMs": 12000
+          },
+          "signals": {
+            "scripts": 8,
+            "bundleBytes": 577,
+            "maps": 1,
+            "importantPending": 0,
+            "responseMs": 1
+          },
+          "reasons": [
+            "Fixed per-website maximum allocation."
+          ],
+          "importantUninspected": [],
+          "importantUnresolved": 0
+        }
+      ]
+    },
+    "findingTriage": {
+      "pending": 0,
+      "removedInsignificant": 0,
+      "categories": {
+        "direct-leak": 5,
+        "high-potential-leak": 0,
+        "low-potential-leak": 0
+      }
+    },
+    "engines": {
+      "websiteRules": "website/2.4.0",
+      "gitleaks": "8.30.1",
+      "ruleDigest": "e163e53b9e7e8a8511e77271e2b323ed057759542a6d988258afe3a1fa329caf",
+      "companyRules": "none"
+    },
+    "findings": [
+      {
+        "id": "209a6bc2e8b7bcf00e3cad7af1c2a228",
+        "fingerprint": "209a6bc2e8b7bcf00e3cad7af1c2a228",
+        "category": "private-credential",
+        "provider": "Supabase",
+        "rule": "supabase-secret",
+        "severity": "critical",
+        "confidence": "high",
+        "reasons": [
+          "Matches a documented credential format; validity and privileges are unverified."
+        ],
+        "masked": "[redacted: 61 characters]",
+        "validity": "unverified",
+        "impact": "Potential privileged application or signing access. Validity, permissions, expiry and restrictions are unknown.",
+        "remediation": "Revoke and replace the exposed credential. Remove the public value/file; move private credentials to backend secret storage. Rebuild frontend assets, remove stale assets, review provider usage and rescan.",
+        "occurrences": [
+          {
+            "url": "http://127.0.0.1:52230/_astro/island.js",
+            "line": 1,
+            "column": 1,
+            "byteOffset": 0,
+            "chain": [
+              "http://127.0.0.1:52230/",
+              "Astro island component-url"
+            ],
+            "transformations": [],
+            "excerpt": "[redacted]",
+            "evidence": "Unauthenticated HTTP response",
+            "coordinates": "generated",
+            "byteOffsetEncoding": "utf-8-decoded-text",
+            "exposure": "public-response"
+          }
+        ],
+        "environment": "unknown",
+        "exposureGroup": "other",
+        "financialPriority": "urgent",
+        "assessment": {
+          "ruleVersion": "website/2.4.0",
+          "exposureConfidence": "high",
+          "format": "supabase-secret",
+          "context": "Matches a documented credential format; validity and privileges are unverified.",
+          "completeness": "No complete credential pair inferred",
+          "channels": [
+            "public-response"
+          ],
+          "validity": "unverified",
+          "permissions": "unknown"
+        },
+        "triage": {
+          "category": "direct-leak",
+          "reason": "Private credential material was observed in public content or anonymous runtime evidence. Validity and permissions remain unverified."
+        }
+      },
+      {
+        "id": "49cd550eef7f7d758f0f5bd0acd744a5",
+        "fingerprint": "49cd550eef7f7d758f0f5bd0acd744a5",
+        "category": "private-credential",
+        "provider": "Anthropic",
+        "rule": "anthropic",
+        "severity": "high",
+        "confidence": "high",
+        "reasons": [
+          "Matches a documented credential format; validity and privileges are unverified."
+        ],
+        "masked": "[redacted: 115 characters]",
+        "validity": "unverified",
+        "impact": "Potential paid AI usage. Validity, permissions, expiry and restrictions are unknown.",
+        "remediation": "Revoke and replace the exposed credential. Remove the public value/file; move private credentials to backend secret storage. Rebuild frontend assets, remove stale assets, review provider usage and rescan.",
+        "occurrences": [
+          {
+            "url": "http://127.0.0.1:52230/_nuxt/lazy.js",
+            "line": 1,
+            "column": 1,
+            "byteOffset": 0,
+            "chain": [
+              "http://127.0.0.1:52230/",
+              "Inline framework/hydration JSON"
+            ],
+            "transformations": [],
+            "excerpt": "[redacted]",
+            "evidence": "Unauthenticated HTTP response",
+            "coordinates": "generated",
+            "byteOffsetEncoding": "utf-8-decoded-text",
+            "exposure": "public-response"
+          }
+        ],
+        "environment": "unknown",
+        "exposureGroup": "paid-ai",
+        "financialPriority": "urgent",
+        "assessment": {
+          "ruleVersion": "website/2.4.0",
+          "exposureConfidence": "high",
+          "format": "anthropic",
+          "context": "Matches a documented credential format; validity and privileges are unverified.",
+          "completeness": "No complete credential pair inferred",
+          "channels": [
+            "public-response"
+          ],
+          "validity": "unverified",
+          "permissions": "unknown"
+        },
+        "triage": {
+          "category": "direct-leak",
+          "reason": "Private credential material was observed in public content or anonymous runtime evidence. Validity and permissions remain unverified."
+        }
+      },
+      {
+        "id": "92a1bb3de18a1559526d7ff7a2d70afa",
+        "fingerprint": "92a1bb3de18a1559526d7ff7a2d70afa",
+        "category": "private-credential",
+        "provider": "Replicate",
+        "rule": "replicate",
+        "severity": "high",
+        "confidence": "high",
+        "reasons": [
+          "Matches a documented credential format; validity and privileges are unverified."
+        ],
+        "masked": "[redacted: 43 characters]",
+        "validity": "unverified",
+        "impact": "Potential paid AI usage. Validity, permissions, expiry and restrictions are unknown.",
+        "remediation": "Revoke and replace the exposed credential. Remove the public value/file; move private credentials to backend secret storage. Rebuild frontend assets, remove stale assets, review provider usage and rescan.",
+        "occurrences": [
+          {
+            "url": "http://127.0.0.1:52230/assets/lazy.js",
+            "line": 1,
+            "column": 1,
+            "byteOffset": 0,
+            "chain": [
+              "http://127.0.0.1:52230/",
+              "document/base URL",
+              "http://127.0.0.1:52230/assets/vite.js",
+              "Vite dependency table build base"
+            ],
+            "transformations": [],
+            "excerpt": "[redacted]",
+            "evidence": "Unauthenticated HTTP response",
+            "coordinates": "generated",
+            "byteOffsetEncoding": "utf-8-decoded-text",
+            "exposure": "public-response"
+          }
+        ],
+        "environment": "unknown",
+        "exposureGroup": "paid-ai",
+        "financialPriority": "urgent",
+        "assessment": {
+          "ruleVersion": "website/2.4.0",
+          "exposureConfidence": "high",
+          "format": "replicate",
+          "context": "Matches a documented credential format; validity and privileges are unverified.",
+          "completeness": "No complete credential pair inferred",
+          "channels": [
+            "public-response"
+          ],
+          "validity": "unverified",
+          "permissions": "unknown"
+        },
+        "triage": {
+          "category": "direct-leak",
+          "reason": "Private credential material was observed in public content or anonymous runtime evidence. Validity and permissions remain unverified."
+        }
+      },
+      {
+        "id": "afd8980d71cc7f5db58bada4e9c35e1c",
+        "fingerprint": "afd8980d71cc7f5db58bada4e9c35e1c",
+        "category": "private-credential",
+        "provider": "Stripe",
+        "rule": "stripe-secret",
+        "severity": "high",
+        "confidence": "high",
+        "reasons": [
+          "Matches a documented credential format; validity and privileges are unverified."
+        ],
+        "masked": "[redacted: 59 characters]",
+        "validity": "unverified",
+        "impact": "Potential payment operations. Validity, permissions, expiry and restrictions are unknown.",
+        "remediation": "Revoke and replace the exposed credential. Remove the public value/file; move private credentials to backend secret storage. Rebuild frontend assets, remove stale assets, review provider usage and rescan.",
+        "occurrences": [
+          {
+            "url": "http://127.0.0.1:52230/assets/1.abc.js",
+            "line": 1,
+            "column": 1,
+            "byteOffset": 0,
+            "chain": [
+              "http://127.0.0.1:52230/",
+              "document/base URL",
+              "http://127.0.0.1:52230/webpack.js",
+              "Webpack public build base"
+            ],
+            "transformations": [],
+            "excerpt": "[redacted]",
+            "evidence": "Unauthenticated HTTP response",
+            "coordinates": "generated",
+            "byteOffsetEncoding": "utf-8-decoded-text",
+            "exposure": "public-response"
+          }
+        ],
+        "environment": "production",
+        "exposureGroup": "payments",
+        "financialPriority": "urgent",
+        "assessment": {
+          "ruleVersion": "website/2.4.0",
+          "exposureConfidence": "high",
+          "format": "stripe-secret",
+          "context": "Matches a documented credential format; validity and privileges are unverified.",
+          "completeness": "No complete credential pair inferred",
+          "channels": [
+            "public-response"
+          ],
+          "validity": "unverified",
+          "permissions": "unknown"
+        },
+        "triage": {
+          "category": "direct-leak",
+          "reason": "Private credential material was observed in public content or anonymous runtime evidence. Validity and permissions remain unverified."
+        }
+      },
+      {
+        "id": "b56d9f9b04d95d8a216cc4a72af6415f",
+        "fingerprint": "b56d9f9b04d95d8a216cc4a72af6415f",
+        "category": "private-credential",
+        "provider": "OpenAI",
+        "rule": "openai",
+        "severity": "high",
+        "confidence": "high",
+        "reasons": [
+          "Matches a documented credential format; validity and privileges are unverified."
+        ],
+        "masked": "[redacted: 110 characters]",
+        "validity": "unverified",
+        "impact": "Potential paid AI usage. Validity, permissions, expiry and restrictions are unknown.",
+        "remediation": "Revoke and replace the exposed credential. Remove the public value/file; move private credentials to backend secret storage. Rebuild frontend assets, remove stale assets, review provider usage and rescan.",
+        "occurrences": [
+          {
+            "url": "http://127.0.0.1:52230/_next/static/chunks/page.js",
+            "line": 1,
+            "column": 1,
+            "byteOffset": 0,
+            "chain": [
+              "http://127.0.0.1:52230/",
+              "Next hydration build ID",
+              "http://127.0.0.1:52230/_next/static/build42/_buildManifest.js",
+              "Next build base"
+            ],
+            "transformations": [],
+            "excerpt": "[redacted]",
+            "evidence": "Unauthenticated HTTP response",
+            "coordinates": "generated",
+            "byteOffsetEncoding": "utf-8-decoded-text",
+            "exposure": "public-response"
+          }
+        ],
+        "environment": "unknown",
+        "exposureGroup": "paid-ai",
+        "financialPriority": "urgent",
+        "assessment": {
+          "ruleVersion": "website/2.4.0",
+          "exposureConfidence": "high",
+          "format": "openai",
+          "context": "Matches a documented credential format; validity and privileges are unverified.",
+          "completeness": "No complete credential pair inferred",
+          "channels": [
+            "public-response"
+          ],
+          "validity": "unverified",
+          "permissions": "unknown"
+        },
+        "triage": {
+          "category": "direct-leak",
+          "reason": "Private credential material was observed in public content or anonymous runtime evidence. Validity and permissions remain unverified."
+        }
+      }
+    ],
+    "resources": [
+      {
+        "url": "http://127.0.0.1:52230/sitemap.xml",
+        "attemptId": 2,
+        "timings": {
+          "preflightMs": 352,
+          "rateWaitMs": 0,
+          "queueMs": 0,
+          "dnsMs": 0,
+          "connectMs": 1,
+          "headersMs": 1,
+          "bodyMs": 1,
+          "totalMs": 355,
+          "analysisMs": 675,
+          "analyzedAt": 1791430776605,
+          "engineMs": 673
+        },
+        "status": "http-error",
+        "code": 404,
+        "bytes": 7,
+        "partial": false,
+        "chain": [],
+        "kind": "sitemap",
+        "analysis": "analyzed",
+        "requestHeaderNames": [
+          "accept",
+          "accept-encoding",
+          "host"
+        ],
+        "contentType": "",
+        "httpDisposition": "not-found",
+        "resourceType": "sitemap",
+        "discoveryChains": [
+          []
+        ],
+        "contentHash": "ffa63583dfa6706b87d284b86b0d693a161e4840aad2c5cf6b5d27c3b9621f7d",
+        "textBytes": 7,
+        "analyzers": {
+          "directText": {
+            "status": "inspected"
+          },
+          "offlineEngine": {
+            "status": "inspected",
+            "reused": false
+          }
+        }
+      },
+      {
+        "url": "http://127.0.0.1:52230/robots.txt",
+        "attemptId": 1,
+        "timings": {
+          "preflightMs": 371,
+          "rateWaitMs": 42,
+          "queueMs": 42,
+          "dnsMs": 0,
+          "connectMs": 1,
+          "headersMs": 1,
+          "bodyMs": 0,
+          "totalMs": 415,
+          "analysisMs": 670,
+          "analyzedAt": 1791430776659,
+          "engineMs": 668
+        },
+        "status": "http-error",
+        "code": 404,
+        "bytes": 7,
+        "partial": false,
+        "chain": [],
+        "kind": "robots",
+        "analysis": "analyzed",
+        "requestHeaderNames": [
+          "accept",
+          "accept-encoding",
+          "host"
+        ],
+        "contentType": "",
+        "httpDisposition": "not-found",
+        "resourceType": "other",
+        "discoveryChains": [
+          []
+        ],
+        "contentHash": "ffa63583dfa6706b87d284b86b0d693a161e4840aad2c5cf6b5d27c3b9621f7d",
+        "textBytes": 7,
+        "analyzers": {
+          "directText": {
+            "status": "inspected"
+          },
+          "offlineEngine": {
+            "status": "inspected",
+            "reused": false
+          }
+        }
+      },
+      {
+        "url": "http://127.0.0.1:52230/",
+        "attemptId": 3,
+        "timings": {
+          "preflightMs": 325,
+          "rateWaitMs": 0,
+          "queueMs": 0,
+          "dnsMs": 0,
+          "connectMs": 1,
+          "headersMs": 0,
+          "bodyMs": 0,
+          "totalMs": 326,
+          "analysisMs": 641,
+          "analyzedAt": 1791430777627,
+          "engineMs": 641
+        },
+        "status": "scanned",
+        "code": 200,
+        "bytes": 352,
+        "partial": false,
+        "chain": [],
+        "kind": "page",
+        "analysis": "analyzed",
+        "requestHeaderNames": [
+          "accept",
+          "accept-encoding",
+          "host"
+        ],
+        "contentType": "text/html",
+        "httpDisposition": "success",
+        "resourceType": "page",
+        "discoveryChains": [
+          []
+        ],
+        "contentHash": "812d67b948fa4ead54a5e1e02045bd8e16916987d52c014430c16ce80690977c",
+        "textBytes": 352,
+        "analyzers": {
+          "directText": {
+            "status": "inspected"
+          },
+          "offlineEngine": {
+            "status": "inspected",
+            "reused": false
+          }
+        }
+      },
+      {
+        "url": "http://127.0.0.1:52230/assets/vite.js",
+        "attemptId": 4,
+        "timings": {
+          "preflightMs": 323,
+          "rateWaitMs": 0,
+          "queueMs": 0,
+          "dnsMs": 0,
+          "connectMs": 1,
+          "headersMs": 0,
+          "bodyMs": 0,
+          "totalMs": 324,
+          "analysisMs": 674,
+          "analyzedAt": 1791430778628,
+          "engineMs": 673
+        },
+        "status": "scanned",
+        "code": 200,
+        "bytes": 53,
+        "partial": false,
+        "chain": [
+          "http://127.0.0.1:52230/",
+          "document/base URL"
+        ],
+        "kind": "script",
+        "analysis": "analyzed",
+        "requestHeaderNames": [
+          "accept",
+          "accept-encoding",
+          "host"
+        ],
+        "contentType": "text/javascript",
+        "httpDisposition": "success",
+        "resourceType": "javascript",
+        "discoveryChains": [
+          [
+            "http://127.0.0.1:52230/",
+            "document/base URL"
+          ]
+        ],
+        "contentHash": "235a4a2d60f0efbe8f757b5e8b5f906e1f0e084890d8895e3956039360f95d2a",
+        "textBytes": 53,
+        "analyzers": {
+          "directText": {
+            "status": "inspected"
+          },
+          "offlineEngine": {
+            "status": "inspected",
+            "reused": false
+          },
+          "semantic": {
+            "status": "inspected"
+          }
+        },
+        "certainty": "confirmed"
+      },
+      {
+        "url": "http://127.0.0.1:52230/webpack.js",
+        "attemptId": 5,
+        "timings": {
+          "preflightMs": 336,
+          "rateWaitMs": 51,
+          "queueMs": 51,
+          "dnsMs": 0,
+          "connectMs": 1,
+          "headersMs": 0,
+          "bodyMs": 0,
+          "totalMs": 388,
+          "analysisMs": 679,
+          "analyzedAt": 1791430778697,
+          "engineMs": 679
+        },
+        "status": "scanned",
+        "code": 200,
+        "bytes": 46,
+        "partial": false,
+        "chain": [
+          "http://127.0.0.1:52230/",
+          "document/base URL"
+        ],
+        "kind": "script",
+        "analysis": "analyzed",
+        "requestHeaderNames": [
+          "accept",
+          "accept-encoding",
+          "host"
+        ],
+        "contentType": "text/javascript",
+        "httpDisposition": "success",
+        "resourceType": "javascript",
+        "discoveryChains": [
+          [
+            "http://127.0.0.1:52230/",
+            "document/base URL"
+          ]
+        ],
+        "contentHash": "186d877fcfd42428e9f2d08343be53544ef70f46faa2febf3b94826c314802bf",
+        "textBytes": 46,
+        "analyzers": {
+          "directText": {
+            "status": "inspected"
+          },
+          "offlineEngine": {
+            "status": "inspected",
+            "reused": false
+          },
+          "semantic": {
+            "status": "inspected"
+          }
+        },
+        "certainty": "confirmed"
+      },
+      {
+        "url": "http://127.0.0.1:52230/_astro/island.js",
+        "attemptId": 6,
+        "timings": {
+          "preflightMs": 337,
+          "rateWaitMs": 0,
+          "queueMs": 0,
+          "dnsMs": 0,
+          "connectMs": 1,
+          "headersMs": 0,
+          "bodyMs": 0,
+          "totalMs": 338,
+          "analysisMs": 671,
+          "analyzedAt": 1791430779638,
+          "engineMs": 671
+        },
+        "status": "scanned",
+        "code": 200,
+        "bytes": 61,
+        "partial": false,
+        "chain": [
+          "http://127.0.0.1:52230/",
+          "Astro island component-url"
+        ],
+        "kind": "asset",
+        "analysis": "analyzed",
+        "requestHeaderNames": [
+          "accept",
+          "accept-encoding",
+          "host"
+        ],
+        "contentType": "text/javascript",
+        "httpDisposition": "success",
+        "resourceType": "javascript",
+        "discoveryChains": [
+          [
+            "http://127.0.0.1:52230/",
+            "Astro island component-url"
+          ]
+        ],
+        "contentHash": "222feb21b53303a5084af1153c92b06b2c80ac2a48b5fa84fdf7a1fe1c78f3c6",
+        "textBytes": 61,
+        "analyzers": {
+          "directText": {
+            "status": "inspected"
+          },
+          "offlineEngine": {
+            "status": "inspected",
+            "reused": false
+          },
+          "semantic": {
+            "status": "inspected"
+          }
+        },
+        "certainty": "confirmed"
+      },
+      {
+        "url": "http://127.0.0.1:52230/_astro/renderer.js",
+        "attemptId": 7,
+        "timings": {
+          "preflightMs": 336,
+          "rateWaitMs": 0,
+          "queueMs": 0,
+          "dnsMs": 0,
+          "connectMs": 0,
+          "headersMs": 1,
+          "bodyMs": 0,
+          "totalMs": 337,
+          "analysisMs": 665,
+          "analyzedAt": 1791430779700,
+          "engineMs": 665
+        },
+        "status": "scanned",
+        "code": 200,
+        "bytes": 29,
+        "partial": false,
+        "chain": [
+          "http://127.0.0.1:52230/",
+          "Astro island renderer-url"
+        ],
+        "kind": "asset",
+        "analysis": "analyzed",
+        "requestHeaderNames": [
+          "accept",
+          "accept-encoding",
+          "host"
+        ],
+        "contentType": "text/javascript",
+        "httpDisposition": "success",
+        "resourceType": "javascript",
+        "discoveryChains": [
+          [
+            "http://127.0.0.1:52230/",
+            "Astro island renderer-url"
+          ]
+        ],
+        "contentHash": "72489706bb689c715c23051295ca803d89849c4a9b4619fd5378826d174fb91e",
+        "textBytes": 29,
+        "analyzers": {
+          "directText": {
+            "status": "inspected"
+          },
+          "offlineEngine": {
+            "status": "inspected",
+            "reused": false
+          },
+          "semantic": {
+            "status": "inspected"
+          }
+        },
+        "certainty": "confirmed"
+      },
+      {
+        "url": "http://127.0.0.1:52230/_nuxt/lazy.js",
+        "attemptId": 8,
+        "timings": {
+          "preflightMs": 342,
+          "rateWaitMs": 0,
+          "queueMs": 0,
+          "dnsMs": 0,
+          "connectMs": 1,
+          "headersMs": 1,
+          "bodyMs": 0,
+          "totalMs": 344,
+          "analysisMs": 670,
+          "analyzedAt": 1791430780652,
+          "engineMs": 667
+        },
+        "status": "scanned",
+        "code": 200,
+        "bytes": 115,
+        "partial": false,
+        "chain": [
+          "http://127.0.0.1:52230/",
+          "Inline framework/hydration JSON"
+        ],
+        "kind": "asset",
+        "analysis": "analyzed",
+        "requestHeaderNames": [
+          "accept",
+          "accept-encoding",
+          "host"
+        ],
+        "contentType": "text/javascript",
+        "httpDisposition": "success",
+        "resourceType": "javascript",
+        "discoveryChains": [
+          [
+            "http://127.0.0.1:52230/",
+            "Inline framework/hydration JSON"
+          ]
+        ],
+        "contentHash": "972803d99ee679fee52062af21e515a3bce7b19ba838bb5189a3a23ee177fd26",
+        "textBytes": 115,
+        "analyzers": {
+          "directText": {
+            "status": "inspected"
+          },
+          "offlineEngine": {
+            "status": "inspected",
+            "reused": false
+          },
+          "semantic": {
+            "status": "inspected"
+          }
+        },
+        "certainty": "confirmed"
+      },
+      {
+        "url": "http://127.0.0.1:52230/_next/static/build42/_buildManifest.js",
+        "attemptId": 9,
+        "timings": {
+          "preflightMs": 325,
+          "rateWaitMs": 18,
+          "queueMs": 18,
+          "dnsMs": 0,
+          "connectMs": 1,
+          "headersMs": 0,
+          "bodyMs": 0,
+          "totalMs": 344,
+          "analysisMs": 677,
+          "analyzedAt": 1791430780722,
+          "engineMs": 676
+        },
+        "status": "scanned",
+        "code": 200,
+        "bytes": 54,
+        "partial": false,
+        "chain": [
+          "http://127.0.0.1:52230/",
+          "Next hydration build ID"
+        ],
+        "kind": "framework-manifest",
+        "analysis": "analyzed",
+        "requestHeaderNames": [
+          "accept",
+          "accept-encoding",
+          "host"
+        ],
+        "contentType": "text/javascript",
+        "httpDisposition": "success",
+        "resourceType": "javascript",
+        "discoveryChains": [
+          [
+            "http://127.0.0.1:52230/",
+            "Next hydration build ID"
+          ]
+        ],
+        "contentHash": "9f892871e0a9035b232fc163b30d7601a9a48b2e0ffeb4d32dac5247f2086d2c",
+        "textBytes": 54,
+        "analyzers": {
+          "directText": {
+            "status": "inspected"
+          },
+          "offlineEngine": {
+            "status": "inspected",
+            "reused": false
+          },
+          "semantic": {
+            "status": "inspected"
+          }
+        },
+        "certainty": "confirmed"
+      },
+      {
+        "url": "http://127.0.0.1:52230/_next/static/build42/_ssgManifest.js",
+        "attemptId": 10,
+        "timings": {
+          "preflightMs": 347,
+          "rateWaitMs": 0,
+          "queueMs": 0,
+          "dnsMs": 0,
+          "connectMs": 7,
+          "headersMs": 0,
+          "bodyMs": 0,
+          "totalMs": 355,
+          "analysisMs": 703,
+          "analyzedAt": 1791430781711,
+          "engineMs": 335
+        },
+        "status": "http-error",
+        "code": 404,
+        "bytes": 7,
+        "partial": false,
+        "chain": [
+          "http://127.0.0.1:52230/",
+          "Next hydration build ID"
+        ],
+        "kind": "framework-manifest",
+        "analysis": "analyzed",
+        "requestHeaderNames": [
+          "accept",
+          "accept-encoding",
+          "host"
+        ],
+        "contentType": "",
+        "httpDisposition": "not-found",
+        "resourceType": "javascript",
+        "discoveryChains": [
+          [
+            "http://127.0.0.1:52230/",
+            "Next hydration build ID"
+          ]
+        ],
+        "contentHash": "ffa63583dfa6706b87d284b86b0d693a161e4840aad2c5cf6b5d27c3b9621f7d",
+        "textBytes": 7,
+        "analyzers": {
+          "directText": {
+            "status": "inspected"
+          },
+          "offlineEngine": {
+            "status": "inspected",
+            "reused": true
+          }
+        },
+        "certainty": "confirmed"
+      },
+      {
+        "url": "http://127.0.0.1:52230/assets/lazy.js",
+        "attemptId": 11,
+        "timings": {
+          "preflightMs": 345,
+          "rateWaitMs": 0,
+          "queueMs": 0,
+          "dnsMs": 0,
+          "connectMs": 1,
+          "headersMs": 0,
+          "bodyMs": 0,
+          "totalMs": 346,
+          "analysisMs": 673,
+          "analyzedAt": 1791430781742,
+          "engineMs": 672
+        },
+        "status": "scanned",
+        "code": 200,
+        "bytes": 43,
+        "partial": false,
+        "chain": [
+          "http://127.0.0.1:52230/",
+          "document/base URL",
+          "http://127.0.0.1:52230/assets/vite.js",
+          "Vite dependency table build base"
+        ],
+        "kind": "asset",
+        "analysis": "analyzed",
+        "requestHeaderNames": [
+          "accept",
+          "accept-encoding",
+          "host"
+        ],
+        "contentType": "text/javascript",
+        "httpDisposition": "success",
+        "resourceType": "javascript",
+        "discoveryChains": [
+          [
+            "http://127.0.0.1:52230/",
+            "document/base URL",
+            "http://127.0.0.1:52230/assets/vite.js",
+            "Vite dependency table build base"
+          ]
+        ],
+        "contentHash": "5308e8a775a65b80e58ae4b04eb3941b7ecaa9b283ca163eb5835b715435ff1a",
+        "textBytes": 43,
+        "analyzers": {
+          "directText": {
+            "status": "inspected"
+          },
+          "offlineEngine": {
+            "status": "inspected",
+            "reused": false
+          },
+          "semantic": {
+            "status": "inspected"
+          }
+        },
+        "certainty": "confirmed"
+      },
+      {
+        "url": "http://127.0.0.1:52230/assets/1.abc.js",
+        "attemptId": 12,
+        "timings": {
+          "preflightMs": 326,
+          "rateWaitMs": 0,
+          "queueMs": 0,
+          "dnsMs": 0,
+          "connectMs": 2,
+          "headersMs": 0,
+          "bodyMs": 0,
+          "totalMs": 328,
+          "analysisMs": 670,
+          "analyzedAt": 1791430782709,
+          "engineMs": 667
+        },
+        "status": "scanned",
+        "code": 200,
+        "bytes": 59,
+        "partial": false,
+        "chain": [
+          "http://127.0.0.1:52230/",
+          "document/base URL",
+          "http://127.0.0.1:52230/webpack.js",
+          "Webpack public build base"
+        ],
+        "kind": "asset",
+        "analysis": "analyzed",
+        "requestHeaderNames": [
+          "accept",
+          "accept-encoding",
+          "host"
+        ],
+        "contentType": "text/javascript",
+        "httpDisposition": "success",
+        "resourceType": "javascript",
+        "discoveryChains": [
+          [
+            "http://127.0.0.1:52230/",
+            "document/base URL",
+            "http://127.0.0.1:52230/webpack.js",
+            "Webpack public build base"
+          ]
+        ],
+        "contentHash": "83a7eb26b744969dbdc99375688539ec06c66a6950799b8bdb1216a3ff745907",
+        "textBytes": 59,
+        "analyzers": {
+          "directText": {
+            "status": "inspected"
+          },
+          "offlineEngine": {
+            "status": "inspected",
+            "reused": false
+          },
+          "semantic": {
+            "status": "inspected"
+          }
+        },
+        "certainty": "confirmed"
+      },
+      {
+        "url": "http://127.0.0.1:52230/_next/static/chunks/page.js",
+        "attemptId": 13,
+        "timings": {
+          "preflightMs": 335,
+          "rateWaitMs": 16,
+          "queueMs": 16,
+          "dnsMs": 1,
+          "connectMs": 1,
+          "headersMs": 0,
+          "bodyMs": 0,
+          "totalMs": 353,
+          "analysisMs": 666,
+          "analyzedAt": 1791430782761,
+          "engineMs": 664
+        },
+        "status": "scanned",
+        "code": 200,
+        "bytes": 110,
+        "partial": false,
+        "chain": [
+          "http://127.0.0.1:52230/",
+          "Next hydration build ID",
+          "http://127.0.0.1:52230/_next/static/build42/_buildManifest.js",
+          "Next build base"
+        ],
+        "kind": "asset",
+        "analysis": "analyzed",
+        "requestHeaderNames": [
+          "accept",
+          "accept-encoding",
+          "host"
+        ],
+        "contentType": "text/javascript",
+        "httpDisposition": "success",
+        "resourceType": "javascript",
+        "discoveryChains": [
+          [
+            "http://127.0.0.1:52230/",
+            "Next hydration build ID",
+            "http://127.0.0.1:52230/_next/static/build42/_buildManifest.js",
+            "Next build base"
+          ]
+        ],
+        "contentHash": "600845a20669848ac4e7951a51cfbc09296ec030fa2d5d7f22dbf3fd702e8084",
+        "textBytes": 110,
+        "analyzers": {
+          "directText": {
+            "status": "inspected"
+          },
+          "offlineEngine": {
+            "status": "inspected",
+            "reused": false
+          },
+          "semantic": {
+            "status": "inspected"
+          }
+        },
+        "certainty": "confirmed"
+      }
+    ],
+    "limitations": [
+      {
+        "code": "http-unavailable",
+        "url": "http://127.0.0.1:52230/sitemap.xml",
+        "detail": "HTTP 404. Requested content was unavailable; the bounded error response was still inspected.",
+        "incomplete": false,
+        "origin": "http://127.0.0.1:52230"
+      },
+      {
+        "code": "http-unavailable",
+        "url": "http://127.0.0.1:52230/robots.txt",
+        "detail": "HTTP 404. Requested content was unavailable; the bounded error response was still inspected.",
+        "incomplete": false,
+        "origin": "http://127.0.0.1:52230"
+      },
+      {
+        "code": "bare-extension-literals",
+        "detail": "1 bare extension literals (such as \".json\" or \".woff\") were not treated as URLs; only contextual uses are acquired.",
+        "incomplete": false,
+        "count": 1,
+        "examples": [
+          ".js"
+        ],
+        "origin": "http://127.0.0.1:52230"
+      },
+      {
+        "code": "http-unavailable",
+        "url": "http://127.0.0.1:52230/_next/static/build42/_ssgManifest.js",
+        "detail": "HTTP 404. Requested content was unavailable; the bounded error response was still inspected.",
+        "incomplete": false,
+        "origin": "http://127.0.0.1:52230"
+      }
+    ],
+    "stage": "Stopped with coverage limitations",
+    "browserStatus": {
+      "requested": false,
+      "launch": false,
+      "runtimePages": 0,
+      "isolation": "unverified"
+    },
+    "semantic": {
+      "modules": 9,
+      "nodes": 63,
+      "views": 1,
+      "elapsedMs": 7
+    },
+    "discoveryGraph": {
+      "limit": 4000,
+      "edges": [
+        {
+          "from": "http://127.0.0.1:52230/",
+          "to": "http://127.0.0.1:52230/assets/vite.js",
+          "reference": "/assets/vite.js",
+          "context": "document/base URL",
+          "kind": "script",
+          "status": "analyzed",
+          "certainty": "confirmed"
+        },
+        {
+          "from": "http://127.0.0.1:52230/",
+          "to": "http://127.0.0.1:52230/webpack.js",
+          "reference": "/webpack.js",
+          "context": "document/base URL",
+          "kind": "script",
+          "status": "analyzed",
+          "certainty": "confirmed"
+        },
+        {
+          "from": "http://127.0.0.1:52230/",
+          "to": "http://127.0.0.1:52230/_astro/island.js",
+          "reference": "/_astro/island.js",
+          "context": "Astro island component-url",
+          "kind": "asset",
+          "status": "analyzed",
+          "certainty": "confirmed"
+        },
+        {
+          "from": "http://127.0.0.1:52230/",
+          "to": "http://127.0.0.1:52230/_astro/renderer.js",
+          "reference": "/_astro/renderer.js",
+          "context": "Astro island renderer-url",
+          "kind": "asset",
+          "status": "analyzed",
+          "certainty": "confirmed"
+        },
+        {
+          "from": "http://127.0.0.1:52230/",
+          "to": "http://127.0.0.1:52230/_nuxt/lazy.js",
+          "reference": "/_nuxt/lazy.js",
+          "context": "Inline framework/hydration JSON",
+          "kind": "asset",
+          "status": "analyzed",
+          "certainty": "confirmed"
+        },
+        {
+          "from": "http://127.0.0.1:52230/",
+          "to": "http://127.0.0.1:52230/_next/static/build42/_buildManifest.js",
+          "reference": "/_next/static/build42/_buildManifest.js",
+          "context": "Next hydration build ID",
+          "kind": "framework-manifest",
+          "status": "analyzed",
+          "certainty": "confirmed"
+        },
+        {
+          "from": "http://127.0.0.1:52230/",
+          "to": "http://127.0.0.1:52230/_next/static/build42/_ssgManifest.js",
+          "reference": "/_next/static/build42/_ssgManifest.js",
+          "context": "Next hydration build ID",
+          "kind": "framework-manifest",
+          "status": "analyzed",
+          "certainty": "confirmed"
+        },
+        {
+          "from": "http://127.0.0.1:52230/assets/vite.js",
+          "to": "http://127.0.0.1:52230/assets/lazy.js",
+          "reference": "assets/lazy.js",
+          "context": "Vite dependency table build base",
+          "kind": "asset",
+          "status": "analyzed",
+          "certainty": "confirmed"
+        },
+        {
+          "from": "http://127.0.0.1:52230/webpack.js",
+          "to": "http://127.0.0.1:52230/assets/1.abc.js",
+          "reference": "/assets/1.abc.js",
+          "context": "Webpack public build base",
+          "kind": "asset",
+          "status": "analyzed",
+          "certainty": "confirmed",
+          "sink": "webpack-chunk-map"
+        },
+        {
+          "from": "http://127.0.0.1:52230/_next/static/build42/_buildManifest.js",
+          "to": "http://127.0.0.1:52230/_next/static/chunks/page.js",
+          "reference": "static/chunks/page.js",
+          "context": "Next build base",
+          "kind": "asset",
+          "status": "analyzed",
+          "certainty": "confirmed"
+        }
+      ]
+    },
+    "scope": {
+      "mode": "registrable-domain",
+      "source": "default",
+      "psl": {
+        "library": "tldts",
+        "version": "7.4.16"
+      },
+      "groups": [],
+      "unsupportedSeeds": [
+        {
+          "seed": "http://127.0.0.1:52230/",
+          "reason": "IP address literal has no registrable domain"
+        }
+      ],
+      "otherExplicitOrigins": [],
+      "warnings": [],
+      "maxAutoDiscoveredOrigins": 50,
+      "autoAdmitted": 0,
+      "summary": "Domain scope: no entered seed has a supported registrable domain, so only the entered origins are scanned.",
+      "excluded": {
+        "thirdPartyOrigins": 0,
+        "references": 0,
+        "overflow": 0,
+        "examples": []
+      }
+    },
+    "analysis": {
+      "origins": {
+        "http://127.0.0.1:52230": {
+          "allocationMs": 12000,
+          "maximumMs": 12000,
+          "chargedMs": 83,
+          "queueWaitMs": 3,
+          "startupMs": 31,
+          "workerMs": 7,
+          "cleanupMs": 0,
+          "viewInspectionMs": 624,
+          "jobs": 9,
+          "reusedVerdicts": 36,
+          "outcomes": {
+            "inspected": 9
+          }
+        }
+      },
+      "interruptions": {},
+      "backlog": {
+        "items": 0,
+        "bytes": 0,
+        "resumed": 0,
+        "deferred": 0,
+        "dropped": 0
+      },
+      "note": "chargedMs is the elapsed allocation charge (worker startup, parsing, propagation and cleanup, bounded by the slice); workerMs is the parser-reported time inside the worker; queueWaitMs is time between module admission and job start. viewInspectionMs is not charged to the allocation."
+    },
+    "discovery": {
+      "rejected": {
+        "bareExtension": 1,
+        "nonUrlContext": 0,
+        "dottedIdentifier": 0,
+        "glob": 0,
+        "examples": [
+          ".js"
+        ]
+      },
+      "unresolved": 0,
+      "observedOnly": 0,
+      "fallbacks": {},
+      "reusedDiscoveries": 0,
+      "syntax": {
+        "html": 1,
+        "json": 2,
+        "module": 9
+      },
+      "sinks": {
+        "manifest-field": 1,
+        "vite-map-deps": 1,
+        "webpack-chunk-map": 1,
+        "next-manifest": 1
+      },
+      "windowed": 0,
+      "referenceLimit": 0
+    }
+  }
+}

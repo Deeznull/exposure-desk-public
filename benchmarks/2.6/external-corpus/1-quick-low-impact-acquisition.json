@@ -1,0 +1,1268 @@
+{
+  "schema": "exposure-external-corpus-measurement/1",
+  "build": "2.6.0-rc.1+b6fec2bbb9e6f13b",
+  "corpus": {
+    "seed": "ExposureDesk/detection-corpus/v2",
+    "corpusSha256": "ef9187db6d80638de95cb1b0e4133d44187525a4c44a2a5989b49d1ad21b594a",
+    "scoreSha256": "5e01b10ec2d8e42e60003217ed49b89bd733307f8e1ba8c34636eb1ab2bea2be",
+    "sites": 20,
+    "privateValues": 27,
+    "negativeControls": 402
+  },
+  "settings": {
+    "mode": "acquisition",
+    "coverage": "quick",
+    "traffic": "low-impact",
+    "profile": "as shipped",
+    "scope": "exact-origin",
+    "egressViolations": 0
+  },
+  "overall": {
+    "truePositives": 27,
+    "falsePositives": 3,
+    "falseNegatives": 0,
+    "precision": 0.9,
+    "recall": 1
+  },
+  "byExpectedProvider": {
+    "AWS": {
+      "truePositives": 1,
+      "falsePositives": 0,
+      "falseNegatives": 0,
+      "precision": 1,
+      "recall": 1
+    },
+    "Anthropic": {
+      "truePositives": 2,
+      "falsePositives": 0,
+      "falseNegatives": 0,
+      "precision": 1,
+      "recall": 1
+    },
+    "Application signing": {
+      "truePositives": 4,
+      "falsePositives": 0,
+      "falseNegatives": 0,
+      "precision": 1,
+      "recall": 1
+    },
+    "Azure": {
+      "truePositives": 1,
+      "falsePositives": 0,
+      "falseNegatives": 0,
+      "precision": 1,
+      "recall": 1
+    },
+    "Bitcoin wallet": {
+      "truePositives": 1,
+      "falsePositives": 0,
+      "falseNegatives": 0,
+      "precision": 1,
+      "recall": 1
+    },
+    "Database": {
+      "truePositives": 2,
+      "falsePositives": 0,
+      "falseNegatives": 0,
+      "precision": 1,
+      "recall": 1
+    },
+    "Ethereum wallet": {
+      "truePositives": 1,
+      "falsePositives": 0,
+      "falseNegatives": 0,
+      "precision": 1,
+      "recall": 1
+    },
+    "GitHub": {
+      "truePositives": 1,
+      "falsePositives": 0,
+      "falseNegatives": 0,
+      "precision": 1,
+      "recall": 1
+    },
+    "Google Cloud": {
+      "truePositives": 1,
+      "falsePositives": 0,
+      "falseNegatives": 0,
+      "precision": 1,
+      "recall": 1
+    },
+    "Kraken": {
+      "truePositives": 1,
+      "falsePositives": 0,
+      "falseNegatives": 0,
+      "precision": 1,
+      "recall": 1
+    },
+    "OAuth": {
+      "truePositives": 1,
+      "falsePositives": 0,
+      "falseNegatives": 0,
+      "precision": 1,
+      "recall": 1
+    },
+    "OpenAI": {
+      "truePositives": 2,
+      "falsePositives": 1,
+      "falseNegatives": 0,
+      "precision": 0.667,
+      "recall": 1
+    },
+    "OpenRouter": {
+      "truePositives": 1,
+      "falsePositives": 0,
+      "falseNegatives": 0,
+      "precision": 1,
+      "recall": 1
+    },
+    "SendGrid": {
+      "truePositives": 1,
+      "falsePositives": 0,
+      "falseNegatives": 0,
+      "precision": 1,
+      "recall": 1
+    },
+    "Stripe": {
+      "truePositives": 4,
+      "falsePositives": 2,
+      "falseNegatives": 0,
+      "precision": 0.667,
+      "recall": 1
+    },
+    "Supabase": {
+      "truePositives": 1,
+      "falsePositives": 0,
+      "falseNegatives": 0,
+      "precision": 1,
+      "recall": 1
+    },
+    "Twilio": {
+      "truePositives": 1,
+      "falsePositives": 0,
+      "falseNegatives": 0,
+      "precision": 1,
+      "recall": 1
+    },
+    "npm": {
+      "truePositives": 1,
+      "falsePositives": 0,
+      "falseNegatives": 0,
+      "precision": 1,
+      "recall": 1
+    }
+  },
+  "byProvider": {
+    "AWS": {
+      "truePositives": 1,
+      "falsePositives": 0,
+      "falseNegatives": 0,
+      "precision": 1,
+      "recall": 1
+    },
+    "Anthropic": {
+      "truePositives": 2,
+      "falsePositives": 0,
+      "falseNegatives": 0,
+      "precision": 1,
+      "recall": 1
+    },
+    "Application signing": {
+      "truePositives": 4,
+      "falsePositives": 0,
+      "falseNegatives": 0,
+      "precision": 1,
+      "recall": 1
+    },
+    "Azure": {
+      "truePositives": 1,
+      "falsePositives": 0,
+      "falseNegatives": 0,
+      "precision": 1,
+      "recall": 1
+    },
+    "Bitcoin wallet": {
+      "truePositives": 0,
+      "falsePositives": 0,
+      "falseNegatives": 1,
+      "precision": null,
+      "recall": 0
+    },
+    "Database": {
+      "truePositives": 2,
+      "falsePositives": 0,
+      "falseNegatives": 0,
+      "precision": 1,
+      "recall": 1
+    },
+    "Ethereum wallet": {
+      "truePositives": 0,
+      "falsePositives": 0,
+      "falseNegatives": 1,
+      "precision": null,
+      "recall": 0
+    },
+    "GitHub": {
+      "truePositives": 1,
+      "falsePositives": 0,
+      "falseNegatives": 0,
+      "precision": 1,
+      "recall": 1
+    },
+    "Google Cloud": {
+      "truePositives": 1,
+      "falsePositives": 0,
+      "falseNegatives": 0,
+      "precision": 1,
+      "recall": 1
+    },
+    "Kraken": {
+      "truePositives": 1,
+      "falsePositives": 0,
+      "falseNegatives": 0,
+      "precision": 1,
+      "recall": 1
+    },
+    "OAuth": {
+      "truePositives": 1,
+      "falsePositives": 0,
+      "falseNegatives": 0,
+      "precision": 1,
+      "recall": 1
+    },
+    "OpenAI": {
+      "truePositives": 2,
+      "falsePositives": 1,
+      "falseNegatives": 0,
+      "precision": 0.667,
+      "recall": 1
+    },
+    "OpenRouter": {
+      "truePositives": 1,
+      "falsePositives": 0,
+      "falseNegatives": 0,
+      "precision": 1,
+      "recall": 1
+    },
+    "SendGrid": {
+      "truePositives": 1,
+      "falsePositives": 0,
+      "falseNegatives": 0,
+      "precision": 1,
+      "recall": 1
+    },
+    "Stripe": {
+      "truePositives": 4,
+      "falsePositives": 2,
+      "falseNegatives": 0,
+      "precision": 0.667,
+      "recall": 1
+    },
+    "Supabase": {
+      "truePositives": 1,
+      "falsePositives": 0,
+      "falseNegatives": 0,
+      "precision": 1,
+      "recall": 1
+    },
+    "Twilio": {
+      "truePositives": 1,
+      "falsePositives": 0,
+      "falseNegatives": 0,
+      "precision": 1,
+      "recall": 1
+    },
+    "Wallet private key": {
+      "truePositives": 0,
+      "falsePositives": 2,
+      "falseNegatives": 0,
+      "precision": 0,
+      "recall": null
+    },
+    "npm": {
+      "truePositives": 1,
+      "falsePositives": 0,
+      "falseNegatives": 0,
+      "precision": 1,
+      "recall": 1
+    }
+  },
+  "byPlacement": {
+    "base64": {
+      "truePositives": 1,
+      "falsePositives": 0,
+      "falseNegatives": 0,
+      "precision": 1,
+      "recall": 1
+    },
+    "config-object": {
+      "truePositives": 6,
+      "falsePositives": 0,
+      "falseNegatives": 0,
+      "precision": 1,
+      "recall": 1
+    },
+    "documentation-example": {
+      "truePositives": 0,
+      "falsePositives": 1,
+      "falseNegatives": 0,
+      "precision": 0,
+      "recall": null
+    },
+    "env-file": {
+      "truePositives": 2,
+      "falsePositives": 0,
+      "falseNegatives": 0,
+      "precision": 1,
+      "recall": 1
+    },
+    "env-inlining": {
+      "truePositives": 1,
+      "falsePositives": 0,
+      "falseNegatives": 0,
+      "precision": 1,
+      "recall": 1
+    },
+    "git-remote-url": {
+      "truePositives": 1,
+      "falsePositives": 0,
+      "falseNegatives": 0,
+      "precision": 1,
+      "recall": 1
+    },
+    "hex": {
+      "truePositives": 1,
+      "falsePositives": 0,
+      "falseNegatives": 0,
+      "precision": 1,
+      "recall": 1
+    },
+    "hydration-blob": {
+      "truePositives": 1,
+      "falsePositives": 0,
+      "falseNegatives": 0,
+      "precision": 1,
+      "recall": 1
+    },
+    "json-api": {
+      "truePositives": 2,
+      "falsePositives": 0,
+      "falseNegatives": 0,
+      "precision": 1,
+      "recall": 1
+    },
+    "npmrc": {
+      "truePositives": 1,
+      "falsePositives": 0,
+      "falseNegatives": 0,
+      "precision": 1,
+      "recall": 1
+    },
+    "old-deployment-bundle": {
+      "truePositives": 1,
+      "falsePositives": 0,
+      "falseNegatives": 0,
+      "precision": 1,
+      "recall": 1
+    },
+    "sdk-initialisation": {
+      "truePositives": 5,
+      "falsePositives": 0,
+      "falseNegatives": 0,
+      "precision": 1,
+      "recall": 1
+    },
+    "source-map-only": {
+      "truePositives": 1,
+      "falsePositives": 0,
+      "falseNegatives": 0,
+      "precision": 1,
+      "recall": 1
+    },
+    "stack-trace": {
+      "truePositives": 2,
+      "falsePositives": 0,
+      "falseNegatives": 0,
+      "precision": 1,
+      "recall": 1
+    },
+    "test-mode": {
+      "truePositives": 0,
+      "falsePositives": 2,
+      "falseNegatives": 0,
+      "precision": 0,
+      "recall": null
+    },
+    "wp-config-backup": {
+      "truePositives": 2,
+      "falsePositives": 0,
+      "falseNegatives": 0,
+      "precision": 1,
+      "recall": 1
+    }
+  },
+  "byOccurrencePlacement": {
+    "base64": {
+      "truePositives": 1,
+      "falsePositives": 0,
+      "falseNegatives": 0,
+      "precision": 1,
+      "recall": 1
+    },
+    "charcode-array": {
+      "truePositives": 0,
+      "falsePositives": 0,
+      "falseNegatives": 1,
+      "precision": null,
+      "recall": 0
+    },
+    "commented-out-code": {
+      "truePositives": 1,
+      "falsePositives": 0,
+      "falseNegatives": 0,
+      "precision": 1,
+      "recall": 1
+    },
+    "config-object": {
+      "truePositives": 6,
+      "falsePositives": 0,
+      "falseNegatives": 0,
+      "precision": 1,
+      "recall": 1
+    },
+    "constant-split": {
+      "truePositives": 0,
+      "falsePositives": 0,
+      "falseNegatives": 1,
+      "precision": null,
+      "recall": 0
+    },
+    "cross-chunk-split": {
+      "truePositives": 0,
+      "falsePositives": 0,
+      "falseNegatives": 1,
+      "precision": null,
+      "recall": 0
+    },
+    "docker-compose": {
+      "truePositives": 0,
+      "falsePositives": 0,
+      "falseNegatives": 1,
+      "precision": null,
+      "recall": 0
+    },
+    "env-backup": {
+      "truePositives": 1,
+      "falsePositives": 0,
+      "falseNegatives": 0,
+      "precision": 1,
+      "recall": 1
+    },
+    "env-file": {
+      "truePositives": 2,
+      "falsePositives": 0,
+      "falseNegatives": 0,
+      "precision": 1,
+      "recall": 1
+    },
+    "env-inlining": {
+      "truePositives": 1,
+      "falsePositives": 0,
+      "falseNegatives": 0,
+      "precision": 1,
+      "recall": 1
+    },
+    "git-remote-url": {
+      "truePositives": 1,
+      "falsePositives": 0,
+      "falseNegatives": 0,
+      "precision": 1,
+      "recall": 1
+    },
+    "hex": {
+      "truePositives": 1,
+      "falsePositives": 0,
+      "falseNegatives": 0,
+      "precision": 1,
+      "recall": 1
+    },
+    "html-comment": {
+      "truePositives": 1,
+      "falsePositives": 0,
+      "falseNegatives": 0,
+      "precision": 1,
+      "recall": 1
+    },
+    "hydration-blob": {
+      "truePositives": 1,
+      "falsePositives": 0,
+      "falseNegatives": 0,
+      "precision": 1,
+      "recall": 1
+    },
+    "json-api": {
+      "truePositives": 2,
+      "falsePositives": 0,
+      "falseNegatives": 0,
+      "precision": 1,
+      "recall": 1
+    },
+    "npmrc": {
+      "truePositives": 1,
+      "falsePositives": 0,
+      "falseNegatives": 0,
+      "precision": 1,
+      "recall": 1
+    },
+    "old-deployment-bundle": {
+      "truePositives": 1,
+      "falsePositives": 0,
+      "falseNegatives": 0,
+      "precision": 1,
+      "recall": 1
+    },
+    "sdk-initialisation": {
+      "truePositives": 5,
+      "falsePositives": 0,
+      "falseNegatives": 0,
+      "precision": 1,
+      "recall": 1
+    },
+    "source-map": {
+      "truePositives": 1,
+      "falsePositives": 0,
+      "falseNegatives": 0,
+      "precision": 1,
+      "recall": 1
+    },
+    "source-map-only": {
+      "truePositives": 1,
+      "falsePositives": 0,
+      "falseNegatives": 0,
+      "precision": 1,
+      "recall": 1
+    },
+    "stack-trace": {
+      "truePositives": 3,
+      "falsePositives": 0,
+      "falseNegatives": 0,
+      "precision": 1,
+      "recall": 1
+    },
+    "wp-config-backup": {
+      "truePositives": 2,
+      "falsePositives": 0,
+      "falseNegatives": 0,
+      "precision": 1,
+      "recall": 1
+    }
+  },
+  "negativeAlerts": 3,
+  "sites": [
+    {
+      "name": "next-support",
+      "state": "incomplete",
+      "durationMs": 55773,
+      "requests": 28,
+      "resources": 29,
+      "findings": 2,
+      "privateAlerts": 2,
+      "overall": {
+        "truePositives": 2,
+        "falsePositives": 0,
+        "falseNegatives": 0,
+        "precision": 1,
+        "recall": 1,
+        "f1": 1
+      },
+      "detection": {
+        "expected": 2,
+        "detected": 2,
+        "recall": 1,
+        "privateDetected": 2
+      },
+      "missed": [],
+      "falsePositives": [],
+      "negativeAlerts": [],
+      "classificationMistakes": [],
+      "acquisitionMisses": [],
+      "inspectionMisses": [],
+      "ambiguous": 0,
+      "incompleteGaps": [
+        "decoded-inspection-limit"
+      ]
+    },
+    {
+      "name": "vite-studio",
+      "state": "incomplete",
+      "durationMs": 54233,
+      "requests": 27,
+      "resources": 28,
+      "findings": 2,
+      "privateAlerts": 2,
+      "overall": {
+        "truePositives": 2,
+        "falsePositives": 0,
+        "falseNegatives": 0,
+        "precision": 1,
+        "recall": 1,
+        "f1": 1
+      },
+      "detection": {
+        "expected": 2,
+        "detected": 2,
+        "recall": 1,
+        "privateDetected": 2
+      },
+      "missed": [],
+      "falsePositives": [],
+      "negativeAlerts": [],
+      "classificationMistakes": [],
+      "acquisitionMisses": [],
+      "inspectionMisses": [],
+      "ambiguous": 0,
+      "incompleteGaps": [
+        "decoded-inspection-limit",
+        "unresolved-module-reference"
+      ]
+    },
+    {
+      "name": "cra-inbox",
+      "state": "incomplete",
+      "durationMs": 53736,
+      "requests": 27,
+      "resources": 28,
+      "findings": 1,
+      "privateAlerts": 1,
+      "overall": {
+        "truePositives": 1,
+        "falsePositives": 0,
+        "falseNegatives": 0,
+        "precision": 1,
+        "recall": 1,
+        "f1": 1
+      },
+      "detection": {
+        "expected": 1,
+        "detected": 1,
+        "recall": 1,
+        "privateDetected": 1
+      },
+      "missed": [],
+      "falsePositives": [],
+      "negativeAlerts": [],
+      "classificationMistakes": [],
+      "acquisitionMisses": [],
+      "inspectionMisses": [],
+      "ambiguous": 0,
+      "incompleteGaps": [
+        "decoded-inspection-limit"
+      ]
+    },
+    {
+      "name": "nuxt-travel",
+      "state": "incomplete",
+      "durationMs": 51604,
+      "requests": 26,
+      "resources": 27,
+      "findings": 2,
+      "privateAlerts": 0,
+      "overall": {
+        "truePositives": 0,
+        "falsePositives": 0,
+        "falseNegatives": 0,
+        "precision": null,
+        "recall": null,
+        "f1": null
+      },
+      "detection": {
+        "expected": 0,
+        "detected": 0,
+        "recall": null,
+        "privateDetected": 0
+      },
+      "missed": [],
+      "falsePositives": [],
+      "negativeAlerts": [],
+      "classificationMistakes": [],
+      "acquisitionMisses": [],
+      "inspectionMisses": [],
+      "ambiguous": 0,
+      "incompleteGaps": [
+        "decoded-inspection-limit"
+      ]
+    },
+    {
+      "name": "angular-portal",
+      "state": "incomplete",
+      "durationMs": 53779,
+      "requests": 27,
+      "resources": 28,
+      "findings": 3,
+      "privateAlerts": 2,
+      "overall": {
+        "truePositives": 2,
+        "falsePositives": 0,
+        "falseNegatives": 0,
+        "precision": 1,
+        "recall": 1,
+        "f1": 1
+      },
+      "detection": {
+        "expected": 2,
+        "detected": 2,
+        "recall": 1,
+        "privateDetected": 2
+      },
+      "missed": [],
+      "falsePositives": [],
+      "negativeAlerts": [],
+      "classificationMistakes": [],
+      "acquisitionMisses": [],
+      "inspectionMisses": [],
+      "ambiguous": 0,
+      "incompleteGaps": [
+        "decoded-inspection-limit"
+      ]
+    },
+    {
+      "name": "sveltekit-notes",
+      "state": "incomplete",
+      "durationMs": 53368,
+      "requests": 27,
+      "resources": 28,
+      "findings": 2,
+      "privateAlerts": 2,
+      "overall": {
+        "truePositives": 2,
+        "falsePositives": 0,
+        "falseNegatives": 0,
+        "precision": 1,
+        "recall": 1,
+        "f1": 1
+      },
+      "detection": {
+        "expected": 2,
+        "detected": 2,
+        "recall": 1,
+        "privateDetected": 2
+      },
+      "missed": [],
+      "falsePositives": [],
+      "negativeAlerts": [],
+      "classificationMistakes": [],
+      "acquisitionMisses": [],
+      "inspectionMisses": [],
+      "ambiguous": 0,
+      "incompleteGaps": [
+        "decoded-inspection-limit"
+      ]
+    },
+    {
+      "name": "astro-journal",
+      "state": "completed",
+      "durationMs": 51360,
+      "requests": 26,
+      "resources": 27,
+      "findings": 0,
+      "privateAlerts": 0,
+      "overall": {
+        "truePositives": 0,
+        "falsePositives": 0,
+        "falseNegatives": 0,
+        "precision": null,
+        "recall": null,
+        "f1": null
+      },
+      "detection": {
+        "expected": 0,
+        "detected": 0,
+        "recall": null,
+        "privateDetected": 0
+      },
+      "missed": [],
+      "falsePositives": [],
+      "negativeAlerts": [],
+      "classificationMistakes": [],
+      "acquisitionMisses": [],
+      "inspectionMisses": [],
+      "ambiguous": 0,
+      "incompleteGaps": []
+    },
+    {
+      "name": "wordpress-shop",
+      "state": "incomplete",
+      "durationMs": 51466,
+      "requests": 26,
+      "resources": 27,
+      "findings": 2,
+      "privateAlerts": 2,
+      "overall": {
+        "truePositives": 2,
+        "falsePositives": 0,
+        "falseNegatives": 0,
+        "precision": 1,
+        "recall": 1,
+        "f1": 1
+      },
+      "detection": {
+        "expected": 2,
+        "detected": 2,
+        "recall": 1,
+        "privateDetected": 2
+      },
+      "missed": [],
+      "falsePositives": [],
+      "negativeAlerts": [],
+      "classificationMistakes": [],
+      "acquisitionMisses": [],
+      "inspectionMisses": [],
+      "ambiguous": 0,
+      "incompleteGaps": [
+        "decoded-inspection-limit"
+      ]
+    },
+    {
+      "name": "laravel-booking",
+      "state": "incomplete",
+      "durationMs": 53445,
+      "requests": 27,
+      "resources": 28,
+      "findings": 2,
+      "privateAlerts": 2,
+      "overall": {
+        "truePositives": 2,
+        "falsePositives": 0,
+        "falseNegatives": 0,
+        "precision": 1,
+        "recall": 1,
+        "f1": 1
+      },
+      "detection": {
+        "expected": 2,
+        "detected": 2,
+        "recall": 1,
+        "privateDetected": 2
+      },
+      "missed": [],
+      "falsePositives": [],
+      "negativeAlerts": [],
+      "classificationMistakes": [],
+      "acquisitionMisses": [],
+      "inspectionMisses": [],
+      "ambiguous": 0,
+      "incompleteGaps": [
+        "decoded-inspection-limit",
+        "http-unavailable"
+      ]
+    },
+    {
+      "name": "django-console",
+      "state": "incomplete",
+      "durationMs": 49317,
+      "requests": 25,
+      "resources": 26,
+      "findings": 3,
+      "privateAlerts": 2,
+      "overall": {
+        "truePositives": 2,
+        "falsePositives": 0,
+        "falseNegatives": 0,
+        "precision": 1,
+        "recall": 1,
+        "f1": 1
+      },
+      "detection": {
+        "expected": 2,
+        "detected": 2,
+        "recall": 1,
+        "privateDetected": 2
+      },
+      "missed": [],
+      "falsePositives": [],
+      "negativeAlerts": [],
+      "classificationMistakes": [],
+      "acquisitionMisses": [],
+      "inspectionMisses": [],
+      "ambiguous": 0,
+      "incompleteGaps": [
+        "http-unavailable"
+      ]
+    },
+    {
+      "name": "marketing-clean",
+      "state": "completed",
+      "durationMs": 49397,
+      "requests": 25,
+      "resources": 26,
+      "findings": 0,
+      "privateAlerts": 0,
+      "overall": {
+        "truePositives": 0,
+        "falsePositives": 0,
+        "falseNegatives": 0,
+        "precision": null,
+        "recall": null,
+        "f1": null
+      },
+      "detection": {
+        "expected": 0,
+        "detected": 0,
+        "recall": null,
+        "privateDetected": 0
+      },
+      "missed": [],
+      "falsePositives": [],
+      "negativeAlerts": [],
+      "classificationMistakes": [],
+      "acquisitionMisses": [],
+      "inspectionMisses": [],
+      "ambiguous": 0,
+      "incompleteGaps": []
+    },
+    {
+      "name": "firebase-admin",
+      "state": "incomplete",
+      "durationMs": 51623,
+      "requests": 26,
+      "resources": 27,
+      "findings": 3,
+      "privateAlerts": 1,
+      "overall": {
+        "truePositives": 1,
+        "falsePositives": 0,
+        "falseNegatives": 0,
+        "precision": 1,
+        "recall": 1,
+        "f1": 1
+      },
+      "detection": {
+        "expected": 1,
+        "detected": 1,
+        "recall": 1,
+        "privateDetected": 1
+      },
+      "missed": [],
+      "falsePositives": [],
+      "negativeAlerts": [],
+      "classificationMistakes": [],
+      "acquisitionMisses": [],
+      "inspectionMisses": [],
+      "ambiguous": 0,
+      "incompleteGaps": [
+        "decoded-inspection-limit"
+      ]
+    },
+    {
+      "name": "storefront-theme",
+      "state": "incomplete",
+      "durationMs": 51894,
+      "requests": 26,
+      "resources": 27,
+      "findings": 4,
+      "privateAlerts": 3,
+      "overall": {
+        "truePositives": 2,
+        "falsePositives": 1,
+        "falseNegatives": 0,
+        "precision": 0.6666666666666666,
+        "recall": 1,
+        "f1": 0.8
+      },
+      "detection": {
+        "expected": 2,
+        "detected": 2,
+        "recall": 1,
+        "privateDetected": 2
+      },
+      "missed": [],
+      "falsePositives": [
+        {
+          "provider": "Stripe",
+          "placement": "test-mode"
+        }
+      ],
+      "negativeAlerts": [
+        {
+          "negativeId": "stripe-test",
+          "kind": "test-mode",
+          "provider": "Stripe"
+        }
+      ],
+      "classificationMistakes": [],
+      "acquisitionMisses": [],
+      "inspectionMisses": [],
+      "ambiguous": 0,
+      "incompleteGaps": [
+        "decoded-inspection-limit"
+      ]
+    },
+    {
+      "name": "express-config",
+      "state": "completed",
+      "durationMs": 53409,
+      "requests": 27,
+      "resources": 28,
+      "findings": 3,
+      "privateAlerts": 2,
+      "overall": {
+        "truePositives": 2,
+        "falsePositives": 0,
+        "falseNegatives": 0,
+        "precision": 1,
+        "recall": 1,
+        "f1": 1
+      },
+      "detection": {
+        "expected": 2,
+        "detected": 2,
+        "recall": 1,
+        "privateDetected": 2
+      },
+      "missed": [],
+      "falsePositives": [],
+      "negativeAlerts": [],
+      "classificationMistakes": [],
+      "acquisitionMisses": [],
+      "inspectionMisses": [],
+      "ambiguous": 0,
+      "incompleteGaps": []
+    },
+    {
+      "name": "deployment-archive",
+      "state": "incomplete",
+      "durationMs": 47363,
+      "requests": 24,
+      "resources": 24,
+      "findings": 2,
+      "privateAlerts": 2,
+      "overall": {
+        "truePositives": 2,
+        "falsePositives": 0,
+        "falseNegatives": 0,
+        "precision": 1,
+        "recall": 1,
+        "f1": 1
+      },
+      "detection": {
+        "expected": 2,
+        "detected": 2,
+        "recall": 1,
+        "privateDetected": 2
+      },
+      "missed": [],
+      "falsePositives": [],
+      "negativeAlerts": [],
+      "classificationMistakes": [],
+      "acquisitionMisses": [
+        "/backups/",
+        "/docker-compose.yml",
+        "/sitemap.xml"
+      ],
+      "inspectionMisses": [],
+      "ambiguous": 0,
+      "incompleteGaps": [
+        "decoded-inspection-limit",
+        "page-budget"
+      ]
+    },
+    {
+      "name": "vite-encoded",
+      "state": "incomplete",
+      "durationMs": 53651,
+      "requests": 27,
+      "resources": 28,
+      "findings": 2,
+      "privateAlerts": 2,
+      "overall": {
+        "truePositives": 2,
+        "falsePositives": 0,
+        "falseNegatives": 0,
+        "precision": 1,
+        "recall": 1,
+        "f1": 1
+      },
+      "detection": {
+        "expected": 2,
+        "detected": 2,
+        "recall": 1,
+        "privateDetected": 2
+      },
+      "missed": [],
+      "falsePositives": [],
+      "negativeAlerts": [],
+      "classificationMistakes": [],
+      "acquisitionMisses": [],
+      "inspectionMisses": [],
+      "ambiguous": 0,
+      "incompleteGaps": [
+        "decoded-inspection-limit"
+      ]
+    },
+    {
+      "name": "next-stale",
+      "state": "incomplete",
+      "durationMs": 57681,
+      "requests": 29,
+      "resources": 30,
+      "findings": 2,
+      "privateAlerts": 1,
+      "overall": {
+        "truePositives": 1,
+        "falsePositives": 0,
+        "falseNegatives": 0,
+        "precision": 1,
+        "recall": 1,
+        "f1": 1
+      },
+      "detection": {
+        "expected": 1,
+        "detected": 1,
+        "recall": 1,
+        "privateDetected": 1
+      },
+      "missed": [],
+      "falsePositives": [],
+      "negativeAlerts": [],
+      "classificationMistakes": [],
+      "acquisitionMisses": [],
+      "inspectionMisses": [],
+      "ambiguous": 0,
+      "incompleteGaps": [
+        "decoded-inspection-limit"
+      ]
+    },
+    {
+      "name": "wallet-console",
+      "state": "incomplete",
+      "durationMs": 50084,
+      "requests": 25,
+      "resources": 26,
+      "findings": 2,
+      "privateAlerts": 2,
+      "overall": {
+        "truePositives": 2,
+        "falsePositives": 0,
+        "falseNegatives": 0,
+        "precision": 1,
+        "recall": 1,
+        "f1": 1
+      },
+      "detection": {
+        "expected": 2,
+        "detected": 2,
+        "recall": 1,
+        "privateDetected": 2
+      },
+      "missed": [],
+      "falsePositives": [],
+      "negativeAlerts": [],
+      "classificationMistakes": [
+        {
+          "expected": "wallet-console/bitcoin-wallet",
+          "fields": [
+            "provider"
+          ]
+        },
+        {
+          "expected": "wallet-console/ethereum-wallet",
+          "fields": [
+            "provider"
+          ]
+        }
+      ],
+      "acquisitionMisses": [],
+      "inspectionMisses": [],
+      "ambiguous": 0,
+      "incompleteGaps": [
+        "decoded-inspection-limit"
+      ]
+    },
+    {
+      "name": "docs-clean",
+      "state": "incomplete",
+      "durationMs": 49335,
+      "requests": 25,
+      "resources": 26,
+      "findings": 2,
+      "privateAlerts": 2,
+      "overall": {
+        "truePositives": 0,
+        "falsePositives": 2,
+        "falseNegatives": 0,
+        "precision": 0,
+        "recall": null,
+        "f1": 0
+      },
+      "detection": {
+        "expected": 0,
+        "detected": 0,
+        "recall": null,
+        "privateDetected": 0
+      },
+      "missed": [],
+      "falsePositives": [
+        {
+          "provider": "OpenAI",
+          "placement": "documentation-example"
+        },
+        {
+          "provider": "Stripe",
+          "placement": "test-mode"
+        }
+      ],
+      "negativeAlerts": [
+        {
+          "negativeId": "docs-openai",
+          "kind": "documentation-example",
+          "provider": "OpenAI"
+        },
+        {
+          "negativeId": "docs-stripe-test",
+          "kind": "test-mode",
+          "provider": "Stripe"
+        }
+      ],
+      "classificationMistakes": [],
+      "acquisitionMisses": [],
+      "inspectionMisses": [],
+      "ambiguous": 0,
+      "incompleteGaps": [
+        "decoded-inspection-limit"
+      ]
+    },
+    {
+      "name": "firebase-public",
+      "state": "incomplete",
+      "durationMs": 51396,
+      "requests": 26,
+      "resources": 27,
+      "findings": 2,
+      "privateAlerts": 0,
+      "overall": {
+        "truePositives": 0,
+        "falsePositives": 0,
+        "falseNegatives": 0,
+        "precision": null,
+        "recall": null,
+        "f1": null
+      },
+      "detection": {
+        "expected": 0,
+        "detected": 0,
+        "recall": null,
+        "privateDetected": 0
+      },
+      "missed": [],
+      "falsePositives": [],
+      "negativeAlerts": [],
+      "classificationMistakes": [],
+      "acquisitionMisses": [],
+      "inspectionMisses": [],
+      "ambiguous": 0,
+      "incompleteGaps": [
+        "decoded-inspection-limit"
+      ]
+    }
+  ]
+}

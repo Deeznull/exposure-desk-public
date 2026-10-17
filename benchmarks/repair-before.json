@@ -1,0 +1,2558 @@
+{
+  "schema": "scan-repair-benchmark/1",
+  "at": "2026-10-06T20:11:44.860Z",
+  "build": {
+    "version": "2.3.0-rc.1",
+    "id": "2.3.0-rc.1+5fd9435d84e583c6",
+    "sourceDigest": "5fd9435d84e583c60e6c96b8727db9dca5b70ecc2a7eb83eace453768b202052"
+  },
+  "seed": "ExposureDesk/scan-repair/20261006/921",
+  "baseline": true,
+  "platform": "win32",
+  "node": "v24.18.1",
+  "fixtureCounts": {
+    "routes": 3,
+    "scripts": 18,
+    "listingUrls": 261,
+    "imageRenditions": 460,
+    "distinctImageSources": 115,
+    "mapCandidates": 8,
+    "semanticDocuments": 3
+  },
+  "rows": [
+    {
+      "name": "starvation",
+      "elapsedMs": 12592,
+      "analyzedJavaScript": 0,
+      "runtimePages": 0,
+      "failures": 22,
+      "timeoutNotes": 44,
+      "queryNotes": 457,
+      "credentialRecall": {
+        "http": false,
+        "browser": false,
+        "map": false
+      },
+      "unexpectedPrivate": 0,
+      "information": 0,
+      "endpointEvidence": [],
+      "coverage": {
+        "applicationPages": {
+          "discovered": 262,
+          "downloaded": 1,
+          "analyzed": 1,
+          "successful": 1,
+          "errorResponses": 0,
+          "blocked": 0,
+          "skipped": 0,
+          "uninspected": 261
+        },
+        "javascript": {
+          "discovered": 18,
+          "downloaded": 0,
+          "analyzed": 0,
+          "successful": 0,
+          "errorResponses": 0,
+          "blocked": 0,
+          "skipped": 0,
+          "uninspected": 18
+        },
+        "jsonConfig": {
+          "discovered": 0,
+          "downloaded": 0,
+          "analyzed": 0,
+          "successful": 0,
+          "errorResponses": 0,
+          "blocked": 0,
+          "skipped": 0,
+          "uninspected": 0
+        },
+        "sourceMaps": {
+          "discovered": 1,
+          "downloaded": 1,
+          "analyzed": 1,
+          "successful": 1,
+          "errorResponses": 0,
+          "blocked": 0,
+          "skipped": 0,
+          "uninspected": 0
+        },
+        "deploymentChecks": {
+          "discovered": 0,
+          "downloaded": 0,
+          "analyzed": 0,
+          "successful": 0,
+          "errorResponses": 0,
+          "blocked": 0,
+          "skipped": 0,
+          "uninspected": 0
+        },
+        "other": {
+          "discovered": 4,
+          "downloaded": 1,
+          "analyzed": 1,
+          "successful": 1,
+          "errorResponses": 0,
+          "blocked": 0,
+          "skipped": 0,
+          "uninspected": 3
+        },
+        "browserRuntime": {
+          "discovered": 0,
+          "downloaded": 0,
+          "analyzed": 0,
+          "successful": 0,
+          "errorResponses": 0,
+          "blocked": 0,
+          "skipped": 0,
+          "uninspected": 1
+        }
+      },
+      "accounting": {
+        "networkAttempts": 25,
+        "blockedEvents": 0,
+        "uniqueResources": 25,
+        "repeatedRequests": 0,
+        "downloadedBytes": 42132,
+        "retainedDecodedBytes": 42132,
+        "textAnalyzedBytes": 42132,
+        "intentionalSkips": 0,
+        "httpErrors": 0,
+        "coverageGaps": 503
+      },
+      "dispatch": [
+        {
+          "path": "/robots.txt",
+          "atMs": 12
+        },
+        {
+          "path": "/",
+          "atMs": 74
+        },
+        {
+          "path": "/sitemap.xml",
+          "atMs": 122
+        },
+        {
+          "path": "/listing/0",
+          "atMs": 354
+        },
+        {
+          "path": "/listing/1",
+          "atMs": 416
+        },
+        {
+          "path": "/listing/2",
+          "atMs": 1423
+        },
+        {
+          "path": "/listing/3",
+          "atMs": 1482
+        },
+        {
+          "path": "/listing/4",
+          "atMs": 2484
+        },
+        {
+          "path": "/listing/5",
+          "atMs": 2548
+        },
+        {
+          "path": "/listing/6",
+          "atMs": 3561
+        },
+        {
+          "path": "/listing/7",
+          "atMs": 3621
+        },
+        {
+          "path": "/listing/8",
+          "atMs": 4631
+        },
+        {
+          "path": "/listing/9",
+          "atMs": 4682
+        },
+        {
+          "path": "/listing/10",
+          "atMs": 5693
+        },
+        {
+          "path": "/listing/11",
+          "atMs": 5748
+        },
+        {
+          "path": "/listing/12",
+          "atMs": 6756
+        },
+        {
+          "path": "/listing/13",
+          "atMs": 6814
+        },
+        {
+          "path": "/listing/14",
+          "atMs": 7818
+        },
+        {
+          "path": "/listing/15",
+          "atMs": 7881
+        },
+        {
+          "path": "/listing/16",
+          "atMs": 8895
+        },
+        {
+          "path": "/listing/17",
+          "atMs": 8955
+        },
+        {
+          "path": "/listing/18",
+          "atMs": 9960
+        },
+        {
+          "path": "/listing/19",
+          "atMs": 10015
+        },
+        {
+          "path": "/listing/20",
+          "atMs": 11020
+        },
+        {
+          "path": "/listing/21",
+          "atMs": 11081
+        }
+      ],
+      "limits": [
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "query-variants",
+          "incomplete": true
+        },
+        {
+          "code": "request-timeout",
+          "incomplete": true
+        },
+        {
+          "code": "request-timeout",
+          "incomplete": true
+        },
+        {
+          "code": "request-timeout",
+          "incomplete": true
+        },
+        {
+          "code": "request-timeout",
+          "incomplete": true
+        },
+        {
+          "code": "request-timeout",
+          "incomplete": true
+        },
+        {
+          "code": "request-timeout",
+          "incomplete": true
+        },
+        {
+          "code": "request-timeout",
+          "incomplete": true
+        },
+        {
+          "code": "request-timeout",
+          "incomplete": true
+        },
+        {
+          "code": "request-timeout",
+          "incomplete": true
+        },
+        {
+          "code": "request-timeout",
+          "incomplete": true
+        },
+        {
+          "code": "request-timeout",
+          "incomplete": true
+        },
+        {
+          "code": "request-timeout",
+          "incomplete": true
+        },
+        {
+          "code": "request-timeout",
+          "incomplete": true
+        },
+        {
+          "code": "request-timeout",
+          "incomplete": true
+        },
+        {
+          "code": "request-timeout",
+          "incomplete": true
+        },
+        {
+          "code": "request-timeout",
+          "incomplete": true
+        },
+        {
+          "code": "request-timeout",
+          "incomplete": true
+        },
+        {
+          "code": "request-timeout",
+          "incomplete": true
+        },
+        {
+          "code": "request-timeout",
+          "incomplete": true
+        },
+        {
+          "code": "request-timeout",
+          "incomplete": true
+        },
+        {
+          "code": "request-timeout",
+          "incomplete": true
+        },
+        {
+          "code": "request-timeout",
+          "incomplete": true
+        },
+        {
+          "code": "request-timeout",
+          "incomplete": true
+        },
+        {
+          "code": "request-timeout",
+          "incomplete": true
+        },
+        {
+          "code": "request-timeout",
+          "incomplete": true
+        },
+        {
+          "code": "request-timeout",
+          "incomplete": true
+        },
+        {
+          "code": "request-timeout",
+          "incomplete": true
+        },
+        {
+          "code": "request-timeout",
+          "incomplete": true
+        },
+        {
+          "code": "request-timeout",
+          "incomplete": true
+        },
+        {
+          "code": "request-timeout",
+          "incomplete": true
+        },
+        {
+          "code": "request-timeout",
+          "incomplete": true
+        },
+        {
+          "code": "request-timeout",
+          "incomplete": true
+        },
+        {
+          "code": "request-timeout",
+          "incomplete": true
+        },
+        {
+          "code": "request-timeout",
+          "incomplete": true
+        },
+        {
+          "code": "request-timeout",
+          "incomplete": true
+        },
+        {
+          "code": "request-timeout",
+          "incomplete": true
+        },
+        {
+          "code": "request-timeout",
+          "incomplete": true
+        },
+        {
+          "code": "request-timeout",
+          "incomplete": true
+        },
+        {
+          "code": "request-timeout",
+          "incomplete": true
+        },
+        {
+          "code": "request-timeout",
+          "incomplete": true
+        },
+        {
+          "code": "request-timeout",
+          "incomplete": true
+        },
+        {
+          "code": "request-timeout",
+          "incomplete": true
+        },
+        {
+          "code": "request-timeout",
+          "incomplete": true
+        },
+        {
+          "code": "request-timeout",
+          "incomplete": true
+        },
+        {
+          "code": "duration-limit",
+          "incomplete": true
+        },
+        {
+          "code": "decoded-inspection-limit",
+          "incomplete": true
+        }
+      ]
+    },
+    {
+      "name": "classification",
+      "elapsedMs": 647,
+      "analyzedJavaScript": 1,
+      "runtimePages": 0,
+      "failures": 0,
+      "timeoutNotes": 0,
+      "queryNotes": 0,
+      "credentialRecall": {
+        "http": false,
+        "browser": false,
+        "map": true
+      },
+      "unexpectedPrivate": 0,
+      "information": 0,
+      "endpointEvidence": [],
+      "coverage": {
+        "applicationPages": {
+          "discovered": 1,
+          "downloaded": 1,
+          "analyzed": 1,
+          "successful": 1,
+          "errorResponses": 0,
+          "blocked": 0,
+          "skipped": 0,
+          "uninspected": 0
+        },
+        "javascript": {
+          "discovered": 1,
+          "downloaded": 1,
+          "analyzed": 1,
+          "successful": 1,
+          "errorResponses": 0,
+          "blocked": 0,
+          "skipped": 0,
+          "uninspected": 0
+        },
+        "jsonConfig": {
+          "discovered": 0,
+          "downloaded": 0,
+          "analyzed": 0,
+          "successful": 0,
+          "errorResponses": 0,
+          "blocked": 0,
+          "skipped": 0,
+          "uninspected": 0
+        },
+        "sourceMaps": {
+          "discovered": 9,
+          "downloaded": 9,
+          "analyzed": 9,
+          "successful": 4,
+          "errorResponses": 5,
+          "blocked": 0,
+          "skipped": 0,
+          "uninspected": 0
+        },
+        "deploymentChecks": {
+          "discovered": 0,
+          "downloaded": 0,
+          "analyzed": 0,
+          "successful": 0,
+          "errorResponses": 0,
+          "blocked": 0,
+          "skipped": 0,
+          "uninspected": 0
+        },
+        "other": {
+          "discovered": 1,
+          "downloaded": 1,
+          "analyzed": 1,
+          "successful": 1,
+          "errorResponses": 0,
+          "blocked": 0,
+          "skipped": 0,
+          "uninspected": 0
+        },
+        "browserRuntime": {
+          "discovered": 0,
+          "downloaded": 0,
+          "analyzed": 0,
+          "successful": 0,
+          "errorResponses": 0,
+          "blocked": 0,
+          "skipped": 0,
+          "uninspected": 0
+        }
+      },
+      "accounting": {
+        "networkAttempts": 12,
+        "blockedEvents": 0,
+        "uniqueResources": 12,
+        "repeatedRequests": 0,
+        "downloadedBytes": 669,
+        "retainedDecodedBytes": 669,
+        "textAnalyzedBytes": 669,
+        "intentionalSkips": 0,
+        "httpErrors": 5,
+        "coverageGaps": 0
+      },
+      "dispatch": [
+        {
+          "path": "/robots.txt",
+          "atMs": 3
+        },
+        {
+          "path": "/map-workload",
+          "atMs": 59
+        },
+        {
+          "path": "/sitemap.xml",
+          "atMs": 105
+        },
+        {
+          "path": "/assets/maps.js",
+          "atMs": 153
+        },
+        {
+          "path": "/maps/valid.map",
+          "atMs": 217
+        },
+        {
+          "path": "/maps/invalid.map",
+          "atMs": 263
+        },
+        {
+          "path": "/maps/fallback.map",
+          "atMs": 310
+        },
+        {
+          "path": "/maps/missing0.js.map",
+          "atMs": 356
+        },
+        {
+          "path": "/maps/missing1.js.map",
+          "atMs": 402
+        },
+        {
+          "path": "/maps/missing2.js.map",
+          "atMs": 466
+        },
+        {
+          "path": "/maps/missing3.js.map",
+          "atMs": 507
+        },
+        {
+          "path": "/maps/missing4.js.map",
+          "atMs": 553
+        }
+      ],
+      "limits": [
+        {
+          "code": "http-unavailable",
+          "incomplete": false
+        },
+        {
+          "code": "http-unavailable",
+          "incomplete": false
+        },
+        {
+          "code": "http-unavailable",
+          "incomplete": false
+        },
+        {
+          "code": "http-unavailable",
+          "incomplete": false
+        },
+        {
+          "code": "http-unavailable",
+          "incomplete": false
+        }
+      ]
+    },
+    {
+      "name": "evidence",
+      "elapsedMs": 183,
+      "analyzedJavaScript": 0,
+      "runtimePages": 0,
+      "failures": 0,
+      "timeoutNotes": 0,
+      "queryNotes": 0,
+      "credentialRecall": {
+        "http": false,
+        "browser": false,
+        "map": false
+      },
+      "unexpectedPrivate": 0,
+      "information": 1,
+      "endpointEvidence": [
+        {
+          "hasExcerpt": false,
+          "line": 1,
+          "column": 1,
+          "remediation": "Confirm whether public sources/configuration are intended; disable production source maps or remove stale files if unnecessary."
+        }
+      ],
+      "coverage": {
+        "applicationPages": {
+          "discovered": 1,
+          "downloaded": 1,
+          "analyzed": 1,
+          "successful": 1,
+          "errorResponses": 0,
+          "blocked": 0,
+          "skipped": 0,
+          "uninspected": 0
+        },
+        "javascript": {
+          "discovered": 0,
+          "downloaded": 0,
+          "analyzed": 0,
+          "successful": 0,
+          "errorResponses": 0,
+          "blocked": 0,
+          "skipped": 0,
+          "uninspected": 0
+        },
+        "jsonConfig": {
+          "discovered": 0,
+          "downloaded": 0,
+          "analyzed": 0,
+          "successful": 0,
+          "errorResponses": 0,
+          "blocked": 0,
+          "skipped": 0,
+          "uninspected": 0
+        },
+        "sourceMaps": {
+          "discovered": 1,
+          "downloaded": 1,
+          "analyzed": 1,
+          "successful": 1,
+          "errorResponses": 0,
+          "blocked": 0,
+          "skipped": 0,
+          "uninspected": 0
+        },
+        "deploymentChecks": {
+          "discovered": 0,
+          "downloaded": 0,
+          "analyzed": 0,
+          "successful": 0,
+          "errorResponses": 0,
+          "blocked": 0,
+          "skipped": 0,
+          "uninspected": 0
+        },
+        "other": {
+          "discovered": 2,
+          "downloaded": 1,
+          "analyzed": 1,
+          "successful": 1,
+          "errorResponses": 0,
+          "blocked": 1,
+          "skipped": 0,
+          "uninspected": 0
+        },
+        "browserRuntime": {
+          "discovered": 0,
+          "downloaded": 0,
+          "analyzed": 0,
+          "successful": 0,
+          "errorResponses": 0,
+          "blocked": 0,
+          "skipped": 0,
+          "uninspected": 0
+        }
+      },
+      "accounting": {
+        "networkAttempts": 3,
+        "blockedEvents": 1,
+        "uniqueResources": 3,
+        "repeatedRequests": 0,
+        "downloadedBytes": 258,
+        "retainedDecodedBytes": 258,
+        "textAnalyzedBytes": 258,
+        "intentionalSkips": 0,
+        "httpErrors": 0,
+        "coverageGaps": 0
+      },
+      "dispatch": [
+        {
+          "path": "/robots.txt",
+          "atMs": 3
+        },
+        {
+          "path": "/evidence",
+          "atMs": 66
+        },
+        {
+          "path": "/sitemap.xml",
+          "atMs": 111
+        }
+      ],
+      "limits": [
+        {
+          "code": "scope",
+          "incomplete": false
+        }
+      ]
+    },
+    {
+      "name": "semantic-budget",
+      "elapsedMs": 180,
+      "stats": {
+        "modules": 3,
+        "nodes": 121060,
+        "views": 0,
+        "elapsedMs": 139
+      },
+      "detected": false,
+      "gaps": [
+        "semantic-budget"
+      ]
+    }
+  ],
+  "peakNodeRssKiB": 156952,
+  "limits": "Same generated workload shapes and configuration on preserved 2.3.0 and repaired build; no missing target response bodies replayed. Scheduling comparison deliberately excludes offline-engine latency. Native engine/browser measured separately. RSS measures this Node process and workers; excludes child Chromium/Gitleaks memory. No universal accuracy inference."
+}

@@ -1,0 +1,86 @@
+{
+  "schema": "exposure-known-public-examples/1",
+  "note": "SHA-256 digests of values published in vendor documentation or reference test vectors. Matching values are qualified as known public examples and never treated as this site's credentials. No plaintext is stored.",
+  "examples": [
+    {
+      "label": "AWS documentation example access key ID",
+      "source": "AWS documentation",
+      "sha256": "1a5d44a2dca19669d72edf4c4f1c27c4c1ca4b4408fbb17f6ce4ad452d78ddb3"
+    },
+    {
+      "label": "AWS documentation example secret access key",
+      "source": "AWS documentation",
+      "sha256": "78314b11be2e581549ac1c4f616563fad3fdf0c3b71678f6e2299182080e0598"
+    },
+    {
+      "label": "AWS documentation example access key ID (second)",
+      "source": "AWS documentation",
+      "sha256": "c6ea27c534f993d31f0aef882e3d200e7b87470c379ae79c8f9b19d3bd363dc9"
+    },
+    {
+      "label": "AWS documentation example secret access key (second)",
+      "source": "AWS documentation",
+      "sha256": "e21b597ba6b9cafa59d9ebc4d65c0385f5eb3fa56abab2607fa76589ad849a33"
+    },
+    {
+      "label": "BIP39 published test vector 1",
+      "source": "BIP39 reference test vectors (trezor/python-mnemonic vectors.json)",
+      "sha256": "c557eec878dfd852ba3f88087c4f350f09c55537ab5e549c3cd14320ec3cef38"
+    },
+    {
+      "label": "BIP39 published test vector 2",
+      "source": "BIP39 reference test vectors (trezor/python-mnemonic vectors.json)",
+      "sha256": "ecb0e7ba498c5920991f0b3483e91f7abafa9ecc6bd82a9a51494589592b1a8f"
+    },
+    {
+      "label": "BIP39 published test vector 3",
+      "source": "BIP39 reference test vectors (trezor/python-mnemonic vectors.json)",
+      "sha256": "3a64bcd9cea43c0aba67ba0bf2ddff8137a492bccbc672107fcbf7381086f698"
+    },
+    {
+      "label": "BIP39 published test vector 4",
+      "source": "BIP39 reference test vectors (trezor/python-mnemonic vectors.json)",
+      "sha256": "3c0949435a7e4277fac2fbe27975cdd9f5b5abf94d282112eaf4cebbb8560984"
+    },
+    {
+      "label": "BIP39 published test vector 5",
+      "source": "BIP39 reference test vectors (trezor/python-mnemonic vectors.json)",
+      "sha256": "69be79ef3c28f55d7cb84db2dd3c18dfff45eeefebd09b8c5f7f3489b8ba09ac"
+    },
+    {
+      "label": "BIP39 published test vector 6",
+      "source": "BIP39 reference test vectors (trezor/python-mnemonic vectors.json)",
+      "sha256": "e96bfc1d78867126dadff72e64807301e9bb837bcf329c86976647e529520528"
+    },
+    {
+      "label": "Hardhat/Anvil default development mnemonic",
+      "source": "Hardhat and Foundry documentation",
+      "sha256": "f79cd64f9cea237897b8133e4b905b361c6f166faa5a1c64c32280938f5b707e"
+    },
+    {
+      "label": "Hardhat/Anvil default account #0 private key",
+      "source": "Hardhat and Foundry documentation",
+      "sha256": "60a09e4357868c1e9b801052726d061c370429f723db84523ed58ac354f6eb8a"
+    },
+    {
+      "label": "Hardhat/Anvil default account #0 private key (no prefix)",
+      "source": "Hardhat and Foundry documentation",
+      "sha256": "bc1a50966c9e6486bc4ebf880b51611a2a97fcb8e7a6976e9b81a9e3e8ca0e3c"
+    },
+    {
+      "label": "Stripe documentation test secret key",
+      "source": "Stripe API documentation",
+      "sha256": "2cafc0970149a84f3b9e62eaf169f36f59907a3b3e31f7b82e68c69cd27f7326"
+    },
+    {
+      "label": "Stripe documentation test publishable key",
+      "source": "Stripe API documentation",
+      "sha256": "b1471f544ceeea31333bde7e1ecbaad6eac0d4a749412ad29bd66ef895b81c6b"
+    },
+    {
+      "label": "jwt.io default HS256 example secret",
+      "source": "jwt.io debugger default",
+      "sha256": "f7d838701b86c5dfb57bf95fbc5ce6df204cfc9f15ad6cdb39fd22f8776e47b6"
+    }
+  ]
+}

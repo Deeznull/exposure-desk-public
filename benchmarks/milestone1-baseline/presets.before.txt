@@ -1,0 +1,10 @@
+import { makeConfig } from './config.js';
+import type { ScanConfig } from './types.js';
+const MiB=1024*1024;
+export const presets:Record<string,Partial<ScanConfig>>={
+  quick:{preset:'quick',browser:false,deep:false,maxDepth:1,maxPages:8,maxResources:60,maxResourceBytes:8*MiB,maxTotalBytes:40*MiB,maxDurationMs:90000,maxMaps:10,adjacentMaps:false},
+  standard:{preset:'standard',browser:true,deep:false,maxDepth:3,maxPages:30,maxResources:200,maxResourceBytes:12*MiB,maxTotalBytes:120*MiB,maxDurationMs:300000,maxMaps:30,browserPages:5,browserScrollSteps:2},
+  thorough:{preset:'thorough',browser:true,deep:true,maxDepth:5,maxPages:80,maxResources:600,maxResourceBytes:24*MiB,maxWireResourceBytes:24*MiB,maxTotalBytes:300*MiB,maxDecodedTotalBytes:400*MiB,maxDurationMs:900000,maxMaps:80,maxMapSources:80,browserPages:15,browserScrollSteps:5},
+  custom:{preset:'custom'}
+};
+export function presetConfig(name:string,input:Partial<ScanConfig>){if(!presets[name])throw new Error('Unknown preset');return makeConfig({...presets[name],...input,preset:name as ScanConfig['preset']});}

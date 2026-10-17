@@ -1,0 +1,32 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import http from 'node:http';
+import path from 'node:path';
+import { createHash } from 'node:crypto';
+import { mkdtemp, mkdir, rm } from 'node:fs/promises';
+import { chromium } from 'playwright';
+import { startDashboard } from '../src/dashboard.js';
+import { root } from '../src/detectors.js';
+import { dedicatedBrowser } from '../src/runtime-paths.js';
+const pause=(ms:number)=>new Promise(r=>setTimeout(r,ms));
+const key='sk_live_'+[...createHash('sha256').update('ExposureDesk/regression-2.5/findings-ui/1').digest()].map(b=>'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789'[b%62]).join('').slice(0,24);
+test('findings UI shows priority, impacts and three lifecycle tracks; owner records refine priority; alerts are masked and acknowledgeable; deployment triggers are opt-in',{timeout:120000},async()=>{
+  const server=http.createServer((req,res)=>{const p=req.url||'/';res.writeHead(p==='/'||p==='/app.js'?200:404,{'content-type':p==='/app.js'?'text/javascript':'text/html'});res.end(p==='/'?'<script src="/app.js"></script>':p==='/app.js'?`Stripe("${key}")`:'missing');});await new Promise<void>(r=>server.listen(0,'127.0.0.1',r));const origin=`http://127.0.0.1:${(server.address() as any).port}`;
+  const parent=process.env.EXPOSURE_DATA_DIR||path.join(root,'.cache');await mkdir(parent,{recursive:true});const dir=await mkdtemp(path.join(parent,'findings-ui-'));
+  const app=await startDashboard({port:0,persistent:true,dataDir:dir,syntheticData:true});const browser=await chromium.launch({headless:true,executablePath:dedicatedBrowser()||chromium.executablePath()});
+  try{const page=await browser.newPage(),errors:string[]=[],dialogs:string[]=[];page.on('pageerror',e=>errors.push(e.message));page.on('dialog',d=>{dialogs.push(d.message());void d.dismiss();});
+    await page.goto(app.origin);await page.locator('#token').fill(app.token);await page.locator('#login-form button').click();await page.locator('#workspace').waitFor({state:'visible'});
+    const call=(route:string,body:unknown)=>page.evaluate(async({route,body})=>{const csrf=await fetch('/api/session').then(r=>r.json()).then(j=>j.csrf);const r=await fetch(route,{method:'POST',headers:{'Content-Type':'application/json','X-Dashboard-Request':'1','X-CSRF-Token':csrf},body:JSON.stringify(body)});return {status:r.status,body:await r.json()};},{route,body});
+    const config={urls:[origin+'/'],developmentFixtureOrigin:origin,browser:false,adjacentMaps:false,requestsPerSecond:20,semanticAnalysis:false};const project=(await call('/api/projects/save',{config,authorized:true})).body;
+    const started=(await call('/api/scans',{config,projectId:project.id,authorized:true})).body;for(let i=0;i<200;i++){const s=app.scans.get(started.id);if(s&&!['running','ready'].includes(s.state))break;await pause(100);}await pause(300);
+    await page.locator('[data-view="projects"]').click();await page.waitForFunction(()=>!document.getElementById('alerts-badge')!.hidden,undefined,{timeout:10000});assert.match((await page.locator('#alerts').textContent())!,/new-urgent/);assert.ok(!(await page.content()).includes(key),'alerts and pages carry no value');
+    await page.locator('[data-view="running"]').click();await page.locator('#run-history').getByRole('button',{name:/^Open run #[a-f0-9]{8} 127\.0\.0\.1/}).first().click();await page.locator('#open-findings').click();
+    const finding=page.locator('.finding').first();await finding.waitFor();const text=(await finding.textContent())!;assert.match(text,/Priority urgent · financial priority urgent/);assert.match(text,/Possible payment operations/);assert.match(text,/Removed from website: no — still observed/);assert.match(text,/Owner-confirmed revoked: no record/);assert.match(text,/Rescan completed: still-observed/);
+    await finding.getByRole('button',{name:'Report removed'}).click();await page.waitForFunction(()=>document.querySelector('.finding')?.textContent?.includes('owner reported removal'));
+    await page.locator('.finding').first().locator('details.owner-record').evaluate((e:HTMLElement)=>{(e as HTMLDetailsElement).open=true;});await page.locator('.finding').first().locator('select[aria-label="Owner-reported environment"]').selectOption('test');await page.locator('.finding').first().getByRole('button',{name:'Save owner record'}).click();
+    await page.waitForFunction(()=>document.querySelector('.finding')?.textContent?.includes('Priority review'));assert.match((await page.locator('.finding').first().textContent())!,/owner reports a test environment/);
+    await page.locator('[data-view="projects"]').click();await page.locator('#alerts-ack').click();await page.waitForFunction(()=>document.getElementById('alerts-badge')!.hidden);
+    await page.locator('[data-view="settings"]').click();await page.getByRole('button',{name:'Enable deployment trigger'}).click();await page.waitForFunction(()=>document.getElementById('schedule-list')?.textContent?.includes('cli.js trigger --project'));assert.equal(app.desk.store!.projects[0].deploymentTrigger!.enabled,true);
+    assert.deepEqual(dialogs,[]);assert.deepEqual(errors,[]);
+  }finally{await browser.close();await app.close();await new Promise<void>(r=>{server.close(()=>r());server.closeAllConnections();});await rm(dir,{recursive:true,force:true});}
+});

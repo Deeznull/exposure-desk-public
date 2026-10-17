@@ -1,0 +1,7 @@
+# Synthetic robots.txt fixture
+User-agent: *
+Disallow: /admin/
+Disallow: /internal/reports?
+Allow: /public/
+Disallow: /
+Sitemap: https://shop.example/sitemap.xml

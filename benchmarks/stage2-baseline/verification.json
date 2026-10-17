@@ -1,0 +1,61 @@
+{
+  "at": "2026-10-06T17:10:34.459Z",
+  "build": {
+    "version": "2.2.0-rc.1",
+    "id": "2.2.0-rc.1+8399b64166f5075d",
+    "sourceDigest": "8399b64166f5075d8dad0dd24956b747491357732294979764110cec2fee7130"
+  },
+  "compiledBuild": {
+    "version": "2.2.0-rc.1",
+    "id": "2.2.0-rc.1+8399b64166f5075d",
+    "sourceDigest": "8399b64166f5075d8dad0dd24956b747491357732294979764110cec2fee7130"
+  },
+  "launchedBuild": {
+    "version": "2.2.0-rc.1",
+    "id": "2.2.0-rc.1+8399b64166f5075d",
+    "sourceDigest": "8399b64166f5075d8dad0dd24956b747491357732294979764110cec2fee7130"
+  },
+  "parity": "verified",
+  "mismatches": [],
+  "priorInstance": {
+    "status": "no responding registered instance"
+  },
+  "runs": [
+    {
+      "name": "nonbrowser",
+      "exit": 0,
+      "elapsedMs": 121004,
+      "counts": [
+        "ℹ tests 172",
+        "ℹ pass 172",
+        "ℹ fail 0",
+        "ℹ skipped 0",
+        "ℹ duration_ms 120903.4086"
+      ]
+    },
+    {
+      "name": "browser",
+      "exit": 0,
+      "elapsedMs": 95803,
+      "counts": [
+        "ℹ tests 3",
+        "ℹ pass 3",
+        "ℹ fail 0",
+        "ℹ skipped 0",
+        "ℹ duration_ms 95692.7068"
+      ]
+    },
+    {
+      "name": "benchmark",
+      "exit": 0,
+      "elapsedMs": 44842,
+      "counts": null
+    },
+    {
+      "name": "pipeline",
+      "exit": 0,
+      "elapsedMs": 29338,
+      "counts": null
+    }
+  ]
+}

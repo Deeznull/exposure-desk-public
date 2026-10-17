@@ -1,0 +1,33 @@
+{
+  "name": "Authorized application",
+  "urls": ["https://www.example.com/"],
+  "relatedOrigins": ["https://assets.example.com"],
+  "sizingMode": "adaptive",
+  "browser": true,
+  "browserNavigationUrls": ["https://www.example.com/settings#/account"],
+  "browserLazyAssetLimit": 20,
+  "browserPages": 5,
+  "originBrowserPages": 3,
+  "maxDurationMs": 300000,
+  "projectMaxDurationMs": 300000,
+  "originMaxDurationMs": 180000,
+  "maxResources": 400,
+  "originMaxResources": 200,
+  "maxTotalBytes": 125829120,
+  "originMaxTotalBytes": 83886080,
+  "requestsPerSecond": 2,
+  "originRequestsPerSecond": 1,
+  "globalConcurrency": 2,
+  "originConcurrency": 1,
+  "originAnalysisMs": 12000,
+  "semanticSliceMs": 1600,
+  "maxModuleAnalysisBytes": 4194304,
+  "originAnalysisBytes": 16777216,
+  "maxAnalysisBytes": 33554432,
+  "analysisConcurrency": 2,
+  "maxAnalysisMemoryMb": 256,
+  "sensitiveFields": [
+    {"path": "profile.nationalId", "expectation": "private"},
+    {"path": "profile.displayName", "expectation": "public"}
+  ]
+}

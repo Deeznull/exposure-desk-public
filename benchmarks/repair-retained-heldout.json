@@ -1,0 +1,181 @@
+{
+  "build": {
+    "version": "2.3.1-rc.1",
+    "id": "2.3.1-rc.1+1b19d40f69120ab9",
+    "sourceDigest": "1b19d40f69120ab990e89655815cd8f2a16c2dbd31046b4f4b63c84239a9bdf0"
+  },
+  "seed": "ExposureDesk/stage2/heldout/20261006/73",
+  "corpusDigest": "41b7636e922326aa05c70731a8cd1c408e6a4e44472d0af278503baca370dec8",
+  "summary": {
+    "credentialTargets": 16,
+    "detected": 16,
+    "missed": [],
+    "negativeControls": 3,
+    "falsePositives": 0
+  },
+  "provider": [
+    {
+      "name": "OpenAI",
+      "credentialTargets": 11,
+      "detected": 11,
+      "misses": [],
+      "negativeControls": 0,
+      "falsePositives": 0
+    },
+    {
+      "name": "Stripe",
+      "credentialTargets": 1,
+      "detected": 1,
+      "misses": [],
+      "negativeControls": 1,
+      "falsePositives": 0
+    },
+    {
+      "name": "snyk",
+      "credentialTargets": 2,
+      "detected": 2,
+      "misses": [],
+      "negativeControls": 0,
+      "falsePositives": 0
+    },
+    {
+      "name": "Azure",
+      "credentialTargets": 2,
+      "detected": 2,
+      "misses": [],
+      "negativeControls": 0,
+      "falsePositives": 0
+    },
+    {
+      "name": "none",
+      "credentialTargets": 0,
+      "detected": 0,
+      "misses": [],
+      "negativeControls": 2,
+      "falsePositives": 0
+    }
+  ],
+  "acquisition": [
+    {
+      "name": "semantic",
+      "credentialTargets": 2,
+      "detected": 2,
+      "misses": [],
+      "negativeControls": 0,
+      "falsePositives": 0
+    },
+    {
+      "name": "decoded-engine",
+      "credentialTargets": 1,
+      "detected": 1,
+      "misses": [],
+      "negativeControls": 0,
+      "falsePositives": 0
+    },
+    {
+      "name": "engine",
+      "credentialTargets": 1,
+      "detected": 1,
+      "misses": [],
+      "negativeControls": 0,
+      "falsePositives": 0
+    },
+    {
+      "name": "chunked-text",
+      "credentialTargets": 2,
+      "detected": 2,
+      "misses": [],
+      "negativeControls": 0,
+      "falsePositives": 0
+    },
+    {
+      "name": "decoded-priority",
+      "credentialTargets": 1,
+      "detected": 1,
+      "misses": [],
+      "negativeControls": 0,
+      "falsePositives": 0
+    },
+    {
+      "name": "parser-isolation",
+      "credentialTargets": 1,
+      "detected": 1,
+      "misses": [],
+      "negativeControls": 0,
+      "falsePositives": 0
+    },
+    {
+      "name": "context",
+      "credentialTargets": 1,
+      "detected": 1,
+      "misses": [],
+      "negativeControls": 0,
+      "falsePositives": 0
+    },
+    {
+      "name": "capability",
+      "credentialTargets": 1,
+      "detected": 1,
+      "misses": [],
+      "negativeControls": 0,
+      "falsePositives": 0
+    },
+    {
+      "name": "negative",
+      "credentialTargets": 0,
+      "detected": 0,
+      "misses": [],
+      "negativeControls": 3,
+      "falsePositives": 0
+    },
+    {
+      "name": "cross-module",
+      "credentialTargets": 1,
+      "detected": 1,
+      "misses": [],
+      "negativeControls": 0,
+      "falsePositives": 0
+    },
+    {
+      "name": "source-map",
+      "credentialTargets": 1,
+      "detected": 1,
+      "misses": [],
+      "negativeControls": 0,
+      "falsePositives": 0
+    },
+    {
+      "name": "debugger",
+      "credentialTargets": 1,
+      "detected": 1,
+      "misses": [],
+      "negativeControls": 0,
+      "falsePositives": 0
+    },
+    {
+      "name": "browser-request",
+      "credentialTargets": 1,
+      "detected": 1,
+      "misses": [],
+      "negativeControls": 0,
+      "falsePositives": 0
+    },
+    {
+      "name": "stale-asset",
+      "credentialTargets": 1,
+      "detected": 1,
+      "misses": [],
+      "negativeControls": 0,
+      "falsePositives": 0
+    },
+    {
+      "name": "browser-json",
+      "credentialTargets": 1,
+      "detected": 1,
+      "misses": [],
+      "negativeControls": 0,
+      "falsePositives": 0
+    }
+  ],
+  "information": "Excluded from credential recall; endpoint observations measured separately by repair workload and dashboard tests."
+}

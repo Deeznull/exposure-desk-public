@@ -1,0 +1,22 @@
+[
+  {
+    "name": "Initech",
+    "url": "https://bugcrowd.example/initech",
+    "allows_disclosure": false,
+    "managed_by_bugcrowd": true,
+    "safe_harbor": "full",
+    "max_payout": 5000,
+    "targets": {
+      "in_scope": [
+        {"type": "website", "target": "Initech customer portal", "uri": "https://portal.initech.test"},
+        {"type": "api", "target": "api.initech.test"},
+        {"type": "website", "target": "*.initech.test", "uri": ""},
+        {"type": "android", "target": "Initech for Android", "uri": "https://play.example/initech"},
+        {"type": "network", "target": "198.51.100.0/24"}
+      ],
+      "out_of_scope": [
+        {"type": "website", "target": "status.initech.test"}
+      ]
+    }
+  }
+]

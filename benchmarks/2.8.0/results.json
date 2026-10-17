@@ -1,0 +1,1469 @@
+{
+  "schema": "exposure-release-verification/1",
+  "version": "2.8.0",
+  "build": {
+    "version": "2.8.0",
+    "id": "2.8.0+cc5fecf8cb75f1c7",
+    "sourceDigest": "cc5fecf8cb75f1c7e607178fa5dcf7527dadec872f7c9dd4b381a4c365256810"
+  },
+  "ruleVersion": "website/2.8.0",
+  "unit": {
+    "tests": 654,
+    "pass": 654,
+    "fail": 0,
+    "cancelled": 0,
+    "skipped": 0,
+    "todo": 0,
+    "durationMs": 1081091.8134
+  },
+  "browser": {
+    "tests": 40,
+    "pass": 40,
+    "fail": 0,
+    "cancelled": 0,
+    "skipped": 0,
+    "todo": 0,
+    "durationMs": 412730.4511
+  },
+  "cancellationStress": {
+    "tests": 60,
+    "pass": 60,
+    "fail": 0,
+    "cancelled": 0,
+    "skipped": 0,
+    "todo": 0,
+    "durationMs": 217609.81
+  },
+  "cliSmoke": {
+    "passed": 4,
+    "failed": false
+  },
+  "persistenceSmoke": {
+    "platform": "win32",
+    "syntheticPermissionException": false,
+    "projectRestart": true,
+    "correlationRestart": true,
+    "vaultRestart": true,
+    "operatorPermissions": true,
+    "deletion": true
+  },
+  "benchmark": {
+    "planted": 130,
+    "detected": 130,
+    "missed": 0,
+    "falsePositives": 0,
+    "componentErrors": 0,
+    "locationErrors": 0,
+    "privateTargets": 125,
+    "publicTargets": 3,
+    "suspiciousTargets": 2
+  },
+  "pipeline": {
+    "status": "passed",
+    "summary": {
+      "planted": 17,
+      "found": 17,
+      "missed": 0
+    }
+  },
+  "legacyCorpus": {
+    "baseline": {
+      "targets": 13,
+      "detected": 13,
+      "falsePositives": 0,
+      "exposureTargets": 5,
+      "exposureMisses": 0,
+      "exposureFalsePositives": 0,
+      "classificationErrors": 0,
+      "elapsedMs": 1916.0040999999999,
+      "maxRssKiB": 213692,
+      "build": "2.7.0+3772c88c496661b5"
+    },
+    "final": {
+      "targets": 13,
+      "detected": 13,
+      "falsePositives": 0,
+      "exposureTargets": 5,
+      "exposureMisses": 0,
+      "exposureFalsePositives": 0,
+      "classificationErrors": 0,
+      "elapsedMs": 2469.8187,
+      "maxRssKiB": 213576,
+      "build": "2.8.0+cc5fecf8cb75f1c7"
+    },
+    "baselineSource": "benchmarks/2.7.0/final-legacy-evaluation.json",
+    "baselineReused": "2.7.0 legacy-evaluation figures reused from the 2.7.0 release records (owner decision 2026-10-11), not re-measured"
+  },
+  "acquisition": {
+    "baseline": {
+      "build": "2.7.0+3772c88c496661b5",
+      "detected": 5,
+      "targets": 5,
+      "falsePositives": 0,
+      "knownInspected": 9,
+      "knownResources": 9,
+      "forbiddenArrivals": 0,
+      "elapsedMs": 5074.4294,
+      "maxRssKiB": 204196
+    },
+    "final": {
+      "build": "2.8.0+cc5fecf8cb75f1c7",
+      "detected": 5,
+      "targets": 5,
+      "falsePositives": 0,
+      "knownInspected": 9,
+      "knownResources": 9,
+      "forbiddenArrivals": 0,
+      "elapsedMs": 5574.3228,
+      "maxRssKiB": 213620
+    },
+    "baselineSource": "benchmarks/2.7.0/final-acquisition.json",
+    "baselineReused": "2.7.0 legacy-evaluation figures reused from the 2.7.0 release records (owner decision 2026-10-11), not re-measured"
+  },
+  "massScan": {
+    "schema": "exposure-mass-measure/1",
+    "build": "2.8.0+cc5fecf8cb75f1c7",
+    "date": "2026-10-12T05:02:50.722Z",
+    "fixture": {
+      "origins": 50,
+      "addressing": "127.0.0.1 to 127.0.0.50, one port",
+      "targets": 200,
+      "blockTargets": 200,
+      "blockedOrigins": "2 of every 5 origins answer every request with HTTP 429 or 403",
+      "keys": "synthetic, nonfunctional sk-proj- values: one per target page, one per origin shared by its targets",
+      "realHosts": 0
+    },
+    "settings": {
+      "coverage": "quick",
+      "traffic": "normal",
+      "state": "--state on every run (mass mode)",
+      "failOn": "never"
+    },
+    "egressViolations": 0,
+    "scale": [
+      {
+        "name": "c1",
+        "targets": 200,
+        "concurrency": 1,
+        "program": false,
+        "coverage": "quick",
+        "traffic": "normal",
+        "exit": 0,
+        "wallMs": 2272381,
+        "requests": 4400,
+        "requestsPerSecond": 1.9,
+        "targetsPerSecond": 0.09,
+        "peakRssMb": 185,
+        "budget": {
+          "oneSharedBudget": true,
+          "capacityMb": 256,
+          "peakMb": 256,
+          "peakWithinCapacity": true,
+          "concurrentChildHeapMb": 256,
+          "childHeapWithinCapacity": true,
+          "readyOptionCeiling": true
+        },
+        "analysisChildren": {
+          "spawned": 1,
+          "concurrentPeakRssMb": 58,
+          "outOfMemory": 0
+        },
+        "ownKeysFound": 200,
+        "sharedKeysFound": 50,
+        "unexpectedFindings": 0,
+        "summary": {
+          "targets": 200,
+          "scanned": 200,
+          "notStarted": 0,
+          "skipped": 0,
+          "interrupted": false,
+          "exit": 0,
+          "concurrency": 1,
+          "statuses": {
+            "done": 200
+          },
+          "halted": null,
+          "uniqueFindings": 250,
+          "sharedFindings": 50,
+          "findings": 400,
+          "program": null,
+          "effectiveConcurrency": 1,
+          "sharedWaitMs": 0,
+          "memoryGate": null
+        },
+        "targetStatuses": {
+          "completed": 200
+        },
+        "stopReasons": {
+          "quick-target-set-done": 200
+        },
+        "unfinished": 0
+      },
+      {
+        "name": "c4",
+        "targets": 200,
+        "concurrency": 4,
+        "program": false,
+        "coverage": "quick",
+        "traffic": "normal",
+        "exit": 0,
+        "wallMs": 617848,
+        "requests": 4400,
+        "requestsPerSecond": 7.1,
+        "targetsPerSecond": 0.32,
+        "peakRssMb": 297,
+        "budget": {
+          "oneSharedBudget": true,
+          "capacityMb": 256,
+          "peakMb": 256,
+          "peakWithinCapacity": true,
+          "concurrentChildHeapMb": 256,
+          "childHeapWithinCapacity": true,
+          "readyOptionCeiling": true
+        },
+        "analysisChildren": {
+          "spawned": 1,
+          "concurrentPeakRssMb": 58,
+          "outOfMemory": 0
+        },
+        "ownKeysFound": 200,
+        "sharedKeysFound": 50,
+        "unexpectedFindings": 0,
+        "summary": {
+          "targets": 200,
+          "scanned": 200,
+          "notStarted": 0,
+          "skipped": 0,
+          "interrupted": false,
+          "exit": 0,
+          "concurrency": 4,
+          "statuses": {
+            "done": 200
+          },
+          "halted": null,
+          "uniqueFindings": 250,
+          "sharedFindings": 50,
+          "findings": 400,
+          "program": null,
+          "effectiveConcurrency": 4,
+          "sharedWaitMs": 33215,
+          "memoryGate": {
+            "ceilingMb": 512,
+            "marginMb": 64,
+            "startRssMb": 173,
+            "peakRssMb": 297,
+            "perTargetMb": 26.1,
+            "admissionWaits": 0
+          }
+        },
+        "targetStatuses": {
+          "completed": 200
+        },
+        "stopReasons": {
+          "quick-target-set-done": 200
+        },
+        "unfinished": 0
+      },
+      {
+        "name": "c16",
+        "targets": 200,
+        "concurrency": 16,
+        "program": false,
+        "coverage": "quick",
+        "traffic": "normal",
+        "exit": 0,
+        "wallMs": 234091,
+        "requests": 4400,
+        "requestsPerSecond": 18.8,
+        "targetsPerSecond": 0.85,
+        "peakRssMb": 363,
+        "budget": {
+          "oneSharedBudget": true,
+          "capacityMb": 256,
+          "peakMb": 256,
+          "peakWithinCapacity": true,
+          "concurrentChildHeapMb": 256,
+          "childHeapWithinCapacity": true,
+          "readyOptionCeiling": true
+        },
+        "analysisChildren": {
+          "spawned": 1,
+          "concurrentPeakRssMb": 59,
+          "outOfMemory": 0
+        },
+        "ownKeysFound": 200,
+        "sharedKeysFound": 50,
+        "unexpectedFindings": 0,
+        "summary": {
+          "targets": 200,
+          "scanned": 200,
+          "notStarted": 0,
+          "skipped": 0,
+          "interrupted": false,
+          "exit": 0,
+          "concurrency": 16,
+          "statuses": {
+            "done": 200
+          },
+          "halted": null,
+          "uniqueFindings": 250,
+          "sharedFindings": 50,
+          "findings": 400,
+          "program": null,
+          "effectiveConcurrency": 16,
+          "sharedWaitMs": 233474,
+          "memoryGate": {
+            "ceilingMb": 512,
+            "marginMb": 64,
+            "startRssMb": 173,
+            "peakRssMb": 362,
+            "perTargetMb": 8.7,
+            "admissionWaits": 0
+          }
+        },
+        "targetStatuses": {
+          "completed": 200
+        },
+        "stopReasons": {
+          "quick-target-set-done": 200
+        },
+        "unfinished": 0
+      },
+      {
+        "name": "program-c64",
+        "targets": 200,
+        "concurrency": 64,
+        "program": true,
+        "coverage": "quick",
+        "traffic": "normal",
+        "exit": 0,
+        "wallMs": 205554,
+        "requests": 4400,
+        "requestsPerSecond": 21.4,
+        "targetsPerSecond": 0.97,
+        "peakRssMb": 319,
+        "budget": {
+          "oneSharedBudget": true,
+          "capacityMb": 256,
+          "peakMb": 256,
+          "peakWithinCapacity": true,
+          "concurrentChildHeapMb": 256,
+          "childHeapWithinCapacity": true,
+          "readyOptionCeiling": true
+        },
+        "analysisChildren": {
+          "spawned": 1,
+          "concurrentPeakRssMb": 59,
+          "outOfMemory": 0
+        },
+        "ownKeysFound": 200,
+        "sharedKeysFound": 50,
+        "unexpectedFindings": 0,
+        "summary": {
+          "targets": 200,
+          "scanned": 200,
+          "notStarted": 0,
+          "skipped": 0,
+          "interrupted": false,
+          "exit": 0,
+          "concurrency": 64,
+          "statuses": {
+            "done": 200
+          },
+          "halted": null,
+          "uniqueFindings": 250,
+          "sharedFindings": 50,
+          "findings": 400,
+          "program": {
+            "requestsPerSecond": 50,
+            "concurrency": 64,
+            "active": 0,
+            "peakActive": 2,
+            "granted": 4400,
+            "waits": 3691,
+            "waitMs": 8906973,
+            "maxWaitMs": 23837
+          },
+          "effectiveConcurrency": 64,
+          "sharedWaitMs": 9124250,
+          "memoryGate": {
+            "ceilingMb": 512,
+            "marginMb": 64,
+            "startRssMb": 173,
+            "peakRssMb": 319,
+            "perTargetMb": 4.6,
+            "admissionWaits": 30
+          }
+        },
+        "targetStatuses": {
+          "completed": 200
+        },
+        "stopReasons": {
+          "quick-target-set-done": 200
+        },
+        "unfinished": 0
+      }
+    ],
+    "resume": [
+      {
+        "name": "resume-reader",
+        "interrupt": "output reader closed",
+        "targets": 200,
+        "concurrency": 4,
+        "first": {
+          "exit": 2,
+          "signal": null,
+          "wallMs": 261460,
+          "interruptedAtMs": 261297,
+          "requests": 1760,
+          "targetEndsSeen": 80,
+          "stateReadable": true,
+          "stateDone": 80,
+          "stateStatuses": {
+            "done": 80,
+            "cancelled": 1,
+            "pending": 119
+          },
+          "peakRssMb": 287,
+          "analysisChildren": 1,
+          "orphanedAnalysisProcesses": 0
+        },
+        "checks": {
+          "firstRunDone": true,
+          "skippedEqualsDone": true,
+          "doneTargetsStarted": 0,
+          "doneTargetPagesRequested": 0,
+          "accounted": true,
+          "inlineKeysFoundAcrossBoth": 200,
+          "noOrphans": true,
+          "firstPagesRequested": 80
+        },
+        "resumedWallMs": 374830,
+        "resumedBudget": {
+          "oneSharedBudget": true,
+          "capacityMb": 256,
+          "peakMb": 256,
+          "peakWithinCapacity": true,
+          "concurrentChildHeapMb": 256,
+          "childHeapWithinCapacity": true,
+          "readyOptionCeiling": true
+        }
+      },
+      {
+        "name": "resume-kill",
+        "interrupt": "forced process kill",
+        "targets": 200,
+        "concurrency": 4,
+        "first": {
+          "exit": null,
+          "signal": "SIGKILL",
+          "wallMs": 242301,
+          "interruptedAtMs": 242281,
+          "requests": 1760,
+          "targetEndsSeen": 80,
+          "stateReadable": true,
+          "stateDone": 78,
+          "stateStatuses": {
+            "done": 78,
+            "running": 4,
+            "pending": 118
+          },
+          "peakRssMb": 294,
+          "analysisChildren": 1,
+          "orphanedAnalysisProcesses": 0
+        },
+        "checks": {
+          "firstRunDone": true,
+          "skippedEqualsDone": true,
+          "doneTargetsStarted": 0,
+          "doneTargetPagesRequested": 0,
+          "accounted": true,
+          "inlineKeysFoundAcrossBoth": 200,
+          "noOrphans": true,
+          "firstPagesRequested": 80
+        },
+        "resumedWallMs": 373427,
+        "resumedBudget": {
+          "oneSharedBudget": true,
+          "capacityMb": 256,
+          "peakMb": 256,
+          "peakWithinCapacity": true,
+          "concurrentChildHeapMb": 256,
+          "childHeapWithinCapacity": true,
+          "readyOptionCeiling": true
+        }
+      }
+    ],
+    "block": [
+      {
+        "name": "block-halt",
+        "targets": 200,
+        "concurrency": 16,
+        "exit": 2,
+        "wallMs": 16494,
+        "requests": 260,
+        "userAgents": 1,
+        "summary": {
+          "targets": 200,
+          "scanned": 18,
+          "notStarted": 182,
+          "skipped": 0,
+          "interrupted": false,
+          "exit": 2,
+          "concurrency": 16,
+          "statuses": {
+            "blocked": 8,
+            "done": 10,
+            "pending": 182
+          },
+          "halted": "blocked",
+          "uniqueFindings": 20,
+          "sharedFindings": 0,
+          "findings": 20,
+          "program": null,
+          "effectiveConcurrency": 16,
+          "sharedWaitMs": 18364,
+          "memoryGate": {
+            "ceilingMb": 512,
+            "marginMb": 64,
+            "startRssMb": 172,
+            "peakRssMb": 278,
+            "perTargetMb": 6.6,
+            "admissionWaits": 0
+          }
+        },
+        "stopReasons": {
+          "blocked": 8,
+          "quick-target-set-done": 10
+        }
+      }
+    ]
+  },
+  "linuxCi": {
+    "schema": "exposure-linux-ci/1",
+    "workflow": "Linux",
+    "runId": "38245758795",
+    "url": "https://github.com/Deeznull/exposure-desk/actions/runs/38245758795",
+    "commit": "eb2f95382c3968a05feb8c3cad4e5cede65d4ff9",
+    "branch": "v3-w5-release",
+    "event": "workflow_dispatch",
+    "attempt": 1,
+    "conclusion": "success",
+    "createdAt": "2026-10-12T11:55:19Z",
+    "updatedAt": "2026-10-12T12:17:15Z",
+    "runner": "GitHub-hosted ubuntu runners (see linux.yml)",
+    "jobs": {
+      "nonbrowser": {
+        "job": "Tests (nonbrowser)",
+        "jobId": 114799091280,
+        "conclusion": "success",
+        "tests": 654,
+        "pass": 653,
+        "fail": 0,
+        "skipped": 1,
+        "cancelled": 0,
+        "todo": 0
+      },
+      "browser": {
+        "job": "Tests (browser)",
+        "jobId": 114799090959,
+        "conclusion": "success",
+        "tests": 40,
+        "pass": 40,
+        "fail": 0,
+        "skipped": 0,
+        "cancelled": 0,
+        "todo": 0
+      },
+      "package": {
+        "job": "Linux x64 package",
+        "jobId": 114799090933,
+        "conclusion": "success"
+      },
+      "container": {
+        "job": "Container image",
+        "jobId": 114799091007,
+        "conclusion": "success"
+      }
+    },
+    "artifact": {
+      "name": "exposure-desk-linux-x64",
+      "file": "Exposure Desk 2.8.0 Linux x64.tar.gz",
+      "bytes": 265927767,
+      "sha256": "5f515d98ccbb3f37f6c6dde356a96488c3d8662f9292e378ef810efc146de008",
+      "checksumFileMatches": true
+    },
+    "measurementRuns": [
+      {
+        "runId": "38197793573",
+        "url": "https://github.com/Deeznull/exposure-desk/actions/runs/38197793573",
+        "commit": "b941d3c36498dd8673ee94c461a2f9267d2c4225",
+        "branch": "v3-w5-fix",
+        "attempt": 1,
+        "conclusion": "success",
+        "createdAt": "2026-10-12T02:56:50Z",
+        "updatedAt": "2026-10-12T03:18:34Z",
+        "jobs": {
+          "nonbrowser": {
+            "job": "Tests (nonbrowser)",
+            "jobId": 114644272617,
+            "conclusion": "success",
+            "tests": 654,
+            "pass": 653,
+            "fail": 0,
+            "skipped": 1,
+            "cancelled": 0,
+            "todo": 0
+          },
+          "browser": {
+            "job": "Tests (browser)",
+            "jobId": 114644272806,
+            "conclusion": "success",
+            "tests": 40,
+            "pass": 40,
+            "fail": 0,
+            "skipped": 0,
+            "cancelled": 0,
+            "todo": 0
+          },
+          "package": {
+            "job": "Linux x64 package",
+            "jobId": 114644272477,
+            "conclusion": "success"
+          },
+          "container": {
+            "job": "Container image",
+            "jobId": 114644272673,
+            "conclusion": "success"
+          }
+        }
+      },
+      {
+        "runId": "38199247582",
+        "url": "https://github.com/Deeznull/exposure-desk/actions/runs/38199247582",
+        "commit": "b941d3c36498dd8673ee94c461a2f9267d2c4225",
+        "branch": "v3-w5-fix",
+        "attempt": 1,
+        "conclusion": "success",
+        "createdAt": "2026-10-12T03:18:40Z",
+        "updatedAt": "2026-10-12T03:40:27Z",
+        "jobs": {
+          "nonbrowser": {
+            "job": "Tests (nonbrowser)",
+            "jobId": 114648730265,
+            "conclusion": "success",
+            "tests": 654,
+            "pass": 653,
+            "fail": 0,
+            "skipped": 1,
+            "cancelled": 0,
+            "todo": 0
+          },
+          "browser": {
+            "job": "Tests (browser)",
+            "jobId": 114648730097,
+            "conclusion": "success",
+            "tests": 40,
+            "pass": 40,
+            "fail": 0,
+            "skipped": 0,
+            "cancelled": 0,
+            "todo": 0
+          },
+          "package": {
+            "job": "Linux x64 package",
+            "jobId": 114648730188,
+            "conclusion": "success"
+          },
+          "container": {
+            "job": "Container image",
+            "jobId": 114648730231,
+            "conclusion": "success"
+          }
+        }
+      }
+    ],
+    "measurementNote": "measurementRuns are the w5-fix linux.yml runs on commit b941d3c, whose build digest equals this release build (src, scripts and tests unchanged); they are the Linux measurement for 2.8.0. runId is the release run on the final documentation commit (eb2f953), whose package job built the shipped tar.gz. supersededRuns lists the earlier release run on commit 1e6dd0f, whose tar.gz is not shipped.",
+    "supersededRuns": [
+      {
+        "runId": "38241561896",
+        "url": "https://github.com/Deeznull/exposure-desk/actions/runs/38241561896",
+        "commit": "1e6dd0fd1753f181aff0954c7ac77dd5aaa2ae34",
+        "branch": "v3-w5-release",
+        "attempt": 1,
+        "conclusion": "success",
+        "createdAt": "2026-10-12T11:16:12Z",
+        "updatedAt": "2026-10-12T11:33:58Z",
+        "jobs": {
+          "nonbrowser": {
+            "job": "Tests (nonbrowser)",
+            "jobId": 114785161645,
+            "conclusion": "success",
+            "tests": 654,
+            "pass": 653,
+            "fail": 0,
+            "skipped": 1,
+            "cancelled": 0,
+            "todo": 0
+          },
+          "browser": {
+            "job": "Tests (browser)",
+            "jobId": 114785161613,
+            "conclusion": "success",
+            "tests": 40,
+            "pass": 40,
+            "fail": 0,
+            "skipped": 0,
+            "cancelled": 0,
+            "todo": 0
+          },
+          "package": {
+            "job": "Linux x64 package",
+            "jobId": 114785161483,
+            "conclusion": "success"
+          },
+          "container": {
+            "job": "Container image",
+            "jobId": 114785161122,
+            "conclusion": "success"
+          }
+        },
+        "artifact": {
+          "name": "exposure-desk-linux-x64",
+          "file": "Exposure Desk 2.8.0 Linux x64.tar.gz",
+          "bytes": 265920924,
+          "downloadedSha256": "2b804b1b55b87f10fd240059a393e36410a065745db467be9924de228a96c2a9",
+          "checksumFileMatches": true,
+          "builtFrom": "1e6dd0f",
+          "shipped": false
+        },
+        "note": "Every job passed. Its tar.gz is not shipped, because the delivery note RELEASE_PACKAGE.md was rewritten for 2.8.0 after this run; the package is kept outside the repository, not deleted."
+      }
+    ],
+    "reruns": []
+  },
+  "evaluation": {
+    "role": "legacy-settings regression",
+    "corpusDigest": "41f8c2dd214da8bd7192d2d6a8863ed96e4d274b9c8d312edf97c7bc02e94479",
+    "frozenAt": "2026-10-08T04:15:23.216Z",
+    "repeat": 3,
+    "errors": [],
+    "groups": {
+      "G1": {
+        "baselineBuild": "2.7.0+3772c88c496661b5",
+        "newBuild": "2.8.0+cc5fecf8cb75f1c7",
+        "wallMsMedian": {
+          "baseline": 1631,
+          "new": 1873
+        },
+        "maxRssKiB": {
+          "baseline": 205728,
+          "new": 225416
+        }
+      },
+      "G2": {
+        "baselineBuild": "2.7.0+3772c88c496661b5",
+        "newBuild": "2.8.0+cc5fecf8cb75f1c7",
+        "wallMsMedian": {
+          "baseline": 3742,
+          "new": 4493
+        },
+        "maxRssKiB": {
+          "baseline": 201596,
+          "new": 220636
+        }
+      },
+      "G3": {
+        "baselineBuild": "2.7.0+3772c88c496661b5",
+        "newBuild": "2.8.0+cc5fecf8cb75f1c7",
+        "wallMsMedian": {
+          "baseline": 9471,
+          "new": 11624
+        },
+        "maxRssKiB": {
+          "baseline": 195700,
+          "new": 226924
+        }
+      },
+      "G4": {
+        "baselineBuild": "2.7.0+3772c88c496661b5",
+        "newBuild": "2.8.0+cc5fecf8cb75f1c7",
+        "wallMsMedian": {
+          "baseline": 2103,
+          "new": 2231
+        },
+        "maxRssKiB": {
+          "baseline": 213216,
+          "new": 229808
+        }
+      },
+      "G5": {
+        "baselineBuild": "2.7.0+3772c88c496661b5",
+        "newBuild": "2.8.0+cc5fecf8cb75f1c7",
+        "wallMsMedian": {
+          "baseline": 11374,
+          "new": 7526
+        },
+        "maxRssKiB": {
+          "baseline": 427372,
+          "new": 475020
+        }
+      },
+      "G6": {
+        "baselineBuild": "2.7.0+3772c88c496661b5",
+        "newBuild": "2.8.0+cc5fecf8cb75f1c7",
+        "wallMsMedian": {
+          "baseline": 5291,
+          "new": 5020
+        },
+        "maxRssKiB": {
+          "baseline": 462636,
+          "new": 464376
+        }
+      },
+      "G7": {
+        "baselineBuild": "2.7.0+3772c88c496661b5",
+        "newBuild": "2.8.0+cc5fecf8cb75f1c7",
+        "wallMsMedian": {
+          "baseline": 18473,
+          "new": 10168
+        },
+        "maxRssKiB": {
+          "baseline": 202648,
+          "new": 212112
+        }
+      },
+      "G8": {
+        "baselineBuild": "2.7.0+3772c88c496661b5",
+        "newBuild": "2.8.0+cc5fecf8cb75f1c7",
+        "wallMsMedian": {
+          "baseline": 3827,
+          "new": 4801
+        },
+        "maxRssKiB": {
+          "baseline": 205396,
+          "new": 231508
+        }
+      },
+      "G9": {
+        "baselineBuild": "2.7.0+3772c88c496661b5",
+        "newBuild": "2.8.0+cc5fecf8cb75f1c7",
+        "wallMsMedian": {
+          "baseline": 4252,
+          "new": 2955
+        },
+        "maxRssKiB": {
+          "baseline": 209684,
+          "new": 224096
+        }
+      }
+    }
+  },
+  "readyOptionMatrix": {
+    "source": "benchmarks/2.8.0/matrix.json",
+    "generatedAt": "2026-10-12T07:46:49.664Z",
+    "scans": 57,
+    "checks": {
+      "Low-impact fewer connections than Normal, requests no more than Normal's": {
+        "passed": 4,
+        "total": 4,
+        "failed": []
+      },
+      "Low-impact fewer requests and connections than Normal": {
+        "passed": 8,
+        "total": 8,
+        "failed": []
+      },
+      "Deep+Low-impact keeps Deep+Normal recall": {
+        "passed": 4,
+        "total": 4,
+        "failed": []
+      },
+      "Quick reports its limits": {
+        "passed": 8,
+        "total": 8,
+        "failed": []
+      },
+      "Quick fastest": {
+        "passed": 8,
+        "total": 8,
+        "failed": []
+      },
+      "Within limits": {
+        "passed": 33,
+        "total": 33,
+        "failed": []
+      },
+      "Finds its keys at its memory setting": {
+        "passed": 33,
+        "total": 33,
+        "failed": []
+      },
+      "Keeps the 2.7.0 recall": {
+        "passed": 24,
+        "total": 24,
+        "failed": []
+      },
+      "Adjustment only lowers": {
+        "passed": 36,
+        "total": 36,
+        "failed": []
+      },
+      "Settings as recorded": {
+        "passed": 33,
+        "total": 33,
+        "failed": []
+      }
+    }
+  },
+  "externalCorpus": [
+    {
+      "coverage": "quick",
+      "traffic": "low-impact",
+      "preset": null,
+      "mode": "acquisition",
+      "overall": {
+        "truePositives": 27,
+        "falsePositives": 3,
+        "falseNegatives": 0,
+        "precision": 0.9,
+        "recall": 1
+      },
+      "negativeAlerts": 3,
+      "sites": 20,
+      "requests": 526,
+      "durationMs": 1032519,
+      "states": {
+        "incomplete": 17,
+        "completed": 3
+      },
+      "build": "2.8.0+cc5fecf8cb75f1c7"
+    },
+    {
+      "coverage": "quick",
+      "traffic": "low-impact",
+      "preset": null,
+      "mode": "discovery",
+      "overall": {
+        "truePositives": 24,
+        "falsePositives": 3,
+        "falseNegatives": 3,
+        "precision": 0.889,
+        "recall": 0.889
+      },
+      "negativeAlerts": 3,
+      "sites": 20,
+      "requests": 474,
+      "durationMs": 941220,
+      "states": {
+        "incomplete": 19,
+        "completed": 1
+      },
+      "build": "2.8.0+cc5fecf8cb75f1c7"
+    },
+    {
+      "coverage": "quick",
+      "traffic": "normal",
+      "preset": null,
+      "mode": "acquisition",
+      "overall": {
+        "truePositives": 27,
+        "falsePositives": 3,
+        "falseNegatives": 0,
+        "precision": 0.9,
+        "recall": 1
+      },
+      "negativeAlerts": 3,
+      "sites": 20,
+      "requests": 526,
+      "durationMs": 277995,
+      "states": {
+        "incomplete": 17,
+        "completed": 3
+      },
+      "build": "2.8.0+cc5fecf8cb75f1c7"
+    },
+    {
+      "coverage": "quick",
+      "traffic": "normal",
+      "preset": null,
+      "mode": "discovery",
+      "overall": {
+        "truePositives": 24,
+        "falsePositives": 3,
+        "falseNegatives": 3,
+        "precision": 0.889,
+        "recall": 0.889
+      },
+      "negativeAlerts": 3,
+      "sites": 20,
+      "requests": 474,
+      "durationMs": 271366,
+      "states": {
+        "incomplete": 19,
+        "completed": 1
+      },
+      "build": "2.8.0+cc5fecf8cb75f1c7"
+    },
+    {
+      "coverage": "standard",
+      "traffic": "low-impact",
+      "preset": null,
+      "mode": "acquisition",
+      "overall": {
+        "truePositives": 27,
+        "falsePositives": 3,
+        "falseNegatives": 0,
+        "precision": 0.9,
+        "recall": 1
+      },
+      "negativeAlerts": 3,
+      "sites": 20,
+      "requests": 587,
+      "durationMs": 1278789,
+      "states": {
+        "incomplete": 20
+      },
+      "build": "2.8.0+cc5fecf8cb75f1c7"
+    },
+    {
+      "coverage": "standard",
+      "traffic": "low-impact",
+      "preset": null,
+      "mode": "discovery",
+      "overall": {
+        "truePositives": 27,
+        "falsePositives": 3,
+        "falseNegatives": 0,
+        "precision": 0.9,
+        "recall": 1
+      },
+      "negativeAlerts": 3,
+      "sites": 20,
+      "requests": 921,
+      "durationMs": 1835489,
+      "states": {
+        "incomplete": 20
+      },
+      "build": "2.8.0+cc5fecf8cb75f1c7"
+    },
+    {
+      "coverage": "standard",
+      "traffic": "normal",
+      "preset": null,
+      "mode": "acquisition",
+      "overall": {
+        "truePositives": 27,
+        "falsePositives": 3,
+        "falseNegatives": 0,
+        "precision": 0.9,
+        "recall": 1
+      },
+      "negativeAlerts": 3,
+      "sites": 20,
+      "requests": 768,
+      "durationMs": 744935,
+      "states": {
+        "incomplete": 20
+      },
+      "build": "2.8.0+cc5fecf8cb75f1c7"
+    },
+    {
+      "coverage": "standard",
+      "traffic": "normal",
+      "preset": null,
+      "mode": "discovery",
+      "overall": {
+        "truePositives": 27,
+        "falsePositives": 3,
+        "falseNegatives": 0,
+        "precision": 0.9,
+        "recall": 1
+      },
+      "negativeAlerts": 3,
+      "sites": 20,
+      "requests": 1334,
+      "durationMs": 694836,
+      "states": {
+        "incomplete": 20
+      },
+      "build": "2.8.0+cc5fecf8cb75f1c7"
+    },
+    {
+      "coverage": "deep",
+      "traffic": "low-impact",
+      "preset": null,
+      "mode": "acquisition",
+      "overall": {
+        "truePositives": 27,
+        "falsePositives": 3,
+        "falseNegatives": 0,
+        "precision": 0.9,
+        "recall": 1
+      },
+      "negativeAlerts": 3,
+      "sites": 20,
+      "requests": 612,
+      "durationMs": 1707659,
+      "states": {
+        "incomplete": 20
+      },
+      "build": "2.8.0+cc5fecf8cb75f1c7"
+    },
+    {
+      "coverage": "deep",
+      "traffic": "low-impact",
+      "preset": null,
+      "mode": "discovery",
+      "overall": {
+        "truePositives": 27,
+        "falsePositives": 3,
+        "falseNegatives": 0,
+        "precision": 0.9,
+        "recall": 1
+      },
+      "negativeAlerts": 3,
+      "sites": 20,
+      "requests": 922,
+      "durationMs": 1839205,
+      "states": {
+        "incomplete": 20
+      },
+      "build": "2.8.0+cc5fecf8cb75f1c7"
+    },
+    {
+      "coverage": "deep",
+      "traffic": "normal",
+      "preset": null,
+      "mode": "acquisition",
+      "overall": {
+        "truePositives": 27,
+        "falsePositives": 3,
+        "falseNegatives": 0,
+        "precision": 0.9,
+        "recall": 1
+      },
+      "negativeAlerts": 3,
+      "sites": 20,
+      "requests": 1067,
+      "durationMs": 1361575,
+      "states": {
+        "incomplete": 20
+      },
+      "build": "2.8.0+cc5fecf8cb75f1c7"
+    },
+    {
+      "coverage": "deep",
+      "traffic": "normal",
+      "preset": null,
+      "mode": "discovery",
+      "overall": {
+        "truePositives": 27,
+        "falsePositives": 3,
+        "falseNegatives": 0,
+        "precision": 0.9,
+        "recall": 1
+      },
+      "negativeAlerts": 3,
+      "sites": 20,
+      "requests": 1332,
+      "durationMs": 714110,
+      "states": {
+        "incomplete": 20
+      },
+      "build": "2.8.0+cc5fecf8cb75f1c7"
+    }
+  ],
+  "externalCorpusSource": "benchmarks/2.8.0/external-corpus",
+  "preflight": {
+    "ok": true,
+    "failed": []
+  },
+  "machineState": {
+    "source": "benchmarks/2.8.0/machine-state.json",
+    "host": {
+      "platform": "Windows_NT 10.0.26200 x64",
+      "cpuModel": "8-core x86-64 laptop CPU",
+      "logicalCpus": 16,
+      "totalMemGiB": 31.3
+    },
+    "steps": [
+      {
+        "step": "Mass scan (loopback fixtures)",
+        "durationS": 4609,
+        "acThroughout": true,
+        "cpuLoadPercent": {
+          "before": 5.5,
+          "median": 12.4,
+          "max": 48.1
+        },
+        "freeMemGiBMin": 9.5
+      },
+      {
+        "step": "Cancellation stress (20 passes)",
+        "durationS": 217,
+        "acThroughout": true,
+        "cpuLoadPercent": {
+          "before": 5.7,
+          "median": 21.2,
+          "max": 32.4
+        },
+        "freeMemGiBMin": 11.1
+      },
+      {
+        "step": "CLI smoke",
+        "durationS": 6,
+        "acThroughout": true,
+        "cpuLoadPercent": {
+          "before": 11.8,
+          "median": 9.5,
+          "max": 9.5
+        },
+        "freeMemGiBMin": 12.2
+      },
+      {
+        "step": "Persistence smoke",
+        "durationS": 10,
+        "acThroughout": true,
+        "cpuLoadPercent": {
+          "before": 5.1,
+          "median": 10.1,
+          "max": 14.3
+        },
+        "freeMemGiBMin": 12.3
+      },
+      {
+        "step": "Provider corpus benchmark",
+        "durationS": 24,
+        "acThroughout": true,
+        "cpuLoadPercent": {
+          "before": 7.2,
+          "median": 14.3,
+          "max": 17.2
+        },
+        "freeMemGiBMin": 12.2
+      },
+      {
+        "step": "Pipeline self-test",
+        "durationS": 13,
+        "acThroughout": true,
+        "cpuLoadPercent": {
+          "before": 5.9,
+          "median": 19.5,
+          "max": 23.2
+        },
+        "freeMemGiBMin": 11.6
+      },
+      {
+        "step": "Legacy 2.4 corpora, 2.8.0",
+        "durationS": 3,
+        "acThroughout": true,
+        "cpuLoadPercent": {
+          "before": 10.3,
+          "median": 9.5,
+          "max": 9.5
+        },
+        "freeMemGiBMin": 12.2
+      },
+      {
+        "step": "Dynamic application, 2.8.0",
+        "durationS": 7,
+        "acThroughout": true,
+        "cpuLoadPercent": {
+          "before": 9,
+          "median": 14.1,
+          "max": 14.1
+        },
+        "freeMemGiBMin": 11.5
+      },
+      {
+        "step": "Frozen 2.5 corpus, legacy settings (3 repetitions)",
+        "durationS": 338,
+        "acThroughout": true,
+        "cpuLoadPercent": {
+          "before": 8.4,
+          "median": 15,
+          "max": 36.3
+        },
+        "freeMemGiBMin": 10.9
+      },
+      {
+        "step": "Matrix spot check (6 reused 2.7.0 rows)",
+        "durationS": 613,
+        "acThroughout": true,
+        "cpuLoadPercent": {
+          "before": 7.5,
+          "median": 24.5,
+          "max": 53.4
+        },
+        "freeMemGiBMin": 10.1
+      },
+      {
+        "step": "Ready-option matrix, 2.7.0 side (full rerun after spot check)",
+        "durationS": 3640,
+        "acThroughout": true,
+        "cpuLoadPercent": {
+          "before": 10.5,
+          "median": 20.4,
+          "max": 100
+        },
+        "freeMemGiBMin": 3.2
+      },
+      {
+        "step": "Ready-option matrix, 2.7.0 rows measured under outside load, rerun",
+        "durationS": 1013,
+        "acThroughout": true,
+        "cpuLoadPercent": {
+          "before": null,
+          "median": 13.4,
+          "max": 33.2
+        },
+        "freeMemGiBMin": 14.7
+      },
+      {
+        "step": "Ready-option matrix",
+        "durationS": 3852,
+        "acThroughout": true,
+        "cpuLoadPercent": {
+          "before": null,
+          "median": 10.2,
+          "max": 42.4
+        },
+        "freeMemGiBMin": 11
+      },
+      {
+        "step": "External corpus pair 1 (2-wide, under outside load; measured again below): 2:standard:low-impact:discovery 3:deep:low-impact:discovery",
+        "durationS": 1901,
+        "acThroughout": false,
+        "cpuLoadPercent": {
+          "before": 7.5,
+          "median": 17.1,
+          "max": 100
+        },
+        "freeMemGiBMin": 5.7
+      },
+      {
+        "step": "Focused bundle mirror check (quiet machine; mirror-check.json)",
+        "durationS": 122,
+        "acThroughout": true,
+        "cpuLoadPercent": {
+          "before": 6.5,
+          "median": 16.7,
+          "max": 35.7
+        },
+        "freeMemGiBMin": 12.3
+      },
+      {
+        "step": "External corpus pair 1 (2-wide, quiet machine): 2:standard:low-impact:discovery 3:deep:low-impact:discovery",
+        "durationS": 1841,
+        "acThroughout": true,
+        "cpuLoadPercent": {
+          "before": 13.8,
+          "median": 6.4,
+          "max": 45.2
+        },
+        "freeMemGiBMin": 10
+      },
+      {
+        "step": "External corpus pair 2 (2-wide, quiet machine): 3:deep:low-impact:acquisition 3:deep:normal:acquisition",
+        "durationS": 1709,
+        "acThroughout": true,
+        "cpuLoadPercent": {
+          "before": 9.2,
+          "median": 16.6,
+          "max": 36.5
+        },
+        "freeMemGiBMin": 10.3
+      },
+      {
+        "step": "External corpus pair 3 (2-wide, quiet machine): 2:standard:low-impact:acquisition 1:quick:low-impact:acquisition",
+        "durationS": 1280,
+        "acThroughout": true,
+        "cpuLoadPercent": {
+          "before": 6.2,
+          "median": 7.4,
+          "max": 26.8
+        },
+        "freeMemGiBMin": 12.6
+      },
+      {
+        "step": "External corpus pair 4 (2-wide, quiet machine): 1:quick:low-impact:discovery 2:standard:normal:acquisition",
+        "durationS": 942,
+        "acThroughout": true,
+        "cpuLoadPercent": {
+          "before": 10.8,
+          "median": 16.3,
+          "max": 33.2
+        },
+        "freeMemGiBMin": 11.3
+      },
+      {
+        "step": "External corpus pair 5 (2-wide, quiet machine): 2:standard:normal:discovery 3:deep:normal:discovery",
+        "durationS": 715,
+        "acThroughout": true,
+        "cpuLoadPercent": {
+          "before": 10.9,
+          "median": 19.8,
+          "max": 54.3
+        },
+        "freeMemGiBMin": 11.9
+      },
+      {
+        "step": "External corpus pair 6 (2-wide, quiet machine): 1:quick:normal:discovery 1:quick:normal:acquisition",
+        "durationS": 279,
+        "acThroughout": true,
+        "cpuLoadPercent": {
+          "before": 11.1,
+          "median": 13.6,
+          "max": 27.2
+        },
+        "freeMemGiBMin": 13
+      },
+      {
+        "step": "Frozen 2.5 corpus G5 memory recheck (5 repetitions)",
+        "durationS": 102,
+        "acThroughout": true,
+        "cpuLoadPercent": {
+          "before": 10.9,
+          "median": 22.7,
+          "max": 26.9
+        },
+        "freeMemGiBMin": 13.2
+      },
+      {
+        "step": "Screenshots (regenerated, compared with docs/screenshots)",
+        "durationS": 71,
+        "acThroughout": true,
+        "cpuLoadPercent": {
+          "before": 14.3,
+          "median": 18,
+          "max": 26.5
+        },
+        "freeMemGiBMin": 12.6
+      },
+      {
+        "step": "Nonbrowser suite (final)",
+        "durationS": 1083,
+        "acThroughout": true,
+        "cpuLoadPercent": {
+          "before": 9.9,
+          "median": 12.6,
+          "max": 37.6
+        },
+        "freeMemGiBMin": 13.1
+      },
+      {
+        "step": "Browser suite (final)",
+        "durationS": 414,
+        "acThroughout": true,
+        "cpuLoadPercent": {
+          "before": 13.7,
+          "median": 18.4,
+          "max": 33.6
+        },
+        "freeMemGiBMin": 12.6
+      }
+    ]
+  },
+  "generatedAt": "2026-10-12T12:22:28.175Z"
+}

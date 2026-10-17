@@ -1,0 +1,26 @@
+{
+  "at": "2026-10-06T19:19:44.660Z",
+  "build": {
+    "version": "2.3.0-rc.1",
+    "id": "2.3.0-rc.1+5fd9435d84e583c6",
+    "sourceDigest": "5fd9435d84e583c60e6c96b8727db9dca5b70ecc2a7eb83eace453768b202052"
+  },
+  "sourceCompiledParity": "verified",
+  "launchedBuild": {
+    "version": "2.3.0-rc.1",
+    "id": "2.3.0-rc.1+5fd9435d84e583c6",
+    "sourceDigest": "5fd9435d84e583c60e6c96b8727db9dca5b70ecc2a7eb83eace453768b202052"
+  },
+  "priorInstance": {
+    "status": "no responding registered instance"
+  },
+  "archiveCandidates": [
+    "Exposure Desk 2.1.0-rc.1 Source.zip",
+    "Exposure Desk 2.1.0-rc.1 Windows x64.zip",
+    "Exposure Desk 2.2.0-rc.1 Source.zip",
+    "Exposure Desk 2.2.0-rc.1 Windows x64.zip",
+    "Exposure Desk 2.3.0-rc.1 Source.zip",
+    "Exposure Desk 2.3.0-rc.1 Windows x64.zip"
+  ],
+  "protectedData": "No production store opened for baseline health; existing data left intact."
+}

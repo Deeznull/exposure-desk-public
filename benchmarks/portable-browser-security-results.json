@@ -1,0 +1,2943 @@
+{
+  "state": "incomplete",
+  "browser": {
+    "requested": true,
+    "launch": true,
+    "runtimePages": 2,
+    "isolation": "unverified"
+  },
+  "accounting": {
+    "networkAttempts": 53,
+    "blockedEvents": 24,
+    "uniqueResources": 36,
+    "repeatedRequests": 17,
+    "downloadedBytes": 272335,
+    "retainedDecodedBytes": 141834,
+    "textAnalyzedBytes": 141834,
+    "intentionalSkips": 6,
+    "httpErrors": 2,
+    "coverageGaps": 17
+  },
+  "resources": [
+    {
+      "url": "http://127.0.0.1:54122/robots.txt",
+      "status": "scanned",
+      "code": 200,
+      "bytes": 55,
+      "partial": false,
+      "chain": [],
+      "kind": "robots",
+      "analysis": "analyzed",
+      "requestHeaderNames": [
+        "accept",
+        "accept-encoding",
+        "host"
+      ],
+      "contentType": "text/plain",
+      "httpDisposition": "success",
+      "textBytes": 55
+    },
+    {
+      "url": "http://127.0.0.1:54122/",
+      "status": "scanned",
+      "code": 200,
+      "bytes": 1021,
+      "partial": false,
+      "chain": [],
+      "kind": "page",
+      "analysis": "analyzed",
+      "requestHeaderNames": [
+        "accept",
+        "accept-encoding",
+        "host"
+      ],
+      "contentType": "text/html",
+      "httpDisposition": "success",
+      "discoveryChains": [
+        []
+      ],
+      "textBytes": 1021
+    },
+    {
+      "url": "http://127.0.0.1:54122/sitemap.xml",
+      "status": "scanned",
+      "code": 200,
+      "bytes": 97,
+      "partial": false,
+      "chain": [
+        "http://127.0.0.1:54122/robots.txt"
+      ],
+      "kind": "sitemap",
+      "analysis": "analyzed",
+      "requestHeaderNames": [
+        "accept",
+        "accept-encoding",
+        "host"
+      ],
+      "contentType": "application/xml",
+      "httpDisposition": "success",
+      "discoveryChains": [
+        [
+          "http://127.0.0.1:54122/robots.txt"
+        ],
+        []
+      ],
+      "textBytes": 97
+    },
+    {
+      "url": "http://127.0.0.1:54122/manifest.webmanifest",
+      "status": "scanned",
+      "code": 200,
+      "bytes": 50,
+      "partial": false,
+      "chain": [
+        "http://127.0.0.1:54122/",
+        "document/base URL"
+      ],
+      "kind": "manifest",
+      "analysis": "analyzed",
+      "requestHeaderNames": [
+        "accept",
+        "accept-encoding",
+        "host"
+      ],
+      "contentType": "application/manifest+json",
+      "httpDisposition": "success",
+      "discoveryChains": [
+        [
+          "http://127.0.0.1:54122/",
+          "document/base URL"
+        ],
+        [
+          "about:blank",
+          "observed browser request",
+          "http://127.0.0.1:54122/",
+          "document/base URL"
+        ]
+      ],
+      "textBytes": 50
+    },
+    {
+      "url": "http://127.0.0.1:54122/site.css",
+      "status": "scanned",
+      "code": 200,
+      "bytes": 92,
+      "partial": false,
+      "chain": [
+        "http://127.0.0.1:54122/",
+        "document/base URL"
+      ],
+      "kind": "asset",
+      "analysis": "analyzed",
+      "requestHeaderNames": [
+        "accept",
+        "accept-encoding",
+        "host"
+      ],
+      "contentType": "text/css",
+      "httpDisposition": "success",
+      "discoveryChains": [
+        [
+          "http://127.0.0.1:54122/",
+          "document/base URL"
+        ],
+        [
+          "about:blank",
+          "observed browser request",
+          "http://127.0.0.1:54122/",
+          "document/base URL"
+        ]
+      ],
+      "textBytes": 92
+    },
+    {
+      "url": "http://127.0.0.1:54122/app.min.js",
+      "status": "scanned",
+      "code": 200,
+      "bytes": 1658,
+      "partial": false,
+      "chain": [
+        "http://127.0.0.1:54122/",
+        "document/base URL"
+      ],
+      "kind": "asset",
+      "analysis": "analyzed",
+      "requestHeaderNames": [
+        "accept",
+        "accept-encoding",
+        "host"
+      ],
+      "contentType": "text/javascript",
+      "httpDisposition": "success",
+      "discoveryChains": [
+        [
+          "http://127.0.0.1:54122/",
+          "document/base URL"
+        ],
+        [
+          "about:blank",
+          "observed browser request",
+          "http://127.0.0.1:54122/",
+          "document/base URL"
+        ]
+      ],
+      "textBytes": 1658
+    },
+    {
+      "url": "http://127.0.0.1:54122/inline.js",
+      "status": "scanned",
+      "code": 200,
+      "bytes": 337,
+      "partial": false,
+      "chain": [
+        "http://127.0.0.1:54122/",
+        "document/base URL"
+      ],
+      "kind": "asset",
+      "analysis": "analyzed",
+      "requestHeaderNames": [
+        "accept",
+        "accept-encoding",
+        "host"
+      ],
+      "contentType": "text/javascript",
+      "httpDisposition": "success",
+      "discoveryChains": [
+        [
+          "http://127.0.0.1:54122/",
+          "document/base URL"
+        ],
+        [
+          "about:blank",
+          "observed browser request",
+          "http://127.0.0.1:54122/",
+          "document/base URL"
+        ]
+      ],
+      "textBytes": 337
+    },
+    {
+      "url": "http://127.0.0.1:54122/header-map.js",
+      "status": "scanned",
+      "code": 200,
+      "bytes": 10,
+      "partial": false,
+      "chain": [
+        "http://127.0.0.1:54122/",
+        "document/base URL"
+      ],
+      "kind": "asset",
+      "analysis": "analyzed",
+      "requestHeaderNames": [
+        "accept",
+        "accept-encoding",
+        "host"
+      ],
+      "contentType": "text/javascript",
+      "httpDisposition": "success",
+      "discoveryChains": [
+        [
+          "http://127.0.0.1:54122/",
+          "document/base URL"
+        ],
+        [
+          "about:blank",
+          "observed browser request",
+          "http://127.0.0.1:54122/",
+          "document/base URL"
+        ]
+      ],
+      "textBytes": 10
+    },
+    {
+      "url": "http://127.0.0.1:54122/conventional.js",
+      "status": "scanned",
+      "code": 200,
+      "bytes": 10,
+      "partial": false,
+      "chain": [
+        "http://127.0.0.1:54122/",
+        "document/base URL"
+      ],
+      "kind": "asset",
+      "analysis": "analyzed",
+      "requestHeaderNames": [
+        "accept",
+        "accept-encoding",
+        "host"
+      ],
+      "contentType": "text/javascript",
+      "httpDisposition": "success",
+      "discoveryChains": [
+        [
+          "http://127.0.0.1:54122/",
+          "document/base URL"
+        ],
+        [
+          "about:blank",
+          "observed browser request",
+          "http://127.0.0.1:54122/",
+          "document/base URL"
+        ]
+      ],
+      "textBytes": 10
+    },
+    {
+      "url": "http://127.0.0.1:54121/outside.js",
+      "status": "blocked",
+      "analysis": "skipped",
+      "reason": "scope",
+      "bytes": 0,
+      "chain": [
+        "http://127.0.0.1:54122/",
+        "document/base URL"
+      ],
+      "kind": "asset",
+      "discoveryChains": [
+        [
+          "http://127.0.0.1:54122/",
+          "document/base URL"
+        ],
+        [
+          "http://127.0.0.1:54122/",
+          "document/base URL",
+          "http://127.0.0.1:54122/app.min.js",
+          "static bundle literal"
+        ],
+        [
+          "about:blank",
+          "observed browser request",
+          "http://127.0.0.1:54122/",
+          "document/base URL"
+        ],
+        [
+          "http://127.0.0.1:54122/",
+          "observed browser request",
+          "http://127.0.0.1:54122/app.min.js",
+          "static bundle literal"
+        ]
+      ]
+    },
+    {
+      "url": "http://127.0.0.1:54122/about",
+      "status": "scanned",
+      "code": 200,
+      "bytes": 131,
+      "partial": false,
+      "chain": [
+        "http://127.0.0.1:54122/",
+        "document/base URL"
+      ],
+      "kind": "page",
+      "analysis": "analyzed",
+      "requestHeaderNames": [
+        "accept",
+        "accept-encoding",
+        "host"
+      ],
+      "contentType": "text/html",
+      "httpDisposition": "success",
+      "discoveryChains": [
+        [
+          "http://127.0.0.1:54122/",
+          "document/base URL"
+        ],
+        [
+          "http://127.0.0.1:54122/robots.txt",
+          "http://127.0.0.1:54122/sitemap.xml"
+        ],
+        [
+          "http://127.0.0.1:54122/",
+          "document/base URL",
+          "http://127.0.0.1:54122/manifest.webmanifest"
+        ],
+        [
+          "about:blank",
+          "observed browser request",
+          "http://127.0.0.1:54122/",
+          "document/base URL"
+        ]
+      ],
+      "textBytes": 131
+    },
+    {
+      "url": "http://127.0.0.1:54122/login",
+      "status": "http-error",
+      "code": 401,
+      "bytes": 78,
+      "partial": false,
+      "chain": [
+        "http://127.0.0.1:54122/",
+        "document/base URL"
+      ],
+      "kind": "page",
+      "analysis": "analyzed",
+      "requestHeaderNames": [
+        "accept",
+        "accept-encoding",
+        "host"
+      ],
+      "contentType": "text/html",
+      "httpDisposition": "authentication-challenge",
+      "discoveryChains": [
+        [
+          "http://127.0.0.1:54122/",
+          "document/base URL"
+        ],
+        [
+          "about:blank",
+          "observed browser request",
+          "http://127.0.0.1:54122/",
+          "document/base URL"
+        ]
+      ],
+      "textBytes": 78
+    },
+    {
+      "url": "http://127.0.0.1:54122/redirect-out",
+      "status": "redirect",
+      "code": 302,
+      "bytes": 0,
+      "partial": false,
+      "chain": [
+        "http://127.0.0.1:54122/",
+        "document/base URL"
+      ],
+      "kind": "page",
+      "analysis": "analyzed",
+      "requestHeaderNames": [
+        "accept",
+        "accept-encoding",
+        "host"
+      ],
+      "contentType": "",
+      "httpDisposition": "redirect",
+      "discoveryChains": [
+        [
+          "http://127.0.0.1:54122/",
+          "document/base URL"
+        ],
+        [
+          "about:blank",
+          "observed browser request",
+          "http://127.0.0.1:54122/",
+          "document/base URL"
+        ]
+      ],
+      "textBytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:54121/redirect-target",
+      "status": "blocked",
+      "analysis": "skipped",
+      "reason": "scope",
+      "bytes": 0,
+      "chain": [
+        "http://127.0.0.1:54122/",
+        "document/base URL",
+        "http://127.0.0.1:54122/redirect-out",
+        "HTTP redirect"
+      ],
+      "kind": "page"
+    },
+    {
+      "url": "http://127.0.0.1:54122/fail",
+      "status": "failed",
+      "analysis": "failed",
+      "bytes": 0,
+      "chain": [
+        "http://127.0.0.1:54122/",
+        "document/base URL"
+      ],
+      "kind": "page",
+      "reason": "network-failure",
+      "discoveryChains": [
+        [
+          "http://127.0.0.1:54122/",
+          "document/base URL"
+        ],
+        [
+          "about:blank",
+          "observed browser request",
+          "http://127.0.0.1:54122/",
+          "document/base URL"
+        ]
+      ]
+    },
+    {
+      "url": "http://127.0.0.1:54122/big",
+      "status": "scanned",
+      "code": 200,
+      "bytes": 65536,
+      "partial": true,
+      "chain": [
+        "http://127.0.0.1:54122/",
+        "document/base URL"
+      ],
+      "kind": "page",
+      "analysis": "analyzed",
+      "requestHeaderNames": [
+        "accept",
+        "accept-encoding",
+        "host"
+      ],
+      "contentType": "text/plain",
+      "httpDisposition": "success",
+      "discoveryChains": [
+        [
+          "http://127.0.0.1:54122/",
+          "document/base URL"
+        ],
+        [
+          "about:blank",
+          "observed browser request",
+          "http://127.0.0.1:54122/",
+          "document/base URL"
+        ]
+      ],
+      "textBytes": 65536
+    },
+    {
+      "url": "http://127.0.0.1:54122/rate",
+      "status": "http-error",
+      "code": 429,
+      "bytes": 12,
+      "partial": false,
+      "chain": [
+        "http://127.0.0.1:54122/",
+        "document/base URL"
+      ],
+      "kind": "page",
+      "analysis": "analyzed",
+      "requestHeaderNames": [
+        "accept",
+        "accept-encoding",
+        "host"
+      ],
+      "contentType": "text/plain",
+      "httpDisposition": "other",
+      "discoveryChains": [
+        [
+          "http://127.0.0.1:54122/",
+          "document/base URL"
+        ],
+        [
+          "about:blank",
+          "observed browser request",
+          "http://127.0.0.1:54122/",
+          "document/base URL"
+        ]
+      ],
+      "textBytes": 12
+    },
+    {
+      "url": "http://127.0.0.1:54122/redirect-secret",
+      "status": "redirect",
+      "code": 302,
+      "bytes": 0,
+      "partial": false,
+      "chain": [
+        "http://127.0.0.1:54122/",
+        "document/base URL"
+      ],
+      "kind": "page",
+      "analysis": "analyzed",
+      "requestHeaderNames": [
+        "accept",
+        "accept-encoding",
+        "host"
+      ],
+      "contentType": "",
+      "httpDisposition": "redirect",
+      "discoveryChains": [
+        [
+          "http://127.0.0.1:54122/",
+          "document/base URL"
+        ],
+        [
+          "about:blank",
+          "observed browser request",
+          "http://127.0.0.1:54122/",
+          "document/base URL"
+        ]
+      ],
+      "textBytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:54122/collect?api_key=[redacted]",
+      "status": "blocked",
+      "analysis": "skipped",
+      "reason": "credential-in-request",
+      "bytes": 0,
+      "chain": [
+        "http://127.0.0.1:54122/",
+        "document/base URL",
+        "http://127.0.0.1:54122/redirect-secret",
+        "HTTP redirect"
+      ],
+      "kind": "page"
+    },
+    {
+      "url": "http://127.0.0.1:54122/child",
+      "status": "scanned",
+      "code": 200,
+      "bytes": 95,
+      "partial": false,
+      "chain": [
+        "http://127.0.0.1:54122/",
+        "document/base URL"
+      ],
+      "kind": "page",
+      "analysis": "analyzed",
+      "requestHeaderNames": [
+        "accept",
+        "accept-encoding",
+        "host"
+      ],
+      "contentType": "text/html",
+      "httpDisposition": "success",
+      "discoveryChains": [
+        [
+          "http://127.0.0.1:54122/",
+          "document/base URL"
+        ],
+        [
+          "about:blank",
+          "observed browser request",
+          "http://127.0.0.1:54122/",
+          "document/base URL"
+        ]
+      ],
+      "textBytes": 95
+    },
+    {
+      "url": "http://127.0.0.1:54122/slow",
+      "status": "scanned",
+      "code": 200,
+      "bytes": 13,
+      "partial": false,
+      "chain": [
+        "http://127.0.0.1:54122/",
+        "document/base URL"
+      ],
+      "kind": "page",
+      "analysis": "analyzed",
+      "requestHeaderNames": [
+        "accept",
+        "accept-encoding",
+        "host"
+      ],
+      "contentType": "text/plain",
+      "httpDisposition": "success",
+      "discoveryChains": [
+        [
+          "http://127.0.0.1:54122/",
+          "document/base URL"
+        ],
+        [
+          "about:blank",
+          "observed browser request",
+          "http://127.0.0.1:54122/",
+          "document/base URL"
+        ]
+      ],
+      "textBytes": 13
+    },
+    {
+      "url": "http://127.0.0.1:54122/excluded",
+      "status": "skipped",
+      "analysis": "skipped",
+      "bytes": 0,
+      "chain": [
+        "http://127.0.0.1:54122/robots.txt",
+        "http://127.0.0.1:54122/sitemap.xml"
+      ],
+      "kind": "page",
+      "reason": "robots-exclusion"
+    },
+    {
+      "url": "http://127.0.0.1:54122/fallback",
+      "status": "scanned",
+      "code": 200,
+      "bytes": 61,
+      "partial": false,
+      "chain": [
+        "http://127.0.0.1:54122/",
+        "document/base URL"
+      ],
+      "kind": "page",
+      "analysis": "analyzed",
+      "requestHeaderNames": [
+        "accept",
+        "accept-encoding",
+        "host"
+      ],
+      "contentType": "text/html",
+      "httpDisposition": "success",
+      "discoveryChains": [
+        [
+          "http://127.0.0.1:54122/",
+          "document/base URL"
+        ],
+        [
+          "about:blank",
+          "observed browser request",
+          "http://127.0.0.1:54122/",
+          "document/base URL"
+        ]
+      ],
+      "textBytes": 61
+    },
+    {
+      "url": "http://127.0.0.1:54122/lazy.js",
+      "status": "scanned",
+      "code": 200,
+      "bytes": 311,
+      "partial": false,
+      "chain": [
+        "http://127.0.0.1:54122/",
+        "document/base URL",
+        "http://127.0.0.1:54122/app.min.js",
+        "importing module"
+      ],
+      "kind": "asset",
+      "analysis": "analyzed",
+      "requestHeaderNames": [
+        "accept",
+        "accept-encoding",
+        "host"
+      ],
+      "contentType": "text/javascript",
+      "httpDisposition": "success",
+      "discoveryChains": [
+        [
+          "http://127.0.0.1:54122/",
+          "document/base URL",
+          "http://127.0.0.1:54122/app.min.js",
+          "importing module"
+        ],
+        [
+          "http://127.0.0.1:54122/",
+          "observed browser request",
+          "http://127.0.0.1:54122/app.min.js",
+          "importing module"
+        ]
+      ],
+      "textBytes": 311
+    },
+    {
+      "url": "http://127.0.0.1:54122/worker.js",
+      "status": "scanned",
+      "code": 200,
+      "bytes": 172,
+      "partial": false,
+      "chain": [
+        "http://127.0.0.1:54122/",
+        "document/base URL",
+        "http://127.0.0.1:54122/app.min.js",
+        "worker document base"
+      ],
+      "kind": "asset",
+      "analysis": "analyzed",
+      "requestHeaderNames": [
+        "accept",
+        "accept-encoding",
+        "host"
+      ],
+      "contentType": "text/javascript",
+      "httpDisposition": "success",
+      "discoveryChains": [
+        [
+          "http://127.0.0.1:54122/",
+          "document/base URL",
+          "http://127.0.0.1:54122/app.min.js",
+          "worker document base"
+        ],
+        [
+          "http://127.0.0.1:54122/",
+          "observed browser request",
+          "http://127.0.0.1:54122/app.min.js",
+          "worker document base"
+        ]
+      ],
+      "textBytes": 172
+    },
+    {
+      "url": "http://127.0.0.1:54122/sw.js",
+      "status": "scanned",
+      "code": 200,
+      "bytes": 65,
+      "partial": false,
+      "chain": [
+        "http://127.0.0.1:54122/",
+        "document/base URL",
+        "http://127.0.0.1:54122/app.min.js",
+        "worker document base"
+      ],
+      "kind": "asset",
+      "analysis": "analyzed",
+      "requestHeaderNames": [
+        "accept",
+        "accept-encoding",
+        "host"
+      ],
+      "contentType": "text/javascript",
+      "httpDisposition": "success",
+      "discoveryChains": [
+        [
+          "http://127.0.0.1:54122/",
+          "document/base URL",
+          "http://127.0.0.1:54122/app.min.js",
+          "worker document base"
+        ],
+        [
+          "http://127.0.0.1:54122/",
+          "observed browser request",
+          "http://127.0.0.1:54122/app.min.js",
+          "worker document base"
+        ]
+      ],
+      "textBytes": 65
+    },
+    {
+      "url": "http://127.0.0.1:54122/app.min.js.map",
+      "status": "scanned",
+      "code": 200,
+      "bytes": 417,
+      "partial": false,
+      "chain": [
+        "http://127.0.0.1:54122/",
+        "document/base URL",
+        "http://127.0.0.1:54122/app.min.js",
+        "source-map comment"
+      ],
+      "kind": "map",
+      "analysis": "analyzed",
+      "requestHeaderNames": [
+        "accept",
+        "accept-encoding",
+        "host"
+      ],
+      "contentType": "application/json",
+      "httpDisposition": "success",
+      "discoveryChains": [
+        [
+          "http://127.0.0.1:54122/",
+          "document/base URL",
+          "http://127.0.0.1:54122/app.min.js",
+          "source-map comment"
+        ],
+        [
+          "http://127.0.0.1:54122/",
+          "document/base URL",
+          "http://127.0.0.1:54122/app.min.js"
+        ],
+        [
+          "http://127.0.0.1:54122/",
+          "observed browser request",
+          "http://127.0.0.1:54122/app.min.js",
+          "source-map comment"
+        ],
+        [
+          "http://127.0.0.1:54122/",
+          "observed browser request",
+          "http://127.0.0.1:54122/app.min.js"
+        ]
+      ],
+      "textBytes": 417
+    },
+    {
+      "url": "http://127.0.0.1:54122/header.map",
+      "status": "scanned",
+      "code": 200,
+      "bytes": 87,
+      "partial": false,
+      "chain": [
+        "http://127.0.0.1:54122/",
+        "document/base URL",
+        "http://127.0.0.1:54122/header-map.js"
+      ],
+      "kind": "map",
+      "analysis": "analyzed",
+      "requestHeaderNames": [
+        "accept",
+        "accept-encoding",
+        "host"
+      ],
+      "contentType": "application/json",
+      "httpDisposition": "success",
+      "discoveryChains": [
+        [
+          "http://127.0.0.1:54122/",
+          "document/base URL",
+          "http://127.0.0.1:54122/header-map.js"
+        ],
+        [
+          "http://127.0.0.1:54122/",
+          "observed browser request",
+          "http://127.0.0.1:54122/header-map.js"
+        ]
+      ],
+      "textBytes": 87
+    },
+    {
+      "url": "http://127.0.0.1:54122/nested/page",
+      "status": "scanned",
+      "code": 200,
+      "bytes": 92,
+      "partial": false,
+      "chain": [
+        "http://127.0.0.1:54122/",
+        "document/base URL",
+        "http://127.0.0.1:54122/about",
+        "document/base URL"
+      ],
+      "kind": "page",
+      "analysis": "analyzed",
+      "requestHeaderNames": [
+        "accept",
+        "accept-encoding",
+        "host"
+      ],
+      "contentType": "application/json",
+      "httpDisposition": "success",
+      "discoveryChains": [
+        [
+          "http://127.0.0.1:54122/",
+          "document/base URL",
+          "http://127.0.0.1:54122/about",
+          "document/base URL"
+        ],
+        [
+          "http://127.0.0.1:54122/",
+          "document/base URL",
+          "http://127.0.0.1:54122/child",
+          "document/base URL"
+        ],
+        [
+          "http://127.0.0.1:54122/",
+          "observed browser request",
+          "http://127.0.0.1:54122/about",
+          "document/base URL"
+        ],
+        [
+          "http://127.0.0.1:54122/about",
+          "observed browser request",
+          "http://127.0.0.1:54122/child",
+          "document/base URL"
+        ]
+      ],
+      "textBytes": 92
+    },
+    {
+      "url": "http://127.0.0.1:54122/frame",
+      "status": "scanned",
+      "code": 200,
+      "bytes": 157,
+      "partial": false,
+      "chain": [
+        "http://127.0.0.1:54122/",
+        "document/base URL",
+        "http://127.0.0.1:54122/child",
+        "document/base URL"
+      ],
+      "kind": "asset",
+      "analysis": "analyzed",
+      "requestHeaderNames": [
+        "accept",
+        "accept-encoding",
+        "host"
+      ],
+      "contentType": "text/html",
+      "httpDisposition": "success",
+      "discoveryChains": [
+        [
+          "http://127.0.0.1:54122/",
+          "document/base URL",
+          "http://127.0.0.1:54122/child",
+          "document/base URL"
+        ],
+        [
+          "http://127.0.0.1:54122/about",
+          "observed browser request",
+          "http://127.0.0.1:54122/child",
+          "document/base URL"
+        ]
+      ],
+      "textBytes": 157
+    },
+    {
+      "url": "http://127.0.0.1:54122/sources/source.ts",
+      "status": "scanned",
+      "code": 200,
+      "bytes": 127,
+      "partial": false,
+      "chain": [
+        "http://127.0.0.1:54122/",
+        "document/base URL",
+        "http://127.0.0.1:54122/header-map.js",
+        "http://127.0.0.1:54122/header.map",
+        "source reference"
+      ],
+      "kind": "source",
+      "analysis": "analyzed",
+      "requestHeaderNames": [
+        "accept",
+        "accept-encoding",
+        "host"
+      ],
+      "contentType": "text/plain",
+      "httpDisposition": "success",
+      "discoveryChains": [
+        [
+          "http://127.0.0.1:54122/",
+          "document/base URL",
+          "http://127.0.0.1:54122/header-map.js",
+          "http://127.0.0.1:54122/header.map",
+          "source reference"
+        ]
+      ],
+      "textBytes": 127
+    },
+    {
+      "url": "update.googleapis.com:443",
+      "status": "blocked",
+      "analysis": "skipped",
+      "reason": "unrouted-browser-traffic",
+      "bytes": 0,
+      "chain": [
+        "deny-only proxy",
+        "No page/frame/worker initiator available on this proxy request. Hostname does not establish background or harmless traffic."
+      ],
+      "kind": "browser-proxy",
+      "provenance": {
+        "channel": "deny-proxy",
+        "attribution": "unknown",
+        "targetOrigin": false,
+        "evidence": "No page/frame/worker initiator available on this proxy request. Hostname does not establish background or harmless traffic."
+      }
+    },
+    {
+      "url": "accounts.google.com:443",
+      "status": "blocked",
+      "analysis": "skipped",
+      "reason": "unrouted-browser-traffic",
+      "bytes": 0,
+      "chain": [
+        "deny-only proxy",
+        "No page/frame/worker initiator available on this proxy request. Hostname does not establish background or harmless traffic."
+      ],
+      "kind": "browser-proxy",
+      "provenance": {
+        "channel": "deny-proxy",
+        "attribution": "unknown",
+        "targetOrigin": false,
+        "evidence": "No page/frame/worker initiator available on this proxy request. Hostname does not establish background or harmless traffic."
+      }
+    },
+    {
+      "url": "www.google.com:443",
+      "status": "blocked",
+      "analysis": "skipped",
+      "reason": "unrouted-browser-traffic",
+      "bytes": 0,
+      "chain": [
+        "deny-only proxy",
+        "No page/frame/worker initiator available on this proxy request. Hostname does not establish background or harmless traffic."
+      ],
+      "kind": "browser-proxy",
+      "provenance": {
+        "channel": "deny-proxy",
+        "attribution": "unknown",
+        "targetOrigin": false,
+        "evidence": "No page/frame/worker initiator available on this proxy request. Hostname does not establish background or harmless traffic."
+      }
+    },
+    {
+      "url": "www.google.com:443",
+      "status": "blocked",
+      "analysis": "skipped",
+      "reason": "unrouted-browser-traffic",
+      "bytes": 0,
+      "chain": [
+        "deny-only proxy",
+        "No page/frame/worker initiator available on this proxy request. Hostname does not establish background or harmless traffic."
+      ],
+      "kind": "browser-proxy",
+      "provenance": {
+        "channel": "deny-proxy",
+        "attribution": "unknown",
+        "targetOrigin": false,
+        "evidence": "No page/frame/worker initiator available on this proxy request. Hostname does not establish background or harmless traffic."
+      }
+    },
+    {
+      "url": "accounts.google.com:443",
+      "status": "blocked",
+      "analysis": "skipped",
+      "reason": "unrouted-browser-traffic",
+      "bytes": 0,
+      "chain": [
+        "deny-only proxy",
+        "No page/frame/worker initiator available on this proxy request. Hostname does not establish background or harmless traffic."
+      ],
+      "kind": "browser-proxy",
+      "provenance": {
+        "channel": "deny-proxy",
+        "attribution": "unknown",
+        "targetOrigin": false,
+        "evidence": "No page/frame/worker initiator available on this proxy request. Hostname does not establish background or harmless traffic."
+      }
+    },
+    {
+      "url": "http://127.0.0.1:54122/",
+      "status": "scanned",
+      "code": 200,
+      "bytes": 1021,
+      "partial": false,
+      "chain": [
+        "about:blank",
+        "observed browser request"
+      ],
+      "kind": "browser",
+      "analysis": "analyzed",
+      "requestHeaderNames": [
+        "accept",
+        "accept-encoding",
+        "accept-language",
+        "host",
+        "user-agent"
+      ],
+      "contentType": "text/html",
+      "httpDisposition": "success",
+      "discoveryChains": [
+        []
+      ],
+      "provenance": {
+        "channel": "guarded-route",
+        "attribution": "page",
+        "resourceType": "document",
+        "source": "about:blank",
+        "targetOrigin": true,
+        "evidence": "Playwright request routed through guarded Node transport; available frame URL and resource type recorded. Missing initiator remains unknown."
+      },
+      "textBytes": 1021
+    },
+    {
+      "url": "http://127.0.0.1:54122/site.css",
+      "status": "scanned",
+      "code": 200,
+      "bytes": 92,
+      "partial": false,
+      "chain": [
+        "http://127.0.0.1:54122/",
+        "observed browser request"
+      ],
+      "kind": "browser",
+      "analysis": "analyzed",
+      "requestHeaderNames": [
+        "accept",
+        "accept-encoding",
+        "accept-language",
+        "host",
+        "referer",
+        "user-agent"
+      ],
+      "contentType": "text/css",
+      "httpDisposition": "success",
+      "discoveryChains": [
+        [
+          "http://127.0.0.1:54122/",
+          "document/base URL"
+        ],
+        [
+          "about:blank",
+          "observed browser request",
+          "http://127.0.0.1:54122/",
+          "document/base URL"
+        ]
+      ],
+      "provenance": {
+        "channel": "guarded-route",
+        "attribution": "page",
+        "resourceType": "stylesheet",
+        "source": "http://127.0.0.1:54122/",
+        "targetOrigin": true,
+        "evidence": "Playwright request routed through guarded Node transport; available frame URL and resource type recorded. Missing initiator remains unknown."
+      },
+      "textBytes": 92
+    },
+    {
+      "url": "http://127.0.0.1:54122/app.min.js",
+      "status": "scanned",
+      "code": 200,
+      "bytes": 1658,
+      "partial": false,
+      "chain": [
+        "http://127.0.0.1:54122/",
+        "observed browser request"
+      ],
+      "kind": "browser",
+      "analysis": "analyzed",
+      "requestHeaderNames": [
+        "accept",
+        "accept-encoding",
+        "accept-language",
+        "host",
+        "referer",
+        "user-agent"
+      ],
+      "contentType": "text/javascript",
+      "httpDisposition": "success",
+      "discoveryChains": [
+        [
+          "http://127.0.0.1:54122/",
+          "document/base URL"
+        ],
+        [
+          "about:blank",
+          "observed browser request",
+          "http://127.0.0.1:54122/",
+          "document/base URL"
+        ]
+      ],
+      "provenance": {
+        "channel": "guarded-route",
+        "attribution": "page",
+        "resourceType": "script",
+        "source": "http://127.0.0.1:54122/",
+        "targetOrigin": true,
+        "evidence": "Playwright request routed through guarded Node transport; available frame URL and resource type recorded. Missing initiator remains unknown."
+      },
+      "textBytes": 1658
+    },
+    {
+      "url": "http://127.0.0.1:54122/conventional.js",
+      "status": "scanned",
+      "code": 200,
+      "bytes": 10,
+      "partial": false,
+      "chain": [
+        "http://127.0.0.1:54122/",
+        "observed browser request"
+      ],
+      "kind": "browser",
+      "analysis": "analyzed",
+      "requestHeaderNames": [
+        "accept",
+        "accept-encoding",
+        "accept-language",
+        "host",
+        "referer",
+        "user-agent"
+      ],
+      "contentType": "text/javascript",
+      "httpDisposition": "success",
+      "discoveryChains": [
+        [
+          "http://127.0.0.1:54122/",
+          "document/base URL"
+        ],
+        [
+          "about:blank",
+          "observed browser request",
+          "http://127.0.0.1:54122/",
+          "document/base URL"
+        ]
+      ],
+      "provenance": {
+        "channel": "guarded-route",
+        "attribution": "page",
+        "resourceType": "script",
+        "source": "http://127.0.0.1:54122/",
+        "targetOrigin": true,
+        "evidence": "Playwright request routed through guarded Node transport; available frame URL and resource type recorded. Missing initiator remains unknown."
+      },
+      "textBytes": 10
+    },
+    {
+      "url": "accounts.google.com:443",
+      "status": "blocked",
+      "analysis": "skipped",
+      "reason": "unrouted-browser-traffic",
+      "bytes": 0,
+      "chain": [
+        "deny-only proxy",
+        "No page/frame/worker initiator available on this proxy request. Hostname does not establish background or harmless traffic."
+      ],
+      "kind": "browser-proxy",
+      "provenance": {
+        "channel": "deny-proxy",
+        "attribution": "unknown",
+        "targetOrigin": false,
+        "evidence": "No page/frame/worker initiator available on this proxy request. Hostname does not establish background or harmless traffic."
+      }
+    },
+    {
+      "url": "http://127.0.0.1:54122/header-map.js",
+      "status": "scanned",
+      "code": 200,
+      "bytes": 10,
+      "partial": false,
+      "chain": [
+        "http://127.0.0.1:54122/",
+        "observed browser request"
+      ],
+      "kind": "browser",
+      "analysis": "analyzed",
+      "requestHeaderNames": [
+        "accept",
+        "accept-encoding",
+        "accept-language",
+        "host",
+        "referer",
+        "user-agent"
+      ],
+      "contentType": "text/javascript",
+      "httpDisposition": "success",
+      "discoveryChains": [
+        [
+          "http://127.0.0.1:54122/",
+          "document/base URL"
+        ],
+        [
+          "about:blank",
+          "observed browser request",
+          "http://127.0.0.1:54122/",
+          "document/base URL"
+        ]
+      ],
+      "provenance": {
+        "channel": "guarded-route",
+        "attribution": "page",
+        "resourceType": "script",
+        "source": "http://127.0.0.1:54122/",
+        "targetOrigin": true,
+        "evidence": "Playwright request routed through guarded Node transport; available frame URL and resource type recorded. Missing initiator remains unknown."
+      },
+      "textBytes": 10
+    },
+    {
+      "url": "http://127.0.0.1:54121/outside.js",
+      "status": "blocked",
+      "analysis": "skipped",
+      "reason": "scope",
+      "bytes": 0,
+      "chain": [
+        "http://127.0.0.1:54122/",
+        "observed browser request"
+      ],
+      "kind": "browser",
+      "provenance": {
+        "channel": "guarded-route",
+        "attribution": "page",
+        "resourceType": "script",
+        "source": "http://127.0.0.1:54122/",
+        "targetOrigin": false,
+        "evidence": "Playwright request routed through guarded Node transport; available frame URL and resource type recorded. Missing initiator remains unknown."
+      },
+      "discoveryChains": [
+        [
+          "http://127.0.0.1:54122/",
+          "document/base URL"
+        ],
+        [
+          "http://127.0.0.1:54122/",
+          "document/base URL",
+          "http://127.0.0.1:54122/app.min.js",
+          "static bundle literal"
+        ],
+        [
+          "about:blank",
+          "observed browser request",
+          "http://127.0.0.1:54122/",
+          "document/base URL"
+        ],
+        [
+          "http://127.0.0.1:54122/",
+          "observed browser request",
+          "http://127.0.0.1:54122/app.min.js",
+          "static bundle literal"
+        ]
+      ]
+    },
+    {
+      "url": "http://127.0.0.1:54122/inline.js",
+      "status": "scanned",
+      "code": 200,
+      "bytes": 337,
+      "partial": false,
+      "chain": [
+        "http://127.0.0.1:54122/",
+        "observed browser request"
+      ],
+      "kind": "browser",
+      "analysis": "analyzed",
+      "requestHeaderNames": [
+        "accept",
+        "accept-encoding",
+        "accept-language",
+        "host",
+        "referer",
+        "user-agent"
+      ],
+      "contentType": "text/javascript",
+      "httpDisposition": "success",
+      "discoveryChains": [
+        [
+          "http://127.0.0.1:54122/",
+          "document/base URL"
+        ],
+        [
+          "about:blank",
+          "observed browser request",
+          "http://127.0.0.1:54122/",
+          "document/base URL"
+        ]
+      ],
+      "provenance": {
+        "channel": "guarded-route",
+        "attribution": "page",
+        "resourceType": "script",
+        "source": "http://127.0.0.1:54122/",
+        "targetOrigin": true,
+        "evidence": "Playwright request routed through guarded Node transport; available frame URL and resource type recorded. Missing initiator remains unknown."
+      },
+      "textBytes": 337
+    },
+    {
+      "url": "ws://127.0.0.1:54122/socket",
+      "status": "blocked",
+      "analysis": "skipped",
+      "reason": "websocket-disabled",
+      "bytes": 0,
+      "chain": [],
+      "kind": "browser"
+    },
+    {
+      "url": "http://127.0.0.1:54122/collect",
+      "status": "blocked",
+      "analysis": "skipped",
+      "reason": "credential-in-request",
+      "bytes": 0,
+      "chain": [
+        "http://127.0.0.1:54122/",
+        "observed browser request"
+      ],
+      "kind": "browser",
+      "provenance": {
+        "channel": "guarded-route",
+        "attribution": "page",
+        "resourceType": "fetch",
+        "source": "http://127.0.0.1:54122/",
+        "targetOrigin": true,
+        "evidence": "Playwright request routed through guarded Node transport; available frame URL and resource type recorded. Missing initiator remains unknown."
+      }
+    },
+    {
+      "url": "http://127.0.0.1:54122/worker.js",
+      "status": "scanned",
+      "code": 200,
+      "bytes": 172,
+      "partial": false,
+      "chain": [
+        "http://127.0.0.1:54122/",
+        "observed browser request"
+      ],
+      "kind": "browser",
+      "analysis": "analyzed",
+      "requestHeaderNames": [
+        "accept",
+        "accept-encoding",
+        "host",
+        "referer"
+      ],
+      "contentType": "text/javascript",
+      "httpDisposition": "success",
+      "discoveryChains": [
+        [
+          "http://127.0.0.1:54122/",
+          "document/base URL",
+          "http://127.0.0.1:54122/app.min.js",
+          "worker document base"
+        ],
+        [
+          "http://127.0.0.1:54122/",
+          "observed browser request",
+          "http://127.0.0.1:54122/app.min.js",
+          "worker document base"
+        ]
+      ],
+      "provenance": {
+        "channel": "guarded-route",
+        "attribution": "page",
+        "resourceType": "script",
+        "source": "http://127.0.0.1:54122/",
+        "targetOrigin": true,
+        "evidence": "Playwright request routed through guarded Node transport; available frame URL and resource type recorded. Missing initiator remains unknown."
+      },
+      "textBytes": 172
+    },
+    {
+      "url": "http://127.0.0.1:54122/write",
+      "status": "blocked",
+      "analysis": "skipped",
+      "reason": "method",
+      "bytes": 0,
+      "chain": [
+        "http://127.0.0.1:54122/",
+        "observed browser request"
+      ],
+      "kind": "browser",
+      "provenance": {
+        "channel": "guarded-route",
+        "attribution": "page",
+        "resourceType": "fetch",
+        "source": "http://127.0.0.1:54122/",
+        "targetOrigin": true,
+        "evidence": "Playwright request routed through guarded Node transport; available frame URL and resource type recorded. Missing initiator remains unknown."
+      }
+    },
+    {
+      "url": "http://127.0.0.1:54122/delete",
+      "status": "blocked",
+      "analysis": "skipped",
+      "reason": "destructive-get",
+      "bytes": 0,
+      "chain": [
+        "http://127.0.0.1:54122/",
+        "observed browser request"
+      ],
+      "kind": "browser",
+      "provenance": {
+        "channel": "guarded-route",
+        "attribution": "page",
+        "resourceType": "fetch",
+        "source": "http://127.0.0.1:54122/",
+        "targetOrigin": true,
+        "evidence": "Playwright request routed through guarded Node transport; available frame URL and resource type recorded. Missing initiator remains unknown."
+      }
+    },
+    {
+      "url": "http://127.0.0.1:54122/redirect-secret",
+      "status": "redirect",
+      "code": 302,
+      "bytes": 0,
+      "partial": false,
+      "chain": [
+        "http://127.0.0.1:54122/",
+        "observed browser request"
+      ],
+      "kind": "browser",
+      "analysis": "analyzed",
+      "requestHeaderNames": [
+        "accept",
+        "accept-encoding",
+        "accept-language",
+        "host",
+        "referer",
+        "user-agent"
+      ],
+      "contentType": "",
+      "httpDisposition": "redirect",
+      "discoveryChains": [
+        [
+          "http://127.0.0.1:54122/",
+          "document/base URL"
+        ],
+        [
+          "about:blank",
+          "observed browser request",
+          "http://127.0.0.1:54122/",
+          "document/base URL"
+        ]
+      ],
+      "provenance": {
+        "channel": "guarded-route",
+        "attribution": "page",
+        "resourceType": "fetch",
+        "source": "http://127.0.0.1:54122/",
+        "targetOrigin": true,
+        "evidence": "Playwright request routed through guarded Node transport; available frame URL and resource type recorded. Missing initiator remains unknown."
+      },
+      "textBytes": 0
+    },
+    {
+      "url": "http://127.0.0.1:54122/collect?api_key=[redacted]",
+      "status": "blocked",
+      "analysis": "skipped",
+      "reason": "credential-in-request",
+      "bytes": 0,
+      "chain": [
+        "http://127.0.0.1:54122/",
+        "observed browser request"
+      ],
+      "kind": "browser",
+      "provenance": {
+        "channel": "guarded-route",
+        "attribution": "page",
+        "resourceType": "fetch",
+        "source": "http://127.0.0.1:54122/",
+        "targetOrigin": true,
+        "evidence": "Playwright request routed through guarded Node transport; available frame URL and resource type recorded. Missing initiator remains unknown."
+      }
+    },
+    {
+      "url": "http://127.0.0.1:54122/collect?api_key=[redacted]",
+      "status": "blocked",
+      "analysis": "skipped",
+      "reason": "credential-in-request",
+      "bytes": 0,
+      "chain": [
+        "http://127.0.0.1:54122/",
+        "observed browser request"
+      ],
+      "kind": "browser"
+    },
+    {
+      "url": "http://127.0.0.1:54122/write",
+      "status": "blocked",
+      "analysis": "skipped",
+      "reason": "method",
+      "bytes": 0,
+      "chain": [
+        "http://127.0.0.1:54122/",
+        "observed browser request"
+      ],
+      "kind": "browser",
+      "provenance": {
+        "channel": "guarded-route",
+        "attribution": "page",
+        "resourceType": "fetch",
+        "source": "http://127.0.0.1:54122/",
+        "targetOrigin": true,
+        "evidence": "Playwright request routed through guarded Node transport; available frame URL and resource type recorded. Missing initiator remains unknown."
+      }
+    },
+    {
+      "url": "http://127.0.0.1:54121/outside.js",
+      "status": "blocked",
+      "analysis": "skipped",
+      "reason": "scope",
+      "bytes": 0,
+      "chain": [
+        "http://127.0.0.1:54122/",
+        "observed browser request"
+      ],
+      "kind": "browser",
+      "provenance": {
+        "channel": "guarded-route",
+        "attribution": "page",
+        "resourceType": "fetch",
+        "source": "http://127.0.0.1:54122/",
+        "targetOrigin": false,
+        "evidence": "Playwright request routed through guarded Node transport; available frame URL and resource type recorded. Missing initiator remains unknown."
+      },
+      "discoveryChains": [
+        [
+          "http://127.0.0.1:54122/",
+          "document/base URL"
+        ],
+        [
+          "http://127.0.0.1:54122/",
+          "document/base URL",
+          "http://127.0.0.1:54122/app.min.js",
+          "static bundle literal"
+        ],
+        [
+          "about:blank",
+          "observed browser request",
+          "http://127.0.0.1:54122/",
+          "document/base URL"
+        ],
+        [
+          "http://127.0.0.1:54122/",
+          "observed browser request",
+          "http://127.0.0.1:54122/app.min.js",
+          "static bundle literal"
+        ]
+      ]
+    },
+    {
+      "url": "http://127.0.0.1:54123/api/scans",
+      "status": "blocked",
+      "analysis": "skipped",
+      "reason": "scope",
+      "bytes": 0,
+      "chain": [
+        "http://127.0.0.1:54122/",
+        "observed browser request"
+      ],
+      "kind": "browser",
+      "provenance": {
+        "channel": "guarded-route",
+        "attribution": "page",
+        "resourceType": "fetch",
+        "source": "http://127.0.0.1:54122/",
+        "targetOrigin": false,
+        "evidence": "Playwright request routed through guarded Node transport; available frame URL and resource type recorded. Missing initiator remains unknown."
+      }
+    },
+    {
+      "url": "http://127.0.0.1:54122/lazy.js",
+      "status": "scanned",
+      "code": 200,
+      "bytes": 311,
+      "partial": false,
+      "chain": [
+        "http://127.0.0.1:54122/",
+        "observed browser request"
+      ],
+      "kind": "browser",
+      "analysis": "analyzed",
+      "requestHeaderNames": [
+        "accept",
+        "accept-encoding",
+        "accept-language",
+        "host",
+        "origin",
+        "referer",
+        "user-agent"
+      ],
+      "contentType": "text/javascript",
+      "httpDisposition": "success",
+      "discoveryChains": [
+        [
+          "http://127.0.0.1:54122/",
+          "document/base URL",
+          "http://127.0.0.1:54122/app.min.js",
+          "importing module"
+        ],
+        [
+          "http://127.0.0.1:54122/",
+          "observed browser request",
+          "http://127.0.0.1:54122/app.min.js",
+          "importing module"
+        ]
+      ],
+      "provenance": {
+        "channel": "guarded-route",
+        "attribution": "page",
+        "resourceType": "script",
+        "source": "http://127.0.0.1:54122/",
+        "targetOrigin": true,
+        "evidence": "Playwright request routed through guarded Node transport; available frame URL and resource type recorded. Missing initiator remains unknown."
+      },
+      "textBytes": 311
+    },
+    {
+      "url": "http://127.0.0.1:54122/api/public",
+      "status": "scanned",
+      "code": 200,
+      "bytes": 749,
+      "partial": false,
+      "chain": [
+        "http://127.0.0.1:54122/",
+        "observed browser request"
+      ],
+      "kind": "browser",
+      "analysis": "analyzed",
+      "requestHeaderNames": [
+        "accept",
+        "accept-encoding",
+        "accept-language",
+        "host",
+        "referer",
+        "user-agent"
+      ],
+      "contentType": "application/json",
+      "httpDisposition": "success",
+      "provenance": {
+        "channel": "guarded-route",
+        "attribution": "page",
+        "resourceType": "fetch",
+        "source": "http://127.0.0.1:54122/",
+        "targetOrigin": true,
+        "evidence": "Playwright request routed through guarded Node transport; available frame URL and resource type recorded. Missing initiator remains unknown."
+      },
+      "textBytes": 749
+    },
+    {
+      "url": "accounts.google.com:443",
+      "status": "blocked",
+      "analysis": "skipped",
+      "reason": "unrouted-browser-traffic",
+      "bytes": 0,
+      "chain": [
+        "deny-only proxy",
+        "No page/frame/worker initiator available on this proxy request. Hostname does not establish background or harmless traffic."
+      ],
+      "kind": "browser-proxy",
+      "provenance": {
+        "channel": "deny-proxy",
+        "attribution": "unknown",
+        "targetOrigin": false,
+        "evidence": "No page/frame/worker initiator available on this proxy request. Hostname does not establish background or harmless traffic."
+      }
+    },
+    {
+      "url": "http://127.0.0.1:54122/collect?api_key=[redacted]",
+      "status": "blocked",
+      "analysis": "skipped",
+      "reason": "credential-in-request",
+      "bytes": 0,
+      "chain": [
+        "http://127.0.0.1:54122/",
+        "observed browser request"
+      ],
+      "kind": "browser",
+      "provenance": {
+        "channel": "guarded-route",
+        "attribution": "page",
+        "resourceType": "fetch",
+        "source": "http://127.0.0.1:54122/",
+        "targetOrigin": true,
+        "evidence": "Playwright request routed through guarded Node transport; available frame URL and resource type recorded. Missing initiator remains unknown."
+      }
+    },
+    {
+      "url": "http://127.0.0.1:54122/collect",
+      "status": "blocked",
+      "analysis": "skipped",
+      "reason": "credential-in-request",
+      "bytes": 0,
+      "chain": [
+        "http://127.0.0.1:54122/",
+        "observed browser request"
+      ],
+      "kind": "browser",
+      "provenance": {
+        "channel": "guarded-route",
+        "attribution": "page",
+        "resourceType": "fetch",
+        "source": "http://127.0.0.1:54122/",
+        "targetOrigin": true,
+        "evidence": "Playwright request routed through guarded Node transport; available frame URL and resource type recorded. Missing initiator remains unknown."
+      }
+    },
+    {
+      "url": "android.clients.google.com:443",
+      "status": "blocked",
+      "analysis": "skipped",
+      "reason": "unrouted-browser-traffic",
+      "bytes": 0,
+      "chain": [
+        "deny-only proxy",
+        "No page/frame/worker initiator available on this proxy request. Hostname does not establish background or harmless traffic."
+      ],
+      "kind": "browser-proxy",
+      "provenance": {
+        "channel": "deny-proxy",
+        "attribution": "unknown",
+        "targetOrigin": false,
+        "evidence": "No page/frame/worker initiator available on this proxy request. Hostname does not establish background or harmless traffic."
+      }
+    },
+    {
+      "url": "http://127.0.0.1:54122/api/scroll",
+      "status": "scanned",
+      "code": 200,
+      "bytes": 33,
+      "partial": false,
+      "chain": [
+        "http://127.0.0.1:54122/",
+        "observed browser request"
+      ],
+      "kind": "browser",
+      "analysis": "analyzed",
+      "requestHeaderNames": [
+        "accept",
+        "accept-encoding",
+        "accept-language",
+        "host",
+        "referer",
+        "user-agent"
+      ],
+      "contentType": "application/json",
+      "httpDisposition": "success",
+      "provenance": {
+        "channel": "guarded-route",
+        "attribution": "page",
+        "resourceType": "fetch",
+        "source": "http://127.0.0.1:54122/",
+        "targetOrigin": true,
+        "evidence": "Playwright request routed through guarded Node transport; available frame URL and resource type recorded. Missing initiator remains unknown."
+      },
+      "textBytes": 33
+    },
+    {
+      "url": "http://127.0.0.1:54122/scroll-collect?api_key=[redacted]",
+      "status": "blocked",
+      "analysis": "skipped",
+      "reason": "credential-in-request",
+      "bytes": 0,
+      "chain": [
+        "http://127.0.0.1:54122/",
+        "observed browser request"
+      ],
+      "kind": "browser",
+      "provenance": {
+        "channel": "guarded-route",
+        "attribution": "page",
+        "resourceType": "fetch",
+        "source": "http://127.0.0.1:54122/",
+        "targetOrigin": true,
+        "evidence": "Playwright request routed through guarded Node transport; available frame URL and resource type recorded. Missing initiator remains unknown."
+      }
+    },
+    {
+      "url": "http://127.0.0.1:54122/about",
+      "status": "scanned",
+      "code": 200,
+      "bytes": 131,
+      "partial": false,
+      "chain": [
+        "http://127.0.0.1:54122/",
+        "observed browser request"
+      ],
+      "kind": "browser",
+      "analysis": "analyzed",
+      "requestHeaderNames": [
+        "accept",
+        "accept-encoding",
+        "accept-language",
+        "host",
+        "user-agent"
+      ],
+      "contentType": "text/html",
+      "httpDisposition": "success",
+      "discoveryChains": [
+        [
+          "http://127.0.0.1:54122/",
+          "document/base URL"
+        ],
+        [
+          "http://127.0.0.1:54122/robots.txt",
+          "http://127.0.0.1:54122/sitemap.xml"
+        ],
+        [
+          "http://127.0.0.1:54122/",
+          "document/base URL",
+          "http://127.0.0.1:54122/manifest.webmanifest"
+        ],
+        [
+          "about:blank",
+          "observed browser request",
+          "http://127.0.0.1:54122/",
+          "document/base URL"
+        ]
+      ],
+      "provenance": {
+        "channel": "guarded-route",
+        "attribution": "page",
+        "resourceType": "document",
+        "source": "http://127.0.0.1:54122/",
+        "targetOrigin": true,
+        "evidence": "Playwright request routed through guarded Node transport; available frame URL and resource type recorded. Missing initiator remains unknown."
+      },
+      "textBytes": 131
+    },
+    {
+      "url": "http://127.0.0.1:54122/big",
+      "status": "scanned",
+      "code": 200,
+      "bytes": 65536,
+      "partial": true,
+      "chain": [
+        "http://127.0.0.1:54122/about",
+        "observed browser request"
+      ],
+      "kind": "browser",
+      "analysis": "analyzed",
+      "requestHeaderNames": [
+        "accept",
+        "accept-encoding",
+        "accept-language",
+        "host",
+        "user-agent"
+      ],
+      "contentType": "text/plain",
+      "httpDisposition": "success",
+      "discoveryChains": [
+        [
+          "http://127.0.0.1:54122/",
+          "document/base URL"
+        ],
+        [
+          "about:blank",
+          "observed browser request",
+          "http://127.0.0.1:54122/",
+          "document/base URL"
+        ]
+      ],
+      "provenance": {
+        "channel": "guarded-route",
+        "attribution": "page",
+        "resourceType": "document",
+        "source": "http://127.0.0.1:54122/about",
+        "targetOrigin": true,
+        "evidence": "Playwright request routed through guarded Node transport; available frame URL and resource type recorded. Missing initiator remains unknown."
+      },
+      "textBytes": 65536
+    },
+    {
+      "url": "http://127.0.0.1:54122/child",
+      "status": "scanned",
+      "code": 200,
+      "bytes": 95,
+      "partial": false,
+      "chain": [
+        "http://127.0.0.1:54122/about",
+        "observed browser request"
+      ],
+      "kind": "browser",
+      "analysis": "analyzed",
+      "requestHeaderNames": [
+        "accept",
+        "accept-encoding",
+        "accept-language",
+        "host",
+        "user-agent"
+      ],
+      "contentType": "text/html",
+      "httpDisposition": "success",
+      "discoveryChains": [
+        [
+          "http://127.0.0.1:54122/",
+          "document/base URL"
+        ],
+        [
+          "about:blank",
+          "observed browser request",
+          "http://127.0.0.1:54122/",
+          "document/base URL"
+        ]
+      ],
+      "provenance": {
+        "channel": "guarded-route",
+        "attribution": "page",
+        "resourceType": "document",
+        "source": "http://127.0.0.1:54122/about",
+        "targetOrigin": true,
+        "evidence": "Playwright request routed through guarded Node transport; available frame URL and resource type recorded. Missing initiator remains unknown."
+      },
+      "textBytes": 95
+    },
+    {
+      "url": "http://127.0.0.1:54122/frame",
+      "status": "scanned",
+      "code": 200,
+      "bytes": 157,
+      "partial": false,
+      "chain": [
+        "browser page",
+        "observed browser request"
+      ],
+      "kind": "browser",
+      "analysis": "analyzed",
+      "requestHeaderNames": [
+        "accept",
+        "accept-encoding",
+        "accept-language",
+        "host",
+        "referer",
+        "user-agent"
+      ],
+      "contentType": "text/html",
+      "httpDisposition": "success",
+      "discoveryChains": [
+        [
+          "http://127.0.0.1:54122/",
+          "document/base URL",
+          "http://127.0.0.1:54122/child",
+          "document/base URL"
+        ],
+        [
+          "http://127.0.0.1:54122/about",
+          "observed browser request",
+          "http://127.0.0.1:54122/child",
+          "document/base URL"
+        ]
+      ],
+      "provenance": {
+        "channel": "guarded-route",
+        "attribution": "unknown",
+        "resourceType": "document",
+        "targetOrigin": true,
+        "evidence": "Playwright request routed through guarded Node transport; available frame URL and resource type recorded. Missing initiator remains unknown."
+      },
+      "textBytes": 157
+    },
+    {
+      "url": "http://127.0.0.1:54122/api/frame",
+      "status": "scanned",
+      "code": 200,
+      "bytes": 72,
+      "partial": false,
+      "chain": [
+        "http://127.0.0.1:54122/frame",
+        "observed browser request"
+      ],
+      "kind": "browser",
+      "analysis": "analyzed",
+      "requestHeaderNames": [
+        "accept",
+        "accept-encoding",
+        "accept-language",
+        "host",
+        "referer",
+        "user-agent"
+      ],
+      "contentType": "application/json",
+      "httpDisposition": "success",
+      "provenance": {
+        "channel": "guarded-route",
+        "attribution": "page",
+        "resourceType": "fetch",
+        "source": "http://127.0.0.1:54122/frame",
+        "targetOrigin": true,
+        "evidence": "Playwright request routed through guarded Node transport; available frame URL and resource type recorded. Missing initiator remains unknown."
+      },
+      "textBytes": 72
+    },
+    {
+      "url": "http://127.0.0.1:54122/slow",
+      "status": "scanned",
+      "code": 200,
+      "bytes": 13,
+      "partial": false,
+      "chain": [
+        "chrome-error://chromewebdata/",
+        "observed browser request"
+      ],
+      "kind": "browser",
+      "analysis": "analyzed",
+      "requestHeaderNames": [
+        "accept",
+        "accept-encoding",
+        "accept-language",
+        "host",
+        "user-agent"
+      ],
+      "contentType": "text/plain",
+      "httpDisposition": "success",
+      "discoveryChains": [
+        [
+          "http://127.0.0.1:54122/",
+          "document/base URL"
+        ],
+        [
+          "about:blank",
+          "observed browser request",
+          "http://127.0.0.1:54122/",
+          "document/base URL"
+        ]
+      ],
+      "provenance": {
+        "channel": "guarded-route",
+        "attribution": "page",
+        "resourceType": "document",
+        "source": "chrome-error://chromewebdata/",
+        "targetOrigin": true,
+        "evidence": "Playwright request routed through guarded Node transport; available frame URL and resource type recorded. Missing initiator remains unknown."
+      },
+      "textBytes": 13
+    },
+    {
+      "url": "http://127.0.0.1:54122/fallback",
+      "status": "scanned",
+      "code": 200,
+      "bytes": 61,
+      "partial": false,
+      "chain": [
+        "http://127.0.0.1:54122/slow",
+        "observed browser request"
+      ],
+      "kind": "browser",
+      "analysis": "analyzed",
+      "requestHeaderNames": [
+        "accept",
+        "accept-encoding",
+        "accept-language",
+        "host",
+        "user-agent"
+      ],
+      "contentType": "text/html",
+      "httpDisposition": "success",
+      "discoveryChains": [
+        [
+          "http://127.0.0.1:54122/",
+          "document/base URL"
+        ],
+        [
+          "about:blank",
+          "observed browser request",
+          "http://127.0.0.1:54122/",
+          "document/base URL"
+        ]
+      ],
+      "provenance": {
+        "channel": "guarded-route",
+        "attribution": "page",
+        "resourceType": "document",
+        "source": "http://127.0.0.1:54122/slow",
+        "targetOrigin": true,
+        "evidence": "Playwright request routed through guarded Node transport; available frame URL and resource type recorded. Missing initiator remains unknown."
+      },
+      "textBytes": 61
+    },
+    {
+      "url": "http://127.0.0.1:54122/nested/page",
+      "status": "scanned",
+      "code": 200,
+      "bytes": 92,
+      "partial": false,
+      "chain": [
+        "http://127.0.0.1:54122/fallback",
+        "observed browser request"
+      ],
+      "kind": "browser",
+      "analysis": "analyzed",
+      "requestHeaderNames": [
+        "accept",
+        "accept-encoding",
+        "accept-language",
+        "host",
+        "user-agent"
+      ],
+      "contentType": "application/json",
+      "httpDisposition": "success",
+      "discoveryChains": [
+        [
+          "http://127.0.0.1:54122/",
+          "document/base URL",
+          "http://127.0.0.1:54122/about",
+          "document/base URL"
+        ],
+        [
+          "http://127.0.0.1:54122/",
+          "document/base URL",
+          "http://127.0.0.1:54122/child",
+          "document/base URL"
+        ],
+        [
+          "http://127.0.0.1:54122/",
+          "observed browser request",
+          "http://127.0.0.1:54122/about",
+          "document/base URL"
+        ],
+        [
+          "http://127.0.0.1:54122/about",
+          "observed browser request",
+          "http://127.0.0.1:54122/child",
+          "document/base URL"
+        ]
+      ],
+      "provenance": {
+        "channel": "guarded-route",
+        "attribution": "page",
+        "resourceType": "document",
+        "source": "http://127.0.0.1:54122/fallback",
+        "targetOrigin": true,
+        "evidence": "Playwright request routed through guarded Node transport; available frame URL and resource type recorded. Missing initiator remains unknown."
+      },
+      "textBytes": 92
+    },
+    {
+      "url": "http://127.0.0.1:54122/frame",
+      "status": "scanned",
+      "code": 200,
+      "bytes": 157,
+      "partial": false,
+      "chain": [
+        "http://127.0.0.1:54122/nested/page",
+        "observed browser request"
+      ],
+      "kind": "browser",
+      "analysis": "analyzed",
+      "requestHeaderNames": [
+        "accept",
+        "accept-encoding",
+        "accept-language",
+        "host",
+        "user-agent"
+      ],
+      "contentType": "text/html",
+      "httpDisposition": "success",
+      "discoveryChains": [
+        [
+          "http://127.0.0.1:54122/",
+          "document/base URL",
+          "http://127.0.0.1:54122/child",
+          "document/base URL"
+        ],
+        [
+          "http://127.0.0.1:54122/about",
+          "observed browser request",
+          "http://127.0.0.1:54122/child",
+          "document/base URL"
+        ]
+      ],
+      "provenance": {
+        "channel": "guarded-route",
+        "attribution": "page",
+        "resourceType": "document",
+        "source": "http://127.0.0.1:54122/nested/page",
+        "targetOrigin": true,
+        "evidence": "Playwright request routed through guarded Node transport; available frame URL and resource type recorded. Missing initiator remains unknown."
+      },
+      "textBytes": 157
+    },
+    {
+      "url": "http://127.0.0.1:54122/inline.js.map",
+      "status": "skipped",
+      "code": 200,
+      "bytes": 47,
+      "partial": false,
+      "chain": [
+        "http://127.0.0.1:54122/",
+        "document/base URL",
+        "http://127.0.0.1:54122/inline.js",
+        "inline source map",
+        "sourcesContent",
+        "webpack://fixture/src/hf.ts",
+        "http://127.0.0.1:54122/inline.js"
+      ],
+      "kind": "map-guess",
+      "analysis": "analyzed",
+      "requestHeaderNames": [
+        "accept",
+        "accept-encoding",
+        "host"
+      ],
+      "contentType": "text/plain",
+      "httpDisposition": "success",
+      "discoveryChains": [
+        [
+          "http://127.0.0.1:54122/",
+          "document/base URL",
+          "http://127.0.0.1:54122/inline.js",
+          "inline source map",
+          "sourcesContent",
+          "webpack://fixture/src/hf.ts",
+          "http://127.0.0.1:54122/inline.js"
+        ],
+        [
+          "http://127.0.0.1:54122/",
+          "document/base URL",
+          "http://127.0.0.1:54122/inline.js"
+        ],
+        [
+          "http://127.0.0.1:54122/",
+          "observed browser request",
+          "http://127.0.0.1:54122/inline.js",
+          "inline source map",
+          "sourcesContent",
+          "webpack://fixture/src/hf.ts",
+          "http://127.0.0.1:54122/inline.js"
+        ],
+        [
+          "http://127.0.0.1:54122/",
+          "observed browser request",
+          "http://127.0.0.1:54122/inline.js"
+        ]
+      ],
+      "textBytes": 47,
+      "reason": "optional-map-not-present"
+    },
+    {
+      "url": "http://127.0.0.1:54122/header-map.js.map",
+      "status": "skipped",
+      "code": 200,
+      "bytes": 47,
+      "partial": false,
+      "chain": [
+        "http://127.0.0.1:54122/",
+        "document/base URL",
+        "http://127.0.0.1:54122/header-map.js"
+      ],
+      "kind": "map-guess",
+      "analysis": "analyzed",
+      "requestHeaderNames": [
+        "accept",
+        "accept-encoding",
+        "host"
+      ],
+      "contentType": "text/plain",
+      "httpDisposition": "success",
+      "discoveryChains": [
+        [
+          "http://127.0.0.1:54122/",
+          "document/base URL",
+          "http://127.0.0.1:54122/header-map.js"
+        ],
+        [
+          "http://127.0.0.1:54122/",
+          "observed browser request",
+          "http://127.0.0.1:54122/header-map.js"
+        ]
+      ],
+      "textBytes": 47,
+      "reason": "optional-map-not-present"
+    },
+    {
+      "url": "http://127.0.0.1:54122/lazy.js.map",
+      "status": "skipped",
+      "code": 200,
+      "bytes": 47,
+      "partial": false,
+      "chain": [
+        "http://127.0.0.1:54122/",
+        "document/base URL",
+        "http://127.0.0.1:54122/app.min.js",
+        "importing module",
+        "http://127.0.0.1:54122/lazy.js"
+      ],
+      "kind": "map-guess",
+      "analysis": "analyzed",
+      "requestHeaderNames": [
+        "accept",
+        "accept-encoding",
+        "host"
+      ],
+      "contentType": "text/plain",
+      "httpDisposition": "success",
+      "discoveryChains": [
+        [
+          "http://127.0.0.1:54122/",
+          "document/base URL",
+          "http://127.0.0.1:54122/app.min.js",
+          "importing module",
+          "http://127.0.0.1:54122/lazy.js"
+        ],
+        [
+          "http://127.0.0.1:54122/",
+          "observed browser request",
+          "http://127.0.0.1:54122/lazy.js"
+        ]
+      ],
+      "textBytes": 47,
+      "reason": "optional-map-not-present"
+    },
+    {
+      "url": "http://127.0.0.1:54122/conventional.js.map",
+      "status": "scanned",
+      "code": 200,
+      "bytes": 208,
+      "partial": false,
+      "chain": [
+        "http://127.0.0.1:54122/",
+        "document/base URL",
+        "http://127.0.0.1:54122/conventional.js"
+      ],
+      "kind": "map-guess",
+      "analysis": "analyzed",
+      "requestHeaderNames": [
+        "accept",
+        "accept-encoding",
+        "host"
+      ],
+      "contentType": "application/json",
+      "httpDisposition": "success",
+      "discoveryChains": [
+        [
+          "http://127.0.0.1:54122/",
+          "document/base URL",
+          "http://127.0.0.1:54122/conventional.js"
+        ],
+        [
+          "http://127.0.0.1:54122/",
+          "observed browser request",
+          "http://127.0.0.1:54122/conventional.js"
+        ]
+      ],
+      "textBytes": 208
+    },
+    {
+      "url": "http://127.0.0.1:54122/sw.js.map",
+      "status": "skipped",
+      "code": 200,
+      "bytes": 47,
+      "partial": false,
+      "chain": [
+        "http://127.0.0.1:54122/",
+        "document/base URL",
+        "http://127.0.0.1:54122/app.min.js",
+        "worker document base",
+        "http://127.0.0.1:54122/sw.js"
+      ],
+      "kind": "map-guess",
+      "analysis": "analyzed",
+      "requestHeaderNames": [
+        "accept",
+        "accept-encoding",
+        "host"
+      ],
+      "contentType": "text/plain",
+      "httpDisposition": "success",
+      "discoveryChains": [
+        [
+          "http://127.0.0.1:54122/",
+          "document/base URL",
+          "http://127.0.0.1:54122/app.min.js",
+          "worker document base",
+          "http://127.0.0.1:54122/sw.js"
+        ]
+      ],
+      "textBytes": 47,
+      "reason": "optional-map-not-present"
+    },
+    {
+      "url": "http://127.0.0.1:54122/worker.js.map",
+      "status": "skipped",
+      "code": 200,
+      "bytes": 47,
+      "partial": false,
+      "chain": [
+        "http://127.0.0.1:54122/",
+        "document/base URL",
+        "http://127.0.0.1:54122/app.min.js",
+        "worker document base",
+        "http://127.0.0.1:54122/worker.js"
+      ],
+      "kind": "map-guess",
+      "analysis": "analyzed",
+      "requestHeaderNames": [
+        "accept",
+        "accept-encoding",
+        "host"
+      ],
+      "contentType": "text/plain",
+      "httpDisposition": "success",
+      "discoveryChains": [
+        [
+          "http://127.0.0.1:54122/",
+          "document/base URL",
+          "http://127.0.0.1:54122/app.min.js",
+          "worker document base",
+          "http://127.0.0.1:54122/worker.js"
+        ],
+        [
+          "http://127.0.0.1:54122/",
+          "observed browser request",
+          "http://127.0.0.1:54122/worker.js"
+        ]
+      ],
+      "textBytes": 47,
+      "reason": "optional-map-not-present"
+    }
+  ],
+  "limitations": [
+    {
+      "code": "scope",
+      "url": "http://127.0.0.1:54121/outside.js",
+      "detail": "External dependency was not scanned.",
+      "incomplete": false
+    },
+    {
+      "code": "authentication-challenge",
+      "url": "http://127.0.0.1:54122/login",
+      "detail": "HTTP 401. Authentication challenge observed; no login or credential use attempted.",
+      "incomplete": true
+    },
+    {
+      "code": "scope",
+      "url": "http://127.0.0.1:54121/redirect-target",
+      "detail": "External dependency was not scanned.",
+      "incomplete": false
+    },
+    {
+      "code": "network-failure",
+      "url": "http://127.0.0.1:54122/fail",
+      "detail": "Network/DNS/response failure; this is distinct from HTTP refusal or scanner-policy rejection. Raw exception omitted because it may contain sensitive values.",
+      "incomplete": true
+    },
+    {
+      "code": "network-failure",
+      "url": "http://127.0.0.1:54122/fail",
+      "detail": "Resource could not be fully processed.",
+      "incomplete": true
+    },
+    {
+      "code": "size-limit",
+      "url": "http://127.0.0.1:54122/big",
+      "detail": "Decoded response inspected only up to resource/total byte limit.",
+      "incomplete": true
+    },
+    {
+      "code": "rate-limit",
+      "url": "http://127.0.0.1:54122/rate",
+      "detail": "Rate limit/unavailability observed; backing off without aggressive retries.",
+      "incomplete": true
+    },
+    {
+      "code": "http-unavailable",
+      "url": "http://127.0.0.1:54122/rate",
+      "detail": "HTTP 429. Bounded response inspection is separate from successful application-source coverage.",
+      "incomplete": true
+    },
+    {
+      "code": "credential-in-request",
+      "url": "http://127.0.0.1:54122/collect?api_key=[redacted]",
+      "detail": "Locally observed credential-bearing request was blocked before transmission.",
+      "incomplete": false
+    },
+    {
+      "code": "robots-exclusion",
+      "url": "http://127.0.0.1:54122/excluded",
+      "detail": "Public page excluded by robots.txt. The owner-authorized audit setting can include it without authenticating.",
+      "incomplete": true
+    },
+    {
+      "code": "browser-disabled-channels",
+      "detail": "Service workers, WebSockets, WebRTC, WebTransport, downloads and persistent browser caches are disabled. No clicks/forms or user gestures; only normal page loading. Browser coverage is bounded and may differ from an ordinary browser.",
+      "incomplete": false
+    },
+    {
+      "code": "unrouted-browser-traffic",
+      "url": "update.googleapis.com:443",
+      "detail": "Request blocked: unrouted-browser-traffic.",
+      "incomplete": true
+    },
+    {
+      "code": "unrouted-browser-traffic",
+      "url": "accounts.google.com:443",
+      "detail": "Request blocked: unrouted-browser-traffic.",
+      "incomplete": true
+    },
+    {
+      "code": "unrouted-browser-traffic",
+      "url": "www.google.com:443",
+      "detail": "Request blocked: unrouted-browser-traffic.",
+      "incomplete": true
+    },
+    {
+      "code": "websocket-disabled",
+      "url": "ws://127.0.0.1:54122/socket",
+      "detail": "Request blocked: websocket-disabled.",
+      "incomplete": false
+    },
+    {
+      "code": "credential-in-request",
+      "url": "http://127.0.0.1:54122/collect",
+      "detail": "Locally observed credential-bearing request was blocked before transmission.",
+      "incomplete": false
+    },
+    {
+      "code": "method",
+      "url": "http://127.0.0.1:54122/write",
+      "detail": "Request blocked: method.",
+      "incomplete": false
+    },
+    {
+      "code": "destructive-get",
+      "url": "http://127.0.0.1:54122/delete",
+      "detail": "Request blocked: destructive-get.",
+      "incomplete": false
+    },
+    {
+      "code": "scope",
+      "url": "http://127.0.0.1:54123/api/scans",
+      "detail": "External dependency was not scanned.",
+      "incomplete": false
+    },
+    {
+      "code": "credential-in-request",
+      "url": "http://127.0.0.1:54122/collect?api_key=[redacted]",
+      "detail": "Locally observed credential-bearing request was blocked before transmission.",
+      "incomplete": false
+    },
+    {
+      "code": "unrouted-browser-traffic",
+      "url": "android.clients.google.com:443",
+      "detail": "Request blocked: unrouted-browser-traffic.",
+      "incomplete": true
+    },
+    {
+      "code": "credential-in-request",
+      "url": "http://127.0.0.1:54122/scroll-collect?api_key=[redacted]",
+      "detail": "Locally observed credential-bearing request was blocked before transmission.",
+      "incomplete": false
+    },
+    {
+      "code": "browser-page-failure",
+      "url": "http://127.0.0.1:54122/big",
+      "detail": "Page load/runtime inspection unavailable, blocked or timed out; no login or user interaction attempted.",
+      "incomplete": true
+    },
+    {
+      "code": "browser-page-failure",
+      "url": "http://127.0.0.1:54122/child",
+      "detail": "Page load/runtime inspection unavailable, blocked or timed out; no login or user interaction attempted.",
+      "incomplete": true
+    },
+    {
+      "code": "browser-page-failure",
+      "url": "http://127.0.0.1:54122/slow",
+      "detail": "Page load/runtime inspection unavailable, blocked or timed out; no login or user interaction attempted.",
+      "incomplete": true
+    },
+    {
+      "code": "browser-page-failure",
+      "url": "http://127.0.0.1:54122/fallback",
+      "detail": "Page load/runtime inspection unavailable, blocked or timed out; no login or user interaction attempted.",
+      "incomplete": true
+    },
+    {
+      "code": "browser-page-failure",
+      "url": "http://127.0.0.1:54122/nested/page",
+      "detail": "Page load/runtime inspection unavailable, blocked or timed out; no login or user interaction attempted.",
+      "incomplete": true
+    },
+    {
+      "code": "browser-page-failure",
+      "url": "http://127.0.0.1:54122/frame",
+      "detail": "Page load/runtime inspection unavailable, blocked or timed out; no login or user interaction attempted.",
+      "incomplete": true
+    },
+    {
+      "code": "map-unavailable",
+      "url": "http://127.0.0.1:54122/inline.js.map",
+      "detail": "Adjacent map check returned fallback/non-map content.",
+      "incomplete": false
+    },
+    {
+      "code": "map-unavailable",
+      "url": "http://127.0.0.1:54122/header-map.js.map",
+      "detail": "Adjacent map check returned fallback/non-map content.",
+      "incomplete": false
+    },
+    {
+      "code": "map-unavailable",
+      "url": "http://127.0.0.1:54122/lazy.js.map",
+      "detail": "Adjacent map check returned fallback/non-map content.",
+      "incomplete": false
+    },
+    {
+      "code": "map-unavailable",
+      "url": "http://127.0.0.1:54122/sw.js.map",
+      "detail": "Adjacent map check returned fallback/non-map content.",
+      "incomplete": false
+    },
+    {
+      "code": "map-unavailable",
+      "url": "http://127.0.0.1:54122/worker.js.map",
+      "detail": "Adjacent map check returned fallback/non-map content.",
+      "incomplete": false
+    }
+  ],
+  "arrivals": [
+    {
+      "path": "/robots.txt",
+      "method": "GET"
+    },
+    {
+      "path": "/",
+      "method": "GET"
+    },
+    {
+      "path": "/sitemap.xml",
+      "method": "GET"
+    },
+    {
+      "path": "/manifest.webmanifest",
+      "method": "GET"
+    },
+    {
+      "path": "/site.css",
+      "method": "GET"
+    },
+    {
+      "path": "/app.min.js",
+      "method": "GET"
+    },
+    {
+      "path": "/inline.js",
+      "method": "GET"
+    },
+    {
+      "path": "/header-map.js",
+      "method": "GET"
+    },
+    {
+      "path": "/conventional.js",
+      "method": "GET"
+    },
+    {
+      "path": "/about",
+      "method": "GET"
+    },
+    {
+      "path": "/login",
+      "method": "GET"
+    },
+    {
+      "path": "/redirect-out",
+      "method": "GET"
+    },
+    {
+      "path": "/fail",
+      "method": "GET"
+    },
+    {
+      "path": "/big",
+      "method": "GET"
+    },
+    {
+      "path": "/rate",
+      "method": "GET"
+    },
+    {
+      "path": "/redirect-secret",
+      "method": "GET"
+    },
+    {
+      "path": "/child",
+      "method": "GET"
+    },
+    {
+      "path": "/slow",
+      "method": "GET"
+    },
+    {
+      "path": "/fallback",
+      "method": "GET"
+    },
+    {
+      "path": "/lazy.js",
+      "method": "GET"
+    },
+    {
+      "path": "/worker.js",
+      "method": "GET"
+    },
+    {
+      "path": "/sw.js",
+      "method": "GET"
+    },
+    {
+      "path": "/app.min.js.map",
+      "method": "GET"
+    },
+    {
+      "path": "/header.map",
+      "method": "GET"
+    },
+    {
+      "path": "/nested/page",
+      "method": "GET"
+    },
+    {
+      "path": "/frame",
+      "method": "GET"
+    },
+    {
+      "path": "/sources/source.ts",
+      "method": "GET"
+    },
+    {
+      "path": "/",
+      "method": "GET"
+    },
+    {
+      "path": "/site.css",
+      "method": "GET"
+    },
+    {
+      "path": "/app.min.js",
+      "method": "GET"
+    },
+    {
+      "path": "/conventional.js",
+      "method": "GET"
+    },
+    {
+      "path": "/header-map.js",
+      "method": "GET"
+    },
+    {
+      "path": "/inline.js",
+      "method": "GET"
+    },
+    {
+      "path": "/worker.js",
+      "method": "GET"
+    },
+    {
+      "path": "/redirect-secret",
+      "method": "GET"
+    },
+    {
+      "path": "/lazy.js",
+      "method": "GET"
+    },
+    {
+      "path": "/api/public",
+      "method": "GET"
+    },
+    {
+      "path": "/api/scroll",
+      "method": "GET"
+    },
+    {
+      "path": "/about",
+      "method": "GET"
+    },
+    {
+      "path": "/big",
+      "method": "GET"
+    },
+    {
+      "path": "/child",
+      "method": "GET"
+    },
+    {
+      "path": "/slow",
+      "method": "GET"
+    },
+    {
+      "path": "/frame",
+      "method": "GET"
+    },
+    {
+      "path": "/api/frame",
+      "method": "GET"
+    },
+    {
+      "path": "/fallback",
+      "method": "GET"
+    },
+    {
+      "path": "/nested/page",
+      "method": "GET"
+    },
+    {
+      "path": "/frame",
+      "method": "GET"
+    },
+    {
+      "path": "/inline.js.map",
+      "method": "GET"
+    },
+    {
+      "path": "/header-map.js.map",
+      "method": "GET"
+    },
+    {
+      "path": "/lazy.js.map",
+      "method": "GET"
+    },
+    {
+      "path": "/conventional.js.map",
+      "method": "GET"
+    },
+    {
+      "path": "/sw.js.map",
+      "method": "GET"
+    },
+    {
+      "path": "/worker.js.map",
+      "method": "GET"
+    }
+  ]
+}

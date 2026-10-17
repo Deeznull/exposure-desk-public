@@ -1,0 +1,26 @@
+{
+  "capturedAtUtc": "2026-10-06T23:55:14.9631811Z",
+  "platform": "Microsoft Windows NT 10.0.26200.0",
+  "architecture": "AMD64",
+  "node": "v24.18.1",
+  "npm": "11.16.0",
+  "nodePath": "C:\\Program Files\\nodejs\\node.exe",
+  "npmPath": "C:\\Program Files\\nodejs\\npm.ps1",
+  "cwd": "<local path>",
+  "benchmarkCommand": "npm run benchmark",
+  "heldoutCommand": "npm run benchmark:heldout",
+  "benchmarkFixture": "test/provider-fixtures.ts",
+  "benchmarkPreset": "None (Detector directly, syntheticFixture=true)",
+  "heldoutFixtures": "scripts/heldout-fixtures.mjs (fixed corpus and deterministic local server)",
+  "heldoutPreset": "custom / makeConfig defaults with explicit overrides",
+  "heldoutOverrides": {
+    "requestsPerSecond": 20,
+    "maxDurationMs": 90000,
+    "browser": true,
+    "browserSettleMs": 400,
+    "adjacentMaps": false,
+    "staleAssetUrls": "local origin /previous-deployment.73",
+    "developmentFixtureOrigin": "local loopback fixture origin",
+    "urls": "local loopback fixture origin"
+  }
+}

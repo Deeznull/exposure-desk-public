@@ -1,0 +1,89 @@
+{
+  "schema": "exposure-browser-attempts/1",
+  "build": "2.8.0+cc5fecf8cb75f1c7",
+  "note": "Every full browser-suite run on the 2.8.0 release build digest on the Windows x64 measurement computer, in order, with local fixtures only; final-browser.log is the run used by release-summary. The sanity run is the w5-fix final run on commit b941d3c, whose build digest equals this release build (src, scripts and tests unchanged), reused instead of re-run. \"linux\" lists the browser jobs of the Linux CI runs on this build digest (GitHub-hosted Ubuntu runners; pass/fail only; linux-ci.json).",
+  "runs": [
+    {
+      "run": "full browser suite, sanity run before the measurements (w5-fix final Windows run on b941d3c, same build digest, reused)",
+      "log": "<local path>",
+      "command": "node <local path> browser (node scripts/test.mjs --browser)",
+      "tests": 40,
+      "pass": 40,
+      "fail": 0,
+      "skipped": 0,
+      "cancelled": 0,
+      "durationS": 407.5,
+      "failing": []
+    },
+    {
+      "run": "full browser suite, final run after the measurements",
+      "log": "benchmarks/2.8.0/final-browser.log",
+      "command": "node <local path> browser (node scripts/test.mjs --browser)",
+      "tests": 40,
+      "pass": 40,
+      "fail": 0,
+      "skipped": 0,
+      "cancelled": 0,
+      "durationS": 412.7,
+      "failing": []
+    }
+  ],
+  "linux": [
+    {
+      "runId": "38245758795",
+      "commit": "eb2f95382c3968a05feb8c3cad4e5cede65d4ff9",
+      "role": "release run",
+      "job": "Tests (browser)",
+      "jobId": 114799090959,
+      "conclusion": "success",
+      "tests": 40,
+      "pass": 40,
+      "fail": 0,
+      "skipped": 0,
+      "cancelled": 0,
+      "todo": 0
+    },
+    {
+      "runId": "38197793573",
+      "commit": "b941d3c36498dd8673ee94c461a2f9267d2c4225",
+      "role": "w5-fix measurement run (same build digest)",
+      "job": "Tests (browser)",
+      "jobId": 114644272806,
+      "conclusion": "success",
+      "tests": 40,
+      "pass": 40,
+      "fail": 0,
+      "skipped": 0,
+      "cancelled": 0,
+      "todo": 0
+    },
+    {
+      "runId": "38199247582",
+      "commit": "b941d3c36498dd8673ee94c461a2f9267d2c4225",
+      "role": "w5-fix measurement run (same build digest)",
+      "job": "Tests (browser)",
+      "jobId": 114648730097,
+      "conclusion": "success",
+      "tests": 40,
+      "pass": 40,
+      "fail": 0,
+      "skipped": 0,
+      "cancelled": 0,
+      "todo": 0
+    },
+    {
+      "runId": "38241561896",
+      "commit": "1e6dd0fd1753f181aff0954c7ac77dd5aaa2ae34",
+      "role": "earlier release run (its package superseded, not shipped)",
+      "job": "Tests (browser)",
+      "jobId": 114785161613,
+      "conclusion": "success",
+      "tests": 40,
+      "pass": 40,
+      "fail": 0,
+      "skipped": 0,
+      "cancelled": 0,
+      "todo": 0
+    }
+  ]
+}

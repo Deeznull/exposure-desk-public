@@ -1,0 +1,20 @@
+import { mkdir, writeFile, readFile, chmod } from 'node:fs/promises';
+import { createHash } from 'node:crypto';
+import { spawnSync } from 'node:child_process';
+import path from 'node:path';
+import { fileURLToPath } from 'node:url';
+const root=fileURLToPath(new URL('../',import.meta.url)),version='8.30.1';
+const os=process.platform==='win32'?'windows':process.platform==='linux'?'linux':null;
+const arch={x64:'x64',arm64:'arm64'}[process.arch];if(!os||!arch)throw new Error('Supported: Windows/Linux x64 or arm64');
+const name=`gitleaks_${version}_${os}_${arch}.${os==='windows'?'zip':'tar.gz'}`;
+const base=`https://github.com/gitleaks/gitleaks/releases/download/v${version}/`;
+const dir=process.env.EXPOSURE_TOOLS_DIR||path.join(root,'.tools');await mkdir(dir,{recursive:true,mode:0o700});
+async function get(n){const r=await fetch(base+n);if(!r.ok)throw new Error('Release download failed');return Buffer.from(await r.arrayBuffer());}
+const sums=(await get(`gitleaks_${version}_checksums.txt`)).toString();
+const expected=sums.split('\n').find(l=>l.endsWith(name))?.split(/\s+/)[0];
+const bytes=await get(name);if(!expected||createHash('sha256').update(bytes).digest('hex')!==expected)throw new Error('Release checksum mismatch');
+const archive=path.join(dir,name);await writeFile(archive,bytes,{mode:0o600});
+const result=spawnSync('tar',['-xf',archive,'-C',dir],{stdio:'inherit',windowsHide:true});if(result.status!==0)throw new Error('tar extraction failed; install tar');
+const bin=path.join(dir,os==='windows'?'gitleaks.exe':'gitleaks');await chmod(bin,0o700);
+await writeFile(path.join(dir,'manifest.json'),JSON.stringify({version,archive:name,archiveSha256:expected,binarySha256:createHash('sha256').update(await readFile(bin)).digest('hex')},null,2));
+console.log(`Installed checksum-verified Gitleaks ${version}.`);

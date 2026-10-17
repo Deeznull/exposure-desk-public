@@ -1,0 +1,33 @@
+# Only the tracked application files go into the image build. Dependencies, the build output and the bundled
+# distributions are produced inside the build (npm ci, scripts/build.mjs, scripts/fetch-linux-distributions.mjs).
+.git
+.github
+.worktrees
+node_modules
+dist
+runtime
+browser
+tools/*.exe
+.tools
+.cache
+artifacts
+archive/notes
+reports
+!reports/fixture.html
+!reports/fixture.json
+!reports/fixture.sarif.json
+data
+exposure-data
+launch-data
+scan-*
+*.log
+*.env
+.env
+.env.*
+*.sensitive.*
+.upgrade-*
+HANDOFF_*.md
+*PROGRESS*.md
+.claude
+.vscode
+.idea

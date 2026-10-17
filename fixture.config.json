@@ -1,0 +1,13 @@
+{
+  "name": "Synthetic local fixture",
+  "urls": ["http://127.0.0.1:4321/"],
+  "developmentFixtureOrigin": "http://127.0.0.1:4321",
+  "relatedOrigins": [],
+  "browser": true,
+  "deep": true,
+  "requestsPerSecond": 10,
+  "maxResourceBytes": 65536,
+  "maxResources": 180,
+  "timeoutMs": 3000,
+  "maxDurationMs": 180000
+}

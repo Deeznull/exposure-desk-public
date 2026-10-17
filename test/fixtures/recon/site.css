@@ -1,0 +1,6 @@
+/* Synthetic stylesheet fixture */
+@import "/static/theme.css";
+.hero{background:url("/static/hero.webp")}
+@font-face{src:url(https://fonts.vendor.example/inter.woff2)}
+.icon{background:url(data:image/png;base64,AAAA)}
+/*# sourceMappingURL=site.css.map */

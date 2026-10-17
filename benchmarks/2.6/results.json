@@ -1,0 +1,545 @@
+{
+  "schema": "exposure-release-verification/1",
+  "version": "2.6.0-rc.1",
+  "build": {
+    "version": "2.6.0-rc.1",
+    "id": "2.6.0-rc.1+43dc0e2d6c36202f",
+    "sourceDigest": "43dc0e2d6c36202f90ab7eda44743e346cb0e94573a44c30d29c92ef563714e7"
+  },
+  "ruleVersion": "website/2.6.0",
+  "unit": {
+    "tests": 404,
+    "pass": 404,
+    "fail": 0,
+    "cancelled": 0,
+    "skipped": 0,
+    "todo": 0,
+    "durationMs": 451425.3291
+  },
+  "browser": {
+    "tests": 33,
+    "pass": 33,
+    "fail": 0,
+    "cancelled": 0,
+    "skipped": 0,
+    "todo": 0,
+    "durationMs": 497391.5412
+  },
+  "cancellationStress": {
+    "tests": 60,
+    "pass": 60,
+    "fail": 0,
+    "cancelled": 0,
+    "skipped": 0,
+    "todo": 0,
+    "durationMs": 213613.307
+  },
+  "cliSmoke": {
+    "passed": 4,
+    "failed": false
+  },
+  "persistenceSmoke": {
+    "platform": "win32",
+    "syntheticPermissionException": false,
+    "projectRestart": true,
+    "correlationRestart": true,
+    "vaultRestart": true,
+    "operatorPermissions": true,
+    "deletion": true
+  },
+  "benchmark": {
+    "planted": 110,
+    "detected": 110,
+    "missed": 0,
+    "falsePositives": 0,
+    "componentErrors": 0,
+    "locationErrors": 0,
+    "privateTargets": 106,
+    "publicTargets": 3,
+    "suspiciousTargets": 1
+  },
+  "pipeline": {
+    "status": "passed",
+    "summary": {
+      "planted": 17,
+      "found": 17,
+      "missed": 0
+    }
+  },
+  "legacyCorpus": {
+    "baseline": {
+      "targets": 13,
+      "detected": 13,
+      "falsePositives": 0,
+      "exposureTargets": 5,
+      "exposureMisses": 0,
+      "exposureFalsePositives": 0,
+      "classificationErrors": 0,
+      "elapsedMs": 1436.5499,
+      "maxRssKiB": 233504,
+      "build": "2.5.0-rc.1+97836a16c30888f3"
+    },
+    "final": {
+      "targets": 13,
+      "detected": 13,
+      "falsePositives": 0,
+      "exposureTargets": 5,
+      "exposureMisses": 0,
+      "exposureFalsePositives": 0,
+      "classificationErrors": 0,
+      "elapsedMs": 1426.4388999999999,
+      "maxRssKiB": 233916,
+      "build": "2.6.0-rc.1+43dc0e2d6c36202f"
+    }
+  },
+  "acquisition": {
+    "baseline": {
+      "build": "2.5.0-rc.1+97836a16c30888f3",
+      "detected": 5,
+      "targets": 5,
+      "falsePositives": 0,
+      "knownInspected": 9,
+      "knownResources": 9,
+      "forbiddenArrivals": 0,
+      "elapsedMs": 5546.7613,
+      "maxRssKiB": 246212
+    },
+    "final": {
+      "build": "2.6.0-rc.1+43dc0e2d6c36202f",
+      "detected": 5,
+      "targets": 5,
+      "falsePositives": 0,
+      "knownInspected": 9,
+      "knownResources": 9,
+      "forbiddenArrivals": 0,
+      "elapsedMs": 5184.4047,
+      "maxRssKiB": 249012
+    }
+  },
+  "evaluation": {
+    "role": "legacy-settings regression",
+    "corpusDigest": "41f8c2dd214da8bd7192d2d6a8863ed96e4d274b9c8d312edf97c7bc02e94479",
+    "frozenAt": "2026-10-08T04:15:23.216Z",
+    "repeat": 3,
+    "errors": [],
+    "groups": {
+      "G1": {
+        "baselineBuild": "2.5.0-rc.1+97836a16c30888f3",
+        "newBuild": "2.6.0-rc.1+43dc0e2d6c36202f",
+        "wallMsMedian": {
+          "baseline": 1210,
+          "new": 1221
+        },
+        "maxRssKiB": {
+          "baseline": 205408,
+          "new": 206052
+        }
+      },
+      "G2": {
+        "baselineBuild": "2.5.0-rc.1+97836a16c30888f3",
+        "newBuild": "2.6.0-rc.1+43dc0e2d6c36202f",
+        "wallMsMedian": {
+          "baseline": 3600,
+          "new": 3910
+        },
+        "maxRssKiB": {
+          "baseline": 193760,
+          "new": 196020
+        }
+      },
+      "G3": {
+        "baselineBuild": "2.5.0-rc.1+97836a16c30888f3",
+        "newBuild": "2.6.0-rc.1+43dc0e2d6c36202f",
+        "wallMsMedian": {
+          "baseline": 10467,
+          "new": 10138
+        },
+        "maxRssKiB": {
+          "baseline": 195096,
+          "new": 196816
+        }
+      },
+      "G4": {
+        "baselineBuild": "2.5.0-rc.1+97836a16c30888f3",
+        "newBuild": "2.6.0-rc.1+43dc0e2d6c36202f",
+        "wallMsMedian": {
+          "baseline": 1955,
+          "new": 1991
+        },
+        "maxRssKiB": {
+          "baseline": 198400,
+          "new": 200424
+        }
+      },
+      "G5": {
+        "baselineBuild": "2.5.0-rc.1+97836a16c30888f3",
+        "newBuild": "2.6.0-rc.1+43dc0e2d6c36202f",
+        "wallMsMedian": {
+          "baseline": 9736,
+          "new": 10788
+        },
+        "maxRssKiB": {
+          "baseline": 502464,
+          "new": 692192
+        }
+      },
+      "G6": {
+        "baselineBuild": "2.5.0-rc.1+97836a16c30888f3",
+        "newBuild": "2.6.0-rc.1+43dc0e2d6c36202f",
+        "wallMsMedian": {
+          "baseline": 3087,
+          "new": 3804
+        },
+        "maxRssKiB": {
+          "baseline": 600276,
+          "new": 661260
+        }
+      },
+      "G7": {
+        "baselineBuild": "2.5.0-rc.1+97836a16c30888f3",
+        "newBuild": "2.6.0-rc.1+43dc0e2d6c36202f",
+        "wallMsMedian": {
+          "baseline": 18838,
+          "new": 18824
+        },
+        "maxRssKiB": {
+          "baseline": 185872,
+          "new": 190752
+        }
+      },
+      "G8": {
+        "baselineBuild": "2.5.0-rc.1+97836a16c30888f3",
+        "newBuild": "2.6.0-rc.1+43dc0e2d6c36202f",
+        "wallMsMedian": {
+          "baseline": 4079,
+          "new": 3908
+        },
+        "maxRssKiB": {
+          "baseline": 194024,
+          "new": 194656
+        }
+      },
+      "G9": {
+        "baselineBuild": "2.5.0-rc.1+97836a16c30888f3",
+        "newBuild": "2.6.0-rc.1+43dc0e2d6c36202f",
+        "wallMsMedian": {
+          "baseline": 4350,
+          "new": 4357
+        },
+        "maxRssKiB": {
+          "baseline": 184536,
+          "new": 199720
+        }
+      }
+    }
+  },
+  "readyOptionMatrix": {
+    "generatedAt": "2026-10-09T09:06:25.000Z",
+    "scans": 45,
+    "checks": {
+      "Low-impact fewer connections than Normal, requests no more than Normal's": {
+        "passed": 4,
+        "total": 4,
+        "failed": []
+      },
+      "Low-impact fewer requests and connections than Normal": {
+        "passed": 8,
+        "total": 8,
+        "failed": []
+      },
+      "Deep+Low-impact keeps Deep+Normal recall": {
+        "passed": 4,
+        "total": 4,
+        "failed": []
+      },
+      "Quick reports its limits": {
+        "passed": 8,
+        "total": 8,
+        "failed": []
+      },
+      "Quick fastest": {
+        "passed": 8,
+        "total": 8,
+        "failed": []
+      },
+      "Within limits": {
+        "passed": 33,
+        "total": 33,
+        "failed": []
+      },
+      "Finds its keys at its memory setting": {
+        "passed": 33,
+        "total": 33,
+        "failed": []
+      },
+      "Adjustment only lowers": {
+        "passed": 36,
+        "total": 36,
+        "failed": []
+      }
+    }
+  },
+  "externalCorpus": [
+    {
+      "coverage": "quick",
+      "traffic": "low-impact",
+      "preset": null,
+      "mode": "acquisition",
+      "overall": {
+        "truePositives": 27,
+        "falsePositives": 3,
+        "falseNegatives": 0,
+        "precision": 0.9,
+        "recall": 1
+      },
+      "negativeAlerts": 3,
+      "sites": 20,
+      "requests": 526,
+      "durationMs": 1043914,
+      "states": {
+        "incomplete": 17,
+        "completed": 3
+      },
+      "build": "2.6.0-rc.1+b6fec2bbb9e6f13b"
+    },
+    {
+      "coverage": "quick",
+      "traffic": "low-impact",
+      "preset": null,
+      "mode": "discovery",
+      "overall": {
+        "truePositives": 24,
+        "falsePositives": 3,
+        "falseNegatives": 3,
+        "precision": 0.889,
+        "recall": 0.889
+      },
+      "negativeAlerts": 3,
+      "sites": 20,
+      "requests": 474,
+      "durationMs": 955607,
+      "states": {
+        "incomplete": 19,
+        "completed": 1
+      },
+      "build": "2.6.0-rc.1+b6fec2bbb9e6f13b"
+    },
+    {
+      "coverage": "quick",
+      "traffic": "normal",
+      "preset": null,
+      "mode": "acquisition",
+      "overall": {
+        "truePositives": 27,
+        "falsePositives": 3,
+        "falseNegatives": 0,
+        "precision": 0.9,
+        "recall": 1
+      },
+      "negativeAlerts": 3,
+      "sites": 20,
+      "requests": 526,
+      "durationMs": 348140,
+      "states": {
+        "incomplete": 17,
+        "completed": 3
+      },
+      "build": "2.6.0-rc.1+b6fec2bbb9e6f13b"
+    },
+    {
+      "coverage": "quick",
+      "traffic": "normal",
+      "preset": null,
+      "mode": "discovery",
+      "overall": {
+        "truePositives": 24,
+        "falsePositives": 3,
+        "falseNegatives": 3,
+        "precision": 0.889,
+        "recall": 0.889
+      },
+      "negativeAlerts": 3,
+      "sites": 20,
+      "requests": 474,
+      "durationMs": 348254,
+      "states": {
+        "incomplete": 19,
+        "completed": 1
+      },
+      "build": "2.6.0-rc.1+b6fec2bbb9e6f13b"
+    },
+    {
+      "coverage": "standard",
+      "traffic": "low-impact",
+      "preset": null,
+      "mode": "acquisition",
+      "overall": {
+        "truePositives": 27,
+        "falsePositives": 3,
+        "falseNegatives": 0,
+        "precision": 0.9,
+        "recall": 1
+      },
+      "negativeAlerts": 3,
+      "sites": 20,
+      "requests": 587,
+      "durationMs": 1380255,
+      "states": {
+        "incomplete": 20
+      },
+      "build": "2.6.0-rc.1+b6fec2bbb9e6f13b"
+    },
+    {
+      "coverage": "standard",
+      "traffic": "low-impact",
+      "preset": null,
+      "mode": "discovery",
+      "overall": {
+        "truePositives": 27,
+        "falsePositives": 3,
+        "falseNegatives": 0,
+        "precision": 0.9,
+        "recall": 1
+      },
+      "negativeAlerts": 3,
+      "sites": 20,
+      "requests": 921,
+      "durationMs": 1847568,
+      "states": {
+        "incomplete": 20
+      },
+      "build": "2.6.0-rc.1+b6fec2bbb9e6f13b"
+    },
+    {
+      "coverage": "standard",
+      "traffic": "normal",
+      "preset": null,
+      "mode": "acquisition",
+      "overall": {
+        "truePositives": 27,
+        "falsePositives": 3,
+        "falseNegatives": 0,
+        "precision": 0.9,
+        "recall": 1
+      },
+      "negativeAlerts": 3,
+      "sites": 20,
+      "requests": 768,
+      "durationMs": 877154,
+      "states": {
+        "incomplete": 20
+      },
+      "build": "2.6.0-rc.1+b6fec2bbb9e6f13b"
+    },
+    {
+      "coverage": "standard",
+      "traffic": "normal",
+      "preset": null,
+      "mode": "discovery",
+      "overall": {
+        "truePositives": 27,
+        "falsePositives": 3,
+        "falseNegatives": 0,
+        "precision": 0.9,
+        "recall": 1
+      },
+      "negativeAlerts": 3,
+      "sites": 20,
+      "requests": 1332,
+      "durationMs": 819649,
+      "states": {
+        "incomplete": 20
+      },
+      "build": "2.6.0-rc.1+b6fec2bbb9e6f13b"
+    },
+    {
+      "coverage": "deep",
+      "traffic": "low-impact",
+      "preset": null,
+      "mode": "acquisition",
+      "overall": {
+        "truePositives": 27,
+        "falsePositives": 3,
+        "falseNegatives": 0,
+        "precision": 0.9,
+        "recall": 1
+      },
+      "negativeAlerts": 3,
+      "sites": 20,
+      "requests": 612,
+      "durationMs": 1829927,
+      "states": {
+        "incomplete": 20
+      },
+      "build": "2.6.0-rc.1+b6fec2bbb9e6f13b"
+    },
+    {
+      "coverage": "deep",
+      "traffic": "low-impact",
+      "preset": null,
+      "mode": "discovery",
+      "overall": {
+        "truePositives": 27,
+        "falsePositives": 3,
+        "falseNegatives": 0,
+        "precision": 0.9,
+        "recall": 1
+      },
+      "negativeAlerts": 3,
+      "sites": 20,
+      "requests": 922,
+      "durationMs": 1851670,
+      "states": {
+        "incomplete": 20
+      },
+      "build": "2.6.0-rc.1+b6fec2bbb9e6f13b"
+    },
+    {
+      "coverage": "deep",
+      "traffic": "normal",
+      "preset": null,
+      "mode": "acquisition",
+      "overall": {
+        "truePositives": 27,
+        "falsePositives": 3,
+        "falseNegatives": 0,
+        "precision": 0.9,
+        "recall": 1
+      },
+      "negativeAlerts": 3,
+      "sites": 20,
+      "requests": 1067,
+      "durationMs": 1519420,
+      "states": {
+        "incomplete": 20
+      },
+      "build": "2.6.0-rc.1+b6fec2bbb9e6f13b"
+    },
+    {
+      "coverage": "deep",
+      "traffic": "normal",
+      "preset": null,
+      "mode": "discovery",
+      "overall": {
+        "truePositives": 27,
+        "falsePositives": 3,
+        "falseNegatives": 0,
+        "precision": 0.9,
+        "recall": 1
+      },
+      "negativeAlerts": 3,
+      "sites": 20,
+      "requests": 1327,
+      "durationMs": 820248,
+      "states": {
+        "incomplete": 20
+      },
+      "build": "2.6.0-rc.1+b6fec2bbb9e6f13b"
+    }
+  ],
+  "preflight": {
+    "ok": true,
+    "failed": []
+  },
+  "generatedAt": "2026-10-09T14:17:12.228Z"
+}

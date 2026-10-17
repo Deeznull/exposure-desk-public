@@ -1,0 +1,505 @@
+[
+  {
+    "site": "owner-site-3.example",
+    "file": "pasted-log-8.txt",
+    "bytes": 72117,
+    "sha256": "275691741fa97f254634b1e930126d5ffaebc2e548309d70fa9397c86cba839f",
+    "snapshot": "81 seconds · 42/600 request attempts · 17 blocked · 1.0 MiB downloaded / 300 MiB cap · 36 unique resources · 6 repeats · 18 intentional skips · 17 HTTP errors · 0.5 MiB text analyzed · stop: discovered-frontier-drained",
+    "coverage": {
+      "build": {
+        "version": "2.3.0-rc.1",
+        "id": "2.3.0-rc.1+5fd9435d84e583c6",
+        "sourceDigest": "5fd9435d84e583c60e6c96b8727db9dca5b70ecc2a7eb83eace453768b202052"
+      },
+      "groups": {
+        "applicationPages": {
+          "discovered": 5,
+          "downloaded": 1,
+          "analyzed": 1,
+          "successful": 1,
+          "errorResponses": 0,
+          "blocked": 4,
+          "skipped": 0,
+          "uninspected": 0
+        },
+        "javascript": {
+          "discovered": 0,
+          "downloaded": 0,
+          "analyzed": 0,
+          "successful": 0,
+          "errorResponses": 0,
+          "blocked": 0,
+          "skipped": 0,
+          "uninspected": 0
+        },
+        "jsonConfig": {
+          "discovered": 1,
+          "downloaded": 1,
+          "analyzed": 1,
+          "successful": 1,
+          "errorResponses": 0,
+          "blocked": 0,
+          "skipped": 0,
+          "uninspected": 0
+        },
+        "sourceMaps": {
+          "discovered": 1,
+          "downloaded": 1,
+          "analyzed": 1,
+          "successful": 1,
+          "errorResponses": 0,
+          "blocked": 0,
+          "skipped": 0,
+          "uninspected": 0
+        },
+        "deploymentChecks": {
+          "discovered": 17,
+          "downloaded": 17,
+          "analyzed": 17,
+          "successful": 0,
+          "errorResponses": 17,
+          "blocked": 0,
+          "skipped": 0,
+          "uninspected": 0
+        },
+        "other": {
+          "discovered": 24,
+          "downloaded": 16,
+          "analyzed": 2,
+          "successful": 2,
+          "errorResponses": 0,
+          "blocked": 8,
+          "skipped": 14,
+          "uninspected": 0
+        },
+        "browserRuntime": {
+          "discovered": 12,
+          "downloaded": 6,
+          "analyzed": 1,
+          "successful": 1,
+          "errorResponses": 0,
+          "blocked": 10,
+          "skipped": 14,
+          "uninspected": 0
+        }
+      },
+      "entryPoints": [
+        {
+          "url": "https://owner-site-3.example/",
+          "successful": true,
+          "analyzed": true
+        }
+      ],
+      "requestComparison": [
+        {
+          "url": "https://owner-site-3.example/",
+          "staticStatus": 200,
+          "browserStatus": 200,
+          "staticHeaders": [
+            "accept",
+            "accept-encoding",
+            "host"
+          ],
+          "browserHeaders": [
+            "accept",
+            "accept-encoding",
+            "accept-language",
+            "host",
+            "user-agent"
+          ],
+          "conclusion": "Recorded responses have the same HTTP status. Header values and causal effects were not inferred."
+        }
+      ],
+      "deploymentChecks": {
+        "planned": 15,
+        "attempted": 15,
+        "remaining": 0
+      }
+    },
+    "resourceKinds": {
+      "robots:scanned:200": 1,
+      "page:scanned:200": 1,
+      "sitemap:scanned:200": 1,
+      "asset:blocked:scope": 3,
+      "asset:scanned:200": 1,
+      "asset:skipped:binary-content-sniff": 1,
+      "asset:skipped:binary-unsupported-extractor": 3,
+      "manifest:scanned:200": 1,
+      "page:blocked:scope": 4,
+      "asset:skipped:binary-font": 10,
+      "browser-proxy:blocked:unrouted-browser-traffic": 9,
+      "browser:scanned:200": 2,
+      "browser:skipped:binary-font": 4,
+      "browser:blocked:scope": 1,
+      "baseline:http-error:404": 2,
+      "deep:http-error:404": 15
+    },
+    "resourceRecords": 59,
+    "queryWarnings": 0,
+    "imageQueryWarnings": 0,
+    "noteCounts": {
+      "scope": 7,
+      "browser-disabled-channels": 1,
+      "unrouted-browser-traffic": 5,
+      "debugger-target-limit": 1,
+      "browser-settle-deadline": 1,
+      "http-unavailable": 17
+    },
+    "semantic": {
+      "modules": 38,
+      "nodes": 14987,
+      "views": 34,
+      "elapsedMs": 84
+    },
+    "sourceMapCandidates": [
+      {
+        "url": "https://owner-site-3.example/sitemap.xml",
+        "kind": "sitemap",
+        "status": "scanned",
+        "code": 200,
+        "analysis": "analyzed"
+      }
+    ],
+    "limitations": "Read entire supplied text locally. Original response bodies and per-phase timings are absent; remote timeout cause and which S3 reference triggered the old empty observation cannot be established."
+  },
+  {
+    "site": "www.owner-site-1.example",
+    "file": "pasted-log-2-1.txt",
+    "bytes": 198665,
+    "sha256": "750651f46d4d81f2d9b3f026358f07f80806da6a945c57ddad240e0ba28d118e",
+    "snapshot": "149 seconds · 72/600 request attempts · 16 blocked · 2.0 MiB downloaded / 300 MiB cap · 44 unique resources · 28 repeats · 19 intentional skips · 23 HTTP errors · 1.6 MiB text analyzed · stop: discovered-frontier-drained",
+    "coverage": {
+      "build": {
+        "version": "2.3.0-rc.1",
+        "id": "2.3.0-rc.1+5fd9435d84e583c6",
+        "sourceDigest": "5fd9435d84e583c60e6c96b8727db9dca5b70ecc2a7eb83eace453768b202052"
+      },
+      "groups": {
+        "applicationPages": {
+          "discovered": 4,
+          "downloaded": 4,
+          "analyzed": 4,
+          "successful": 3,
+          "errorResponses": 1,
+          "blocked": 0,
+          "skipped": 0,
+          "uninspected": 0
+        },
+        "javascript": {
+          "discovered": 5,
+          "downloaded": 5,
+          "analyzed": 5,
+          "successful": 5,
+          "errorResponses": 0,
+          "blocked": 0,
+          "skipped": 0,
+          "uninspected": 0
+        },
+        "jsonConfig": {
+          "discovered": 0,
+          "downloaded": 0,
+          "analyzed": 0,
+          "successful": 0,
+          "errorResponses": 0,
+          "blocked": 0,
+          "skipped": 0,
+          "uninspected": 0
+        },
+        "sourceMaps": {
+          "discovered": 6,
+          "downloaded": 6,
+          "analyzed": 6,
+          "successful": 1,
+          "errorResponses": 5,
+          "blocked": 0,
+          "skipped": 0,
+          "uninspected": 0
+        },
+        "deploymentChecks": {
+          "discovered": 17,
+          "downloaded": 17,
+          "analyzed": 17,
+          "successful": 0,
+          "errorResponses": 17,
+          "blocked": 0,
+          "skipped": 0,
+          "uninspected": 0
+        },
+        "other": {
+          "discovered": 19,
+          "downloaded": 12,
+          "analyzed": 3,
+          "successful": 3,
+          "errorResponses": 0,
+          "blocked": 7,
+          "skipped": 9,
+          "uninspected": 0
+        },
+        "browserRuntime": {
+          "discovered": 21,
+          "downloaded": 16,
+          "analyzed": 3,
+          "successful": 3,
+          "errorResponses": 0,
+          "blocked": 14,
+          "skipped": 26,
+          "uninspected": 0
+        }
+      },
+      "entryPoints": [
+        {
+          "url": "https://www.owner-site-1.example/",
+          "successful": true,
+          "analyzed": true
+        }
+      ],
+      "requestComparison": [
+        {
+          "url": "https://www.owner-site-1.example/",
+          "staticStatus": 200,
+          "browserStatus": 200,
+          "staticHeaders": [
+            "accept",
+            "accept-encoding",
+            "host"
+          ],
+          "browserHeaders": [
+            "accept",
+            "accept-encoding",
+            "accept-language",
+            "host",
+            "user-agent"
+          ],
+          "conclusion": "Recorded responses have the same HTTP status. Header values and causal effects were not inferred."
+        }
+      ],
+      "deploymentChecks": {
+        "planned": 15,
+        "attempted": 15,
+        "remaining": 0
+      }
+    },
+    "resourceKinds": {
+      "robots:scanned:200": 1,
+      "sitemap:scanned:200": 1,
+      "page:scanned:200": 3,
+      "asset:skipped:binary-unsupported-extractor": 1,
+      "asset:scanned:200": 4,
+      "asset:skipped:binary-font": 6,
+      "asset:blocked:scope": 2,
+      "asset:http-error:404": 1,
+      "browser-proxy:blocked:unrouted-browser-traffic": 14,
+      "browser:scanned:200": 20,
+      "browser:skipped:binary-font": 10,
+      "browser:skipped:binary-unsupported-extractor": 2,
+      "module:scanned:200": 1,
+      "baseline:http-error:404": 2,
+      "map-guess:http-error:404": 5,
+      "deep:http-error:403": 4,
+      "deep:http-error:404": 11
+    },
+    "resourceRecords": 88,
+    "queryWarnings": 0,
+    "imageQueryWarnings": 0,
+    "noteCounts": {
+      "scope": 2,
+      "http-unavailable": 19,
+      "browser-disabled-channels": 1,
+      "unrouted-browser-traffic": 5,
+      "debugger-target-limit": 1,
+      "debugger-script-size": 3,
+      "browser-settle-deadline": 3,
+      "debugger-script-count": 1,
+      "http-refusal": 4,
+      "semantic-import-unresolved": 3,
+      "semantic-budget": 1,
+      "decoded-inspection-limit": 1
+    },
+    "semantic": {
+      "modules": 66,
+      "nodes": 120149,
+      "views": 0,
+      "elapsedMs": 382
+    },
+    "sourceMapCandidates": [
+      {
+        "url": "https://www.owner-site-1.example/sitemap.xml",
+        "kind": "sitemap",
+        "status": "scanned",
+        "code": 200,
+        "analysis": "analyzed"
+      },
+      {
+        "url": "https://www.owner-site-1.example/assets/index-CqmDdsdK.js.map",
+        "kind": "map-guess",
+        "status": "http-error",
+        "code": 404,
+        "analysis": "analyzed"
+      },
+      {
+        "url": "https://www.owner-site-1.example/assets/jsx-runtime-BseJUIpC.js.map",
+        "kind": "map-guess",
+        "status": "http-error",
+        "code": 404,
+        "analysis": "analyzed"
+      },
+      {
+        "url": "https://www.owner-site-1.example/assets/LegalApp-k9jchRM7.js.map",
+        "kind": "map-guess",
+        "status": "http-error",
+        "code": 404,
+        "analysis": "analyzed"
+      },
+      {
+        "url": "https://www.owner-site-1.example/assets/ProjectVisual-CfZw4TJh.js.map",
+        "kind": "map-guess",
+        "status": "http-error",
+        "code": 404,
+        "analysis": "analyzed"
+      },
+      {
+        "url": "https://www.owner-site-1.example/assets/useDocumentTitle-B5RNSziY.js.map",
+        "kind": "map-guess",
+        "status": "http-error",
+        "code": 404,
+        "analysis": "analyzed"
+      }
+    ],
+    "limitations": "Read entire supplied text locally. Original response bodies and per-phase timings are absent; remote timeout cause and which S3 reference triggered the old empty observation cannot be established."
+  },
+  {
+    "site": "www.owner-site-2.example",
+    "file": "pasted-log-3.txt",
+    "bytes": 529680,
+    "sha256": "9a290452debacbe92df62019aee4b66cf8a7ae85c756c9e7bcb241eb021e2cf1",
+    "snapshot": "393 seconds · 26/600 request attempts · 0 blocked · 0.8 MiB downloaded / 300 MiB cap · 26 unique resources · 0 repeats · 0 intentional skips · 0 HTTP errors · 0.8 MiB text analyzed · stop: not-started",
+    "coverage": {
+      "build": {
+        "version": "2.3.0-rc.1",
+        "id": "2.3.0-rc.1+5fd9435d84e583c6",
+        "sourceDigest": "5fd9435d84e583c60e6c96b8727db9dca5b70ecc2a7eb83eace453768b202052"
+      },
+      "groups": {
+        "applicationPages": {
+          "discovered": 261,
+          "downloaded": 5,
+          "analyzed": 5,
+          "successful": 5,
+          "errorResponses": 0,
+          "blocked": 0,
+          "skipped": 0,
+          "uninspected": 256
+        },
+        "javascript": {
+          "discovered": 18,
+          "downloaded": 0,
+          "analyzed": 0,
+          "successful": 0,
+          "errorResponses": 0,
+          "blocked": 0,
+          "skipped": 0,
+          "uninspected": 18
+        },
+        "jsonConfig": {
+          "discovered": 0,
+          "downloaded": 0,
+          "analyzed": 0,
+          "successful": 0,
+          "errorResponses": 0,
+          "blocked": 0,
+          "skipped": 0,
+          "uninspected": 0
+        },
+        "sourceMaps": {
+          "discovered": 1,
+          "downloaded": 1,
+          "analyzed": 1,
+          "successful": 1,
+          "errorResponses": 0,
+          "blocked": 0,
+          "skipped": 0,
+          "uninspected": 0
+        },
+        "deploymentChecks": {
+          "discovered": 0,
+          "downloaded": 0,
+          "analyzed": 0,
+          "successful": 0,
+          "errorResponses": 0,
+          "blocked": 0,
+          "skipped": 0,
+          "uninspected": 0
+        },
+        "other": {
+          "discovered": 15,
+          "downloaded": 1,
+          "analyzed": 1,
+          "successful": 1,
+          "errorResponses": 0,
+          "blocked": 0,
+          "skipped": 0,
+          "uninspected": 14
+        },
+        "browserRuntime": {
+          "discovered": 0,
+          "downloaded": 0,
+          "analyzed": 0,
+          "successful": 0,
+          "errorResponses": 0,
+          "blocked": 0,
+          "skipped": 0,
+          "uninspected": 1
+        }
+      },
+      "entryPoints": [
+        {
+          "url": "https://www.owner-site-2.example/",
+          "successful": true,
+          "analyzed": true
+        }
+      ],
+      "requestComparison": [
+        {
+          "url": "https://www.owner-site-2.example/",
+          "staticStatus": 200,
+          "staticHeaders": [
+            "accept",
+            "accept-encoding",
+            "host"
+          ],
+          "browserHeaders": [],
+          "conclusion": "No browser document response recorded; review browser failures and routed requests."
+        }
+      ],
+      "deploymentChecks": {
+        "planned": 15,
+        "attempted": 0,
+        "remaining": 15
+      }
+    },
+    "resourceKinds": {
+      "robots:scanned:200": 1,
+      "sitemap:scanned:200": 1,
+      "page:scanned:200": 5,
+      "page:failed:request-timeout": 18
+    },
+    "resourceRecords": 25,
+    "queryWarnings": 458,
+    "imageQueryWarnings": 456,
+    "noteCounts": {
+      "query-variants": 458,
+      "semantic-source-limit": 9,
+      "request-timeout": 36
+    },
+    "sourceMapCandidates": [
+      {
+        "url": "https://www.owner-site-2.example/sitemap.xml",
+        "kind": "sitemap",
+        "status": "scanned",
+        "code": 200,
+        "analysis": "analyzed"
+      }
+    ],
+    "limitations": "Read entire supplied text locally. Original response bodies and per-phase timings are absent; remote timeout cause and which S3 reference triggered the old empty observation cannot be established."
+  }
+]

@@ -1,0 +1,203 @@
+{
+  "schema": "exposure-linux-ci/1",
+  "workflow": "Linux",
+  "runId": "38245758795",
+  "url": "https://github.com/Deeznull/exposure-desk/actions/runs/38245758795",
+  "commit": "eb2f95382c3968a05feb8c3cad4e5cede65d4ff9",
+  "branch": "v3-w5-release",
+  "event": "workflow_dispatch",
+  "attempt": 1,
+  "conclusion": "success",
+  "createdAt": "2026-10-12T11:55:19Z",
+  "updatedAt": "2026-10-12T12:17:15Z",
+  "runner": "GitHub-hosted ubuntu runners (see linux.yml)",
+  "jobs": {
+    "nonbrowser": {
+      "job": "Tests (nonbrowser)",
+      "jobId": 114799091280,
+      "conclusion": "success",
+      "tests": 654,
+      "pass": 653,
+      "fail": 0,
+      "skipped": 1,
+      "cancelled": 0,
+      "todo": 0
+    },
+    "browser": {
+      "job": "Tests (browser)",
+      "jobId": 114799090959,
+      "conclusion": "success",
+      "tests": 40,
+      "pass": 40,
+      "fail": 0,
+      "skipped": 0,
+      "cancelled": 0,
+      "todo": 0
+    },
+    "package": {
+      "job": "Linux x64 package",
+      "jobId": 114799090933,
+      "conclusion": "success"
+    },
+    "container": {
+      "job": "Container image",
+      "jobId": 114799091007,
+      "conclusion": "success"
+    }
+  },
+  "artifact": {
+    "name": "exposure-desk-linux-x64",
+    "file": "Exposure Desk 2.8.0 Linux x64.tar.gz",
+    "bytes": 265927767,
+    "sha256": "5f515d98ccbb3f37f6c6dde356a96488c3d8662f9292e378ef810efc146de008",
+    "checksumFileMatches": true
+  },
+  "measurementRuns": [
+    {
+      "runId": "38197793573",
+      "url": "https://github.com/Deeznull/exposure-desk/actions/runs/38197793573",
+      "commit": "b941d3c36498dd8673ee94c461a2f9267d2c4225",
+      "branch": "v3-w5-fix",
+      "attempt": 1,
+      "conclusion": "success",
+      "createdAt": "2026-10-12T02:56:50Z",
+      "updatedAt": "2026-10-12T03:18:34Z",
+      "jobs": {
+        "nonbrowser": {
+          "job": "Tests (nonbrowser)",
+          "jobId": 114644272617,
+          "conclusion": "success",
+          "tests": 654,
+          "pass": 653,
+          "fail": 0,
+          "skipped": 1,
+          "cancelled": 0,
+          "todo": 0
+        },
+        "browser": {
+          "job": "Tests (browser)",
+          "jobId": 114644272806,
+          "conclusion": "success",
+          "tests": 40,
+          "pass": 40,
+          "fail": 0,
+          "skipped": 0,
+          "cancelled": 0,
+          "todo": 0
+        },
+        "package": {
+          "job": "Linux x64 package",
+          "jobId": 114644272477,
+          "conclusion": "success"
+        },
+        "container": {
+          "job": "Container image",
+          "jobId": 114644272673,
+          "conclusion": "success"
+        }
+      }
+    },
+    {
+      "runId": "38199247582",
+      "url": "https://github.com/Deeznull/exposure-desk/actions/runs/38199247582",
+      "commit": "b941d3c36498dd8673ee94c461a2f9267d2c4225",
+      "branch": "v3-w5-fix",
+      "attempt": 1,
+      "conclusion": "success",
+      "createdAt": "2026-10-12T03:18:40Z",
+      "updatedAt": "2026-10-12T03:40:27Z",
+      "jobs": {
+        "nonbrowser": {
+          "job": "Tests (nonbrowser)",
+          "jobId": 114648730265,
+          "conclusion": "success",
+          "tests": 654,
+          "pass": 653,
+          "fail": 0,
+          "skipped": 1,
+          "cancelled": 0,
+          "todo": 0
+        },
+        "browser": {
+          "job": "Tests (browser)",
+          "jobId": 114648730097,
+          "conclusion": "success",
+          "tests": 40,
+          "pass": 40,
+          "fail": 0,
+          "skipped": 0,
+          "cancelled": 0,
+          "todo": 0
+        },
+        "package": {
+          "job": "Linux x64 package",
+          "jobId": 114648730188,
+          "conclusion": "success"
+        },
+        "container": {
+          "job": "Container image",
+          "jobId": 114648730231,
+          "conclusion": "success"
+        }
+      }
+    }
+  ],
+  "measurementNote": "measurementRuns are the w5-fix linux.yml runs on commit b941d3c, whose build digest equals this release build (src, scripts and tests unchanged); they are the Linux measurement for 2.8.0. runId is the release run on the final documentation commit (eb2f953), whose package job built the shipped tar.gz. supersededRuns lists the earlier release run on commit 1e6dd0f, whose tar.gz is not shipped.",
+  "supersededRuns": [
+    {
+      "runId": "38241561896",
+      "url": "https://github.com/Deeznull/exposure-desk/actions/runs/38241561896",
+      "commit": "1e6dd0fd1753f181aff0954c7ac77dd5aaa2ae34",
+      "branch": "v3-w5-release",
+      "attempt": 1,
+      "conclusion": "success",
+      "createdAt": "2026-10-12T11:16:12Z",
+      "updatedAt": "2026-10-12T11:33:58Z",
+      "jobs": {
+        "nonbrowser": {
+          "job": "Tests (nonbrowser)",
+          "jobId": 114785161645,
+          "conclusion": "success",
+          "tests": 654,
+          "pass": 653,
+          "fail": 0,
+          "skipped": 1,
+          "cancelled": 0,
+          "todo": 0
+        },
+        "browser": {
+          "job": "Tests (browser)",
+          "jobId": 114785161613,
+          "conclusion": "success",
+          "tests": 40,
+          "pass": 40,
+          "fail": 0,
+          "skipped": 0,
+          "cancelled": 0,
+          "todo": 0
+        },
+        "package": {
+          "job": "Linux x64 package",
+          "jobId": 114785161483,
+          "conclusion": "success"
+        },
+        "container": {
+          "job": "Container image",
+          "jobId": 114785161122,
+          "conclusion": "success"
+        }
+      },
+      "artifact": {
+        "name": "exposure-desk-linux-x64",
+        "file": "Exposure Desk 2.8.0 Linux x64.tar.gz",
+        "bytes": 265920924,
+        "downloadedSha256": "2b804b1b55b87f10fd240059a393e36410a065745db467be9924de228a96c2a9",
+        "checksumFileMatches": true,
+        "builtFrom": "1e6dd0f",
+        "shipped": false
+      },
+      "note": "Every job passed. Its tar.gz is not shipped, because the delivery note RELEASE_PACKAGE.md was rewritten for 2.8.0 after this run; the package is kept outside the repository, not deleted."
+    }
+  ],
+  "reruns": []
+}

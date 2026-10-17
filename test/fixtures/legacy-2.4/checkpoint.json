@@ -1,0 +1,999 @@
+{
+  "schema": "exposure-checkpoint/1",
+  "createdAt": "2026-10-08T05:40:08.298Z",
+  "config": {
+    "name": "Authorized website",
+    "urls": [
+      "https://www.example.com/"
+    ],
+    "relatedOrigins": [],
+    "privateOrigins": [],
+    "browser": false,
+    "sameRegistrableDomainDiscovery": false,
+    "maxAutoDiscoveredOrigins": 50,
+    "autoScaleByWebsiteCount": false,
+    "originAnalysisMs": 12000,
+    "semanticSliceMs": 1600,
+    "maxModuleAnalysisBytes": 4194304,
+    "maxAnalysisBytes": 33554432,
+    "originAnalysisBytes": 16777216,
+    "analysisConcurrency": 2,
+    "maxAnalysisMemoryMb": 256,
+    "browserLazyAssetLimit": 20,
+    "sensitiveFields": [],
+    "deep": false,
+    "maxRetries": 1,
+    "semanticAnalysis": true,
+    "debuggerScripts": true,
+    "staleAssetCheck": false,
+    "staleAssetUrls": [],
+    "robotsPolicy": "respect",
+    "browserNavigationUrls": [],
+    "readOnlyPostEndpoints": [],
+    "requestsPerSecond": 2,
+    "concurrency": 2,
+    "maxDepth": 3,
+    "maxPages": 30,
+    "maxResources": 200,
+    "maxResourceBytes": 8388608,
+    "maxTotalBytes": 83886080,
+    "timeoutMs": 10000,
+    "maxDurationMs": 120000,
+    "queryVariants": 3,
+    "browserPages": 5,
+    "browserSettleMs": 1000,
+    "maxMaps": 25,
+    "maxMapSources": 40,
+    "deepPaths": [
+      "/.env",
+      "/.env.local",
+      "/.env.production",
+      "/.env.backup",
+      "/config.json",
+      "/config.js",
+      "/.npmrc",
+      "/.git/HEAD",
+      "/debug",
+      "/debug/vars",
+      "/server.log",
+      "/error.log",
+      "/backup.sql",
+      "/index.php.bak",
+      "/config.php.bak"
+    ],
+    "adjacentMaps": true,
+    "preset": "custom",
+    "maxWireResourceBytes": 16777216,
+    "maxDecodedTotalBytes": 167772160,
+    "maxMapDepth": 4,
+    "maxMapSections": 50,
+    "browserScrollSteps": 0,
+    "browserScrollDelayMs": 500,
+    "sizingMode": "fixed",
+    "originConcurrency": 2,
+    "globalConcurrency": 2,
+    "originRequestsPerSecond": 2,
+    "maxActiveOrigins": 4,
+    "maxBrowserOrigins": 2,
+    "originMaxDurationMs": 120000,
+    "projectMaxDurationMs": 120000,
+    "originMaxPages": 30,
+    "originMaxResources": 200,
+    "originMaxTotalBytes": 83886080,
+    "originMaxMaps": 25,
+    "originBrowserPages": 5
+  },
+  "frontier": [],
+  "redactedReview": {
+    "schema": "exposure-scan/1",
+    "acquisitionMode": "external",
+    "build": {
+      "version": "2.4.0-rc.1",
+      "id": "2.4.0-rc.1+5d5acf0f7f18d7e6",
+      "sourceDigest": "5d5acf0f7f18d7e6f9211b3c5aca7f1d9f67f11e1640405478f449692a29d24e"
+    },
+    "id": "7755b7b3-be0a-440f-a069-6cf13ed59dcd",
+    "name": "Authorized website",
+    "state": "incomplete",
+    "startedAt": "2026-09-20T11:00:00.000Z",
+    "endedAt": "2026-09-20T11:01:00.000Z",
+    "elapsedMs": 60000,
+    "config": {
+      "name": "Authorized website",
+      "urls": [
+        "https://www.example.com/"
+      ],
+      "relatedOrigins": [],
+      "privateOrigins": [],
+      "browser": false,
+      "sameRegistrableDomainDiscovery": false,
+      "maxAutoDiscoveredOrigins": 50,
+      "autoScaleByWebsiteCount": false,
+      "originAnalysisMs": 12000,
+      "semanticSliceMs": 1600,
+      "maxModuleAnalysisBytes": 4194304,
+      "maxAnalysisBytes": 33554432,
+      "originAnalysisBytes": 16777216,
+      "analysisConcurrency": 2,
+      "maxAnalysisMemoryMb": 256,
+      "browserLazyAssetLimit": 20,
+      "sensitiveFields": [],
+      "deep": false,
+      "maxRetries": 1,
+      "semanticAnalysis": true,
+      "debuggerScripts": true,
+      "staleAssetCheck": false,
+      "staleAssetUrls": [],
+      "robotsPolicy": "respect",
+      "browserNavigationUrls": [],
+      "readOnlyPostEndpoints": [],
+      "requestsPerSecond": 2,
+      "concurrency": 2,
+      "maxDepth": 3,
+      "maxPages": 30,
+      "maxResources": 200,
+      "maxResourceBytes": 8388608,
+      "maxTotalBytes": 83886080,
+      "timeoutMs": 10000,
+      "maxDurationMs": 120000,
+      "queryVariants": 3,
+      "browserPages": 5,
+      "browserSettleMs": 1000,
+      "maxMaps": 25,
+      "maxMapSources": 40,
+      "deepPaths": [
+        "/.env",
+        "/.env.local",
+        "/.env.production",
+        "/.env.backup",
+        "/config.json",
+        "/config.js",
+        "/.npmrc",
+        "/.git/HEAD",
+        "/debug",
+        "/debug/vars",
+        "/server.log",
+        "/error.log",
+        "/backup.sql",
+        "/index.php.bak",
+        "/config.php.bak"
+      ],
+      "adjacentMaps": true,
+      "preset": "custom",
+      "maxWireResourceBytes": 16777216,
+      "maxDecodedTotalBytes": 167772160,
+      "maxMapDepth": 4,
+      "maxMapSections": 50,
+      "browserScrollSteps": 0,
+      "browserScrollDelayMs": 500,
+      "sizingMode": "fixed",
+      "originConcurrency": 2,
+      "globalConcurrency": 2,
+      "originRequestsPerSecond": 2,
+      "maxActiveOrigins": 4,
+      "maxBrowserOrigins": 2,
+      "originMaxDurationMs": 120000,
+      "projectMaxDurationMs": 120000,
+      "originMaxPages": 30,
+      "originMaxResources": 200,
+      "originMaxTotalBytes": 83886080,
+      "originMaxMaps": 25,
+      "originBrowserPages": 5
+    },
+    "counts": {
+      "resources": 0,
+      "scanned": 0,
+      "blocked": 0,
+      "bytes": 0,
+      "pending": 0,
+      "findings": 1
+    },
+    "accounting": {
+      "networkAttempts": 0,
+      "blockedEvents": 0,
+      "uniqueResources": 0,
+      "repeatedRequests": 0,
+      "downloadedBytes": 0,
+      "retainedDecodedBytes": 0,
+      "textAnalyzedBytes": 0,
+      "intentionalSkips": 0,
+      "httpErrors": 0,
+      "networkFailures": 0,
+      "timeouts": 0,
+      "failedAttempts": 0,
+      "successfulResponses": 0,
+      "discoveredUrls": 0,
+      "reusedTextInspections": 0,
+      "runtimeCaptures": 0,
+      "coverageGaps": 0
+    },
+    "stopReason": "not-started",
+    "uninspected": [],
+    "origins": [
+      {
+        "origin": "https://www.example.com",
+        "admitted": false,
+        "elapsedMs": 0,
+        "remainingMs": 120000,
+        "softDeadline": false,
+        "deadlineReached": false,
+        "cleanupMs": 0,
+        "requests": 0,
+        "bytes": 0,
+        "wireBytes": 0,
+        "pages": 0,
+        "maps": 0,
+        "retries": 0,
+        "retryExhausted": 0,
+        "browserPages": 0,
+        "browserRequests": 0,
+        "browserAttempts": 0,
+        "browserElapsedMs": 0,
+        "runtimeCaptures": 0,
+        "analysisMs": 0,
+        "activeRequests": 0,
+        "peakRequests": 0,
+        "authorization": {
+          "type": "explicit-seed"
+        },
+        "completion": "insufficient"
+      }
+    ],
+    "coverage": {
+      "assessment": "insufficient",
+      "groups": {
+        "entryDocuments": {
+          "discovered": 0,
+          "downloaded": 0,
+          "analyzed": 0,
+          "successful": 0,
+          "errorResponses": 0,
+          "blocked": 0,
+          "skipped": 0,
+          "uninspected": 0,
+          "currentStates": {
+            "inspected": 0,
+            "reused": 0,
+            "pending": 0,
+            "unavailable": 0,
+            "failed": 0,
+            "unsupported": 0,
+            "deferred": 0
+          },
+          "reasons": {}
+        },
+        "applicationPages": {
+          "discovered": 0,
+          "downloaded": 0,
+          "analyzed": 0,
+          "successful": 0,
+          "errorResponses": 0,
+          "blocked": 0,
+          "skipped": 0,
+          "uninspected": 0,
+          "currentStates": {
+            "inspected": 0,
+            "reused": 0,
+            "pending": 0,
+            "unavailable": 0,
+            "failed": 0,
+            "unsupported": 0,
+            "deferred": 0
+          },
+          "reasons": {}
+        },
+        "javascript": {
+          "discovered": 0,
+          "downloaded": 0,
+          "analyzed": 0,
+          "successful": 0,
+          "errorResponses": 0,
+          "blocked": 0,
+          "skipped": 0,
+          "uninspected": 0,
+          "currentStates": {
+            "inspected": 0,
+            "reused": 0,
+            "pending": 0,
+            "unavailable": 0,
+            "failed": 0,
+            "unsupported": 0,
+            "deferred": 0
+          },
+          "reasons": {}
+        },
+        "jsonConfig": {
+          "discovered": 0,
+          "downloaded": 0,
+          "analyzed": 0,
+          "successful": 0,
+          "errorResponses": 0,
+          "blocked": 0,
+          "skipped": 0,
+          "uninspected": 0,
+          "currentStates": {
+            "inspected": 0,
+            "reused": 0,
+            "pending": 0,
+            "unavailable": 0,
+            "failed": 0,
+            "unsupported": 0,
+            "deferred": 0
+          },
+          "reasons": {}
+        },
+        "sourceMaps": {
+          "discovered": 0,
+          "downloaded": 0,
+          "analyzed": 0,
+          "successful": 0,
+          "errorResponses": 0,
+          "blocked": 0,
+          "skipped": 0,
+          "uninspected": 0,
+          "currentStates": {
+            "inspected": 0,
+            "reused": 0,
+            "pending": 0,
+            "unavailable": 0,
+            "failed": 0,
+            "unsupported": 0,
+            "deferred": 0
+          },
+          "reasons": {}
+        },
+        "sitemaps": {
+          "discovered": 0,
+          "downloaded": 0,
+          "analyzed": 0,
+          "successful": 0,
+          "errorResponses": 0,
+          "blocked": 0,
+          "skipped": 0,
+          "uninspected": 0,
+          "currentStates": {
+            "inspected": 0,
+            "reused": 0,
+            "pending": 0,
+            "unavailable": 0,
+            "failed": 0,
+            "unsupported": 0,
+            "deferred": 0
+          },
+          "reasons": {}
+        },
+        "baselineRequests": {
+          "discovered": 0,
+          "downloaded": 0,
+          "analyzed": 0,
+          "successful": 0,
+          "errorResponses": 0,
+          "blocked": 0,
+          "skipped": 0,
+          "uninspected": 0,
+          "currentStates": {
+            "inspected": 0,
+            "reused": 0,
+            "pending": 0,
+            "unavailable": 0,
+            "failed": 0,
+            "unsupported": 0,
+            "deferred": 0
+          },
+          "reasons": {}
+        },
+        "deploymentChecks": {
+          "discovered": 0,
+          "downloaded": 0,
+          "analyzed": 0,
+          "successful": 0,
+          "errorResponses": 0,
+          "blocked": 0,
+          "skipped": 0,
+          "uninspected": 0,
+          "currentStates": {
+            "inspected": 0,
+            "reused": 0,
+            "pending": 0,
+            "unavailable": 0,
+            "failed": 0,
+            "unsupported": 0,
+            "deferred": 0
+          },
+          "reasons": {}
+        },
+        "images": {
+          "discovered": 0,
+          "downloaded": 0,
+          "analyzed": 0,
+          "successful": 0,
+          "errorResponses": 0,
+          "blocked": 0,
+          "skipped": 0,
+          "uninspected": 0,
+          "currentStates": {
+            "inspected": 0,
+            "reused": 0,
+            "pending": 0,
+            "unavailable": 0,
+            "failed": 0,
+            "unsupported": 0,
+            "deferred": 0
+          },
+          "reasons": {}
+        },
+        "runtimeCaptures": {
+          "discovered": 0,
+          "downloaded": 0,
+          "analyzed": 0,
+          "successful": 0,
+          "errorResponses": 0,
+          "blocked": 0,
+          "skipped": 0,
+          "uninspected": 0,
+          "currentStates": {
+            "inspected": 0,
+            "reused": 0,
+            "pending": 0,
+            "unavailable": 0,
+            "failed": 0,
+            "unsupported": 0,
+            "deferred": 0
+          },
+          "reasons": {}
+        },
+        "other": {
+          "discovered": 0,
+          "downloaded": 0,
+          "analyzed": 0,
+          "successful": 0,
+          "errorResponses": 0,
+          "blocked": 0,
+          "skipped": 0,
+          "uninspected": 0,
+          "currentStates": {
+            "inspected": 0,
+            "reused": 0,
+            "pending": 0,
+            "unavailable": 0,
+            "failed": 0,
+            "unsupported": 0,
+            "deferred": 0
+          },
+          "reasons": {}
+        },
+        "externalDependencies": {
+          "discovered": 0,
+          "downloaded": 0,
+          "analyzed": 0,
+          "successful": 0,
+          "errorResponses": 0,
+          "blocked": 0,
+          "skipped": 0,
+          "uninspected": 0,
+          "currentStates": {
+            "inspected": 0,
+            "reused": 0,
+            "pending": 0,
+            "unavailable": 0,
+            "failed": 0,
+            "unsupported": 0,
+            "deferred": 0
+          },
+          "reasons": {}
+        },
+        "browserRuntime": {
+          "discovered": 0,
+          "downloaded": 0,
+          "analyzed": 0,
+          "successful": 0,
+          "errorResponses": 0,
+          "blocked": 0,
+          "skipped": 0,
+          "uninspected": 0,
+          "currentStates": {
+            "inspected": 0,
+            "reused": 0,
+            "pending": 0,
+            "unavailable": 0,
+            "failed": 0,
+            "unsupported": 0,
+            "deferred": 0
+          },
+          "reasons": {}
+        }
+      },
+      "entryPoints": [
+        {
+          "url": "https://www.example.com/",
+          "successful": false,
+          "analyzed": false
+        }
+      ],
+      "highValueLimited": false,
+      "optionalPagesLimited": false,
+      "origins": {
+        "https://www.example.com": {
+          "assessment": "insufficient",
+          "groups": {
+            "entryDocuments": {
+              "discovered": 0,
+              "downloaded": 0,
+              "analyzed": 0,
+              "successful": 0,
+              "errorResponses": 0,
+              "blocked": 0,
+              "skipped": 0,
+              "uninspected": 0,
+              "currentStates": {
+                "inspected": 0,
+                "reused": 0,
+                "pending": 0,
+                "unavailable": 0,
+                "failed": 0,
+                "unsupported": 0,
+                "deferred": 0
+              },
+              "reasons": {}
+            },
+            "applicationPages": {
+              "discovered": 0,
+              "downloaded": 0,
+              "analyzed": 0,
+              "successful": 0,
+              "errorResponses": 0,
+              "blocked": 0,
+              "skipped": 0,
+              "uninspected": 0,
+              "currentStates": {
+                "inspected": 0,
+                "reused": 0,
+                "pending": 0,
+                "unavailable": 0,
+                "failed": 0,
+                "unsupported": 0,
+                "deferred": 0
+              },
+              "reasons": {}
+            },
+            "javascript": {
+              "discovered": 0,
+              "downloaded": 0,
+              "analyzed": 0,
+              "successful": 0,
+              "errorResponses": 0,
+              "blocked": 0,
+              "skipped": 0,
+              "uninspected": 0,
+              "currentStates": {
+                "inspected": 0,
+                "reused": 0,
+                "pending": 0,
+                "unavailable": 0,
+                "failed": 0,
+                "unsupported": 0,
+                "deferred": 0
+              },
+              "reasons": {}
+            },
+            "jsonConfig": {
+              "discovered": 0,
+              "downloaded": 0,
+              "analyzed": 0,
+              "successful": 0,
+              "errorResponses": 0,
+              "blocked": 0,
+              "skipped": 0,
+              "uninspected": 0,
+              "currentStates": {
+                "inspected": 0,
+                "reused": 0,
+                "pending": 0,
+                "unavailable": 0,
+                "failed": 0,
+                "unsupported": 0,
+                "deferred": 0
+              },
+              "reasons": {}
+            },
+            "sourceMaps": {
+              "discovered": 0,
+              "downloaded": 0,
+              "analyzed": 0,
+              "successful": 0,
+              "errorResponses": 0,
+              "blocked": 0,
+              "skipped": 0,
+              "uninspected": 0,
+              "currentStates": {
+                "inspected": 0,
+                "reused": 0,
+                "pending": 0,
+                "unavailable": 0,
+                "failed": 0,
+                "unsupported": 0,
+                "deferred": 0
+              },
+              "reasons": {}
+            },
+            "sitemaps": {
+              "discovered": 0,
+              "downloaded": 0,
+              "analyzed": 0,
+              "successful": 0,
+              "errorResponses": 0,
+              "blocked": 0,
+              "skipped": 0,
+              "uninspected": 0,
+              "currentStates": {
+                "inspected": 0,
+                "reused": 0,
+                "pending": 0,
+                "unavailable": 0,
+                "failed": 0,
+                "unsupported": 0,
+                "deferred": 0
+              },
+              "reasons": {}
+            },
+            "baselineRequests": {
+              "discovered": 0,
+              "downloaded": 0,
+              "analyzed": 0,
+              "successful": 0,
+              "errorResponses": 0,
+              "blocked": 0,
+              "skipped": 0,
+              "uninspected": 0,
+              "currentStates": {
+                "inspected": 0,
+                "reused": 0,
+                "pending": 0,
+                "unavailable": 0,
+                "failed": 0,
+                "unsupported": 0,
+                "deferred": 0
+              },
+              "reasons": {}
+            },
+            "deploymentChecks": {
+              "discovered": 0,
+              "downloaded": 0,
+              "analyzed": 0,
+              "successful": 0,
+              "errorResponses": 0,
+              "blocked": 0,
+              "skipped": 0,
+              "uninspected": 0,
+              "currentStates": {
+                "inspected": 0,
+                "reused": 0,
+                "pending": 0,
+                "unavailable": 0,
+                "failed": 0,
+                "unsupported": 0,
+                "deferred": 0
+              },
+              "reasons": {}
+            },
+            "images": {
+              "discovered": 0,
+              "downloaded": 0,
+              "analyzed": 0,
+              "successful": 0,
+              "errorResponses": 0,
+              "blocked": 0,
+              "skipped": 0,
+              "uninspected": 0,
+              "currentStates": {
+                "inspected": 0,
+                "reused": 0,
+                "pending": 0,
+                "unavailable": 0,
+                "failed": 0,
+                "unsupported": 0,
+                "deferred": 0
+              },
+              "reasons": {}
+            },
+            "runtimeCaptures": {
+              "discovered": 0,
+              "downloaded": 0,
+              "analyzed": 0,
+              "successful": 0,
+              "errorResponses": 0,
+              "blocked": 0,
+              "skipped": 0,
+              "uninspected": 0,
+              "currentStates": {
+                "inspected": 0,
+                "reused": 0,
+                "pending": 0,
+                "unavailable": 0,
+                "failed": 0,
+                "unsupported": 0,
+                "deferred": 0
+              },
+              "reasons": {}
+            },
+            "other": {
+              "discovered": 0,
+              "downloaded": 0,
+              "analyzed": 0,
+              "successful": 0,
+              "errorResponses": 0,
+              "blocked": 0,
+              "skipped": 0,
+              "uninspected": 0,
+              "currentStates": {
+                "inspected": 0,
+                "reused": 0,
+                "pending": 0,
+                "unavailable": 0,
+                "failed": 0,
+                "unsupported": 0,
+                "deferred": 0
+              },
+              "reasons": {}
+            },
+            "externalDependencies": {
+              "discovered": 0,
+              "downloaded": 0,
+              "analyzed": 0,
+              "successful": 0,
+              "errorResponses": 0,
+              "blocked": 0,
+              "skipped": 0,
+              "uninspected": 0,
+              "currentStates": {
+                "inspected": 0,
+                "reused": 0,
+                "pending": 0,
+                "unavailable": 0,
+                "failed": 0,
+                "unsupported": 0,
+                "deferred": 0
+              },
+              "reasons": {}
+            },
+            "browserRuntime": {
+              "discovered": 0,
+              "downloaded": 0,
+              "analyzed": 0,
+              "successful": 0,
+              "errorResponses": 0,
+              "blocked": 0,
+              "skipped": 0,
+              "uninspected": 0,
+              "currentStates": {
+                "inspected": 0,
+                "reused": 0,
+                "pending": 0,
+                "unavailable": 0,
+                "failed": 0,
+                "unsupported": 0,
+                "deferred": 0
+              },
+              "reasons": {}
+            }
+          },
+          "entryPoints": [
+            {
+              "url": "https://www.example.com/",
+              "successful": false,
+              "analyzed": false
+            }
+          ],
+          "highValueLimited": false,
+          "optionalPagesLimited": false
+        }
+      },
+      "inventory": [],
+      "summary": "Coverage is limited or in progress; inspect each origin and resource category. No findings means no supported exposure was detected in inspected coverage.",
+      "discoveryNote": "Discovered is the known unique URL inventory. Each URL has exactly one current state and category; inspected plus reused counts configured inspection coverage. Legacy downloaded/analyzed/error counters are historical evidence and can overlap. Browser runtime is a separate navigation count. Undiscovered resources cannot be counted; inventory omissions are reported.",
+      "deploymentChecks": {
+        "planned": 0,
+        "attempted": 0,
+        "remaining": 0
+      },
+      "requestComparison": [
+        {
+          "url": "https://www.example.com/",
+          "staticHeaders": [],
+          "browserHeaders": [],
+          "conclusion": "No guarded browser document response recorded."
+        }
+      ]
+    },
+    "scheduler": {
+      "classes": {
+        "entryPages": {
+          "pending": 0,
+          "active": 0,
+          "oldestQueuedMs": 0,
+          "deferred": 0
+        },
+        "javascript": {
+          "pending": 0,
+          "active": 0,
+          "oldestQueuedMs": 0,
+          "deferred": 0
+        },
+        "configuration": {
+          "pending": 0,
+          "active": 0,
+          "oldestQueuedMs": 0,
+          "deferred": 0
+        },
+        "sourceMaps": {
+          "pending": 0,
+          "active": 0,
+          "oldestQueuedMs": 0,
+          "deferred": 0
+        },
+        "discovery": {
+          "pending": 0,
+          "active": 0,
+          "oldestQueuedMs": 0,
+          "deferred": 0
+        },
+        "other": {
+          "pending": 0,
+          "active": 0,
+          "oldestQueuedMs": 0,
+          "deferred": 0
+        },
+        "optionalPages": {
+          "pending": 0,
+          "active": 0,
+          "oldestQueuedMs": 0,
+          "deferred": 0
+        },
+        "baseline": {
+          "pending": 0,
+          "active": 0,
+          "oldestQueuedMs": 0,
+          "deferred": 0
+        },
+        "deployment": {
+          "pending": 0,
+          "active": 0,
+          "oldestQueuedMs": 0,
+          "deferred": 0
+        },
+        "lowValue": {
+          "pending": 0,
+          "active": 0,
+          "oldestQueuedMs": 0,
+          "deferred": 0
+        }
+      },
+      "dispatches": [],
+      "peakBrowserOrigins": 0,
+      "pageAttempts": 0
+    },
+    "aggregatedSkips": [],
+    "dismissedObservations": [],
+    "websites": {
+      "mode": "fixed",
+      "count": 1,
+      "analysisMs": 0,
+      "importantUninspected": 0,
+      "limits": [
+        {
+          "origin": "https://www.example.com",
+          "mode": "fixed",
+          "effective": {
+            "resources": 200,
+            "pages": 30,
+            "bytes": 83886080,
+            "maps": 25,
+            "analysisMs": 12000
+          },
+          "maximum": {
+            "resources": 200,
+            "pages": 30,
+            "bytes": 83886080,
+            "maps": 25,
+            "analysisMs": 12000
+          },
+          "signals": {
+            "scripts": 0,
+            "bundleBytes": 0,
+            "maps": 0,
+            "importantPending": 0,
+            "responseMs": 0
+          },
+          "reasons": [
+            "Fixed per-website maximum allocation."
+          ],
+          "importantUninspected": []
+        }
+      ]
+    },
+    "findingTriage": {
+      "pending": 0,
+      "removedInsignificant": 0,
+      "categories": {
+        "direct-leak": 1,
+        "high-potential-leak": 0,
+        "low-potential-leak": 0
+      }
+    },
+    "engines": {
+      "websiteRules": "website/2.4.0",
+      "gitleaks": "unavailable",
+      "ruleDigest": "",
+      "companyRules": "none"
+    },
+    "findings": [
+      {
+        "id": "db4202ce3ee011ffd8cc9e5b3b516f5a",
+        "fingerprint": "db4202ce3ee011ffd8cc9e5b3b516f5a",
+        "category": "private-credential",
+        "provider": "Stripe",
+        "rule": "stripe-secret",
+        "severity": "high",
+        "confidence": "high",
+        "reasons": [
+          "Matches a documented credential format; validity and privileges are unverified."
+        ],
+        "masked": "[redacted: 35 characters]",
+        "validity": "unverified",
+        "impact": "Potential payment operations. Validity, permissions, expiry and restrictions are unknown.",
+        "remediation": "Revoke and replace the exposed credential. Remove the public value/file; move private credentials to backend secret storage. Rebuild frontend assets, remove stale assets, review provider usage and rescan.",
+        "occurrences": [
+          {
+            "url": "https://www.example.com/assets/app.js",
+            "line": 1,
+            "column": 22,
+            "byteOffset": 21,
+            "chain": [
+              "https://www.example.com/"
+            ],
+            "transformations": [],
+            "excerpt": "const stripe=Stripe(\"[redacted]\");",
+            "evidence": "Unauthenticated HTTP response",
+            "coordinates": "generated",
+            "byteOffsetEncoding": "utf-8-decoded-text",
+            "exposure": "public-response"
+          }
+        ],
+        "environment": "production",
+        "exposureGroup": "payments",
+        "financialPriority": "urgent",
+        "correlation": "77f0d6fc3138d77129a960d40afcb7d55423126f508fa90cc15b9033fd69a3fb",
+        "assessment": {
+          "ruleVersion": "website/2.4.0",
+          "exposureConfidence": "high",
+          "format": "stripe-secret",
+          "context": "Matches a documented credential format; validity and privileges are unverified.",
+          "completeness": "No complete credential pair inferred",
+          "channels": [
+            "public-response"
+          ],
+          "validity": "unverified",
+          "permissions": "unknown"
+        },
+        "triage": {
+          "category": "direct-leak",
+          "reason": "Private credential material was observed in public content or anonymous runtime evidence. Validity and permissions remain unverified."
+        }
+      }
+    ],
+    "resources": [],
+    "limitations": [],
+    "stage": "Ready",
+    "browserStatus": {
+      "requested": false,
+      "launch": false,
+      "runtimePages": 0,
+      "isolation": "unverified"
+    },
+    "discoveryGraph": {
+      "limit": 4000,
+      "edges": []
+    }
+  },
+  "resume": "Fresh unauthenticated scan of seeds plus safe frontier; previous full values are not persisted."
+}

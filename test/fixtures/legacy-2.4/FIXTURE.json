@@ -1,0 +1,31 @@
+{
+  "schema": "exposure-legacy-fixture/1",
+  "generatedBy": "2.4.0-rc.1+5d5acf0f7f18d7e6",
+  "generatedAt": "2026-10-08T05:40:08.323Z",
+  "projects": {
+    "p1": "55fb261e-3941-422d-a9ad-302f96a38a21",
+    "p2": "7c5c1926-2bba-4f24-b9fd-55abc0e05969",
+    "p3": "dfb0f6b4-753b-442e-a9c8-701d9687f599"
+  },
+  "scans": [
+    {
+      "id": "542f2d9b-0d1a-4e6d-a8e8-1b2698bb7c33",
+      "state": "completed"
+    },
+    {
+      "id": "a5f42f89-fa76-4fca-80a1-01ec13f4a596",
+      "state": "completed"
+    },
+    {
+      "id": "7755b7b3-be0a-440f-a069-6cf13ed59dcd",
+      "state": "incomplete"
+    },
+    {
+      "id": "d817ca8c-3ad3-40d0-9c58-65948f5fef93",
+      "state": "running"
+    }
+  ],
+  "vaultScan": "a5f42f89-fa76-4fca-80a1-01ec13f4a596",
+  "vaultPassword": "legacy-fixture-password-2026",
+  "note": "Synthetic 2.4.0-rc.1 data directory written by the 2.4 baseline code. Copy it to a temporary directory before opening it: Store.init recovers the running record in place."
+}

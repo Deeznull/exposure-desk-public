@@ -1,0 +1,41 @@
+{
+  "beforeBuild": {
+    "version": "2.3.0-rc.1",
+    "id": "2.3.0-rc.1+5fd9435d84e583c6",
+    "sourceDigest": "5fd9435d84e583c60e6c96b8727db9dca5b70ecc2a7eb83eace453768b202052"
+  },
+  "afterBuild": {
+    "version": "2.3.1-rc.1",
+    "id": "2.3.1-rc.1+1b19d40f69120ab9",
+    "sourceDigest": "1b19d40f69120ab990e89655815cd8f2a16c2dbd31046b4f4b63c84239a9bdf0"
+  },
+  "fixture": {
+    "path": "test/provider-fixtures.ts",
+    "sha256": "32954e0c2e2d82111d3a44f266191ae3ec91932312fb655a3942ba2c4df49fe2"
+  },
+  "beforeSummary": {
+    "planted": 102,
+    "detected": 102,
+    "missed": 0,
+    "falsePositives": 0,
+    "componentErrors": 0,
+    "locationErrors": 0,
+    "privateTargets": 98,
+    "publicTargets": 3,
+    "suspiciousTargets": 1
+  },
+  "afterSummary": {
+    "planted": 102,
+    "detected": 102,
+    "missed": 0,
+    "falsePositives": 0,
+    "componentErrors": 0,
+    "locationErrors": 0,
+    "privateTargets": 98,
+    "publicTargets": 3,
+    "suspiciousTargets": 1
+  },
+  "beforeElapsedMs": 82912,
+  "afterElapsedMs": 73991,
+  "note": "Same 102 selected targets, unchanged format rules and fixture bytes. Historical timing is host-dependent; no universal accuracy or throughput inferred."
+}

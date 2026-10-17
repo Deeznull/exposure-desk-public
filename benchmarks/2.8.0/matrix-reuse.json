@@ -1,0 +1,366 @@
+{
+ "schema": "exposure-matrix-reuse/1",
+ "reusedFrom": "w4-release (2.8.0 attempt 1) matrix, 2.7.0 side measured 2026-10-11 on this computer, same 2.7.0 build, measurement harness and Node",
+ "spotCheck": {
+  "criteria": "same state, keys, connections (requests, TCP, TLS, attempts, opened, browser navigations, 0 egress) and memory settings; peak RSS within 10 %; time within 15 %",
+  "rows": [
+   {
+    "id": "2.7.0/quick+normal/singlex1",
+    "match": true,
+    "reused": {
+     "durationS": 16,
+     "peakRssMb": 169,
+     "measuredAt": "2026-10-11T09:46:05.352Z",
+     "build": "2.7.0+3772c88c496661b5"
+    },
+    "spot": {
+     "durationS": 15.8,
+     "peakRssMb": 165,
+     "measuredAt": "2026-10-12T05:14:41.401Z",
+     "build": "2.7.0+3772c88c496661b5"
+    },
+    "timeChangePct": -0.7,
+    "rssChangePct": -2.4,
+    "keys": "6/8",
+    "requests": 25,
+    "tcp": 25,
+    "navigations": 0,
+    "why": []
+   },
+   {
+    "id": "2.7.0/standard+normal/singlex1",
+    "match": true,
+    "reused": {
+     "durationS": 43.5,
+     "peakRssMb": 185,
+     "measuredAt": "2026-10-11T09:47:12.161Z",
+     "build": "2.7.0+3772c88c496661b5"
+    },
+    "spot": {
+     "durationS": 44,
+     "peakRssMb": 178,
+     "measuredAt": "2026-10-12T05:14:57.844Z",
+     "build": "2.7.0+3772c88c496661b5"
+    },
+    "timeChangePct": 1.3,
+    "rssChangePct": -3.8,
+    "keys": "7/8",
+    "requests": 50,
+    "tcp": 50,
+    "navigations": 5,
+    "why": []
+   },
+   {
+    "id": "2.7.0/deep+normal/singlex1",
+    "match": true,
+    "reused": {
+     "durationS": 83.4,
+     "peakRssMb": 185,
+     "measuredAt": "2026-10-11T09:49:16.881Z",
+     "build": "2.7.0+3772c88c496661b5"
+    },
+    "spot": {
+     "durationS": 81.3,
+     "peakRssMb": 180,
+     "measuredAt": "2026-10-12T05:15:42.549Z",
+     "build": "2.7.0+3772c88c496661b5"
+    },
+    "timeChangePct": -2.5,
+    "rssChangePct": -2.7,
+    "keys": "8/8",
+    "requests": 61,
+    "tcp": 61,
+    "navigations": 10,
+    "why": []
+   },
+   {
+    "id": "2.7.0/standard+normal/bundlex1",
+    "match": true,
+    "reused": {
+     "durationS": 27.3,
+     "peakRssMb": 297,
+     "measuredAt": "2026-10-11T09:53:44.196Z",
+     "build": "2.7.0+3772c88c496661b5"
+    },
+    "spot": {
+     "durationS": 27.9,
+     "peakRssMb": 291,
+     "measuredAt": "2026-10-12T05:17:04.590Z",
+     "build": "2.7.0+3772c88c496661b5"
+    },
+    "timeChangePct": 1.8,
+    "rssChangePct": -2,
+    "keys": "7/7",
+    "requests": 41,
+    "tcp": 41,
+    "navigations": 1,
+    "why": []
+   },
+   {
+    "id": "2.7.0/standard+low-impact/multix3",
+    "match": true,
+    "reused": {
+     "durationS": 161.5,
+     "peakRssMb": 179,
+     "measuredAt": "2026-10-11T10:00:51.784Z",
+     "build": "2.7.0+3772c88c496661b5"
+    },
+    "spot": {
+     "durationS": 160.7,
+     "peakRssMb": 177,
+     "measuredAt": "2026-10-12T05:17:33.141Z",
+     "build": "2.7.0+3772c88c496661b5"
+    },
+    "timeChangePct": -0.5,
+    "rssChangePct": -1.1,
+    "keys": "21/24",
+    "requests": 118,
+    "tcp": 5,
+    "navigations": 9,
+    "why": []
+   },
+   {
+    "id": "2.7.0/standard+normal/multix10",
+    "match": false,
+    "reused": {
+     "durationS": 266.2,
+     "peakRssMb": 286,
+     "measuredAt": "2026-10-11T10:15:18.563Z",
+     "build": "2.7.0+3772c88c496661b5"
+    },
+    "spot": {
+     "durationS": 278.9,
+     "peakRssMb": 281,
+     "measuredAt": "2026-10-12T05:20:14.468Z",
+     "build": "2.7.0+3772c88c496661b5"
+    },
+    "timeChangePct": 4.8,
+    "rssChangePct": -1.7,
+    "keys": "70/80",
+    "requests": 495,
+    "tcp": 495,
+    "navigations": 50,
+    "why": [
+     "connections {\"requests\":494,\"tcp\":494,\"tls\":494,\"attempts\":494,\"opened\":494,\"nav\":50,\"egress\":0} vs {\"requests\":495,\"tcp\":495,\"tls\":495,\"attempts\":495,\"opened\":495,\"nav\":50,\"egress\":0}"
+    ]
+   }
+  ],
+  "allMatch": false
+ },
+ "slowRows": [
+  {
+   "checkedAt": "2026-10-12T07:46:49.495Z",
+   "rows": []
+  }
+ ],
+ "disturbedReruns": {
+  "criteria": "a row is measured under outside load when any machine-state sample (about every 5 s) during it shows free memory below 10000 MiB or CPU at 95 % or more; such rows are rerun alone through the limiter and the rerun replaces them (HANDOFF D12); the earlier entries stay in the work folder history (results-history.jsonl)",
+  "cause": "load from outside the measurement on 2026-10-12, about 05:42-06:04 UTC (CPU at 99 %, free memory down to 3.2 GB); not identified",
+  "checkedSides": [
+   "2.7.0",
+   "2.8",
+   "2.8-small"
+  ],
+  "flaggedAfterRerun": [],
+  "rows": [
+   {
+    "id": "2.7.0/standard+low-impact/bundlex1",
+    "disturbed": {
+     "measuredAt": "2026-10-12T05:33:11.175Z",
+     "durationS": 74,
+     "state": "incomplete",
+     "recall": "7/7",
+     "requests": 37,
+     "tcp": 1,
+     "peakRssMb": 292,
+     "machine": {
+      "samples": 15,
+      "minFreeMiB": 9988,
+      "maxCpuPct": 50.4,
+      "cpuAtLeast95": 0
+     }
+    },
+    "rerun": {
+     "measuredAt": "2026-10-12T06:25:44.380Z",
+     "durationS": 73.4,
+     "state": "incomplete",
+     "recall": "7/7",
+     "requests": 37,
+     "tcp": 1,
+     "peakRssMb": 293,
+     "machine": {
+      "samples": 15,
+      "minFreeMiB": 15320,
+      "maxCpuPct": 14.2,
+      "cpuAtLeast95": 0
+     }
+    }
+   },
+   {
+    "id": "2.7.0/deep+normal/multix3",
+    "disturbed": {
+     "measuredAt": "2026-10-12T05:42:35.540Z",
+     "durationS": 162,
+     "state": "incomplete",
+     "recall": "24/24",
+     "requests": 183,
+     "tcp": 183,
+     "peakRssMb": 211,
+     "machine": {
+      "samples": 32,
+      "minFreeMiB": 8208,
+      "maxCpuPct": 75.5,
+      "cpuAtLeast95": 0
+     }
+    },
+    "rerun": {
+     "measuredAt": "2026-10-12T06:26:58.325Z",
+     "durationS": 130.9,
+     "state": "incomplete",
+     "recall": "24/24",
+     "requests": 183,
+     "tcp": 183,
+     "peakRssMb": 210,
+     "machine": {
+      "samples": 26,
+      "minFreeMiB": 15082,
+      "maxCpuPct": 28.3,
+      "cpuAtLeast95": 0
+     }
+    }
+   },
+   {
+    "id": "2.7.0/deep+low-impact/multix3",
+    "disturbed": {
+     "measuredAt": "2026-10-12T05:45:18.355Z",
+     "durationS": 203.7,
+     "state": "incomplete",
+     "recall": "24/24",
+     "requests": 141,
+     "tcp": 11,
+     "peakRssMb": 204,
+     "machine": {
+      "samples": 41,
+      "minFreeMiB": 8064,
+      "maxCpuPct": 72.6,
+      "cpuAtLeast95": 0
+     }
+    },
+    "rerun": {
+     "measuredAt": "2026-10-12T06:29:09.789Z",
+     "durationS": 198.3,
+     "state": "incomplete",
+     "recall": "24/24",
+     "requests": 141,
+     "tcp": 9,
+     "peakRssMb": 205,
+     "machine": {
+      "samples": 39,
+      "minFreeMiB": 15579,
+      "maxCpuPct": 16.6,
+      "cpuAtLeast95": 0
+     }
+    }
+   },
+   {
+    "id": "2.7.0/quick+normal/multix10",
+    "disturbed": {
+     "measuredAt": "2026-10-12T05:48:42.830Z",
+     "durationS": 160.1,
+     "state": "completed",
+     "recall": "60/80",
+     "requests": 250,
+     "tcp": 250,
+     "peakRssMb": 173,
+     "machine": {
+      "samples": 31,
+      "minFreeMiB": 7442,
+      "maxCpuPct": 81.4,
+      "cpuAtLeast95": 0
+     }
+    },
+    "rerun": {
+     "measuredAt": "2026-10-12T06:32:28.628Z",
+     "durationS": 104.7,
+     "state": "completed",
+     "recall": "60/80",
+     "requests": 250,
+     "tcp": 250,
+     "peakRssMb": 203,
+     "machine": {
+      "samples": 20,
+      "minFreeMiB": 15973,
+      "maxCpuPct": 17.3,
+      "cpuAtLeast95": 0
+     }
+    }
+   },
+   {
+    "id": "2.7.0/quick+low-impact/multix10",
+    "disturbed": {
+     "measuredAt": "2026-10-12T05:51:23.795Z",
+     "durationS": 311,
+     "state": "completed",
+     "recall": "60/80",
+     "requests": 250,
+     "tcp": 26,
+     "peakRssMb": 166,
+     "machine": {
+      "samples": 61,
+      "minFreeMiB": 4919,
+      "maxCpuPct": 100,
+      "cpuAtLeast95": 22
+     }
+    },
+    "rerun": {
+     "measuredAt": "2026-10-12T06:34:13.950Z",
+     "durationS": 255.2,
+     "state": "completed",
+     "recall": "60/80",
+     "requests": 250,
+     "tcp": 10,
+     "peakRssMb": 165,
+     "machine": {
+      "samples": 51,
+      "minFreeMiB": 15984,
+      "maxCpuPct": 10.3,
+      "cpuAtLeast95": 0
+     }
+    }
+   },
+   {
+    "id": "2.7.0/standard+normal/multix10",
+    "disturbed": {
+     "measuredAt": "2026-10-12T05:56:35.877Z",
+     "durationS": 458.7,
+     "state": "incomplete",
+     "recall": "60/80",
+     "requests": 401,
+     "tcp": 401,
+     "peakRssMb": 279,
+     "machine": {
+      "samples": 89,
+      "minFreeMiB": 3259,
+      "maxCpuPct": 100,
+      "cpuAtLeast95": 52
+     }
+    },
+    "rerun": {
+     "measuredAt": "2026-10-12T06:38:29.740Z",
+     "durationS": 247.2,
+     "state": "incomplete",
+     "recall": "70/80",
+     "requests": 494,
+     "tcp": 494,
+     "peakRssMb": 281,
+     "machine": {
+      "samples": 49,
+      "minFreeMiB": 15044,
+      "maxCpuPct": 33.2,
+      "cpuAtLeast95": 0
+     }
+    }
+   }
+  ]
+ }
+}

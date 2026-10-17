@@ -1,0 +1,199 @@
+# Linux CI: both test suites, the Linux x64 package with its smoke test, and the container image with its smoke test.
+# Third-party distributions (Node.js, Chrome for Testing, Gitleaks) are downloaded from their official sources and checksum-verified
+# by scripts/fetch-linux-distributions.mjs. Tests use loopback fixtures and synthetic keys only. Actions are pinned to full commit SHAs.
+# Pull requests and plain runs build, check and smoke-test the Linux package but upload nothing. A manual run with release_tag (vX.Y.Z)
+# attaches the checked tar.gz and its .sha256 to a DRAFT GitHub Release for that tag (created if missing, assets replaced with --clobber);
+# release assets do not count against the Actions artifact storage quota. The workflow never publishes a release and never deletes
+# releases, assets or artifacts. upload_artifact keeps the old workflow-artifact upload as an explicit opt-in.
+name: Linux
+
+on:
+  pull_request:
+    branches: [v3, main]
+  workflow_dispatch:
+    inputs:
+      release_tag:
+        description: 'Attach the Linux package to the draft GitHub Release for this tag (vX.Y.Z); empty uploads nothing'
+        type: string
+        required: false
+        default: ''
+      upload_artifact:
+        description: 'Also upload the package as a workflow artifact (counts against the Actions artifact storage quota)'
+        type: boolean
+        required: false
+        default: false
+
+permissions:
+  contents: read
+
+concurrency:
+  group: linux-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+env:
+  FORCE_COLOR: '0'
+  EXPOSURE_NO_OPEN: '1'
+
+jobs:
+  suites:
+    name: Tests (${{ matrix.suite }})
+    runs-on: ubuntu-24.04
+    timeout-minutes: 90
+    strategy:
+      fail-fast: false
+      matrix:
+        suite: [nonbrowser, browser]
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - name: Fetch verified Node.js, Chromium and Gitleaks
+        run: |
+          node scripts/fetch-linux-distributions.mjs --runtime runtime --browser browser --tools .cache/linux-tools --summary .cache/linux-distributions.json
+          echo "$GITHUB_WORKSPACE/runtime/bin" >> "$GITHUB_PATH"
+      - name: Install locked dependencies
+        run: |
+          node --version
+          npm ci --ignore-scripts --no-audit --no-fund
+      - name: Chromium OS libraries
+        run: sudo "$GITHUB_WORKSPACE/runtime/bin/node" node_modules/playwright/cli.js install-deps chromium
+      - name: Allow Chromium's own sandbox (Ubuntu 23.10+ AppArmor user-namespace restriction)
+        run: |
+          if [ "$(sysctl -n kernel.apparmor_restrict_unprivileged_userns 2>/dev/null || echo 0)" = "1" ]; then
+            sudo sysctl -w kernel.apparmor_restrict_unprivileged_userns=0
+          fi
+      - name: Type check
+        if: matrix.suite == 'nonbrowser'
+        run: npm run check
+      - name: Test suite
+        env:
+          GITLEAKS_PATH: ${{ github.workspace }}/.cache/linux-tools/gitleaks
+          EXPOSURE_DATA_DIR: ${{ runner.temp }}/exposure-data
+          EXPOSURE_VERIFY_ROOT: ${{ runner.temp }}/exposure-verify
+        run: node scripts/test.mjs ${{ matrix.suite == 'browser' && '--browser' || '' }}
+
+  package:
+    name: Linux x64 package
+    runs-on: ubuntu-24.04
+    timeout-minutes: 60
+    # The only job with write access: it may attach the package to a draft release, only on a manual run with release_tag (see the guarded step).
+    permissions:
+      contents: write
+    steps:
+      - name: Check the release tag input
+        if: github.event_name == 'workflow_dispatch' && inputs.release_tag != ''
+        env:
+          RELEASE_TAG: ${{ inputs.release_tag }}
+        run: |
+          if [[ ! "$RELEASE_TAG" =~ ^v[0-9]+\.[0-9]+\.[0-9]+$ ]]; then
+            echo "::error::release_tag must look like v1.2.3"
+            exit 1
+          fi
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - name: Fetch verified Node.js, Chromium and Gitleaks
+        run: |
+          node scripts/fetch-linux-distributions.mjs --runtime runtime --browser browser --tools .cache/linux-tools --summary .cache/linux-distributions.json
+          echo "$GITHUB_WORKSPACE/runtime/bin" >> "$GITHUB_PATH"
+      - name: Install locked dependencies and build
+        run: |
+          npm ci --ignore-scripts --no-audit --no-fund
+          node scripts/build.mjs
+      - name: Chromium OS libraries
+        run: sudo "$GITHUB_WORKSPACE/runtime/bin/node" node_modules/playwright/cli.js install-deps chromium
+      - name: Build the package
+        run: SOURCE_DATE_EPOCH="$(git log -1 --format=%ct)" node scripts/package-linux.mjs --tools .cache/linux-tools
+      - name: Package smoke test (unpacked into a folder whose path has spaces)
+        env:
+          EXPOSURE_VERIFY_ROOT: ${{ runner.temp }}/exposure-verify
+        run: |
+          (cd artifacts && sha256sum --check -- *.tar.gz.sha256)
+          name="Exposure Desk $(node -p "require('./package.json').version") Linux x64"
+          mkdir -p "$RUNNER_TEMP/package test"
+          tar -xzf "artifacts/$name.tar.gz" -C "$RUNNER_TEMP/package test"
+          node scripts/packaged-smoke.mjs "$RUNNER_TEMP/package test/$name"
+      - name: Record the package (run, commit, SHA-256)
+        run: |
+          version="$(node -p "require('./package.json').version")"
+          file="artifacts/Exposure Desk $version Linux x64.tar.gz"
+          sum="$(sha256sum -- "$file" | cut -d' ' -f1)"
+          [ "$sum" = "$(cut -d' ' -f1 "$file.sha256")" ]
+          {
+            echo "### Linux x64 package"
+            echo ""
+            echo "| Field | Value |"
+            echo "| --- | --- |"
+            echo "| Workflow run | $GITHUB_RUN_ID (attempt $GITHUB_RUN_ATTEMPT, $GITHUB_EVENT_NAME) |"
+            echo "| Commit | $GITHUB_SHA |"
+            echo "| Package | Exposure Desk $version Linux x64.tar.gz |"
+            echo "| Bytes | $(stat -c %s "$file") |"
+            echo "| SHA-256 | $sum |"
+          } >> "$GITHUB_STEP_SUMMARY"
+          echo "Linux package: run $GITHUB_RUN_ID attempt $GITHUB_RUN_ATTEMPT, commit $GITHUB_SHA, version $version, sha256 $sum"
+      # Draft release assets instead of workflow artifacts: never on pull requests, never published, nothing deleted.
+      - name: Attach the package to the draft release
+        if: github.event_name == 'workflow_dispatch' && inputs.release_tag != ''
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+          RELEASE_TAG: ${{ inputs.release_tag }}
+        run: |
+          [[ "$RELEASE_TAG" =~ ^v[0-9]+\.[0-9]+\.[0-9]+$ ]] || { echo "::error::release_tag must look like v1.2.3"; exit 1; }
+          version="$(node -p "require('./package.json').version")"
+          file="artifacts/Exposure Desk $version Linux x64.tar.gz"
+          sum="$(cut -d' ' -f1 "$file.sha256")"
+          if [ "v$version" != "$RELEASE_TAG" ]; then
+            echo "::warning::The package is version $version but the release tag is $RELEASE_TAG; a later run for $RELEASE_TAG replaces these assets."
+          fi
+          # Fixed asset names (GitHub would rewrite the spaces), so a later run for the same tag replaces both files.
+          # scripts/linux-release-assets.mjs restores the package name recorded in the .sha256 file after download.
+          stage="$RUNNER_TEMP/release-assets"
+          mkdir -p "$stage"
+          cp -- "$file" "$stage/exposure-desk-linux-x64.tar.gz"
+          cp -- "$file.sha256" "$stage/exposure-desk-linux-x64.tar.gz.sha256"
+          notes="Draft for $RELEASE_TAG, not published. Linux x64 package: Exposure Desk $version Linux x64.tar.gz, sha256 $sum, built by workflow run $GITHUB_RUN_ID (attempt $GITHUB_RUN_ATTEMPT) from commit $GITHUB_SHA. Download with gh release download and check with scripts/linux-release-assets.mjs (see RELEASE_PACKAGE.md)."
+          if draft="$(gh release view "$RELEASE_TAG" --json isDraft --jq .isDraft 2>"$RUNNER_TEMP/release-view.err")"; then
+            if [ "$draft" != "true" ]; then
+              echo "::error::The release $RELEASE_TAG is already published; this workflow only changes draft releases."
+              exit 1
+            fi
+            gh release edit "$RELEASE_TAG" --target "$GITHUB_SHA" --notes "$notes"
+          elif grep -q "release not found" "$RUNNER_TEMP/release-view.err"; then
+            gh release create "$RELEASE_TAG" --draft --target "$GITHUB_SHA" --title "Exposure Desk ${RELEASE_TAG#v}" --notes "$notes"
+          else
+            cat "$RUNNER_TEMP/release-view.err"
+            exit 1
+          fi
+          gh release upload "$RELEASE_TAG" "$stage/exposure-desk-linux-x64.tar.gz" "$stage/exposure-desk-linux-x64.tar.gz.sha256" --clobber
+          [ "$(gh release view "$RELEASE_TAG" --json isDraft --jq .isDraft)" = "true" ]
+          url="$(gh release view "$RELEASE_TAG" --json url --jq .url)"
+          {
+            echo "| Draft release | $RELEASE_TAG ($url) |"
+            echo "| Release assets | exposure-desk-linux-x64.tar.gz, exposure-desk-linux-x64.tar.gz.sha256 |"
+          } >> "$GITHUB_STEP_SUMMARY"
+          echo "Attached to draft release $RELEASE_TAG: exposure-desk-linux-x64.tar.gz sha256 $sum (run $GITHUB_RUN_ID, commit $GITHUB_SHA)"
+      - name: Upload the package as a workflow artifact (opt-in)
+        if: github.event_name == 'workflow_dispatch' && inputs.upload_artifact
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: exposure-desk-linux-x64
+          path: |
+            artifacts/*.tar.gz
+            artifacts/*.tar.gz.sha256
+          compression-level: 0
+          if-no-files-found: error
+          retention-days: 14
+
+  docker:
+    name: Container image
+    runs-on: ubuntu-24.04
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - name: Build the image
+        run: docker build --pull --tag exposure-desk:ci .
+      - name: Container smoke test
+        run: node scripts/docker-smoke.mjs exposure-desk:ci

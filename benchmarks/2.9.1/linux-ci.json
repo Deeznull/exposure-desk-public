@@ -1,0 +1,135 @@
+{
+  "schema": "exposure-linux-ci/1",
+  "workflow": "Linux",
+  "runId": "38885369937",
+  "url": "https://github.com/Deeznull/exposure-desk/actions/runs/38885369937",
+  "commit": "104e57d6a11377f37221761fb5b777418f831892",
+  "branch": "v3-w9-patch",
+  "event": "workflow_dispatch",
+  "attempt": 1,
+  "conclusion": "success",
+  "createdAt": "2026-10-16T10:09:42Z",
+  "updatedAt": "2026-10-16T10:34:01Z",
+  "runner": "GitHub-hosted ubuntu-24.04 runners (see linux.yml)",
+  "role": "release run",
+  "jobs": {
+    "nonbrowser": {
+      "job": "Tests (nonbrowser)",
+      "jobId": 116921719168,
+      "conclusion": "success",
+      "tests": 777,
+      "pass": 776,
+      "fail": 0,
+      "skipped": 1,
+      "cancelled": 0,
+      "todo": 0,
+      "note": "The one skipped test is Windows-only (the disk writer's Windows ACL step), as in 2.9.0."
+    },
+    "browser": {
+      "job": "Tests (browser)",
+      "jobId": 116921719253,
+      "conclusion": "success",
+      "tests": 46,
+      "pass": 46,
+      "fail": 0,
+      "skipped": 0,
+      "cancelled": 0,
+      "todo": 0
+    },
+    "package": {
+      "job": "Linux x64 package",
+      "jobId": 116921719235,
+      "conclusion": "success",
+      "built": true,
+      "checksumFileMatches": true,
+      "packagedSmoke": "success",
+      "upload": "attached to the draft GitHub Release v2.9.1 (release assets; no workflow artifact, the opt-in artifact step was skipped)",
+      "note": "The package was built from commit 104e57d (8085 files, 266268818 bytes, sha256 f278e1ef330817fb111969fbb5a9c48f49181e6fa682eebc5b389291606e9190; build 2.9.1+94a512df50bb9d43), passed sha256sum --check and its packaged smoke test (unpacked into a folder whose path has spaces; 13/13 checks, analysis processes on the bundled runtime, none left running) before it was attached to the draft release."
+    },
+    "container": {
+      "job": "Container image",
+      "jobId": 116921718890,
+      "conclusion": "success"
+    }
+  },
+  "artifact": null,
+  "releaseAsset": {
+    "tag": "v2.9.1",
+    "release": "Exposure Desk 2.9.1",
+    "draft": true,
+    "target": "104e57d6a11377f37221761fb5b777418f831892",
+    "assets": [
+      {
+        "name": "exposure-desk-linux-x64.tar.gz",
+        "bytes": 266268818,
+        "sha256": "f278e1ef330817fb111969fbb5a9c48f49181e6fa682eebc5b389291606e9190",
+        "updatedAt": "2026-10-16T10:12:21Z"
+      },
+      {
+        "name": "exposure-desk-linux-x64.tar.gz.sha256",
+        "bytes": 103,
+        "sha256": "0b50cb27a5a60bf565b7e6da4786cd5d27896991b20b05a33e6027ac79cffc85",
+        "updatedAt": "2026-10-16T10:12:14Z"
+      }
+    ],
+    "file": "Exposure Desk 2.9.1 Linux x64.tar.gz",
+    "bytes": 266268818,
+    "files": 8085,
+    "sha256": "f278e1ef330817fb111969fbb5a9c48f49181e6fa682eebc5b389291606e9190",
+    "build": "2.9.1+94a512df50bb9d43",
+    "platform": "linux-x64",
+    "detectorRules": "website/2.9.1",
+    "checksumFileMatches": true,
+    "downloadedWith": "gh release download v2.9.1 --pattern '*.tar.gz*', then node scripts/linux-release-assets.mjs (checks the package against its .sha256 and the version, restores the package names)"
+  },
+  "measurementRuns": [
+    {
+      "runId": "38885349160",
+      "url": "https://github.com/Deeznull/exposure-desk/actions/runs/38885349160",
+      "commit": "104e57d6a11377f37221761fb5b777418f831892",
+      "branch": "v3-w9-patch",
+      "event": "pull_request",
+      "attempt": 1,
+      "conclusion": "success",
+      "createdAt": "2026-10-16T10:09:30Z",
+      "updatedAt": "2026-10-16T10:30:02Z",
+      "jobs": {
+        "nonbrowser": {
+          "job": "Tests (nonbrowser)",
+          "jobId": 116922075873,
+          "conclusion": "success",
+          "tests": 777,
+          "pass": 776,
+          "fail": 0,
+          "skipped": 1,
+          "cancelled": 0,
+          "todo": 0
+        },
+        "browser": {
+          "job": "Tests (browser)",
+          "jobId": 116922075524,
+          "conclusion": "success",
+          "tests": 46,
+          "pass": 46,
+          "fail": 0,
+          "skipped": 0,
+          "cancelled": 0,
+          "todo": 0
+        },
+        "package": {
+          "job": "Linux x64 package",
+          "jobId": 116922075968,
+          "conclusion": "success"
+        },
+        "container": {
+          "job": "Container image",
+          "jobId": 116922076031,
+          "conclusion": "success"
+        }
+      },
+      "note": "Pull request run for PR #8 on the same commit and build; it builds and checks the package but uploads nothing."
+    }
+  ],
+  "measurementNote": "Run 38885349160, the pull request run on the same commit 104e57d (same build digest 94a512df50bb9d43), repeated the suites, the package build and check and the container image; its results are kept here as a second measurement.",
+  "note": "Release run on commit 104e57d (build digest 94a512df50bb9d43, equal to the release build 2.9.1+94a512df50bb9d43; that commit changed only release documents, which are not build inputs). One dispatch with release_tag=v2.9.1: the package job built the Linux x64 package, checked it with sha256sum --check and the packaged smoke test, and only then attached it to the draft GitHub Release v2.9.1 with --clobber, replacing the stale 2.9.0 package the draft held before. The release stays a draft and no tag was created. The package was downloaded with gh release download, checked by scripts/linux-release-assets.mjs (checksum file and version) and sha256sum --check; its PACKAGE_MANIFEST.json records build 2.9.1+94a512df50bb9d43, platform linux-x64 and rules website/2.9.1."
+}

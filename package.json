@@ -1,0 +1,49 @@
+{
+  "name": "local-exposure-scanner",
+  "version": "2.9.1",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=24 <27"
+  },
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "check": "node node_modules/typescript/bin/tsc --noEmit",
+    "test": "node scripts/test.mjs",
+    "test:browser": "node scripts/test.mjs --browser",
+    "test:cli": "node dist/scripts/cli-smoke.js",
+    "start": "node dist/src/cli.js dashboard",
+    "scan": "node dist/src/cli.js scan",
+    "fixture": "node dist/src/fixture.js",
+    "demo": "node dist/scripts/demo.js",
+    "launch": "node scripts/launch.mjs",
+    "doctor": "node dist/src/cli.js doctor",
+    "test:upgrade": "node scripts/test.mjs --upgrade",
+    "package:windows": "node scripts/package-portable.mjs",
+    "setup:gitleaks": "node scripts/install-gitleaks.mjs",
+    "setup:browser": "playwright install chromium",
+    "test:coverage": "node --test --test-isolation=none dist/test/coverage.test.js dist/test/providers.test.js",
+    "benchmark": "node dist/scripts/benchmark.js",
+    "test:persistence": "node dist/scripts/persistence-smoke.js",
+    "test:package": "node scripts/packaged-smoke.mjs",
+    "test:pipeline": "node dist/scripts/pipeline-self-test.js",
+    "coverage:registry": "node dist/scripts/coverage-registry.js",
+    "test:stage2": "node --test --test-isolation=none dist/test/stage2.test.js",
+    "benchmark:heldout": "node scripts/heldout-benchmark.mjs",
+    "benchmark:upgrade": "node scripts/upgrade-evaluate.mjs",
+    "benchmark:acquisition": "node scripts/upgrade-acquisition.mjs"
+  },
+  "dependencies": {
+    "@jridgewell/trace-mapping": "0.3.31",
+    "acorn": "8.19.0",
+    "cheerio": "1.2.0",
+    "ipaddr.js": "2.5.0",
+    "playwright": "1.63.0",
+    "re2-wasm": "1.0.2",
+    "tldts": "7.4.16"
+  },
+  "devDependencies": {
+    "@types/node": "26.6.4",
+    "typescript": "7.0.2"
+  }
+}

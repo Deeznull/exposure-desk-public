@@ -1,0 +1,73 @@
+{
+  "build": {
+    "version": "2.9.0",
+    "id": "2.9.0+b251a3ea63449d85",
+    "sourceDigest": "b251a3ea63449d850376c0e55b818b8d02a4b1de7d1ffd85b3b447e68679370f"
+  },
+  "seed": "ExposureDesk/acquisition-heldout/20261007/952",
+  "corpusDigest": "627f7d571e418431fc1c9d17c4a2d353fb8f3d133177b6d4f4e0bb98e219225c",
+  "rows": [
+    {
+      "id": "module",
+      "provider": "OpenAI",
+      "framework": "ESM",
+      "channel": "cross-module",
+      "detected": true
+    },
+    {
+      "id": "map",
+      "provider": "OpenAI",
+      "framework": "TypeScript/React",
+      "channel": "source-map",
+      "detected": true
+    },
+    {
+      "id": "worker",
+      "provider": "OpenAI",
+      "framework": "ESM",
+      "channel": "descendant-debugger",
+      "detected": true
+    },
+    {
+      "id": "iframe",
+      "provider": "OpenAI",
+      "framework": "ESM",
+      "channel": "descendant-debugger",
+      "detected": true
+    },
+    {
+      "id": "route",
+      "provider": "OpenAI",
+      "framework": "ESM",
+      "channel": "approved-route",
+      "detected": true
+    }
+  ],
+  "targets": 5,
+  "detected": 5,
+  "falsePositives": 0,
+  "acquisition": {
+    "knownResources": 9,
+    "inspected": 9,
+    "uninspected": [],
+    "runtimePages": 2,
+    "runtimeCaptures": 16,
+    "networkAttempts": 18,
+    "forbiddenArrivals": 0
+  },
+  "elapsedMs": 6629.4014,
+  "maxRssKiB": 228180,
+  "gaps": [
+    "browser-disabled-channels",
+    "semantic-jsx-expressions",
+    "browser-page-budget",
+    "scope",
+    "credential-in-request",
+    "browser-background-denied"
+  ],
+  "limitations": [
+    "One synthetic dynamic application group, no population accuracy inference.",
+    "Matched settings, seed, bodies and installed Chromium; two explicitly approved browser routes.",
+    "Node peak RSS includes worker memory; native browser child memory is not included."
+  ]
+}
