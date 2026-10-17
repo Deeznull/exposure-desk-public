@@ -1,8 +1,8 @@
 {
   "build": {
     "version": "2.9.1",
-    "id": "2.9.1+4c7657e91d5853ae",
-    "sourceDigest": "4c7657e91d5853ae87a19dd025387ab18d6f020642cd54a6316b37f0e7764443"
+    "id": "2.9.1+511b244fd475dce7",
+    "sourceDigest": "511b244fd475dce7b28a94a6016d017b8e22f0dbd339a9f57b66c79396b61a59"
   },
   "inputs": [
     {
@@ -15,11 +15,11 @@
     },
     {
       "path": "package-lock.json",
-      "sha256": "4f36f68070344d72a8086de1390846158e094d53f0c21690e5c3454d1faef667"
+      "sha256": "e1a51c9d9ccc7a66dc5b2d9edfbb90943616b094ccc55f62a51a5ce6f3ac8f95"
     },
     {
       "path": "package.json",
-      "sha256": "e3642aa1047aca816ef19e5a56c569bb98ee148d34ac1a12356e1f4475b89969"
+      "sha256": "659eca5ac59b1ca86c30bb9cb2670b28be72b0b566eb13610ccde012a2c821d1"
     },
     {
       "path": "public/app.js",
@@ -1225,7 +1225,7 @@
     },
     {
       "path": "dist/src/build-info.js",
-      "sha256": "db4874cb26b565555f4ef0953a0b817868b623b1eb505a854a6614d0638fe252"
+      "sha256": "45385317ff637e92648141b0fd2062843e2a0d80fdce5f06780e2eea4ee25ec2"
     },
     {
       "path": "dist/src/capabilities.js",

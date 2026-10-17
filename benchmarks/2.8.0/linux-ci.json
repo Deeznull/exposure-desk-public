@@ -2,7 +2,7 @@
   "schema": "exposure-linux-ci/1",
   "workflow": "Linux",
   "runId": "38245758795",
-  "url": "https://github.com/Deeznull/exposure-desk/actions/runs/38245758795",
+  "url": "private CI run 38245758795",
   "commit": "eb2f95382c3968a05feb8c3cad4e5cede65d4ff9",
   "branch": "v3-w5-release",
   "event": "workflow_dispatch",
@@ -55,7 +55,7 @@
   "measurementRuns": [
     {
       "runId": "38197793573",
-      "url": "https://github.com/Deeznull/exposure-desk/actions/runs/38197793573",
+      "url": "private CI run 38197793573",
       "commit": "b941d3c36498dd8673ee94c461a2f9267d2c4225",
       "branch": "v3-w5-fix",
       "attempt": 1,
@@ -99,7 +99,7 @@
     },
     {
       "runId": "38199247582",
-      "url": "https://github.com/Deeznull/exposure-desk/actions/runs/38199247582",
+      "url": "private CI run 38199247582",
       "commit": "b941d3c36498dd8673ee94c461a2f9267d2c4225",
       "branch": "v3-w5-fix",
       "attempt": 1,
@@ -146,7 +146,7 @@
   "supersededRuns": [
     {
       "runId": "38241561896",
-      "url": "https://github.com/Deeznull/exposure-desk/actions/runs/38241561896",
+      "url": "private CI run 38241561896",
       "commit": "1e6dd0fd1753f181aff0954c7ac77dd5aaa2ae34",
       "branch": "v3-w5-release",
       "attempt": 1,

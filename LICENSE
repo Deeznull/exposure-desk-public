@@ -3,56 +3,86 @@ Copyright (c) 2026 Deeznull (https://github.com/Deeznull)
 All rights reserved.
 
 This software, including its source code, compiled files, rules written for
-Exposure Desk, documentation and test data (the "Software"), is proprietary
-and source-available. It is not open source. Making the source code publicly
-viewable does not place it in the public domain or grant any licence other
-than the limited permission below.
+Exposure Desk, documentation, screenshots and test data (the "Software"), is
+proprietary. It is not open source and it is not free software. The source
+code is published for viewing only. Making it publicly viewable does not place
+it in the public domain and does not grant any licence, express or implied,
+except the narrow permissions stated in sections 2 and 3.
 
-1. Limited permission to use
+1. No licence
 
-   You may download, build and run unmodified copies of the Software, for
-   your own personal or internal business purposes, only to assess websites,
-   build folders and other systems that you own or are explicitly authorized
-   to assess, and only in compliance with ACCEPTABLE_USE.md and the law that
-   applies to you and to the systems you assess.
+   Except as stated in sections 2 and 3, no one may use, run, build, install,
+   copy, reproduce, modify, translate, adapt, merge, publish, distribute,
+   sublicense, sell, rent, lease, lend or create derivative works of the
+   Software, in whole or in part, for any purpose, commercial or not, without
+   the prior written permission of the copyright holder.
 
-2. What is not permitted
+   In particular, without that permission you may not:
+   (a) run or deploy the Software, even for personal use, evaluation,
+       testing or scanning systems you own;
+   (b) copy any part of its code, rules, detection patterns, documentation or
+       test data into another project;
+   (c) offer the Software or its functionality as a hosted, managed or
+       consulting service;
+   (d) use the Software or any part of it to train, fine-tune, evaluate or
+       build datasets for machine-learning or artificial-intelligence systems;
+   (e) remove or alter any copyright, licence or attribution notice.
 
-   Without the prior written permission of the copyright holder, you may not:
-   (a) copy, publish, distribute, sublicense, sell, rent or lease the
-       Software or any part of it, except that you may fork this repository
-       on GitHub as allowed by GitHub's Terms of Service;
-   (b) modify the Software or create derivative works, including any version
-       that removes or weakens the protected-host block, the authorization
-       checks, the rate limits or the masking of secrets;
-   (c) offer the Software, or its functionality, as a hosted or managed
-       service to third parties; or
-   (d) use the Software to access, test or scan any system without the
-       authorization of its owner, or for any unlawful purpose.
+2. Viewing and forking on GitHub
 
-3. Termination
+   You may view the Software on GitHub, and you may fork this repository on
+   GitHub, only to the extent that GitHub's Terms of Service require for public
+   repositories. A fork carries this same licence and grants no right to use,
+   run or distribute the Software outside what this section allows.
 
-   The permission in section 1 ends automatically, without notice, for anyone
-   who breaks these terms or ACCEPTABLE_USE.md. When it ends, you must stop
-   using the Software and delete your copies.
+3. Security research
 
-4. Third-party components
+   You may build and run a local copy of the Software solely to find and
+   privately report security vulnerabilities in the Software itself, as
+   described in SECURITY.md. This permission does not cover scanning,
+   accessing or testing any website, service or system other than your own
+   local copy of the Software, and it ends when the research ends.
+
+4. Written permission
+
+   Any other permission must be given in writing by the copyright holder for
+   a named person or organization. Unless the writing says otherwise, it is
+   personal, non-exclusive, non-transferable, revocable, and subject to
+   ACCEPTABLE_USE.md and to sections 6 to 10 of this licence. Requests can be
+   made through the copyright holder's GitHub profile.
+
+5. Breach
+
+   Any use of the Software outside sections 2 to 4 infringes the copyright
+   holder's rights. Any permission given under sections 3 or 4 ends
+   automatically, without notice, for anyone who breaks this licence or
+   ACCEPTABLE_USE.md, and that person must then stop using the Software and
+   delete all copies.
+
+6. Contributions
+
+   The copyright holder does not accept outside code contributions. If you
+   send feedback, suggestions, issues or code, you grant the copyright holder
+   a perpetual, irrevocable, worldwide, royalty-free right to use, modify and
+   publish them in any way, without obligation to you.
+
+7. Third-party components
 
    Third-party components used with Exposure Desk (the Node.js runtime,
    Chrome for Testing, Gitleaks, npm packages, vendored rule files and
    adapted regular expressions) remain under their own licences. They are
    listed with versions and sources in THIRD_PARTY.md, and their licence and
-   notice files are kept next to each component. Nothing in this notice
-   limits the rights those licences grant.
+   notice files are kept next to each component. Nothing in this licence
+   limits the rights those licences grant for those components.
 
-5. Trademarks
+8. Trademarks
 
    This licence grants no rights in the name "Exposure Desk" or its logo.
    Third-party product and company names are trademarks of their respective
    owners, are used only to identify the credential formats the Software
    detects, and do not imply any affiliation or endorsement.
 
-6. No warranty
+9. No warranty
 
    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
@@ -60,19 +90,17 @@ than the limited permission below.
    SOFTWARE MAY MISS EXPOSED SECRETS OR REPORT FALSE ONES; A SCAN RESULT IS
    NOT A SECURITY AUDIT, CERTIFICATION OR LEGAL ADVICE.
 
-7. Limitation of liability
+10. Limitation of liability and responsibility
 
    TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, IN NO EVENT SHALL THE
    COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
    LIABILITY, WHETHER DIRECT, INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL OR
    PUNITIVE, AND WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
    FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE, ITS USE OR MISUSE BY ANY
-   PERSON, OR ANY SCAN RUN WITH IT.
+   PERSON, WITH OR WITHOUT PERMISSION, OR ANY SCAN RUN WITH IT.
 
-8. Your responsibility
-
-   You are solely responsible for obtaining authorization before any scan,
-   for the scans you run and for how you handle any secret you find. To the
-   extent permitted by law, you agree to indemnify and hold harmless the
-   copyright holder against claims by third parties that arise from your use
-   of the Software in breach of these terms or of the law.
+   Anyone who uses the Software, with or without permission, is solely
+   responsible for that use, for obtaining authorization before any scan and
+   for how they handle any secret they find. To the extent permitted by law,
+   they agree to indemnify and hold harmless the copyright holder against
+   claims by third parties that arise from that use.

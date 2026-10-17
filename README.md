@@ -9,7 +9,7 @@ A local, privacy-first scanner that looks at your site the way an anonymous visi
 ![version 2.9.1](https://img.shields.io/badge/version-2.9.1-0f5f5c)
 ![Windows x64 | Linux x64](https://img.shields.io/badge/platform-Windows%20x64%20%7C%20Linux%20x64-555)
 ![Node 24](https://img.shields.io/badge/node-24-555)
-![licence: source-available](https://img.shields.io/badge/licence-source--available-a33)
+![licence: all rights reserved](https://img.shields.io/badge/licence-all%20rights%20reserved-a33)
 
 </div>
 
@@ -40,6 +40,8 @@ Keys end up in public places all the time: a Stripe secret in a JavaScript bundl
 | **Protected hosts** | Government, military, intelligence, law-enforcement and judiciary sites are refused. There is no override. |
 
 ## Quick start
+
+> **Permission required.** This repository is published for viewing only. Running, building or copying Exposure Desk needs prior written permission from the author (see [LICENSE](LICENSE)). The steps below are for people who have it.
 
 **From source** (Node.js 24):
 
@@ -93,7 +95,7 @@ If you find a secret on someone else's site through an authorized program, repor
 
 ## Licence
 
-Exposure Desk is **source-available, not open source**. You may run unmodified copies to scan systems you own or are authorized to test. Redistribution, modification and commercial resale are not permitted without written permission. See [LICENSE](LICENSE). The software comes **as is, without any warranty**.
+**All rights reserved.** Exposure Desk is proprietary, not open source. The code is public so it can be read. It may not be used, run, copied, modified, redistributed or used to train AI models without the author's prior written permission. The only exceptions are viewing and forking on GitHub as GitHub's Terms require, and running a local copy to report a vulnerability under [SECURITY.md](SECURITY.md). See [LICENSE](LICENSE). Outside code contributions are not accepted. The software comes **as is, without any warranty**.
 
 Third-party components keep their own licences. They are listed in [THIRD_PARTY.md](THIRD_PARTY.md) and [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
 

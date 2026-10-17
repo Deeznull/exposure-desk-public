@@ -656,7 +656,7 @@
     "schema": "exposure-linux-ci/1",
     "workflow": "Linux",
     "runId": "38684371332",
-    "url": "https://github.com/Deeznull/exposure-desk/actions/runs/38684371332",
+    "url": "private CI run 38684371332",
     "commit": "a6630b5151c0c9766ebbd24eeb97d5b54a19c17b",
     "branch": "v3-w9-integ",
     "event": "workflow_dispatch",
@@ -709,7 +709,7 @@
     "measurementRuns": [
       {
         "runId": "38638887840",
-        "url": "https://github.com/Deeznull/exposure-desk/actions/runs/38638887840",
+        "url": "private CI run 38638887840",
         "commit": "3b1628ad960d6032c2d7d81a3cafa34721230a70",
         "branch": "v3-w9-integ",
         "event": "workflow_dispatch",

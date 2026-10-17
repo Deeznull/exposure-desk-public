@@ -9,7 +9,7 @@ Exposure Desk handles secrets found on websites, so problems in the tool itself 
 - **What to include:** the Exposure Desk version and build id (the `version` and `id` fields of `BUILD_INFO.json` in the installation folder; the dashboard also shows the build on each scan), the operating system, exact steps to reproduce, and what you expected instead.
 - **Do not include real secrets.** If a report needs a secret-looking value, use a synthetic one or at most a short masked prefix. Never send a live credential, a full-value (sensitive) export or a vault file.
 - Please give us reasonable time to fix the issue before you disclose it publicly: 90 days from your report, or earlier once a fix is released.
-- **Good-faith research.** Research on your own copy of Exposure Desk that follows this policy is welcome, and we will not pursue legal action over it. This covers only Exposure Desk itself, not any website, service or system of anyone else.
+- **Good-faith research.** Section 3 of [LICENSE](LICENSE) lets you build and run a local copy of Exposure Desk only to find and privately report vulnerabilities in it. Research that stays within that permission and follows this policy is welcome, and we will not pursue legal action over it. This covers only Exposure Desk itself, not any website, service or system of anyone else.
 
 We don't offer paid rewards for reports about Exposure Desk itself.
 

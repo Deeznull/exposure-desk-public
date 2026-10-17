@@ -32,6 +32,6 @@ Findings are masked by default. A full-value export, a revealed value or the vau
 
 You are solely responsible for how you use Exposure Desk, for the scans you run and for how you handle what you find. The author does not monitor, control or approve individual scans and gives no legal advice; nothing in Exposure Desk or its documentation tells you that a particular scan is lawful.
 
-Using Exposure Desk in breach of these rules is outside the permission granted in [LICENSE](LICENSE): that permission ends automatically for you, and you must stop using the software and delete your copies. The software comes as is, without warranty, and the author is not liable for any use or misuse of it (see [LICENSE](LICENSE), sections 6 to 8).
+Exposure Desk may only be used with the author's prior written permission (see [LICENSE](LICENSE)). Using it in breach of these rules is outside any permission given: that permission ends automatically for you, and you must stop using the software and delete your copies. The software comes as is, without warranty, and the author is not liable for any use or misuse of it (see [LICENSE](LICENSE), sections 9 and 10).
 
 Report security problems in Exposure Desk itself as described in [SECURITY.md](SECURITY.md).
