@@ -1,8 +1,8 @@
 {
   "build": {
     "version": "2.9.1",
-    "id": "2.9.1+6c2de10b3f971451",
-    "sourceDigest": "6c2de10b3f9714511b6308be9c7b0155a23647e3d3465500c6bab0164b8d94f6"
+    "id": "2.9.1+f74d81db41444e05",
+    "sourceDigest": "f74d81db41444e05cd792069e71a1e543bbe644c8865ddfd90fbbb98bc4ff8d8"
   },
   "inputs": [
     {
@@ -184,6 +184,10 @@
     {
       "path": "scripts/profile-matrix.mjs",
       "sha256": "02df8f5ff4d9af2e08ac36cf99deedf0fd301fbc17f9c6d7a1e839d226544877"
+    },
+    {
+      "path": "scripts/public-export.mjs",
+      "sha256": "379b7142ad43c3d2dd0269a858ff44838b0e76b72fb4d44d87e3f8e6f7e2e00c"
     },
     {
       "path": "scripts/release-files.mjs",
@@ -467,7 +471,7 @@
     },
     {
       "path": "src/machine-speed.ts",
-      "sha256": "08e0759653b82153e20e7bbffa87483741779b2db05d413bfbbffeae66ec379f"
+      "sha256": "0c96748583d930f6ff7c9204480e429bd5e68d1fd0a4baf26f9024445acad4ab"
     },
     {
       "path": "src/mass/block.ts",
@@ -1225,7 +1229,7 @@
     },
     {
       "path": "dist/src/build-info.js",
-      "sha256": "01063cba6af1e8801761b1bf665df3e22a3a2898ab02ae9f34eeca55c67d0779"
+      "sha256": "b790d00380d16fa1dcd5d337b3803500f25ddac09fe97568967a450f821c0428"
     },
     {
       "path": "dist/src/capabilities.js",
@@ -1429,7 +1433,7 @@
     },
     {
       "path": "dist/src/machine-speed.js",
-      "sha256": "fc7530ea78846a279fce678acf8f4b5e1fb17909fe15db4848bc5b077933247a"
+      "sha256": "d9c14ab1b82bce35af51b4a499319c4bbeaa090e5875edc7e8a09ad5dae36cb3"
     },
     {
       "path": "dist/src/mass/block.js",
