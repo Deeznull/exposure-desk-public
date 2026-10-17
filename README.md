@@ -57,11 +57,29 @@ Measured on one Windows laptop against small local test sites:
 
 Bigger sites take longer, up to the time limit per website. Extra websites wait for a free slot. Before a scan starts, the dashboard shows an estimate.
 
-On the command line, a target list runs up to 16 websites at once, or 64 with a program file. 200 websites with Quick check took:
+## Mass scan
 
-| At once | 1 | 4 | 16 | 64 |
-| --- | --- | --- | --- | --- |
-| Time | 37 min | 10 min | 3.5 min | 2.9 min |
+Scan a list of websites from the command line. Put one host name or URL per line in a file (httpx output works too):
+
+```sh
+node dist/src/cli.js scan --targets hosts.txt --authorized --concurrency 16 --coverage quick --state run.state
+```
+
+- `--concurrency` sets how many websites run at once: up to 16, or up to 64 with a bug bounty [program file](docs/PROGRAM.md). Without it, websites run one at a time (4 at a time with a program file).
+- There is no limit on the length of the list.
+- `--state` saves progress. Run the same command again after a stop and it skips the websites that are done.
+- Each website gets its own report in `reports/`. A key found on several websites is listed once in the summary.
+- A website that keeps blocking the scan (for example with 403, 429 or a CAPTCHA page) is stopped, and the run moves on.
+- `--authorized` is required for a list. It confirms you may test every website in it.
+
+Measured times (one Windows laptop, local test sites):
+
+| Websites | Option | 1 at once | 4 at once | 16 at once | 64 at once |
+| --- | --- | --- | --- | --- | --- |
+| 200 | Quick check | 38.5 min | 9.9 min | 3.2 min | 2.9 min |
+| 16, each with a 1.25 MB script | Standard | 4.2 min | 1.7 min | 1 min | — |
+
+At 16 or more at once, Quick check gets through about 1 website per second, so 1,000 small websites take roughly 16 minutes. Real websites are bigger and slower than the test sites, so expect longer.
 
 ## Requirements
 
@@ -88,7 +106,6 @@ Windows and Linux packages and a container image: see [RELEASE_PACKAGE.md](docs/
 ```sh
 node dist/src/cli.js scan --url https://www.example.com/ --output reports/site.json
 node dist/src/cli.js scan --url https://www.example.com/ --coverage quick --traffic low-impact --format sarif --output reports/site.sarif
-node dist/src/cli.js scan --targets hosts.txt --concurrency 4 --authorized --state run.state
 node dist/src/cli.js artifacts --directory build
 ```
 
@@ -96,7 +113,7 @@ Exit code `0` means no secrets were found, `1` means some were, and `2` means th
 
 ## Docs
 
-[User guide](docs/USER_GUIDE.md) · [Reference](docs/REFERENCE.md) · [Bug bounty quick start](docs/REFERENCE.md#bug-bounty-quick-start) · [Target lists](docs/MASS_SCAN.md) · [Program files](docs/PROGRAM.md) · [Detectors](docs/DETECTOR_COVERAGE.md) · [Test results](docs/TEST_RESULTS.md) · [Changelog](docs/releases/CHANGELOG_2.9.1.md)
+[User guide](docs/USER_GUIDE.md) · [Reference](docs/REFERENCE.md) · [Bug bounty quick start](docs/REFERENCE.md#bug-bounty-quick-start) · [Mass scan](docs/MASS_SCAN.md) · [Program files](docs/PROGRAM.md) · [Detectors](docs/DETECTOR_COVERAGE.md) · [Test results](docs/TEST_RESULTS.md) · [Changelog](docs/releases/CHANGELOG_2.9.1.md)
 
 ## Allowed use
 
