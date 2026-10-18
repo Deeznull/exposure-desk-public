@@ -1,0 +1,33 @@
+{
+  "schema": "exposure-release-verification/1",
+  "version": "3.0.0",
+  "staging": "private",
+  "build": {
+    "version": "3.0.0",
+    "id": "3.0.0+900c631686338160",
+    "sourceDigest": "900c631686338160dbced18ae03ce9e0e57245305c28ad3002a845fc0fe48292"
+  },
+  "ruleVersion": "website/3.0.0",
+  "platform": "win32",
+  "unit": {
+    "tests": 779,
+    "pass": 779,
+    "fail": 0,
+    "cancelled": 0,
+    "skipped": 0,
+    "todo": 0,
+    "durationMs": 1261666.2824
+  },
+  "browser": {
+    "tests": 46,
+    "pass": 46,
+    "fail": 0,
+    "cancelled": 0,
+    "skipped": 0,
+    "todo": 0,
+    "durationMs": 511617.5981
+  },
+  "note": "Private staging verification. Only the regression suites were run on this build: the full non-browser suite (including the release-metadata, live-check AWS SigV4 and profiles deep-path gates) and the browser/UI suite, both on loopback fixtures with synthetic, nonfunctional keys. No non-loopback connection was made. 3.0.0 changes no ready option, limit, sizing, pacing, analysis-memory ceiling or detector rule; its changes are the opt-in AWS live-key-check provider and a larger deployment-path list a scan probes. The pinned-engine corpus recall, the cancellation-stress run, the CLI and persistence smokes and the mass-scan figures are therefore carried over from 2.9.1 (see ../TEST_RESULTS.md) and are not re-measured here. The ready-option matrix was measured again on the Linux server (linuxServer), and the 3.0.0 packages were built and checked on this build: packaged-smoke.json, root-parity.json and source-integrity.json for Windows x64 and Source, linux-server.json for the Linux x64 package and the container image. The complete verification set will be produced on the release build before any public release.",
+  "carriedOverFrom": "2.9.1+94a512df50bb9d43",
+  "linuxServer": "After this Windows run, the Linux jobs of linux.yml and the ready-option performance and recall matrix were run on the same build on a Linux server (2026-10-17): linux-server.json, linux-server-matrix.md/.json and linux-server-bundle-rerun.json. The matrix there replaces the carried-over 2.9.1 matrix for 3.0.0; the other carried-over items above stay carried over."
+}

@@ -5,11 +5,12 @@ export interface VerifyRecipe {
   host:string;                                  // the one endpoint host (also the egress allowlist)
   method:'GET'|'POST';
   path:string;
-  present:'bearer'|'header'|'basic'|'x-api-key';// how the provider documents presenting the key
+  present:'bearer'|'header'|'basic'|'x-api-key'|'aws-sigv4';// how the provider documents presenting the key
   headerName?:string;                           // header name for present:'header'
   headers?:Readonly<Record<string,string>>;     // static extra headers the endpoint requires
   body?:string;                                 // static request body (POST)
-  signal:'status'|'slack-ok';                   // how the verdict is read
+  region?:string; service?:string;             // AWS SigV4 only: the signing region and service
+  signal:'status'|'slack-ok'|'aws-sts';         // how the verdict is read
   live:readonly number[];                       // success statuses (status signal)
   revoked:readonly number[];                    // revoked/unauthorized statuses (status signal)
   doc:string;                                   // provider documentation URL this recipe came from
@@ -37,6 +38,11 @@ const RECIPES:readonly VerifyRecipe[]=Object.freeze(([
   {provider:'Slack',rules:['gitleaks:slack-bot-token','gitleaks:slack-user-token'],
     host:'slack.com',method:'POST',path:'/api/auth.test',present:'bearer',headers:{'content-type':'application/x-www-form-urlencoded'},body:'',
     signal:'slack-ok',live:[200],revoked:[200],doc:'https://api.slack.com/methods/auth.test'},
+  // AWS: STS GetCallerIdentity, the documented read-only "who am I". The secret access key never leaves this machine; it only derives the SigV4 signing key locally. The request carries the public access-key ID, the signature and (for ASIA temporary keys) the session token.
+  {provider:'AWS',rules:['provider-context:aws','provider-context:awsbedrock','provider-context:awsroute53'],
+    host:'sts.amazonaws.com',method:'POST',path:'/',present:'aws-sigv4',region:'us-east-1',service:'sts',
+    headers:{'content-type':'application/x-www-form-urlencoded; charset=utf-8'},body:'Action=GetCallerIdentity&Version=2011-06-15',
+    signal:'aws-sts',live:[200],revoked:[403],doc:'https://docs.aws.amazon.com/STS/latest/APIReference/API_GetCallerIdentity.html'},
 ] as VerifyRecipe[]));
 /** The Slack auth.test errors that mean the token is no longer valid; any other `ok:false` error stays `unknown` (reason `unexpected-shape`). */
 export const SLACK_REVOKED_ERRORS=Object.freeze(['invalid_auth','account_inactive','token_revoked','token_expired','not_authed']);

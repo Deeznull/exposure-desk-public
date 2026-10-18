@@ -16,8 +16,15 @@ export const LEGACY_PROFILES:Record<LegacyPreset,{coverage:Coverage;traffic:Traf
 export const ANALYSIS_MEMORY_CEILING_MB=512;
 /** Hard maxima that website-count sizing never exceeds (the same bounds makeConfig validates): shared caps, 8 websites at once, 4 browser websites at once, 12 requests at once and 20 requests/s in total, and the analysis-memory ceiling. */
 export const HARD_CEILINGS={pages:500,resources:2000,bytes:500*MiB,decodedBytes:500*MiB,browserPages:50,maps:100,originDurationMs:3600000,projectDurationMs:360005000,requestsPerSecond:20,globalConcurrency:12,activeOrigins:8,browserOrigins:4,analysisMemoryMb:ANALYSIS_MEMORY_CEILING_MB} as const;
-/** Additional deployment paths probed by every profile (legacy presets keep the 2.5 list): WordPress configuration backups and Git configuration. Each is confirmed by content before analysis. */
-export const PROFILE_EXTRA_DEEP_PATHS=['/wp-config.php.bak','/.git/config'];
+/** High-value deployment paths every profile probes beyond the shared base list (legacy presets keep the 2.5 list): WordPress and Git configuration backups, cloud credentials and the two most common deploy-stage env files. Each is confirmed by content before analysis. */
+export const PROFILE_EXTRA_DEEP_PATHS=['/.git/config','/wp-config.php.bak','/.aws/credentials','/.env.dev','/.env.prod'];
+/** Further deployment paths Standard and Deep probe (more env stages, config files and credential dumps). Quick check stays on the base list plus the high-value subset above, to keep the first look fast. */
+export const DEEP_SCAN_EXTRA_PATHS=['/.env.development','/.env.staging','/.env.test','/config.yml','/config.yaml','/appsettings.json','/credentials.json','/secrets.json','/.git-credentials'];
+/** The deployment paths a coverage probes: the shared base list, the high-value extras for every profile, and the fuller set for Standard and Deep. Order-preserving and de-duplicated, and kept within makeConfig's 30-path ceiling (15 base + 5 + 9 = 29). */
+export function profileDeepPaths(coverage:Coverage,deepPaths:string[]):string[]{
+  const extra=[...PROFILE_EXTRA_DEEP_PATHS,...(coverage==='quick'?[]:DEEP_SCAN_EXTRA_PATHS)];
+  return [...deepPaths,...extra.filter(p=>!deepPaths.includes(p))];
+}
 /** Quick check examines at most this many first-party scripts and modules per website (entry-document bundles first). */
 export const QUICK_SCRIPTS_PER_WEBSITE=40;
 /** Per-run options a profile sets by default but a run may override without becoming custom (deployment triggers request history replay). */
@@ -70,7 +77,7 @@ export function sharedCaps(a:WebsiteAllocation,websites:number,maxActiveOrigins:
 /** Every configuration value a profile sets for one website; shared caps are the single-website values and are sized when a scan starts and when a website is admitted. */
 export function profileSettings(coverage:Coverage,traffic:Traffic,deepPaths:string[]):Partial<ScanConfig>{
   const {allocation:a,pacing,settings}=profileTables(coverage,traffic);
-  return {...settings,...pacing,deepPaths:[...deepPaths,...PROFILE_EXTRA_DEEP_PATHS.filter(p=>!deepPaths.includes(p))],
+  return {...settings,...pacing,deepPaths:profileDeepPaths(coverage,deepPaths),
     originMaxPages:a.pages,originMaxResources:a.resources,originMaxTotalBytes:a.bytes,originMaxMaps:a.maps,originBrowserPages:a.browserPages,originMaxDurationMs:a.durationMs,maxDurationMs:a.durationMs,
     originRequestsPerSecond:a.requestsPerSecond,originConcurrency:a.concurrency,concurrency:a.concurrency,...sharedCaps(a,1,pacing.maxActiveOrigins)};
 }
@@ -83,9 +90,9 @@ export function describeProfile(config:Partial<ScanConfig>):{kind:ProfileKind;la
   return {kind:'custom',label:'Custom',...(preset?{legacyPreset:preset}:{})};
 }
 export const COVERAGE_EXAMINES:Record<Coverage,string[]>={
-  quick:['Entry documents and their inline scripts','Referenced first-party scripts and modules (up to '+QUICK_SCRIPTS_PER_WEBSITE+' per website, entry-document bundles first)','Referenced source maps','Framework build manifests and chunk tables (Next, Vite, webpack)','Web app manifest and referenced configuration files','robots.txt (respected)','High-value deployment paths (.env variants, config.json, .git/HEAD, backups)'],
-  standard:['Static discovery to depth 3: entry documents, linked pages and sitemaps','Scripts, modules, source maps (with adjacent-map checks) and configuration','High-value deployment paths','A few isolated-browser pages per website with debugger capture'],
-  deep:['Full static discovery to depth 5, linked pages and sitemaps','Isolated-browser routes with debugger capture','Source maps with adjacent-map checks','Query variants','All deployment paths','Stale assets from project history or a deployment manifest when supplied','Registrable-domain discovery (with domain scope)','Adaptive per-website allocations and long durations']
+  quick:['Entry documents and their inline scripts','Referenced first-party scripts and modules (up to '+QUICK_SCRIPTS_PER_WEBSITE+' per website, entry-document bundles first)','Referenced source maps','Framework build manifests and chunk tables (Next, Vite, webpack)','Web app manifest and referenced configuration files','robots.txt (respected)','High-value deployment paths (.env and the common deploy-stage variants, config.json/js, .git/HEAD and config, cloud credentials, WordPress and backup files)'],
+  standard:['Static discovery to depth 3: entry documents, linked pages and sitemaps','Scripts, modules, source maps (with adjacent-map checks) and configuration','The full curated deployment-path list (.env stages, config files, credential dumps, Git and cloud configuration, backups)','A few isolated-browser pages per website with debugger capture'],
+  deep:['Full static discovery to depth 5, linked pages and sitemaps','Isolated-browser routes with debugger capture','Source maps with adjacent-map checks','Query variants','The full curated deployment-path list','Stale assets from project history or a deployment manifest when supplied','Registrable-domain discovery (with domain scope)','Adaptive per-website allocations and long durations']
 };
 export const COVERAGE_SKIPS:Record<Coverage,string[]>={
   quick:['Linked pages and sitemaps (nothing beyond the entry documents is crawled)','Isolated-browser runtime: runtime-only values, lazy routes and debugger capture','Adjacent source-map guessing','Query-string variants','Scripts beyond the per-website bound','Stylesheets, fonts, images and heuristic URL hints','Replay of earlier-deployment assets other than scripts, source maps and configuration (replayed scripts have their own bound)'],

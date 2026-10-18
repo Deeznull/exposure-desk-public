@@ -33,19 +33,19 @@ export async function checkKey(args:Args){
     const h=matches[0]!,f=h.view.findings.find(f=>f.findingId===id||f.correlation===id||f.id===id)!;
     if(f.category==='information')throw new CliError('That finding is a public observation, not a credential; nothing to check.');
     const recipe=recipeFor(f.rule);
-    let key='';
+    let key='',companions:{accessKeyId?:string;sessionToken?:string}|undefined;
     if(recipe){
       const password=process.env.EXPOSURE_VAULT_PASSWORD;
       if(!password)throw new CliError('Set EXPOSURE_VAULT_PASSWORD to the vault password so the key can be read for the check. Nothing was sent.');
       const vault=new Vault(store);await vault.init();
       try{await vault.unlock(password);}catch{throw new CliError('Vault unlock failed. Check EXPOSURE_VAULT_PASSWORD, or restore the encrypted evidence vault.');}
       let values;try{values=await vault.get(h.view.id);}catch{throw new CliError(`No saved full value for scan ${h.view.id.slice(0,8)} (redacted history has no key). Re-run the authorized scan with full evidence saved. Nothing was sent.`);}
-      key=values[f.id]?.value;
+      key=values[f.id]?.value;companions=values[f.id]?.companions;
       if(!key)throw new CliError('The saved evidence has no full value for this finding. Nothing was sent.');
       vault.lock();
     }
     let result;
-    try{result=await checkOneKey({rule:f.rule,key,provider:f.provider});}
+    try{result=await checkOneKey({rule:f.rule,key,provider:f.provider,companions});}
     catch(e){if(e instanceof LiveCheckRefused)throw new CliError('Refused: that endpoint is a protected host, a metadata address, non-HTTPS, or its connection address did not match the pin, and is never contacted. Nothing was sent.');throw e;}
     key='';
     if(h.projectId)await store.recordLiveCheck(h.projectId,f,result);

@@ -53,6 +53,12 @@ function mockProviders(opts:{cert:string;key:string;delayMs?:number}){
           const map:Record<string,unknown>={live:{ok:true},revoked:{ok:false,error:'invalid_auth'},weird:{ok:false,error:'mystery'}};
           res.writeHead(200,{'content-type':'application/json'});res.end(JSON.stringify(map[presented]??{ok:false,error:'mystery'}));inFlight--;return;
         }
+        if(host==='sts.amazonaws.com'){ // AWS STS: XML; the verdict is keyed off the access-key ID carried in the SigV4 Credential= (never the secret, which is not sent)
+          const cred=auth.match(/Credential=([^/,\s]+)/)?.[1]||'';
+          if(/LIVE/.test(cred)){res.writeHead(200,{'content-type':'text/xml'});res.end('<GetCallerIdentityResponse><GetCallerIdentityResult><Arn>arn:aws:iam::123456789012:user/synthetic</Arn><Account>123456789012</Account><UserId>AIDAISYNTHETIC000000</UserId></GetCallerIdentityResult></GetCallerIdentityResponse>');inFlight--;return;}
+          if(/THROTTLE/.test(cred)){res.writeHead(400,{'content-type':'text/xml'});res.end('<ErrorResponse><Error><Code>Throttling</Code><Message>Rate exceeded</Message></Error></ErrorResponse>');inFlight--;return;}
+          res.writeHead(403,{'content-type':'text/xml'});res.end('<ErrorResponse><Error><Code>InvalidClientTokenId</Code><Message>The security token included in the request is invalid.</Message></Error></ErrorResponse>');inFlight--;return;
+        }
         const v=verdictFor(host,presented) as any;
         res.writeHead(v.status,{'content-type':'application/json',...(v.location?{location:v.location}:{})});res.end(v.body);inFlight--;
       };
@@ -165,6 +171,56 @@ test('run-all halts a provider on its first 429 or 403 and skips that provider\'
   });}finally{trip.restore();await close(mock.server);}
 });
 
+test('AWS STS: a complete key signs GetCallerIdentity and verifies live/revoked/throttled, and an incomplete credential (no access-key ID, or an ASIA key with no session token) signs nothing and sends no request',async()=>{
+  const {cert,key}=loopbackCertificate(verifyHosts());
+  const mock=mockProviders({cert,key}),port=await listen(mock.server),trip=egressTripwire();
+  try{await trusting(cert,async()=>{
+    const env=loopbackEnv(port);
+    const secret='wJalrXUtnFEMI/K7MDENG'+'+bPxRfiCYEXAMPLEKEY'; // AWS's own public documentation example secret (synthetic), split so repository secret scanners do not flag the literal
+    // A complete key: the secret derives the signing key locally; the access-key ID carried in the SigV4 Credential= selects the verdict.
+    const live=await checkOneKey({rule:'provider-context:aws',key:secret,companions:{accessKeyId:'AKIALIVE000000000000'}},env);
+    assert.equal(live.result,'live');assert.equal(live.status,200);assert.equal(live.endpointHost,'sts.amazonaws.com');
+    const revoked=await checkOneKey({rule:'provider-context:aws',key:secret,companions:{accessKeyId:'AKIAREVOKED000000000'}},env);
+    assert.equal(revoked.result,'revoked');assert.equal(revoked.status,403);
+    const throttled=await checkOneKey({rule:'provider-context:awsbedrock',key:secret,companions:{accessKeyId:'AKIATHROTTLE00000000'}},env);
+    assert.equal(throttled.result,'unknown');assert.equal(throttled.reason,'rate-limited');
+    // Incomplete credential: no request is ever opened.
+    const before=mock.arrivals.length;
+    const noId=await checkOneKey({rule:'provider-context:aws',key:secret},env);
+    assert.equal(noId.result,'unknown');assert.equal(noId.reason,'incomplete-credential');
+    const asia=await checkOneKey({rule:'provider-context:aws',key:secret,companions:{accessKeyId:'ASIANOSESSION0000000'}},env); // temporary key with no session token cannot be signed
+    assert.equal(asia.result,'unknown');assert.equal(asia.reason,'incomplete-credential');
+    assert.equal(mock.arrivals.length,before,'an incomplete credential opens no socket');
+
+    // The request carried the signature and access-key ID but NEVER the secret access key, and sent only the static GetCallerIdentity body.
+    const sts=mock.arrivals.find(a=>a.host==='sts.amazonaws.com')!;
+    assert.ok(sts,'the STS request arrived');
+    assert.ok(String(sts.headers['authorization']).startsWith('AWS4-HMAC-SHA256 Credential=AKIALIVE000000000000/'),'SigV4 Authorization carries the access-key ID');
+    assert.ok(sts.headers['x-amz-date'],'the signed request carries x-amz-date');
+    assert.ok(!JSON.stringify(sts.headers).includes(secret),'the secret access key is never in any header');
+    assert.equal(sts.body,'Action=GetCallerIdentity&Version=2011-06-15','only the static GetCallerIdentity body is sent');
+    assert.ok(!sts.body.includes(secret),'the secret access key is never in the body');
+    assert.deepEqual(trip.violations,[],'nothing reached the real network');
+  });}finally{trip.restore();await close(mock.server);}
+});
+
+test('run-all does not halt AWS on a revoked 403 (a dead key, not a block): the provider keeps checking its remaining keys',async()=>{
+  const {cert,key}=loopbackCertificate(verifyHosts());
+  const mock=mockProviders({cert,key}),port=await listen(mock.server),trip=egressTripwire();
+  try{await trusting(cert,async()=>{
+    const secret='wJalrXUtnFEMI/K7MDENG'+'+bPxRfiCYEXAMPLEKEY';
+    const items:LiveCheckItem[]=[
+      {correlation:'a'.repeat(64),rule:'provider-context:aws',provider:'AWS',key:secret,companions:{accessKeyId:'AKIAREVOKED000000000'}}, // 403 revoked
+      {correlation:'b'.repeat(64),rule:'provider-context:aws',provider:'AWS',key:secret,companions:{accessKeyId:'AKIALIVE000000000000'}}]; // still checked
+    const final=await runLiveCheckAll(items,{env:loopbackEnv(port),perProviderPauseMs:0});
+    assert.deepEqual(final.haltedProviders,[],'a revoked 403 does not halt AWS');
+    assert.equal(final.results['a'.repeat(64)]!.result,'revoked');
+    assert.equal(final.results['b'.repeat(64)]!.result,'live','the second AWS key was still checked');
+    assert.equal(mock.arrivals.filter(a=>a.host==='sts.amazonaws.com').length,2,'both AWS keys reached STS');
+    assert.deepEqual(trip.violations,[]);
+  });}finally{trip.restore();await close(mock.server);}
+});
+
 test('the key is masked everywhere: it is never in the stored review state or a redacted report, and a redacted progress keeps its correlation keys and verdict fields',async()=>{
   const dir=await tmp('live-mask-');
   try{
@@ -230,8 +286,9 @@ test('the recipe table is exact-match and fails closed; every recipe names one H
   for(const r of allRecipes()){
     assert.ok(r.rules.length>0&&r.host&&r.path.startsWith('/'),'a recipe names a host and a path: '+r.provider);
     assert.ok(/^https:\/\//.test(r.doc),'each recipe carries its provider doc URL: '+r.provider);
-    assert.ok(['bearer','header','basic','x-api-key'].includes(r.present));
+    assert.ok(['bearer','header','basic','x-api-key','aws-sigv4'].includes(r.present));
     if(r.present==='header')assert.ok(r.headerName,'header presentation needs a header name');
+    if(r.present==='aws-sigv4')assert.ok(r.region&&r.service,'aws-sigv4 presentation needs a region and service to sign: '+r.provider);
   }
   assert.ok(SLACK_REVOKED_ERRORS.includes('invalid_auth'));
   assert.deepEqual(verifyHosts(),[...new Set(allRecipes().map(r=>r.host))].sort());

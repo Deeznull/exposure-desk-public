@@ -1,0 +1,156 @@
+{
+  "schema": "exposure-linux-server/1",
+  "role": "release verification of the Linux jobs in .github/workflows/linux.yml, reproduced on a Linux server because GitHub Actions could not run them for 3.0.0 (account billing block; no workflow run exists for this release)",
+  "date": "2026-10-17",
+  "commit": "018f026b8ecca52724b1fb1c2bc471dfa410f6e5",
+  "build": "3.0.0+900c631686338160",
+  "host": {
+    "machine": "rented Linux VDS (10 vCPU x86-64 server CPU, 16 GB RAM), shared with other jobs; each job capped at 70% of the CPUs",
+    "os": "Ubuntu 24.04",
+    "user": "unprivileged (no root, no sudo)",
+    "runtime": "bundled Node 24.18.1 from scripts/fetch-linux-distributions.mjs (runtime/bin first on PATH)",
+    "browser": "Chrome for Testing 153.0.8010.12 linux64 from scripts/fetch-linux-distributions.mjs",
+    "gitleaks": ".cache/linux-tools/gitleaks from scripts/fetch-linux-distributions.mjs",
+    "typeCheck": "npm run check passed",
+    "buildIdMatchesRelease": true
+  },
+  "deviationsFromWorkflow": [
+    "The workflow disables kernel.apparmor_restrict_unprivileged_userns with sudo so Chromium's own sandbox can start. The server keeps the Ubuntu 24.04 default (1) and was not changed, so Chromium's sandbox cannot start there; the browser suite, the package smoke test and the matrix ran with EXPOSURE_BROWSER_NO_SANDBOX=1 (the switch the container image uses, browserSandboxArgs in src/runtime-paths.ts). The nonbrowser suite ran without it.",
+    "The server has no unzip binary and no root to install one; scripts/fetch-linux-distributions.mjs extracted its ZIPs through a small Python zipfile shim on PATH (keeps file modes and symlinks). The fetched files were checked against the script's pinned digests as usual.",
+    "Each job ran in its own copy of the synced checkout; npm ci --ignore-scripts from the lockfile, as in the workflow.",
+    "Container job (run 2026-10-18): the offload user has no Docker access, so the job ran as root through ssh, as a transient systemd unit in offload-docker.slice (inside the offload CPU/RAM cap), with docker build --cgroup-parent offload-docker.slice added to keep the build steps in that slice. The build context was git archive of commit 3fa1554 (the tracked files, as the workflow checkout gives); otherwise the same two steps: docker build --pull --file docker/Dockerfile --tag exposure-desk:ci . and node scripts/docker-smoke.mjs exposure-desk:ci.",
+    "Matrix only: Linux caps a Unix socket path at 107 characters, and Chromium keeps its singleton socket under <work>/data/<case id>/tmp/browser-XXXXXX/tmp/org.chromium.Chromium.XXXXXX/SingletonSocket, which the matrix case ids push past that cap (Chromium aborts with \"Socket path too long\", so every browser case reported the browser unavailable). In each job copy, scripts/profile-matrix.mjs was patched after the build to name each case folder by an 8-character SHA-256 digest of its id (logs keep the readable id), with a short work folder. The runner is not part of the build id or the harness digest, so rows keep the release build id 3.0.0+900c631686338160 and harness 43537d3099028d72; the product code is unchanged. A first matrix attempt without this patch was discarded.",
+    "Matrix only: SCANNER_CHROMIUM_PATH pointed at the Chrome for Testing 153.0.8010.12 linux64 build fetched by scripts/fetch-linux-distributions.mjs (the same browser the package bundles)."
+  ],
+  "jobs": {
+    "nonbrowser": {
+      "offloadJob": "1017-191447-13377",
+      "command": "node scripts/test.mjs",
+      "conclusion": "success",
+      "tests": 779,
+      "pass": 778,
+      "fail": 0,
+      "skipped": 1,
+      "cancelled": 0,
+      "todo": 0,
+      "durationMs": 1562652,
+      "note": "The one skipped test is Windows-only (the disk writer's Windows ACL step), as on the 2.9.1 Linux runners."
+    },
+    "browser": {
+      "offloadJob": "1017-191624-7598",
+      "command": "EXPOSURE_BROWSER_NO_SANDBOX=1 node scripts/test.mjs --browser",
+      "conclusion": "43 of 46 passed; the 3 failures are in the test harness, not the product",
+      "tests": 46,
+      "pass": 43,
+      "fail": 3,
+      "skipped": 0,
+      "cancelled": 0,
+      "todo": 0,
+      "durationMs": 561956,
+      "failures": [
+        "dashboard UI deliberately reveals/copies, remasks, exports and runs one-click full-pipeline diagnostics",
+        "dashboard sizes scan limits by approved website count and imports JSON specifications",
+        "actual dashboard displays counters, bounded warning groups, endpoint actions, safe reports and a concrete retry plan"
+      ],
+      "cause": "test/browser.test.ts (2 places) and test/repair-browser.test.ts (1 place) start their own Chromium with spawn() and do not pass browserSandboxArgs(), so with the sandbox unavailable that Chromium exits at once (\"Fresh Chromium must launch\", and no DevTools port in repair-browser). The scanner's own Chromium honoured the switch in every other browser test.",
+      "fixVerified": {
+        "offloadJob": "1017-192714-28134",
+        "branch": "v3-test-sandbox-switch",
+        "commit": "eb346a9",
+        "change": "the three spawn() calls add ...browserSandboxArgs()",
+        "build": "3.0.0+3308d7b0e5e0ed3e (the test change alters the build digest, so it is not part of 3.0.0)",
+        "result": "test/browser.test.ts and test/repair-browser.test.ts: 7/7 passed with EXPOSURE_BROWSER_NO_SANDBOX=1"
+      }
+    },
+    "package": {
+      "offloadJob": "1017-192617-22524",
+      "command": "SOURCE_DATE_EPOCH=$(git log -1 --format=%ct) node scripts/package-linux.mjs --tools .cache/linux-tools, then sha256sum --check, extraction into a folder whose path has spaces and node scripts/packaged-smoke.mjs (EXPOSURE_BROWSER_NO_SANDBOX=1)",
+      "conclusion": "success",
+      "file": "Exposure Desk 3.0.0 Linux x64.tar.gz",
+      "files": 8094,
+      "bytes": 266295349,
+      "sha256": "76a97798cc45f4c96ab32395a47cce48a08e4f86e5b6bce8182971df923ad354",
+      "checksumFileMatches": true,
+      "packagedSmoke": "success: 13/13 checks, analysis processes on the bundled runtime, none left running (linux-packaged-smoke.json)",
+      "upload": "none; the package stayed on the server and was not attached to any release"
+    },
+    "container": {
+      "conclusion": "success",
+      "date": "2026-10-18",
+      "window": "07:54:23Z to 07:59:21Z",
+      "commit": "3fa15543851308e81e66221dc4267641c55bd049",
+      "docker": "docker.io 29.1.3 (Ubuntu 24.04 package), BuildKit",
+      "systemdUnit": "ed-docker-smoke (offload-docker.slice)",
+      "build": {
+        "seconds": 254,
+        "buildIdInImage": "3.0.0+900c631686338160",
+        "sourceDigest": "900c631686338160dbced18ae03ce9e0e57245305c28ad3002a845fc0fe48292",
+        "baseImage": "node:24.18.1-bookworm-slim@sha256:235600a8101ab264e117b1768e925532262668dc9b581ef1dd7d96ced463b8e7",
+        "chromium": "Chrome for Testing 153.0.8010.12 linux64, archive sha256 8aac35011c18f6e2d10696154af89a5728ac2ddd6dc6fad24ffdf243c3fcfd5a",
+        "gitleaks": "8.30.1, binary sha256 88f91962aa2f93ac6ab281d553b9e125f5197bbbce38f9f2437f7299c32e5509",
+        "imageId": "sha256:c2467fbec70326e39402bb98c798e9398ca047b50065fbd21f0d51c22a594ab6",
+        "imageBytes": 637546921
+      },
+      "smoke": {
+        "seconds": 44,
+        "result": {
+          "imageConfig": true,
+          "nonRoot": true,
+          "readOnlyRoot": true,
+          "privateData": true,
+          "help": true,
+          "doctor": {
+            "parity": "verified",
+            "detector": "verified",
+            "browserLaunch": "available",
+            "runtimeScan": "completed",
+            "build": "3.0.0+900c631686338160"
+          },
+          "cliSmoke": true,
+          "dashboard": {
+            "loopbackOnly": true,
+            "healthInside": true,
+            "containerAddress": "unreachable",
+            "cleanStop": true
+          },
+          "hostNetworkDashboard": true
+        }
+      },
+      "upload": "none; the image stayed on the server and was not pushed to any registry"
+    },
+    "matrix": {
+      "offloadJobs": {
+        "3.0": "1017-201419-18549",
+        "2.9.1": "1017-201523-999",
+        "3.0-small": "1017-202224-20417",
+        "resources": "1017-202328-8063"
+      },
+      "command": "node scripts/profile-matrix.mjs (phases current, prev with --baseline 2.9.1, small, resources; then report with --baseline), EXPOSURE_BROWSER_NO_SANDBOX=1",
+      "baseline": "2.9.1+94a512df50bb9d43, built on the server from tag v2.9.1 with the same pinned Node, browser and harness, and measured on the same server in the same session; not merged with the laptop rows in benchmarks/2.9.1",
+      "conditions": "The four phase jobs ran at the same time on the shared server, each with 2 CPUs free at start (OFFLOAD_WORKERS=2), next to other users jobs; times are therefore noisy and longer than a quiet computer would show. The report records 7 logical cores (the job CPU cap) and 8.6 GiB free memory.",
+      "report": "linux-server-matrix.md and linux-server-matrix.json",
+      "rows": 58,
+      "stale": 0,
+      "failedRows": 0,
+      "checks": 191,
+      "pass": 185,
+      "fail": 6,
+      "failures": [
+        "Finds its keys at its memory setting and Keeps the 2.9.1 recall: 3.0/standard+normal/bundlex1, 6/7 (missing bundle.example.com:bundle), gap semantic-time-limit",
+        "Finds its keys at its memory setting and Keeps the 2.9.1 recall: 3.0/deep+normal/bundlex1, 6/7 (missing bundle.example.com:bundle), gaps semantic-mutation-budget, semantic-time-limit",
+        "Finds its keys at its memory setting: 3.0-small/standard+normal/bundlex1, 6/7 (missing bundle.example.com:bundle), gaps detector-analysis-failure, semantic-mutation-budget",
+        "Finds its keys at its memory setting: 3.0-small/deep+normal/bundlex1, 6/7 (missing bundle.example.com:bundle), gap semantic-time-limit"
+      ],
+      "failureCause": "Server load, not a 3.0 change. The missed key is the one inside the 1,252,570-byte bundle, and the semantic parser stage has a wall-clock limit; under the contention of four matrix jobs plus other jobs, those scans hit time and budget limits before reaching it. The same limits showed in the 2.9.1 baseline rows of that run (detector-analysis-failure, semantic-mutation-budget, semantic-cleanup-limit, semantic-alias-mutation-budget, and semantic-time-limit in deep+low-impact), which happened to still reach all 7 keys. The semantic and parser code is unchanged between 2.9.1 and 3.0.0. Rerun of exactly these cases with 2.9.1 interleaved, one case at a time (linux-server-bundle-rerun.json, job 1017-213019-4048): 18 of 18 found 7/7 with no analysis gap, 3 rounds each of 3.0, 3.0-small and 2.9.1.",
+      "timeNote": "In the quieter rerun the normal-traffic bundle scans took 32-34 s on 3.0 against 26-27 s on 2.9.1 and made 53 requests against 41: the 12 extra requests are the larger deployment-path list 3.0 probes, and the extra time comes with them.",
+      "releaseMetadata": {
+        "offloadJobs": [
+          "1017-200152-18628",
+          "1017-214225-24955"
+        ],
+        "result": "dist/test/release-metadata.test.js 2/2 passed on the server, again after these records and docs/TEST_RESULTS.md were updated (build id still 3.0.0+900c631686338160; benchmarks and TEST_RESULTS.md are outside the build digest)"
+      }
+    }
+  },
+  "network": "loopback fixtures and synthetic, nonfunctional keys only; no real website or provider endpoint was contacted"
+}

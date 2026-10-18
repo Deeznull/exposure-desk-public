@@ -8,6 +8,7 @@ It is **off by default** and does nothing unless a person turns it on for a prog
 
 - **No scan ever checks a key.** Checking happens only when a person clicks **Check if live** on a finding, or runs the `check-key` command. It is never automatic, never part of a scan, never runs after a scan, and is never offered in mass scan or the ready options.
 - **Only the key leaves your computer.** The request carries the key in the one header the provider documents and nothing else from the scan — no URL, no file path, no context, no other finding. The key is never put in a URL, path or query string.
+- **AWS never sends the secret at all.** For an AWS key the secret access key stays on this machine: it only derives a short-lived AWS Signature Version 4 signing key locally (HMAC-SHA256). The request to STS carries the public access-key ID, the signature, the request date and — for temporary `ASIA…` keys — the session token. The secret itself is never transmitted.
 - **Read-only.** Each recipe targets a provider's official identity or metadata endpoint. The check never signs in, never writes, never creates or deletes anything and never triggers paid usage.
 - **It does not change the finding's validity.** A finding's `validity` stays `unverified` whatever the check returns. The live-check result is stored separately, alongside the finding.
 - **The protected-host block still applies.** If a recipe host were ever a government, military, intelligence or law-enforcement host it would be refused before any DNS lookup, with no override. The same address guards a scan uses (protected host, private/internal/cloud-metadata refusal, DNS pinning, no redirects) run on this path too.
@@ -59,8 +60,8 @@ When the program sets `checkAll: true`, the dashboard shows a **Check all** pane
 
 | Verdict | Meaning |
 | --- | --- |
-| **live** | The provider accepted the key on its identity endpoint (HTTP 200, or for Slack `ok: true`). The key still works. |
-| **revoked** | The provider rejected the key with a status the recipe recognises as "this credential is not valid" (for example 401, or for Slack a known auth error such as `token_revoked`). |
+| **live** | The provider accepted the key on its identity endpoint (HTTP 200, or for Slack `ok: true`; for AWS a 200 from STS `GetCallerIdentity`). The key still works. |
+| **revoked** | The provider rejected the key with a status the recipe recognises as "this credential is not valid" (for example 401, for Slack a known auth error such as `token_revoked`, or for AWS a 403 such as `InvalidClientTokenId`). |
 | **unknown** | Anything else: no recipe for this provider, a rate-limit, a network or TLS error, an unexpected response shape, or a refused address. Nothing conclusive — the result is recorded with a short reason code. |
 
 The mapping is deliberately conservative: only a documented success means **live**, only a documented rejection means **revoked**, and everything ambiguous stays **unknown**.
@@ -80,8 +81,11 @@ Each provider has one hand-written recipe pointing at that provider's own docume
 | Stripe | `GET https://api.stripe.com/v1/balance` | HTTP Basic |
 | SendGrid | `GET https://api.sendgrid.com/v3/scopes` | `Authorization: Bearer` |
 | Slack | `POST https://slack.com/api/auth.test` | `Authorization: Bearer` |
+| AWS | `POST https://sts.amazonaws.com/` (`GetCallerIdentity`) | AWS SigV4 signature; the secret key never leaves the machine |
 
-These hosts are the complete egress allowlist for the check: no request can be made to any other host. The endpoints are read-only identity/metadata calls taken from each provider's official API documentation.
+These hosts are the complete egress allowlist for the check: no request can be made to any other host. The allowlist is derived from the recipe table itself, so adding the AWS recipe added `sts.amazonaws.com` to it and nothing else. The endpoints are read-only identity/metadata calls taken from each provider's official API documentation.
+
+An AWS secret access key is only checkable when the saved evidence also carries its paired public access-key ID (and, for a temporary `ASIA…` key, the session token). Without them the check is **unknown** (`incomplete-credential`) and no request is sent — nothing can be signed, so nothing leaves the machine.
 
 ## Where the result is stored
 

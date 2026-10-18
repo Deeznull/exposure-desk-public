@@ -1,7 +1,7 @@
 {
   "schema": "exposure-coverage-registry/1",
   "documentationReviewed": "2026-10-08",
-  "websiteRuleVersion": "website/2.9.1",
+  "websiteRuleVersion": "website/3.0.0",
   "engine": {
     "name": "Gitleaks",
     "version": "8.30.1",
@@ -33,7 +33,7 @@
       "contextRequirements": "Distinctive bounded format or explicit provider authentication context. Cross-resource pairing requires imported constants forming one configuration or sink.",
       "limitations": "Organization/project IDs public. WIF token opaque detection needs context; issuance, rotation, audience and lifetime unverified",
       "provenance": {
-        "websiteRuleVersion": "website/2.9.1",
+        "websiteRuleVersion": "website/3.0.0",
         "websiteRuleIds": [
           "provider-context:openai",
           "openai"
@@ -158,7 +158,7 @@
       "contextRequirements": "Distinctive bounded format or explicit provider authentication context. Cross-resource pairing requires imported constants forming one configuration or sink.",
       "limitations": "WIF/routine tokens can expire; scopes unknown. Runtime token minting and opaque values without context unsupported",
       "provenance": {
-        "websiteRuleVersion": "website/2.9.1",
+        "websiteRuleVersion": "website/3.0.0",
         "websiteRuleIds": [
           "provider-context:anthropic",
           "anthropic"
@@ -270,7 +270,7 @@
       "contextRequirements": "Distinctive bounded format or explicit provider authentication context. Cross-resource pairing requires imported constants forming one configuration or sink.",
       "limitations": "No universal bare opaque format; aliases and computed names partial",
       "provenance": {
-        "websiteRuleVersion": "website/2.9.1",
+        "websiteRuleVersion": "website/3.0.0",
         "websiteRuleIds": [
           "provider-context:cohere"
         ],
@@ -359,7 +359,7 @@
       "contextRequirements": "Distinctive bounded format or explicit provider authentication context. Cross-resource pairing requires imported constants forming one configuration or sink.",
       "limitations": "Read/write/expiry unknown; undocumented formats partial",
       "provenance": {
-        "websiteRuleVersion": "website/2.9.1",
+        "websiteRuleVersion": "website/3.0.0",
         "websiteRuleIds": [
           "provider-context:replicate",
           "replicate"
@@ -456,7 +456,7 @@
       "contextRequirements": "Distinctive bounded format or explicit provider authentication context. Cross-resource pairing requires imported constants forming one configuration or sink.",
       "limitations": "Fine-grained/read/write roles unknown; model/repo names public",
       "provenance": {
-        "websiteRuleVersion": "website/2.9.1",
+        "websiteRuleVersion": "website/3.0.0",
         "websiteRuleIds": [
           "provider-context:huggingface",
           "huggingface"
@@ -547,7 +547,7 @@
       "contextRequirements": "Distinctive bounded format or explicit provider authentication context. Cross-resource pairing requires imported constants forming one configuration or sink.",
       "limitations": "Restricted, ephemeral/single-use values require context; cannot infer reuse or quotas",
       "provenance": {
-        "websiteRuleVersion": "website/2.9.1",
+        "websiteRuleVersion": "website/3.0.0",
         "websiteRuleIds": [
           "provider-context:elevenlabs"
         ],
@@ -637,7 +637,7 @@
       "contextRequirements": "Distinctive bounded format or explicit provider authentication context. Cross-resource pairing requires imported constants forming one configuration or sink.",
       "limitations": "No exhaustive standalone sk- shape; dynamic SDK aliases partial",
       "provenance": {
-        "websiteRuleVersion": "website/2.9.1",
+        "websiteRuleVersion": "website/3.0.0",
         "websiteRuleIds": [
           "provider-context:stabilityai"
         ],
@@ -726,7 +726,7 @@
       "contextRequirements": "Distinctive bounded format or explicit provider authentication context. Cross-resource pairing requires imported constants forming one configuration or sink.",
       "limitations": "Scoped/project identifiers public; unknown future formats partial",
       "provenance": {
-        "websiteRuleVersion": "website/2.9.1",
+        "websiteRuleVersion": "website/3.0.0",
         "websiteRuleIds": [
           "provider-context:groq",
           "groq"
@@ -817,7 +817,7 @@
       "contextRequirements": "Distinctive bounded format or explicit provider authentication context. Cross-resource pairing requires imported constants forming one configuration or sink.",
       "limitations": "Opaque unlabelled strings unsupported; permissions unknown",
       "provenance": {
-        "websiteRuleVersion": "website/2.9.1",
+        "websiteRuleVersion": "website/3.0.0",
         "websiteRuleIds": [
           "provider-context:mistral"
         ],
@@ -913,7 +913,7 @@
       "contextRequirements": "Distinctive bounded format or explicit provider authentication context. Cross-resource pairing requires imported constants forming one configuration or sink.",
       "limitations": "API/model endpoint alone information; quota/validity unknown",
       "provenance": {
-        "websiteRuleVersion": "website/2.9.1",
+        "websiteRuleVersion": "website/3.0.0",
         "websiteRuleIds": [
           "provider-context:perplexity",
           "perplexity"
@@ -1010,7 +1010,7 @@
       "contextRequirements": "Distinctive bounded format or explicit provider authentication context. Cross-resource pairing requires imported constants forming one configuration or sink.",
       "limitations": "Standard vs service-account-bound authorization keys cannot be inferred from shape. Firebase-adjacent keys retain unknown restrictions. Project IDs/ordinary Firebase fields public. Vertex ADC/WIF opaque tokens need explicit Google context",
       "provenance": {
-        "websiteRuleVersion": "website/2.9.1",
+        "websiteRuleVersion": "website/3.0.0",
         "websiteRuleIds": [
           "google-api",
           "provider-context:googlecloud",
@@ -1123,7 +1123,7 @@
       "contextRequirements": "Distinctive bounded format or explicit provider authentication context. Cross-resource pairing requires imported constants forming one configuration or sink.",
       "limitations": "IAM policy/account/service scope unknown; partial IAM sets retained. Token signatures/expiry not validated",
       "provenance": {
-        "websiteRuleVersion": "website/2.9.1",
+        "websiteRuleVersion": "website/3.0.0",
         "websiteRuleIds": [
           "bedrock-bearer",
           "provider-context:awsbedrock"
@@ -1227,7 +1227,7 @@
       "contextRequirements": "Distinctive bounded format or explicit provider authentication context. Cross-resource pairing requires imported constants forming one configuration or sink.",
       "limitations": "Credits/limits unknown; OAuth PKCE flow is not executed",
       "provenance": {
-        "websiteRuleVersion": "website/2.9.1",
+        "websiteRuleVersion": "website/3.0.0",
         "websiteRuleIds": [
           "provider-context:openrouter",
           "openrouter"
@@ -1324,7 +1324,7 @@
       "contextRequirements": "Distinctive bounded format or explicit provider authentication context. Cross-resource pairing requires imported constants forming one configuration or sink.",
       "limitations": "ID alone not private usable auth. Regions/ARN/resource names public. Presigned AWS URL relationship interpretation and computed SigV4 sets unsupported; request screening remains fail closed",
       "provenance": {
-        "websiteRuleVersion": "website/2.9.1",
+        "websiteRuleVersion": "website/3.0.0",
         "websiteRuleIds": [
           "provider-context:aws",
           "capability:aws-presigned-url"
@@ -1436,7 +1436,7 @@
       "contextRequirements": "Distinctive bounded format or explicit provider authentication context. Cross-resource pairing requires imported constants forming one configuration or sink.",
       "limitations": "Private key retained when email missing; additional service-account fields/permissions not inferred. ADC refresh-token/federation configs without private literal not fully classified",
       "provenance": {
-        "websiteRuleVersion": "website/2.9.1",
+        "websiteRuleVersion": "website/3.0.0",
         "websiteRuleIds": [
           "provider-context:googlecloud",
           "capability:google-signed-url"
@@ -1534,7 +1534,7 @@
       "contextRequirements": "Distinctive bounded format or explicit provider authentication context. Cross-resource pairing requires imported constants forming one configuration or sink.",
       "limitations": "IDs public. SAS scope/expiry unverified; contextual access tokens partial; certificate/raw signing material generic. Connection-string field order variants and sovereign-cloud SAS hosts partial",
       "provenance": {
-        "websiteRuleVersion": "website/2.9.1",
+        "websiteRuleVersion": "website/3.0.0",
         "websiteRuleIds": [
           "provider-context:azure",
           "provider-context:azure-storage-connection"
@@ -1633,7 +1633,7 @@
       "contextRequirements": "Distinctive bounded format or explicit provider authentication context. Cross-resource pairing requires imported constants forming one configuration or sink.",
       "limitations": "No universal standalone opaque shape; endpoint, Entra credentials and IDs alone do not establish private material",
       "provenance": {
-        "websiteRuleVersion": "website/2.9.1",
+        "websiteRuleVersion": "website/3.0.0",
         "websiteRuleIds": [
           "provider-context:azureai"
         ],
@@ -1730,7 +1730,7 @@
       "contextRequirements": "Distinctive bounded format or explicit provider authentication context. Cross-resource pairing requires imported constants forming one configuration or sink.",
       "limitations": "POSTMARK_API_TEST placeholder excluded; arbitrary UUIDs and ordinary SMTP IDs alone unsupported",
       "provenance": {
-        "websiteRuleVersion": "website/2.9.1",
+        "websiteRuleVersion": "website/3.0.0",
         "websiteRuleIds": [
           "provider-context:postmark"
         ],
@@ -1841,7 +1841,7 @@
       "contextRequirements": "Distinctive bounded format or explicit provider authentication context. Cross-resource pairing requires imported constants forming one configuration or sink.",
       "limitations": "Prefix is a medium-confidence shape heuristic; scopes, expiry and validity unverified",
       "provenance": {
-        "websiteRuleVersion": "website/2.9.1",
+        "websiteRuleVersion": "website/3.0.0",
         "websiteRuleIds": [
           "provider-context:resend",
           "resend-key"
@@ -1945,7 +1945,7 @@
       "contextRequirements": "Distinctive bounded format or explicit provider authentication context. Cross-resource pairing requires imported constants forming one configuration or sink.",
       "limitations": "Full capability retained; never redeemed. Unsigned storage endpoints are observations. Scope, operation and expiration unknown",
       "provenance": {
-        "websiteRuleVersion": "website/2.9.1",
+        "websiteRuleVersion": "website/3.0.0",
         "websiteRuleIds": [
           "provider-context:aws",
           "provider-context:azure",
@@ -2136,7 +2136,7 @@
       "contextRequirements": "Distinctive bounded format or explicit provider authentication context. Cross-resource pairing requires imported constants forming one configuration or sink.",
       "limitations": "OAuth IDs public; unknown formats context only; expired refresh tokens still detectable",
       "provenance": {
-        "websiteRuleVersion": "website/2.9.1",
+        "websiteRuleVersion": "website/3.0.0",
         "websiteRuleIds": [
           "provider-context:digitalocean",
           "digitalocean"
@@ -2269,7 +2269,7 @@
       "contextRequirements": "Distinctive bounded format or explicit provider authentication context. Cross-resource pairing requires imported constants forming one configuration or sink.",
       "limitations": "pk_live/test public. Webhook secrets are signing material. Refund/transfer authority and restricted-key permissions unknown; organization context not inferred from token alone",
       "provenance": {
-        "websiteRuleVersion": "website/2.9.1",
+        "websiteRuleVersion": "website/3.0.0",
         "websiteRuleIds": [
           "stripe-org",
           "stripe-secret",
@@ -2404,7 +2404,7 @@
       "contextRequirements": "Distinctive bounded format or explicit provider authentication context. Cross-resource pairing requires imported constants forming one configuration or sink.",
       "limitations": "Client IDs public. Browser client tokens are not automatically secret keys; opaque client-token types need source evidence",
       "provenance": {
-        "websiteRuleVersion": "website/2.9.1",
+        "websiteRuleVersion": "website/3.0.0",
         "websiteRuleIds": [
           "provider-context:paypal"
         ],
@@ -2500,7 +2500,7 @@
       "contextRequirements": "Distinctive bounded format or explicit provider authentication context. Cross-resource pairing requires imported constants forming one configuration or sink.",
       "limitations": "Public key/client token/tokenization key alone not private. Basic auth opaque request retained; decoded relationship inference partial",
       "provenance": {
-        "websiteRuleVersion": "website/2.9.1",
+        "websiteRuleVersion": "website/3.0.0",
         "websiteRuleIds": [
           "provider-context:braintree",
           "braintree-access-token"
@@ -2597,7 +2597,7 @@
       "contextRequirements": "Distinctive bounded format or explicit provider authentication context. Cross-resource pairing requires imported constants forming one configuration or sink.",
       "limitations": "Application/location IDs public; unknown unlabelled opaque shapes unsupported",
       "provenance": {
-        "websiteRuleVersion": "website/2.9.1",
+        "websiteRuleVersion": "website/3.0.0",
         "websiteRuleIds": [
           "provider-context:square",
           "square-oauth-secret"
@@ -2688,7 +2688,7 @@
       "contextRequirements": "Distinctive bounded format or explicit provider authentication context. Cross-resource pairing requires imported constants forming one configuration or sink.",
       "limitations": "Key name public; EC/PEM raw material retained. CDP raw Ed25519 keys, computed JWT construction and wallet-specific formats partial/unsupported; withdrawal/trading rights unknown",
       "provenance": {
-        "websiteRuleVersion": "website/2.9.1",
+        "websiteRuleVersion": "website/3.0.0",
         "websiteRuleIds": [
           "provider-context:coinbase"
         ],
@@ -2779,7 +2779,7 @@
       "contextRequirements": "Distinctive bounded format or explicit provider authentication context. Cross-resource pairing requires imported constants forming one configuration or sink.",
       "limitations": "API key alone suspicious component; trade/withdraw permissions unknown",
       "provenance": {
-        "websiteRuleVersion": "website/2.9.1",
+        "websiteRuleVersion": "website/3.0.0",
         "websiteRuleIds": [
           "provider-context:kraken"
         ],
@@ -2862,7 +2862,7 @@
       "contextRequirements": "Distinctive bounded format or explicit provider authentication context. Cross-resource pairing requires imported constants forming one configuration or sink.",
       "limitations": "HMAC vs RSA/Ed25519 context partly recovered; computed signature and permissions unverified. API key alone component",
       "provenance": {
-        "websiteRuleVersion": "website/2.9.1",
+        "websiteRuleVersion": "website/3.0.0",
         "websiteRuleIds": [
           "provider-context:binance"
         ],
@@ -2951,7 +2951,7 @@
       "contextRequirements": "Distinctive bounded format or explicit provider authentication context. Cross-resource pairing requires imported constants forming one configuration or sink.",
       "limitations": "AC SID public, SK SID suspicious component. Parent account/region/scope not inferred",
       "provenance": {
-        "websiteRuleVersion": "website/2.9.1",
+        "websiteRuleVersion": "website/3.0.0",
         "websiteRuleIds": [
           "provider-context:twilio"
         ],
@@ -3047,7 +3047,7 @@
       "contextRequirements": "Distinctive bounded format or explicit provider authentication context. Cross-resource pairing requires imported constants forming one configuration or sink.",
       "limitations": "Sender/account IDs public; sending scopes unknown",
       "provenance": {
-        "websiteRuleVersion": "website/2.9.1",
+        "websiteRuleVersion": "website/3.0.0",
         "websiteRuleIds": [
           "provider-context:sendgrid",
           "sendgrid"
@@ -3144,7 +3144,7 @@
       "contextRequirements": "Distinctive bounded format or explicit provider authentication context. Cross-resource pairing requires imported constants forming one configuration or sink.",
       "limitations": "pubkey- is public; private sending/domain scopes unknown",
       "provenance": {
-        "websiteRuleVersion": "website/2.9.1",
+        "websiteRuleVersion": "website/3.0.0",
         "websiteRuleIds": [
           "provider-context:mailgun",
           "mailgun-public"
@@ -3235,7 +3235,7 @@
       "contextRequirements": "Distinctive bounded format or explicit provider authentication context. Cross-resource pairing requires imported constants forming one configuration or sink.",
       "limitations": "Application ID public; JWT construction not executed, JWT permissions unknown",
       "provenance": {
-        "websiteRuleVersion": "website/2.9.1",
+        "websiteRuleVersion": "website/3.0.0",
         "websiteRuleIds": [
           "provider-context:vonage"
         ],
@@ -3331,7 +3331,7 @@
       "contextRequirements": "Distinctive bounded format or explicit provider authentication context. Cross-resource pairing requires imported constants forming one configuration or sink.",
       "limitations": "Prefix checksum unverified (medium confidence); older opaque token context only; Access client ID public component. Key/token alone never proves DNS-write scope",
       "provenance": {
-        "websiteRuleVersion": "website/2.9.1",
+        "websiteRuleVersion": "website/3.0.0",
         "websiteRuleIds": [
           "cloudflare-prefixed",
           "provider-context:cloudflare"
@@ -3450,7 +3450,7 @@
       "contextRequirements": "Distinctive bounded format or explicit provider authentication context. Cross-resource pairing requires imported constants forming one configuration or sink.",
       "limitations": "AWS policy unknown; generic IAM exposure does not prove DNS control",
       "provenance": {
-        "websiteRuleVersion": "website/2.9.1",
+        "websiteRuleVersion": "website/3.0.0",
         "websiteRuleIds": [
           "provider-context:awsroute53"
         ],
@@ -3533,7 +3533,7 @@
       "contextRequirements": "Distinctive bounded format or explicit provider authentication context. Cross-resource pairing requires imported constants forming one configuration or sink.",
       "limitations": "PAT scopes/eligible APIs unknown; classic API key alone component; opaque bare PAT unsupported",
       "provenance": {
-        "websiteRuleVersion": "website/2.9.1",
+        "websiteRuleVersion": "website/3.0.0",
         "websiteRuleIds": [
           "provider-context:godaddy"
         ],
@@ -3630,7 +3630,7 @@
       "contextRequirements": "Distinctive bounded format or explicit provider authentication context. Cross-resource pairing requires imported constants forming one configuration or sink.",
       "limitations": "Supporting names/IP public components; IP restrictions and key validity unknown; partial secret retained",
       "provenance": {
-        "websiteRuleVersion": "website/2.9.1",
+        "websiteRuleVersion": "website/3.0.0",
         "websiteRuleIds": [
           "provider-context:namecheap"
         ],
@@ -3719,7 +3719,7 @@
       "contextRequirements": "Distinctive bounded format or explicit provider authentication context. Cross-resource pairing requires imported constants forming one configuration or sink.",
       "limitations": "Team/project IDs public; token scope, team and expiry unknown",
       "provenance": {
-        "websiteRuleVersion": "website/2.9.1",
+        "websiteRuleVersion": "website/3.0.0",
         "websiteRuleIds": [
           "provider-context:vercel",
           "vercel-token"
@@ -3810,7 +3810,7 @@
       "contextRequirements": "Distinctive bounded format or explicit provider authentication context. Cross-resource pairing requires imported constants forming one configuration or sink.",
       "limitations": "Site/team IDs public; no universal bare format guarantee",
       "provenance": {
-        "websiteRuleVersion": "website/2.9.1",
+        "websiteRuleVersion": "website/3.0.0",
         "websiteRuleIds": [
           "provider-context:netlify"
         ],
@@ -3893,7 +3893,7 @@
       "contextRequirements": "Distinctive bounded format or explicit provider authentication context. Cross-resource pairing requires imported constants forming one configuration or sink.",
       "limitations": "App IDs public; scope/expiry unknown, other opaque formats need context",
       "provenance": {
-        "websiteRuleVersion": "website/2.9.1",
+        "websiteRuleVersion": "website/3.0.0",
         "websiteRuleIds": [
           "provider-context:heroku"
         ],
@@ -3982,7 +3982,7 @@
       "contextRequirements": "Distinctive bounded format or explicit provider authentication context. Cross-resource pairing requires imported constants forming one configuration or sink.",
       "limitations": "Ordinary DSN is public information; project IDs public; scope unknown",
       "provenance": {
-        "websiteRuleVersion": "website/2.9.1",
+        "websiteRuleVersion": "website/3.0.0",
         "websiteRuleIds": [
           "provider-context:sentry",
           "sentry-auth"
@@ -4086,7 +4086,7 @@
       "contextRequirements": "Distinctive bounded format or explicit provider authentication context. Cross-resource pairing requires imported constants forming one configuration or sink.",
       "limitations": "Read/write/delete scope and owning account unknown; organisation tokens and passwords without the prefix need explicit configuration context",
       "provenance": {
-        "websiteRuleVersion": "website/2.9.1",
+        "websiteRuleVersion": "website/3.0.0",
         "websiteRuleIds": [
           "dockerhub-pat"
         ],
@@ -4175,7 +4175,7 @@
       "contextRequirements": "Distinctive bounded format or explicit provider authentication context. Cross-resource pairing requires imported constants forming one configuration or sink.",
       "limitations": "Scopes, expiry and owning account unknown; OAuth tokens without the prefix need explicit context",
       "provenance": {
-        "websiteRuleVersion": "website/2.9.1",
+        "websiteRuleVersion": "website/3.0.0",
         "websiteRuleIds": [
           "figma-pat"
         ],
@@ -4264,7 +4264,7 @@
       "contextRequirements": "Distinctive bounded format or explicit provider authentication context. Cross-resource pairing requires imported constants forming one configuration or sink.",
       "limitations": "Kind is read from the prefix only; tailnet, tags, reusability and expiry unknown",
       "provenance": {
-        "websiteRuleVersion": "website/2.9.1",
+        "websiteRuleVersion": "website/3.0.0",
         "websiteRuleIds": [
           "tailscale-key"
         ],
@@ -4353,7 +4353,7 @@
       "contextRequirements": "Distinctive bounded format or explicit provider authentication context. Cross-resource pairing requires imported constants forming one configuration or sink.",
       "limitations": "Team, model access and spending limits unknown",
       "provenance": {
-        "websiteRuleVersion": "website/2.9.1",
+        "websiteRuleVersion": "website/3.0.0",
         "websiteRuleIds": [
           "vercel-ai-gateway"
         ],
@@ -4442,7 +4442,7 @@
       "contextRequirements": "Distinctive bounded format or explicit provider authentication context. Cross-resource pairing requires imported constants forming one configuration or sink.",
       "limitations": "The short hex shape can collide with other identifiers, so it stays medium confidence; credits and team unknown",
       "provenance": {
-        "websiteRuleVersion": "website/2.9.1",
+        "websiteRuleVersion": "website/3.0.0",
         "websiteRuleIds": [
           "firecrawl-key"
         ],
@@ -4531,7 +4531,7 @@
       "contextRequirements": "Distinctive bounded format or explicit provider authentication context. Cross-resource pairing requires imported constants forming one configuration or sink.",
       "limitations": "Credits and key owner unknown",
       "provenance": {
-        "websiteRuleVersion": "website/2.9.1",
+        "websiteRuleVersion": "website/3.0.0",
         "websiteRuleIds": [
           "jina-key"
         ],
@@ -4620,7 +4620,7 @@
       "contextRequirements": "Distinctive bounded format or explicit provider authentication context. Cross-resource pairing requires imported constants forming one configuration or sink.",
       "limitations": "Plan and credits unknown; development keys are still private",
       "provenance": {
-        "websiteRuleVersion": "website/2.9.1",
+        "websiteRuleVersion": "website/3.0.0",
         "websiteRuleIds": [
           "tavily-key"
         ],
@@ -4714,7 +4714,7 @@
       "contextRequirements": "Distinctive bounded format or explicit provider authentication context. Cross-resource pairing requires imported constants forming one configuration or sink.",
       "limitations": "Client IDs (`….apps.googleusercontent.com`) are public; scopes, consent configuration and token expiry unknown; refresh tokens need explicit context",
       "provenance": {
-        "websiteRuleVersion": "website/2.9.1",
+        "websiteRuleVersion": "website/3.0.0",
         "websiteRuleIds": [
           "google-oauth-secret",
           "google-oauth-access-token"
@@ -4811,7 +4811,7 @@
       "contextRequirements": "Distinctive bounded format or explicit provider authentication context. Cross-resource pairing requires imported constants forming one configuration or sink.",
       "limitations": "Cloud name and API key are public components; account permissions unknown; unsigned upload presets are not credentials",
       "provenance": {
-        "websiteRuleVersion": "website/2.9.1",
+        "websiteRuleVersion": "website/3.0.0",
         "websiteRuleIds": [
           "cloudinary-url"
         ],
@@ -4900,7 +4900,7 @@
       "contextRequirements": "Distinctive bounded format or explicit provider authentication context. Cross-resource pairing requires imported constants forming one configuration or sink.",
       "limitations": "Account rights, writable paths and reachability unknown; placeholders and templated values excluded",
       "provenance": {
-        "websiteRuleVersion": "website/2.9.1",
+        "websiteRuleVersion": "website/3.0.0",
         "websiteRuleIds": [
           "ftp-password"
         ],
@@ -4989,7 +4989,7 @@
       "contextRequirements": "Distinctive bounded format or explicit provider authentication context. Cross-resource pairing requires imported constants forming one configuration or sink.",
       "limitations": "Sending/reading rights and relay policy unknown; placeholders and templated values excluded",
       "provenance": {
-        "websiteRuleVersion": "website/2.9.1",
+        "websiteRuleVersion": "website/3.0.0",
         "websiteRuleIds": [
           "mail-server-password"
         ],
@@ -5078,7 +5078,7 @@
       "contextRequirements": "Distinctive bounded format or explicit provider authentication context. Cross-resource pairing requires imported constants forming one configuration or sink.",
       "limitations": "Virtual host, topic permissions and reachability unknown; placeholders and templated values excluded",
       "provenance": {
-        "websiteRuleVersion": "website/2.9.1",
+        "websiteRuleVersion": "website/3.0.0",
         "websiteRuleIds": [
           "message-broker-password"
         ],
@@ -5167,7 +5167,7 @@
       "contextRequirements": "Distinctive bounded format or explicit provider authentication context. Cross-resource pairing requires imported constants forming one configuration or sink.",
       "limitations": "Bind account rights and directory scope unknown; placeholders and templated values excluded",
       "provenance": {
-        "websiteRuleVersion": "website/2.9.1",
+        "websiteRuleVersion": "website/3.0.0",
         "websiteRuleIds": [
           "ldap-password"
         ],
@@ -5256,7 +5256,7 @@
       "contextRequirements": "Distinctive bounded format or explicit provider authentication context. Cross-resource pairing requires imported constants forming one configuration or sink.",
       "limitations": "Workspace, scopes and owner unknown; OAuth access tokens without the prefix need explicit context",
       "provenance": {
-        "websiteRuleVersion": "website/2.9.1",
+        "websiteRuleVersion": "website/3.0.0",
         "websiteRuleIds": [
           "linear-api-key"
         ],
@@ -5345,7 +5345,7 @@
       "contextRequirements": "Distinctive bounded format or explicit provider authentication context. Cross-resource pairing requires imported constants forming one configuration or sink.",
       "limitations": "Service token IDs, branch and database names are public components; access level and branch scope unknown",
       "provenance": {
-        "websiteRuleVersion": "website/2.9.1",
+        "websiteRuleVersion": "website/3.0.0",
         "websiteRuleIds": [
           "planetscale-token"
         ],
@@ -5441,7 +5441,7 @@
       "contextRequirements": "Distinctive bounded format or explicit provider authentication context. Cross-resource pairing requires imported constants forming one configuration or sink.",
       "limitations": "Project, config and token expiry unknown; the secrets the token can read must be treated as exposed",
       "provenance": {
-        "websiteRuleVersion": "website/2.9.1",
+        "websiteRuleVersion": "website/3.0.0",
         "websiteRuleIds": [
           "doppler-token"
         ],
@@ -5537,7 +5537,7 @@
       "contextRequirements": "Distinctive bounded format or explicit provider authentication context. Cross-resource pairing requires imported constants forming one configuration or sink.",
       "limitations": "Environment URL and token scopes unknown; platform tokens in other formats need context",
       "provenance": {
-        "websiteRuleVersion": "website/2.9.1",
+        "websiteRuleVersion": "website/3.0.0",
         "websiteRuleIds": [
           "dynatrace-token"
         ],
@@ -5631,7 +5631,7 @@
       "contextRequirements": "Distinctive bounded format or explicit provider authentication context. Cross-resource pairing requires imported constants forming one configuration or sink.",
       "limitations": "Checksum not verified; stack, organisation role and policy scopes unknown; legacy API keys (`eyJrIjoi…`) are left to the pinned engine",
       "provenance": {
-        "websiteRuleVersion": "website/2.9.1",
+        "websiteRuleVersion": "website/3.0.0",
         "websiteRuleIds": [
           "grafana-service-account-token",
           "grafana-cloud-token"
@@ -5728,7 +5728,7 @@
       "contextRequirements": "Distinctive bounded format or explicit provider authentication context. Cross-resource pairing requires imported constants forming one configuration or sink.",
       "limitations": "Policies, TTL and namespace unknown; legacy `s.` tokens and `hvr.` recovery tokens are too short or ambiguous to report without context",
       "provenance": {
-        "websiteRuleVersion": "website/2.9.1",
+        "websiteRuleVersion": "website/3.0.0",
         "websiteRuleIds": [
           "vault-token"
         ],
@@ -5824,7 +5824,7 @@
       "contextRequirements": "Distinctive bounded format or explicit provider authentication context. Cross-resource pairing requires imported constants forming one configuration or sink.",
       "limitations": "Token type (user/team/organization), workspace access and expiry unknown",
       "provenance": {
-        "websiteRuleVersion": "website/2.9.1",
+        "websiteRuleVersion": "website/3.0.0",
         "websiteRuleIds": [
           "terraform-cloud-token"
         ],
@@ -5913,7 +5913,7 @@
       "contextRequirements": "Distinctive bounded format or explicit provider authentication context. Cross-resource pairing requires imported constants forming one configuration or sink.",
       "limitations": "Workspace, collections and owner unknown",
       "provenance": {
-        "websiteRuleVersion": "website/2.9.1",
+        "websiteRuleVersion": "website/3.0.0",
         "websiteRuleIds": [
           "postman-api-key"
         ],
@@ -6002,7 +6002,7 @@
       "contextRequirements": "Distinctive bounded format or explicit provider authentication context. Cross-resource pairing requires imported constants forming one configuration or sink.",
       "limitations": "Instance and scopes unknown; bare 40-hex values without the prefix are not reported",
       "provenance": {
-        "websiteRuleVersion": "website/2.9.1",
+        "websiteRuleVersion": "website/3.0.0",
         "websiteRuleIds": [
           "sourcegraph-token"
         ],
@@ -6098,7 +6098,7 @@
       "contextRequirements": "Distinctive bounded format or explicit provider authentication context. Cross-resource pairing requires imported constants forming one configuration or sink.",
       "limitations": "Workspace and role unknown; write keys for sources are public client identifiers and are not reported",
       "provenance": {
-        "websiteRuleVersion": "website/2.9.1",
+        "websiteRuleVersion": "website/3.0.0",
         "websiteRuleIds": [
           "segment-token"
         ],
@@ -6187,7 +6187,7 @@
       "contextRequirements": "Distinctive bounded format or explicit provider authentication context. Cross-resource pairing requires imported constants forming one configuration or sink.",
       "limitations": "Caveats (app, expiry, permissions) inside the macaroon are not parsed",
       "provenance": {
-        "websiteRuleVersion": "website/2.9.1",
+        "websiteRuleVersion": "website/3.0.0",
         "websiteRuleIds": [
           "flyio-token"
         ],
@@ -6283,7 +6283,7 @@
       "contextRequirements": "Distinctive bounded format or explicit provider authentication context. Cross-resource pairing requires imported constants forming one configuration or sink.",
       "limitations": "Personal, team or organization token and its stacks unknown",
       "provenance": {
-        "websiteRuleVersion": "website/2.9.1",
+        "websiteRuleVersion": "website/3.0.0",
         "websiteRuleIds": [
           "pulumi-token"
         ],
@@ -6372,7 +6372,7 @@
       "contextRequirements": "Distinctive bounded format or explicit provider authentication context. Cross-resource pairing requires imported constants forming one configuration or sink.",
       "limitations": "Workspace, account and expiry unknown",
       "provenance": {
-        "websiteRuleVersion": "website/2.9.1",
+        "websiteRuleVersion": "website/3.0.0",
         "websiteRuleIds": [
           "prefect-token"
         ],
@@ -6461,7 +6461,7 @@
       "contextRequirements": "Distinctive bounded format or explicit provider authentication context. Cross-resource pairing requires imported constants forming one configuration or sink.",
       "limitations": "Test tokens stay private credentials with test environment; account and label purchases unknown",
       "provenance": {
-        "websiteRuleVersion": "website/2.9.1",
+        "websiteRuleVersion": "website/3.0.0",
         "websiteRuleIds": [
           "shippo-token"
         ],
@@ -6550,7 +6550,7 @@
       "contextRequirements": "Distinctive bounded format or explicit provider authentication context. Cross-resource pairing requires imported constants forming one configuration or sink.",
       "limitations": "Test tokens stay private credentials; organisation and permissions unknown",
       "provenance": {
-        "websiteRuleVersion": "website/2.9.1",
+        "websiteRuleVersion": "website/3.0.0",
         "websiteRuleIds": [
           "duffel-token"
         ],
@@ -6639,7 +6639,7 @@
       "contextRequirements": "Distinctive bounded format or explicit provider authentication context. Cross-resource pairing requires imported constants forming one configuration or sink.",
       "limitations": "Test keys stay private credentials; account and referral users unknown",
       "provenance": {
-        "websiteRuleVersion": "website/2.9.1",
+        "websiteRuleVersion": "website/3.0.0",
         "websiteRuleIds": [
           "easypost-key"
         ],
@@ -6728,7 +6728,7 @@
       "contextRequirements": "Distinctive bounded format or explicit provider authentication context. Cross-resource pairing requires imported constants forming one configuration or sink.",
       "limitations": "Owning account, products and scoped-token permissions unknown; older opaque tokens need context",
       "provenance": {
-        "websiteRuleVersion": "website/2.9.1",
+        "websiteRuleVersion": "website/3.0.0",
         "websiteRuleIds": [
           "atlassian-api-token"
         ],
@@ -6817,7 +6817,7 @@
       "contextRequirements": "Distinctive bounded format or explicit provider authentication context. Cross-resource pairing requires imported constants forming one configuration or sink.",
       "limitations": "Instance and user permissions unknown; reference and identity tokens (`cmVmd…`, JWTs) need context",
       "provenance": {
-        "websiteRuleVersion": "website/2.9.1",
+        "websiteRuleVersion": "website/3.0.0",
         "websiteRuleIds": [
           "artifactory-api-key"
         ],
@@ -6911,7 +6911,7 @@
       "contextRequirements": "Distinctive bounded format or explicit provider authentication context. Cross-resource pairing requires imported constants forming one configuration or sink.",
       "limitations": "Vault access unknown; a Secret Key alone is one of two factors and needs the account password, so it is medium severity",
       "provenance": {
-        "websiteRuleVersion": "website/2.9.1",
+        "websiteRuleVersion": "website/3.0.0",
         "websiteRuleIds": [
           "1password-service-account-token",
           "1password-secret-key"
@@ -7008,7 +7008,7 @@
       "contextRequirements": "Distinctive bounded format or explicit provider authentication context. Cross-resource pairing requires imported constants forming one configuration or sink.",
       "limitations": "Pages shared with the integration unknown; legacy `secret_` tokens need context",
       "provenance": {
-        "websiteRuleVersion": "website/2.9.1",
+        "websiteRuleVersion": "website/3.0.0",
         "websiteRuleIds": [
           "notion-token"
         ],
@@ -7097,7 +7097,7 @@
       "contextRequirements": "Distinctive bounded format or explicit provider authentication context. Cross-resource pairing requires imported constants forming one configuration or sink.",
       "limitations": "Account, roles and expiry unknown",
       "provenance": {
-        "websiteRuleVersion": "website/2.9.1",
+        "websiteRuleVersion": "website/3.0.0",
         "websiteRuleIds": [
           "harness-token"
         ],
@@ -7186,7 +7186,7 @@
       "contextRequirements": "Distinctive bounded format or explicit provider authentication context. Cross-resource pairing requires imported constants forming one configuration or sink.",
       "limitations": "Project and permissions unknown",
       "provenance": {
-        "websiteRuleVersion": "website/2.9.1",
+        "websiteRuleVersion": "website/3.0.0",
         "websiteRuleIds": [
           "readme-api-key"
         ],
@@ -7275,7 +7275,7 @@
       "contextRequirements": "Distinctive bounded format or explicit provider authentication context. Cross-resource pairing requires imported constants forming one configuration or sink.",
       "limitations": "Account ID is a separate public component; services and quota unknown; older 16-character keys need context",
       "provenance": {
-        "websiteRuleVersion": "website/2.9.1",
+        "websiteRuleVersion": "website/3.0.0",
         "websiteRuleIds": [
           "maxmind-license-key"
         ],
@@ -7364,7 +7364,7 @@
       "contextRequirements": "Distinctive bounded format or explicit provider authentication context. Cross-resource pairing requires imported constants forming one configuration or sink.",
       "limitations": "Cluster and user unknown; Subresource Integrity values (`sha256-…`) are not tokens and are not reported",
       "provenance": {
-        "websiteRuleVersion": "website/2.9.1",
+        "websiteRuleVersion": "website/3.0.0",
         "websiteRuleIds": [
           "openshift-user-token"
         ],
@@ -7458,7 +7458,7 @@
       "contextRequirements": "Distinctive bounded format or explicit provider authentication context. Cross-resource pairing requires imported constants forming one configuration or sink.",
       "limitations": "`NRJS-` browser keys are public and not reported; account and region unknown",
       "provenance": {
-        "websiteRuleVersion": "website/2.9.1",
+        "websiteRuleVersion": "website/3.0.0",
         "websiteRuleIds": [
           "newrelic-api-key",
           "newrelic-ingest-key"
@@ -7562,7 +7562,7 @@
       "contextRequirements": "Distinctive bounded format or explicit provider authentication context. Cross-resource pairing requires imported constants forming one configuration or sink.",
       "limitations": "Organisation and scan permissions unknown",
       "provenance": {
-        "websiteRuleVersion": "website/2.9.1",
+        "websiteRuleVersion": "website/3.0.0",
         "websiteRuleIds": [
           "stackhawk-key"
         ],
@@ -7651,7 +7651,7 @@
       "contextRequirements": "Distinctive bounded format or explicit provider authentication context. Cross-resource pairing requires imported constants forming one configuration or sink.",
       "limitations": "Feeds and devices unknown",
       "provenance": {
-        "websiteRuleVersion": "website/2.9.1",
+        "websiteRuleVersion": "website/3.0.0",
         "websiteRuleIds": [
           "adafruit-io-key"
         ],
@@ -7740,7 +7740,7 @@
       "contextRequirements": "Distinctive bounded format or explicit provider authentication context. Cross-resource pairing requires imported constants forming one configuration or sink.",
       "limitations": "`pk.` public tokens stay public; scopes and URL restrictions unknown",
       "provenance": {
-        "websiteRuleVersion": "website/2.9.1",
+        "websiteRuleVersion": "website/3.0.0",
         "websiteRuleIds": [
           "mapbox-secret-token"
         ],
@@ -7823,7 +7823,7 @@
       "contextRequirements": "Distinctive bounded format or explicit provider authentication context. Cross-resource pairing requires imported constants forming one configuration or sink.",
       "limitations": "Alphabetical wordlist slices, bad checksums, prose and partial runs ignored; published test vectors and development mnemonics dismissed by digest; Electrum, non-English lists, encrypted keystores and passphrases unsupported; nothing is derived or checked online",
       "provenance": {
-        "websiteRuleVersion": "website/2.9.1",
+        "websiteRuleVersion": "website/3.0.0",
         "websiteRuleIds": [
           "bip39-mnemonic"
         ],
@@ -7906,7 +7906,7 @@
       "contextRequirements": "Distinctive bounded format or explicit provider authentication context. Cross-resource pairing requires imported constants forming one configuration or sink.",
       "limitations": "Bare 64-hex values (hashes, transaction IDs, digests, signatures, addresses) never qualify; zero and out-of-range scalars rejected; balances and addresses never looked up",
       "provenance": {
-        "websiteRuleVersion": "website/2.9.1",
+        "websiteRuleVersion": "website/3.0.0",
         "websiteRuleIds": [
           "wif-private-key",
           "hex-private-key",
@@ -8005,7 +8005,7 @@
       "contextRequirements": "Distinctive bounded format or explicit provider authentication context. Cross-resource pairing requires imported constants forming one configuration or sink.",
       "limitations": "Checksum mutations rejected; derivation never performed",
       "provenance": {
-        "websiteRuleVersion": "website/2.9.1",
+        "websiteRuleVersion": "website/3.0.0",
         "websiteRuleIds": [
           "extended-private-key"
         ],
@@ -8088,7 +8088,7 @@
       "contextRequirements": "Distinctive bounded format or explicit provider authentication context. Cross-resource pairing requires imported constants forming one configuration or sink.",
       "limitations": "Public JWKs and JWKS (only `x`/`y`/`n`/`e`) produce nothing; validity and use are not tested",
       "provenance": {
-        "websiteRuleVersion": "website/2.9.1",
+        "websiteRuleVersion": "website/3.0.0",
         "websiteRuleIds": [
           "jwk-private-key"
         ],
@@ -8177,7 +8177,7 @@
       "contextRequirements": "Distinctive bounded format or explicit provider authentication context. Cross-resource pairing requires imported constants forming one configuration or sink.",
       "limitations": "Packet contents and passphrase protection are not parsed",
       "provenance": {
-        "websiteRuleVersion": "website/2.9.1",
+        "websiteRuleVersion": "website/3.0.0",
         "websiteRuleIds": [
           "pgp-private-key"
         ],
@@ -8266,7 +8266,7 @@
       "contextRequirements": "Distinctive bounded format or explicit provider authentication context. Cross-resource pairing requires imported constants forming one configuration or sink.",
       "limitations": "Verification calls, hashing inputs, environment references and dynamic values excluded; the WordPress sample phrase, short or low-entropy framework keys and unprefixed APP_KEY values excluded; weak low-entropy secrets reported with medium confidence",
       "provenance": {
-        "websiteRuleVersion": "website/2.9.1",
+        "websiteRuleVersion": "website/3.0.0",
         "websiteRuleIds": [
           "signing-sink"
         ],
@@ -8380,7 +8380,7 @@
       "contextRequirements": "Distinctive bounded format or explicit provider authentication context. Cross-resource pairing requires imported constants forming one configuration or sink.",
       "limitations": "OAuth client IDs/public Supabase keys/anonymous session JWTs not shared private auth. Other wallet services/unknown provider formats lack provider-specific complete sets; generic sensitive evidence can remain suspicious",
       "provenance": {
-        "websiteRuleVersion": "website/2.9.1",
+        "websiteRuleVersion": "website/3.0.0",
         "websiteRuleIds": [
           "provider-context:openrouter",
           "provider-context:sentry",

@@ -37,7 +37,7 @@ export class AnalysisInterrupted extends Error{constructor(readonly reason:Abort
 /** Typed local analysis failure (worker or engine), distinct from an interruption and from a genuine detector exception. */
 export class AnalysisFailure extends Error{constructor(readonly code:'direct-worker-timeout'|'worker-failure'|'worker-cleanup-timeout'|'engine-timeout'|'engine-failure'|'engine-output-limit'|'engine-launch-failure',readonly phase:string){super(code);}}
 export const ENGINE_VERSION = '8.30.1';
-export const RULE_VERSION = 'website/2.9.1';
+export const RULE_VERSION = 'website/3.0.0';
 type Rule = { id: string; provider: string; regex: RegExp | RE2; category: Category; severity: Severity; confidence?: Confidence; group?: number; reason?: string };
 export const rules: Rule[] = [
   {id:'resend-key',provider:'Resend',regex:/\bre_[A-Za-z0-9]{20,200}\b/g,category:'private-credential',severity:'high',confidence:'medium',reason:'Bounded Resend API-key prefix heuristic; supported authentication role documented, validity and permissions unverified.'},

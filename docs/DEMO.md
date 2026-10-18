@@ -1,6 +1,6 @@
 # Demo script (2–3 minutes)
 
-A short walkthrough for a recording or a live call. It uses only the synthetic demo shop that ships with Exposure Desk and runs on your own computer (`127.0.0.1`): no real website is contacted, and every secret-looking value is a non-functional test vector. The screenshots in the [README](../README.md#screenshots) were taken from this exact setup.
+A short walkthrough for a recording or a live call. It uses only the synthetic demo site that ships with Exposure Desk and runs on your own computer (`127.0.0.1`): no real website is contacted, and every secret-looking value is a non-functional test vector. The screenshots in the [README](../README.md#screenshots) were taken from this exact setup.
 
 ## Before you record (not part of the 2–3 minutes)
 
@@ -9,7 +9,7 @@ A short walkthrough for a recording or a live call. It uses only the synthetic d
    - Source package: `npm run build`, then `npm run demo` (install the browser and detector from **Settings** first, or set `SCANNER_CHROMIUM_PATH` and `GITLEAKS_PATH`).
 2. The terminal prints the dashboard address (normally `http://127.0.0.1:4317`) and a per-launch token. The demo dashboard saves nothing: no history, no vault, no data folder changes.
 3. Open the address in a browser, paste the token and click **Open workspace**.
-4. Do one practice scan so you know the timing (a Standard scan of the demo shop takes about one to two minutes), then restart the demo for a clean recording.
+4. Do one practice scan so you know the timing (a Standard scan of the demo site takes about one to two minutes), then restart the demo for a clean recording.
 5. Close other windows and notifications. Do not show the token on screen.
 
 ## The script

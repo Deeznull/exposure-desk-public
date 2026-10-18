@@ -7,7 +7,7 @@ import { createHash } from 'node:crypto';
 import { cp, mkdtemp, mkdir, readFile, readdir, rm, writeFile } from 'node:fs/promises';
 import { makeConfig, resolveScanConfig, deepPaths } from '../src/config.js';
 import { presets, presetConfig, profileConfig, switchToProfile, profileCatalog } from '../src/presets.js';
-import { COVERAGES, TRAFFICS, LEGACY_PROFILES, HARD_CEILINGS, PROFILE_EXTRA_DEEP_PATHS, QUICK_SCRIPTS_PER_WEBSITE, profileSettings, profileLabel, describeProfile, estimateScan, sizedTotals } from '../src/profiles.js';
+import { COVERAGES, TRAFFICS, LEGACY_PROFILES, HARD_CEILINGS, PROFILE_EXTRA_DEEP_PATHS, DEEP_SCAN_EXTRA_PATHS, QUICK_SCRIPTS_PER_WEBSITE, profileSettings, profileLabel, describeProfile, estimateScan, sizedTotals } from '../src/profiles.js';
 import { effectiveScope } from '../src/domain-scope.js';
 import { Scanner } from '../src/scanner.js';
 import { Detector, root } from '../src/detectors.js';
@@ -59,8 +59,11 @@ test('every coverage and traffic combination fills the profile tables; Low-impac
     assert.equal(c.browser,coverage!=='quick');assert.equal(c.deep,true);assert.equal(c.sizingMode,coverage==='deep'?'adaptive':'website-count');assert.equal(c.staleAssetCheck,coverage==='deep');
     assert.equal(c.originRequestsPerSecond,low?.5:2);assert.equal(c.originConcurrency,low?1:coverage==='deep'?3:2);assert.equal(c.maxActiveOrigins,{quick:low?2:6,standard:low?2:4,deep:low?2:3}[coverage],"ready-option websites at once");assert.equal(c.maxBrowserOrigins,coverage==="quick"||low?1:2);assert.deepEqual([c.maxAnalysisMemoryMb,c.analysisConcurrency],{quick:[256,1],standard:[256,2],deep:[512,2]}[coverage],"ready-option analysis memory and workers");assert.equal(c.maxRetries,low?0:1);
     if(low){assert.equal(c.queryVariants,1);assert.equal(c.adjacentMaps,false);assert.equal(c.originBrowserPages,{quick:1,standard:3,deep:6}[coverage]);assert.ok(c.originMaxDurationMs!>=makeConfig({urls:[SITE],coverage,traffic:'normal'}).originMaxDurationMs!);}
-    for(const p of PROFILE_EXTRA_DEEP_PATHS)assert.ok(c.deepPaths.includes(p),label+' checks '+p);
-    assert.ok(deepPaths.every(p=>!PROFILE_EXTRA_DEEP_PATHS.includes(p)),'the legacy deep-path list is unchanged');
+    for(const p of PROFILE_EXTRA_DEEP_PATHS)assert.ok(c.deepPaths.includes(p),label+' checks the high-value path '+p);
+    for(const p of DEEP_SCAN_EXTRA_PATHS)assert.equal(c.deepPaths.includes(p),coverage!=='quick',label+(coverage==='quick'?' keeps the fuller list out of Quick: '+p:' checks '+p));
+    assert.ok(deepPaths.every(p=>![...PROFILE_EXTRA_DEEP_PATHS,...DEEP_SCAN_EXTRA_PATHS].includes(p)),'the legacy deep-path list is unchanged');
+    assert.equal(new Set(c.deepPaths).size,c.deepPaths.length,label+' has no duplicate deep paths');
+    assert.ok(c.deepPaths.length<=30,label+' stays within the 30-path ceiling');
   }
   assert.equal(makeConfig({urls:[SITE],coverage:'quick',traffic:'normal'}).originMaxResources,100);assert.equal(makeConfig({urls:[SITE],coverage:'standard',traffic:'normal'}).originMaxResources,200);assert.equal(makeConfig({urls:[SITE],coverage:'deep',traffic:'normal'}).originMaxResources,600);
   const catalog=profileCatalog();assert.equal(Object.keys(catalog.profiles).length,6);assert.deepEqual(catalog.ceilings,HARD_CEILINGS);assert.match(catalog.traffics.find(t=>t.id==='low-impact')!.note,/does not hide the scan/);assert.match(catalog.traffics.find(t=>t.id==='low-impact')!.note,/not undetectable/);
@@ -102,7 +105,7 @@ test('Low-impact is a ceiling: custom values and configuration files can make it
 test('switching a legacy or custom configuration to a profile is explicit and keeps scope, seeds and names',()=>{
   const legacy=presetConfig('thorough',{urls:[SITE,'https://shop.example.org/'],name:'Owner sites',domainScope:'exact-origin',requestsPerSecond:3}),frozen=JSON.stringify(legacy);
   const switched=switchToProfile(legacy);assert.equal(describeProfile(switched).label,'Deep audit + Normal');assert.deepEqual(switched.urls,legacy.urls);assert.equal(switched.name,'Owner sites');assert.equal(effectiveScope(switched),'exact-origin');
-  assert.equal(switched.originMaxResources,600);assert.equal(switched.profileCustomized,undefined,'legacy numbers are replaced, not treated as edits');assert.equal(switched.deepPaths.length,deepPaths.length+PROFILE_EXTRA_DEEP_PATHS.length);assert.equal(JSON.stringify(legacy),frozen,'the saved configuration object is not modified');
+  assert.equal(switched.originMaxResources,600);assert.equal(switched.profileCustomized,undefined,'legacy numbers are replaced, not treated as edits');assert.equal(switched.deepPaths.length,deepPaths.length+PROFILE_EXTRA_DEEP_PATHS.length+DEEP_SCAN_EXTRA_PATHS.length,'a Deep audit probes the full curated list');assert.equal(JSON.stringify(legacy),frozen,'the saved configuration object is not modified');
   assert.equal(describeProfile(switchToProfile(legacy,'quick','low-impact')).label,'Quick check + Low-impact');
   assert.throws(()=>switchToProfile(makeConfig({urls:[SITE],maxResources:77})),/Choose a coverage level/);assert.equal(switchToProfile(makeConfig({urls:[SITE],maxResources:77}),'standard').maxResources,200);
   const reset=switchToProfile(makeConfig({urls:[SITE],coverage:'standard',traffic:'normal',originMaxResources:50}));assert.equal(reset.profileCustomized,undefined);assert.equal(reset.originMaxResources,200);

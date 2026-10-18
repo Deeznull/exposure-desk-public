@@ -159,6 +159,8 @@ export function contextualCredentials(text:string,options:{ast?:any;focus?:RegEx
       const relationship:Candidate['credentialSet']=specs.length&&!/accesstoken|bearertoken|pat$/.test(n)?{state:missing.length?'partial':'complete',components,missing,context:ctx.label}:{state:'private-material',components:[auth?'authorization token':f.name],missing:[],context:ctx.label};
       emit(actual,provider==='Google / Gemini'&&/accesstoken|privatekey/.test(n)?'Google Cloud':provider,provider==='Google / Gemini'&&!/accesstoken|privatekey/.test(n)?'suspicious':'private-credential',auth?{state:'private-material',components:['authorization credential'],missing:[],context:ctx.label}:relationship);
       if(out.at(-1)?.value===actual.value&&fields.some(x=>/environment|mode|sandbox|testnet/.test(clean(x.name))&&/^(?:test|sandbox|testnet)$/i.test(x.value)))out.at(-1)!.environment='test';
+      // AWS secret access key: carry its paired public access-key ID (and session token for ASIA temporary keys) so a live check can SigV4-sign. The secret itself never leaves the machine.
+      if(/^AWS/.test(provider)&&/secretaccesskey$/.test(n)&&out.at(-1)?.value===actual.value){const akid=has(/accesskeyid$/),tok=has(/sessiontoken$/);if(akid.length===1)out.at(-1)!.companions={accessKeyId:akid[0].value,...(tok.length===1?{sessionToken:tok[0].value}:{})};}
     }
   }
   hostEnvironment=undefined;if(options.ast)return out;

@@ -6,6 +6,8 @@ export interface Candidate {
   category: Category; severity: Severity; confidence: Confidence; reasons: string[];
   transformations: string[];
   environment?:Finding['environment']; credentialSet?:Finding['credentialSet'];
+  /** AWS only: the public access-key ID (and session token for temporary keys) that pair with this secret access key. Carried so the live check can SigV4-sign without the secret ever leaving this computer; never shown on the finding or in any report. */
+  companions?:{accessKeyId?:string;sessionToken?:string};
   constituents?:import('./semantic.js').Constituent[]; sink?:string;
   exposureKind?:'password-hash'|'sensitive-response'|'private-config'|'debug-output';
   /** Value-derived qualifiers (known public example, encrypted material) and PEM structure from local parsing only. */
@@ -29,7 +31,7 @@ export type PriorityLevel='urgent'|'high'|'review'|'low'|'none';
 export interface LiveCheckResult {
   result:'live'|'revoked'|'unknown'; checkedAt:string; provider:string;
   endpointHost?:string; status?:number;
-  reason?:'no-recipe'|'host-not-allowlisted'|'redirect'|'tls-untrusted'|'timeout'|'network'|'http-error'|'rate-limited'|'unexpected-shape';
+  reason?:'no-recipe'|'host-not-allowlisted'|'redirect'|'tls-untrusted'|'timeout'|'network'|'http-error'|'rate-limited'|'unexpected-shape'|'incomplete-credential';
 }
 /** Owner statements refine priority only; they never establish validity or permissions. */
 export interface OwnerRecord {environment?:'production'|'test';restrictions?:'restricted'|'unrestricted'|'unknown';permissionsNote?:string;spendLimitNote?:string;recordedAt:string;source:'owner-statement'}

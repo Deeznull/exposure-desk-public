@@ -17,13 +17,14 @@ We don't offer paid rewards for reports about Exposure Desk itself.
 
 | Version | Supported |
 | --- | --- |
-| 2.9.1 | Yes: current release |
+| 3.0.0 | Yes: current release |
+| 2.9.1 | No: superseded by 3.0.0 (saved data loads unchanged; see [MIGRATION_3.0.md](releases/MIGRATION_3.0.md)) |
 | 2.9.0 | No: superseded by 2.9.1 (saved data loads unchanged) |
 | 2.8.0 | No: superseded by 2.9.0 (saved data loads unchanged; see [MIGRATION_2.9.md](releases/MIGRATION_2.9.md)) |
 | 2.7.0 | No: superseded by 2.8.0 (saved data loads unchanged; see [MIGRATION_2.8.md](releases/MIGRATION_2.8.md)) |
 | 2.6.0 | No: superseded by 2.7.0 (saved data loads unchanged; see [MIGRATION_2.7.md](releases/MIGRATION_2.7.md)) |
 | 2.6.0-rc.1 | No: superseded by 2.6.0 |
-| 2.5.0-rc.1 and older | No: upgrade to 2.9.1 (saved data loads tolerantly; see [MIGRATION_2.6.md](releases/MIGRATION_2.6.md), [MIGRATION_2.7.md](releases/MIGRATION_2.7.md), [MIGRATION_2.8.md](releases/MIGRATION_2.8.md) and [MIGRATION_2.9.md](releases/MIGRATION_2.9.md)) |
+| 2.5.0-rc.1 and older | No: upgrade to 3.0.0 (saved data loads tolerantly; see [MIGRATION_2.6.md](releases/MIGRATION_2.6.md), [MIGRATION_2.7.md](releases/MIGRATION_2.7.md), [MIGRATION_2.8.md](releases/MIGRATION_2.8.md), [MIGRATION_2.9.md](releases/MIGRATION_2.9.md) and [MIGRATION_3.0.md](releases/MIGRATION_3.0.md)) |
 
 Security fixes are made on the newest release only.
 

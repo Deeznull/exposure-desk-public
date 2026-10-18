@@ -5,7 +5,7 @@
 Finds API keys and other secrets that a website exposes to the public.<br>
 Runs on your own computer. For site owners and bug bounty hunters.
 
-![version 2.9.1](https://img.shields.io/badge/version-2.9.1-0f5f5c)
+![version 3.0.0](https://img.shields.io/badge/version-3.0.0-0f5f5c)
 ![Windows x64 | Linux x64](https://img.shields.io/badge/platform-Windows%20x64%20%7C%20Linux%20x64-555)
 ![Node 24](https://img.shields.io/badge/node-24-555)
 ![licence: all rights reserved](https://img.shields.io/badge/licence-all%20rights%20reserved-a33)
@@ -50,11 +50,10 @@ Measured on one Windows laptop against small local test sites:
 | 1, Low-impact | 49 s | 1.3 min | 1.8 min |
 | 10, Low-impact | 4.4 min | 7 min | 10 min |
 
-| Option | Websites at once | Time limit per website |
-| --- | --- | --- |
-| Quick check | 6 (Low-impact: 2) | 2 min (Low-impact: 8 min) |
-| Standard | 4 (Low-impact: 2) | 5 min (Low-impact: 20 min) |
-| Deep audit | 3 (Low-impact: 2) | 60 min |
+| | Quick check | Standard | Deep audit |
+| --- | --- | --- | --- |
+| Websites at once | 6 (Low-impact: 2) | 4 (Low-impact: 2) | 3 (Low-impact: 2) |
+| Time limit per website | 2 min (Low-impact: 8 min) | 5 min (Low-impact: 20 min) | 60 min |
 
 Bigger sites take longer, up to the time limit per website. Extra websites wait for a free slot. Before a scan starts, the dashboard shows an estimate.
 
@@ -73,14 +72,14 @@ node dist/src/cli.js scan --targets hosts.txt --authorized --concurrency 16 --co
 - A website that keeps blocking the scan (for example with 403, 429 or a CAPTCHA page) is stopped, and the run moves on.
 - `--authorized` is required for a list. It confirms you may test every website in it.
 
-Measured times (one Windows laptop, local test sites):
+Measured times (one Windows laptop, local test sites). The columns are how many websites run at once (`--concurrency`); the left column is the example list that was timed. The list itself has no length limit — 200 is just the size of the list used here.
 
-| Websites | Option | 1 at once | 4 at once | 16 at once | 64 at once |
-| --- | --- | --- | --- | --- | --- |
-| 200 | Quick check | 38.5 min | 9.9 min | 3.2 min | 2.9 min |
-| 16, each with a 1.25 MB script | Standard | 4.2 min | 1.7 min | 1 min | — |
+| Example list | 1 at once | 4 at once | 16 at once | 64 at once |
+| --- | --- | --- | --- | --- |
+| 200 small sites, Quick check | 38.5 min | 9.9 min | 3.2 min | 2.9 min |
+| 16 sites, 1.25 MB script each, Standard | 4.2 min | 1.7 min | 1 min | — |
 
-At 16 or more at once, Quick check gets through about 1 website per second, so 1,000 small websites take roughly 16 minutes. Real websites are bigger and slower than the test sites, so expect longer.
+The 16-site list has no 64-at-once time because it only has 16 websites. At 16 or more at once, Quick check gets through about 1 website per second, so 1,000 small websites take roughly 16 minutes. Real websites are bigger and slower than the test sites, so expect longer.
 
 ## Requirements
 
@@ -92,15 +91,24 @@ At 16 or more at once, Quick check gets through about 1 website per second, so 1
 
 Running Exposure Desk needs the author's written permission (see [LICENSE](LICENSE)).
 
+Download the Windows or Linux package, extract it into its own folder, and start it — there is no separate install step:
+
+- **Windows:** double-click **Start Exposure Desk.cmd**.
+- **Linux:** run `sh "Start Exposure Desk.sh"` (see [LINUX.md](docs/LINUX.md)).
+
+Keep the launch window open. Your browser opens the local dashboard; paste the token printed in the launch window into **Launch token**, click **Open workspace**, then open **New scan**. The package bundles Node, the built-in browser and Gitleaks, so nothing else is needed.
+
+Where to get the packages and a container image: [RELEASE_PACKAGE.md](docs/RELEASE_PACKAGE.md) and [LINUX.md](docs/LINUX.md).
+
+**From source** (Node.js 24 on `PATH`): the same launcher works in a checkout, or run the steps it automates:
+
 ```sh
 npm ci
 npm run build
 npm run launch
 ```
 
-This opens the dashboard in your browser. Paste the token shown in the terminal, then open **New scan**. Install the built-in browser and Gitleaks from **Settings**.
-
-Windows and Linux packages and a container image: see [RELEASE_PACKAGE.md](docs/RELEASE_PACKAGE.md) and [LINUX.md](docs/LINUX.md).
+Paste the token shown in the terminal, then install the built-in browser and Gitleaks from **Settings**.
 
 ## Command line
 
@@ -114,7 +122,7 @@ Exit code `0` means no secrets were found, `1` means some were, and `2` means th
 
 ## Docs
 
-[User guide](docs/USER_GUIDE.md) · [Reference](docs/REFERENCE.md) · [Bug bounty quick start](docs/REFERENCE.md#bug-bounty-quick-start) · [Mass scan](docs/MASS_SCAN.md) · [Program files](docs/PROGRAM.md) · [Detectors](docs/DETECTOR_COVERAGE.md) · [Test results](docs/TEST_RESULTS.md) · [Changelog](docs/releases/CHANGELOG_2.9.1.md)
+[User guide](docs/USER_GUIDE.md) · [Reference](docs/REFERENCE.md) · [Bug bounty quick start](docs/REFERENCE.md#bug-bounty-quick-start) · [Mass scan](docs/MASS_SCAN.md) · [Program files](docs/PROGRAM.md) · [Detectors](docs/DETECTOR_COVERAGE.md) · [Test results](docs/TEST_RESULTS.md) · [Changelog](docs/releases/CHANGELOG_3.0.md)
 
 ## Allowed use
 
