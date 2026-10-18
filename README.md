@@ -15,7 +15,7 @@ Runs on your own computer. For site owners and bug bounty hunters.
 
 ## Screenshots
 
-Taken on the built-in demo shop (`127.0.0.1`) with fake keys.
+Taken on the built-in demo site (`127.0.0.1`) with fake keys.
 
 <p align="center"><img src="docs/screenshots/3-findings.png" width="560" alt="Findings grouped by provider, with priority and masked values"></p>
 
