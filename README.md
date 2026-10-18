@@ -9,6 +9,7 @@ Runs on your own computer. For site owners and bug bounty hunters.
 ![Windows x64 | Linux x64](https://img.shields.io/badge/platform-Windows%20x64%20%7C%20Linux%20x64-555)
 ![Node 24](https://img.shields.io/badge/node-24-555)
 ![licence: all rights reserved](https://img.shields.io/badge/licence-all%20rights%20reserved-a33)
+[![Discord](https://img.shields.io/badge/Discord-join-5865F2?logo=discord&logoColor=white)](https://discord.gg/WhVXHbD6rd)
 
 </div>
 
@@ -122,6 +123,8 @@ Only scan websites you own or are allowed to test, such as assets in a bug bount
 ## Contributing
 
 Pull requests are welcome. See [CONTRIBUTING.md](docs/CONTRIBUTING.md).
+
+Questions and feedback are welcome on the [Discord server](https://discord.gg/WhVXHbD6rd).
 
 ## Licence
 
